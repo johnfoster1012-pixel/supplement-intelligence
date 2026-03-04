@@ -7,10 +7,10 @@
 const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/johnfoster1012-pixel/supplement-intelligence/main/articles/';
 const SITE_DOMAIN = 'https://www.supplement-intelligence.com';
 
-// All valid article slugs (28 product articles + 10 research articles)
+// All valid article slugs (27 product articles that exist in GitHub main)
+// NOTE: v-neurokafe-benefits removed - file exists locally but not pushed to GitHub yet
 const VALID_SLUGS = new Set([
   // Product benefit articles
-  'v-neurokafe-benefits',
   'v-glutation-benefits',
   'collagen-benefits',
   'v-asculax-benefits',
