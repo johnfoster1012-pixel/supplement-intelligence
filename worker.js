@@ -7,10 +7,10 @@
 const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/johnfoster1012-pixel/supplement-intelligence/main/articles/';
 const SITE_DOMAIN = 'https://www.supplement-intelligence.com';
 
-// All valid article slugs (27 product articles that exist in GitHub main)
-// NOTE: v-neurokafe-benefits removed - file exists locally but not pushed to GitHub yet
+// All valid article slugs (28 product articles + 10 research articles)
 const VALID_SLUGS = new Set([
   // Product benefit articles
+  'v-neurokafe-benefits',
   'v-glutation-benefits',
   'collagen-benefits',
   'v-asculax-benefits',
@@ -37,7 +37,18 @@ const VALID_SLUGS = new Set([
   'd-fenz-kids-benefits',
   'genius-shake-kids-benefits',
   'smartbiotics-kids-benefits',
-  'nourish-plus-kids-benefits'
+  'nourish-plus-kids-benefits',
+  // Research articles (10)
+  'complete-guide',
+  'lions-mane-benefits',
+  'l-theanine-focus',
+  'bacopa-memory',
+  'v-neurokafe-vs-coffee',
+  'l-theanine-vs-caffeine',
+  'best-supplement-students',
+  'best-nootropic-work',
+  'dosage-side-effects',
+  'top-5-ingredients'
 ]);
 
 // Product metadata for JSON-LD generation
