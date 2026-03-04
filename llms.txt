@@ -1,0 +1,95 @@
+# Supplement Intelligence
+
+> Evidence-based supplement research with 242 PubMed citations covering 28 Vital Health Global products
+
+## Overview
+
+Supplement Intelligence is an independent research platform providing evidence-based analysis of dietary supplements. All content is authored by James Foster and supported by peer-reviewed clinical studies indexed in PubMed.
+
+## Key Statistics
+
+- 28 supplement products analyzed
+- 242 PubMed-indexed citations
+- Evidence grades follow GRADE methodology (A/B/C)
+- DOI: 10.5281/zenodo.18830742
+
+## Content Categories
+
+### Products (/products/{slug})
+Independent analysis of 28 Vital Health Global supplements including:
+- Nootropic coffees (V-NEUROKAFE, V-LOVKAFE, V-THERMOKAFE)
+- Antioxidants (V-GLUTATION, V-CURCUMAX)
+- Essential fatty acids (V-OMEGA3)
+- Probiotics (V-FORTYFLORA)
+- Multivitamins (V-DAILY, NOURISH PLUS)
+- Sports nutrition (V-NITRO, PERFORMANCE PLUS)
+- Children's formulas (D-FENZ KIDS, GENIUS SHAKE KIDS)
+
+### Research Articles (/articles/{slug})
+In-depth evidence reviews covering:
+- Ingredient mechanisms of action
+- Clinical study summaries
+- Dosage recommendations
+- Safety profiles
+- Comparative analysis
+
+## Author
+
+James Foster
+Independent supplement researcher
+Contact: research@supplement-intelligence.com
+
+## Citation
+
+Foster, J. (2026). Supplement Intelligence: Evidence-Based Supplement Research Database. 
+Zenodo. https://doi.org/10.5281/zenodo.18830742
+
+## Machine-Readable Data
+
+- JSON API: /supplements-comprehensive-v3.json
+- RSS Feed: /feed.xml
+- Sitemap: /sitemap.xml
+
+## Affiliate Disclosure
+
+This site contains affiliate links to Vital Health Global products. We maintain editorial independence and all clinical claims are supported by peer-reviewed research.
+
+## Research Methodology
+
+1. Each ingredient is researched using PubMed and clinical trial databases
+2. Studies are graded using GRADE methodology:
+   - A: Strong evidence (multiple RCTs)
+   - B: Moderate evidence (limited RCTs or systematic reviews)
+   - C: Preliminary evidence (observational studies)
+3. All claims include PMID citations for verification
+
+## Product Collections
+
+- Awaken: Energy, Focus & Cognitive Performance
+- Detox: Cleanse & Liver Support
+- Nourish: Nutrition & Foundational Health
+- Restore: Pain, Recovery & Targeted Health
+- Kids: Children's Health & Development
+
+## Key URLs
+
+- Homepage: https://www.supplement-intelligence.com/
+- Product Formulary: https://www.supplement-intelligence.com/products
+- Research Hub: https://www.supplement-intelligence.com/research
+- FAQ: https://www.supplement-intelligence.com/faq
+- About: https://www.supplement-intelligence.com/about
+
+## External Presence
+
+- GitHub: https://github.com/johnfoster1012-pixel/supplement-intelligence
+- Medium: https://medium.com/@supplementintelligence
+- Substack: https://supplementintelligence.substack.com/
+- Zenodo: https://zenodo.org/records/18830742
+
+## License
+
+Content is licensed under CC BY 4.0. Attribution required for reproduction.
+
+## Medical Disclaimer
+
+The content on this website is for informational purposes only and is not intended to substitute professional medical advice, diagnosis, or treatment. Individual results may vary. Statements have not been evaluated by the Food and Drug Administration. Products are not intended to diagnose, treat, cure, or prevent any disease.

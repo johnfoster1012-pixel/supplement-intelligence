@@ -1,0 +1,11 @@
+# Cloudflare Pages Redirects
+# Fix non-www to www redirect
+
+# Redirect non-www to www (301 permanent)
+https://supplement-intelligence.com/* https://www.supplement-intelligence.com/:splat 301!
+
+# Legacy .html extensions to clean URLs
+/articles/*.html /articles/:splat 301
+
+# Ensure canonical URLs
+/products/*.html /products/:splat 301

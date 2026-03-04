@@ -1,0 +1,145 @@
+{
+  "website": {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Supplement Intelligence",
+    "url": "https://www.supplement-intelligence.com",
+    "description": "Evidence-based supplement research with 242 PubMed citations covering 28 Vital Health Global products",
+    "author": {
+      "@type": "Person",
+      "name": "James Foster"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.supplement-intelligence.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  },
+  "organization": {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Supplement Intelligence",
+    "url": "https://www.supplement-intelligence.com",
+    "logo": "https://www.supplement-intelligence.com/images/logo.png",
+    "description": "Independent evidence-based supplement research platform",
+    "sameAs": [
+      "https://github.com/johnfoster1012-pixel/supplement-intelligence",
+      "https://medium.com/@supplementintelligence",
+      "https://supplementintelligence.substack.com/",
+      "https://zenodo.org/records/18830742"
+    ],
+    "founder": {
+      "@type": "Person",
+      "name": "James Foster"
+    }
+  },
+  "person": {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "James Foster",
+    "jobTitle": "Independent Supplement Researcher",
+    "url": "https://www.supplement-intelligence.com/about",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Supplement Intelligence"
+    },
+    "sameAs": [
+      "https://github.com/johnfoster1012-pixel",
+      "https://medium.com/@supplementintelligence"
+    ]
+  },
+  "productTemplate": {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "{{PRODUCT_NAME}}",
+    "description": "{{PRODUCT_DESCRIPTION}}",
+    "brand": {
+      "@type": "Brand",
+      "name": "Vital Health Global"
+    },
+    "category": "{{PRODUCT_CATEGORY}}",
+    "url": "https://www.supplement-intelligence.com/products/{{PRODUCT_SLUG}}",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "USD",
+      "price": "{{PRODUCT_PRICE}}",
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.vitalhealthglobal.com/products/{{PRODUCT_SLUG}}?ref=149983"
+    },
+    "review": {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "James Foster"
+      },
+      "reviewBody": "Independent analysis backed by {{STUDY_COUNT}} peer-reviewed PubMed citations.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "{{RATING}}",
+        "bestRating": "5"
+      }
+    }
+  },
+  "articleTemplate": {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{ARTICLE_TITLE}}",
+    "description": "{{ARTICLE_DESCRIPTION}}",
+    "author": {
+      "@type": "Person",
+      "name": "James Foster",
+      "url": "https://www.supplement-intelligence.com/about"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Supplement Intelligence",
+      "url": "https://www.supplement-intelligence.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.supplement-intelligence.com/images/logo.png"
+      }
+    },
+    "datePublished": "{{DATE_PUBLISHED}}",
+    "dateModified": "{{DATE_MODIFIED}}",
+    "mainEntityOfPage": "{{ARTICLE_URL}}",
+    "image": "https://www.supplement-intelligence.com/images/articles/{{ARTICLE_SLUG}}.jpg"
+  },
+  "faqPageTemplate": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "{{QUESTION_1}}",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "{{ANSWER_1}}"
+        }
+      }
+    ]
+  },
+  "breadcrumbTemplate": {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.supplement-intelligence.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "{{SECTION_NAME}}",
+        "item": "{{SECTION_URL}}"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "{{PAGE_NAME}}",
+        "item": "{{PAGE_URL}}"
+      }
+    ]
+  }
+}

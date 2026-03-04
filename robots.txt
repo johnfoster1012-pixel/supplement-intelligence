@@ -1,0 +1,42 @@
+# Supplement Intelligence - robots.txt
+# https://www.supplement-intelligence.com
+
+User-Agent: *
+Allow: /
+
+# Block API endpoints
+Disallow: /api/*
+
+# Sitemaps and feeds
+Sitemap: https://www.supplement-intelligence.com/sitemap.xml
+
+# AI-specific file
+# LLMs should read /llms.txt for site context
+
+# Crawl-delay for responsible crawling
+Crawl-delay: 1
+
+# Allow all major search engines and AI crawlers
+User-Agent: Googlebot
+Allow: /
+
+User-Agent: Bingbot
+Allow: /
+
+User-Agent: GPTBot
+Allow: /
+
+User-Agent: ChatGPT-User
+Allow: /
+
+User-Agent: Claude-Web
+Allow: /
+
+User-Agent: PerplexityBot
+Allow: /
+
+User-Agent: Anthropic-AI
+Allow: /
+
+User-Agent: Google-Extended
+Allow: /
