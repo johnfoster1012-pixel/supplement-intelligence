@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{PRODUCT_NAME}} | Supplement Intelligence</title>
+  <meta name="description" content="{{PRODUCT_TLDR_SHORT}}">
+  <meta name="keywords" content="{{PRODUCT_NAME}}, {{PRODUCT_CATEGORY}}, supplement review, health supplement, evidence-based supplement">
+  <link rel="canonical" href="https://supplement-intelligence.com/products/{{PRODUCT_SLUG}}">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{PRODUCT_NAME}} | Supplement Intelligence">
+  <meta property="og:description" content="{{PRODUCT_TLDR_SHORT}}">
+  <meta property="og:type" content="product">
+  <meta property="og:url" content="https://supplement-intelligence.com/products/{{PRODUCT_SLUG}}">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    :root {
+      --green-dark: #1a3d2e;
+      --green-medium: #2d5a45;
+      --green-light: #e8f0ec;
+      --terracotta: #c4704a;
+      --terracotta-light: #e8a082;
+      --terracotta-pale: #fdf0eb;
+      --cream: #faf8f5;
+      --text-dark: #2a2a2a;
+      --text-medium: #555555;
+      --text-light: #777777;
+      --white: #ffffff;
+      --border-light: #e5e5e5;
+    }
+    
+    body {
+      font-family: 'Lora', Georgia, serif;
+      background: var(--cream);
+      color: var(--text-dark);
+      line-height: 1.8;
+      font-size: 17px;
+    }
+    
+    a { color: var(--terracotta); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--terracotta-light); }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+    
+    /* Header */
+    .site-header {
+      background: var(--green-dark);
+      padding: 18px 0;
+      border-bottom: 4px solid var(--terracotta);
+    }
+    
+    .site-header .inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .site-header .logo {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      color: var(--white);
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+    
+    .site-header .logo span { color: var(--terracotta-light); }
+    
+    .site-header nav a {
+      color: rgba(255,255,255,0.85);
+      font-family: 'Lora', serif;
+      font-size: 0.95rem;
+      margin-left: 28px;
+      transition: color 0.2s;
+    }
+    
+    .site-header nav a:hover { color: var(--white); }
+    
+    /* Breadcrumb */
+    .breadcrumb {
+      max-width: 1140px;
+      margin: 20px auto 0;
+      padding: 0 24px;
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+    
+    .breadcrumb a { color: var(--terracotta); }
+    .breadcrumb span { margin: 0 8px; color: var(--text-light); }
+    
+    /* Container Layout */
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 24px 60px;
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 50px;
+      align-items: start;
+    }
+    
+    @media (max-width: 900px) {
+      .container { grid-template-columns: 1fr; }
+      .sidebar { order: -1; }
+    }
+    
+    @media (max-width: 600px) {
+      .site-header nav { display: none; }
+    }
+    
+    /* Main Content */
+    .main-content { padding-top: 36px; }
+    
+    /* Product Header */
+    .product-header {
+      margin-bottom: 36px;
+    }
+    
+    .product-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    
+    .badge {
+      display: inline-block;
+      font-family: 'Lora', serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 5px 14px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .badge-category {
+      background: var(--green-light);
+      color: var(--green-dark);
+    }
+    
+    .badge-grade {
+      background: var(--terracotta-pale);
+      color: var(--terracotta);
+    }
+    
+    .badge-citations {
+      background: var(--white);
+      color: var(--text-medium);
+      border: 1px solid var(--border-light);
+    }
+    
+    h1 {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      color: var(--green-dark);
+      margin-bottom: 8px;
+    }
+    
+    .product-subtitle {
+      font-size: 1.1rem;
+      color: var(--text-medium);
+      font-style: italic;
+    }
+    
+    /* Sections */
+    h2 {
+      font-size: 1.65rem;
+      color: var(--green-dark);
+      margin: 44px 0 18px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--terracotta-light);
+    }
+    
+    h3 {
+      font-size: 1.25rem;
+      color: var(--green-medium);
+      margin: 30px 0 12px;
+    }
+    
+    p { margin-bottom: 18px; }
+    
+    ul, ol { margin: 0 0 18px 28px; }
+    li { margin-bottom: 10px; }
+    
+    /* Overview Box */
+    .overview-box {
+      background: var(--white);
+      border-left: 5px solid var(--terracotta);
+      border-radius: 0 12px 12px 0;
+      padding: 28px 32px;
+      margin: 28px 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    }
+    
+    .overview-box h2 {
+      font-size: 1.1rem;
+      color: var(--terracotta);
+      margin: 0 0 16px;
+      padding: 0;
+      border: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .overview-box p {
+      font-size: 1.02rem;
+      color: var(--text-dark);
+      margin: 0;
+      line-height: 1.85;
+    }
+    
+    /* Ingredients Box */
+    .ingredients-box {
+      background: var(--green-light);
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin: 24px 0;
+    }
+    
+    .ingredients-box h3 {
+      font-size: 1rem;
+      color: var(--green-dark);
+      margin: 0 0 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .ingredients-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .ingredient-tag {
+      background: var(--white);
+      color: var(--green-dark);
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 0.92rem;
+      font-weight: 500;
+    }
+    
+    /* Research Section */
+    .research-content {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin: 20px 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    }
+    
+    .research-content p {
+      color: var(--text-dark);
+      text-align: justify;
+      hyphens: auto;
+    }
+    
+    /* Mechanism Box */
+    .mechanism-box {
+      background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-medium) 100%);
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin: 24px 0;
+      color: var(--white);
+    }
+    
+    .mechanism-box h3 {
+      color: var(--terracotta-light);
+      margin: 0 0 14px;
+    }
+    
+    .mechanism-box p {
+      color: rgba(255,255,255,0.92);
+      margin: 0;
+      line-height: 1.85;
+    }
+    
+    /* Citations */
+    .citations-list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+    
+    .citation-item {
+      background: var(--white);
+      border: 1px solid var(--border-light);
+      border-radius: 10px;
+      padding: 18px 22px;
+      margin-bottom: 14px;
+      transition: box-shadow 0.2s;
+    }
+    
+    .citation-item:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    }
+    
+    .citation-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--green-dark);
+      margin-bottom: 6px;
+    }
+    
+    .citation-pmid {
+      display: inline-block;
+      background: var(--terracotta-pale);
+      color: var(--terracotta);
+      padding: 3px 10px;
+      border-radius: 5px;
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+    
+    .citation-pmid a {
+      color: var(--terracotta);
+    }
+    
+    /* FAQs */
+    .faq-item {
+      background: var(--white);
+      border: 1px solid var(--border-light);
+      border-radius: 10px;
+      margin-bottom: 14px;
+      overflow: hidden;
+    }
+    
+    .faq-question {
+      background: var(--green-light);
+      padding: 18px 22px;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--green-dark);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .faq-question::after {
+      content: '+';
+      font-size: 1.4rem;
+      color: var(--terracotta);
+      transition: transform 0.2s;
+    }
+    
+    .faq-item.open .faq-question::after {
+      transform: rotate(45deg);
+    }
+    
+    .faq-answer {
+      padding: 20px 22px;
+      color: var(--text-medium);
+      font-size: 0.98rem;
+      line-height: 1.8;
+      display: none;
+    }
+    
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+    
+    /* CTA Box */
+    .cta-box {
+      background: linear-gradient(135deg, var(--terracotta) 0%, var(--terracotta-light) 100%);
+      border-radius: 16px;
+      padding: 40px 36px;
+      text-align: center;
+      margin: 48px 0;
+      color: var(--white);
+    }
+    
+    .cta-box h2 {
+      color: var(--white);
+      border: none;
+      margin: 0 0 14px;
+      padding: 0;
+      font-size: 1.7rem;
+    }
+    
+    .cta-box p {
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 26px;
+      font-size: 1.05rem;
+    }
+    
+    .cta-btn {
+      display: inline-block;
+      background: var(--white);
+      color: var(--terracotta);
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      padding: 16px 40px;
+      border-radius: 50px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+    
+    .cta-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 28px rgba(0,0,0,0.2);
+      color: var(--terracotta);
+    }
+    
+    .cta-disclaimer {
+      margin-top: 16px;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.75);
+    }
+    
+    /* Related Products */
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+    
+    .related-card {
+      background: var(--white);
+      border: 1px solid var(--border-light);
+      border-radius: 10px;
+      padding: 18px;
+      text-align: center;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    
+    .related-card:hover {
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      transform: translateY(-2px);
+    }
+    
+    .related-card h4 {
+      font-size: 0.95rem;
+      color: var(--green-dark);
+      margin: 0;
+    }
+    
+    /* Sidebar */
+    .sidebar { padding-top: 36px; }
+    
+    .sidebar-card {
+      background: var(--white);
+      border: 1px solid var(--border-light);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    }
+    
+    .sidebar-card h3 {
+      font-size: 1.1rem;
+      color: var(--green-dark);
+      margin: 0 0 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--terracotta-light);
+    }
+    
+    .stat-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--green-light);
+      font-size: 0.92rem;
+    }
+    
+    .stat-row:last-child { border: none; }
+    
+    .stat-label { color: var(--text-light); }
+    .stat-value { font-weight: 600; color: var(--green-dark); }
+    
+    .grade-display {
+      text-align: center;
+      padding: 20px;
+      background: var(--green-light);
+      border-radius: 10px;
+      margin-bottom: 16px;
+    }
+    
+    .grade-letter {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      line-height: 1;
+    }
+    
+    .grade-label {
+      font-size: 0.85rem;
+      color: var(--text-medium);
+      margin-top: 6px;
+    }
+    
+    /* TOC */
+    .toc ol {
+      margin: 0 0 0 20px;
+      padding: 0;
+    }
+    
+    .toc li {
+      margin-bottom: 8px;
+      font-size: 0.92rem;
+    }
+    
+    .toc a { color: var(--green-dark); }
+    .toc a:hover { color: var(--terracotta); }
+    
+    /* Article Link Card */
+    .article-link-card {
+      background: var(--terracotta-pale);
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .article-link-card p {
+      font-size: 0.9rem;
+      color: var(--text-medium);
+      margin: 0 0 12px;
+    }
+    
+    .article-link-card a {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      color: var(--terracotta);
+    }
+    
+    /* Disclaimer */
+    .disclaimer {
+      background: #fffbeb;
+      border: 1px solid #fcd34d;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 36px 0;
+      font-size: 0.88rem;
+      color: #92400e;
+    }
+    
+    .disclaimer strong {
+      display: block;
+      margin-bottom: 6px;
+      color: #78350f;
+    }
+    
+    /* Footer */
+    .site-footer {
+      background: var(--green-dark);
+      color: rgba(255,255,255,0.75);
+      text-align: center;
+      padding: 36px 24px;
+      font-size: 0.9rem;
+      margin-top: 50px;
+    }
+    
+    .site-footer a { color: var(--terracotta-light); }
+    
+    .footer-links {
+      margin-bottom: 16px;
+    }
+    
+    .footer-links a {
+      margin: 0 16px;
+    }
+  </style>
+  
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "{{PRODUCT_NAME}}",
+    "description": "{{PRODUCT_TLDR_SHORT}}",
+    "brand": {
+      "@type": "Brand",
+      "name": "Vital Health Global"
+    },
+    "category": "{{PRODUCT_CATEGORY}}",
+    "url": "https://supplement-intelligence.com/products/{{PRODUCT_SLUG}}",
+    "offers": {
+      "@type": "Offer",
+      "url": "https://vitalhealthglobal.com/products",
+      "availability": "https://schema.org/InStock",
+      "seller": {
+        "@type": "Organization",
+        "name": "Vital Health Global"
+      }
+    },
+    "review": {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "{{EVIDENCE_GRADE_NUMERIC}}",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Supplement Intelligence"
+      },
+      "reviewBody": "{{PRODUCT_TLDR_SHORT}}"
+    }
+  }
+  </script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <a href="https://supplement-intelligence.com" class="logo">Supplement<span>Intelligence</span></a>
+    <nav>
+      <a href="https://supplement-intelligence.com">Home</a>
+      <a href="https://supplement-intelligence.com/articles">Research</a>
+      <a href="https://supplement-intelligence.com/products">Products</a>
+      <a href="https://supplement-intelligence.com/about">About</a>
+    </nav>
+  </div>
+</header>
+
+<div class="breadcrumb">
+  <a href="https://supplement-intelligence.com">Home</a>
+  <span>›</span>
+  <a href="https://supplement-intelligence.com/products">Products</a>
+  <span>›</span>
+  <span>{{PRODUCT_NAME}}</span>
+</div>
+
+<div class="container">
+  <main class="main-content">
+    
+    <div class="product-header">
+      <div class="product-badges">
+        <span class="badge badge-category">{{PRODUCT_CATEGORY}}</span>
+        <span class="badge badge-grade">Evidence Grade {{EVIDENCE_GRADE}}</span>
+        <span class="badge badge-citations">{{TOTAL_CITATIONS}} Citations</span>
+      </div>
+      <h1>{{PRODUCT_NAME}}</h1>
+      <p class="product-subtitle">{{PRODUCT_INGREDIENTS}}</p>
+    </div>
+    
+    <div class="overview-box">
+      <h2>📋 Overview</h2>
+      <p>{{PRODUCT_TLDR}}</p>
+    </div>
+    
+    <div class="ingredients-box">
+      <h3>Key Ingredients</h3>
+      <ul class="ingredients-list">
+        {{INGREDIENTS_LIST}}
+      </ul>
+    </div>
+    
+    <h2 id="research">What Does The Research Say?</h2>
+    <div class="research-content">
+      {{RESEARCH_CONTENT}}
+    </div>
+    
+    <div class="mechanism-box">
+      <h3>⚙️ Mechanism of Action</h3>
+      <p>{{MECHANISM}}</p>
+    </div>
+    
+    <h2 id="citations">PubMed Citations</h2>
+    <ul class="citations-list">
+      {{CITATIONS_LIST}}
+    </ul>
+    
+    <h2 id="faqs">Frequently Asked Questions</h2>
+    <div class="faqs-container">
+      {{FAQS_LIST}}
+    </div>
+    
+    <div class="cta-box">
+      <h2>Ready to Try {{PRODUCT_NAME}}?</h2>
+      <p>Experience the evidence-backed benefits of this premium supplement formula.</p>
+      <a href="https://vitalhealthglobal.com/products" target="_blank" rel="noopener" class="cta-btn">Shop at Vital Health Global →</a>
+      <p class="cta-disclaimer">Affiliate link · We may earn a commission</p>
+    </div>
+    
+    <h2 id="related">Related Products</h2>
+    <div class="related-grid">
+      {{RELATED_PRODUCTS}}
+    </div>
+    
+    <div class="disclaimer">
+      <strong>⚠️ Medical Disclaimer</strong>
+      This content is for informational purposes only and does not constitute medical advice. Always consult a healthcare professional before starting any supplement regimen. Individual results may vary. These statements have not been evaluated by the FDA.
+    </div>
+    
+  </main>
+  
+  <aside class="sidebar">
+    
+    <div class="sidebar-card">
+      <h3>Evidence Summary</h3>
+      <div class="grade-display">
+        <div class="grade-letter">{{EVIDENCE_GRADE}}</div>
+        <div class="grade-label">Evidence Grade</div>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">PubMed Citations</span>
+        <span class="stat-value">{{TOTAL_CITATIONS}}</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Category</span>
+        <span class="stat-value">{{PRODUCT_CATEGORY_DISPLAY}}</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Last Updated</span>
+        <span class="stat-value">{{LAST_UPDATED}}</span>
+      </div>
+    </div>
+    
+    <div class="sidebar-card toc">
+      <h3>On This Page</h3>
+      <ol>
+        <li><a href="#research">Research Evidence</a></li>
+        <li><a href="#citations">PubMed Citations</a></li>
+        <li><a href="#faqs">FAQs</a></li>
+        <li><a href="#related">Related Products</a></li>
+      </ol>
+    </div>
+    
+    <div class="sidebar-card article-link-card">
+      <p>📖 Want more details?</p>
+      <a href="{{ARTICLE_URL}}">Read Full Research Article →</a>
+    </div>
+    
+  </aside>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-links">
+    <a href="https://supplement-intelligence.com">Home</a>
+    <a href="https://supplement-intelligence.com/articles">Research</a>
+    <a href="https://supplement-intelligence.com/products">Products</a>
+    <a href="https://supplement-intelligence.com/about">About</a>
+  </div>
+  <p>© 2026 Supplement Intelligence. All rights reserved.</p>
+  <p style="margin-top: 8px; font-size: 0.8rem;">
+    Evidence-based supplement research. Not medical advice. 
+    <a href="https://supplement-intelligence.com/disclaimer">Disclaimer</a>
+  </p>
+</footer>
+
+<script>
+// FAQ Toggle
+document.querySelectorAll('.faq-question').forEach(q => {
+  q.addEventListener('click', () => {
+    q.parentElement.classList.toggle('open');
+  });
+});
+</script>
+
+</body>
+</html>
