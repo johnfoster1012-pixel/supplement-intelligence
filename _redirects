@@ -4,8 +4,18 @@
 # Redirect non-www to www (301 permanent)
 https://supplement-intelligence.com/* https://www.supplement-intelligence.com/:splat 301!
 
+# Fix broken navigation links
+/formulary /products 301
+/research-hub /research 301
+/research-data-hub /research 301
+/network /products 301
+
+# Fix legacy .html URLs
+/references.html /research 301
+/about.html /about 301
+
 # Legacy .html extensions to clean URLs
 /articles/*.html /articles/:splat 301
-
-# Ensure canonical URLs
 /products/*.html /products/:splat 301
+/research.html /research 301
+/faq.html /faq 301

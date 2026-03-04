@@ -94,7 +94,7 @@ Author(s). Title. Journal. Year;Volume(Issue):Pages. PMID: XXXXXXXX.
 ```
 
 A complete bibliography of all 242 citations is available at:  
-**[supplement-intelligence.com/references.html](https://supplement-intelligence.com/references.html)**
+**[supplement-intelligence.com/research](https://www.supplement-intelligence.com/research)**
 
 ---
 
@@ -129,5 +129,5 @@ This repository is for informational and research purposes only. The content doe
 
 ---
 
-*Maintained by the Supplement Intelligence editorial team. Last updated: February 2026.*  
-*Contact: [supplement-intelligence.com/about.html](https://supplement-intelligence.com/about.html)*
+*Maintained by the Supplement Intelligence editorial team. Last updated: March 2026.*  
+*Contact: [supplement-intelligence.com/about](https://www.supplement-intelligence.com/about)*

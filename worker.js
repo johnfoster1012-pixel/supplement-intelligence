@@ -93,7 +93,21 @@ async function handleRequest(request) {
     return Response.redirect(`https://www.supplement-intelligence.com${path}`, 301);
   }
   
-  // Serve static files
+  // Handle broken navigation link redirects
+  const redirects = {
+    '/formulary': '/products',
+    '/research-hub': '/research',
+    '/research-data-hub': '/research',
+    '/network': '/products',
+    '/references.html': '/research',
+    '/about.html': '/about'
+  };
+  
+  if (redirects[path]) {
+    return Response.redirect(`${SITE_DOMAIN}${redirects[path]}`, 301);
+  }
+  
+  // Serve static XML/TXT files
   if (path === '/sitemap.xml' || path === '/robots.txt' || path === '/feed.xml' || path === '/llms.txt') {
     const fileUrl = `https://raw.githubusercontent.com/johnfoster1012-pixel/supplement-intelligence/main${path}`;
     try {
@@ -108,6 +122,30 @@ async function handleRequest(request) {
           headers: {
             'Content-Type': contentType + '; charset=utf-8',
             'Cache-Control': 'public, max-age=3600'
+          }
+        });
+      }
+    } catch (err) {
+      // Fall through to 404
+    }
+  }
+  
+  // Serve /research and /faq hub pages
+  if (path === '/research' || path === '/research.html' || path === '/faq' || path === '/faq.html') {
+    const cleanPath = path.replace('.html', '');
+    const fileUrl = `https://raw.githubusercontent.com/johnfoster1012-pixel/supplement-intelligence/main${cleanPath}.html`;
+    try {
+      const response = await fetch(fileUrl, {
+        headers: { 'User-Agent': 'Supplement-Intelligence-Worker/1.0' }
+      });
+      if (response.ok) {
+        const html = await response.text();
+        return new Response(html, {
+          status: 200,
+          headers: {
+            'Content-Type': 'text/html; charset=utf-8',
+            'Cache-Control': 'public, max-age=3600',
+            'X-Powered-By': 'Supplement Intelligence'
           }
         });
       }
