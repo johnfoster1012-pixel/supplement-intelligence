@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Evidence-Based Supplement Research Articles | Supplement Intelligence</title>
-  <meta name="description" content="Browse 30 comprehensive, evidence-based supplement research articles. Filter by category, search by keyword, and sort by evidence grade. Each article includes PubMed citations and clinical research summaries.">
+  <meta name="description" content="Browse 38 comprehensive, evidence-based supplement research articles. Filter by category, search by keyword, and sort by evidence grade. Each article includes PubMed citations and clinical research summaries.">
   <meta name="keywords" content="supplement research, evidence-based supplements, clinical studies, PubMed citations, vitamins research, nootropics research, health supplements">
   <link rel="canonical" href="https://supplement-intelligence.com/articles/">
   
   <!-- Open Graph -->
   <meta property="og:title" content="Evidence-Based Supplement Research Articles | Supplement Intelligence">
-  <meta property="og:description" content="Browse 30 comprehensive supplement research articles with clinical evidence and PubMed citations.">
+  <meta property="og:description" content="Browse 38 comprehensive supplement research articles with clinical evidence and PubMed citations.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://supplement-intelligence.com/articles/">
   <meta property="og:site_name" content="Supplement Intelligence">
@@ -18,7 +18,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Evidence-Based Supplement Research Articles">
-  <meta name="twitter:description" content="Browse 30 comprehensive supplement research articles with clinical evidence and PubMed citations.">
+  <meta name="twitter:description" content="Browse 38 comprehensive supplement research articles with clinical evidence and PubMed citations.">
   
   <!-- Schema.org markup -->
   <script type="application/ld+json">
@@ -35,7 +35,7 @@
     },
     "mainEntity": {
       "@type": "ItemList",
-      "numberOfItems": 30,
+      "numberOfItems": 38,
       "itemListElement": [
         {"@type": "ListItem", "position": 1, "url": "https://supplement-intelligence.com/articles/v-daily-benefits"},
         {"@type": "ListItem", "position": 2, "url": "https://supplement-intelligence.com/articles/collagen-benefits"},
@@ -224,6 +224,8 @@
         <option value="Weight Management">Weight Management</option>
         <option value="Women's Health">Women's Health</option>
         <option value="Guide">Guide</option>
+        <option value="Nootropic">Nootropic</option>
+        <option value="Comparison">Comparison</option>
       </select>
       <select class="sort-select" id="sortSelect">
         <option value="name">Sort: A-Z</option>
@@ -246,7 +248,7 @@
   
   <!-- Results Info -->
   <div class="results-info">
-    <span id="resultsCount">Showing 30 articles</span>
+    <span id="resultsCount">Showing 38 articles</span>
     <span class="clear-filters" id="clearFilters" style="display:none">Clear all filters</span>
   </div>
   
@@ -311,7 +313,15 @@ const articles = [
   { slug: "v-thermokafe-benefits", name: "V-THERMOKAFE", category: "Weight Management", excerpt: "Thermogenic coffee with Green Coffee Bean Extract, Garcinia, and CLA for metabolism and weight management.", grade: "B", citations: 5, keywords: "thermogenic coffee weight metabolism green coffee garcinia cla fat" },
   { slug: "vitalpro-benefits", name: "VITALPRO", category: "Protein", excerpt: "Premium whey protein isolate with digestive enzymes for muscle recovery, lean mass, and athletic performance.", grade: "B", citations: 6, keywords: "protein whey isolate muscle recovery athletic performance" },
   { slug: "top-5-ingredients", name: "TOP 5 INGREDIENTS", category: "Guide", excerpt: "The most researched and effective supplement ingredients: Vitamin D3, Omega-3, Magnesium, Probiotics, and Curcumin with clinical evidence.", grade: "A", citations: 15, keywords: "best supplements evidence-based vitamin d omega-3 magnesium probiotics curcumin top ingredients" },
-  { slug: "dosage-side-effects", name: "DOSAGE & SIDE EFFECTS", category: "Guide", excerpt: "Comprehensive guide to supplement dosing, safety, drug interactions, and when to consult a healthcare provider.", grade: "A", citations: 12, keywords: "dosage side effects safety drug interactions upper limit supplement guide" }
+  { slug: "dosage-side-effects", name: "DOSAGE & SIDE EFFECTS", category: "Guide", excerpt: "Comprehensive guide to supplement dosing, safety, drug interactions, and when to consult a healthcare provider.", grade: "A", citations: 12, keywords: "dosage side effects safety drug interactions upper limit supplement guide" },
+  { slug: "complete-guide", name: "V-NEUROKAFE COMPLETE GUIDE", category: "Nootropic", excerpt: "The ultimate guide to V-NEUROKAFE nootropic coffee. Ingredients, mechanisms, dosing, benefits, and comparison to regular coffee.", grade: "B", citations: 8, keywords: "v-neurokafe nootropic coffee brain health cognitive bacopa phosphatidylserine ginkgo" },
+  { slug: "lions-mane-benefits", name: "LION'S MANE BENEFITS", category: "Nootropic", excerpt: "How Lion's Mane mushroom stimulates NGF production, promotes neuroplasticity, and supports brain cell growth.", grade: "A", citations: 10, keywords: "lions mane mushroom ngf nerve growth factor neuroplasticity brain health hericium" },
+  { slug: "l-theanine-focus", name: "L-THEANINE FOR FOCUS", category: "Nootropic", excerpt: "How L-Theanine promotes calm focus and works synergistically with caffeine for relaxed alertness without jitters.", grade: "A", citations: 9, keywords: "l-theanine focus calm alertness caffeine synergy alpha waves gaba anxiety" },
+  { slug: "bacopa-memory", name: "BACOPA FOR MEMORY", category: "Nootropic", excerpt: "3,000 years of Ayurvedic wisdom meets modern science. How Bacopa Monnieri enhances memory and learning.", grade: "A", citations: 11, keywords: "bacopa monnieri memory brahmi learning cognitive enhancement ayurvedic bacosides" },
+  { slug: "v-neurokafe-vs-coffee", name: "V-NEUROKAFE VS COFFEE", category: "Comparison", excerpt: "Direct comparison of V-NEUROKAFE nootropic coffee and regular coffee for cognitive performance and brain health.", grade: "B", citations: 8, keywords: "v-neurokafe vs coffee comparison nootropic focus memory energy" },
+  { slug: "l-theanine-vs-caffeine", name: "L-THEANINE VS CAFFEINE", category: "Comparison", excerpt: "Understanding the synergy between L-Theanine and caffeine. Why they work better together than apart.", grade: "A", citations: 7, keywords: "l-theanine vs caffeine synergy stack focus calm energy ratio" },
+  { slug: "best-supplement-students", name: "BEST FOR STUDENTS", category: "Guide", excerpt: "Evidence-based guide to the best supplements for students: focus, memory, test anxiety, and academic performance.", grade: "A", citations: 14, keywords: "supplements students study memory focus test anxiety academic performance learning" },
+  { slug: "best-nootropic-work", name: "BEST NOOTROPIC FOR WORK", category: "Guide", excerpt: "Professional cognitive enhancement: focus, decision-making, creativity, and mental stamina for demanding work.", grade: "A", citations: 12, keywords: "nootropics work professional focus decision making productivity executive function" }
 ];
 
 // DOM elements

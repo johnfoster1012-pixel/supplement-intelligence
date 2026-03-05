@@ -20,7 +20,10 @@ const VALID_ARTICLE_SLUGS = new Set([
   'v-organex-benefits', 'v-tedetox-benefits', 'v-thermokafe-benefits',
   'vitalpro-benefits',
   // General informational articles
-  'top-5-ingredients', 'dosage-side-effects'
+  'top-5-ingredients', 'dosage-side-effects',
+  // V-NEUROKAFE research hub articles
+  'complete-guide', 'lions-mane-benefits', 'l-theanine-focus', 'bacopa-memory',
+  'v-neurokafe-vs-coffee', 'l-theanine-vs-caffeine', 'best-supplement-students', 'best-nootropic-work'
 ]);
 
 // Valid product slugs
