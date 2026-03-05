@@ -1,10 +1,7 @@
 ---
 title: "S-BALANCE"
 product_url: "/products/s-balance"
-ingredients: "Serving: 2 Veggie Capsules, 30 servings, Silymarin) 
-      Black Knapweed (Centaurea cyanus) (Flower) 
-      Fenugreek (Trigonella foenum-graecum) (Seed) 
-      Flax Powder (Linum usitatissimum) (Seed) 980 mg"
+ingredients: "Proprietary Blend 980mg (Cactus Pad, Chaya Powder, Uva Ursi Powder, Garlic Powder, Cranberry, Berberine Hydrochloride, Milk Thistle Seed Extract, Black Knapweed, Fenugreek, Flax Powder), Serving Size: 2 Veggie Capsules, 30 servings"
 category: "stress/adaptogen"
 last_updated: "2026-03-05"
 ---
