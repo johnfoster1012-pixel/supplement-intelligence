@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Evidence-Based Supplement Research Articles | Supplement Intelligence</title>
-  <meta name="description" content="Browse 28 comprehensive, evidence-based supplement research articles. Filter by category, search by keyword, and sort by evidence grade. Each article includes PubMed citations and clinical research summaries.">
+  <meta name="description" content="Browse 30 comprehensive, evidence-based supplement research articles. Filter by category, search by keyword, and sort by evidence grade. Each article includes PubMed citations and clinical research summaries.">
   <meta name="keywords" content="supplement research, evidence-based supplements, clinical studies, PubMed citations, vitamins research, nootropics research, health supplements">
   <link rel="canonical" href="https://supplement-intelligence.com/articles/">
   
   <!-- Open Graph -->
   <meta property="og:title" content="Evidence-Based Supplement Research Articles | Supplement Intelligence">
-  <meta property="og:description" content="Browse 28 comprehensive supplement research articles with clinical evidence and PubMed citations.">
+  <meta property="og:description" content="Browse 30 comprehensive supplement research articles with clinical evidence and PubMed citations.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://supplement-intelligence.com/articles/">
   <meta property="og:site_name" content="Supplement Intelligence">
@@ -18,7 +18,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Evidence-Based Supplement Research Articles">
-  <meta name="twitter:description" content="Browse 28 comprehensive supplement research articles with clinical evidence and PubMed citations.">
+  <meta name="twitter:description" content="Browse 30 comprehensive supplement research articles with clinical evidence and PubMed citations.">
   
   <!-- Schema.org markup -->
   <script type="application/ld+json">
@@ -35,7 +35,7 @@
     },
     "mainEntity": {
       "@type": "ItemList",
-      "numberOfItems": 28,
+      "numberOfItems": 30,
       "itemListElement": [
         {"@type": "ListItem", "position": 1, "url": "https://supplement-intelligence.com/articles/v-daily-benefits"},
         {"@type": "ListItem", "position": 2, "url": "https://supplement-intelligence.com/articles/collagen-benefits"},
@@ -223,6 +223,7 @@
         <option value="Stress & Adaptogen">Stress & Adaptogen</option>
         <option value="Weight Management">Weight Management</option>
         <option value="Women's Health">Women's Health</option>
+        <option value="Guide">Guide</option>
       </select>
       <select class="sort-select" id="sortSelect">
         <option value="name">Sort: A-Z</option>
@@ -245,7 +246,7 @@
   
   <!-- Results Info -->
   <div class="results-info">
-    <span id="resultsCount">Showing 28 articles</span>
+    <span id="resultsCount">Showing 30 articles</span>
     <span class="clear-filters" id="clearFilters" style="display:none">Clear all filters</span>
   </div>
   
@@ -308,7 +309,9 @@ const articles = [
   { slug: "v-organex-benefits", name: "V-ORGANEX", category: "Detox", excerpt: "Milk Thistle, NAC, and Artichoke Extract for liver health and natural detoxification support.", grade: "B", citations: 5, keywords: "liver detox milk thistle nac artichoke cleanse" },
   { slug: "v-tedetox-benefits", name: "V-TEDETOX", category: "Digestive", excerpt: "Herbal detox tea blend with Senna, Ginger, and Peppermint for digestive comfort and cleansing.", grade: "C", citations: 4, keywords: "tea detox digestive senna ginger peppermint cleanse herbal" },
   { slug: "v-thermokafe-benefits", name: "V-THERMOKAFE", category: "Weight Management", excerpt: "Thermogenic coffee with Green Coffee Bean Extract, Garcinia, and CLA for metabolism and weight management.", grade: "B", citations: 5, keywords: "thermogenic coffee weight metabolism green coffee garcinia cla fat" },
-  { slug: "vitalpro-benefits", name: "VITALPRO", category: "Protein", excerpt: "Premium whey protein isolate with digestive enzymes for muscle recovery, lean mass, and athletic performance.", grade: "B", citations: 6, keywords: "protein whey isolate muscle recovery athletic performance" }
+  { slug: "vitalpro-benefits", name: "VITALPRO", category: "Protein", excerpt: "Premium whey protein isolate with digestive enzymes for muscle recovery, lean mass, and athletic performance.", grade: "B", citations: 6, keywords: "protein whey isolate muscle recovery athletic performance" },
+  { slug: "top-5-ingredients", name: "TOP 5 INGREDIENTS", category: "Guide", excerpt: "The most researched and effective supplement ingredients: Vitamin D3, Omega-3, Magnesium, Probiotics, and Curcumin with clinical evidence.", grade: "A", citations: 15, keywords: "best supplements evidence-based vitamin d omega-3 magnesium probiotics curcumin top ingredients" },
+  { slug: "dosage-side-effects", name: "DOSAGE & SIDE EFFECTS", category: "Guide", excerpt: "Comprehensive guide to supplement dosing, safety, drug interactions, and when to consult a healthcare provider.", grade: "A", citations: 12, keywords: "dosage side effects safety drug interactions upper limit supplement guide" }
 ];
 
 // DOM elements

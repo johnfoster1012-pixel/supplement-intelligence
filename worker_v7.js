@@ -18,7 +18,9 @@ const VALID_ARTICLE_SLUGS = new Set([
   'v-itaren-benefits', 'v-lovkafe-benefits', 'v-neurokafe-benefits',
   'v-nitro-benefits', 'v-nrgy-benefits', 'v-omega3-benefits',
   'v-organex-benefits', 'v-tedetox-benefits', 'v-thermokafe-benefits',
-  'vitalpro-benefits'
+  'vitalpro-benefits',
+  // General informational articles
+  'top-5-ingredients', 'dosage-side-effects'
 ]);
 
 // Valid product slugs
