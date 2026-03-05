@@ -1,7 +1,7 @@
 ---
 title: "V-ITADOL"
 product_url: "/products/v-itadol"
-ingredients: "Serving: 2 Veggie Capsules, 30 servings"
+ingredients: "Serving Size: 2 Veggie Capsules, Servings Per Container: 30; Proprietary Blend 1090mg: D-Glucosamine HCl (from fermented corn), MSM (Methylsulfonylmethane), Sarsaparilla (Smilax china) (Root); Other Ingredients: Hydroxypropyl methyl cellulose (vegetable capsule), Silicon Dioxide"
 category: "pain/inflammation"
 last_updated: "2026-03-05"
 ---

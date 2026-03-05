@@ -1,10 +1,7 @@
 ---
 title: "V-ORGANEX"
 product_url: "/products/v-organex"
-ingredients: "Serving: 2 Veggie Capsules, 30 servings, Supplement Facts
-Serving Size 2 Veggie Capsules
-Servings Per Container 30
-Proprietary Blend 1000 mg"
+ingredients: "Serving Size: 2 Veggie Capsules, Servings Per Container: 30; Proprietary Blend 1000mg: Boldo Powder (Peumus boldus) (Leaf), Milk Thistle Seed Extract (Silybum marianum) (Standardized to contain 80% Silymarin), Quassia (Quassia amara) (Dried Fruit), Toad Grass Powder (Eryngium carlinae), Guarana Extract (Paullinia cupana) (Seed) (Standardized to contain 22% Caffeine), Chicory (Cichorium intybus) (Root), Artichoke Extract (Cynara scolymus) (Aerial parts) (Standardized to 5% cynarin); Other Ingredients: Hydroxypropyl methylcellulose (vegetable capsule), Silicon Dioxide"
 category: "liver/detox"
 last_updated: "2026-03-05"
 ---

@@ -1,16 +1,7 @@
 ---
 title: "V-ITALBOOST"
 product_url: "/products/v-italboost"
-ingredients: "Serving: 2 Veggie Capsules, 30 servings, Supplement Facts
-Servings Per Container 30
-Serving Size 2 Veggie Capsules
-Vitamin C (as Ascorbic Acid)
-Vitamin D (as Cholecalciferol) 150 mg, total phenolic compounds
-     Ginger Powder (Zingiber officinale) (Root)
-     Turmeric Powder (Curcuma longa) (Root)
-     Cayenne Pepper Powder (Capsicum frutescens) (Fruit)
-     Cinnamon (Cinnamomum verum) (Bark) 
-     Fenugreek (Trigonella foenum-graecum) (Seed) 844 mg"
+ingredients: "Serving Size: 2 Veggie Capsules, Servings Per Container: 30; Vitamin C (as Ascorbic Acid) 150mg; Vitamin D (as Cholecalciferol) 8mcg; Proprietary Blend 844mg: Garlic Powder (Allium sativum) (Bulb), Echinacea Purpurea Extract (Echinacea purpurea) (Aerial parts) (Standardized to 4% total phenolic compounds), Ginger Powder (Zingiber officinale) (Root), Turmeric Powder (Curcuma longa) (Root), Cayenne Pepper Powder (Capsicum frutescens) (Fruit), Cinnamon (Cinnamomum verum) (Bark), Fenugreek (Trigonella foenum-graecum) (Seed); Other Ingredients: Hydroxypropyl methyl cellulose (vegetable capsule), Magnesium Stearate, Silicon Dioxide"
 category: "immune"
 last_updated: "2026-03-05"
 ---

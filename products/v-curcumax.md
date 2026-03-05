@@ -1,13 +1,7 @@
 ---
 title: "V-CURCUMAX"
 product_url: "/products/v-curcumax"
-ingredients: "Serving: 2 Veggie Capsules, 30 servings, Supplement Facts
-Servings Per Container 30
-Serving Size 2 Veggie Capsules
-Vitamin C (as Ascorbic Acid)
-Selenium (as Selenium Amino Acid Chelate) 60 mg, Turmeric Powder (Curcuma Longa) (Root)
-MSM (Methylsulfonylmethane)
-Proprietary Blend 810 mg"
+ingredients: "Serving Size: 2 Veggie Capsules, Servings Per Container: 30; Vitamin C (as Ascorbic Acid) 60mg; Selenium (as Selenium Amino Acid Chelate) 50mcg; Proprietary Blend 810mg: Turmeric Powder (Curcuma Longa) (Root), MSM (Methylsulfonylmethane); Other Ingredients: Hydroxypropyl methyl cellulose (vegetable capsule), Magnesium Stearate, Silicon Dioxide"
 category: "anti-inflammatory"
 last_updated: "2026-03-05"
 ---

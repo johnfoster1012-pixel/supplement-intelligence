@@ -1,8 +1,7 @@
 ---
 title: "LATTEKAFFE"
 product_url: "/products/lattekaffe"
-ingredients: "Serving: 1 Stick Pack (11 g), 30 servings, Calories 60 
-Total  Fat 2 g, Saturated Fat 2 g, Total Carbohydrate 4 g, Biotin (as D-Biotin) 300 mcg, MCT Oil Powder 2100 mg"
+ingredients: "Serving Size: 1 Stick Pack (11 g), Servings Per Container: 30; MCT Oil Powder 2100mg (Medium Chain Triglycerides from coconut); Biotin (as D-Biotin) 300mcg; Proprietary Blend 2960mg: Instant Roasted Black Coffee (Coffea arabica) (Bean), Lion's Mane (Hericium erinaceus) Fruiting Body Dried Extract, Cordyceps (Cordyceps militaris) Fruiting Body Dried Extract, King Oyster (Pleurotus eryngii) Fruiting Body Dried Extract, Reishi (Ganoderma lucidum) Fruiting Body Dried Extract, Turkey Tail (Trametes versicolor) Fruiting Body Dried Extract, Almond Mushroom (Agaricus subrufescens) Fruiting Body Dried Extract, Chaga (Inonotus obliquus) Fruiting Body Dried Extract, Maitake (Grifola frondosa) Fruiting Body Dried Extract, Shiitake (Lentinula edodes) Fruiting Body Dried Extract, Antrodia (Antrodia camphorata) Fruiting Body Dried Extract, Black Pepper Powder (Piper nigrum) (Fruit); Other Ingredients: Not specified"
 category: "beauty/coffee"
 last_updated: "2026-03-05"
 ---

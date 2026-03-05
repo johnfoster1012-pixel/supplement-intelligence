@@ -1,7 +1,7 @@
 ---
 title: "V-LOVKAFE"
 product_url: "/products/v-lovkafe"
-ingredients: "Proprietary Blend 3g (Instant Roasted Black Coffee (Coffea arabica) (Bean), Tongkat Ali Powder (Eurycoma longifolia) (Bark), Tribulus terrestris Extract (Aerial parts), Panax ginseng Extract (Root), Gelatinized Maca Powder (Lepidium meyenii) (Root), Shilajit (Fulvic Acid Complex Powder), L-Arginine HCl), Serving Size: 1 Scoop (3 g), 50 servings"
+ingredients: "Serving Size: 1 Scoop (3 g), Servings Per Container: 50; Proprietary Blend 3g: Instant Roasted Black Coffee (Coffea arabica) (Bean), Tongkat Ali Powder (Eurycoma longifolia) (Bark), Tribulus terrestris Extract (Aerial parts) (Standardized to 40% Saponins), Panax ginseng Extract (Root) (Standardized to 80% Ginsenosides), Gelatinized Maca Powder (Lepidium meyenii) (Root), Shilajit (Fulvic Acid Complex Powder), L-Arginine HCl; Other Ingredients: Not specified"
 category: "cognitive/coffee"
 last_updated: "2026-03-05"
 ---

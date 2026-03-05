@@ -1,7 +1,7 @@
 ---
 title: "V-ITALAY"
 product_url: "/products/v-italay"
-ingredients: "Proprietary Blend 980mg (Green Tea (Camellia sinensis) (Leaves), Passion Flower (Passiflora incarnata) (Leaf), Valerian Root Extract (Valeriana officinalis), Peppermint (Mentha piperita) (Leaf), Morning Glory (Ipomoea stans) (Root)), Serving Size: 2 Veggie Capsules, 30 servings"
+ingredients: "Serving Size: 2 Veggie Capsules, Servings Per Container: 30; Proprietary Blend 980mg: Green Tea (Camellia sinensis) (Leaves), Passion Flower (Passiflora incarnata) (Leaf), Valerian Root Extract (Valeriana officinalis) (0.8% Valerenic Acids = 1.2mg), Peppermint (Mentha piperita) (Leaf), Morning Glory (Ipomoea stans) (Root); Other Ingredients: Hydroxypropyl methylcellulose (vegetable capsule), Silicon Dioxide"
 category: "sleep"
 last_updated: "2026-03-05"
 ---

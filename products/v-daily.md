@@ -1,7 +1,7 @@
 ---
 title: "V-DAILY"
 product_url: "/products/v-daily"
-ingredients: "Vitamin A 800mcg, Vitamin C 80mg, Vitamin B-Complex, Zinc 10mg"
+ingredients: "Serving Size: 1 Packet, Servings Per Container: 30; Vitamin A, Vitamin C, Vitamin D, Vitamin E, Vitamin K, Thiamin (B1), Riboflavin (B2), Niacin, Vitamin B6, Folate, Vitamin B12, Biotin, Pantothenic Acid, Calcium, Iron, Magnesium, Zinc, Iodine, Copper, Chromium, Potassium, Proprietary Fruits/Greens/Mushrooms Blend, Amino Acid Complex Blend, Trace Minerals, Inositol, MSM, Prebiotic + Probiotic Blend, Amla Bioflavonoids, Beet Root Extract, Coenzyme Q10, Boron; Other Ingredients: Not specified"
 category: "multivitamin"
 last_updated: "2026-03-05"
 ---

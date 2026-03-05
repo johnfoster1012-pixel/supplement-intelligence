@@ -1,12 +1,7 @@
 ---
 title: "V-OMEGA3"
 product_url: "/products/v-omega3"
-ingredients: "Serving: 3 Softgels, 30 servings, Calories
-Total fat 
-Vitamin A (as Vitamin A Acetate) 
-Vitamin D3 (as Cholecalciferol)
-Vitamin E (as d-Alpha Tocopherol)   
-10 1 g, 150 mcg 9.9 mcg, 198 mg 900 mg, 570 mg 285 mg"
+ingredients: "Serving Size: 3 Softgels, Servings Per Container: 30; Vitamin A (as Vitamin A Acetate) 150mcg; Vitamin D3 (as Cholecalciferol) 9.9mcg; Vitamin E (as d-Alpha Tocopherol) 198mg; Omega-3 Fatty Acids 900mg; EPA 570mg; DHA 285mg; Other Ingredients: Fish Gelatin, Glycerin, Purified Water, Silica"
 category: "cardiovascular/brain"
 last_updated: "2026-03-05"
 ---

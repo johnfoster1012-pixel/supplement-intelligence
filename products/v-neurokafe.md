@@ -1,10 +1,7 @@
 ---
 title: "V-NEUROKAFE"
 product_url: "/products/v-neurokafe"
-ingredients: "Serving: 1 Scoop (3 g), 50 servings, Calories
-Total Carbohydrate 
-Thiamin (as Thiamine HCl)
-Vitamin B6 (as Pyridoxine HCl) 2.69 g, 15 mg 10 mg"
+ingredients: "Serving Size: 1 Scoop (3 g), Servings Per Container: 50; Thiamin (as Thiamine HCl) 15mg; Vitamin B6 (as Pyridoxine HCl) 10mg; Proprietary Blend 2.69g: Instant Roasted Black Coffee (Coffea arabica) (Bean), Bacillus coagulans (5 Billion CFU), Reishi Extract (Ganoderma lucidum) (Fruiting Body) (Standardized to 30% polysaccharides and 20% beta-glucans), Panax ginseng Extract (Root) (Standardized to 80% ginsenosides), Shilajit (Fulvic Acid Complex Powder), Inositol; Other Ingredients: Not specified"
 category: "nootropic/coffee"
 last_updated: "2026-03-05"
 ---

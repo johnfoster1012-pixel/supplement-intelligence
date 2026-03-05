@@ -1,7 +1,7 @@
 ---
 title: "V-FORTYFLORA"
 product_url: "/products/v-fortyflora"
-ingredients: "Serving: 2 Veggie Capsules, 30 servings, 130 mg 500 mg"
+ingredients: "Serving Size: 2 Veggie Capsules, Servings Per Container: 30; Calcium (as Calcium Carbonate) 130mg; Magnesium (as Magnesium Sulfate) 500mg; Proprietary Blend 304mg: Activated Charcoal (from Coconut Shells), L-Lysine (from L-Lysine Hydrochloride); Other Ingredients: Hydroxypropyl methylcellulose (vegetable capsule), Silicon Dioxide"
 category: "gut health"
 last_updated: "2026-03-05"
 ---

@@ -1,8 +1,7 @@
 ---
 title: "COLLAGEN COMPLEX"
 product_url: "/products/collagen"
-ingredients: "Serving: 1 Scoop (11 g), 30 servings, Calories  40
-Protein 9 g, Vitamin C (as Ascorbic Acid) 300 mg, Vitamin E (as d-Alpha Tocopherol) 100 mg, Biotin (as D-Biotin) 300 mcg, Proprietary Blend 8.45 g"
+ingredients: "Serving Size: 1 Scoop (11 g), Servings Per Container: 30; Proprietary Blend 8.45g: Hydrolyzed Bovine Collagen Peptides, Beet Powder (Beta vulgaris) (Root), Bone Broth & Connective Tissue Powder (Bovine), Hydrolyzed Fish Collagen Peptides, Resveratrol, Astaxanthin (from Haematococcus pluvialis), Nicotinamide Adenine Dinucleotide (NAD), Black Pepper Extract (Piper nigrum) (Fruit) (Standardized to 95% Piperine), Hyaluronic Acid; Vitamin C (as Ascorbic Acid) 300mg; Vitamin E (as d-Alpha Tocopherol) 100mg; Biotin (as D-Biotin) 300mcg; Other Ingredients: Natural Raspberry Flavor, Malic Acid, Silicon Dioxide, Steviol Glycosides"
 category: "skin/joints"
 last_updated: "2026-03-05"
 ---

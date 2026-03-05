@@ -1,9 +1,7 @@
 ---
 title: "NOURISH PLUS"
 product_url: "/products/nourish-plus"
-ingredients: "Serving: 30 g (2 Scoops), 15 servings, Supplement Facts
-Folate 165 mcg, DFE (97 mcg L-methylfolate 
-from 105 mcg"
+ingredients: "Serving Size: 30 g (2 Scoops), Servings Per Container: 15; Folate 165mcg DFE (97mcg L-methylfolate from 105mcg L-5-Methylfolate, calcium salt); Pea protein powder, rice protein powder, hemp protein powder, pumpkin seed protein powder, coconut milk, medium-chain triglycerides powder (MCT), cordyceps mushroom, mangosteen, shiitake mushroom, maca, ashwagandha, turkey tail mushroom, chaga mushroom, holy basil, ginger, beetroot, strawberry, mango, green apple, blueberry, noni, dragon fruit, banana, tomato, grape, camu camu, kale, goji berry, cherry, chlorella, moringa, spirulina, alpha-lipoic acid, resveratrol, maqui berry, broccoli, reishi mushroom, coenzyme Q10 (Ubiquinone), quercetin, Lactobacillus plantarum, Lactobacillus rhamnosus, Lactobacillus casei, Turmeric (Curcuma longa), spinach, green tea extract, bitter melon, protease, amylase, AFA algae (Aphanizomenon flos-aquae), omega-3, vitamin A, vitamin C, vitamin D, vitamin E, vitamin K, thiamine, riboflavin, niacin, vitamin B6, folate, vitamin B12, biotin, pantothenic acid, calcium, iodine, magnesium, zinc, selenium, copper, manganese, chromium; Other Ingredients: Organic Inulin, Ground Flax Seed (Linum usitatissimum), Psyllium Husk (Seed) (Plantago ovata), Xanthan Gum, Cocoa Powder, Chocolate Flavoring, Steviol Glycosides, Silicon Dioxide"
 category: "women's hormonal health"
 last_updated: "2026-03-05"
 ---

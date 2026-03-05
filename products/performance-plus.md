@@ -1,7 +1,7 @@
 ---
 title: "PERFORMANCE PLUS"
 product_url: "/products/performance-plus"
-ingredients: "Serving: 1 Scoop (14 g), 30 servings, 3000 mg 1190 mg, 1190 mg 910 mg, 770 mg 644 mg, 644 mg 259 mg, 5
+ingredients: "Serving Size: 1 Scoop (14 g), Servings Per Container: 30; Magnesium (from Magnesium Glycinate, Magnesium L-Threonate and Magnesium Citrate) 350mg; Sodium (as Sodium Chloride) 300mg; Potassium (as Potassium Citrate) 500mg; Leucine (as L-leucine hydrochloride) 3000mg; Phenylalanine (as L-phenylalanine hydrochloride) 1190mg; Lysine (as L-lysine hydrochloride) 1190mg; Threonine (as L-threonine hydrochloride) 910mg; Valine (as L-valine hydrochloride) 770mg; Isoleucine (as L-isoleucine hydrochloride) 644mg; Histidine (as L-histidine hydrochloride) 644mg; Methionine (as L-methionine hydrochloride) 259mg; Creatine Monohydrate 3000mg; Myo-Inositol 300mg; Other Ingredients: Citric Acid, Cherry Pulp, Natural Watermelon Flavor, Silicon Dioxide, Guar Gum, Steviol Glycosides"
 1 g 350 mg"
 category: "sports performance"
 last_updated: "2026-03-05"

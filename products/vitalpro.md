@@ -1,7 +1,7 @@
 ---
 title: "VITALPRO"
 product_url: "/products/vitalpro"
-ingredients: "Serving: 2 Droppers (2.1 ml), 20 servings"
+ingredients: "Serving Size: 2 Droppers (2.1 ml), Servings Per Container: 20; Jamaica grass powder (Hibiscus sabdarifa), Horsetail plant powder (Equisetum arvense), Dandelion root extract (Taraxacum officinale), Toad grass extract (Eryngium heterophyllum), Moringa leaf extract (Moringa oleifera), Uva ursi leaf extract (Arctostaphylos uva-ursi); Other Ingredients: Purified water, Vegetable glycerin (Palm), Orange flavor, Malic acid, Potassium benzoate, Potassium sorbate"
 category: "protein/sports"
 last_updated: "2026-03-05"
 ---

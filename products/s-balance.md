@@ -1,7 +1,7 @@
 ---
 title: "S-BALANCE"
 product_url: "/products/s-balance"
-ingredients: "Proprietary Blend 980mg (Cactus Pad, Chaya Powder, Uva Ursi Powder, Garlic Powder, Cranberry, Berberine Hydrochloride, Milk Thistle Seed Extract, Black Knapweed, Fenugreek, Flax Powder), Serving Size: 2 Veggie Capsules, 30 servings"
+ingredients: "Serving Size: 2 Veggie Capsules, Servings Per Container: 30; Proprietary Blend 980mg: Cactus Pad (Family Cactaceae), Chaya Powder (Cnidoscolus aconitifolius) (Leaf), Uva Ursi Powder (Arctostaphylos uva-ursi) (Leaf), Garlic Powder (Allium sativum) (Bulb), Cranberry (Vaccinium macrocarpon) (Fruit), Berberine Hydrochloride (Phellodendron chinense Schneid) (Root), Milk Thistle Seed Extract (Silybum marianum) (Standardized to contain 80% Silymarin), Black Knapweed (Centaurea cyanus) (Flower), Fenugreek (Trigonella foenum-graecum) (Seed), Flax Powder (Linum usitatissimum) (Seed); Other Ingredients: Hydroxypropyl methyl cellulose (vegetable capsule), Beta-Carotene, Silicon Dioxide"
 category: "stress/adaptogen"
 last_updated: "2026-03-05"
 ---

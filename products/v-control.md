@@ -1,7 +1,7 @@
 ---
 title: "V-CONTROL"
 product_url: "/products/v-control"
-ingredients: "Serving: 2 Veggie Capsules, 30 servings"
+ingredients: "Serving Size: 2 Veggie Capsules, Servings Per Container: 30; Proprietary Blend 1000mg: Spirulina (Arthrospira platensis), Acerola Powder (Malpighia punicifolia) (Fruit), Lemon Balm (Melissa officinalis) (Flower), Mexican Hawthorn (Crataegus mexicana) (Root), Cactus Pad (Opuntia ficus-indica); Other Ingredients: Hydroxypropyl methylcellulose (vegetable capsule), Silicon Dioxide"
 category: "blood sugar/metabolic"
 last_updated: "2026-03-05"
 ---

@@ -1,7 +1,7 @@
 ---
 title: "V-NITRO"
 product_url: "/products/v-nitro"
-ingredients: "Serving: 2 Droppers (2 mL), 25 servings, Piperine) 41 mg, 40 mg 1.25 mg, 2 mg 20 mg"
+ingredients: "Serving Size: 2 Droppers (2 mL), Servings Per Container: 25; Vitamin C (as Ascorbic Acid) 1.3mg; Thiamin (as Thiamine HCl) 1.2mg; Niacin (as Niacinamide) 20mg; Proprietary Blend 41mg: L-Arginine HCl, L-Citrulline, Beet Powder (Beta vulgaris) (Root), Red Spinach Extract (Amaranthus) (Aerial Parts), Moringa Powder (Moringa oleifera) (Leaf), Noni (Morinda citrifolia) (Fruit), Black Pepper Extract (Piper nigrum) (Fruit) (Standardized to 95% Piperine); Other Ingredients: Purified water, Vegetable glycerin (Palm), Orange flavor, Malic acid, Potassium benzoate, Potassium sorbate"
 category: "pre-workout"
 last_updated: "2026-03-05"
 ---

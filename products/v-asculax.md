@@ -1,7 +1,7 @@
 ---
 title: "V-ASCULAX"
 product_url: "/products/v-asculax"
-ingredients: "Serving: 2 Veggie Capsules, 30 servings"
+ingredients: "Serving Size: 2 Veggie Capsules, Servings Per Container: 30; Proprietary Blend 1000mg: Artichoke Extract (Cynara scolymus) (Aerial parts) (Standardized to 5% cynarin), Rosemary (Rosmarinus officinalis) (Leaf), MSM (Methylsulfonylmethane), Horsetail Powder (Equisetum arvense) (Aerial Parts), Rue Powder (Ruta graveolens) (Aerial Parts), Witch Hazel Powder (Hamamelis mollis) (Stem); Other Ingredients: Hydroxypropyl methylcellulose (vegetable capsule), Silicon Dioxide"
 category: "cardiovascular"
 last_updated: "2026-03-05"
 ---

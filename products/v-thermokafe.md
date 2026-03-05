@@ -1,7 +1,7 @@
 ---
 title: "V-THERMOKAFE"
 product_url: "/products/v-thermokafe"
-ingredients: "Serving: 1 Scoop (3 g), 50 servings, 3 g
+ingredients: "Serving Size: 1 Scoop (3 g), Servings Per Container: 50; Niacin (as Niacinamide) 15mg; Pantothenic Acid (as Calcium Pantothenate) 15mg; Chromium (as Chromium Picolinate) 180mcg; Proprietary Blend 3g: Instant Roasted Black Coffee (Coffea arabica) (Bean), Green Tea Extract (Camellia sinensis) (Leaves) (Standardized to 50% polyphenols), L-Carnitine L-Tartrate, Guarana Extract (Paullinia cupana) (Seed) (Standardized to contain 22% Caffeine), Garcinia Cambogia Extract (Garcinia cambogia) (Fruit) (Standardized to 50% HCA), White Willow Bark Powder (Salix alba) (Bark), Fucus Powder (Fucus vesiculosus), Tyrosine (as L-Tyrosine hydrochloride), Ginger Powder (Zingiber officinale) (Root), Ginseng extract (Panax ginseng) (Root) (Standardized to 80% ginsenosides), Yerba Mate Powder (Ilex paraguariensis) (Leaf), Cayenne Pepper Powder (Capsicum frutescens) (Fruit), Black Pepper Powder (Piper nigrum) (Fruit); Other Ingredients: Not specified"
 10 2 g, 15 mg 15 mg"
 category: "thermogenic/coffee"
 last_updated: "2026-03-05"

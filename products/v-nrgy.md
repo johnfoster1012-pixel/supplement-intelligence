@@ -1,7 +1,7 @@
 ---
 title: "V-NRGY"
 product_url: "/products/v-nrgy"
-ingredients: "Serving: 1 Scoop (3 g), 30 servings, 480 mg
+ingredients: "Serving Size: 1 Scoop (3 g), Servings Per Container: 30; Vitamin C (as Ascorbic Acid) 80mg; Vitamin D (as Cholecalciferol) 10mcg; Thiamin (as Thiamine HCl) 0.30mg; Niacin (as Niacinamide) 24.0mg; Vitamin B6 (as Pyridoxine HCl) 2mg; Vitamin B12 (as Methylcobalamin) 12mcg; Biotin (as D-Biotin) 300mcg; Magnesium (as Magnesium Citrate) 10mg; Chromium (as Chromium Picolinate) 200mcg; Proprietary Blend 480mg: Dimethylethanolamine (as DMAE Bitartrate), Caffeine (as Caffeine Anhydrous), L-Carnitine L-Tartrate, Turmeric (Root) Dried Extract Curcumoids, Saffron Powder (Crocus sativus) (Stigma), Maritime Pine Powder (Pinus massoniana) (Bark), Green Coffee Extract (Coffea arabica) (Seed), Guarana Extract (Paullinia cupana) (Seed), Green Tea Extract (Camellia sinensis) (Leaf), L-Theanine, Quercetin (Sophora japonica) (Flower bud), Cayenne Pepper Powder (Capsicum frutescens) (Fruit); Other Ingredients: Mango Pulp, Natural Mango Flavor, Guar Gum, Citric Acid, Silicon Dioxide, Steviol Glycosides"
 15 4 g, 80 mg 10 mcg, 30 mg 24.0 mg, 2 mg 12 mcg, 300 mcg 10 mg"
 category: "energy"
 last_updated: "2026-03-05"
