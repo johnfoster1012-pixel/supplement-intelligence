@@ -1,7 +1,7 @@
 ---
 title: "V-ITALAY"
 product_url: "/products/v-italay"
-ingredients: "Serving: 2 Veggie Capsules, 30 servings"
+ingredients: "Proprietary Blend 980mg (Green Tea (Camellia sinensis) (Leaves), Passion Flower (Passiflora incarnata) (Leaf), Valerian Root Extract (Valeriana officinalis), Peppermint (Mentha piperita) (Leaf), Morning Glory (Ipomoea stans) (Root)), Serving Size: 2 Veggie Capsules, 30 servings"
 category: "sleep"
 last_updated: "2026-03-05"
 ---

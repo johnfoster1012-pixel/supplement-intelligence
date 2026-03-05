@@ -1,9 +1,7 @@
 ---
 title: "V-LOVKAFE"
 product_url: "/products/v-lovkafe"
-ingredients: "Serving: 1 Scoop (3 g), 50 servings, Saponins) (Provides 7.2 mg, Ginsenosides) 
-     (Provides 14.4 mg, 3 g
-10 2 g"
+ingredients: "Proprietary Blend 3g (Instant Roasted Black Coffee (Coffea arabica) (Bean), Tongkat Ali Powder (Eurycoma longifolia) (Bark), Tribulus terrestris Extract (Aerial parts), Panax ginseng Extract (Root), Gelatinized Maca Powder (Lepidium meyenii) (Root), Shilajit (Fulvic Acid Complex Powder), L-Arginine HCl), Serving Size: 1 Scoop (3 g), 50 servings"
 category: "cognitive/coffee"
 last_updated: "2026-03-05"
 ---

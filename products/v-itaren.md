@@ -1,7 +1,7 @@
 ---
 title: "V-ITAREN"
 product_url: "/products/v-itaren"
-ingredients: "Serving: 2 Veggie Capsules, 30 servings"
+ingredients: "Proprietary Blend 1000mg (Hibiscus Powder (Hibiscus sabdariffa) (Flower), Horsetail (Equisetum arvense) (Stems and leaves), Toad Grass (Eryngium carlinae) (Aerials part), Moringa Powder (Moringa oleifera) (Leaf), Dandelion (Taraxacum officinale) (Aerials part), Uva Ursi (Arctostaphylos uva-ursi) (Leaf)), Serving Size: 2 Veggie Capsules, 30 servings"
 category: "energy/blood"
 last_updated: "2026-03-05"
 ---

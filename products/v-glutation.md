@@ -1,7 +1,7 @@
 ---
 title: "V-GLUTATION PLUS"
 product_url: "/products/v-glutation"
-ingredients: "Serving: 2 Veggie Capsules, 30 servings"
+ingredients: "Vitamin C (as Ascorbic Acid) 240mg, Proprietary Blend 760mg (L-Glutathione (reduced form), Turmeric Powder (Curcuma longa) (Root), Rose Petal Powder (Rosa gallica) (Flower)), Serving Size: 2 Veggie Capsules, 30 servings"
 category: "antioxidant"
 last_updated: "2026-03-05"
 ---
