@@ -63,6 +63,11 @@ async function handleRequest(request) {
     return handleProductsIndex();
   }
 
+  // Handle articles index: /articles or /articles/
+  if (path === '/articles' || path === '/articles/') {
+    return handleArticlesIndex();
+  }
+
   return new Response('Not Found', { status: 404 });
 }
 
@@ -408,4 +413,38 @@ function formatDate(dateStr) {
 function gradeToNumeric(grade) {
   const grades = { 'A': '5', 'B': '4', 'C': '3', 'D': '2' };
   return grades[grade] || '4';
+}
+
+async function handleArticlesIndex() {
+  const githubUrl = GITHUB_RAW_BASE + 'articles/index.html';
+
+  try {
+    const response = await fetch(githubUrl, {
+      headers: { 'User-Agent': 'Supplement-Intelligence-Worker/7.0' },
+      cf: { cacheTtl: 3600 }
+    });
+
+    if (!response.ok) {
+      return new Response('Articles index temporarily unavailable', {
+        status: 503,
+        headers: { 'Content-Type': 'text/plain' }
+      });
+    }
+
+    const html = await response.text();
+
+    return new Response(html, {
+      status: 200,
+      headers: {
+        'Content-Type': 'text/html; charset=utf-8',
+        'Cache-Control': 'public, max-age=3600, s-maxage=86400',
+        'X-Powered-By': 'Supplement Intelligence v7',
+      }
+    });
+  } catch (err) {
+    return new Response('Error fetching articles index: ' + err.message, {
+      status: 500,
+      headers: { 'Content-Type': 'text/plain' }
+    });
+  }
 }
