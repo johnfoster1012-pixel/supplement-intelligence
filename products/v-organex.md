@@ -1,9 +1,12 @@
 ---
 title: "V-ORGANEX"
 product_url: "/products/v-organex"
-ingredients: "Milk Thistle extract 500mg (80% silymarin), Artichoke Extract 300mg, N-Acetyl Cysteine 200mg"
+ingredients: "Serving: 2 Veggie Capsules, 30 servings, Supplement Facts
+Serving Size 2 Veggie Capsules
+Servings Per Container 30
+Proprietary Blend 1000 mg"
 category: "liver/detox"
-last_updated: "2026-03-04"
+last_updated: "2026-03-05"
 ---
 
 # V-ORGANEX

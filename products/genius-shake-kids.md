@@ -3,7 +3,7 @@ title: "GENIUS SHAKE KIDS"
 product_url: "/products/genius-shake-kids"
 ingredients: "DHA 200mg, Choline 100mg, Iron 5mg, Vitamin D3 400IU, B-Vitamins"
 category: "kids brain/development"
-last_updated: "2026-03-04"
+last_updated: "2026-03-05"
 ---
 
 # GENIUS SHAKE KIDS

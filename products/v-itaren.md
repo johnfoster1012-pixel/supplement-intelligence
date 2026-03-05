@@ -1,9 +1,9 @@
 ---
 title: "V-ITAREN"
 product_url: "/products/v-itaren"
-ingredients: "Vitamin B12 (methylcobalamin) 1000mcg, Iron Bisglycinate 18mg"
+ingredients: "Serving: 2 Veggie Capsules, 30 servings"
 category: "energy/blood"
-last_updated: "2026-03-04"
+last_updated: "2026-03-05"
 ---
 
 # V-ITAREN

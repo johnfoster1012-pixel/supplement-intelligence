@@ -1,9 +1,11 @@
 ---
 title: "NOURISH PLUS"
 product_url: "/products/nourish-plus"
-ingredients: "Maca Root 500mg, Evening Primrose Oil 500mg (10% GLA), Black Cohosh 40mg"
+ingredients: "Serving: 30 g (2 Scoops), 15 servings, Supplement Facts
+Folate 165 mcg, DFE (97 mcg L-methylfolate 
+from 105 mcg"
 category: "women's hormonal health"
-last_updated: "2026-03-04"
+last_updated: "2026-03-05"
 ---
 
 # NOURISH PLUS

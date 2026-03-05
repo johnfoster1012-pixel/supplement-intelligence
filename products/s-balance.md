@@ -1,9 +1,12 @@
 ---
 title: "S-BALANCE"
 product_url: "/products/s-balance"
-ingredients: "Ashwagandha KSM-66 600mg, Rhodiola Rosea 300mg, Phosphatidylserine 200mg, Magnesium Glycinate 200mg"
+ingredients: "Serving: 2 Veggie Capsules, 30 servings, Silymarin) 
+      Black Knapweed (Centaurea cyanus) (Flower) 
+      Fenugreek (Trigonella foenum-graecum) (Seed) 
+      Flax Powder (Linum usitatissimum) (Seed) 980 mg"
 category: "stress/adaptogen"
-last_updated: "2026-03-04"
+last_updated: "2026-03-05"
 ---
 
 # S-BALANCE

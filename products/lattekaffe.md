@@ -1,9 +1,10 @@
 ---
 title: "LATTEKAFFE"
 product_url: "/products/lattekaffe"
-ingredients: "Arabica Coffee, Marine Collagen 5g, MCT Oil 2g"
+ingredients: "Serving: 1 Stick Pack (11 g), 30 servings, Calories 60 
+Total  Fat 2 g, Saturated Fat 2 g, Total Carbohydrate 4 g, Biotin (as D-Biotin) 300 mcg, MCT Oil Powder 2100 mg"
 category: "beauty/coffee"
-last_updated: "2026-03-04"
+last_updated: "2026-03-05"
 ---
 
 # LATTEKAFFE

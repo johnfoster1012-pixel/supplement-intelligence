@@ -1,9 +1,9 @@
 ---
 title: "V-CONTROL"
 product_url: "/products/v-control"
-ingredients: "Berberine HCl 500mg, Chromium Picolinate 200mcg"
+ingredients: "Serving: 2 Veggie Capsules, 30 servings"
 category: "blood sugar/metabolic"
-last_updated: "2026-03-04"
+last_updated: "2026-03-05"
 ---
 
 # V-CONTROL

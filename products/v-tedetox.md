@@ -3,7 +3,7 @@ title: "V-TEDETOX"
 product_url: "/products/v-tedetox"
 ingredients: "Senna Leaf 500mg, Dandelion Root 400mg, Ginger Root 200mg"
 category: "detox/digestive"
-last_updated: "2026-03-04"
+last_updated: "2026-03-05"
 ---
 
 # V-TEDETOX

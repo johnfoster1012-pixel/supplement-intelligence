@@ -1,9 +1,10 @@
 ---
 title: "COLLAGEN COMPLEX"
 product_url: "/products/collagen"
-ingredients: "Marine Collagen Peptides 5g, Vitamin C 250mg, Hyaluronic Acid 50mg"
+ingredients: "Serving: 1 Scoop (11 g), 30 servings, Calories  40
+Protein 9 g, Vitamin C (as Ascorbic Acid) 300 mg, Vitamin E (as d-Alpha Tocopherol) 100 mg, Biotin (as D-Biotin) 300 mcg, Proprietary Blend 8.45 g"
 category: "skin/joints"
-last_updated: "2026-03-04"
+last_updated: "2026-03-05"
 ---
 
 # COLLAGEN COMPLEX

@@ -1,9 +1,18 @@
 ---
 title: "V-ITALBOOST"
 product_url: "/products/v-italboost"
-ingredients: "Vitamin C 1000mg, Zinc 15mg"
+ingredients: "Serving: 2 Veggie Capsules, 30 servings, Supplement Facts
+Servings Per Container 30
+Serving Size 2 Veggie Capsules
+Vitamin C (as Ascorbic Acid)
+Vitamin D (as Cholecalciferol) 150 mg, total phenolic compounds
+     Ginger Powder (Zingiber officinale) (Root)
+     Turmeric Powder (Curcuma longa) (Root)
+     Cayenne Pepper Powder (Capsicum frutescens) (Fruit)
+     Cinnamon (Cinnamomum verum) (Bark) 
+     Fenugreek (Trigonella foenum-graecum) (Seed) 844 mg"
 category: "immune"
-last_updated: "2026-03-04"
+last_updated: "2026-03-05"
 ---
 
 # V-ITALBOOST

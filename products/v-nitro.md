@@ -1,9 +1,9 @@
 ---
 title: "V-NITRO"
 product_url: "/products/v-nitro"
-ingredients: "L-Citrulline 6g, Beta-Alanine 3.2g, L-Arginine 2g"
+ingredients: "Serving: 2 Droppers (2 mL), 25 servings, Piperine) 41 mg, 40 mg 1.25 mg, 2 mg 20 mg"
 category: "pre-workout"
-last_updated: "2026-03-04"
+last_updated: "2026-03-05"
 ---
 
 # V-NITRO

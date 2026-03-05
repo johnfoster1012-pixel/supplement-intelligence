@@ -1,9 +1,9 @@
 ---
 title: "V-ITALAY"
 product_url: "/products/v-italay"
-ingredients: "Melatonin 3mg, L-Theanine 200mg"
+ingredients: "Serving: 2 Veggie Capsules, 30 servings"
 category: "sleep"
-last_updated: "2026-03-04"
+last_updated: "2026-03-05"
 ---
 
 # V-ITALAY

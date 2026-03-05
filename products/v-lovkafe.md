@@ -1,9 +1,11 @@
 ---
 title: "V-LOVKAFE"
 product_url: "/products/v-lovkafe"
-ingredients: "Arabica Coffee 200mg caffeine, Lion's Mane 250mg"
+ingredients: "Serving: 1 Scoop (3 g), 50 servings, Saponins) (Provides 7.2 mg, Ginsenosides) 
+     (Provides 14.4 mg, 3 g
+10 2 g"
 category: "cognitive/coffee"
-last_updated: "2026-03-04"
+last_updated: "2026-03-05"
 ---
 
 # V-LOVKAFE

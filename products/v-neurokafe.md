@@ -1,9 +1,12 @@
 ---
 title: "V-NEUROKAFE"
 product_url: "/products/v-neurokafe"
-ingredients: "Arabica Coffee, Bacopa Monnieri 300mg, Phosphatidylserine 100mg, Ginkgo Biloba 120mg"
+ingredients: "Serving: 1 Scoop (3 g), 50 servings, Calories
+Total Carbohydrate 
+Thiamin (as Thiamine HCl)
+Vitamin B6 (as Pyridoxine HCl) 2.69 g, 15 mg 10 mg"
 category: "nootropic/coffee"
-last_updated: "2026-03-04"
+last_updated: "2026-03-05"
 ---
 
 # V-NEUROKAFE

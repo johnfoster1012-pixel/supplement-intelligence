@@ -1,9 +1,9 @@
 ---
 title: "V-FORTYFLORA"
 product_url: "/products/v-fortyflora"
-ingredients: "Lactobacillus acidophilus 20B CFU, Bifidobacterium longum 20B CFU, 40B CFU total"
+ingredients: "Serving: 2 Veggie Capsules, 30 servings, 130 mg 500 mg"
 category: "gut health"
-last_updated: "2026-03-04"
+last_updated: "2026-03-05"
 ---
 
 # V-FORTYFLORA

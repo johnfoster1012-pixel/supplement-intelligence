@@ -1,9 +1,10 @@
 ---
 title: "PERFORMANCE PLUS"
 product_url: "/products/performance-plus"
-ingredients: "Creatine Monohydrate 5g, Beta-Alanine 3.2g, L-Glutamine 2g"
+ingredients: "Serving: 1 Scoop (14 g), 30 servings, 3000 mg 1190 mg, 1190 mg 910 mg, 770 mg 644 mg, 644 mg 259 mg, 5
+1 g 350 mg"
 category: "sports performance"
-last_updated: "2026-03-04"
+last_updated: "2026-03-05"
 ---
 
 # PERFORMANCE PLUS

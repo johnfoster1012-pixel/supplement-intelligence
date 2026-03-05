@@ -1,9 +1,9 @@
 ---
 title: "V-ITADOL"
 product_url: "/products/v-itadol"
-ingredients: "White Willow Bark 400mg, Boswellia serrata 300mg"
+ingredients: "Serving: 2 Veggie Capsules, 30 servings"
 category: "pain/inflammation"
-last_updated: "2026-03-04"
+last_updated: "2026-03-05"
 ---
 
 # V-ITADOL

@@ -3,7 +3,7 @@ title: "V-DAILY"
 product_url: "/products/v-daily"
 ingredients: "Vitamin A 800mcg, Vitamin C 80mg, Vitamin B-Complex, Zinc 10mg"
 category: "multivitamin"
-last_updated: "2026-03-04"
+last_updated: "2026-03-05"
 ---
 
 # V-DAILY

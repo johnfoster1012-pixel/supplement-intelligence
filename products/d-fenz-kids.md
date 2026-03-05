@@ -3,7 +3,7 @@ title: "D-FENZ KIDS"
 product_url: "/products/d-fenz-kids"
 ingredients: "Vitamin C 250mg, Zinc 5mg, Elderberry Extract 150mg, Echinacea 100mg"
 category: "kids immune"
-last_updated: "2026-03-04"
+last_updated: "2026-03-05"
 ---
 
 # D-FENZ KIDS

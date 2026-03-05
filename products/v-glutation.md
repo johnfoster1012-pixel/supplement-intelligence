@@ -1,9 +1,9 @@
 ---
 title: "V-GLUTATION PLUS"
 product_url: "/products/v-glutation"
-ingredients: "Reduced Glutathione 500mg, Vitamin C 250mg, Alpha Lipoic Acid 100mg"
+ingredients: "Serving: 2 Veggie Capsules, 30 servings"
 category: "antioxidant"
-last_updated: "2026-03-04"
+last_updated: "2026-03-05"
 ---
 
 # V-GLUTATION PLUS

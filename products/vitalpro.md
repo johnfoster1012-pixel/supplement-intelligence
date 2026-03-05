@@ -1,9 +1,9 @@
 ---
 title: "VITALPRO"
 product_url: "/products/vitalpro"
-ingredients: "Whey Protein Isolate 25g, BCAAs 5g (L-Leucine 2.5g, L-Isoleucine 1.25g, L-Valine 1.25g)"
+ingredients: "Serving: 2 Droppers (2.1 ml), 20 servings"
 category: "protein/sports"
-last_updated: "2026-03-04"
+last_updated: "2026-03-05"
 ---
 
 # VITALPRO

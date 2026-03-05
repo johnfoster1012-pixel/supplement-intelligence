@@ -3,7 +3,7 @@ title: "SMARTBIOTICS KIDS"
 product_url: "/products/smartbiotics-kids"
 ingredients: "Lactobacillus rhamnosus GG 5 Billion CFU, Bifidobacterium infantis 3 Billion CFU, Inulin prebiotic 1g"
 category: "kids gut/immune"
-last_updated: "2026-03-04"
+last_updated: "2026-03-05"
 ---
 
 # SMARTBIOTICS KIDS

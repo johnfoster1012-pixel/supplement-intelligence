@@ -1,9 +1,10 @@
 ---
 title: "V-NRGY"
 product_url: "/products/v-nrgy"
-ingredients: "Caffeine Anhydrous 150mg, L-Theanine 200mg, B-Vitamins Complex"
+ingredients: "Serving: 1 Scoop (3 g), 30 servings, 480 mg
+15 4 g, 80 mg 10 mcg, 30 mg 24.0 mg, 2 mg 12 mcg, 300 mcg 10 mg"
 category: "energy"
-last_updated: "2026-03-04"
+last_updated: "2026-03-05"
 ---
 
 # V-NRGY

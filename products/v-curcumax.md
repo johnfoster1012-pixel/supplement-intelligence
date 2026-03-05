@@ -1,9 +1,15 @@
 ---
 title: "V-CURCUMAX"
 product_url: "/products/v-curcumax"
-ingredients: "Curcumin 500mg (95% curcuminoids), Piperine 5mg, Boswellia 200mg"
+ingredients: "Serving: 2 Veggie Capsules, 30 servings, Supplement Facts
+Servings Per Container 30
+Serving Size 2 Veggie Capsules
+Vitamin C (as Ascorbic Acid)
+Selenium (as Selenium Amino Acid Chelate) 60 mg, Turmeric Powder (Curcuma Longa) (Root)
+MSM (Methylsulfonylmethane)
+Proprietary Blend 810 mg"
 category: "anti-inflammatory"
-last_updated: "2026-03-04"
+last_updated: "2026-03-05"
 ---
 
 # V-CURCUMAX

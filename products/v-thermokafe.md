@@ -1,9 +1,10 @@
 ---
 title: "V-THERMOKAFE"
 product_url: "/products/v-thermokafe"
-ingredients: "Arabica Coffee, Green Tea Extract 200mg (50% EGCG), Cayenne Pepper 100mg"
+ingredients: "Serving: 1 Scoop (3 g), 50 servings, 3 g
+10 2 g, 15 mg 15 mg"
 category: "thermogenic/coffee"
-last_updated: "2026-03-04"
+last_updated: "2026-03-05"
 ---
 
 # V-THERMOKAFE

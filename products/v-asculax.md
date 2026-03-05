@@ -1,9 +1,9 @@
 ---
 title: "V-ASCULAX"
 product_url: "/products/v-asculax"
-ingredients: "Nattokinase 2000 FU, Grape Seed Extract 200mg, CoQ10 100mg, Vitamin K2 100mcg"
+ingredients: "Serving: 2 Veggie Capsules, 30 servings"
 category: "cardiovascular"
-last_updated: "2026-03-04"
+last_updated: "2026-03-05"
 ---
 
 # V-ASCULAX
