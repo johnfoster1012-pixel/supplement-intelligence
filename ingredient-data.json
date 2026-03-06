@@ -1,0 +1,338 @@
+{
+  "generatedAt": "2026-03-06",
+  "totalIngredients": 5,
+  "ingredients": [
+    {
+      "slug": "glutathione",
+      "name": "Glutathione",
+      "subtitle": "Evidence summary for antioxidant status, detoxification support, and oral bioavailability.",
+      "aliases": [
+        "reduced glutathione",
+        "GSH"
+      ],
+      "overview": "Glutathione is the body's primary intracellular antioxidant. The strongest commercial opportunity on your site is to treat it as an ingredient entity first and a product feature second.",
+      "evidenceSummary": "V-GLUTATION PLUS combines 500mg of reduced glutathione with 250mg of Vitamin C and 100mg of Alpha Lipoic Acid to deliver a synergistic, multi-layered antioxidant defense system. Clinical research demonstrates that this combination supports cellular detoxification, immune function, and oxidative stress reduction --\u0094 with Vitamin C and Alpha Lipoic Acid actively regenerating and recycling glutathione to extend its biological activity. This product is particularly well-suited for adults experiencing high oxidative stress, athletes, smokers, individuals with metabolic conditions, or anyone seeking to support healthy aging and liver function.",
+      "mechanism": "Glutathione neutralizes reactive oxygen species directly and supports phase II detoxification. Vitamin C and alpha lipoic acid can help recycle oxidized glutathione back into its active reduced form.",
+      "doseSummary": "Human studies cited in your repository support 500 mg/day as a practical oral dose for raising blood glutathione, with some liver-health data at 300 mg/day.",
+      "evidenceGrade": "B",
+      "shadowQueries": [
+        "does oral glutathione work",
+        "best glutathione supplement form",
+        "glutathione dosage research",
+        "glutathione for oxidative stress"
+      ],
+      "relatedProducts": [
+        {
+          "slug": "v-glutation",
+          "name": "V-GLUTATION PLUS",
+          "url": "/products/v-glutation",
+          "articleUrl": "/articles/v-glutation-benefits"
+        },
+        {
+          "slug": "v-italboost",
+          "name": "V-ITALBOOST",
+          "url": "/products/v-italboost",
+          "articleUrl": "/articles/v-italboost-benefits"
+        },
+        {
+          "slug": "v-organex",
+          "name": "V-ORGANEX",
+          "url": "/products/v-organex",
+          "articleUrl": "/articles/v-organex-benefits"
+        }
+      ],
+      "citations": [
+        {
+          "pmid": "26370552",
+          "title": "Richie JP Jr et al. -\u0080\u0094 Randomized controlled trial of oral glutathione supplementation on body stores of glutathione"
+        },
+        {
+          "pmid": "8490668",
+          "title": "Johnston CS et al. -\u0080\u0094 Vitamin C elevates red blood cell glutathione in healthy adults"
+        },
+        {
+          "pmid": "10063298",
+          "title": "Marangon K et al. -\u0080\u0094 Comparison of the effect of alpha-lipoic acid and alpha-tocopherol supplementation on measures of oxidative stress"
+        },
+        {
+          "pmid": "11319996",
+          "title": "Ziegler D et al. -\u0080\u0094 Treatment of symptomatic diabetic polyneuropathy with the antioxidant alpha-lipoic acid: a meta-analysis"
+        },
+        {
+          "pmid": "28509814",
+          "title": "Honda Y et al. -\u0080\u0094 Efficacy of glutathione for the treatment of nonalcoholic fatty liver disease: an open-label, single-arm, multicenter, pilot study"
+        },
+        {
+          "pmid": "31284537",
+          "title": "Lykkesfeldt J and Tveden-Nyborg P -\u0080\u0094 The Pharmacokinetics of Vitamin C"
+        },
+        {
+          "pmid": "23440782",
+          "title": "Vitamin C for Preventing and Treating the Common Cold"
+        },
+        {
+          "pmid": "28515951",
+          "title": "Zinc Lozenges and the Common Cold: A Meta-Analysis Comparing Zinc Acetate and Zinc Gluconate"
+        }
+      ],
+      "sourceProduct": {
+        "slug": "v-glutation",
+        "name": "V-GLUTATION PLUS",
+        "url": "/products/v-glutation"
+      }
+    },
+    {
+      "slug": "marine-collagen-peptides",
+      "name": "Marine Collagen Peptides",
+      "subtitle": "Evidence summary for skin elasticity, hydration, and connective tissue support.",
+      "aliases": [
+        "collagen peptides",
+        "hydrolyzed collagen"
+      ],
+      "overview": "Collagen peptides map well to LLM citation behavior because users often ask direct, evidence-oriented questions about wrinkles, skin hydration, and joint comfort.",
+      "evidenceSummary": "COLLAGEN COMPLEX combines 5g of marine collagen peptides, 250mg of vitamin C, and 50mg of hyaluronic acid to support skin elasticity, joint comfort, and hydration. Clinical trials demonstrate measurable improvements in skin wrinkle depth, moisture retention, and joint pain within 8--\u009312 weeks of daily supplementation. This product is best suited for adults over 25 experiencing early signs of skin aging, joint stiffness, or those seeking proactive connective tissue support.",
+      "mechanism": "Hydrolyzed collagen peptides are absorbed as smaller peptide fragments that can stimulate fibroblast activity, while vitamin C supports collagen synthesis and hyaluronic acid helps maintain extracellular matrix hydration.",
+      "doseSummary": "Your repository supports 2.5 to 5 g/day for skin-focused outcomes, with higher doses used in joint-pain studies.",
+      "evidenceGrade": "B",
+      "shadowQueries": [
+        "collagen peptides for skin elasticity",
+        "collagen dosage for skin and joints",
+        "does oral collagen work"
+      ],
+      "relatedProducts": [
+        {
+          "slug": "collagen",
+          "name": "COLLAGEN COMPLEX",
+          "url": "/products/collagen",
+          "articleUrl": "/articles/collagen-benefits"
+        }
+      ],
+      "citations": [
+        {
+          "pmid": "24401291",
+          "title": "Oral Supplementation of Specific Collagen Peptides Has Beneficial Effects on Human Skin Physiology: A Double-Blind, Placebo-Controlled Study"
+        },
+        {
+          "pmid": "30681787",
+          "title": "Effects of Hydrolyzed Collagen Supplementation on Skin Aging: A Systematic Review and Meta-Analysis"
+        },
+        {
+          "pmid": "18416885",
+          "title": "24-Week Study on the Use of Collagen Hydrolysate as a Dietary Supplement in Athletes with Activity-Related Joint Pain"
+        },
+        {
+          "pmid": "17884994",
+          "title": "Vitamin C and Collagen Synthesis"
+        },
+        {
+          "pmid": "22956862",
+          "title": "Ingestion of BioCell Collagen, a Novel Hydrolyzed Chicken Sternal Cartilage Extract; Enhanced Blood Microcirculation and Reduced Facial Aging Signs"
+        },
+        {
+          "pmid": "28761365",
+          "title": "Ingested Hyaluronan Moisturizes Dry Skin"
+        }
+      ],
+      "sourceProduct": {
+        "slug": "collagen",
+        "name": "COLLAGEN COMPLEX",
+        "url": "/products/collagen"
+      }
+    },
+    {
+      "slug": "curcumin",
+      "name": "Curcumin",
+      "subtitle": "Evidence summary for inflammation support, joint comfort, and bioavailability considerations.",
+      "aliases": [
+        "turmeric extract",
+        "curcuminoids"
+      ],
+      "overview": "Curcumin is one of the clearest ingredient-level entities in your catalog and should exist as a standalone research page independent of product merchandising.",
+      "evidenceSummary": "V-CURCUMAX combines pharmaceutical-grade curcumin (95% curcuminoids) with absorption-enhancing piperine and synergistic Boswellia extract to deliver clinically meaningful anti-inflammatory and joint-supportive effects. The piperine component increases curcumin bioavailability by up to 2000%, addressing curcumin's well-documented absorption limitation. This formulation is best suited for individuals managing chronic inflammatory conditions such as osteoarthritis, rheumatoid arthritis, or exercise-induced muscle soreness.",
+      "mechanism": "Curcumin modulates NF-kB, COX-2, and other inflammatory pathways, while piperine increases bioavailability by reducing first-pass metabolism.",
+      "doseSummary": "Your repository centers on clinically relevant curcumin doses paired with piperine to improve absorption.",
+      "evidenceGrade": "B",
+      "shadowQueries": [
+        "curcumin with piperine evidence",
+        "curcumin inflammation clinical studies",
+        "best absorbed curcumin form"
+      ],
+      "relatedProducts": [
+        {
+          "slug": "v-curcumax",
+          "name": "V-CURCUMAX",
+          "url": "/products/v-curcumax",
+          "articleUrl": "/articles/v-curcumax-benefits"
+        },
+        {
+          "slug": "v-itaren",
+          "name": "V-ITAREN",
+          "url": "/products/v-itaren",
+          "articleUrl": "/articles/v-itaren-benefits"
+        },
+        {
+          "slug": "v-itadol",
+          "name": "V-ITADOL",
+          "url": "/products/v-itadol",
+          "articleUrl": "/articles/v-itadol-benefits"
+        }
+      ],
+      "citations": [
+        {
+          "pmid": "26007179",
+          "title": "Curcumin: A Review of Its' Effects on Human Health"
+        },
+        {
+          "pmid": "22407780",
+          "title": "A Randomized, Pilot Study to Assess the Efficacy and Safety of Curcumin in Patients with Active Rheumatoid Arthritis"
+        },
+        {
+          "pmid": "9619120",
+          "title": "Influence of Piperine on the Pharmacokinetics of Curcumin in Animals and Human Volunteers"
+        },
+        {
+          "pmid": "23339049",
+          "title": "Therapeutic Roles of Curcumin: Lessons Learned from Clinical Trials"
+        },
+        {
+          "pmid": "11606625",
+          "title": "Phase I Clinical Trial of Oral Curcumin: Biomarkers of Systemic Activity and Compliance"
+        },
+        {
+          "pmid": "17183650",
+          "title": "Comparative Study of Boswellia Serrata Extract Versus Valdecoxib in Osteoarthritis of the Knee"
+        },
+        {
+          "pmid": "9746768",
+          "title": "Oral vitamin B12 versus intramuscular vitamin B12 for vitamin B12 deficiency"
+        },
+        {
+          "pmid": "28728812",
+          "title": "Iron absorption from oral iron supplements given on consecutive versus alternate days and as single morning doses versus twice-daily split dosing in iron-depleted women"
+        }
+      ],
+      "sourceProduct": {
+        "slug": "v-curcumax",
+        "name": "V-CURCUMAX",
+        "url": "/products/v-curcumax"
+      }
+    },
+    {
+      "slug": "omega-3-fatty-acids",
+      "name": "Omega-3 Fatty Acids",
+      "subtitle": "Evidence summary for EPA/DHA, cardiovascular risk, and cognition-related use cases.",
+      "aliases": [
+        "EPA",
+        "DHA",
+        "fish oil"
+      ],
+      "overview": "Omega-3 pages are highly citeable because they line up with common AI queries about triglycerides, heart health, inflammation, and cognitive aging.",
+      "evidenceSummary": "V-OMEGA3 delivers a clinically relevant 1,000mg daily dose of marine omega-3 fatty acids (600mg EPA + 400mg DHA) stabilized with 10mg of Vitamin E (as tocopherol) to prevent oxidation. This formulation is primarily supported by strong randomized controlled trial evidence for reducing triglycerides, lowering cardiovascular event risk, and supporting cognitive function, particularly in adults with elevated cardiovascular risk, metabolic dysfunction, or age-related cognitive decline. It represents one of the most thoroughly researched supplement combinations available today.",
+      "mechanism": "EPA and DHA incorporate into cell membranes, influence eicosanoid production, and support anti-inflammatory signaling; DHA also plays a structural role in neuronal membranes.",
+      "doseSummary": "Your repository highlights a 1,000 mg daily marine omega-3 dose with 600 mg EPA and 400 mg DHA as the product anchor.",
+      "evidenceGrade": "A",
+      "shadowQueries": [
+        "omega-3 epa dha dosage",
+        "fish oil cardiovascular evidence",
+        "dha cognition research"
+      ],
+      "relatedProducts": [
+        {
+          "slug": "v-omega3",
+          "name": "V-OMEGA3",
+          "url": "/products/v-omega3",
+          "articleUrl": "/articles/v-omega3-benefits"
+        }
+      ],
+      "citations": [
+        {
+          "pmid": "30415628",
+          "title": "Bhatt DL et al. -\u0080\u0094 REDUCE-IT: Cardiovascular Risk Reduction with Icosapentaenoic Acid for Hypertriglyceridemia"
+        },
+        {
+          "pmid": "11058143",
+          "title": "GISSI-Prevenzione Investigators -\u0080\u0094 Dietary supplementation with n-3 polyunsaturated fatty acids and vitamin E after myocardial infarction"
+        },
+        {
+          "pmid": "22686415",
+          "title": "ORIGIN Trial Investigators -\u0080\u0094 n-3 Fatty Acids and Cardiovascular Outcomes in Patients with Dysglycemia"
+        },
+        {
+          "pmid": "20434961",
+          "title": "Yurko-Mauro K et al. -\u0080\u0094 Beneficial effects of docosahexaenoic acid on cognition in age-related cognitive decline"
+        },
+        {
+          "pmid": "18458836",
+          "title": "Stark KD et al. -\u0080\u0094 Effect of a fish-oil concentrate on serum lipids in postmenopausal women receiving and not receiving hormone replacement therapy"
+        },
+        {
+          "pmid": "30146932",
+          "title": "ASCEND Study Collaborative Group -\u0080\u0094 Effects of n-3 Fatty Acid Supplements in Diabetes Mellitus"
+        }
+      ],
+      "sourceProduct": {
+        "slug": "v-omega3",
+        "name": "V-OMEGA3",
+        "url": "/products/v-omega3"
+      }
+    },
+    {
+      "slug": "bacopa-monnieri",
+      "name": "Bacopa monnieri",
+      "subtitle": "Evidence summary for memory support and nootropic formulations.",
+      "aliases": [
+        "bacopa",
+        "brahmi"
+      ],
+      "overview": "Bacopa is a strong bridge from your existing product-focused nootropic content toward ingredient-led cognitive research pages.",
+      "evidenceSummary": "V-NEUROKAFE is a nootropic-enhanced coffee formula combining the acute alertness of Arabica caffeine with three clinically studied cognitive ingredients --\u0094 Bacopa Monnieri, Phosphatidylserine, and Ginkgo Biloba --\u0094 targeting memory consolidation, mental processing speed, and sustained attention. The combination is best suited for knowledge workers, students, and older adults seeking both immediate and long-term cognitive enhancement. Evidence is strongest for Bacopa Monnieri and Phosphatidylserine, with Grade B support from multiple randomized controlled trials.\n\n---",
+      "mechanism": "Bacopa appears to support memory consolidation and synaptic signaling over time rather than acting like a fast stimulant.",
+      "doseSummary": "Your repository cites chronic-use memory studies rather than acute stimulant effects, which is the right positioning for ingredient-level content.",
+      "evidenceGrade": "B",
+      "shadowQueries": [
+        "bacopa memory studies",
+        "bacopa monnieri dosage research",
+        "best nootropic ingredients for memory"
+      ],
+      "relatedProducts": [
+        {
+          "slug": "v-neurokafe",
+          "name": "V-NEUROKAFE",
+          "url": "/products/v-neurokafe",
+          "articleUrl": "/articles/v-neurokafe-benefits"
+        }
+      ],
+      "citations": [
+        {
+          "pmid": "14759755",
+          "title": "Ein\u00c3\u00b6ther SJ, Giesbrecht T. Caffeine as an attention enhancer: reviewing existing assumptions."
+        },
+        {
+          "pmid": "11790213",
+          "title": "Ross GW et al. Association of coffee and caffeine intake with the risk of Parkinson disease."
+        },
+        {
+          "pmid": "12093601",
+          "title": "Roodenrys S et al. Chronic effects of Brahmi (Bacopa monnieri) on human memory."
+        },
+        {
+          "pmid": "24252493",
+          "title": "Kongkeaw C et al. Meta-analysis of randomized controlled trials on cognitive effects of Bacopa monnieri extract."
+        },
+        {
+          "pmid": "1678027",
+          "title": "Crook TH et al. Effects of phosphatidylserine in age-associated memory impairment."
+        },
+        {
+          "pmid": "20091579",
+          "title": "Weinmann S et al. Effects of Ginkgo biloba in dementia: systematic review and meta-analysis."
+        }
+      ],
+      "sourceProduct": {
+        "slug": "v-neurokafe",
+        "name": "V-NEUROKAFE",
+        "url": "/products/v-neurokafe"
+      }
+    }
+  ]
+}

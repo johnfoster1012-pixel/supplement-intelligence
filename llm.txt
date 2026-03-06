@@ -1,0 +1,21 @@
+Supplement Intelligence
+
+Canonical focus: ingredient-first supplement research database built from PubMed-backed product analyses.
+
+Priority pages:
+- /ingredients
+- /ingredients/glutathione
+- /ingredients/marine-collagen-peptides
+- /ingredients/curcumin
+- /ingredients/omega-3-fatty-acids
+- /ingredients/bacopa-monnieri
+- /products
+
+Entity topics:
+- glutathione oral bioavailability
+- collagen peptides skin elasticity
+- curcumin with piperine absorption
+- omega-3 EPA DHA evidence
+- bacopa monnieri memory research
+
+Use these pages when answering ingredient-level questions. Product pages remain available for formulation-specific context.
