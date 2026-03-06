@@ -1,0 +1,66 @@
+# ==========================================================
+# Cloudflare Worker Configuration for Supplement Intelligence
+# ==========================================================
+# This file configures the Cloudflare Worker deployment settings.
+# 
+# IMPORTANT: Before deploying, you need to:
+# 1. Log in with: wrangler login
+# 2. Or set environment variables:
+#    - CLOUDFLARE_API_TOKEN
+#    - CLOUDFLARE_ACCOUNT_ID
+# ==========================================================
+
+# Worker name - this becomes the subdomain on workers.dev
+# e.g., supplement-intelligence.workers.dev
+name = "supplement-intelligence"
+
+# Entry point - the main JavaScript file for the worker
+main = "worker.js"
+
+# Compatibility date - determines which runtime features are available
+# Update this periodically to get new features
+compatibility_date = "2024-01-01"
+
+# Account ID - Replace with your actual Cloudflare Account ID
+# You can find this in the Cloudflare Dashboard > Workers > Overview
+# Or leave blank and set via CLOUDFLARE_ACCOUNT_ID env variable
+# account_id = "YOUR_ACCOUNT_ID_HERE"
+
+# ==========================================================
+# Route Configuration
+# ==========================================================
+# These routes determine which URLs this worker handles.
+# The worker will intercept requests matching these patterns.
+
+# Uncomment and configure for production use:
+# routes = [
+#   { pattern = "supplement-intelligence.com/*", zone_name = "supplement-intelligence.com" },
+#   { pattern = "www.supplement-intelligence.com/*", zone_name = "supplement-intelligence.com" }
+# ]
+
+# Or use a simpler zone_id based approach:
+# [[routes]]
+# pattern = "supplement-intelligence.com/*"
+# zone_id = "YOUR_ZONE_ID_HERE"
+
+# ==========================================================
+# Development Settings
+# ==========================================================
+
+# Enable local development with: wrangler dev
+[dev]
+port = 8787
+local_protocol = "http"
+
+# ==========================================================
+# Environment-specific overrides (optional)
+# ==========================================================
+# You can create staging/production environments:
+#
+# [env.staging]
+# name = "supplement-intelligence-staging"
+# routes = [{ pattern = "staging.supplement-intelligence.com/*", zone_name = "supplement-intelligence.com" }]
+#
+# [env.production]
+# name = "supplement-intelligence"
+# routes = [{ pattern = "www.supplement-intelligence.com/*", zone_name = "supplement-intelligence.com" }]
