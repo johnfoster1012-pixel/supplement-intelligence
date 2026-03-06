@@ -1,0 +1,63 @@
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "@id": "https://www.supplement-intelligence.com/database/nac-studies",
+  "name": "NAC (N-Acetyl Cysteine) Clinical Studies Database",
+  "headline": "NAC Clinical Studies - Evidence-Based Research Summary",
+  "description": "Comprehensive database of N-Acetyl Cysteine (NAC) clinical trials covering glutathione synthesis, respiratory health, psychiatric applications, and liver protection.",
+  "url": "https://www.supplement-intelligence.com/database/nac-studies",
+  "datePublished": "2026-03-06",
+  "dateModified": "2026-03-06",
+  "inLanguage": "en-US",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Supplement Intelligence",
+    "url": "https://www.supplement-intelligence.com"
+  },
+  "about": {
+    "@type": "Drug",
+    "name": "N-Acetyl Cysteine",
+    "alternateName": ["NAC", "N-Acetylcysteine", "Acetylcysteine"],
+    "description": "Amino acid derivative and glutathione precursor with mucolytic, antioxidant, and hepatoprotective properties"
+  },
+  "medicalAudience": {
+    "@type": "MedicalAudience",
+    "audienceType": "Clinician"
+  },
+  "mainEntity": {
+    "@type": "MedicalStudy",
+    "name": "NAC Clinical Research Compilation",
+    "studySubject": {
+      "@type": "Drug",
+      "name": "N-Acetyl Cysteine"
+    },
+    "outcome": [
+      "COPD exacerbation reduction (22%)",
+      "Glutathione level increase (30-50%)",
+      "Psychiatric symptom improvement (OCD, addiction, depression)",
+      "Acetaminophen overdose treatment (FDA-approved)",
+      "Male fertility parameter improvement"
+    ]
+  },
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Twice daily N-acetylcysteine 600 mg for exacerbations of chronic obstructive pulmonary disease (PANTHEON)",
+      "identifier": "PMID:24477426",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24477426"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "N-acetyl cysteine for depressive symptoms in bipolar disorder",
+      "identifier": "PMID:18534556",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18534556"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Clinical trials of N-acetylcysteine in psychiatry and neurology: A systematic review",
+      "identifier": "PMID:25268486",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25268486"
+    }
+  ],
+  "keywords": ["NAC", "N-acetyl cysteine", "glutathione", "COPD", "respiratory", "psychiatric", "liver", "antioxidant", "clinical trials"]
+}

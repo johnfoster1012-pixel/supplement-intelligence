@@ -1,0 +1,63 @@
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "@id": "https://www.supplement-intelligence.com/database/berberine-studies",
+  "name": "Berberine Clinical Studies Database",
+  "headline": "Berberine Clinical Studies - Evidence-Based Research Summary",
+  "description": "Comprehensive database of berberine clinical trials covering blood glucose regulation, lipid metabolism, AMPK activation, and cardiometabolic health outcomes.",
+  "url": "https://www.supplement-intelligence.com/database/berberine-studies",
+  "datePublished": "2026-03-06",
+  "dateModified": "2026-03-06",
+  "inLanguage": "en-US",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Supplement Intelligence",
+    "url": "https://www.supplement-intelligence.com"
+  },
+  "about": {
+    "@type": "Drug",
+    "name": "Berberine",
+    "alternateName": ["Berberine HCl", "Berberine hydrochloride"],
+    "description": "Alkaloid compound used for blood glucose and lipid management"
+  },
+  "medicalAudience": {
+    "@type": "MedicalAudience",
+    "audienceType": "Clinician"
+  },
+  "mainEntity": {
+    "@type": "MedicalStudy",
+    "name": "Berberine Clinical Research Compilation",
+    "studySubject": {
+      "@type": "Drug",
+      "name": "Berberine"
+    },
+    "outcome": [
+      "Fasting blood glucose reduction (15-25 mg/dL)",
+      "HbA1c reduction (0.5-0.9%)",
+      "LDL cholesterol reduction (20-25%)",
+      "Triglyceride reduction (35%)",
+      "Improved insulin sensitivity"
+    ]
+  },
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Efficacy of berberine in patients with type 2 diabetes mellitus",
+      "identifier": "PMID:18397984",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18397984"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Meta-analysis of the effect and safety of berberine in the treatment of type 2 diabetes mellitus",
+      "identifier": "PMID:25498346",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25498346"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Berberine is a novel cholesterol-lowering drug working through a unique mechanism distinct from statins",
+      "identifier": "PMID:15531914",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15531914"
+    }
+  ],
+  "keywords": ["berberine", "blood glucose", "diabetes", "HbA1c", "cholesterol", "AMPK", "metabolic health", "clinical trials"]
+}
