@@ -27,6 +27,10 @@ const VALID_INGREDIENT_SLUGS = new Set([
   'glutathione','marine-collagen-peptides','curcumin','omega-3-fatty-acids','bacopa-monnieri'
 ]);
 
+const VALID_DATABASE_SLUGS = new Set([
+  'ashwagandha-studies','berberine-studies','nac-studies'
+]);
+
 const PRODUCT_INGREDIENT_LINKS = {
   'v-glutation': ['glutathione'],
   'collagen': ['marine-collagen-peptides'],
@@ -50,6 +54,10 @@ async function handleRequest(request) {
   if (path === '/products' || path === '/formulary') return handleProductsIndex();
   if (path === '/articles' || path === '/research') return proxyRawText('articles/index.html', 'text/html; charset=utf-8');
   if (path === '/ingredients') return proxyRawText('ingredients/index.html', 'text/html; charset=utf-8');
+  if (path === '/database') return proxyRawText('database/index.html', 'text/html; charset=utf-8');
+
+  const databaseMatch = path.match(/^\/database\/([a-z0-9-]+)$/);
+  if (databaseMatch) return handleDatabase(databaseMatch[1]);
 
   const ingredientMatch = path.match(/^\/ingredients\/([a-z0-9-]+)$/);
   if (ingredientMatch) return handleIngredient(ingredientMatch[1]);
@@ -71,6 +79,11 @@ async function handleArticle(slug) {
 async function handleIngredient(slug) {
   if (!VALID_INGREDIENT_SLUGS.has(slug)) return notFound('Ingredient Not Found');
   return proxyRawText(`ingredients/${slug}.html`, 'text/html; charset=utf-8');
+}
+
+async function handleDatabase(slug) {
+  if (!VALID_DATABASE_SLUGS.has(slug)) return notFound('Study Database Page Not Found');
+  return proxyRawText(`database/${slug}.html`, 'text/html; charset=utf-8');
 }
 
 async function handleProduct(slug) {

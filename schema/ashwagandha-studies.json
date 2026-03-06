@@ -1,0 +1,63 @@
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "@id": "https://www.supplement-intelligence.com/database/ashwagandha-studies",
+  "name": "Ashwagandha Clinical Studies Database",
+  "headline": "Ashwagandha Clinical Studies - Evidence-Based Research Summary",
+  "description": "Comprehensive database of ashwagandha (Withania somnifera) clinical trials covering stress reduction, cortisol modulation, anxiety, testosterone, and athletic performance.",
+  "url": "https://www.supplement-intelligence.com/database/ashwagandha-studies",
+  "datePublished": "2026-03-06",
+  "dateModified": "2026-03-06",
+  "inLanguage": "en-US",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Supplement Intelligence",
+    "url": "https://www.supplement-intelligence.com"
+  },
+  "about": {
+    "@type": "Drug",
+    "name": "Ashwagandha",
+    "alternateName": ["Withania somnifera", "Indian Ginseng", "KSM-66", "Sensoril"],
+    "description": "Adaptogenic herb used for stress, anxiety, and physical performance"
+  },
+  "medicalAudience": {
+    "@type": "MedicalAudience",
+    "audienceType": "Clinician"
+  },
+  "mainEntity": {
+    "@type": "MedicalStudy",
+    "name": "Ashwagandha Clinical Research Compilation",
+    "studySubject": {
+      "@type": "Drug",
+      "name": "Ashwagandha"
+    },
+    "outcome": [
+      "Stress reduction (HAM-A scores)",
+      "Cortisol reduction (20-30%)",
+      "Testosterone increase (10-20%)",
+      "Athletic performance enhancement",
+      "Sleep quality improvement"
+    ]
+  },
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "A prospective, randomized double-blind, placebo-controlled study of ashwagandha root in reducing stress and anxiety in adults",
+      "identifier": "PMID:23439798",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23439798"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Examining the effect of Withania somnifera supplementation on muscle strength and recovery",
+      "identifier": "PMID:26609282",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26609282"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "An investigation into the stress-relieving and pharmacological actions of an ashwagandha extract",
+      "identifier": "PMID:30854916",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30854916"
+    }
+  ],
+  "keywords": ["ashwagandha", "withania somnifera", "KSM-66", "adaptogen", "stress", "cortisol", "anxiety", "testosterone", "clinical trials"]
+}
