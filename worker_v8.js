@@ -178,7 +178,11 @@ function renderProductPage(template, product, ingredientData) {
   html = html.replace(/\{\{RELATED_PRODUCTS\}\}/g, formatRelatedProducts(product.relatedProducts || []));
 
   html = html.replace('</body>', `${ingredientHub}</body>`);
-  return normalizeText(html);
+  html = normalizeText(html);
+  // Per-product affiliate deep link (replaces the template's generic Vital Health link).
+  // Done after normalizeText so the exact URL (hyphens/refID) is preserved.
+  const shopUrl = product.shopUrl || 'https://vitalhealthglobal.com/products';
+  return html.split('https://vitalhealthglobal.com/products').join(shopUrl);
 }
 
 function renderProductsIndex(productsData) {
@@ -225,6 +229,9 @@ function formatIngredients(text) {
 }
 
 function formatCitations(citations) {
+  if (!citations || !citations.length) {
+    return '<li>Citations are being re-verified as part of an ongoing evidence review.</li>';
+  }
   return citations.map(c => `<li>${escapeHtml(c.title)} · PMID <a href="https://pubmed.ncbi.nlm.nih.gov/${escapeHtml(c.pmid)}">${escapeHtml(c.pmid)}</a></li>`).join('');
 }
 
