@@ -15,7 +15,11 @@
  */
 const CONTENT_BRANCH_NAME = (typeof CONTENT_BRANCH !== 'undefined' && CONTENT_BRANCH) ? CONTENT_BRANCH : 'main';
 const IS_PREVIEW = CONTENT_BRANCH_NAME !== 'main';
-const GITHUB_RAW_BASE = `https://raw.githubusercontent.com/johnfoster1012-pixel/supplement-intelligence/${CONTENT_BRANCH_NAME}/`;
+// CONTENT_BASE (dev-only var) lets wrangler dev serve content from a local file server
+// before the branch is pushed. Production default: GitHub raw on main.
+const GITHUB_RAW_BASE = (typeof CONTENT_BASE !== 'undefined' && CONTENT_BASE)
+  ? CONTENT_BASE
+  : `https://raw.githubusercontent.com/johnfoster1012-pixel/supplement-intelligence/${CONTENT_BRANCH_NAME}/`;
 const VERSION = 'Supplement Intelligence v9';
 
 const VALID_PRODUCT_SLUGS = new Set([
