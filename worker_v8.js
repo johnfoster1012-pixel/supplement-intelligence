@@ -286,12 +286,17 @@ function formatRelatedProducts(relatedProducts) {
   return relatedProducts.map(r => `<li><a href="${escapeHtml(r.url)}">${escapeHtml(r.name || r.slug)}</a></li>`).join('');
 }
 
+// Mojibake repair, behavior-identical to the v8 chain but written with explicit
+// escapes so the source itself can never be re-garbled by copy/paste or re-encoding.
 function normalizeText(text) {
   if (!text || typeof text !== 'string') return text || '';
   return text
-    .replace(/â/g, '—').replace(/â/g, '–').replace(/â/g, '’').replace(/â/g, '“').replace(/â/g, '”')
-    .replace(/Ã¶/g, 'ö').replace(/Ã±/g, 'ñ').replace(/Ã©/g, 'é').replace(/Ã¼/g, 'ü').replace(/Ã-/g, 'í')
-    .replace(/\x80\x94/g, '—').replace(/\x80/g, '').replace(/-/g, '—').replace(/-/g, '–')
+    .replace(/\u00e2\u0080\u0094/g, '\u2014').replace(/\u00e2\u0080\u0093/g, '\u2013')
+    .replace(/\u00e2\u0080\u0099/g, '\u2019').replace(/\u00e2\u0080\u009c/g, '\u201c').replace(/\u00e2\u0080\u009d/g, '\u201d')
+    .replace(/\u00c3\u00b6/g, '\u00f6').replace(/\u00c3\u00b1/g, '\u00f1').replace(/\u00c3\u00a9/g, '\u00e9')
+    .replace(/\u00c3\u00bc/g, '\u00fc').replace(/\u00c3-/g, '\u00ed')
+    .replace(/\u0080\u0094/g, '\u2014').replace(/\u0080/g, '')
+    .replace(/-\u0080\u0094/g, '\u2014').replace(/-\u0080\u0093/g, '\u2013')
     .replace(/\s+/g, m => m.includes('\n') ? m : ' ')
     .trim();
 }
