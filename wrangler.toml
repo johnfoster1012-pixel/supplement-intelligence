@@ -26,15 +26,74 @@ account_id = "995701aa11a6ea4fbf3ca3aba6eb8e1a"
 # ==========================================================
 # Route Configuration
 # ==========================================================
-# These routes determine which URLs this worker handles.
-# The worker will intercept requests matching these patterns.
+# NARROW ROUTES ONLY — deliberately no "/*" anywhere. The homepage, /about, and the
+# root /:slug/ hub URLs must keep reaching the Pages project directly; hub 301s are
+# handled by a Cloudflare Single Redirect rule (Rules -> Redirect Rules), NOT this
+# Worker. The GitHub Action auto-deploys this file on merge to main — a "/*" here
+# would flip the Worker onto the homepage.
 
 [[routes]]
-pattern = "supplement-intelligence.com/*"
+pattern = "supplement-intelligence.com/products*"
 zone_name = "supplement-intelligence.com"
 
 [[routes]]
-pattern = "www.supplement-intelligence.com/*"
+pattern = "www.supplement-intelligence.com/products*"
+zone_name = "supplement-intelligence.com"
+
+[[routes]]
+pattern = "supplement-intelligence.com/articles*"
+zone_name = "supplement-intelligence.com"
+
+[[routes]]
+pattern = "www.supplement-intelligence.com/articles*"
+zone_name = "supplement-intelligence.com"
+
+[[routes]]
+pattern = "supplement-intelligence.com/ingredients*"
+zone_name = "supplement-intelligence.com"
+
+[[routes]]
+pattern = "www.supplement-intelligence.com/ingredients*"
+zone_name = "supplement-intelligence.com"
+
+[[routes]]
+pattern = "supplement-intelligence.com/database*"
+zone_name = "supplement-intelligence.com"
+
+[[routes]]
+pattern = "www.supplement-intelligence.com/database*"
+zone_name = "supplement-intelligence.com"
+
+[[routes]]
+pattern = "supplement-intelligence.com/formulary*"
+zone_name = "supplement-intelligence.com"
+
+[[routes]]
+pattern = "www.supplement-intelligence.com/formulary*"
+zone_name = "supplement-intelligence.com"
+
+[[routes]]
+pattern = "supplement-intelligence.com/research*"
+zone_name = "supplement-intelligence.com"
+
+[[routes]]
+pattern = "www.supplement-intelligence.com/research*"
+zone_name = "supplement-intelligence.com"
+
+[[routes]]
+pattern = "supplement-intelligence.com/sitemap.xml"
+zone_name = "supplement-intelligence.com"
+
+[[routes]]
+pattern = "www.supplement-intelligence.com/sitemap.xml"
+zone_name = "supplement-intelligence.com"
+
+[[routes]]
+pattern = "supplement-intelligence.com/llm.txt"
+zone_name = "supplement-intelligence.com"
+
+[[routes]]
+pattern = "www.supplement-intelligence.com/llm.txt"
 zone_name = "supplement-intelligence.com"
 
 # ==========================================================
