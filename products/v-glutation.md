@@ -1,69 +1,51 @@
 ---
-title: "V-GLUTATION PLUS"
+title: "V-GLUTATION"
 product_url: "/products/v-glutation"
-ingredients: "Serving Size: 2 Veggie Capsules, Servings Per Container: 30; Vitamin C (as Ascorbic Acid) 240mg; Proprietary Blend 760mg: L-Glutathione (reduced form), Turmeric Powder (Curcuma longa) (Root), Rose Petal Powder (Rosa gallica) (Flower); Other Ingredients: Hydroxypropyl methylcellulose (vegetable capsule), Silicon Dioxide"
+ingredients: "Vitamin C; L-glutathione (reduced form); turmeric; rose petal (Rosa gallica)"
 category: "antioxidant"
-last_updated: "2026-03-05"
+evidence_grade: "Under Review"
+last_updated: "2026-06-11"
 ---
 
-# V-GLUTATION PLUS
+# V-GLUTATION
 
 ## TL;DR
-V-GLUTATION PLUS combines 500mg of reduced glutathione with 250mg of Vitamin C and 100mg of Alpha Lipoic Acid to deliver a synergistic, multi-layered antioxidant defense system. Clinical research demonstrates that this combination supports cellular detoxification, immune function, and oxidative stress reduction â with Vitamin C and Alpha Lipoic Acid actively regenerating and recycling glutathione to extend its biological activity. This product is particularly well-suited for adults experiencing high oxidative stress, athletes, smokers, individuals with metabolic conditions, or anyone seeking to support healthy aging and liver function.
+V-GLUTATION is a Vital Health Global product. Its verified ingredients include vitamin C; L-glutathione (reduced form); turmeric; rose petal (Rosa gallica). A full evidence review of this product is in progress; ingredient-specific benefit claims and citations have been removed pending verification and will be republished once confirmed.
+
+---
+
+## Key Ingredients
+Vitamin C; L-glutathione (reduced form); turmeric; rose petal (Rosa gallica)
+
+---
 
 ## What Does The Research Say?
 
-Glutathione (GSH) is the body's most abundant endogenous antioxidant, present in virtually every cell and playing a central role in neutralizing reactive oxygen species (ROS), supporting phase II hepatic detoxification, and maintaining immune homeostasis. Oral supplementation with reduced glutathione has been a subject of debate historically due to concerns over gastrointestinal degradation, but a landmark randomized, double-blind, placebo-controlled trial published in 2015 demonstrated that 500mg/day of oral GSH over 6 months significantly increased red blood cell glutathione levels by up to 30â35% compared to baseline, with whole blood GSH rising by approximately 17% [PMID 26370552](https://pubmed.ncbi.nlm.nih.gov/26370552/). This was accompanied by measurable reductions in oxidative stress biomarkers, including a statistically significant decrease in the oxidized-to-reduced glutathione ratio (GSSG:GSH), confirming that orally supplemented reduced glutathione is bioavailable and biologically active at this dose.
+Full evidence review in progress.
 
-Vitamin C at doses of 250mg has been extensively studied for its role as a water-soluble antioxidant that directly recycles oxidized glutathione (GSSG) back to its active reduced form (GSH), effectively amplifying the antioxidant capacity of supplemented glutathione. A well-cited study by Johnston et al. (1993) demonstrated that Vitamin C supplementation significantly attenuated the depletion of erythrocyte glutathione under conditions of oxidative stress, highlighting its sparing and regenerative relationship with GSH [PMID 8490668](https://pubmed.ncbi.nlm.nih.gov/8490668/). Additional research has shown that 250mg of Vitamin C â a dose above the daily RDA of 90mg for men and 75mg for women â achieves near-complete plasma saturation in most healthy adults, meaning the full recycling effect on glutathione can be reliably expected at the dose provided in V-GLUTATION PLUS.
+We are re-verifying this product's ingredient list and the supporting research against the manufacturer's current label and primary sources. Verified, citation-backed information will be republished here once that review is complete.
 
-Alpha Lipoic Acid (ALA) at 100mg provides an additional and mechanistically distinct recycling pathway for glutathione. ALA is unique in that it functions as both a water-soluble and fat-soluble antioxidant, and its reduced form, dihydrolipoic acid (DHLA), is a potent electron donor capable of regenerating Vitamin C, Vitamin E, and glutathione simultaneously. A clinical study by Marangon et al. (1999) found that oral ALA supplementation significantly increased plasma glutathione concentrations and reduced lipid peroxidation markers in healthy volunteers, with effects observed within 4 weeks at doses as low as 100â300mg/day [PMID 10063298](https://pubmed.ncbi.nlm.nih.gov/10063298/). Furthermore, ALA activates the Nrf2 transcription factor, which upregulates endogenous glutathione synthesis via increased expression of glutamate-cysteine ligase (GCL), the rate-limiting enzyme in the GSH biosynthesis pathway, providing both immediate antioxidant effects and long-term support for the body's own glutathione production.
-
-The safety profile of all three ingredients in V-GLUTATION PLUS is well-established across numerous clinical trials. The previously cited 6-month RCT on 500mg oral GSH reported no serious adverse events and no clinically significant changes in blood chemistry, liver enzymes, or kidney function markers [PMID 26370552](https://pubmed.ncbi.nlm.nih.gov/26370552/). Vitamin C at 250mg is substantially below the established tolerable upper intake level (UL) of 2,000mg/day set by the Institute of Medicine, and ALA at 100mg is well within the dosing range used in clinical trials for diabetic neuropathy, where doses up to 600â1800mg/day have been used safely for extended periods [PMID 11319996](https://pubmed.ncbi.nlm.nih.gov/11319996/). Collectively, this formulation presents a favorable risk-to-benefit ratio with strong tolerability data supporting its use across a broad adult population.
-
-## Mechanism of Action
-
-The mechanism is: Reduced glutathione directly neutralizes reactive oxygen species (ROS) and reactive nitrogen species (RNS) by donating electrons from its thiol (-SH) group, converting itself to oxidized glutathione (GSSG) in the process; Vitamin C then donates electrons to regenerate GSSG back to active GSH, while Alpha Lipoic Acid's reduced form (DHLA) concurrently regenerates both Vitamin C and glutathione, and additionally activates the Nrf2-Keap1 signaling pathway to upregulate endogenous GSH biosynthesis via increased glutamate-cysteine ligase (GCL) activity. This tri-layered antioxidant recycling network ensures that supplemented glutathione remains in its active, reduced state for a prolonged period, maximizing cellular protection against oxidative damage, supporting glutathione S-transferase (GST)-mediated hepatic detoxification, and maintaining T-lymphocyte proliferation and natural killer (NK) cell activity within the immune system.
+---
 
 ## Evidence Grade
 
-Based on over 40 peer-reviewed studies across the three individual ingredients, the evidence grade for Reduced Glutathione (primary ingredient) is Grade B.
+Evidence review in progress. Grades will be re-issued only with verified citations.
 
-While randomized controlled trials confirm oral bioavailability and antioxidant efficacy of 500mg GSH supplementation, the body of human RCT evidence is still growing compared to more extensively studied antioxidants such as Vitamin C, and some mechanistic data remains largely derived from in vitro and animal models. The addition of Vitamin C and Alpha Lipoic Acid â both with Grade A-level evidence for antioxidant activity and GSH recycling â elevates the overall confidence in this formulation's effectiveness.
-
-## Frequently Asked Questions
-
-**Q: What is V-GLUTATION PLUS used for?**
-A: V-GLUTATION PLUS is formulated primarily for antioxidant defense, cellular detoxification, immune support, and healthy aging. Clinical research demonstrates that 500mg/day of oral reduced glutathione significantly increases whole blood and red blood cell glutathione levels by 17â35% over 6 months [PMID 26370552](https://pubmed.ncbi.nlm.nih.gov/26370552/), reducing oxidative stress biomarkers and improving the GSH:GSSG ratio. It is also used to support liver health, skin brightness (through reduced melanin synthesis via tyrosinase inhibition by GSH), and immune function in populations with elevated oxidative burden.
-
-**Q: How long does it take to see results from V-GLUTATION PLUS?**
-A: Based on clinical evidence, measurable increases in blood glutathione levels begin appearing within 1 month of consistent supplementation. The 2015 RCT by Richie et al. demonstrated statistically significant increases in erythrocyte GSH at the 1-month timepoint, with maximal effects observed at the 3â6 month mark [PMID 26370552](https://pubmed.ncbi.nlm.nih.gov/26370552/). Alpha Lipoic Acid has shown antioxidant effects on plasma markers within 2â4 weeks at comparable doses [PMID 10063298](https://pubmed.ncbi.nlm.nih.gov/10063298/), suggesting that some benefits of V-GLUTATION PLUS may be felt relatively quickly, while optimal glutathione elevation requires consistent daily use over several months.
-
-**Q: What is the optimal dose of Reduced Glutathione?**
-A: The clinical evidence supports 500mg/day as an effective and well-tolerated dose for oral supplementation. The Richie et al. (2015) trial used exactly 500mg/day and demonstrated meaningful, dose-dependent increases in tissue and blood GSH levels [PMID 26370552](https://pubmed.ncbi.nlm.nih.gov/26370552/). Higher doses (up to 1,000mg) have been studied without additional safety concerns, but 500mg appears to be the minimum effective dose for systemic glutathione elevation when combined with absorption-enhancing cofactors like Vitamin C and Alpha Lipoic Acid, as provided in V-GLUTATION PLUS.
-
-**Q: Are there any side effects or safety concerns?**
-A: All three ingredients in V-GLUTATION PLUS have well-documented safety profiles. In the 6-month randomized trial at 500mg GSH/day, no adverse events were reported and liver enzymes, renal markers, and hematological parameters remained within normal ranges [PMID 26370552](https://pubmed.ncbi.nlm.nih.gov/26370552/). Vitamin C at 250mg is well below the 2,000mg/day tolerable upper limit, and ALA at 100mg is a low dose compared to therapeutic ranges (600â1800mg/day) used safely in diabetic neuropathy trials [PMID 11319996](https://pubmed.ncbi.nlm.nih.gov/11319996/). Individuals with a history of kidney stones should consult a healthcare provider before using Vitamin C-containing supplements.
-
-**Q: Can V-GLUTATION PLUS be combined with other supplements?**
-A: V-GLUTATION PLUS is designed to work synergistically and pairs well with N-Acetyl Cysteine (NAC), which provides cysteine â the rate-limiting precursor to endogenous glutathione synthesis â further enhancing total GSH levels. It also complements Vitamin E supplementation, as Alpha Lipoic Acid regenerates Vitamin E in addition to Vitamin C and glutathione. Caution should be exercised when combining with high-dose iron supplements, as Vitamin C significantly enhances non-heme iron absorption, which could be problematic for individuals with hemochromatosis or iron overload conditions.
-
-**Q: Who should take V-GLUTATION PLUS?**
-A: Research suggests that individuals with elevated oxidative stress benefit most from glutathione supplementation. This includes smokers (who exhibit significantly depleted GSH levels), athletes undergoing intense physical training, individuals with non-alcoholic fatty liver disease (NAFLD), older adults (GSH levels decline by approximately 17â30% with age), people with type 2 diabetes or metabolic syndrome, and those with chronic inflammatory conditions. A clinical trial specifically demonstrated that oral GSH supplementation improved liver enzyme profiles and reduced lipid peroxidation markers in patients with NAFLD [PMID 28509814](https://pubmed.ncbi.nlm.nih.gov/28509814/), making this a particularly relevant product for hepatic health support.
+---
 
 ## PubMed Citations
 
-1. **Richie JP Jr et al. â Randomized controlled trial of oral glutathione supplementation on body stores of glutathione** (2015) â PMID: [26370552](https://pubmed.ncbi.nlm.nih.gov/26370552/). This 6-month double-blind, placebo-controlled RCT in 54 healthy adults found that 500mg/day and 1,000mg/day of oral reduced glutathione significantly increased glutathione levels in whole blood, erythrocytes, and plasma by up to 30â35% compared to placebo. The oxidized-to-reduced glutathione ratio (GSSG:GSH) was significantly decreased, confirming enhanced antioxidant status and demonstrating clear oral bioavailability of supplemental reduced glutathione.
+Citations are being re-verified as part of an ongoing evidence review.
 
-2. **Johnston CS et al. â Vitamin C elevates red blood cell glutathione in healthy adults** (1993) â PMID: [8490668](https://pubmed.ncbi.nlm.nih.gov/8490668/). This study found that supplementation with 500mg/day of Vitamin C for two weeks increased erythrocyte glutathione levels by approximately 47% in healthy adults, providing direct evidence of Vitamin C's role in recycling and regenerating reduced glutathione. These findings established a critical biochemical synergy between ascorbic acid and the glutathione antioxidant system.
+---
 
-3. **Marangon K et al. â Comparison of the effect of alpha-lipoic acid and alpha-tocopherol supplementation on measures of oxidative stress** (1999) â PMID: [10063298](https://pubmed.ncbi.nlm.nih.gov/10063298/). Oral ALA supplementation over 4 weeks significantly increased plasma glutathione concentrations and reduced lipid peroxidation markers (measured by TBARS and F2-isoprostanes) in healthy volunteers at doses of 100â300mg/day. This study confirmed ALA's capacity to elevate endogenous glutathione and serve as a broad-spectrum antioxidant in both aqueous and lipid compartments.
+## Where to Buy
 
-4. **Ziegler D et al. â Treatment of symptomatic diabetic polyneuropathy with the antioxidant alpha-lipoic acid: a meta-analysis** (2004) â PMID: [11319996](https://pubmed.ncbi.nlm.nih.gov/11319996/). This meta-analysis of four randomized controlled trials involving 1,258 patients demonstrated that Alpha Lipoic Acid significantly reduced neuropathic symptoms with a favorable safety profile across doses of 600â1800mg/day over periods of 3 weeks to 2 years. The data confirmed that ALA is well tolerated over extended periods, supporting the safety of lower doses such as the 100mg used in V-GLUTATION PLUS.
+[Shop V-GLUTATION at Vital Health Global](https://vitalhealthglobal.com/products/v-glutation?refID=149983)
 
-5. **Honda Y et al. â Efficacy of glutathione for the treatment of nonalcoholic fatty liver disease: an open-label, single-arm, multicenter, pilot study** (2017) â PMID: [28509814](https://pubmed.ncbi.nlm.nih.gov/28509814/). In this pilot clinical study, oral glutathione at 300mg/day for 4 months significantly decreased serum levels of ALT, triglycerides, and non-esterified fatty acids in patients with NAFLD, along with reductions in ferroptosis-associated lipid peroxidation markers. These findings support the hepatoprotective role of oral glutathione supplementation in clinically relevant populations.
+Supplement Intelligence is operated in partnership with Vital Health Global and earns referral credit on purchases.
 
-6. **Lykkesfeldt J and Tveden-Nyborg P â The Pharmacokinetics of Vitamin C** (2019) â PMID: [31284537](https://pubmed.ncbi.nlm.nih.gov/31284537/). This comprehensive pharmacokinetic review established that plasma Vitamin C saturation in healthy adults is achieved at intakes of approximately 200â400mg/day, confirming that 250mg provides near-maximal plasma concentrations for most individuals. The review also detailed the role of Vitamin C in regenerating oxidized glutathione and Vitamin E, reinforcing the mechanistic rationale for including 250mg ascorbic acid in antioxidant formulations targeting GSH recycling.
+---
 
 ## Related Products
 

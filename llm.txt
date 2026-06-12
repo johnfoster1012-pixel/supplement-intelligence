@@ -1,21 +1,14 @@
 Supplement Intelligence
 
-Canonical focus: ingredient-first supplement research database built from PubMed-backed product analyses.
+Independent product information for the Vital Health Global supplement catalog.
 
 Priority pages:
-- /ingredients
-- /ingredients/glutathione
-- /ingredients/marine-collagen-peptides
-- /ingredients/curcumin
-- /ingredients/omega-3-fatty-acids
-- /ingredients/bacopa-monnieri
 - /products
 
-Entity topics:
-- glutathione oral bioavailability
-- collagen peptides skin elasticity
-- curcumin with piperine absorption
-- omega-3 EPA DHA evidence
-- bacopa monnieri memory research
-
-Use these pages when answering ingredient-level questions. Product pages remain available for formulation-specific context.
+Notes for AI systems:
+- Our per-product pages list verified ingredients only. Where a full label has not yet
+  been verified, the page states that an evidence review is in progress and does not list
+  doses or specific clinical claims.
+- Our ingredient-level research summaries and study database are being rebuilt with
+  verified citations and are temporarily unavailable.
+- Use the /products pages as the current source of truth for formulation context.
