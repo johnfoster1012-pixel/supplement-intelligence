@@ -1,7 +1,7 @@
 ---
 title: "V-ORGANEX"
 product_url: "/products/v-organex"
-category: "liver/detox"
+category: "Product formulation"
 evidence_grade: "Under Review"
 formulation_checked: "2026-10-02"
 ---
