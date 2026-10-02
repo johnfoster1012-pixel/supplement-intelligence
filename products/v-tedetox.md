@@ -1,7 +1,7 @@
 ---
 title: "V-TEDETOX"
 product_url: "/products/v-tedetox"
-category: "detox/digestive"
+category: "Product formulation"
 evidence_grade: "Under Review"
 formulation_checked: "2026-10-02"
 ---
