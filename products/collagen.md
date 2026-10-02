@@ -1,7 +1,7 @@
 ---
 title: "COLLAGEN COMPLEX"
 product_url: "/products/collagen"
-category: "skin/joints"
+category: "Product formulation"
 evidence_grade: "Under Review"
 formulation_checked: "2026-10-02"
 ---
