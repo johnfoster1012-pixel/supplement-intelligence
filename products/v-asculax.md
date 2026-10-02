@@ -1,7 +1,7 @@
 ---
 title: "V-ASCULAX"
 product_url: "/products/v-asculax"
-category: "cardiovascular"
+category: "Product formulation"
 evidence_grade: "Under Review"
 formulation_checked: "2026-10-02"
 ---
