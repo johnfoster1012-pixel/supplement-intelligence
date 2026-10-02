@@ -1,50 +1,58 @@
-# Supplement Intelligence Data Interface
+# Supplement Intelligence API
 
-Supplement Intelligence is being rebuilt around verification-first formulation and ingredient evidence.
+The public API is read-only and exposes the current verification-first product and ingredient evidence model.
 
-## Current machine-readable files
+Base URL:
 
-### Product formulations
-`products-data.json`
+`https://supplement-intelligence.com/api/v1`
 
-Contains the current manufacturer-page formulation record for each product. These records establish product composition only. They do not establish efficacy.
+## Endpoints
 
-### Product label verification
-`data/product-label-verification.json`
+### API index
+`GET /api/v1`
 
-Tracks when each product formulation was checked, the manufacturer source, and evidence-review status.
+Returns API version, record counts, and endpoint discovery.
 
-### Ingredient evidence
-`ingredient-evidence.json`
+### Search
+`GET /api/v1/search?q=creatine`
 
-Contains the current verified ingredient-level evidence layer for priority ingredients.
+Searches reviewed ingredient evidence and current product formulation records.
 
-Each ingredient record separates:
-- evidence posture
-- summary of supported findings
-- studied context
-- safety context
-- product directness
-- related products
-- primary or authoritative sources
+### Products
+`GET /api/v1/products`
 
-### Evidence method
-`docs/EVIDENCE_METHOD.md`
+Returns current tracked products with formulation status, formulation source, evidence status, and linked ingredient evidence.
 
-Defines source hierarchy, required study metadata, directness rules, and publication requirements.
+`GET /api/v1/products/{slug}`
 
-## Important interpretation rule
+Returns one product's current formulation record.
 
-Ingredient-level evidence is not automatically evidence for a finished product.
+### Ingredients
+`GET /api/v1/ingredients`
 
-Before a finished-product claim is published, the ingredient, formulation, dose, population, duration, outcome, and study context must be sufficiently relevant to the current product.
+Returns the reviewed ingredient evidence index.
 
-## Retired data
+`GET /api/v1/ingredients/{slug}`
 
-Earlier comprehensive datasets and the first Ashwagandha, Berberine, and NAC study-database assets were withdrawn because their citation-to-product mappings did not consistently meet the current verification standard.
+Returns evidence posture, summary, studied context, safety context, product-directness notes, related products, and sources.
 
-Do not use historical citation totals or retired A/B/C grades as current evidence.
+## OpenAPI
 
-## API direction
+`GET /openapi.json`
 
-A future API or MCP interface should read only from the current verified data files above and should expose evidence status and product-directness fields explicitly.
+The OpenAPI 3.1 contract is intended for developers and future tool/MCP integration.
+
+## Interpretation rules
+
+1. Ingredient-level evidence is not automatically finished-product evidence.
+2. Manufacturer pages establish formulation facts only; they do not establish efficacy.
+3. Products marked Under Review do not have a finalized finished-product evidence grade.
+4. A missing complete ingredient panel is represented explicitly rather than inferred from marketing copy.
+
+## CORS and caching
+
+The API allows cross-origin read access for GET/HEAD requests and uses short public caching.
+
+## Plugin preparation
+
+See `plugin/TOOL_DESIGN.md` for the proposed MCP tool surface.

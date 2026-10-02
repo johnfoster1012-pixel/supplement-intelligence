@@ -12,7 +12,7 @@ const IS_PREVIEW = CONTENT_BRANCH_NAME !== 'main';
 const GITHUB_RAW_BASE = (typeof CONTENT_BASE !== 'undefined' && CONTENT_BASE)
   ? CONTENT_BASE
   : `https://raw.githubusercontent.com/johnfoster1012-pixel/supplement-intelligence/${CONTENT_BRANCH_NAME}/`;
-const VERSION = 'Supplement Intelligence v10';
+const VERSION = 'Supplement Intelligence v11';
 
 const VALID_INGREDIENT_SLUGS = new Set([
   'alpha-lipoic-acid',
@@ -87,7 +87,7 @@ const DATABASE_REDIRECTS = new Map([
   ['nac-studies', '/references'],
 ]);
 
-let cache = { template: null, productsData: null, ts: 0 };
+let cache = { template: null, productsData: null, ingredientData: null, ts: 0 };
 const CACHE_TTL = 3600000;
 
 addEventListener('fetch', event => event.respondWith(handleRequest(event.request)));
@@ -100,6 +100,19 @@ async function handleRequest(request) {
   if (path === '/llms.txt') return proxyRawText('llms.txt', 'text/plain; charset=utf-8');
   if (path === '/robots.txt') return proxyRawText('robots.txt', 'text/plain; charset=utf-8');
   if (path === '/sitemap.xml') return proxyRawText('sitemap.xml', 'application/xml; charset=utf-8');
+  if (path === '/openapi.json') return proxyRawText('openapi.json', 'application/json; charset=utf-8');
+
+  if (request.method === 'OPTIONS' && path.startsWith('/api/v1')) return apiOptions();
+  if (path === '/api/v1') return handleApiIndex(request);
+  if (path === '/api/v1/products') return handleApiProducts(request);
+  if (path === '/api/v1/ingredients') return handleApiIngredients(request);
+  if (path === '/api/v1/search') return handleApiSearch(request, url);
+
+  const apiProductMatch = path.match(/^\/api\/v1\/products\/([a-z0-9-]+)$/);
+  if (apiProductMatch) return handleApiProduct(request, apiProductMatch[1]);
+
+  const apiIngredientMatch = path.match(/^\/api\/v1\/ingredients\/([a-z0-9-]+)$/);
+  if (apiIngredientMatch) return handleApiIngredient(request, apiIngredientMatch[1]);
 
   if (path === '/') return handleHome();
   if (path === '/products') return handleProductsIndex();
@@ -180,7 +193,47 @@ async function handleProduct(url, slug) {
 }
 
 async function handleHome() {
-  const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Supplement Intelligence | Verification-First Supplement Research</title><meta name="description" content="Verification-first supplement formulation and evidence research."><link rel="canonical" href="https://supplement-intelligence.com/"><style>body{font-family:Arial,sans-serif;max-width:980px;margin:0 auto;padding:28px;line-height:1.65;color:#18202a}a{color:#0a66c2;text-decoration:none}.box{border:1px solid #e5e7eb;border-radius:14px;padding:20px;margin:18px 0}</style></head><body><header><strong>Supplement Intelligence</strong> · <a href="/products">Products</a> · <a href="/references">Research status</a> · <a href="/about">About</a></header><h1>Supplement research with a verification-first standard</h1><p>Supplement Intelligence organizes supplement product data and supporting research. Product labels and citations are being re-verified before evidence claims are republished.</p><p><a href="/products"><strong>Browse product records →</strong></a></p><div class="box"><h2>Current evidence status</h2><p>Historical citation sets that did not meet the current verification standard have been withdrawn. Product pages marked Under Review should not be interpreted as having a finalized evidence grade or verified formulation.</p></div><div class="box"><h2>Commercial disclosure</h2><p>Supplement Intelligence may earn referral credit from purchases made through some product links. Compensation does not determine evidence status.</p></div><p>For informational purposes only; not individualized medical advice.</p></body></html>`;
+  const html = `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Supplement Intelligence | Evidence-Based Ingredient & Supplement Research</title>
+<meta name="description" content="Verification-first supplement research with current product formulations, 26 reviewed ingredient evidence pages, safety context, and primary-source citations.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://supplement-intelligence.com/">
+<meta property="og:title" content="Supplement Intelligence | Evidence-Based Ingredient & Supplement Research">
+<meta property="og:description" content="Verification-first supplement research with current formulations and reviewed ingredient evidence.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://supplement-intelligence.com/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Supplement Intelligence","url":"https://supplement-intelligence.com/","description":"Verification-first supplement formulation and ingredient evidence research."}</script>
+<style>
+body{font-family:Arial,sans-serif;max-width:1040px;margin:0 auto;padding:28px;line-height:1.65;color:#18202a}
+a{color:#0a66c2;text-decoration:none}a:hover{text-decoration:underline}
+header{display:flex;gap:18px;flex-wrap:wrap;align-items:center;margin-bottom:38px}
+.hero{padding:24px 0 18px}.hero h1{font-size:2.35rem;line-height:1.15;margin-bottom:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.card{border:1px solid #e5e7eb;border-radius:14px;padding:20px}
+.muted{color:#5f6b78}.pill{display:inline-block;border:1px solid #d7dde5;border-radius:999px;padding:4px 10px;margin:3px 4px 3px 0;font-size:.9rem}
+</style>
+</head>
+<body>
+<header><strong>Supplement Intelligence</strong><a href="/ingredients">Ingredient evidence</a><a href="/products">Products</a><a href="/references">Research status</a><a href="/about">About</a></header>
+<section class="hero">
+<h1>Supplement research built around verification, not marketing claims</h1>
+<p>Supplement Intelligence separates current product-formulation facts from ingredient-level human evidence and from finished-product efficacy. The database currently tracks 31 products and 26 reviewed ingredient evidence pages.</p>
+<p><a href="/ingredients"><strong>Browse ingredient evidence →</strong></a> &nbsp; <a href="/products">Browse product formulations →</a></p>
+</section>
+<section class="grid">
+<div class="card"><h2>Reviewed ingredient evidence</h2><p>Evidence summaries cover studied context, safety, source quality, and whether current products actually match the studied form or dose.</p><p><a href="/ingredients">View all 26 ingredient pages</a></p></div>
+<div class="card"><h2>Current product formulations</h2><p>Manufacturer pages are used for formulation facts only. Finished-product efficacy remains Under Review unless explicitly adjudicated.</p><p><a href="/products">View 31 product records</a></p></div>
+<div class="card"><h2>Research methodology</h2><p>Historical citation sets that did not meet the current standard were withdrawn. The current method prioritizes primary research and authoritative government sources.</p><p><a href="/references">Read research status</a></p></div>
+</section>
+<h2>Core evidence topics</h2>
+<p><a class="pill" href="/ingredients/creatine-monohydrate">Creatine</a><a class="pill" href="/ingredients/omega-3">Omega-3</a><a class="pill" href="/ingredients/magnesium">Magnesium</a><a class="pill" href="/ingredients/vitamin-d">Vitamin D</a><a class="pill" href="/ingredients/berberine">Berberine</a><a class="pill" href="/ingredients/ashwagandha">Ashwagandha</a><a class="pill" href="/ingredients/curcumin">Curcumin</a><a class="pill" href="/ingredients/caffeine">Caffeine</a></p>
+<div class="card"><h2>Commercial disclosure</h2><p>Supplement Intelligence may earn referral credit from purchases made through some product links. Compensation does not determine evidence status or source selection.</p></div>
+<footer><p class="muted">For informational purposes only; not individualized medical advice. <a href="/disclaimer">Disclaimer</a> · <a href="/api/v1">API</a></p></footer>
+</body></html>`;
   return new Response(html,{status:200,headers:htmlHeaders({'X-Powered-By':VERSION})});
 }
 
@@ -193,7 +246,7 @@ async function handleProductsIndex() {
 
 async function proxyRawText(path, contentType) {
   try {
-    const res = await fetch(GITHUB_RAW_BASE + path, { headers: { 'User-Agent': 'Supplement-Intelligence-Worker/10.0' }, cf: { cacheTtl: 3600 } });
+    const res = await fetch(GITHUB_RAW_BASE + path, { headers: { 'User-Agent': 'Supplement-Intelligence-Worker/11.0' }, cf: { cacheTtl: 3600 } });
     if (!res.ok) return new Response('Temporarily unavailable', { status: 503, headers: textHeaders() });
     const body = normalizeText(await res.text());
     return new Response(body, { status: 200, headers: baseHeaders(contentType) });
@@ -206,7 +259,7 @@ async function getTemplate() {
   const now = Date.now();
   if (cache.template && (now - cache.ts) < CACHE_TTL) return cache.template;
   try {
-    const res = await fetch(GITHUB_RAW_BASE + 'product-template.html', { headers: { 'User-Agent': 'Supplement-Intelligence-Worker/10.0' }, cf: { cacheTtl: 3600 } });
+    const res = await fetch(GITHUB_RAW_BASE + 'product-template.html', { headers: { 'User-Agent': 'Supplement-Intelligence-Worker/11.0' }, cf: { cacheTtl: 3600 } });
     if (res.ok) {
       cache.template = normalizeText(await res.text());
       cache.ts = now;
@@ -220,7 +273,7 @@ async function getProductsData() {
   const now = Date.now();
   if (cache.productsData && (now - cache.ts) < CACHE_TTL) return cache.productsData;
   try {
-    const res = await fetch(GITHUB_RAW_BASE + 'products-data.json', { headers: { 'User-Agent': 'Supplement-Intelligence-Worker/10.0' }, cf: { cacheTtl: 3600 } });
+    const res = await fetch(GITHUB_RAW_BASE + 'products-data.json', { headers: { 'User-Agent': 'Supplement-Intelligence-Worker/11.0' }, cf: { cacheTtl: 3600 } });
     if (res.ok) {
       const json = await res.json();
       cache.productsData = deepNormalize(json);
@@ -229,6 +282,164 @@ async function getProductsData() {
     }
   } catch (_) {}
   return cache.productsData;
+}
+
+async function getIngredientData() {
+  const now = Date.now();
+  if (cache.ingredientData && (now - cache.ts) < CACHE_TTL) return cache.ingredientData;
+  try {
+    const res = await fetch(GITHUB_RAW_BASE + 'ingredient-evidence.json', { headers: { 'User-Agent': 'Supplement-Intelligence-Worker/11.0' }, cf: { cacheTtl: 3600 } });
+    if (res.ok) {
+      const json = await res.json();
+      cache.ingredientData = deepNormalize(json);
+      cache.ts = now;
+      return cache.ingredientData;
+    }
+  } catch (_) {}
+  return cache.ingredientData;
+}
+
+function apiHeaders(extra = {}) {
+  return {
+    'Content-Type': 'application/json; charset=utf-8',
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': 'GET, HEAD, OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type',
+    'Cache-Control': 'public, max-age=300',
+    'X-Powered-By': VERSION,
+    ...extra,
+  };
+}
+
+function apiOptions() {
+  return new Response(null, { status: 204, headers: apiHeaders() });
+}
+
+function jsonResponse(payload, status = 200) {
+  return new Response(JSON.stringify(payload, null, 2), { status, headers: apiHeaders() });
+}
+
+function apiMethodAllowed(request) {
+  return request.method === 'GET' || request.method === 'HEAD';
+}
+
+async function handleApiIndex(request) {
+  if (!apiMethodAllowed(request)) return jsonResponse({ error: 'Method Not Allowed' }, 405);
+  const [productsData, ingredientData] = await Promise.all([getProductsData(), getIngredientData()]);
+  return jsonResponse({
+    name: 'Supplement Intelligence API',
+    version: 'v1',
+    status: 'verification-first',
+    products: productsData ? Object.keys(productsData.products || {}).length : null,
+    ingredients: ingredientData ? Object.keys(ingredientData.ingredients || {}).length : null,
+    endpoints: {
+      products: '/api/v1/products',
+      product: '/api/v1/products/{slug}',
+      ingredients: '/api/v1/ingredients',
+      ingredient: '/api/v1/ingredients/{slug}',
+      search: '/api/v1/search?q={query}',
+      openapi: '/openapi.json'
+    },
+    interpretation: 'Ingredient-level evidence is not automatically finished-product evidence.'
+  });
+}
+
+async function handleApiProducts(request) {
+  if (!apiMethodAllowed(request)) return jsonResponse({ error: 'Method Not Allowed' }, 405);
+  const data = await getProductsData();
+  if (!data) return jsonResponse({ error: 'Product data unavailable' }, 503);
+  const products = Object.values(data.products || {}).map(p => ({
+    slug: p.slug,
+    name: p.name,
+    canonical_url: 'https://supplement-intelligence.com/products/' + p.slug,
+    formulation_status: p.formulationStatus || null,
+    formulation_source: p.formulationSource || null,
+    evidence_status: p.evidenceGrade || 'Under Review',
+    ingredient_evidence_links: p.ingredientEvidenceLinks || []
+  }));
+  return jsonResponse({ count: products.length, products });
+}
+
+async function handleApiProduct(request, slug) {
+  if (!apiMethodAllowed(request)) return jsonResponse({ error: 'Method Not Allowed' }, 405);
+  const data = await getProductsData();
+  const p = data && data.products ? data.products[slug] : null;
+  if (!p) return jsonResponse({ error: 'Product not found' }, 404);
+  return jsonResponse({
+    slug: p.slug,
+    name: p.name,
+    canonical_url: 'https://supplement-intelligence.com/products/' + p.slug,
+    ingredients: p.ingredients || null,
+    formulation_status: p.formulationStatus || null,
+    formulation_source: p.formulationSource || null,
+    evidence_status: p.evidenceGrade || 'Under Review',
+    evidence_note: p.evidenceGradeText || null,
+    ingredient_evidence_links: p.ingredientEvidenceLinks || [],
+    commercial_disclosure: 'Supplement Intelligence may earn referral credit from some product links.'
+  });
+}
+
+async function handleApiIngredients(request) {
+  if (!apiMethodAllowed(request)) return jsonResponse({ error: 'Method Not Allowed' }, 405);
+  const data = await getIngredientData();
+  if (!data) return jsonResponse({ error: 'Ingredient evidence unavailable' }, 503);
+  const ingredients = Object.entries(data.ingredients || {}).map(([slug, x]) => ({
+    slug,
+    name: x.name,
+    canonical_url: 'https://supplement-intelligence.com/ingredients/' + slug,
+    evidence_posture: x.posture,
+    related_products: x.products || []
+  }));
+  return jsonResponse({ count: ingredients.length, ingredients });
+}
+
+async function handleApiSearch(request, url) {
+  if (!apiMethodAllowed(request)) return jsonResponse({ error: 'Method Not Allowed' }, 405);
+  const q = (url.searchParams.get('q') || '').trim().toLowerCase();
+  if (q.length < 2) return jsonResponse({ error: 'Query must contain at least 2 characters' }, 400);
+
+  const [productsData, ingredientData] = await Promise.all([getProductsData(), getIngredientData()]);
+  const productResults = Object.values((productsData && productsData.products) || {})
+    .filter(p => [p.name, p.slug, p.ingredients].some(v => String(v || '').toLowerCase().includes(q)))
+    .slice(0, 20)
+    .map(p => ({
+      type: 'product',
+      slug: p.slug,
+      name: p.name,
+      canonical_url: 'https://supplement-intelligence.com/products/' + p.slug,
+      formulation_status: p.formulationStatus || null,
+      evidence_status: p.evidenceGrade || 'Under Review'
+    }));
+
+  const ingredientResults = Object.entries((ingredientData && ingredientData.ingredients) || {})
+    .filter(([slug, x]) => [slug, x.name, x.posture, x.summary].some(v => String(v || '').toLowerCase().includes(q)))
+    .slice(0, 20)
+    .map(([slug, x]) => ({
+      type: 'ingredient',
+      slug,
+      name: x.name,
+      canonical_url: 'https://supplement-intelligence.com/ingredients/' + slug,
+      evidence_posture: x.posture
+    }));
+
+  return jsonResponse({
+    query: q,
+    count: productResults.length + ingredientResults.length,
+    results: [...ingredientResults, ...productResults]
+  });
+}
+
+async function handleApiIngredient(request, slug) {
+  if (!apiMethodAllowed(request)) return jsonResponse({ error: 'Method Not Allowed' }, 405);
+  const data = await getIngredientData();
+  const x = data && data.ingredients ? data.ingredients[slug] : null;
+  if (!x) return jsonResponse({ error: 'Ingredient not found' }, 404);
+  return jsonResponse({
+    slug,
+    canonical_url: 'https://supplement-intelligence.com/ingredients/' + slug,
+    ...x,
+    interpretation: 'Ingredient-level evidence is not proof that a finished product has the same effect.'
+  });
 }
 
 function renderProductPage(template, product) {
