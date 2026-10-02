@@ -265,13 +265,15 @@
     },
     "caffeine": {
       "name": "Caffeine",
-      "posture": "Strong evidence for acute ergogenic effects in endurance and some high-intensity/resistance-performance outcomes; effects depend on dose, timing, habitual use, and individual sensitivity.",
-      "summary": "NIH ODS describes numerous clinical trials with mostly consistent findings that caffeine can improve endurance-type and intermittent long-duration performance when taken before activity. Recent meta-analyses also support improvements in aerobic time-trial performance and some resistance-exercise power outcomes.",
-      "studied_context": "Common performance studies use roughly 2–6 mg/kg before exercise, often 15–60 minutes pre-exercise. Higher doses do not necessarily improve results and increase adverse effects.",
-      "safety": "For healthy adults, total caffeine intake around 400 mg/day is generally considered a level not usually associated with dangerous effects, but insomnia, anxiety, restlessness, nausea, tachycardia, and arrhythmia can occur. Combining multiple caffeine sources increases risk.",
-      "product_directness": "LATTEKAFFE, V-LOVKAFE, V-NEUROKAFE, V-NRGY, V-ORGANEX, and V-THERMOKAFE contain coffee, caffeine, guarana, or related caffeine sources. The current manufacturer pages do not publish total caffeine per serving for these products, so trial-equivalent dosing and performance effects cannot be inferred.",
+      "posture": "Good evidence for some endurance and high-intensity intermittent performance outcomes; effects vary by dose, habitual use, timing, and individual response.",
+      "summary": "NIH ODS notes that caffeine can reduce perceived fatigue and help sustain exercise intensity, with the clearest support for endurance and some intermittent high-intensity activities. It is not a universal strength or power enhancer.",
+      "studied_context": "Sports-performance guidance commonly discusses about 2–6 mg/kg taken before exercise. Lower amounts can work in some people, and higher doses generally increase adverse effects without reliably improving performance further.",
+      "safety": "Caffeine can cause insomnia, anxiety, jitteriness, gastrointestinal symptoms, and increased heart rate. Total intake from all sources matters, especially in products containing coffee, guarana, green tea, or yerba mate.",
+      "product_directness": "Several current products contain coffee or other caffeine sources, but manufacturer pages generally do not publish total caffeine content. Trial-equivalent performance or safety claims therefore cannot be assigned to those finished products.",
       "products": [
         "lattekaffe",
+        "nourish-plus",
+        "v-italay",
         "v-lovkafe",
         "v-neurokafe",
         "v-nrgy",
@@ -282,48 +284,42 @@
         {
           "type": "NIH ODS",
           "title": "Dietary Supplements for Exercise and Athletic Performance — Health Professional Fact Sheet",
-          "url": "https://ods.od.nih.gov/factsheets/exerciseandathleticperformance-healthprofessional/"
-        },
-        {
-          "type": "PubMed systematic review/meta-analysis",
-          "title": "Dose-Response Effect of Oral Caffeine Use on Aerobic Exercise Performance",
-          "pmid": "42356375",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42356375/"
-        },
-        {
-          "type": "PubMed umbrella review",
-          "title": "Caffeine supplementation and exercise performance",
-          "pmid": "30926628",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/30926628/"
+          "url": "https://ods.od.nih.gov/factsheets/ExerciseAndAthleticPerformance-HealthProfessional/"
         }
       ]
     },
     "l-theanine": {
       "name": "L-theanine",
-      "posture": "Possible small acute cognitive/mood benefits, especially when combined with caffeine; magnitude and clinical relevance remain uncertain.",
-      "summary": "A 2025 systematic review/meta-analysis of randomized trials found small-to-moderate differences favoring L-theanine plus caffeine for selected attention, reaction-time, and mood outcomes, with frequent uncertainty in confidence intervals. L-theanine alone showed limited signals for some outcomes.",
-      "studied_context": "Effects in the literature are acute and task-specific, and often studied in combination with caffeine. Dose ratios and timing vary.",
-      "safety": "Short-term trial data generally suggest tolerability, but evidence is not sufficient to support broad therapeutic claims or long-term cognitive-health claims.",
-      "product_directness": "V-NRGY lists L-theanine together with caffeine-containing ingredients, but the manufacturer page does not publish an L-theanine dose or caffeine-to-theanine ratio. Study effects cannot be directly assigned to the finished product.",
+      "posture": "Promising but not conclusive evidence for selected attention and cognitive outcomes; combination effects with caffeine are modest and context-specific.",
+      "summary": "Recent randomized-trial meta-analyses suggest L-theanine may improve some reaction-time or attention outcomes, and theanine plus caffeine may produce small cognitive or mood benefits. Other cognitive measures are unchanged, and clinical significance remains uncertain.",
+      "studied_context": "Recent meta-analytic findings include acute testing after single doses, often around 200 mg for L-theanine alone. Combination studies vary in both theanine and caffeine amounts.",
+      "safety": "Short randomized trials generally report good tolerability, but the evidence base is much smaller than for established nutrients or caffeine and does not establish long-term safety across all populations.",
+      "product_directness": "V NRGY lists L-theanine and caffeine sources but does not publish their amounts. The site should not claim that the finished product reproduces the doses or effects studied in L-theanine/caffeine trials.",
       "products": [
         "v-nrgy"
       ],
       "sources": [
         {
           "type": "PubMed systematic review/meta-analysis",
-          "title": "Effects of Tea, L-Theanine, or L-Theanine plus Caffeine on Cognition, Sleep, and Mood",
+          "title": "Cognitive and affective effects of L-Theanine: a systematic review and meta-analysis of 31 randomized trials",
+          "pmid": "42410082",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42410082/"
+        },
+        {
+          "type": "PubMed systematic review/meta-analysis",
+          "title": "Effects of Tea or its Bioactive Compounds L-Theanine or L-Theanine plus Caffeine on Cognition, Sleep, and Mood",
           "pmid": "40314930",
           "url": "https://pubmed.ncbi.nlm.nih.gov/40314930/"
         }
       ]
     },
     "panax-ginseng": {
-      "name": "Panax ginseng",
-      "posture": "Human evidence is mixed and outcome-specific; small signals exist for fatigue and some cognitive outcomes, while athletic-performance evidence is largely negative.",
-      "summary": "NCCIH reports small or preliminary evidence for some cognitive measures in middle-aged adults and a small possible effect on general fatigue, but notes that research on blood-sugar control is conflicting and that most research does not show improved athletic performance.",
-      "studied_context": "Trials use different preparations, ginsenoside concentrations, doses, and populations. 'Panax ginseng' on an ingredient list is not enough to establish equivalence to a studied extract.",
-      "safety": "Short-term oral use up to about 6 months appears reasonably tolerated for most people. Insomnia is common; serious allergic reactions and liver injury are rare. Ginseng may affect blood sugar, clotting, autoimmune conditions, and medications.",
-      "product_directness": "V-LOVKAFE, V-NEUROKAFE, and V-THERMOKAFE list Panax ginseng, but current manufacturer pages do not publish extract standardization or dose. Claims about fatigue, cognition, sexual function, or performance remain indirect.",
+      "name": "Panax ginseng (Asian ginseng)",
+      "posture": "Limited human evidence suggests possible small benefits for fatigue and selected cognitive measures; broad adaptogen, performance, or immune claims are not established.",
+      "summary": "NCCIH reports a small amount of evidence for selected cognitive effects in middle-aged adults and a possible small effect on general fatigue, while emphasizing that most trials are small and short.",
+      "studied_context": "Ginseng preparations differ substantially in extraction method and ginsenoside content. Findings from one preparation should not be generalized to an unspecified ginseng extract.",
+      "safety": "Short-term oral use appears generally tolerated for many adults, but insomnia is common. NCCIH notes possible drug interactions, blood-clotting concerns, blood-sugar effects, autoimmune concerns, and pregnancy cautions.",
+      "product_directness": "V-LOVKAFE, V-NEUROKAFE, and V THERMOKAFE list Panax ginseng, but the current manufacturer pages do not publish extract standardization or dose. Trial findings cannot be assigned directly to these products.",
       "products": [
         "v-lovkafe",
         "v-neurokafe",
@@ -334,21 +330,16 @@
           "type": "NCCIH",
           "title": "Asian Ginseng: Usefulness and Safety",
           "url": "https://www.nccih.nih.gov/health/asian-ginseng"
-        },
-        {
-          "type": "NCCIH",
-          "title": "Herb-Drug Interactions: What the Science Says",
-          "url": "https://www.nccih.nih.gov/health/providers/digest/herb-drug-interactions-science"
         }
       ]
     },
     "l-arginine": {
       "name": "L-arginine",
-      "posture": "Little evidence that oral arginine meaningfully improves exercise performance in healthy active adults.",
-      "summary": "NIH ODS describes limited and conflicting clinical trials and concludes that arginine generally has little to no effect on strength, endurance, nitric-oxide measures, blood flow, or recovery in healthy active adults.",
-      "studied_context": "Studies have used a wide range, roughly 2–20 g/day. Oral arginine is less efficient than citrulline at raising blood arginine because of intestinal and hepatic metabolism.",
-      "safety": "Short-term use up to about 9 g/day has generally been tolerated in studies; higher doses more often cause gastrointestinal symptoms and may lower blood pressure.",
-      "product_directness": "V-NITRO lists L-arginine but does not publish its amount. The presence of arginine therefore does not support a nitric-oxide, pump, strength, endurance, or recovery claim for the finished product.",
+      "posture": "Little scientific support for improving strength, exercise performance, or recovery in healthy active adults.",
+      "summary": "NIH ODS concludes that supplemental arginine has limited and conflicting performance evidence. Across studied doses, most research shows little to no improvement in aerobic or anaerobic performance, recovery, or muscle blood flow.",
+      "studied_context": "Clinical studies have commonly used about 2–20 g/day, often far above the amount that can be inferred from a multi-ingredient product with no disclosed dose.",
+      "safety": "Short-term studies suggest up to about 9 g/day is generally tolerated, while higher doses more often cause gastrointestinal symptoms and can modestly lower blood pressure. Long-term high-dose safety is uncertain.",
+      "product_directness": "V-NITRO lists L-arginine but does not publish its amount. A nitric-oxide, pump, strength, or performance benefit cannot be inferred from ingredient presence alone.",
       "products": [
         "v-nitro"
       ],
@@ -356,65 +347,59 @@
         {
           "type": "NIH ODS",
           "title": "Dietary Supplements for Exercise and Athletic Performance — Arginine",
-          "url": "https://ods.od.nih.gov/factsheets/exerciseandathleticperformance-healthprofessional/"
+          "url": "https://ods.od.nih.gov/factsheets/ExerciseAndAthleticPerformance-HealthProfessional/"
         }
       ]
     },
     "l-citrulline": {
       "name": "L-citrulline / citrulline malate",
-      "posture": "Evidence for exercise performance is mixed; recent meta-analyses do not show robust improvements in aerobic performance or maximal strength.",
-      "summary": "A systematic review/meta-analysis found no significant overall benefit of citrulline on aerobic performance, perceived exertion, oxygen kinetics, or lactate. A separate meta-analysis found no overall strength benefit from citrulline malate in resistance-trained adults. Some acute studies suggest possible effects on repetition performance, but results are not consistent enough for a broad performance claim.",
-      "studied_context": "Citrulline and citrulline malate are not interchangeable; trials use different amounts, malate ratios, and timing. Acute protocols are common.",
-      "safety": "Short-term studies generally report good tolerability, but the safety of higher-dose long-term use is less established.",
-      "product_directness": "V-NITRO lists L-citrulline but does not publish dose or whether it is free L-citrulline versus a citrulline-malate protocol. Trial outcomes cannot be directly assigned to the product.",
+      "posture": "Exercise-performance evidence is limited and conflicting; some acute resistance-exercise studies are positive, but overall support remains weak.",
+      "summary": "NIH ODS states that research does not provide strong support for citrulline or citrulline malate as an ergogenic aid. A systematic review/meta-analysis found mixed evidence for acute strength and power outcomes.",
+      "studied_context": "Many positive studies use citrulline malate rather than plain L-citrulline, sometimes around 8 g shortly before resistance exercise. These formulations are not interchangeable by name alone.",
+      "safety": "Short-term studies report relatively few problems, though gastrointestinal discomfort occurs. Long-term supplemental safety is not well established.",
+      "product_directness": "V-NITRO lists L-citrulline but does not publish its dose or a citrulline-malate formulation. The finished product should not inherit results from 8 g citrulline-malate trials.",
       "products": [
         "v-nitro"
       ],
       "sources": [
         {
-          "type": "PubMed systematic review/meta-analysis",
-          "title": "Effects of Citrulline Supplementation on Aerobic Exercise Performance",
-          "pmid": "36079738",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/36079738/"
-        },
-        {
-          "type": "PubMed systematic review/meta-analysis",
-          "title": "Effects of Citrulline Malate Supplementation on Muscle Strength",
-          "pmid": "34176406",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/34176406/"
-        },
-        {
           "type": "NIH ODS",
           "title": "Dietary Supplements for Exercise and Athletic Performance — Citrulline",
-          "url": "https://ods.od.nih.gov/factsheets/exerciseandathleticperformance-healthprofessional/"
+          "url": "https://ods.od.nih.gov/factsheets/ExerciseAndAthleticPerformance-HealthProfessional/"
+        },
+        {
+          "type": "PubMed systematic review/meta-analysis",
+          "title": "Acute Effects of Citrulline Supplementation on High-Intensity Strength and Power Performance",
+          "pmid": "30895562",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30895562/"
         }
       ]
     },
     "glucosamine": {
       "name": "Glucosamine",
-      "posture": "Knee-osteoarthritis evidence is inconsistent and formulation-specific; major professional guidelines disagree.",
-      "summary": "NCCIH concludes that it remains uncertain whether glucosamine helps knee osteoarthritis symptoms. Some studies and guidelines report possible benefit for particular prescription crystalline glucosamine sulfate preparations, while U.S. rheumatology and OARSI guidelines have recommended against glucosamine because higher-quality evidence has not shown important benefit.",
-      "studied_context": "Glucosamine sulfate and glucosamine hydrochloride should not be assumed equivalent. Product quality and pharmaceutical-grade preparations may materially affect results.",
-      "safety": "Large osteoarthritis studies have not identified major safety problems, but glucosamine may affect blood glucose in some people and has been associated with increased bleeding risk in people using warfarin.",
-      "product_directness": "V-ITADOL lists glucosamine, but its current manufacturer page does not identify the glucosamine salt or dose. Evidence from specific pharmaceutical-grade glucosamine sulfate cannot be assigned to the finished product.",
+      "posture": "Conflicting evidence for knee osteoarthritis symptoms; preparation-specific findings and guideline disagreement make broad claims inappropriate.",
+      "summary": "NCCIH notes substantial research but inconsistent results. Some prescription crystalline glucosamine sulfate preparations have produced more favorable findings, while major U.S. guidelines have recommended against glucosamine for knee osteoarthritis.",
+      "studied_context": "Glucosamine sulfate, glucosamine hydrochloride, and pharmaceutical-grade preparations should not be treated as interchangeable. Dose and formulation are central to evidence interpretation.",
+      "safety": "Large osteoarthritis trials have not identified major safety problems, but glucosamine may affect blood glucose in some people and may increase bleeding risk with warfarin.",
+      "product_directness": "V-ITADOL lists glucosamine without a published form or dose. Its finished-product effect on osteoarthritis pain or joint function remains unverified.",
       "products": [
         "v-itadol"
       ],
       "sources": [
         {
           "type": "NCCIH",
-          "title": "Glucosamine and Chondroitin for Osteoarthritis",
+          "title": "Glucosamine and Chondroitin for Osteoarthritis: What You Need To Know",
           "url": "https://www.nccih.nih.gov/health/glucosamine-and-chondroitin-for-osteoarthritis-what-you-need-to-know"
         }
       ]
     },
     "msm": {
       "name": "Methylsulfonylmethane (MSM)",
-      "posture": "Limited human evidence suggests possible short-term knee-pain/function benefit, but the evidence is positive rather than definitive and long-term efficacy/safety remain uncertain.",
-      "summary": "Small randomized trials have reported improvements in pain or function in knee osteoarthritis at gram-level daily doses. A systematic review concluded that the more rigorous MSM trials were positive but not definitive, and further efficacy and long-term safety studies were needed. A trial in military trainees did not show preventive benefit for knee pain.",
-      "studied_context": "Positive trials used gram-level MSM dosing for roughly 8–12 weeks. Different combination products and lower doses should not be assumed equivalent.",
-      "safety": "Short-term trials generally report tolerability, but long-term safety data are limited. Evidence from reviews may include industry-linked authors, which should be considered when interpreting certainty.",
-      "product_directness": "V-ASCULAX, V-CURCUMAX, V-DAILY, V-ITADOL, and V-DAILY SACHET list MSM, but current manufacturer pages do not publish MSM dose. The site should not imply osteoarthritis benefit from presence alone.",
+      "posture": "Evidence is too limited to draw reliable conclusions for osteoarthritis or chronic pain.",
+      "summary": "NCCIH states that very little research has been done on MSM for osteoarthritis and that no conclusions can be reached about its effects.",
+      "studied_context": "Small studies use different doses, durations, and combination products, making generalized efficacy claims unreliable.",
+      "safety": "The limited evidence base also limits confidence about uncommon adverse effects and long-term use, especially in multi-ingredient products.",
+      "product_directness": "V-ASCULAX, V-CURCUMAX, V-DAILY, V-ITADOL, and V-DAILY SACHET list MSM, but current manufacturer pages do not establish a study-matched MSM dose. Finished-product joint or pain claims remain unsupported.",
       "products": [
         "v-asculax",
         "v-curcumax",
@@ -424,32 +409,19 @@
       ],
       "sources": [
         {
-          "type": "PubMed systematic review",
-          "title": "Systematic review of DMSO and MSM in osteoarthritis",
-          "pmid": "18417375",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/18417375/"
-        },
-        {
-          "type": "PubMed randomized trial",
-          "title": "Efficacy of MSM in osteoarthritis pain of the knee",
-          "pmid": "16309928",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/16309928/"
-        },
-        {
-          "type": "PubMed randomized trial",
-          "title": "MSM versus placebo to prevent knee pain in military trainees",
-          "pmid": "29214616",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/29214616/"
+          "type": "NCCIH",
+          "title": "7 Things To Know About Complementary Health Approaches for Osteoarthritis",
+          "url": "https://www.nccih.nih.gov/health/tips/things-to-know-about-complementary-health-approaches-for-osteoarthritis"
         }
       ]
     },
     "valerian": {
-      "name": "Valerian",
-      "posture": "Evidence for insomnia is inconsistent; authoritative guidance does not support valerian as an established treatment for chronic insomnia.",
-      "summary": "NCCIH states there is not enough evidence to determine whether valerian is useful for any health condition. Sleep trials have inconsistent results, and the American Academy of Sleep Medicine recommended against valerian for chronic insomnia in adults.",
-      "studied_context": "Short-term studies have often used about 300–600 mg/day, but preparations vary and the mechanism is not well standardized.",
-      "safety": "Short-term use appears generally tolerated for most adults, but long-term safety is unknown. Sedation, headache, stomach upset, vivid dreams, and rare liver injury have been reported. Valerian should not be combined casually with alcohol or sedatives.",
-      "product_directness": "V-ITALAY lists valerian but does not publish dose or extract standardization. A general 'sleep support' claim should therefore remain under review.",
+      "name": "Valerian (Valeriana officinalis)",
+      "posture": "Evidence for sleep problems is inconsistent; authoritative guidance does not support presenting valerian as an established insomnia treatment.",
+      "summary": "NCCIH states that evidence for sleep problems is inconsistent and that there is not enough evidence to determine whether valerian is useful for any health condition. The American Academy of Sleep Medicine recommended against valerian for chronic insomnia in adults.",
+      "studied_context": "Short-term studies commonly use valerian root preparations at roughly 300–600 mg/day, but extracts and preparations vary.",
+      "safety": "Short-term use appears generally tolerated in many adults, but long-term safety is unknown. Sedative effects, withdrawal after chronic use, and rare liver injury reports warrant caution.",
+      "product_directness": "V-ITALAY lists valerian but does not publish a valerian dose or standardized extract. A sleep or insomnia efficacy claim cannot be assigned to the finished product.",
       "products": [
         "v-italay"
       ],
