@@ -23,7 +23,7 @@ const VALID_PRODUCT_SLUGS = new Set([
   'collagen','d-fenz-kids','genius-shake-kids','lattekaffe','nourish-plus','performance-plus',
   's-balance','smartbiotics-kids','v-asculax','v-control','v-curcumax','v-daily','v-fortyflora','v-glutation',
   'v-itadol','v-italay','v-italboost','v-itaren','v-lovkafe','v-neurokafe','v-nitro','v-nrgy','v-omega3',
-  'v-organex','v-tedetox','v-thermokafe','vitalpro'
+  'v-organex','v-tedetox','v-thermokafe','vitalpro','v-glutation-plus','v-daily-sachet','v-harmony','v-prime'
 ]);
 
 // Root hub URLs (/:slug/) 301 to the canonical Worker product page. Known slugs only —
