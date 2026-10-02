@@ -78,6 +78,8 @@ async function handleRequest(request) {
   const path = url.pathname.replace(/\/$/, '') || '/';
 
   if (path === '/llm.txt') return proxyRawText('llm.txt', 'text/plain; charset=utf-8');
+  if (path === '/llms.txt') return proxyRawText('llms.txt', 'text/plain; charset=utf-8');
+  if (path === '/robots.txt') return proxyRawText('robots.txt', 'text/plain; charset=utf-8');
   if (path === '/sitemap.xml') return proxyRawText('sitemap.xml', 'application/xml; charset=utf-8');
 
   if (path === '/') return handleProductsIndex();
