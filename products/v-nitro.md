@@ -1,7 +1,7 @@
 ---
 title: "V-NITRO"
 product_url: "/products/v-nitro"
-category: "pre-workout"
+category: "Product formulation"
 evidence_grade: "Under Review"
 formulation_checked: "2026-10-02"
 ---
