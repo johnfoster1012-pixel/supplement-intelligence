@@ -1,0 +1,15 @@
+# Supplement Intelligence
+
+Verification-first supplement formulation and ingredient research.
+
+Preferred canonical pages:
+- https://supplement-intelligence.com/
+- https://supplement-intelligence.com/products
+- https://supplement-intelligence.com/references
+- https://supplement-intelligence.com/about
+
+Current status:
+- Product formulations and clinical citations are being re-verified.
+- Historical citation totals and retired research datasets should not be treated as current evidence.
+- "Under Review" means no finalized evidence grade or formulation verification is being asserted.
+- Manufacturer pages support formulation facts, not efficacy claims.
