@@ -15,8 +15,32 @@ const GITHUB_RAW_BASE = (typeof CONTENT_BASE !== 'undefined' && CONTENT_BASE)
 const VERSION = 'Supplement Intelligence v10';
 
 const VALID_INGREDIENT_SLUGS = new Set([
-  'creatine-monohydrate','omega-3','vitamin-d','magnesium','probiotics',
-  'berberine','ashwagandha','curcumin','collagen-peptides','glutathione'
+  'alpha-lipoic-acid',
+  'ashwagandha',
+  'berberine',
+  'caffeine',
+  'coenzyme-q10',
+  'collagen-peptides',
+  'creatine-monohydrate',
+  'curcumin',
+  'echinacea',
+  'glucosamine',
+  'glutathione',
+  'l-arginine',
+  'l-citrulline',
+  'l-theanine',
+  'magnesium',
+  'milk-thistle',
+  'msm',
+  'omega-3',
+  'panax-ginseng',
+  'probiotics',
+  'resveratrol',
+  'senna',
+  'valerian',
+  'vitamin-c',
+  'vitamin-d',
+  'zinc'
 ]);
 
 const VALID_PRODUCT_SLUGS = new Set([
