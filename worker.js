@@ -22,6 +22,11 @@ const GITHUB_RAW_BASE = (typeof CONTENT_BASE !== 'undefined' && CONTENT_BASE)
   : `https://raw.githubusercontent.com/johnfoster1012-pixel/supplement-intelligence/${CONTENT_BRANCH_NAME}/`;
 const VERSION = 'Supplement Intelligence v10';
 
+const VALID_INGREDIENT_SLUGS = new Set([
+  'creatine-monohydrate','omega-3','vitamin-d','magnesium','probiotics',
+  'berberine','ashwagandha','curcumin','collagen-peptides','glutathione'
+]);
+
 const VALID_PRODUCT_SLUGS = new Set([
   'collagen','d-fenz-kids','genius-shake-kids','lattekaffe','nourish-plus','performance-plus',
   's-balance','smartbiotics-kids','v-asculax','v-control','v-curcumax','v-daily','v-fortyflora','v-glutation',
@@ -54,11 +59,9 @@ const ARTICLE_REDIRECTS = (() => {
 
 // Retired ingredient hubs — rebuilt with verified citations in batch 2.
 const INGREDIENT_REDIRECTS = new Map([
-  ['glutathione', '/products/v-glutation'],
-  ['curcumin', '/products/v-curcumax'],
-  ['omega-3-fatty-acids', '/products/v-omega3'],
-  ['marine-collagen-peptides', '/products/collagen'],
-  ['bacopa-monnieri', '/products'], // fabricated pairing — bacopa is in no product
+  ['omega-3-fatty-acids', '/ingredients/omega-3'],
+  ['marine-collagen-peptides', '/ingredients/collagen-peptides'],
+  ['bacopa-monnieri', '/ingredients']
 ]);
 
 // Retired study-database pages (fabricated topics).
@@ -104,7 +107,9 @@ async function handleRequest(request) {
 
   const ingredientMatch = path.match(/^\/ingredients\/([a-z0-9-]+)$/);
   if (ingredientMatch) {
-    const target = INGREDIENT_REDIRECTS.get(ingredientMatch[1]);
+    const slug = ingredientMatch[1];
+    if (VALID_INGREDIENT_SLUGS.has(slug)) return proxyRawText(`ingredients/${slug}.html`, 'text/html; charset=utf-8');
+    const target = INGREDIENT_REDIRECTS.get(slug);
     return target ? redirect(url, target) : notFound('Ingredient Not Found');
   }
 
@@ -172,7 +177,7 @@ async function handleProductsIndex() {
 
 async function proxyRawText(path, contentType) {
   try {
-    const res = await fetch(GITHUB_RAW_BASE + path, { headers: { 'User-Agent': 'Supplement-Intelligence-Worker/9.0' }, cf: { cacheTtl: 3600 } });
+    const res = await fetch(GITHUB_RAW_BASE + path, { headers: { 'User-Agent': 'Supplement-Intelligence-Worker/10.0' }, cf: { cacheTtl: 3600 } });
     if (!res.ok) return new Response('Temporarily unavailable', { status: 503, headers: textHeaders() });
     const body = normalizeText(await res.text());
     return new Response(body, { status: 200, headers: baseHeaders(contentType) });
@@ -185,7 +190,7 @@ async function getTemplate() {
   const now = Date.now();
   if (cache.template && (now - cache.ts) < CACHE_TTL) return cache.template;
   try {
-    const res = await fetch(GITHUB_RAW_BASE + 'product-template.html', { headers: { 'User-Agent': 'Supplement-Intelligence-Worker/9.0' }, cf: { cacheTtl: 3600 } });
+    const res = await fetch(GITHUB_RAW_BASE + 'product-template.html', { headers: { 'User-Agent': 'Supplement-Intelligence-Worker/10.0' }, cf: { cacheTtl: 3600 } });
     if (res.ok) {
       cache.template = normalizeText(await res.text());
       cache.ts = now;
@@ -199,7 +204,7 @@ async function getProductsData() {
   const now = Date.now();
   if (cache.productsData && (now - cache.ts) < CACHE_TTL) return cache.productsData;
   try {
-    const res = await fetch(GITHUB_RAW_BASE + 'products-data.json', { headers: { 'User-Agent': 'Supplement-Intelligence-Worker/9.0' }, cf: { cacheTtl: 3600 } });
+    const res = await fetch(GITHUB_RAW_BASE + 'products-data.json', { headers: { 'User-Agent': 'Supplement-Intelligence-Worker/10.0' }, cf: { cacheTtl: 3600 } });
     if (res.ok) {
       const json = await res.json();
       cache.productsData = deepNormalize(json);
@@ -215,7 +220,8 @@ function renderProductPage(template, product) {
   const citations = product.citations || [];
   const grade = product.evidenceGrade || 'Under Review';
   const underReview = String(grade).toLowerCase() === 'under review';
-  const publicIngredients = underReview ? 'Formulation re-verification in progress.' : (product.ingredients || '');
+  const formulationVerified = String(product.formulationStatus || '').toLowerCase().startsWith('verified against current manufacturer');
+  const publicIngredients = formulationVerified ? (product.ingredients || '') : 'Formulation re-verification in progress.';
   const publicTldr = underReview ? 'This product record is undergoing current-label and evidence re-verification. Ingredient-specific efficacy claims are not being asserted until that review is complete.' : (product.tldr || '');
   const publicResearch = underReview ? 'Evidence review in progress. Verified references will be republished only after the current formulation and study-to-claim mapping are confirmed.' : (product.research || '');
 
@@ -268,7 +274,7 @@ function renderProductsIndex(productsData) {
         : '<strong>Evidence:</strong> full review in progress';
       groupsHtml += `<article style="border:1px solid #e5e7eb;border-radius:14px;padding:16px;margin:14px 0;">
         <h3><a href="${escapeHtml(p.url)}">${escapeHtml(p.name)}</a></h3>
-        <p>${escapeHtml(truncateText(p.tldr || '', 220))}</p>
+        <p>${escapeHtml(String(p.formulationStatus || '').toLowerCase().startsWith('verified against current manufacturer') ? 'Current manufacturer formulation checked Oct 2026. Efficacy evidence remains under review.' : 'Formulation and efficacy evidence are under review.')}</p>
         <p>${evidence}</p>
       </article>`;
     }
