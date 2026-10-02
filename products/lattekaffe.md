@@ -1,58 +1,33 @@
 ---
 title: "LATTEKAFFE"
 product_url: "/products/lattekaffe"
-ingredients: "Instant roasted black coffee (Coffea arabica); ten functional mushrooms (Lion's Mane, Reishi, Cordyceps, Chaga, Shiitake, Maitake, Antrodia, almond mushroom, Turkey Tail, King Oyster); MCT (medium-chain triglycerides); biotin; black pepper"
 category: "beauty/coffee"
 evidence_grade: "Under Review"
-last_updated: "2026-06-11"
+formulation_checked: "2026-10-02"
 ---
 
 # LATTEKAFFE
 
-## TL;DR
-Contains caffeine.
+## Current formulation
 
-A vanilla latte built on Coffea arabica and ten functional mushrooms - one of the broadest mushroom blends in any coffee product - rounded out with MCT oil, biotin, and black pepper.
+The ingredient list below was checked against the current manufacturer product page on October 2, 2026:
 
----
+Instant roasted black coffee (Coffea arabica); Lion's Mane; Cordyceps; King Oyster; Reishi; Turkey Tail; Almond Mushroom; Chaga; Maitake; Shiitake; Antrodia; black pepper; biotin (vitamin B7); MCT oil; coconut cream
 
-## Key Ingredients
-Instant roasted black coffee (Coffea arabica); ten functional mushrooms (Lion's Mane, Reishi, Cordyceps, Chaga, Shiitake, Maitake, Antrodia, almond mushroom, Turkey Tail, King Oyster); MCT (medium-chain triglycerides); biotin; black pepper
+**Manufacturer formulation source:** https://vitalhealthglobal.com/products/lattekaffe
 
----
+This source is used only to establish the currently published formulation. Manufacturer descriptions are not treated as evidence of efficacy.
 
-## What Does The Research Say?
+## Evidence status
 
-LATTEKAFFE pairs arabica coffee with a ten-species functional mushroom blend (Lion's Mane, Reishi, Cordyceps, Chaga, Shiitake, Maitake, Antrodia, Almond Mushroom, Turkey Tail, and King Oyster), plus MCTs as a readily used energy source, biotin, and black pepper.
+**Under Review.**
 
-It may support steady natural energy and daily focus; biotin contributes to normal hair, skin, and energy metabolism; black pepper supports the absorption of fat-soluble compounds; and functional mushrooms are traditionally valued for supporting physical and mental balance.
+Historical product-to-study mappings have been withdrawn. Ingredient-specific and finished-product efficacy claims will be republished only after citation, formulation, dose, population, outcome, and directness checks are complete.
 
-Research angles for the individual ingredients (for example Lion's Mane and cognitive performance, Reishi and immune modulation, Cordyceps and exercise performance, Turkey Tail polysaccharides, and MCTs and energy metabolism) are being reviewed and citation-checked. Verified references will be added once confirmed.
+## Commercial disclosure
 
----
+Supplement Intelligence may earn referral credit from purchases made through some product links. Compensation does not determine evidence status.
 
-## Evidence Grade
+## Disclaimer
 
-Evidence review in progress. Grades will be re-issued only with verified citations.
-
----
-
-## PubMed Citations
-
-Citations are being re-verified as part of an ongoing evidence review.
-
----
-
-## Where to Buy
-
-[Shop LATTEKAFFE at Vital Health Global](https://vitalhealthglobal.com/products/lattekaffe?refID=149983)
-
-Supplement Intelligence is operated in partnership with Vital Health Global and earns referral credit on purchases.
-
----
-
-## Related Products
-
-- [COLLAGEN COMPLEX](/products/collagen)
-- [V-LOVKAFE](/products/v-lovkafe)
-- [NOURISH PLUS](/products/nourish-plus)
+For general informational purposes only; not individualized medical advice.
