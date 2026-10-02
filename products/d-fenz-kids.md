@@ -1,7 +1,7 @@
 ---
 title: "D-FENZ KIDS"
 product_url: "/products/d-fenz-kids"
-category: "kids immune"
+category: "Product formulation"
 evidence_grade: "Under Review"
 formulation_checked: "2026-10-02"
 ---
