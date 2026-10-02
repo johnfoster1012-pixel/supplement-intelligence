@@ -1,56 +1,33 @@
 ---
 title: "V-OMEGA3"
 product_url: "/products/v-omega3"
-ingredients: "Omega-3 fatty acids (EPA and DHA); vitamins A, D3 and E; astaxanthin; fish gelatin"
-category: "cardiovascular/brain"
+category: "Product formulation"
 evidence_grade: "Under Review"
-last_updated: "2026-06-11"
+formulation_checked: "2026-10-02"
 ---
 
 # V-OMEGA3
 
-## TL;DR
-Contains fish.
+## Current formulation
 
-V-OMEGA3 is a Vital Health Global product. Its verified ingredients include omega-3 fatty acids (EPA and DHA); vitamins A, D3 and E; astaxanthin; fish gelatin. A full evidence review of this product is in progress; ingredient-specific benefit claims and citations have been removed pending verification and will be republished once confirmed.
+The ingredient list below was checked against the current manufacturer product page on October 2, 2026:
 
----
+Astaxanthin; tocotrienols; vitamin A; vitamin D3; vitamin E; Wild Alaska salmon oil
 
-## Key Ingredients
-Omega-3 fatty acids (EPA and DHA); vitamins A, D3 and E; astaxanthin; fish gelatin
+**Manufacturer formulation source:** https://vitalhealthglobal.com/products/v-omega-3
 
----
+This source is used only to establish the currently published formulation. Manufacturer descriptions are not treated as evidence of efficacy.
 
-## What Does The Research Say?
+## Evidence status
 
-Full evidence review in progress.
+**Under Review.**
 
-We are re-verifying this product's ingredient list and the supporting research against the manufacturer's current label and primary sources. Verified, citation-backed information will be republished here once that review is complete.
+Historical product-to-study mappings have been withdrawn. Ingredient-specific and finished-product efficacy claims will be republished only after citation, formulation, dose, population, outcome, and directness checks are complete.
 
----
+## Commercial disclosure
 
-## Evidence Grade
+Supplement Intelligence may earn referral credit from purchases made through some product links. Compensation does not determine evidence status.
 
-Evidence review in progress. Grades will be re-issued only with verified citations.
+## Disclaimer
 
----
-
-## PubMed Citations
-
-Citations are being re-verified as part of an ongoing evidence review.
-
----
-
-## Where to Buy
-
-[Shop V-OMEGA3 at Vital Health Global](https://vitalhealthglobal.com/products/v-omega-3?refID=149983)
-
-Supplement Intelligence is operated in partnership with Vital Health Global and earns referral credit on purchases.
-
----
-
-## Related Products
-
-- [V-NEUROKAFE](/products/v-neurokafe)
-- [S-BALANCE](/products/s-balance)
-- [V-DAILY](/products/v-daily)
+For general informational purposes only; not individualized medical advice.

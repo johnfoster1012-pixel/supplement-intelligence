@@ -1,54 +1,33 @@
 ---
 title: "V-CURCUMAX"
 product_url: "/products/v-curcumax"
-ingredients: "Turmeric; MSM; vitamin C; selenium"
-category: "anti-inflammatory"
+category: "Product formulation"
 evidence_grade: "Under Review"
-last_updated: "2026-06-11"
+formulation_checked: "2026-10-02"
 ---
 
 # V-CURCUMAX
 
-## TL;DR
-V-CURCUMAX is a Vital Health Global product. Its verified ingredients include turmeric; MSM; vitamin C; selenium. A full evidence review of this product is in progress; ingredient-specific benefit claims and citations have been removed pending verification and will be republished once confirmed.
+## Current formulation
 
----
+The ingredient list below was checked against the current manufacturer product page on October 2, 2026:
 
-## Key Ingredients
-Turmeric; MSM; vitamin C; selenium
+Turmeric; MSM (methylsulfonylmethane); chondroitin; vitamin C; selenium
 
----
+**Manufacturer formulation source:** https://vitalhealthglobal.com/products/v-curcumax
 
-## What Does The Research Say?
+This source is used only to establish the currently published formulation. Manufacturer descriptions are not treated as evidence of efficacy.
 
-Full evidence review in progress.
+## Evidence status
 
-We are re-verifying this product's ingredient list and the supporting research against the manufacturer's current label and primary sources. Verified, citation-backed information will be republished here once that review is complete.
+**Under Review.**
 
----
+Historical product-to-study mappings have been withdrawn. Ingredient-specific and finished-product efficacy claims will be republished only after citation, formulation, dose, population, outcome, and directness checks are complete.
 
-## Evidence Grade
+## Commercial disclosure
 
-Evidence review in progress. Grades will be re-issued only with verified citations.
+Supplement Intelligence may earn referral credit from purchases made through some product links. Compensation does not determine evidence status.
 
----
+## Disclaimer
 
-## PubMed Citations
-
-Citations are being re-verified as part of an ongoing evidence review.
-
----
-
-## Where to Buy
-
-[Shop V-CURCUMAX at Vital Health Global](https://vitalhealthglobal.com/products/v-curcumax?refID=149983)
-
-Supplement Intelligence is operated in partnership with Vital Health Global and earns referral credit on purchases.
-
----
-
-## Related Products
-
-- [V-ITADOL](/products/v-itadol)
-- [V-ORGANEX](/products/v-organex)
-- [S-BALANCE](/products/s-balance)
+For general informational purposes only; not individualized medical advice.

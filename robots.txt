@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://supplement-intelligence.com/sitemap.xml

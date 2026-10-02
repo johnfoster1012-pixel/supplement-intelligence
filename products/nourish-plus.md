@@ -1,56 +1,33 @@
 ---
 title: "NOURISH PLUS"
 product_url: "/products/nourish-plus"
-ingredients: "Pea, rice, hemp and pumpkin-seed protein; coconut milk; MCT; functional mushrooms (cordyceps, shiitake, turkey tail, chaga, reishi); maca; ashwagandha; holy basil; ginger; superfruits; greens (kale, spinach, moringa, spirulina, chlorella); turmeric; alpha-lipoic acid; resveratrol; coenzyme Q10; quercetin; probiotic blend; digestive enzymes; berberine; added vitamins and minerals"
-category: "women's hormonal health"
+category: "Product formulation"
 evidence_grade: "Under Review"
-last_updated: "2026-06-11"
+formulation_checked: "2026-10-02"
 ---
 
 # NOURISH PLUS
 
-## TL;DR
-Contains berberine and ashwagandha; consult a healthcare professional if pregnant, nursing, or taking medication.
+## Current formulation
 
-NOURISH PLUS is a Vital Health Global product. Its verified ingredients include pea, rice, hemp and pumpkin-seed protein; coconut milk; MCT; functional mushrooms (cordyceps, shiitake, turkey tail, chaga, reishi); maca; ashwagandha; holy basil; ginger; superfruits; greens (kale, spinach, moringa, spirulina, chlorella); turmeric; alpha-lipoic acid; resveratrol; coenzyme Q10; quercetin; probiotic blend; digestive enzymes; berberine; added vitamins and minerals. A full evidence review of this product is in progress; ingredient-specific benefit claims and citations have been removed pending verification and will be republished once confirmed.
+The ingredient list below was checked against the current manufacturer product page on October 2, 2026:
 
----
+Pea protein; rice protein; hemp protein; pumpkin-seed protein; coconut milk; MCT powder; cordyceps; mangosteen; shiitake; maca; ashwagandha; turkey tail; chaga; holy basil; ginger; beetroot; strawberry; mango; green apple; blueberry; noni; dragon fruit; banana; tomato; grape; camu camu; kale; goji berry; cherry; chlorella; moringa; spirulina; alpha-lipoic acid; resveratrol; maqui berry; broccoli; reishi; coenzyme Q10; quercetin; Lactobacillus plantarum; L. rhamnosus; L. casei; Bifidobacterium lactis; B. adolescentis; B. longum; berberine HCl; turmeric; spinach; green tea extract; bitter melon; protease; amylase; AFA algae; omega-3; vitamins A, C, D, E and K; thiamine; riboflavin; niacin; vitamin B6; folate; vitamin B12; biotin; pantothenic acid; calcium; iodine; magnesium; zinc; selenium; copper; manganese; chromium; cacao powder; chia powder; sunflower lecithin; stevia
 
-## Key Ingredients
-Pea, rice, hemp and pumpkin-seed protein; coconut milk; MCT; functional mushrooms (cordyceps, shiitake, turkey tail, chaga, reishi); maca; ashwagandha; holy basil; ginger; superfruits; greens (kale, spinach, moringa, spirulina, chlorella); turmeric; alpha-lipoic acid; resveratrol; coenzyme Q10; quercetin; probiotic blend; digestive enzymes; berberine; added vitamins and minerals
+**Manufacturer formulation source:** https://vitalhealthglobal.com/products/nourish
 
----
+This source is used only to establish the currently published formulation. Manufacturer descriptions are not treated as evidence of efficacy.
 
-## What Does The Research Say?
+## Evidence status
 
-Full evidence review in progress.
+**Under Review.**
 
-We are re-verifying this product's ingredient list and the supporting research against the manufacturer's current label and primary sources. Verified, citation-backed information will be republished here once that review is complete.
+Historical product-to-study mappings have been withdrawn. Ingredient-specific and finished-product efficacy claims will be republished only after citation, formulation, dose, population, outcome, and directness checks are complete.
 
----
+## Commercial disclosure
 
-## Evidence Grade
+Supplement Intelligence may earn referral credit from purchases made through some product links. Compensation does not determine evidence status.
 
-Evidence review in progress. Grades will be re-issued only with verified citations.
+## Disclaimer
 
----
-
-## PubMed Citations
-
-Citations are being re-verified as part of an ongoing evidence review.
-
----
-
-## Where to Buy
-
-[Shop NOURISH PLUS at Vital Health Global](https://vitalhealthglobal.com/products/nourish?refID=149983)
-
-Supplement Intelligence is operated in partnership with Vital Health Global and earns referral credit on purchases.
-
----
-
-## Related Products
-
-- [S-BALANCE](/products/s-balance)
-- [COLLAGEN COMPLEX](/products/collagen)
-- [V-DAILY](/products/v-daily)
+For general informational purposes only; not individualized medical advice.

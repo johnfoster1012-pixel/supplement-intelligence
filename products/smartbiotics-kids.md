@@ -1,58 +1,33 @@
 ---
 title: "SMARTBIOTICS KIDS"
 product_url: "/products/smartbiotics-kids"
-ingredients: "10-strain probiotic blend (Lactobacillus rhamnosus GG, Bifidobacterium lactis Bl-04, L. gasseri, L. reuteri, L. casei, L. acidophilus, B. breve, B. longum, L. paracasei, B. infantis); prebiotics (inulin, galactooligosaccharides); digestive enzymes (amylase, lipase, protease); Lion's Mane; magnesium L-threonate; choline; real mango; stevia"
-category: "kids gut/immune"
+category: "Product formulation"
 evidence_grade: "Under Review"
-last_updated: "2026-06-11"
+formulation_checked: "2026-10-02"
 ---
 
 # SMARTBIOTICS KIDS
 
-## TL;DR
-Consult your pediatrician before giving any supplement to a child.
+## Current formulation
 
-A mango-flavored powder combining a 10-strain probiotic blend with prebiotics, digestive enzymes, and a gut-brain trio - Lion's Mane, magnesium L-threonate, and choline.
+The ingredient list below was checked against the current manufacturer product page on October 2, 2026:
 
----
+Mango pulp; inulin; stevia; magnesium L-threonate; choline L-bitartrate; Lactobacillus rhamnosus GG; Bifidobacterium lactis Bl-04; L. gasseri; L. reuteri; L. casei; L. acidophilus; B. breve; B. longum; L. paracasei; B. infantis; Lion's Mane; amylase; lipase; protease; galactooligosaccharides
 
-## Key Ingredients
-10-strain probiotic blend (Lactobacillus rhamnosus GG, Bifidobacterium lactis Bl-04, L. gasseri, L. reuteri, L. casei, L. acidophilus, B. breve, B. longum, L. paracasei, B. infantis); prebiotics (inulin, galactooligosaccharides); digestive enzymes (amylase, lipase, protease); Lion's Mane; magnesium L-threonate; choline; real mango; stevia
+**Manufacturer formulation source:** https://vitalhealthglobal.com/products/smartbiotics
 
----
+This source is used only to establish the currently published formulation. Manufacturer descriptions are not treated as evidence of efficacy.
 
-## What Does The Research Say?
+## Evidence status
 
-SMARTBIOTICS Kids combines a ten-strain probiotic blend (including Lactobacillus rhamnosus GG and Bifidobacterium infantis) with prebiotics (inulin and galactooligosaccharides), digestive enzymes (amylase, lipase, protease), Lion's Mane, magnesium L-threonate, and choline, in a sugar-free, real-mango powder.
+**Under Review.**
 
-It is intended to support balanced gut flora, digestion, and nutrient absorption; to support memory, learning, and calm focus; and to support immune health via the gut.
+Historical product-to-study mappings have been withdrawn. Ingredient-specific and finished-product efficacy claims will be republished only after citation, formulation, dose, population, outcome, and directness checks are complete.
 
-The total probiotic CFU count is pending current-label verification and is not stated here. Supporting research (for example LGG in children and prebiotic synbiotics) is being reviewed and citation-checked; verified references will be added once confirmed.
+## Commercial disclosure
 
----
+Supplement Intelligence may earn referral credit from purchases made through some product links. Compensation does not determine evidence status.
 
-## Evidence Grade
+## Disclaimer
 
-Evidence review in progress. Grades will be re-issued only with verified citations.
-
----
-
-## PubMed Citations
-
-Citations are being re-verified as part of an ongoing evidence review.
-
----
-
-## Where to Buy
-
-[Shop SMARTBIOTICS KIDS at Vital Health Global](https://vitalhealthglobal.com/products/smartbiotics?refID=149983)
-
-Supplement Intelligence is operated in partnership with Vital Health Global and earns referral credit on purchases.
-
----
-
-## Related Products
-
-- [D-FENZ KIDS](/products/d-fenz-kids)
-- [GENIUS SHAKE KIDS](/products/genius-shake-kids)
-- [V-FORTYFLORA](/products/v-fortyflora)
+For general informational purposes only; not individualized medical advice.

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-06",
-  "totalIngredients": 0,
-  "ingredients": [],
-  "quarantineNote": "Ingredient research data removed pending verification (fabricated doses/citations). Rebuild from verified sources in batch-2."
+  "generatedAt": "2026-10-02",
+  "status": "superseded",
+  "replacement": "ingredient-evidence.json",
+  "note": "This compatibility file no longer contains evidence records. Use ingredient-evidence.json and docs/EVIDENCE_METHOD.md."
 }

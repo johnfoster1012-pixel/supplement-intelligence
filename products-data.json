@@ -1,858 +1,684 @@
 {
-  "generatedAt": "2026-06-11",
-  "totalProducts": 27,
+  "generatedAt": "2026-10-02",
+  "totalProducts": 31,
   "products": {
     "collagen": {
       "slug": "collagen",
       "name": "COLLAGEN COMPLEX",
       "url": "/products/collagen",
-      "ingredients": "Hydrolyzed bovine collagen peptides (types I, II, III); hydrolyzed marine collagen peptides (from fish); bone broth & connective-tissue powder (bovine); beet powder; resveratrol; astaxanthin; nicotinamide adenine dinucleotide (NAD); vitamin C; vitamin E; biotin; hyaluronic acid; black pepper extract",
-      "category": "skin/joints",
-      "lastUpdated": "2026-06-11",
-      "tldr": "Contains fish (marine collagen) and bovine-derived ingredients.\n\nCOLLAGEN COMPLEX is a Vital Health Global product. Its verified ingredients include hydrolyzed bovine collagen peptides (types I, II, III); hydrolyzed marine collagen peptides (from fish); bone broth & connective-tissue powder (bovine); beet powder; resveratrol; astaxanthin; nicotinamide adenine dinucleotide (NAD); vitamin C; vitamin E; biotin; hyaluronic acid; black pepper extract. A full evidence review of this product is in progress; ingredient-specific benefit claims and citations have been removed pending verification and will be republished once confirmed.",
-      "research": "Full evidence review in progress.\n\nWe are re-verifying this product's ingredient list and the supporting research against the manufacturer's current label and primary sources. Verified, citation-backed information will be republished here once that review is complete.",
+      "ingredients": "Hydrolyzed bovine collagen peptides (types I, II, III; grass-fed); hydrolyzed marine collagen peptides (fish); natural raspberry flavor; organic dehydrated beet powder; bone and connective-tissue broth powder; vitamin C; vitamin E; resveratrol; stevia; biotin; hyaluronic acid; astaxanthin; black pepper extract (95% piperine); nicotinamide adenine dinucleotide (NAD)",
+      "category": "Product formulation",
+      "lastUpdated": "2026-10-02",
+      "tldr": "Current manufacturer formulation checked October 2, 2026. Finished-product efficacy evidence remains under review.",
+      "research": "Evidence review in progress. Ingredient-level evidence will not be treated as finished-product evidence unless formulation, dose, population, duration, outcome, and study context are sufficiently relevant.",
       "mechanism": "Under review.",
       "evidenceGrade": "Under Review",
-      "evidenceGradeText": "Evidence review in progress. Grades will be re-issued only with verified citations.",
+      "evidenceGradeText": "No finalized finished-product evidence grade is being asserted.",
       "faqs": [],
       "citations": [],
-      "relatedProducts": [
-        {
-          "name": "LATTEKAFFE",
-          "url": "/products/lattekaffe"
-        },
-        {
-          "name": "NOURISH PLUS",
-          "url": "/products/nourish-plus"
-        },
-        {
-          "name": "V-GLUTATION",
-          "url": "/products/v-glutation"
-        }
-      ],
+      "relatedProducts": [],
       "totalCitations": 0,
-      "articleUrl": "/articles/collagen-benefits",
-      "shopUrl": "https://vitalhealthglobal.com/products/vitalage-collagen?refID=149983"
+      "articleUrl": null,
+      "shopUrl": "https://vitalhealthglobal.com/products/vitalage-collagen?refID=149983",
+      "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
+      "formulationSource": "https://vitalhealthglobal.com/products/vitalage-collagen"
     },
     "d-fenz-kids": {
       "slug": "d-fenz-kids",
       "name": "D-FENZ KIDS",
       "url": "/products/d-fenz-kids",
-      "ingredients": "Vitamin C; vitamin D; zinc; niacin; magnesium L-threonate; turmeric extract (tetrahydrocurcumin); prebiotic inulin; natural lime flavor",
-      "category": "kids immune",
-      "lastUpdated": "2026-06-11",
-      "tldr": "Consult your pediatrician before giving any supplement to a child.\n\nA lime-flavored daily drink combining vitamins C and D, zinc, and niacin with magnesium L-threonate, turmeric extract, and prebiotic inulin - immune and focus support in one glass.",
-      "research": "D-FENZ Kids combines vitamins C and D, zinc, and niacin with magnesium L-threonate, turmeric extract, and prebiotic inulin, in a natural lime flavor.\n\nIt is intended to support the immune system (vitamins C and D and zinc), support mental focus (magnesium L-threonate), support healthy digestion (inulin), and provide antioxidant support (turmeric and vitamin C).\n\nSpecific nutrient amounts are pending label verification and are not listed here. This product is not intended to prevent or treat colds, flu, or infections. Supporting research is being reviewed and citation-checked; verified references will be added once confirmed.",
+      "ingredients": "Inulin; natural lime flavor; vitamin C (ascorbic acid); stevia; magnesium L-threonate; niacin (niacinamide); zinc (zinc citrate); tetrahydrocurcumin (from Curcuma longa); vitamin D3 (cholecalciferol)",
+      "category": "Product formulation",
+      "lastUpdated": "2026-10-02",
+      "tldr": "Current manufacturer formulation checked October 2, 2026. Finished-product efficacy evidence remains under review.",
+      "research": "Evidence review in progress. Ingredient-level evidence will not be treated as finished-product evidence unless formulation, dose, population, duration, outcome, and study context are sufficiently relevant.",
       "mechanism": "Under review.",
       "evidenceGrade": "Under Review",
-      "evidenceGradeText": "Evidence review in progress. Grades will be re-issued only with verified citations.",
+      "evidenceGradeText": "No finalized finished-product evidence grade is being asserted.",
       "faqs": [],
       "citations": [],
-      "relatedProducts": [
-        {
-          "name": "V-ITALBOOST",
-          "url": "/products/v-italboost"
-        },
-        {
-          "name": "SMARTBIOTICS KIDS",
-          "url": "/products/smartbiotics-kids"
-        }
-      ],
+      "relatedProducts": [],
       "totalCitations": 0,
-      "articleUrl": "/articles/d-fenz-kids-benefits",
-      "shopUrl": "https://vitalhealthglobal.com/products/dfence-kids?refID=149983"
+      "articleUrl": null,
+      "shopUrl": "https://vitalhealthglobal.com/products/dfence-kids?refID=149983",
+      "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
+      "formulationSource": "https://vitalhealthglobal.com/products/dfence-kids"
     },
     "genius-shake-kids": {
       "slug": "genius-shake-kids",
       "name": "GENIUS SHAKE KIDS",
       "url": "/products/genius-shake-kids",
-      "ingredients": "Whey protein isolate; essential vitamins and minerals; omega-3 and omega-6 fatty acids; coconut powder; inulin (natural fiber); cocoa; antioxidant-rich fruits and vegetables; functional mushrooms (maitake, shiitake)",
-      "category": "kids brain/development",
-      "lastUpdated": "2026-06-11",
-      "tldr": "Contains milk (whey protein). Consult your pediatrician before giving any supplement to a child.\n\nA chocolate-coconut daily nutrition shake for kids built on whey protein, vitamins and minerals, omegas, natural fiber, and antioxidant-rich fruits and vegetables.",
-      "research": "Genius Shake Kids provides high-quality whey protein together with essential vitamins and minerals, omega fatty acids, natural fiber, and a blend of antioxidant-rich fruits and vegetables, in a chocolate-coconut flavor.\n\nIt is intended to support energy, healthy growth, and daily nutrition and to complement a balanced diet, and is designed to pair with D-FENZ and SMARTBIOTICS as part of the brand's kids' routine.\n\nExact vitamin and mineral amounts are pending label verification and are not listed here. A supplement is not a replacement for a varied diet. Supporting research is being reviewed and citation-checked; verified references will be added once confirmed.",
+      "ingredients": "Allulose; whey protein isolate; coconut powder; inulin; cocoa powder; vitamin A; vitamin C; calcium; iron; spinach; carrot; red pitahaya; sweet potato; orange; banana; mango; noni; mangosteen; strawberry; maitake; shiitake; grape; blueberry; kiwi; vitamin E; niacin; pantothenic acid; omega-6; omega-3; vitamin B6; thiamin; folate; vitamin K; vitamin D3; biotin; vitamin B12",
+      "category": "Product formulation",
+      "lastUpdated": "2026-10-02",
+      "tldr": "Current manufacturer formulation checked October 2, 2026. Finished-product efficacy evidence remains under review.",
+      "research": "Evidence review in progress. Ingredient-level evidence will not be treated as finished-product evidence unless formulation, dose, population, duration, outcome, and study context are sufficiently relevant.",
       "mechanism": "Under review.",
       "evidenceGrade": "Under Review",
-      "evidenceGradeText": "Evidence review in progress. Grades will be re-issued only with verified citations.",
+      "evidenceGradeText": "No finalized finished-product evidence grade is being asserted.",
       "faqs": [],
       "citations": [],
-      "relatedProducts": [
-        {
-          "name": "SMARTBIOTICS KIDS",
-          "url": "/products/smartbiotics-kids"
-        },
-        {
-          "name": "D-FENZ KIDS",
-          "url": "/products/d-fenz-kids"
-        }
-      ],
+      "relatedProducts": [],
       "totalCitations": 0,
-      "articleUrl": "/articles/genius-shake-kids-benefits",
-      "shopUrl": "https://vitalhealthglobal.com/products/genius-shake?refID=149983"
+      "articleUrl": null,
+      "shopUrl": "https://vitalhealthglobal.com/products/genius-shake?refID=149983",
+      "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
+      "formulationSource": "https://vitalhealthglobal.com/products/genius-shake"
     },
     "lattekaffe": {
       "slug": "lattekaffe",
       "name": "LATTEKAFFE",
       "url": "/products/lattekaffe",
-      "ingredients": "Instant roasted black coffee (Coffea arabica); ten functional mushrooms (Lion's Mane, Reishi, Cordyceps, Chaga, Shiitake, Maitake, Antrodia, almond mushroom, Turkey Tail, King Oyster); MCT (medium-chain triglycerides); biotin; black pepper",
-      "category": "beauty/coffee",
-      "lastUpdated": "2026-06-11",
-      "tldr": "Contains caffeine.\n\nA vanilla latte built on Coffea arabica and ten functional mushrooms - one of the broadest mushroom blends in any coffee product - rounded out with MCT oil, biotin, and black pepper.",
-      "research": "LATTEKAFFE pairs arabica coffee with a ten-species functional mushroom blend (Lion's Mane, Reishi, Cordyceps, Chaga, Shiitake, Maitake, Antrodia, Almond Mushroom, Turkey Tail, and King Oyster), plus MCTs as a readily used energy source, biotin, and black pepper.\n\nIt may support steady natural energy and daily focus; biotin contributes to normal hair, skin, and energy metabolism; black pepper supports the absorption of fat-soluble compounds; and functional mushrooms are traditionally valued for supporting physical and mental balance.\n\nResearch angles for the individual ingredients (for example Lion's Mane and cognitive performance, Reishi and immune modulation, Cordyceps and exercise performance, Turkey Tail polysaccharides, and MCTs and energy metabolism) are being reviewed and citation-checked. Verified references will be added once confirmed.",
+      "ingredients": "Instant roasted black coffee (Coffea arabica); Lion's Mane; Cordyceps; King Oyster; Reishi; Turkey Tail; Almond Mushroom; Chaga; Maitake; Shiitake; Antrodia; black pepper; biotin (vitamin B7); MCT oil; coconut cream",
+      "category": "Product formulation",
+      "lastUpdated": "2026-10-02",
+      "tldr": "Current manufacturer formulation checked October 2, 2026. Finished-product efficacy evidence remains under review.",
+      "research": "Evidence review in progress. Ingredient-level evidence will not be treated as finished-product evidence unless formulation, dose, population, duration, outcome, and study context are sufficiently relevant.",
       "mechanism": "Under review.",
       "evidenceGrade": "Under Review",
-      "evidenceGradeText": "Evidence review in progress. Grades will be re-issued only with verified citations.",
+      "evidenceGradeText": "No finalized finished-product evidence grade is being asserted.",
       "faqs": [],
       "citations": [],
-      "relatedProducts": [
-        {
-          "name": "COLLAGEN COMPLEX",
-          "url": "/products/collagen"
-        },
-        {
-          "name": "V-LOVKAFE",
-          "url": "/products/v-lovkafe"
-        },
-        {
-          "name": "NOURISH PLUS",
-          "url": "/products/nourish-plus"
-        }
-      ],
+      "relatedProducts": [],
       "totalCitations": 0,
-      "articleUrl": "/articles/lattekaffe-benefits",
-      "shopUrl": "https://vitalhealthglobal.com/products/lattekaffe?refID=149983"
+      "articleUrl": null,
+      "shopUrl": "https://vitalhealthglobal.com/products/lattekaffe?refID=149983",
+      "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
+      "formulationSource": "https://vitalhealthglobal.com/products/lattekaffe"
     },
     "nourish-plus": {
       "slug": "nourish-plus",
       "name": "NOURISH PLUS",
       "url": "/products/nourish-plus",
-      "ingredients": "Pea, rice, hemp and pumpkin-seed protein; coconut milk; MCT; functional mushrooms (cordyceps, shiitake, turkey tail, chaga, reishi); maca; ashwagandha; holy basil; ginger; superfruits; greens (kale, spinach, moringa, spirulina, chlorella); turmeric; alpha-lipoic acid; resveratrol; coenzyme Q10; quercetin; probiotic blend; digestive enzymes; berberine; added vitamins and minerals",
-      "category": "women's hormonal health",
-      "lastUpdated": "2026-06-11",
-      "tldr": "Contains berberine and ashwagandha; consult a healthcare professional if pregnant, nursing, or taking medication.\n\nNOURISH PLUS is a Vital Health Global product. Its verified ingredients include pea, rice, hemp and pumpkin-seed protein; coconut milk; MCT; functional mushrooms (cordyceps, shiitake, turkey tail, chaga, reishi); maca; ashwagandha; holy basil; ginger; superfruits; greens (kale, spinach, moringa, spirulina, chlorella); turmeric; alpha-lipoic acid; resveratrol; coenzyme Q10; quercetin; probiotic blend; digestive enzymes; berberine; added vitamins and minerals. A full evidence review of this product is in progress; ingredient-specific benefit claims and citations have been removed pending verification and will be republished once confirmed.",
-      "research": "Full evidence review in progress.\n\nWe are re-verifying this product's ingredient list and the supporting research against the manufacturer's current label and primary sources. Verified, citation-backed information will be republished here once that review is complete.",
+      "ingredients": "Pea protein; rice protein; hemp protein; pumpkin-seed protein; coconut milk; MCT powder; cordyceps; mangosteen; shiitake; maca; ashwagandha; turkey tail; chaga; holy basil; ginger; beetroot; strawberry; mango; green apple; blueberry; noni; dragon fruit; banana; tomato; grape; camu camu; kale; goji berry; cherry; chlorella; moringa; spirulina; alpha-lipoic acid; resveratrol; maqui berry; broccoli; reishi; coenzyme Q10; quercetin; Lactobacillus plantarum; L. rhamnosus; L. casei; Bifidobacterium lactis; B. adolescentis; B. longum; berberine HCl; turmeric; spinach; green tea extract; bitter melon; protease; amylase; AFA algae; omega-3; vitamins A, C, D, E and K; thiamine; riboflavin; niacin; vitamin B6; folate; vitamin B12; biotin; pantothenic acid; calcium; iodine; magnesium; zinc; selenium; copper; manganese; chromium; cacao powder; chia powder; sunflower lecithin; stevia",
+      "category": "Product formulation",
+      "lastUpdated": "2026-10-02",
+      "tldr": "Current manufacturer formulation checked October 2, 2026. Finished-product efficacy evidence remains under review.",
+      "research": "Evidence review in progress. Ingredient-level evidence will not be treated as finished-product evidence unless formulation, dose, population, duration, outcome, and study context are sufficiently relevant.",
       "mechanism": "Under review.",
       "evidenceGrade": "Under Review",
-      "evidenceGradeText": "Evidence review in progress. Grades will be re-issued only with verified citations.",
+      "evidenceGradeText": "No finalized finished-product evidence grade is being asserted.",
       "faqs": [],
       "citations": [],
-      "relatedProducts": [
-        {
-          "name": "S-BALANCE",
-          "url": "/products/s-balance"
-        },
-        {
-          "name": "COLLAGEN COMPLEX",
-          "url": "/products/collagen"
-        },
-        {
-          "name": "V-DAILY",
-          "url": "/products/v-daily"
-        }
-      ],
+      "relatedProducts": [],
       "totalCitations": 0,
-      "articleUrl": "/articles/nourish-plus-benefits",
-      "shopUrl": "https://vitalhealthglobal.com/products/nourish?refID=149983"
+      "articleUrl": null,
+      "shopUrl": "https://vitalhealthglobal.com/products/nourish?refID=149983",
+      "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
+      "formulationSource": "https://vitalhealthglobal.com/products/nourish"
     },
     "performance-plus": {
       "slug": "performance-plus",
       "name": "PERFORMANCE PLUS",
       "url": "/products/performance-plus",
-      "ingredients": "Creatine monohydrate; essential amino acids (EAAs); myo-inositol; magnesium (glycinate, L-threonate and citrate); potassium; sodium; cherry",
-      "category": "",
-      "lastUpdated": "2026-06-11",
-      "tldr": "PERFORMANCE PLUS is a Vital Health Global product. Its verified ingredients include creatine monohydrate; essential amino acids (EAAs); myo-inositol; magnesium (glycinate, L-threonate and citrate); potassium; sodium; cherry. A full evidence review of this product is in progress; ingredient-specific benefit claims and citations have been removed pending verification and will be republished once confirmed.",
-      "research": "Full evidence review in progress.\n\nWe are re-verifying this product's ingredient list and the supporting research against the manufacturer's current label and primary sources. Verified, citation-backed information will be republished here once that review is complete.",
+      "ingredients": "Magnesium glycinate; magnesium L-threonate; magnesium citrate; potassium citrate; sodium chloride; L-leucine; L-phenylalanine; L-lysine; L-threonine; L-valine; L-isoleucine; L-histidine; L-methionine; creatine monohydrate; myo-inositol; cherry pulp; guar gum; stevia",
+      "category": "Product formulation",
+      "lastUpdated": "2026-10-02",
+      "tldr": "Current manufacturer formulation checked October 2, 2026. Finished-product efficacy evidence remains under review.",
+      "research": "Evidence review in progress. Ingredient-level evidence will not be treated as finished-product evidence unless formulation, dose, population, duration, outcome, and study context are sufficiently relevant.",
       "mechanism": "Under review.",
       "evidenceGrade": "Under Review",
-      "evidenceGradeText": "Evidence review in progress. Grades will be re-issued only with verified citations.",
+      "evidenceGradeText": "No finalized finished-product evidence grade is being asserted.",
       "faqs": [],
       "citations": [],
-      "relatedProducts": [
-        {
-          "name": "V-NITRO",
-          "url": "/products/v-nitro"
-        },
-        {
-          "name": "VITALPRO",
-          "url": "/products/vitalpro"
-        },
-        {
-          "name": "V-ASCULAX",
-          "url": "/products/v-asculax"
-        }
-      ],
+      "relatedProducts": [],
       "totalCitations": 0,
-      "articleUrl": "/articles/performance-plus-benefits",
-      "shopUrl": "https://vitalhealthglobal.com/products/performance?refID=149983"
+      "articleUrl": null,
+      "shopUrl": "https://vitalhealthglobal.com/products/performance?refID=149983",
+      "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
+      "formulationSource": "https://vitalhealthglobal.com/products/performance"
     },
     "s-balance": {
       "slug": "s-balance",
       "name": "S-BALANCE",
       "url": "/products/s-balance",
-      "ingredients": "Cactus pad; chaya; uva ursi; garlic; cranberry; berberine; milk thistle",
-      "category": "stress/adaptogen",
-      "lastUpdated": "2026-06-11",
-      "tldr": "Contains berberine; consult a healthcare professional if pregnant, nursing, or taking medication.\n\nS-BALANCE is a Vital Health Global product. Its verified ingredients include cactus pad; chaya; uva ursi; garlic; cranberry; berberine; milk thistle. A full evidence review of this product is in progress; ingredient-specific benefit claims and citations have been removed pending verification and will be republished once confirmed.",
-      "research": "Full evidence review in progress.\n\nWe are re-verifying this product's ingredient list and the supporting research against the manufacturer's current label and primary sources. Verified, citation-backed information will be republished here once that review is complete.",
+      "ingredients": "Berberine (Berberis vulgaris); cranberry; fenugreek; alpha-lipoic acid (ALA); cinnamon bark extract; gelatin capsule; silica",
+      "category": "Product formulation",
+      "lastUpdated": "2026-10-02",
+      "tldr": "Current manufacturer formulation checked October 2, 2026. Finished-product efficacy evidence remains under review.",
+      "research": "Evidence review in progress. Ingredient-level evidence will not be treated as finished-product evidence unless formulation, dose, population, duration, outcome, and study context are sufficiently relevant.",
       "mechanism": "Under review.",
       "evidenceGrade": "Under Review",
-      "evidenceGradeText": "Evidence review in progress. Grades will be re-issued only with verified citations.",
+      "evidenceGradeText": "No finalized finished-product evidence grade is being asserted.",
       "faqs": [],
       "citations": [],
-      "relatedProducts": [
-        {
-          "name": "V-ITALAY",
-          "url": "/products/v-italay"
-        },
-        {
-          "name": "V-CONTROL",
-          "url": "/products/v-control"
-        },
-        {
-          "name": "NOURISH PLUS",
-          "url": "/products/nourish-plus"
-        }
-      ],
+      "relatedProducts": [],
       "totalCitations": 0,
-      "articleUrl": "/articles/s-balance-benefits",
-      "shopUrl": "https://vitalhealthglobal.com/products/s-balance?refID=149983"
+      "articleUrl": null,
+      "shopUrl": "https://vitalhealthglobal.com/products/s-balance?refID=149983",
+      "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
+      "formulationSource": "https://vitalhealthglobal.com/products/s-balance"
     },
     "smartbiotics-kids": {
       "slug": "smartbiotics-kids",
       "name": "SMARTBIOTICS KIDS",
       "url": "/products/smartbiotics-kids",
-      "ingredients": "10-strain probiotic blend (Lactobacillus rhamnosus GG, Bifidobacterium lactis Bl-04, L. gasseri, L. reuteri, L. casei, L. acidophilus, B. breve, B. longum, L. paracasei, B. infantis); prebiotics (inulin, galactooligosaccharides); digestive enzymes (amylase, lipase, protease); Lion's Mane; magnesium L-threonate; choline; real mango; stevia",
-      "category": "kids gut/immune",
-      "lastUpdated": "2026-06-11",
-      "tldr": "Consult your pediatrician before giving any supplement to a child.\n\nA mango-flavored powder combining a 10-strain probiotic blend with prebiotics, digestive enzymes, and a gut-brain trio - Lion's Mane, magnesium L-threonate, and choline.",
-      "research": "SMARTBIOTICS Kids combines a ten-strain probiotic blend (including Lactobacillus rhamnosus GG and Bifidobacterium infantis) with prebiotics (inulin and galactooligosaccharides), digestive enzymes (amylase, lipase, protease), Lion's Mane, magnesium L-threonate, and choline, in a sugar-free, real-mango powder.\n\nIt is intended to support balanced gut flora, digestion, and nutrient absorption; to support memory, learning, and calm focus; and to support immune health via the gut.\n\nThe total probiotic CFU count is pending current-label verification and is not stated here. Supporting research (for example LGG in children and prebiotic synbiotics) is being reviewed and citation-checked; verified references will be added once confirmed.",
+      "ingredients": "Mango pulp; inulin; stevia; magnesium L-threonate; choline L-bitartrate; Lactobacillus rhamnosus GG; Bifidobacterium lactis Bl-04; L. gasseri; L. reuteri; L. casei; L. acidophilus; B. breve; B. longum; L. paracasei; B. infantis; Lion's Mane; amylase; lipase; protease; galactooligosaccharides",
+      "category": "Product formulation",
+      "lastUpdated": "2026-10-02",
+      "tldr": "Current manufacturer formulation checked October 2, 2026. Finished-product efficacy evidence remains under review.",
+      "research": "Evidence review in progress. Ingredient-level evidence will not be treated as finished-product evidence unless formulation, dose, population, duration, outcome, and study context are sufficiently relevant.",
       "mechanism": "Under review.",
       "evidenceGrade": "Under Review",
-      "evidenceGradeText": "Evidence review in progress. Grades will be re-issued only with verified citations.",
+      "evidenceGradeText": "No finalized finished-product evidence grade is being asserted.",
       "faqs": [],
       "citations": [],
-      "relatedProducts": [
-        {
-          "name": "D-FENZ KIDS",
-          "url": "/products/d-fenz-kids"
-        },
-        {
-          "name": "GENIUS SHAKE KIDS",
-          "url": "/products/genius-shake-kids"
-        },
-        {
-          "name": "V-FORTYFLORA",
-          "url": "/products/v-fortyflora"
-        }
-      ],
+      "relatedProducts": [],
       "totalCitations": 0,
-      "articleUrl": "/articles/smartbiotics-kids-benefits",
-      "shopUrl": "https://vitalhealthglobal.com/products/smartbiotics?refID=149983"
+      "articleUrl": null,
+      "shopUrl": "https://vitalhealthglobal.com/products/smartbiotics?refID=149983",
+      "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
+      "formulationSource": "https://vitalhealthglobal.com/products/smartbiotics"
     },
     "v-asculax": {
       "slug": "v-asculax",
       "name": "V-ASCULAX",
       "url": "/products/v-asculax",
-      "ingredients": "Artichoke extract; rosemary; MSM; horsetail; rue; witch hazel",
-      "category": "cardiovascular",
-      "lastUpdated": "2026-06-11",
-      "tldr": "Contains rue; not for use during pregnancy.\n\nV-ASCULAX is a Vital Health Global product. Its verified ingredients include artichoke extract; rosemary; MSM; horsetail; rue; witch hazel. A full evidence review of this product is in progress; ingredient-specific benefit claims and citations have been removed pending verification and will be republished once confirmed.",
-      "research": "Full evidence review in progress.\n\nWe are re-verifying this product's ingredient list and the supporting research against the manufacturer's current label and primary sources. Verified, citation-backed information will be republished here once that review is complete.",
+      "ingredients": "Artichoke; rosemary; MSM (methylsulfonylmethane); horsetail; rue; witch hazel",
+      "category": "Product formulation",
+      "lastUpdated": "2026-10-02",
+      "tldr": "Current manufacturer formulation checked October 2, 2026. Finished-product efficacy evidence remains under review.",
+      "research": "Evidence review in progress. Ingredient-level evidence will not be treated as finished-product evidence unless formulation, dose, population, duration, outcome, and study context are sufficiently relevant.",
       "mechanism": "Under review.",
       "evidenceGrade": "Under Review",
-      "evidenceGradeText": "Evidence review in progress. Grades will be re-issued only with verified citations.",
+      "evidenceGradeText": "No finalized finished-product evidence grade is being asserted.",
       "faqs": [],
       "citations": [],
-      "relatedProducts": [
-        {
-          "name": "V-OMEGA3",
-          "url": "/products/v-omega3"
-        },
-        {
-          "name": "V-CONTROL",
-          "url": "/products/v-control"
-        },
-        {
-          "name": "PERFORMANCE PLUS",
-          "url": "/products/performance-plus"
-        }
-      ],
+      "relatedProducts": [],
       "totalCitations": 0,
-      "articleUrl": "/articles/v-asculax-benefits",
-      "shopUrl": "https://vitalhealthglobal.com/products/v-asculax?refID=149983"
+      "articleUrl": null,
+      "shopUrl": "https://vitalhealthglobal.com/products/v-asculax?refID=149983",
+      "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
+      "formulationSource": "https://vitalhealthglobal.com/products/v-asculax"
     },
     "v-control": {
       "slug": "v-control",
       "name": "V-CONTROL",
       "url": "/products/v-control",
-      "ingredients": "Spirulina; acerola; lemon balm; Mexican hawthorn (tejocote); cactus pad",
-      "category": "blood sugar/metabolic",
-      "lastUpdated": "2026-06-11",
-      "tldr": "V-CONTROL is a Vital Health Global product. Its verified ingredients include spirulina; acerola; lemon balm; Mexican hawthorn (tejocote); cactus pad. A full evidence review of this product is in progress; ingredient-specific benefit claims and citations have been removed pending verification and will be republished once confirmed.",
-      "research": "Full evidence review in progress.\n\nWe are re-verifying this product's ingredient list and the supporting research against the manufacturer's current label and primary sources. Verified, citation-backed information will be republished here once that review is complete.",
+      "ingredients": "Lemon balm fruit extract; spirulina algae extract; acerola fruit powder; nopal leaf powder; silica",
+      "category": "Product formulation",
+      "lastUpdated": "2026-10-02",
+      "tldr": "Current manufacturer formulation checked October 2, 2026. Finished-product efficacy evidence remains under review.",
+      "research": "Evidence review in progress. Ingredient-level evidence will not be treated as finished-product evidence unless formulation, dose, population, duration, outcome, and study context are sufficiently relevant.",
       "mechanism": "Under review.",
       "evidenceGrade": "Under Review",
-      "evidenceGradeText": "Evidence review in progress. Grades will be re-issued only with verified citations.",
+      "evidenceGradeText": "No finalized finished-product evidence grade is being asserted.",
       "faqs": [],
       "citations": [],
-      "relatedProducts": [
-        {
-          "name": "V-ASCULAX",
-          "url": "/products/v-asculax"
-        },
-        {
-          "name": "S-BALANCE",
-          "url": "/products/s-balance"
-        },
-        {
-          "name": "V-ORGANEX",
-          "url": "/products/v-organex"
-        }
-      ],
+      "relatedProducts": [],
       "totalCitations": 0,
-      "articleUrl": "/articles/v-control-benefits",
-      "shopUrl": "https://vitalhealthglobal.com/products/v-control?refID=149983"
+      "articleUrl": null,
+      "shopUrl": "https://vitalhealthglobal.com/products/v-control?refID=149983",
+      "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
+      "formulationSource": "https://vitalhealthglobal.com/products/v-control"
     },
     "v-curcumax": {
       "slug": "v-curcumax",
       "name": "V-CURCUMAX",
       "url": "/products/v-curcumax",
-      "ingredients": "Turmeric; MSM; vitamin C; selenium",
-      "category": "anti-inflammatory",
-      "lastUpdated": "2026-06-11",
-      "tldr": "V-CURCUMAX is a Vital Health Global product. Its verified ingredients include turmeric; MSM; vitamin C; selenium. A full evidence review of this product is in progress; ingredient-specific benefit claims and citations have been removed pending verification and will be republished once confirmed.",
-      "research": "Full evidence review in progress.\n\nWe are re-verifying this product's ingredient list and the supporting research against the manufacturer's current label and primary sources. Verified, citation-backed information will be republished here once that review is complete.",
+      "ingredients": "Turmeric; MSM (methylsulfonylmethane); chondroitin; vitamin C; selenium",
+      "category": "Product formulation",
+      "lastUpdated": "2026-10-02",
+      "tldr": "Current manufacturer formulation checked October 2, 2026. Finished-product efficacy evidence remains under review.",
+      "research": "Evidence review in progress. Ingredient-level evidence will not be treated as finished-product evidence unless formulation, dose, population, duration, outcome, and study context are sufficiently relevant.",
       "mechanism": "Under review.",
       "evidenceGrade": "Under Review",
-      "evidenceGradeText": "Evidence review in progress. Grades will be re-issued only with verified citations.",
+      "evidenceGradeText": "No finalized finished-product evidence grade is being asserted.",
       "faqs": [],
       "citations": [],
-      "relatedProducts": [
-        {
-          "name": "V-ITADOL",
-          "url": "/products/v-itadol"
-        },
-        {
-          "name": "V-ORGANEX",
-          "url": "/products/v-organex"
-        },
-        {
-          "name": "S-BALANCE",
-          "url": "/products/s-balance"
-        }
-      ],
+      "relatedProducts": [],
       "totalCitations": 0,
-      "articleUrl": "/articles/v-curcumax-benefits",
-      "shopUrl": "https://vitalhealthglobal.com/products/v-curcumax?refID=149983"
+      "articleUrl": null,
+      "shopUrl": "https://vitalhealthglobal.com/products/v-curcumax?refID=149983",
+      "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
+      "formulationSource": "https://vitalhealthglobal.com/products/v-curcumax"
     },
     "v-daily": {
       "slug": "v-daily",
       "name": "V-DAILY",
       "url": "/products/v-daily",
-      "ingredients": "Vitamins A, C, D, E and K; B-complex; calcium, iron, magnesium, zinc, iodine, copper, chromium and potassium; fruits/greens/mushrooms blend; amino-acid complex; inositol; MSM; prebiotic and probiotic blend; coenzyme Q10; boron",
-      "category": "multivitamin",
-      "lastUpdated": "2026-06-11",
-      "tldr": "V-DAILY is a Vital Health Global product. Its verified ingredients include vitamins A, C, D, E and K; B-complex; calcium, iron, magnesium, zinc, iodine, copper, chromium and potassium; fruits/greens/mushrooms blend; amino-acid complex; inositol; MSM; prebiotic and probiotic blend; coenzyme Q10; boron. A full evidence review of this product is in progress; ingredient-specific benefit claims and citations have been removed pending verification and will be republished once confirmed.",
-      "research": "Full evidence review in progress.\n\nWe are re-verifying this product's ingredient list and the supporting research against the manufacturer's current label and primary sources. Verified, citation-backed information will be republished here once that review is complete.",
+      "ingredients": "Vitamins A, C, D3, E and K; thiamin; riboflavin; niacin; vitamin B6; folate (L-5-methyltetrahydrofolate); vitamin B12 (methylcobalamin); biotin; pantothenic acid; calcium; iron; magnesium; zinc; iodine; copper; chromium; potassium; fruits/greens/mushrooms blend (green apple, cherry, blueberry, broccoli, carrot, acerola, beet, spirulina, cauliflower sprout, chlorella, cordyceps, reishi, nettle, parsley, shiitake, pineapple, grape, tomato); amino acid blend; trace minerals; inositol; MSM; FOS; Lactobacillus acidophilus; Bacillus coagulans; amla bioflavonoids; beet root extract; coenzyme Q10; boron; inulin; lime flavoring; guar gum; citric acid; steviol glycosides; silicon dioxide",
+      "category": "Product formulation",
+      "lastUpdated": "2026-10-02",
+      "tldr": "Current manufacturer formulation checked October 2, 2026. Finished-product efficacy evidence remains under review.",
+      "research": "Evidence review in progress. Ingredient-level evidence will not be treated as finished-product evidence unless formulation, dose, population, duration, outcome, and study context are sufficiently relevant.",
       "mechanism": "Under review.",
       "evidenceGrade": "Under Review",
-      "evidenceGradeText": "Evidence review in progress. Grades will be re-issued only with verified citations.",
+      "evidenceGradeText": "No finalized finished-product evidence grade is being asserted.",
       "faqs": [],
       "citations": [],
-      "relatedProducts": [
-        {
-          "name": "V-ITALBOOST",
-          "url": "/products/v-italboost"
-        },
-        {
-          "name": "D-FENZ KIDS",
-          "url": "/products/d-fenz-kids"
-        },
-        {
-          "name": "V-ITAREN",
-          "url": "/products/v-itaren"
-        }
-      ],
+      "relatedProducts": [],
       "totalCitations": 0,
-      "articleUrl": "/articles/v-daily-benefits",
-      "shopUrl": "https://vitalhealthglobal.com/products/v-daily?refID=149983"
+      "articleUrl": null,
+      "shopUrl": "https://vitalhealthglobal.com/products/v-daily?refID=149983",
+      "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
+      "formulationSource": "https://vitalhealthglobal.com/products/v-daily"
     },
     "v-fortyflora": {
       "slug": "v-fortyflora",
       "name": "V-FORTYFLORA",
       "url": "/products/v-fortyflora",
-      "ingredients": "Calcium; magnesium; activated charcoal (from coconut shells); L-lysine",
-      "category": "gut health",
-      "lastUpdated": "2026-06-11",
-      "tldr": "V-FORTYFLORA is a Vital Health Global product. Its verified ingredients include calcium; magnesium; activated charcoal (from coconut shells); L-lysine. A full evidence review of this product is in progress; ingredient-specific benefit claims and citations have been removed pending verification and will be republished once confirmed.",
-      "research": "Full evidence review in progress.\n\nWe are re-verifying this product's ingredient list and the supporting research against the manufacturer's current label and primary sources. Verified, citation-backed information will be republished here once that review is complete.",
+      "ingredients": "Magnesium; lysine; calcium; activated charcoal",
+      "category": "Product formulation",
+      "lastUpdated": "2026-10-02",
+      "tldr": "Current manufacturer formulation checked October 2, 2026. Finished-product efficacy evidence remains under review.",
+      "research": "Evidence review in progress. Ingredient-level evidence will not be treated as finished-product evidence unless formulation, dose, population, duration, outcome, and study context are sufficiently relevant.",
       "mechanism": "Under review.",
       "evidenceGrade": "Under Review",
-      "evidenceGradeText": "Evidence review in progress. Grades will be re-issued only with verified citations.",
+      "evidenceGradeText": "No finalized finished-product evidence grade is being asserted.",
       "faqs": [],
       "citations": [],
-      "relatedProducts": [
-        {
-          "name": "V-ORGANEX",
-          "url": "/products/v-organex"
-        },
-        {
-          "name": "V-TEDETOX",
-          "url": "/products/v-tedetox"
-        },
-        {
-          "name": "SMARTBIOTICS KIDS",
-          "url": "/products/smartbiotics-kids"
-        }
-      ],
+      "relatedProducts": [],
       "totalCitations": 0,
-      "articleUrl": "/articles/v-fortyflora-benefits",
-      "shopUrl": "https://vitalhealthglobal.com/products/v-fortyflora?refID=149983"
+      "articleUrl": null,
+      "shopUrl": "https://vitalhealthglobal.com/products/v-fortyflora?refID=149983",
+      "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
+      "formulationSource": "https://vitalhealthglobal.com/products/v-fortyflora"
     },
     "v-glutation": {
       "slug": "v-glutation",
       "name": "V-GLUTATION",
       "url": "/products/v-glutation",
-      "ingredients": "Vitamin C; L-glutathione (reduced form); turmeric; rose petal (Rosa gallica)",
-      "category": "antioxidant",
-      "lastUpdated": "2026-06-11",
-      "tldr": "V-GLUTATION is a Vital Health Global product. Its verified ingredients include vitamin C; L-glutathione (reduced form); turmeric; rose petal (Rosa gallica). A full evidence review of this product is in progress; ingredient-specific benefit claims and citations have been removed pending verification and will be republished once confirmed.",
-      "research": "Full evidence review in progress.\n\nWe are re-verifying this product's ingredient list and the supporting research against the manufacturer's current label and primary sources. Verified, citation-backed information will be republished here once that review is complete.",
+      "ingredients": "Vitamin C; glutathione; turmeric; Rose of Castile",
+      "category": "Product formulation",
+      "lastUpdated": "2026-10-02",
+      "tldr": "Current manufacturer formulation checked October 2, 2026. Finished-product efficacy evidence remains under review.",
+      "research": "Evidence review in progress. Ingredient-level evidence will not be treated as finished-product evidence unless formulation, dose, population, duration, outcome, and study context are sufficiently relevant.",
       "mechanism": "Under review.",
       "evidenceGrade": "Under Review",
-      "evidenceGradeText": "Evidence review in progress. Grades will be re-issued only with verified citations.",
+      "evidenceGradeText": "No finalized finished-product evidence grade is being asserted.",
       "faqs": [],
       "citations": [],
-      "relatedProducts": [
-        {
-          "name": "V-ITALBOOST",
-          "url": "/products/v-italboost"
-        },
-        {
-          "name": "V-ORGANEX",
-          "url": "/products/v-organex"
-        },
-        {
-          "name": "V-DAILY",
-          "url": "/products/v-daily"
-        }
-      ],
+      "relatedProducts": [],
       "totalCitations": 0,
-      "articleUrl": "/articles/v-glutation-benefits",
-      "shopUrl": "https://vitalhealthglobal.com/products/v-glutation?refID=149983"
+      "articleUrl": null,
+      "shopUrl": "https://vitalhealthglobal.com/products/v-glutation?refID=149983",
+      "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
+      "formulationSource": "https://vitalhealthglobal.com/products/v-glutation"
     },
     "v-itadol": {
       "slug": "v-itadol",
       "name": "V-ITADOL",
       "url": "/products/v-itadol",
-      "ingredients": "Glucosamine (D-glucosamine HCl); MSM; sarsaparilla",
-      "category": "pain/inflammation",
-      "lastUpdated": "2026-06-11",
-      "tldr": "Glucosamine is derived from fermented corn.\n\nV-ITADOL is a Vital Health Global product. Its verified ingredients include glucosamine (D-glucosamine HCl); MSM; sarsaparilla. A full evidence review of this product is in progress; ingredient-specific benefit claims and citations have been removed pending verification and will be republished once confirmed.",
-      "research": "Full evidence review in progress.\n\nWe are re-verifying this product's ingredient list and the supporting research against the manufacturer's current label and primary sources. Verified, citation-backed information will be republished here once that review is complete.",
+      "ingredients": "Glucosamine; sarsaparilla; MSM (methylsulfonylmethane)",
+      "category": "Product formulation",
+      "lastUpdated": "2026-10-02",
+      "tldr": "Current manufacturer formulation checked October 2, 2026. Finished-product efficacy evidence remains under review.",
+      "research": "Evidence review in progress. Ingredient-level evidence will not be treated as finished-product evidence unless formulation, dose, population, duration, outcome, and study context are sufficiently relevant.",
       "mechanism": "Under review.",
       "evidenceGrade": "Under Review",
-      "evidenceGradeText": "Evidence review in progress. Grades will be re-issued only with verified citations.",
+      "evidenceGradeText": "No finalized finished-product evidence grade is being asserted.",
       "faqs": [],
       "citations": [],
-      "relatedProducts": [
-        {
-          "name": "V-CURCUMAX",
-          "url": "/products/v-curcumax"
-        },
-        {
-          "name": "S-BALANCE",
-          "url": "/products/s-balance"
-        }
-      ],
+      "relatedProducts": [],
       "totalCitations": 0,
-      "articleUrl": "/articles/v-itadol-benefits",
-      "shopUrl": "https://vitalhealthglobal.com/products/v-itadol?refID=149983"
+      "articleUrl": null,
+      "shopUrl": "https://vitalhealthglobal.com/products/v-itadol?refID=149983",
+      "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
+      "formulationSource": "https://vitalhealthglobal.com/products/v-itadol"
     },
     "v-italay": {
       "slug": "v-italay",
       "name": "V-ITALAY",
       "url": "/products/v-italay",
-      "ingredients": "Green tea; passion flower; valerian; peppermint; morning glory (Tumba Vaquero)",
-      "category": "sleep",
-      "lastUpdated": "2026-06-11",
-      "tldr": "Contains green tea (caffeine); valerian may cause drowsiness.\n\nV-ITALAY is a Vital Health Global product. Its verified ingredients include green tea; passion flower; valerian; peppermint; morning glory (Tumba Vaquero). A full evidence review of this product is in progress; ingredient-specific benefit claims and citations have been removed pending verification and will be republished once confirmed.",
-      "research": "Full evidence review in progress.\n\nWe are re-verifying this product's ingredient list and the supporting research against the manufacturer's current label and primary sources. Verified, citation-backed information will be republished here once that review is complete.",
+      "ingredients": "Green tea; passionflower; valerian; mint; Tumba Vaquero",
+      "category": "Product formulation",
+      "lastUpdated": "2026-10-02",
+      "tldr": "Current manufacturer formulation checked October 2, 2026. Finished-product efficacy evidence remains under review.",
+      "research": "Evidence review in progress. Ingredient-level evidence will not be treated as finished-product evidence unless formulation, dose, population, duration, outcome, and study context are sufficiently relevant.",
       "mechanism": "Under review.",
       "evidenceGrade": "Under Review",
-      "evidenceGradeText": "Evidence review in progress. Grades will be re-issued only with verified citations.",
+      "evidenceGradeText": "No finalized finished-product evidence grade is being asserted.",
       "faqs": [],
       "citations": [],
-      "relatedProducts": [
-        {
-          "name": "S-BALANCE",
-          "url": "/products/s-balance"
-        },
-        {
-          "name": "V NRGY",
-          "url": "/products/v-nrgy"
-        },
-        {
-          "name": "V-NEUROKAFE",
-          "url": "/products/v-neurokafe"
-        }
-      ],
+      "relatedProducts": [],
       "totalCitations": 0,
-      "articleUrl": "/articles/v-italay-benefits",
-      "shopUrl": "https://vitalhealthglobal.com/products/v-italay?refID=149983"
+      "articleUrl": null,
+      "shopUrl": "https://vitalhealthglobal.com/products/v-italay?refID=149983",
+      "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
+      "formulationSource": "https://vitalhealthglobal.com/products/v-italay"
     },
     "v-italboost": {
       "slug": "v-italboost",
       "name": "V-ITALBOOST",
       "url": "/products/v-italboost",
-      "ingredients": "Vitamin C; vitamin D; garlic; echinacea; ginger; turmeric; fenugreek; cinnamon; cayenne",
-      "category": "immune",
-      "lastUpdated": "2026-06-11",
-      "tldr": "V-ITALBOOST is a Vital Health Global product. Its verified ingredients include vitamin C; vitamin D; garlic; echinacea; ginger; turmeric; fenugreek; cinnamon; cayenne. A full evidence review of this product is in progress; ingredient-specific benefit claims and citations have been removed pending verification and will be republished once confirmed.",
-      "research": "Full evidence review in progress.\n\nWe are re-verifying this product's ingredient list and the supporting research against the manufacturer's current label and primary sources. Verified, citation-backed information will be republished here once that review is complete.",
+      "ingredients": "Garlic extract; ginger extract; vitamins C and D; echinacea; fenugreek extract; cinnamon; turmeric; cayenne pepper extract",
+      "category": "Product formulation",
+      "lastUpdated": "2026-10-02",
+      "tldr": "Current manufacturer formulation checked October 2, 2026. Finished-product efficacy evidence remains under review.",
+      "research": "Evidence review in progress. Ingredient-level evidence will not be treated as finished-product evidence unless formulation, dose, population, duration, outcome, and study context are sufficiently relevant.",
       "mechanism": "Under review.",
       "evidenceGrade": "Under Review",
-      "evidenceGradeText": "Evidence review in progress. Grades will be re-issued only with verified citations.",
+      "evidenceGradeText": "No finalized finished-product evidence grade is being asserted.",
       "faqs": [],
       "citations": [],
-      "relatedProducts": [
-        {
-          "name": "D-FENZ KIDS",
-          "url": "/products/d-fenz-kids"
-        },
-        {
-          "name": "V-DAILY",
-          "url": "/products/v-daily"
-        },
-        {
-          "name": "V-ITAREN",
-          "url": "/products/v-itaren"
-        }
-      ],
+      "relatedProducts": [],
       "totalCitations": 0,
-      "articleUrl": "/articles/v-italboost-benefits",
-      "shopUrl": "https://vitalhealthglobal.com/products/vitalboost?refID=149983"
+      "articleUrl": null,
+      "shopUrl": "https://vitalhealthglobal.com/products/vitalboost?refID=149983",
+      "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
+      "formulationSource": "https://vitalhealthglobal.com/products/vitalboost"
     },
     "v-itaren": {
       "slug": "v-itaren",
       "name": "V-ITAREN",
       "url": "/products/v-itaren",
-      "ingredients": "Hibiscus; horsetail; toad grass (Eryngium); moringa; dandelion; uva ursi",
-      "category": "energy/blood",
-      "lastUpdated": "2026-06-11",
-      "tldr": "V-ITAREN is a Vital Health Global product. Its verified ingredients include hibiscus; horsetail; toad grass (Eryngium); moringa; dandelion; uva ursi. A full evidence review of this product is in progress; ingredient-specific benefit claims and citations have been removed pending verification and will be republished once confirmed.",
-      "research": "Full evidence review in progress.\n\nWe are re-verifying this product's ingredient list and the supporting research against the manufacturer's current label and primary sources. Verified, citation-backed information will be republished here once that review is complete.",
+      "ingredients": "Hibiscus (Jamaica grass); horsetail; dandelion root; toad grass (Eryngium heterophyllum); moringa leaf; uva ursi leaf; gelatin capsule; silica",
+      "category": "Product formulation",
+      "lastUpdated": "2026-10-02",
+      "tldr": "Current manufacturer formulation checked October 2, 2026. Finished-product efficacy evidence remains under review.",
+      "research": "Evidence review in progress. Ingredient-level evidence will not be treated as finished-product evidence unless formulation, dose, population, duration, outcome, and study context are sufficiently relevant.",
       "mechanism": "Under review.",
       "evidenceGrade": "Under Review",
-      "evidenceGradeText": "Evidence review in progress. Grades will be re-issued only with verified citations.",
+      "evidenceGradeText": "No finalized finished-product evidence grade is being asserted.",
       "faqs": [],
       "citations": [],
-      "relatedProducts": [
-        {
-          "name": "V-DAILY",
-          "url": "/products/v-daily"
-        },
-        {
-          "name": "V-ITALBOOST",
-          "url": "/products/v-italboost"
-        },
-        {
-          "name": "VITALPRO",
-          "url": "/products/vitalpro"
-        }
-      ],
+      "relatedProducts": [],
       "totalCitations": 0,
-      "articleUrl": "/articles/v-itaren-benefits",
-      "shopUrl": "https://vitalhealthglobal.com/products/v-itaren?refID=149983"
+      "articleUrl": null,
+      "shopUrl": "https://vitalhealthglobal.com/products/v-itaren?refID=149983",
+      "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
+      "formulationSource": "https://vitalhealthglobal.com/products/v-itaren"
     },
     "v-lovkafe": {
       "slug": "v-lovkafe",
       "name": "V-LOVKAFE",
       "url": "/products/v-lovkafe",
-      "ingredients": "Instant dark-roast coffee (Coffea arabica); Tongkat Ali; Tribulus terrestris; Panax ginseng; gelatinized maca; Himalayan shilajit",
-      "category": "cognitive/coffee",
-      "lastUpdated": "2026-06-11",
-      "tldr": "Contains caffeine.\n\nA bold dark roast built on classic vitality adaptogens - Tongkat Ali, Shilajit, Tribulus, Panax ginseng, and organic maca - for energy, stamina, and healthy balance.",
-      "research": "V-LOVKAFE combines instant dark-roast arabica coffee with Tribulus terrestris, Tongkat Ali (Eurycoma longifolia), Himalayan shilajit, Panax ginseng, and gelatinized organic maca.\n\nIt may support natural energy, stamina, and vitality; healthy hormonal balance already within the normal range; circulation and physical performance; and provide adaptogenic support for daily demands.\n\nResearch angles (Tongkat Ali and stress and vitality, shilajit composition, Panax ginseng and fatigue, and maca) are being reviewed and citation-checked. Verified references will be added once confirmed.",
+      "ingredients": "Instant dark-roast coffee (Coffea arabica); Tribulus terrestris fruit extract; Tongkat Ali root extract; Himalayan shilajit extract; Panax ginseng root extract",
+      "category": "Product formulation",
+      "lastUpdated": "2026-10-02",
+      "tldr": "Current manufacturer formulation checked October 2, 2026. Finished-product efficacy evidence remains under review.",
+      "research": "Evidence review in progress. Ingredient-level evidence will not be treated as finished-product evidence unless formulation, dose, population, duration, outcome, and study context are sufficiently relevant.",
       "mechanism": "Under review.",
       "evidenceGrade": "Under Review",
-      "evidenceGradeText": "Evidence review in progress. Grades will be re-issued only with verified citations.",
+      "evidenceGradeText": "No finalized finished-product evidence grade is being asserted.",
       "faqs": [],
       "citations": [],
-      "relatedProducts": [
-        {
-          "name": "V-NEUROKAFE",
-          "url": "/products/v-neurokafe"
-        },
-        {
-          "name": "V NRGY",
-          "url": "/products/v-nrgy"
-        },
-        {
-          "name": "V THERMOKAFE",
-          "url": "/products/v-thermokafe"
-        }
-      ],
+      "relatedProducts": [],
       "totalCitations": 0,
-      "articleUrl": "/articles/v-lovkafe-benefits",
-      "shopUrl": "https://vitalhealthglobal.com/products/v-lovekafe?refID=149983"
+      "articleUrl": null,
+      "shopUrl": "https://vitalhealthglobal.com/products/v-lovekafe?refID=149983",
+      "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
+      "formulationSource": "https://vitalhealthglobal.com/products/v-lovekafe"
     },
     "v-neurokafe": {
       "slug": "v-neurokafe",
       "name": "V-NEUROKAFE",
       "url": "/products/v-neurokafe",
-      "ingredients": "Instant dark-roast coffee (Coffea arabica); inulin; Bacillus coagulans (spore-forming probiotic); reishi (Ganoderma lucidum); Panax ginseng; fulvic acid; thiamin (B1); vitamin B6",
-      "category": "nootropic/coffee",
-      "lastUpdated": "2026-06-11",
-      "tldr": "Contains caffeine.\n\nA dark-roast instant coffee built around the gut-brain axis: a spore-forming probiotic and prebiotic fiber alongside adaptogenic mushroom, ginseng, and fulvic acid.",
-      "research": "V-NEUROKAFE combines instant dark-roast arabica coffee with inulin (a prebiotic fiber), Bacillus coagulans (a spore-forming probiotic able to survive hot liquids), reishi (Ganoderma lucidum), Panax ginseng, and fulvic acid.\n\nIt may support mental focus and clarity, digestive balance and gut-microbiome health, and steady energy, with adaptogenic support for daily demands.\n\nResearch angles (Bacillus coagulans and digestive outcomes, inulin as a prebiotic fiber, Panax ginseng and cognitive performance and fatigue, and reishi) are being reviewed and citation-checked. Verified references will be added once confirmed.",
+      "ingredients": "Instant dark-roast coffee (Coffea arabica); inulin; Bacillus coagulans; Ganoderma lucidum extract; Panax ginseng extract; fulvic acid",
+      "category": "Product formulation",
+      "lastUpdated": "2026-10-02",
+      "tldr": "Current manufacturer formulation checked October 2, 2026. Finished-product efficacy evidence remains under review.",
+      "research": "Evidence review in progress. Ingredient-level evidence will not be treated as finished-product evidence unless formulation, dose, population, duration, outcome, and study context are sufficiently relevant.",
       "mechanism": "Under review.",
       "evidenceGrade": "Under Review",
-      "evidenceGradeText": "Evidence review in progress. Grades will be re-issued only with verified citations.",
+      "evidenceGradeText": "No finalized finished-product evidence grade is being asserted.",
       "faqs": [],
       "citations": [],
-      "relatedProducts": [
-        {
-          "name": "V-LOVKAFE",
-          "url": "/products/v-lovkafe"
-        },
-        {
-          "name": "S-BALANCE",
-          "url": "/products/s-balance"
-        },
-        {
-          "name": "V NRGY",
-          "url": "/products/v-nrgy"
-        }
-      ],
+      "relatedProducts": [],
       "totalCitations": 0,
-      "articleUrl": "/articles/v-neurokafe-benefits",
-      "shopUrl": "https://vitalhealthglobal.com/products/v-neurokafe?refID=149983"
+      "articleUrl": null,
+      "shopUrl": "https://vitalhealthglobal.com/products/v-neurokafe?refID=149983",
+      "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
+      "formulationSource": "https://vitalhealthglobal.com/products/v-neurokafe"
     },
     "v-nitro": {
       "slug": "v-nitro",
       "name": "V-NITRO",
       "url": "/products/v-nitro",
-      "ingredients": "L-arginine; L-citrulline; beet; red spinach; moringa; noni; black pepper extract (piperine); niacin; vitamin C; thiamin; potassium",
-      "category": "pre-workout",
-      "lastUpdated": "2026-06-11",
-      "tldr": "V-NITRO is a Vital Health Global product. Its verified ingredients include l-arginine; L-citrulline; beet; red spinach; moringa; noni; black pepper extract (piperine); niacin; vitamin C; thiamin; potassium. A full evidence review of this product is in progress; ingredient-specific benefit claims and citations have been removed pending verification and will be republished once confirmed.",
-      "research": "Full evidence review in progress.\n\nWe are re-verifying this product's ingredient list and the supporting research against the manufacturer's current label and primary sources. Verified, citation-backed information will be republished here once that review is complete.",
+      "ingredients": "Water; L-arginine; L-citrulline; natural orange flavor; glycerin; niacinamide (vitamin B3); potassium; black pepper with 95% piperine; beetroot; noni; moringa; red spinach; citric acid; potassium sorbate; potassium benzoate; stevia",
+      "category": "Product formulation",
+      "lastUpdated": "2026-10-02",
+      "tldr": "Current manufacturer formulation checked October 2, 2026. Finished-product efficacy evidence remains under review.",
+      "research": "Evidence review in progress. Ingredient-level evidence will not be treated as finished-product evidence unless formulation, dose, population, duration, outcome, and study context are sufficiently relevant.",
       "mechanism": "Under review.",
       "evidenceGrade": "Under Review",
-      "evidenceGradeText": "Evidence review in progress. Grades will be re-issued only with verified citations.",
+      "evidenceGradeText": "No finalized finished-product evidence grade is being asserted.",
       "faqs": [],
       "citations": [],
-      "relatedProducts": [
-        {
-          "name": "PERFORMANCE PLUS",
-          "url": "/products/performance-plus"
-        },
-        {
-          "name": "VITALPRO",
-          "url": "/products/vitalpro"
-        },
-        {
-          "name": "V NRGY",
-          "url": "/products/v-nrgy"
-        }
-      ],
+      "relatedProducts": [],
       "totalCitations": 0,
-      "articleUrl": "/articles/v-nitro-benefits",
-      "shopUrl": "https://vitalhealthglobal.com/products/v-nitro?refID=149983"
+      "articleUrl": null,
+      "shopUrl": "https://vitalhealthglobal.com/products/v-nitro?refID=149983",
+      "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
+      "formulationSource": "https://vitalhealthglobal.com/products/v-nitro"
     },
     "v-nrgy": {
       "slug": "v-nrgy",
       "name": "V NRGY",
       "url": "/products/v-nrgy",
-      "ingredients": "Caffeine from green-coffee bean; L-theanine; L-carnitine; DMAE; quercetin; green tea extract; guarana; saffron; pine-bark extract; turmeric (standardized to curcuminoids); vitamin C; vitamins B1, B3, B6, B7 and B12; vitamin D3; magnesium; chromium; cayenne; orange",
-      "category": "",
-      "lastUpdated": "2026-06-11",
-      "tldr": "Contains caffeine from multiple sources.\n\nV NRGY is a Vital Health Global product. Its verified ingredients include caffeine from green-coffee bean; L-theanine; L-carnitine; DMAE; quercetin; green tea extract; guarana; saffron; pine-bark extract; turmeric (standardized to curcuminoids); vitamin C; vitamins B1, B3, B6, B7 and B12; vitamin D3; magnesium; chromium; cayenne; orange. A full evidence review of this product is in progress; ingredient-specific benefit claims and citations have been removed pending verification and will be republished once confirmed.",
-      "research": "Full evidence review in progress.\n\nWe are re-verifying this product's ingredient list and the supporting research against the manufacturer's current label and primary sources. Verified, citation-backed information will be republished here once that review is complete.",
+      "ingredients": "Orange powder; orange flavor; guar gum; citric acid; DMAE; natural caffeine from green coffee bean extract; vitamin C; silicon dioxide; L-carnitine tartrate; turmeric root extract (95% curcuminoids); vitamin D3; niacin; quercetin; L-theanine; green tea extract; guarana extract; green coffee bean extract; pine bark extract; saffron extract; stevia; magnesium citrate; chromium picolinate; cayenne pepper extract; vitamin B6; biotin; vitamin B12; thiamine",
+      "category": "Product formulation",
+      "lastUpdated": "2026-10-02",
+      "tldr": "Current manufacturer formulation checked October 2, 2026. Finished-product efficacy evidence remains under review.",
+      "research": "Evidence review in progress. Ingredient-level evidence will not be treated as finished-product evidence unless formulation, dose, population, duration, outcome, and study context are sufficiently relevant.",
       "mechanism": "Under review.",
       "evidenceGrade": "Under Review",
-      "evidenceGradeText": "Evidence review in progress. Grades will be re-issued only with verified citations.",
+      "evidenceGradeText": "No finalized finished-product evidence grade is being asserted.",
       "faqs": [],
       "citations": [],
-      "relatedProducts": [
-        {
-          "name": "V-ITALAY",
-          "url": "/products/v-italay"
-        },
-        {
-          "name": "V-LOVKAFE",
-          "url": "/products/v-lovkafe"
-        },
-        {
-          "name": "V-NITRO",
-          "url": "/products/v-nitro"
-        }
-      ],
+      "relatedProducts": [],
       "totalCitations": 0,
-      "articleUrl": "/articles/v-nrgy-benefits",
-      "shopUrl": "https://vitalhealthglobal.com/products/v-nrgy?refID=149983"
+      "articleUrl": null,
+      "shopUrl": "https://vitalhealthglobal.com/products/v-nrgy?refID=149983",
+      "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
+      "formulationSource": "https://vitalhealthglobal.com/products/v-nrgy"
     },
     "v-omega3": {
       "slug": "v-omega3",
       "name": "V-OMEGA3",
       "url": "/products/v-omega3",
-      "ingredients": "Omega-3 fatty acids (EPA and DHA); vitamins A, D3 and E; astaxanthin; fish gelatin",
-      "category": "cardiovascular/brain",
-      "lastUpdated": "2026-06-11",
-      "tldr": "Contains fish.\n\nV-OMEGA3 is a Vital Health Global product. Its verified ingredients include omega-3 fatty acids (EPA and DHA); vitamins A, D3 and E; astaxanthin; fish gelatin. A full evidence review of this product is in progress; ingredient-specific benefit claims and citations have been removed pending verification and will be republished once confirmed.",
-      "research": "Full evidence review in progress.\n\nWe are re-verifying this product's ingredient list and the supporting research against the manufacturer's current label and primary sources. Verified, citation-backed information will be republished here once that review is complete.",
+      "ingredients": "Astaxanthin; tocotrienols; vitamin A; vitamin D3; vitamin E; Wild Alaska salmon oil",
+      "category": "Product formulation",
+      "lastUpdated": "2026-10-02",
+      "tldr": "Current manufacturer formulation checked October 2, 2026. Finished-product efficacy evidence remains under review.",
+      "research": "Evidence review in progress. Ingredient-level evidence will not be treated as finished-product evidence unless formulation, dose, population, duration, outcome, and study context are sufficiently relevant.",
       "mechanism": "Under review.",
       "evidenceGrade": "Under Review",
-      "evidenceGradeText": "Evidence review in progress. Grades will be re-issued only with verified citations.",
+      "evidenceGradeText": "No finalized finished-product evidence grade is being asserted.",
       "faqs": [],
       "citations": [],
-      "relatedProducts": [
-        {
-          "name": "V-NEUROKAFE",
-          "url": "/products/v-neurokafe"
-        },
-        {
-          "name": "S-BALANCE",
-          "url": "/products/s-balance"
-        },
-        {
-          "name": "V-DAILY",
-          "url": "/products/v-daily"
-        }
-      ],
+      "relatedProducts": [],
       "totalCitations": 0,
-      "articleUrl": "/articles/v-omega3-benefits",
-      "shopUrl": "https://vitalhealthglobal.com/products/v-omega-3?refID=149983"
+      "articleUrl": null,
+      "shopUrl": "https://vitalhealthglobal.com/products/v-omega-3?refID=149983",
+      "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
+      "formulationSource": "https://vitalhealthglobal.com/products/v-omega-3"
     },
     "v-organex": {
       "slug": "v-organex",
       "name": "V-ORGANEX",
       "url": "/products/v-organex",
-      "ingredients": "Boldo; milk thistle; quassia (Quassia amara); toad grass (Eryngium); guarana; magnesium; chicory; artichoke",
-      "category": "liver/detox",
-      "lastUpdated": "2026-06-11",
-      "tldr": "Contains guarana (a source of caffeine).\n\nV-ORGANEX is a Vital Health Global product. Its verified ingredients include boldo; milk thistle; quassia (Quassia amara); toad grass (Eryngium); guarana; magnesium; chicory; artichoke. A full evidence review of this product is in progress; ingredient-specific benefit claims and citations have been removed pending verification and will be republished once confirmed.",
-      "research": "Full evidence review in progress.\n\nWe are re-verifying this product's ingredient list and the supporting research against the manufacturer's current label and primary sources. Verified, citation-backed information will be republished here once that review is complete.",
+      "ingredients": "Boldo; milk thistle; Quassia/Casia amara; Sapo herb; guarana; magnesium; chicory; artichoke",
+      "category": "Product formulation",
+      "lastUpdated": "2026-10-02",
+      "tldr": "Current manufacturer formulation checked October 2, 2026. Finished-product efficacy evidence remains under review.",
+      "research": "Evidence review in progress. Ingredient-level evidence will not be treated as finished-product evidence unless formulation, dose, population, duration, outcome, and study context are sufficiently relevant.",
       "mechanism": "Under review.",
       "evidenceGrade": "Under Review",
-      "evidenceGradeText": "Evidence review in progress. Grades will be re-issued only with verified citations.",
+      "evidenceGradeText": "No finalized finished-product evidence grade is being asserted.",
       "faqs": [],
       "citations": [],
-      "relatedProducts": [
-        {
-          "name": "V-TEDETOX",
-          "url": "/products/v-tedetox"
-        },
-        {
-          "name": "V-GLUTATION",
-          "url": "/products/v-glutation"
-        },
-        {
-          "name": "V-CONTROL",
-          "url": "/products/v-control"
-        }
-      ],
+      "relatedProducts": [],
       "totalCitations": 0,
-      "articleUrl": "/articles/v-organex-benefits",
-      "shopUrl": "https://vitalhealthglobal.com/products/v-organex?refID=149983"
+      "articleUrl": null,
+      "shopUrl": "https://vitalhealthglobal.com/products/v-organex?refID=149983",
+      "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
+      "formulationSource": "https://vitalhealthglobal.com/products/v-organex"
     },
     "v-tedetox": {
       "slug": "v-tedetox",
       "name": "V-TEDETOX",
       "url": "/products/v-tedetox",
-      "ingredients": "Senna leaf (leaf and extract); milk thistle; cactus pad; persimmon leaf; blessed thistle; chamomile; mallow; marshmallow; ginger",
-      "category": "detox/digestive",
-      "lastUpdated": "2026-06-11",
-      "tldr": "Contains senna, a stimulant laxative; intended for short-term use only and not for use during pregnancy.\n\nV-TEDETOX is a Vital Health Global product. Its verified ingredients include senna leaf (leaf and extract); milk thistle; cactus pad; persimmon leaf; blessed thistle; chamomile; mallow; marshmallow; ginger. A full evidence review of this product is in progress; ingredient-specific benefit claims and citations have been removed pending verification and will be republished once confirmed.",
-      "research": "Full evidence review in progress.\n\nWe are re-verifying this product's ingredient list and the supporting research against the manufacturer's current label and primary sources. Verified, citation-backed information will be republished here once that review is complete.",
+      "ingredients": "Senna leaf; milk thistle leaf; cactus pad; persimmon leaf; blessed thistle leaf; chamomile flower; mallow leaf; marshmallow leaf; ginger root powder; senna leaf extract",
+      "category": "Product formulation",
+      "lastUpdated": "2026-10-02",
+      "tldr": "Current manufacturer formulation checked October 2, 2026. Finished-product efficacy evidence remains under review.",
+      "research": "Evidence review in progress. Ingredient-level evidence will not be treated as finished-product evidence unless formulation, dose, population, duration, outcome, and study context are sufficiently relevant.",
       "mechanism": "Under review.",
       "evidenceGrade": "Under Review",
-      "evidenceGradeText": "Evidence review in progress. Grades will be re-issued only with verified citations.",
+      "evidenceGradeText": "No finalized finished-product evidence grade is being asserted.",
       "faqs": [],
       "citations": [],
-      "relatedProducts": [
-        {
-          "name": "V-ORGANEX",
-          "url": "/products/v-organex"
-        },
-        {
-          "name": "V-FORTYFLORA",
-          "url": "/products/v-fortyflora"
-        },
-        {
-          "name": "V-GLUTATION",
-          "url": "/products/v-glutation"
-        }
-      ],
+      "relatedProducts": [],
       "totalCitations": 0,
-      "articleUrl": "/articles/v-tedetox-benefits",
-      "shopUrl": "https://vitalhealthglobal.com/products/v-tedetox?refID=149983"
+      "articleUrl": null,
+      "shopUrl": "https://vitalhealthglobal.com/products/v-tedetox?refID=149983",
+      "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
+      "formulationSource": "https://vitalhealthglobal.com/products/v-tedetox"
     },
     "v-thermokafe": {
       "slug": "v-thermokafe",
       "name": "V THERMOKAFE",
       "url": "/products/v-thermokafe",
-      "ingredients": "Instant dark-roast coffee (Coffea arabica); guarana; white willow; green tea; Fucus seaweed; ginger; Panax ginseng; yerba mate; cayenne",
-      "category": "",
-      "lastUpdated": "2026-06-11",
-      "tldr": "Contains white willow (a salicylate; avoid if sensitive to aspirin or taking blood thinners), Fucus seaweed (a source of iodine; use caution with thyroid conditions), and caffeine from multiple sources.\n\nV THERMOKAFE is a Vital Health Global product. Its verified ingredients include instant dark-roast coffee (Coffea arabica); guarana; white willow; green tea; Fucus seaweed; ginger; Panax ginseng; yerba mate; cayenne. A full evidence review of this product is in progress; ingredient-specific benefit claims and citations have been removed pending verification and will be republished once confirmed.",
-      "research": "Full evidence review in progress.\n\nWe are re-verifying this product's ingredient list and the supporting research against the manufacturer's current label and primary sources. Verified, citation-backed information will be republished here once that review is complete.",
+      "ingredients": "Instant dark-roast coffee (Coffea arabica); guarana extract; white willow extract; standardized green tea extract; Fucus vesiculosus seaweed; ginger extract; Panax ginseng root extract; yerba mate leaf; cayenne pepper",
+      "category": "Product formulation",
+      "lastUpdated": "2026-10-02",
+      "tldr": "Current manufacturer formulation checked October 2, 2026. Finished-product efficacy evidence remains under review.",
+      "research": "Evidence review in progress. Ingredient-level evidence will not be treated as finished-product evidence unless formulation, dose, population, duration, outcome, and study context are sufficiently relevant.",
       "mechanism": "Under review.",
       "evidenceGrade": "Under Review",
-      "evidenceGradeText": "Evidence review in progress. Grades will be re-issued only with verified citations.",
+      "evidenceGradeText": "No finalized finished-product evidence grade is being asserted.",
       "faqs": [],
       "citations": [],
-      "relatedProducts": [
-        {
-          "name": "V NRGY",
-          "url": "/products/v-nrgy"
-        },
-        {
-          "name": "V-LOVKAFE",
-          "url": "/products/v-lovkafe"
-        },
-        {
-          "name": "PERFORMANCE PLUS",
-          "url": "/products/performance-plus"
-        }
-      ],
+      "relatedProducts": [],
       "totalCitations": 0,
-      "articleUrl": "/articles/v-thermokafe-benefits",
-      "shopUrl": "https://vitalhealthglobal.com/products/v-thermokafe?refID=149983"
+      "articleUrl": null,
+      "shopUrl": "https://vitalhealthglobal.com/products/v-thermokafe?refID=149983",
+      "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
+      "formulationSource": "https://vitalhealthglobal.com/products/v-thermokafe"
     },
     "vitalpro": {
       "slug": "vitalpro",
       "name": "VITALPRO",
       "url": "/products/vitalpro",
-      "ingredients": "Whey protein isolate; soy protein isolate; collagen peptides; agave inulin; cinnamon; digestive enzymes; fruit & vegetable blend; functional mushrooms (cordyceps, ganoderma, shiitake); mangosteen and maqui; turmeric; anchovy-derived omega-3; alpha-lipoic acid; AFA algae; coenzyme Q10",
-      "category": "protein/sports",
-      "lastUpdated": "2026-06-11",
-      "tldr": "Contains soy, fish (anchovy) and milk (dairy).\n\nVITALPRO is a Vital Health Global product. Its verified ingredients include whey protein isolate; soy protein isolate; collagen peptides; agave inulin; cinnamon; digestive enzymes; fruit & vegetable blend; functional mushrooms (cordyceps, ganoderma, shiitake); mangosteen and maqui; turmeric; anchovy-derived omega-3; alpha-lipoic acid; AFA algae; coenzyme Q10. A full evidence review of this product is in progress; ingredient-specific benefit claims and citations have been removed pending verification and will be republished once confirmed.",
-      "research": "Full evidence review in progress.\n\nWe are re-verifying this product's ingredient list and the supporting research against the manufacturer's current label and primary sources. Verified, citation-backed information will be republished here once that review is complete.",
+      "ingredients": "Whey protein isolate; soy protein isolate; hydrolyzed collagen peptides (grass-fed); agave inulin; cinnamon; amylase; protease; fruit and vegetable blend; cordyceps extract; mangosteen extract; maqui extract; Ganoderma lucidum extract; shiitake extract; turmeric extract (95% curcuminoids); omega-3 powder from anchovy oil; alpha-lipoic acid; AFA algae; coenzyme Q10; natural vanilla flavor; stevia; silica",
+      "category": "Product formulation",
+      "lastUpdated": "2026-10-02",
+      "tldr": "Current manufacturer formulation checked October 2, 2026. Finished-product efficacy evidence remains under review.",
+      "research": "Evidence review in progress. Ingredient-level evidence will not be treated as finished-product evidence unless formulation, dose, population, duration, outcome, and study context are sufficiently relevant.",
       "mechanism": "Under review.",
       "evidenceGrade": "Under Review",
-      "evidenceGradeText": "Evidence review in progress. Grades will be re-issued only with verified citations.",
+      "evidenceGradeText": "No finalized finished-product evidence grade is being asserted.",
       "faqs": [],
       "citations": [],
-      "relatedProducts": [
-        {
-          "name": "V-NITRO",
-          "url": "/products/v-nitro"
-        },
-        {
-          "name": "PERFORMANCE PLUS",
-          "url": "/products/performance-plus"
-        },
-        {
-          "name": "V-ITAREN",
-          "url": "/products/v-itaren"
-        }
-      ],
+      "relatedProducts": [],
       "totalCitations": 0,
-      "articleUrl": "/articles/vitalpro-benefits",
-      "shopUrl": "https://vitalhealthglobal.com/products/vitalpro?refID=149983"
+      "articleUrl": null,
+      "shopUrl": "https://vitalhealthglobal.com/products/vitalpro?refID=149983",
+      "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
+      "formulationSource": "https://vitalhealthglobal.com/products/vitalpro"
+    },
+    "v-glutation-plus": {
+      "slug": "v-glutation-plus",
+      "name": "V-GLUTATION PLUS",
+      "url": "/products/v-glutation-plus",
+      "ingredients": "Vitamin C (ascorbic acid); reduced L-glutathione; tetrahydrocurcumin (from Curcuma longa rhizomes); chlorophyll (sodium copper chlorophyllin); L-cysteine HCl; purified water; glycerin; mango pulp; natural mango flavor; potassium sorbate; malic acid; steviol glycosides",
+      "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
+      "formulationSource": "https://vitalhealthglobal.com/products/v-glutation-plus",
+      "shopUrl": "https://vitalhealthglobal.com/products/v-glutation-plus?refID=149983",
+      "category": "Product formulation",
+      "lastUpdated": "2026-10-02",
+      "tldr": "Current catalog record checked October 2, 2026. Finished-product efficacy evidence remains under review.",
+      "research": "Evidence review in progress. Ingredient-level evidence will not be treated as finished-product evidence unless formulation, dose, population, duration, outcome, and study context are sufficiently relevant.",
+      "mechanism": "Under review.",
+      "evidenceGrade": "Under Review",
+      "evidenceGradeText": "No finalized finished-product evidence grade is being asserted.",
+      "faqs": [],
+      "citations": [],
+      "relatedProducts": [],
+      "totalCitations": 0,
+      "articleUrl": null
+    },
+    "v-daily-sachet": {
+      "slug": "v-daily-sachet",
+      "name": "V-DAILY SACHET",
+      "url": "/products/v-daily-sachet",
+      "ingredients": "Vitamin A (vitamin A acetate); vitamin C (ascorbic acid); vitamin D3 (cholecalciferol); vitamin E (d-alpha tocopherol); vitamin K (phytonadione); thiamin; riboflavin; niacin; vitamin B6; folate (L-5-methyltetrahydrofolate); vitamin B12 (methylcobalamin); biotin; pantothenic acid; calcium; iron; magnesium; zinc; iodine; copper; chromium; potassium; proprietary fruits/greens/mushrooms blend; amino acid complex; trace minerals; inositol; MSM; FOS; Lactobacillus acidophilus; Bacillus coagulans; amla bioflavonoids; beet root extract; coenzyme Q10; boron; inulin; lime flavoring; guar gum; citric acid; steviol glycosides; silicon dioxide",
+      "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
+      "formulationSource": "https://vitalhealthglobal.com/products/v-daily-sachet",
+      "shopUrl": "https://vitalhealthglobal.com/products/v-daily-sachet?refID=149983",
+      "category": "Product formulation",
+      "lastUpdated": "2026-10-02",
+      "tldr": "Current catalog record checked October 2, 2026. Finished-product efficacy evidence remains under review.",
+      "research": "Evidence review in progress. Ingredient-level evidence will not be treated as finished-product evidence unless formulation, dose, population, duration, outcome, and study context are sufficiently relevant.",
+      "mechanism": "Under review.",
+      "evidenceGrade": "Under Review",
+      "evidenceGradeText": "No finalized finished-product evidence grade is being asserted.",
+      "faqs": [],
+      "citations": [],
+      "relatedProducts": [],
+      "totalCitations": 0,
+      "articleUrl": null
+    },
+    "v-harmony": {
+      "slug": "v-harmony",
+      "name": "V-HARMONY",
+      "url": "/products/v-harmony",
+      "ingredients": "Complete ingredient panel not published on the current manufacturer product page.",
+      "formulationStatus": "Manufacturer product page checked 2026-10-02; complete ingredient panel unavailable, so formulation is not verified.",
+      "formulationSource": "https://vitalhealthglobal.com/products/v-harmony",
+      "shopUrl": "https://vitalhealthglobal.com/products/v-harmony?refID=149983",
+      "manufacturerDescriptionMentions": [
+        "inositols",
+        "resveratrol",
+        "DIM",
+        "saffron",
+        "magnesium",
+        "vitamin B6",
+        "probiotics",
+        "vitamin E",
+        "zinc"
+      ],
+      "category": "Product formulation",
+      "lastUpdated": "2026-10-02",
+      "tldr": "Current catalog record checked October 2, 2026. Finished-product efficacy evidence remains under review.",
+      "research": "Evidence review in progress. Ingredient-level evidence will not be treated as finished-product evidence unless formulation, dose, population, duration, outcome, and study context are sufficiently relevant.",
+      "mechanism": "Under review.",
+      "evidenceGrade": "Under Review",
+      "evidenceGradeText": "No finalized finished-product evidence grade is being asserted.",
+      "faqs": [],
+      "citations": [],
+      "relatedProducts": [],
+      "totalCitations": 0,
+      "articleUrl": null
+    },
+    "v-prime": {
+      "slug": "v-prime",
+      "name": "V-PRIME",
+      "url": "/products/v-prime",
+      "ingredients": "Complete ingredient panel not published on the current manufacturer product page.",
+      "formulationStatus": "Manufacturer product page checked 2026-10-02; complete ingredient panel unavailable, so formulation is not verified.",
+      "formulationSource": "https://vitalhealthglobal.com/products/v-prime",
+      "shopUrl": "https://vitalhealthglobal.com/products/v-prime?refID=149983",
+      "manufacturerDescriptionMentions": [
+        "fenugreek",
+        "tongkat ali",
+        "maca",
+        "ashwagandha",
+        "shilajit",
+        "saw palmetto",
+        "pygeum",
+        "lycopene",
+        "zinc",
+        "boron",
+        "vitamin D3",
+        "vitamin K2"
+      ],
+      "category": "Product formulation",
+      "lastUpdated": "2026-10-02",
+      "tldr": "Current catalog record checked October 2, 2026. Finished-product efficacy evidence remains under review.",
+      "research": "Evidence review in progress. Ingredient-level evidence will not be treated as finished-product evidence unless formulation, dose, population, duration, outcome, and study context are sufficiently relevant.",
+      "mechanism": "Under review.",
+      "evidenceGrade": "Under Review",
+      "evidenceGradeText": "No finalized finished-product evidence grade is being asserted.",
+      "faqs": [],
+      "citations": [],
+      "relatedProducts": [],
+      "totalCitations": 0,
+      "articleUrl": null
     }
-  }
+  },
+  "catalogCheckedAt": "2026-10-02",
+  "catalogSource": "https://vitalhealthglobal.com/collections/all"
 }

@@ -1,57 +1,33 @@
 ---
 title: "GENIUS SHAKE KIDS"
 product_url: "/products/genius-shake-kids"
-ingredients: "Whey protein isolate; essential vitamins and minerals; omega-3 and omega-6 fatty acids; coconut powder; inulin (natural fiber); cocoa; antioxidant-rich fruits and vegetables; functional mushrooms (maitake, shiitake)"
-category: "kids brain/development"
+category: "Product formulation"
 evidence_grade: "Under Review"
-last_updated: "2026-06-11"
+formulation_checked: "2026-10-02"
 ---
 
 # GENIUS SHAKE KIDS
 
-## TL;DR
-Contains milk (whey protein). Consult your pediatrician before giving any supplement to a child.
+## Current formulation
 
-A chocolate-coconut daily nutrition shake for kids built on whey protein, vitamins and minerals, omegas, natural fiber, and antioxidant-rich fruits and vegetables.
+The ingredient list below was checked against the current manufacturer product page on October 2, 2026:
 
----
+Allulose; whey protein isolate; coconut powder; inulin; cocoa powder; vitamin A; vitamin C; calcium; iron; spinach; carrot; red pitahaya; sweet potato; orange; banana; mango; noni; mangosteen; strawberry; maitake; shiitake; grape; blueberry; kiwi; vitamin E; niacin; pantothenic acid; omega-6; omega-3; vitamin B6; thiamin; folate; vitamin K; vitamin D3; biotin; vitamin B12
 
-## Key Ingredients
-Whey protein isolate; essential vitamins and minerals; omega-3 and omega-6 fatty acids; coconut powder; inulin (natural fiber); cocoa; antioxidant-rich fruits and vegetables; functional mushrooms (maitake, shiitake)
+**Manufacturer formulation source:** https://vitalhealthglobal.com/products/genius-shake
 
----
+This source is used only to establish the currently published formulation. Manufacturer descriptions are not treated as evidence of efficacy.
 
-## What Does The Research Say?
+## Evidence status
 
-Genius Shake Kids provides high-quality whey protein together with essential vitamins and minerals, omega fatty acids, natural fiber, and a blend of antioxidant-rich fruits and vegetables, in a chocolate-coconut flavor.
+**Under Review.**
 
-It is intended to support energy, healthy growth, and daily nutrition and to complement a balanced diet, and is designed to pair with D-FENZ and SMARTBIOTICS as part of the brand's kids' routine.
+Historical product-to-study mappings have been withdrawn. Ingredient-specific and finished-product efficacy claims will be republished only after citation, formulation, dose, population, outcome, and directness checks are complete.
 
-Exact vitamin and mineral amounts are pending label verification and are not listed here. A supplement is not a replacement for a varied diet. Supporting research is being reviewed and citation-checked; verified references will be added once confirmed.
+## Commercial disclosure
 
----
+Supplement Intelligence may earn referral credit from purchases made through some product links. Compensation does not determine evidence status.
 
-## Evidence Grade
+## Disclaimer
 
-Evidence review in progress. Grades will be re-issued only with verified citations.
-
----
-
-## PubMed Citations
-
-Citations are being re-verified as part of an ongoing evidence review.
-
----
-
-## Where to Buy
-
-[Shop GENIUS SHAKE KIDS at Vital Health Global](https://vitalhealthglobal.com/products/genius-shake?refID=149983)
-
-Supplement Intelligence is operated in partnership with Vital Health Global and earns referral credit on purchases.
-
----
-
-## Related Products
-
-- [SMARTBIOTICS KIDS](/products/smartbiotics-kids)
-- [D-FENZ KIDS](/products/d-fenz-kids)
+For general informational purposes only; not individualized medical advice.

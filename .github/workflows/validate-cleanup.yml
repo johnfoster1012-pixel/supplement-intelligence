@@ -1,0 +1,58 @@
+name: Validate Supplement Intelligence
+
+on:
+  pull_request:
+    paths:
+      - 'worker.js'
+      - 'wrangler.toml'
+      - 'product-template.html'
+      - 'products-data.json'
+      - 'ingredient-evidence.json'
+      - 'data/**'
+      - 'docs/**'
+      - 'products/**'
+      - 'ingredients/**'
+      - 'articles/**'
+      - 'site/**'
+      - 'sitemap.xml'
+      - 'llm.txt'
+      - 'llms.txt'
+      - 'robots.txt'
+      - 'parse_products.py'
+      - '.github/workflows/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Check Worker syntax
+        run: node --check worker.js
+
+      - name: Validate JSON
+        run: |
+          python - <<'PY'
+          import json, glob
+          for path in glob.glob('**/*.json', recursive=True):
+              with open(path, encoding='utf-8') as f:
+                  json.load(f)
+              print("valid:", path)
+          PY
+
+      - name: Validate product/evidence consistency
+        run: python parse_products.py
+
+      - name: Validate Wrangler build without deploying
+        run: |
+          npm install -g wrangler
+          wrangler deploy --dry-run

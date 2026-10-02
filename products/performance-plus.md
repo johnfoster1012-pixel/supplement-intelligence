@@ -1,54 +1,33 @@
 ---
 title: "PERFORMANCE PLUS"
 product_url: "/products/performance-plus"
-ingredients: "Creatine monohydrate; essential amino acids (EAAs); myo-inositol; magnesium (glycinate, L-threonate and citrate); potassium; sodium; cherry"
-category: ""
+category: "Product formulation"
 evidence_grade: "Under Review"
-last_updated: "2026-06-11"
+formulation_checked: "2026-10-02"
 ---
 
 # PERFORMANCE PLUS
 
-## TL;DR
-PERFORMANCE PLUS is a Vital Health Global product. Its verified ingredients include creatine monohydrate; essential amino acids (EAAs); myo-inositol; magnesium (glycinate, L-threonate and citrate); potassium; sodium; cherry. A full evidence review of this product is in progress; ingredient-specific benefit claims and citations have been removed pending verification and will be republished once confirmed.
+## Current formulation
 
----
+The ingredient list below was checked against the current manufacturer product page on October 2, 2026:
 
-## Key Ingredients
-Creatine monohydrate; essential amino acids (EAAs); myo-inositol; magnesium (glycinate, L-threonate and citrate); potassium; sodium; cherry
+Magnesium glycinate; magnesium L-threonate; magnesium citrate; potassium citrate; sodium chloride; L-leucine; L-phenylalanine; L-lysine; L-threonine; L-valine; L-isoleucine; L-histidine; L-methionine; creatine monohydrate; myo-inositol; cherry pulp; guar gum; stevia
 
----
+**Manufacturer formulation source:** https://vitalhealthglobal.com/products/performance
 
-## What Does The Research Say?
+This source is used only to establish the currently published formulation. Manufacturer descriptions are not treated as evidence of efficacy.
 
-Full evidence review in progress.
+## Evidence status
 
-We are re-verifying this product's ingredient list and the supporting research against the manufacturer's current label and primary sources. Verified, citation-backed information will be republished here once that review is complete.
+**Under Review.**
 
----
+Historical product-to-study mappings have been withdrawn. Ingredient-specific and finished-product efficacy claims will be republished only after citation, formulation, dose, population, outcome, and directness checks are complete.
 
-## Evidence Grade
+## Commercial disclosure
 
-Evidence review in progress. Grades will be re-issued only with verified citations.
+Supplement Intelligence may earn referral credit from purchases made through some product links. Compensation does not determine evidence status.
 
----
+## Disclaimer
 
-## PubMed Citations
-
-Citations are being re-verified as part of an ongoing evidence review.
-
----
-
-## Where to Buy
-
-[Shop PERFORMANCE PLUS at Vital Health Global](https://vitalhealthglobal.com/products/performance?refID=149983)
-
-Supplement Intelligence is operated in partnership with Vital Health Global and earns referral credit on purchases.
-
----
-
-## Related Products
-
-- [V-NITRO](/products/v-nitro)
-- [VITALPRO](/products/vitalpro)
-- [V-ASCULAX](/products/v-asculax)
+For general informational purposes only; not individualized medical advice.

@@ -1,56 +1,33 @@
 ---
 title: "COLLAGEN COMPLEX"
 product_url: "/products/collagen"
-ingredients: "Hydrolyzed bovine collagen peptides (types I, II, III); hydrolyzed marine collagen peptides (from fish); bone broth & connective-tissue powder (bovine); beet powder; resveratrol; astaxanthin; nicotinamide adenine dinucleotide (NAD); vitamin C; vitamin E; biotin; hyaluronic acid; black pepper extract"
-category: "skin/joints"
+category: "Product formulation"
 evidence_grade: "Under Review"
-last_updated: "2026-06-11"
+formulation_checked: "2026-10-02"
 ---
 
 # COLLAGEN COMPLEX
 
-## TL;DR
-Contains fish (marine collagen) and bovine-derived ingredients.
+## Current formulation
 
-COLLAGEN COMPLEX is a Vital Health Global product. Its verified ingredients include hydrolyzed bovine collagen peptides (types I, II, III); hydrolyzed marine collagen peptides (from fish); bone broth & connective-tissue powder (bovine); beet powder; resveratrol; astaxanthin; nicotinamide adenine dinucleotide (NAD); vitamin C; vitamin E; biotin; hyaluronic acid; black pepper extract. A full evidence review of this product is in progress; ingredient-specific benefit claims and citations have been removed pending verification and will be republished once confirmed.
+The ingredient list below was checked against the current manufacturer product page on October 2, 2026:
 
----
+Hydrolyzed bovine collagen peptides (types I, II, III; grass-fed); hydrolyzed marine collagen peptides (fish); natural raspberry flavor; organic dehydrated beet powder; bone and connective-tissue broth powder; vitamin C; vitamin E; resveratrol; stevia; biotin; hyaluronic acid; astaxanthin; black pepper extract (95% piperine); nicotinamide adenine dinucleotide (NAD)
 
-## Key Ingredients
-Hydrolyzed bovine collagen peptides (types I, II, III); hydrolyzed marine collagen peptides (from fish); bone broth & connective-tissue powder (bovine); beet powder; resveratrol; astaxanthin; nicotinamide adenine dinucleotide (NAD); vitamin C; vitamin E; biotin; hyaluronic acid; black pepper extract
+**Manufacturer formulation source:** https://vitalhealthglobal.com/products/vitalage-collagen
 
----
+This source is used only to establish the currently published formulation. Manufacturer descriptions are not treated as evidence of efficacy.
 
-## What Does The Research Say?
+## Evidence status
 
-Full evidence review in progress.
+**Under Review.**
 
-We are re-verifying this product's ingredient list and the supporting research against the manufacturer's current label and primary sources. Verified, citation-backed information will be republished here once that review is complete.
+Historical product-to-study mappings have been withdrawn. Ingredient-specific and finished-product efficacy claims will be republished only after citation, formulation, dose, population, outcome, and directness checks are complete.
 
----
+## Commercial disclosure
 
-## Evidence Grade
+Supplement Intelligence may earn referral credit from purchases made through some product links. Compensation does not determine evidence status.
 
-Evidence review in progress. Grades will be re-issued only with verified citations.
+## Disclaimer
 
----
-
-## PubMed Citations
-
-Citations are being re-verified as part of an ongoing evidence review.
-
----
-
-## Where to Buy
-
-[Shop COLLAGEN COMPLEX at Vital Health Global](https://vitalhealthglobal.com/products/vitalage-collagen?refID=149983)
-
-Supplement Intelligence is operated in partnership with Vital Health Global and earns referral credit on purchases.
-
----
-
-## Related Products
-
-- [LATTEKAFFE](/products/lattekaffe)
-- [NOURISH PLUS](/products/nourish-plus)
-- [V-GLUTATION](/products/v-glutation)
+For general informational purposes only; not individualized medical advice.
