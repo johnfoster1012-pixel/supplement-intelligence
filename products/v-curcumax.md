@@ -1,7 +1,7 @@
 ---
 title: "V-CURCUMAX"
 product_url: "/products/v-curcumax"
-category: "anti-inflammatory"
+category: "Product formulation"
 evidence_grade: "Under Review"
 formulation_checked: "2026-10-02"
 ---
