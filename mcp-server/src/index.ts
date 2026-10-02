@@ -20,7 +20,6 @@ async function fetchJson(path: string): Promise<JsonObject> {
       "Accept": "application/json",
       "User-Agent": "Supplement-Intelligence-MCP/1.0",
     },
-    cf: { cacheTtl: 300 },
   });
 
   let payload: unknown = null;
