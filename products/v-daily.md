@@ -1,54 +1,33 @@
 ---
 title: "V-DAILY"
 product_url: "/products/v-daily"
-ingredients: "Vitamins A, C, D, E and K; B-complex; calcium, iron, magnesium, zinc, iodine, copper, chromium and potassium; fruits/greens/mushrooms blend; amino-acid complex; inositol; MSM; prebiotic and probiotic blend; coenzyme Q10; boron"
 category: "multivitamin"
 evidence_grade: "Under Review"
-last_updated: "2026-06-11"
+formulation_checked: "2026-10-02"
 ---
 
 # V-DAILY
 
-## TL;DR
-V-DAILY is a Vital Health Global product. Its verified ingredients include vitamins A, C, D, E and K; B-complex; calcium, iron, magnesium, zinc, iodine, copper, chromium and potassium; fruits/greens/mushrooms blend; amino-acid complex; inositol; MSM; prebiotic and probiotic blend; coenzyme Q10; boron. A full evidence review of this product is in progress; ingredient-specific benefit claims and citations have been removed pending verification and will be republished once confirmed.
+## Current formulation
 
----
+The ingredient list below was checked against the current manufacturer product page on October 2, 2026:
 
-## Key Ingredients
-Vitamins A, C, D, E and K; B-complex; calcium, iron, magnesium, zinc, iodine, copper, chromium and potassium; fruits/greens/mushrooms blend; amino-acid complex; inositol; MSM; prebiotic and probiotic blend; coenzyme Q10; boron
+Vitamins A, C, D3, E and K; thiamin; riboflavin; niacin; vitamin B6; folate (L-5-methyltetrahydrofolate); vitamin B12 (methylcobalamin); biotin; pantothenic acid; calcium; iron; magnesium; zinc; iodine; copper; chromium; potassium; fruits/greens/mushrooms blend (green apple, cherry, blueberry, broccoli, carrot, acerola, beet, spirulina, cauliflower sprout, chlorella, cordyceps, reishi, nettle, parsley, shiitake, pineapple, grape, tomato); amino acid blend; trace minerals; inositol; MSM; FOS; Lactobacillus acidophilus; Bacillus coagulans; amla bioflavonoids; beet root extract; coenzyme Q10; boron; inulin; lime flavoring; guar gum; citric acid; steviol glycosides; silicon dioxide
 
----
+**Manufacturer formulation source:** https://vitalhealthglobal.com/products/v-daily
 
-## What Does The Research Say?
+This source is used only to establish the currently published formulation. Manufacturer descriptions are not treated as evidence of efficacy.
 
-Full evidence review in progress.
+## Evidence status
 
-We are re-verifying this product's ingredient list and the supporting research against the manufacturer's current label and primary sources. Verified, citation-backed information will be republished here once that review is complete.
+**Under Review.**
 
----
+Historical product-to-study mappings have been withdrawn. Ingredient-specific and finished-product efficacy claims will be republished only after citation, formulation, dose, population, outcome, and directness checks are complete.
 
-## Evidence Grade
+## Commercial disclosure
 
-Evidence review in progress. Grades will be re-issued only with verified citations.
+Supplement Intelligence may earn referral credit from purchases made through some product links. Compensation does not determine evidence status.
 
----
+## Disclaimer
 
-## PubMed Citations
-
-Citations are being re-verified as part of an ongoing evidence review.
-
----
-
-## Where to Buy
-
-[Shop V-DAILY at Vital Health Global](https://vitalhealthglobal.com/products/v-daily?refID=149983)
-
-Supplement Intelligence is operated in partnership with Vital Health Global and earns referral credit on purchases.
-
----
-
-## Related Products
-
-- [V-ITALBOOST](/products/v-italboost)
-- [D-FENZ KIDS](/products/d-fenz-kids)
-- [V-ITAREN](/products/v-itaren)
+For general informational purposes only; not individualized medical advice.
