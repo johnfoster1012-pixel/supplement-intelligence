@@ -20,7 +20,7 @@ const IS_PREVIEW = CONTENT_BRANCH_NAME !== 'main';
 const GITHUB_RAW_BASE = (typeof CONTENT_BASE !== 'undefined' && CONTENT_BASE)
   ? CONTENT_BASE
   : `https://raw.githubusercontent.com/johnfoster1012-pixel/supplement-intelligence/${CONTENT_BRANCH_NAME}/`;
-const VERSION = 'Supplement Intelligence v9';
+const VERSION = 'Supplement Intelligence v10';
 
 const VALID_PRODUCT_SLUGS = new Set([
   'collagen','d-fenz-kids','genius-shake-kids','lattekaffe','nourish-plus','performance-plus',
@@ -80,6 +80,7 @@ async function handleRequest(request) {
   if (path === '/llm.txt') return proxyRawText('llm.txt', 'text/plain; charset=utf-8');
   if (path === '/sitemap.xml') return proxyRawText('sitemap.xml', 'application/xml; charset=utf-8');
 
+  if (path === '/') return handleProductsIndex();
   if (path === '/products') return handleProductsIndex();
   if (path === '/formulary') return redirect(url, '/products');
   if (path === '/articles') return proxyRawText('articles/index.html', 'text/html; charset=utf-8');
@@ -259,7 +260,7 @@ function renderProductsIndex(productsData) {
     }
     groupsHtml += '</section>';
   }
-  return `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Products | Supplement Intelligence</title><meta name="description" content="Verified product information across the Supplement Intelligence formulary."><link rel="canonical" href="https://supplement-intelligence.com/products"><style>body{font-family:Arial,sans-serif;max-width:980px;margin:0 auto;padding:24px;line-height:1.6}a{color:#0a66c2;text-decoration:none}a:hover{text-decoration:underline}</style></head><body><p><a href="/">Home</a> / Products</p><h1>All Products</h1><p>Independent product information for the Vital Health Global catalog. Ingredient lists are label-verified; a full evidence review is in progress.</p>${groupsHtml}</body></html>`;
+  return `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Products | Supplement Intelligence</title><meta name="description" content="Verified product information across the Supplement Intelligence formulary."><link rel="canonical" href="https://supplement-intelligence.com/products"><style>body{font-family:Arial,sans-serif;max-width:980px;margin:0 auto;padding:24px;line-height:1.6}a{color:#0a66c2;text-decoration:none}a:hover{text-decoration:underline}</style></head><body><p><a href="/">Home</a> / Products</p><h1>All Products</h1><p>Independent product information for the Vital Health Global catalog. Product formulation records are undergoing label re-verification; a full evidence review is in progress.</p>${groupsHtml}</body></html>`;
 }
 
 function formatParagraphs(text) {
