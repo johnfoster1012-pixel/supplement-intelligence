@@ -1,7 +1,7 @@
 ---
 title: "V-GLUTATION"
 product_url: "/products/v-glutation"
-category: "antioxidant"
+category: "Product formulation"
 evidence_grade: "Under Review"
 formulation_checked: "2026-10-02"
 ---
