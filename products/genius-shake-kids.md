@@ -1,7 +1,7 @@
 ---
 title: "GENIUS SHAKE KIDS"
 product_url: "/products/genius-shake-kids"
-category: "kids brain/development"
+category: "Product formulation"
 evidence_grade: "Under Review"
 formulation_checked: "2026-10-02"
 ---
