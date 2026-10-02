@@ -1,7 +1,7 @@
 ---
 title: "V-OMEGA3"
 product_url: "/products/v-omega3"
-category: "cardiovascular/brain"
+category: "Product formulation"
 evidence_grade: "Under Review"
 formulation_checked: "2026-10-02"
 ---
