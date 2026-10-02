@@ -1,7 +1,7 @@
 ---
 title: "SMARTBIOTICS KIDS"
 product_url: "/products/smartbiotics-kids"
-category: "kids gut/immune"
+category: "Product formulation"
 evidence_grade: "Under Review"
 formulation_checked: "2026-10-02"
 ---
