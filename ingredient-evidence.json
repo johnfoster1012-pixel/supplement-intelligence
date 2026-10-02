@@ -435,11 +435,11 @@
     },
     "echinacea": {
       "name": "Echinacea",
-      "posture": "May slightly reduce the chance of developing a cold; evidence that it shortens cold duration is unclear.",
-      "summary": "NCCIH reports that taking echinacea may slightly reduce the chance of catching a cold, but it remains unclear whether it shortens the duration of a cold. Evidence for other promoted uses is insufficient.",
-      "studied_context": "Echinacea species, plant parts, extraction methods, and preparations vary substantially across studies.",
-      "safety": "Short-term use is likely safe for most adults, but allergic reactions can occur and may be severe. Digestive symptoms are common; interactions with immunosuppressants, caffeine, and some liver-metabolized drugs are possible.",
-      "product_directness": "V-ITALBOOST lists echinacea but does not publish species, extract type, or dose. The product should not be described as preventing or treating respiratory infections based on echinacea alone.",
+      "posture": "Possible small effect on cold incidence for some preparations; evidence for shortening or treating colds remains uncertain and product-specific.",
+      "summary": "NCCIH reports that echinacea may slightly reduce the chance of catching a cold, but it remains unclear whether it shortens cold duration. Echinacea species, plant parts, and extraction methods vary widely, so findings do not transfer cleanly across products.",
+      "studied_context": "Clinical trials use different Echinacea species and preparations. Without species, plant part, extract, and dose information, direct comparison to the research is weak.",
+      "safety": "Short-term use is likely safe for many adults, but gastrointestinal effects and allergic reactions can occur. Drug interactions are possible, and evidence in children, pregnancy, and breastfeeding is limited.",
+      "product_directness": "V-ITALBOOST lists echinacea but does not publish species, plant part, extract standardization, or dose. Finished-product cold or immune claims therefore remain unverified.",
       "products": [
         "v-italboost"
       ],
@@ -452,36 +452,30 @@
       ]
     },
     "senna": {
-      "name": "Senna / sennosides",
-      "posture": "Established stimulant laxative for short-term constipation; this does not establish a 'detox' benefit.",
-      "summary": "MedlinePlus identifies senna as a stimulant laxative used short term for constipation and bowel evacuation. It increases intestinal activity to produce a bowel movement, typically within 6–12 hours.",
-      "studied_context": "Evidence and regulated OTC use relate to laxation/constipation, not removal of toxins, liver detoxification, or chronic digestive cleansing.",
-      "safety": "MedlinePlus advises not using senna for more than one week without medical guidance. Cramping, nausea, stomach discomfort, dependence with frequent/continued use, and medication interactions are important considerations.",
-      "product_directness": "V-TEDETOX contains senna leaf and senna extract, but the manufacturer page does not provide sennoside dose. The evidence supports a laxative mechanism, not the broader 'detox' positioning.",
+      "name": "Senna",
+      "posture": "Established stimulant-laxative activity for short-term constipation; this does not support broad detox claims.",
+      "summary": "NCBI LiverTox describes senna as a widely used nonprescription herbal laxative. Its recognized pharmacologic role is bowel stimulation, not systemic detoxification.",
+      "studied_context": "Senna products vary in sennoside content and dosing. Short-term constipation use is distinct from prolonged use or multi-herb detox regimens.",
+      "safety": "Senna is generally tolerated when used as recommended for short periods, but high doses or prolonged use can cause adverse effects and has been associated with clinically apparent liver injury.",
+      "product_directness": "V-TEDETOX contains senna leaf and senna extract, but the current manufacturer page does not publish sennoside content or dose. The site should not imply a predictable laxative effect or a detox benefit from ingredient presence alone.",
       "products": [
         "v-tedetox"
       ],
       "sources": [
         {
-          "type": "MedlinePlus",
-          "title": "Senna Drug Information",
-          "url": "https://medlineplus.gov/druginfo/meds/a601112.html"
-        },
-        {
-          "type": "Clinical practice guideline",
-          "title": "AGA-ACG Guideline: Pharmacological Management of Chronic Idiopathic Constipation",
-          "pmid": "37204227",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/37204227/"
+          "type": "NCBI LiverTox",
+          "title": "Senna",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK547922/"
         }
       ]
     },
     "milk-thistle": {
-      "name": "Milk thistle (silymarin)",
-      "posture": "Insufficient high-quality evidence to conclude that milk thistle treats liver disease; human findings are inconsistent.",
-      "summary": "NCCIH states there is not enough high-quality evidence to reach definite conclusions about milk thistle. Trials in multiple liver diseases have been conflicting or too limited, including NCCIH-funded studies that did not show benefit for hepatitis C or NASH.",
-      "studied_context": "Milk-thistle extracts vary substantially in silymarin composition, standardization, and product quality. Results from one extract should not be generalized to all milk-thistle ingredients.",
-      "safety": "Oral milk thistle is generally well tolerated, with gastrointestinal effects most common. Allergic reactions can occur, and NCCIH notes quality concerns including mislabeled silymarin content and contamination in some products.",
-      "product_directness": "V-ORGANEX and V-TEDETOX list milk thistle, but current manufacturer pages do not provide a standardized silymarin amount. Liver or detoxification efficacy should not be inferred from inclusion.",
+      "name": "Milk thistle (Silybum marianum)",
+      "posture": "Insufficient high-quality evidence for liver-disease benefits; broad liver-detox claims are not supported.",
+      "summary": "NCCIH states that there is not enough high-quality evidence to reach definite conclusions about milk thistle for health conditions. Clinical trials in liver diseases have been conflicting or too limited.",
+      "studied_context": "Milk-thistle extracts differ in silymarin content and composition. Evidence from a standardized extract should not be generalized to unspecified milk-thistle powder.",
+      "safety": "Oral use is usually well tolerated, with digestive symptoms most common. Allergic reactions and supplement-quality problems can occur, and drug interactions are possible.",
+      "product_directness": "V-ORGANEX and V-TEDETOX list milk thistle, but the current manufacturer pages do not publish silymarin standardization or dose. Liver-support efficacy remains unverified.",
       "products": [
         "v-organex",
         "v-tedetox"
@@ -496,11 +490,11 @@
     },
     "alpha-lipoic-acid": {
       "name": "Alpha-lipoic acid (ALA)",
-      "posture": "Evidence does not support ALA as a general blood-sugar/lipid treatment; diabetic-neuropathy pain evidence is mixed.",
-      "summary": "NCCIH reports that a 2019 review found ALA no better than placebo for blood sugar, cholesterol, or triglycerides in type 2 diabetes. Reviews of diabetic neuropathy have produced inconsistent results, though some analyses suggest pain reduction.",
-      "studied_context": "Most clinically relevant ALA trials involve people with diabetes or diabetic neuropathy. Those findings should not be generalized to healthy users or broad 'metabolic support' claims.",
-      "safety": "Large reviews generally find ALA reasonably tolerated; common side effects include headache, heartburn, nausea, and vomiting.",
-      "product_directness": "NOURISH PLUS, S-BALANCE, and VITALPRO list ALA, but current manufacturer pages do not publish ALA dose. Finished-product glucose, neuropathy, or metabolic claims remain unverified.",
+      "posture": "Some evidence for reducing sensory symptoms of diabetic peripheral neuropathy; evidence does not justify generic blood-sugar or weight-management claims.",
+      "summary": "NCCIH notes that alpha-lipoic acid may reduce pain associated with diabetic neuropathy but has not been shown to be helpful for blood-sugar control. A 2023 meta-analysis of oral ALA found improvements in symptom scores but not several objective neurologic measures.",
+      "studied_context": "Diabetic-neuropathy trials often use hundreds of milligrams per day, including 600–1,800 mg/day in oral studies. Outcomes and studied populations should not be generalized to healthy users.",
+      "safety": "ALA can cause gastrointestinal or other adverse effects and may interact with glucose-lowering therapy. Evidence from clinical populations should be interpreted with medical context.",
+      "product_directness": "NOURISH+, S-BALANCE, and VITALPRO list alpha-lipoic acid but do not publish a study-matched ALA dose. Finished-product neuropathy, glucose, or weight claims remain unverified.",
       "products": [
         "nourish-plus",
         "s-balance",
@@ -509,18 +503,24 @@
       "sources": [
         {
           "type": "NCCIH",
-          "title": "Diabetes and Dietary Supplements: What You Need To Know",
-          "url": "https://www.nccih.nih.gov/health/diabetes-and-dietary-supplements-what-you-need-to-know"
+          "title": "5 Things To Know About Type 2 Diabetes and Dietary Supplements",
+          "url": "https://www.nccih.nih.gov/health/tips/things-to-know-about-type-diabetes-and-dietary-supplements"
+        },
+        {
+          "type": "PubMed systematic review/meta-analysis",
+          "title": "Effects of Oral Alpha-Lipoic Acid Treatment on Diabetic Polyneuropathy",
+          "pmid": "37630823",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37630823/"
         }
       ]
     },
     "coenzyme-q10": {
       "name": "Coenzyme Q10 (CoQ10)",
-      "posture": "Evidence is condition-specific and mixed; it does not support a general energy, performance, or cardiovascular-prevention claim.",
-      "summary": "NCCIH describes evidence for heart-disease prevention, heart failure, statin-associated muscle pain, blood pressure, and Parkinson's disease as inconclusive or negative overall. A newer 2024 meta-analysis of randomized heart-failure trials reported reductions in mortality/hospitalization, but evidence quality varied across outcomes and this finding applies to heart-failure populations, not healthy consumers.",
-      "studied_context": "CoQ10 trials differ in dose, formulation, background therapy, and disease severity. Cardiovascular-disease treatment findings should not be generalized to general wellness products.",
-      "safety": "Reported serious side effects are uncommon; mild insomnia or gastrointestinal effects can occur. CoQ10 may interact with warfarin, insulin, and some cancer therapies.",
-      "product_directness": "NOURISH PLUS, V-DAILY, VITALPRO, and V-DAILY SACHET list CoQ10 without a published dose or formulation. Finished-product cardiovascular or energy claims are therefore indirect.",
+      "posture": "Evidence is condition-specific and generally inconclusive for many promoted uses; broad energy, heart, or statin-muscle claims are not established.",
+      "summary": "NCCIH reports inconclusive evidence for prevention of heart disease and heart failure, no meaningful support for statin-associated muscle pain, and limited evidence for selected outcomes such as some complications of heart surgery or migraine frequency.",
+      "studied_context": "Clinical studies vary widely in dose, disease population, formulation, and treatment duration. CoQ10 presence in a multi-ingredient product is not enough to infer a studied clinical effect.",
+      "safety": "Serious adverse effects are uncommon in available data, but mild insomnia or digestive symptoms can occur. CoQ10 may interact with warfarin, insulin, and some cancer treatments.",
+      "product_directness": "NOURISH+, V-DAILY, VITALPRO, and V-DAILY SACHET list CoQ10 but do not publish a study-matched dose. Finished-product cardiovascular, energy, or statin-related claims remain unverified.",
       "products": [
         "nourish-plus",
         "v-daily",
@@ -532,54 +532,41 @@
           "type": "NCCIH",
           "title": "Coenzyme Q10",
           "url": "https://www.nccih.nih.gov/health/coenzyme-q10"
-        },
-        {
-          "type": "PubMed meta-analysis",
-          "title": "Efficacy and safety of coenzyme Q10 in heart failure",
-          "pmid": "39462324",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39462324/"
         }
       ]
     },
     "resveratrol": {
       "name": "Resveratrol",
-      "posture": "Human evidence is heterogeneous and does not establish an anti-aging or longevity benefit; some cardiometabolic biomarkers may improve in selected populations.",
-      "summary": "Meta-analyses of randomized trials report modest improvements in some cardiometabolic markers in people with metabolic syndrome, but results vary by population and protocol. A 2025 meta-analysis found no significant overall effect of resveratrol on human SIRT1 gene expression, protein expression, or serum levels, undermining simplistic 'SIRT1 activation equals anti-aging' claims.",
-      "studied_context": "Human trials vary greatly in dose, formulation, duration, health status, and outcome. Biomarker changes are not equivalent to demonstrated reductions in disease events or slower aging.",
-      "safety": "Human trials generally report reasonable tolerability, but gastrointestinal effects increase at higher doses and long-term efficacy/safety remain incompletely established. Reviews note poor bioavailability and substantial protocol-dependent variability.",
-      "product_directness": "COLLAGEN COMPLEX and NOURISH PLUS list resveratrol without a published dose. The current evidence does not justify assigning anti-aging, longevity, or cardiometabolic treatment effects to these finished products.",
+      "posture": "Human evidence is heterogeneous and low-certainty for many cardiometabolic outcomes; anti-aging or longevity claims are not established.",
+      "summary": "NCCIH summarizes low-certainty evidence suggesting resveratrol may influence fasting glucose or blood pressure in some people with type 2 diabetes, while other outcomes are neutral and more research is needed.",
+      "studied_context": "Trials often use concentrated resveratrol doses far above typical dietary exposure. Dose, formulation, health status, and outcome strongly affect interpretation.",
+      "safety": "Oral resveratrol appears generally tolerated in available studies, but it may interact with anticoagulant or antiplatelet drugs and supplements.",
+      "product_directness": "COLLAGEN COMPLEX and NOURISH+ list resveratrol but do not publish a trial-matched dose. Anti-aging, metabolic, or cardiovascular outcomes cannot be inferred from ingredient presence.",
       "products": [
         "collagen",
         "nourish-plus"
       ],
       "sources": [
         {
-          "type": "PubMed systematic review",
-          "title": "Resveratrol for the Management of Human Health: Gaps and Opportunities",
-          "pmid": "38255828",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/38255828/"
+          "type": "NCCIH",
+          "title": "Type 2 Diabetes and Dietary Supplements: What the Science Says — Resveratrol",
+          "url": "https://www.nccih.nih.gov/health/providers/digest/type-2-diabetes-and-dietary-supplements-science"
         },
         {
-          "type": "PubMed meta-analysis",
-          "title": "Usefulness of resveratrol supplementation in cardiometabolic risk factors",
-          "pmid": "32529112",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/32529112/"
-        },
-        {
-          "type": "PubMed meta-analysis",
-          "title": "Impact of Resveratrol Supplementation on Human Sirtuin 1",
-          "pmid": "40158656",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/40158656/"
+          "type": "PubMed review",
+          "title": "Resveratrol bioavailability and toxicity in humans",
+          "pmid": "20013887",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/20013887/"
         }
       ]
     },
     "zinc": {
       "name": "Zinc",
-      "posture": "Essential nutrient with established deficiency-related roles; cold-treatment effects are formulation- and dose-specific and should not be generalized to ordinary supplement blends.",
-      "summary": "NIH ODS describes zinc as essential for enzyme activity, immune function, protein/DNA synthesis, wound healing, growth, and cell signaling. Meta-analyses of oral zinc for acute respiratory infections/common colds suggest that some formulations, particularly lozenges, may shorten illness duration, but results are heterogeneous and depend on formulation and dose.",
-      "studied_context": "Cold-treatment trials often use lozenges and elemental-zinc exposures very different from multivitamin or powder formulations. Nutritional adequacy is distinct from therapeutic-dose cold treatment.",
-      "safety": "The adult tolerable upper intake level is 40 mg/day. Chronic intakes around 50 mg/day or more can impair copper absorption and may reduce immune function and HDL cholesterol; nausea and gastrointestinal effects also occur.",
-      "product_directness": "D-FENZ KIDS, NOURISH PLUS, V-DAILY, and V-DAILY SACHET list zinc but are not zinc-lozenge cold-treatment products, and current pages do not consistently publish zinc dose. Cold-duration findings should not be assigned to these products.",
+      "posture": "Essential nutrient with established deficiency-related roles; cold benefits are formulation- and timing-specific rather than a generic property of zinc-containing supplements.",
+      "summary": "NIH ODS notes that zinc is essential for immune function, growth, protein/DNA synthesis, and wound healing. For the common cold, some lozenge or syrup studies suggest shorter symptom duration when started early, but evidence certainty is low and severity effects are inconsistent.",
+      "studied_context": "Cold studies generally use zinc acetate or gluconate lozenges/syrups at substantially higher short-term intakes than typical multivitamin doses. Those results should not be generalized to ordinary oral powders or capsules.",
+      "safety": "Excess zinc can cause nausea and other adverse effects and can interfere with copper status and some medications. Dose and duration matter.",
+      "product_directness": "D-FENZ KIDS, NOURISH+, V-DAILY, and V-DAILY SACHET list zinc, but their use forms and amounts are not equivalent to studied cold lozenges. A cold-treatment claim would be inappropriate.",
       "products": [
         "d-fenz-kids",
         "nourish-plus",
@@ -591,22 +578,16 @@
           "type": "NIH ODS",
           "title": "Zinc — Health Professional Fact Sheet",
           "url": "https://ods.od.nih.gov/factsheets/Zinc-HealthProfessional/"
-        },
-        {
-          "type": "PubMed systematic review/meta-analysis",
-          "title": "Zinc for prevention or treatment of acute viral respiratory tract infections",
-          "pmid": "34728441",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/34728441/"
         }
       ]
     },
     "vitamin-c": {
       "name": "Vitamin C",
-      "posture": "Essential nutrient with established physiologic roles; routine supplementation does not prevent colds in the general population, though regular use may modestly shorten duration.",
-      "summary": "NIH ODS states that vitamin C is essential for collagen synthesis, antioxidant function, immune function, and nonheme-iron absorption. Regular supplementation at 200 mg/day or more does not appear to reduce cold incidence in the general population, although it can modestly shorten duration; starting vitamin C after symptoms begin does not appear beneficial.",
-      "studied_context": "Cold studies typically evaluate defined vitamin C doses taken regularly. Those results should not be generalized to multi-ingredient products with unknown vitamin C amounts.",
-      "safety": "Vitamin C has relatively low toxicity, but high doses can cause diarrhea, nausea, and abdominal cramps. The adult tolerable upper intake level is 2,000 mg/day; special considerations include kidney-stone risk in susceptible people and interactions during some cancer treatments.",
-      "product_directness": "COLLAGEN COMPLEX, D-FENZ KIDS, GENIUS SHAKE KIDS, V-CURCUMAX, V-GLUTATION, V-NRGY, V-GLUTATION PLUS, and V-DAILY SACHET list vitamin C. Because doses are not consistently published, broad immune or cold-prevention claims cannot be inferred.",
+      "posture": "Essential nutrient with established physiological roles; routine supplementation does not prevent colds in the general population, though it may modestly shorten them.",
+      "summary": "NIH ODS states that vitamin C is required for collagen synthesis and other physiological functions. Regular supplementation generally does not reduce cold incidence in the general population, but may modestly shorten cold duration; taking vitamin C only after symptoms start does not appear beneficial.",
+      "studied_context": "Common-cold evidence often examines regular intake of at least 200 mg/day, with larger effects in people exposed to extreme physical stress or with marginal vitamin C status.",
+      "safety": "High oral doses can cause diarrhea, nausea, and abdominal cramps. The adult tolerable upper intake level is 2,000 mg/day, and high doses can worsen iron overload in people with hemochromatosis.",
+      "product_directness": "Several current products list vitamin C, but most do not publish a dose that can be matched to specific trials. Ingredient presence supports a nutrient-content statement, not a finished-product cold, immune, collagen, or antioxidant efficacy claim.",
       "products": [
         "collagen",
         "d-fenz-kids",
