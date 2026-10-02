@@ -106,6 +106,7 @@ async function handleRequest(request) {
   if (path === '/api/v1') return handleApiIndex(request);
   if (path === '/api/v1/products') return handleApiProducts(request);
   if (path === '/api/v1/ingredients') return handleApiIngredients(request);
+  if (path === '/api/v1/search') return handleApiSearch(request, url);
 
   const apiProductMatch = path.match(/^\/api\/v1\/products\/([a-z0-9-]+)$/);
   if (apiProductMatch) return handleApiProduct(request, apiProductMatch[1]);
@@ -336,6 +337,7 @@ async function handleApiIndex(request) {
       product: '/api/v1/products/{slug}',
       ingredients: '/api/v1/ingredients',
       ingredient: '/api/v1/ingredients/{slug}',
+      search: '/api/v1/search?q={query}',
       openapi: '/openapi.json'
     },
     interpretation: 'Ingredient-level evidence is not automatically finished-product evidence.'
@@ -389,6 +391,42 @@ async function handleApiIngredients(request) {
     related_products: x.products || []
   }));
   return jsonResponse({ count: ingredients.length, ingredients });
+}
+
+async function handleApiSearch(request, url) {
+  if (!apiMethodAllowed(request)) return jsonResponse({ error: 'Method Not Allowed' }, 405);
+  const q = (url.searchParams.get('q') || '').trim().toLowerCase();
+  if (q.length < 2) return jsonResponse({ error: 'Query must contain at least 2 characters' }, 400);
+
+  const [productsData, ingredientData] = await Promise.all([getProductsData(), getIngredientData()]);
+  const productResults = Object.values((productsData && productsData.products) || {})
+    .filter(p => [p.name, p.slug, p.ingredients].some(v => String(v || '').toLowerCase().includes(q)))
+    .slice(0, 20)
+    .map(p => ({
+      type: 'product',
+      slug: p.slug,
+      name: p.name,
+      canonical_url: 'https://supplement-intelligence.com/products/' + p.slug,
+      formulation_status: p.formulationStatus || null,
+      evidence_status: p.evidenceGrade || 'Under Review'
+    }));
+
+  const ingredientResults = Object.entries((ingredientData && ingredientData.ingredients) || {})
+    .filter(([slug, x]) => [slug, x.name, x.posture, x.summary].some(v => String(v || '').toLowerCase().includes(q)))
+    .slice(0, 20)
+    .map(([slug, x]) => ({
+      type: 'ingredient',
+      slug,
+      name: x.name,
+      canonical_url: 'https://supplement-intelligence.com/ingredients/' + slug,
+      evidence_posture: x.posture
+    }));
+
+  return jsonResponse({
+    query: q,
+    count: productResults.length + ingredientResults.length,
+    results: [...ingredientResults, ...productResults]
+  });
 }
 
 async function handleApiIngredient(request, slug) {
