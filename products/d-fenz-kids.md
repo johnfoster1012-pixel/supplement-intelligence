@@ -1,57 +1,33 @@
 ---
 title: "D-FENZ KIDS"
 product_url: "/products/d-fenz-kids"
-ingredients: "Vitamin C; vitamin D; zinc; niacin; magnesium L-threonate; turmeric extract (tetrahydrocurcumin); prebiotic inulin; natural lime flavor"
 category: "kids immune"
 evidence_grade: "Under Review"
-last_updated: "2026-06-11"
+formulation_checked: "2026-10-02"
 ---
 
 # D-FENZ KIDS
 
-## TL;DR
-Consult your pediatrician before giving any supplement to a child.
+## Current formulation
 
-A lime-flavored daily drink combining vitamins C and D, zinc, and niacin with magnesium L-threonate, turmeric extract, and prebiotic inulin - immune and focus support in one glass.
+The ingredient list below was checked against the current manufacturer product page on October 2, 2026:
 
----
+Inulin; natural lime flavor; vitamin C (ascorbic acid); stevia; magnesium L-threonate; niacin (niacinamide); zinc (zinc citrate); tetrahydrocurcumin (from Curcuma longa); vitamin D3 (cholecalciferol)
 
-## Key Ingredients
-Vitamin C; vitamin D; zinc; niacin; magnesium L-threonate; turmeric extract (tetrahydrocurcumin); prebiotic inulin; natural lime flavor
+**Manufacturer formulation source:** https://vitalhealthglobal.com/products/dfence-kids
 
----
+This source is used only to establish the currently published formulation. Manufacturer descriptions are not treated as evidence of efficacy.
 
-## What Does The Research Say?
+## Evidence status
 
-D-FENZ Kids combines vitamins C and D, zinc, and niacin with magnesium L-threonate, turmeric extract, and prebiotic inulin, in a natural lime flavor.
+**Under Review.**
 
-It is intended to support the immune system (vitamins C and D and zinc), support mental focus (magnesium L-threonate), support healthy digestion (inulin), and provide antioxidant support (turmeric and vitamin C).
+Historical product-to-study mappings have been withdrawn. Ingredient-specific and finished-product efficacy claims will be republished only after citation, formulation, dose, population, outcome, and directness checks are complete.
 
-Specific nutrient amounts are pending label verification and are not listed here. This product is not intended to prevent or treat colds, flu, or infections. Supporting research is being reviewed and citation-checked; verified references will be added once confirmed.
+## Commercial disclosure
 
----
+Supplement Intelligence may earn referral credit from purchases made through some product links. Compensation does not determine evidence status.
 
-## Evidence Grade
+## Disclaimer
 
-Evidence review in progress. Grades will be re-issued only with verified citations.
-
----
-
-## PubMed Citations
-
-Citations are being re-verified as part of an ongoing evidence review.
-
----
-
-## Where to Buy
-
-[Shop D-FENZ KIDS at Vital Health Global](https://vitalhealthglobal.com/products/dfence-kids?refID=149983)
-
-Supplement Intelligence is operated in partnership with Vital Health Global and earns referral credit on purchases.
-
----
-
-## Related Products
-
-- [V-ITALBOOST](/products/v-italboost)
-- [SMARTBIOTICS KIDS](/products/smartbiotics-kids)
+For general informational purposes only; not individualized medical advice.
