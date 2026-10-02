@@ -1,7 +1,7 @@
 ---
 title: "V-ITAREN"
 product_url: "/products/v-itaren"
-category: "energy/blood"
+category: "Product formulation"
 evidence_grade: "Under Review"
 formulation_checked: "2026-10-02"
 ---
