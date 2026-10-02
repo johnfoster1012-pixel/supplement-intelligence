@@ -1,7 +1,7 @@
 ---
 title: "V-FORTYFLORA"
 product_url: "/products/v-fortyflora"
-category: "gut health"
+category: "Product formulation"
 evidence_grade: "Under Review"
 formulation_checked: "2026-10-02"
 ---
