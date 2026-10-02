@@ -1,7 +1,7 @@
 ---
 title: "NOURISH PLUS"
 product_url: "/products/nourish-plus"
-category: "women's hormonal health"
+category: "Product formulation"
 evidence_grade: "Under Review"
 formulation_checked: "2026-10-02"
 ---
