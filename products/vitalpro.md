@@ -1,7 +1,7 @@
 ---
 title: "VITALPRO"
 product_url: "/products/vitalpro"
-category: "protein/sports"
+category: "Product formulation"
 evidence_grade: "Under Review"
 formulation_checked: "2026-10-02"
 ---
