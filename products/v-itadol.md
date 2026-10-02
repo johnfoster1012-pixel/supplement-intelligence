@@ -1,7 +1,7 @@
 ---
 title: "V-ITADOL"
 product_url: "/products/v-itadol"
-category: "pain/inflammation"
+category: "Product formulation"
 evidence_grade: "Under Review"
 formulation_checked: "2026-10-02"
 ---
