@@ -18,3 +18,6 @@ Current status:
 Verified ingredient evidence:
 - https://supplement-intelligence.com/ingredients
 - 26 ingredient evidence records are currently published. Each separates ingredient evidence from finished-product directness.
+
+Reviewed ingredient evidence count: 26
+Canonical ingredient index: https://supplement-intelligence.com/ingredients
