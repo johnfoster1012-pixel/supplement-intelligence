@@ -1,7 +1,7 @@
 ---
 title: "PERFORMANCE PLUS"
 product_url: "/products/performance-plus"
-category: "under review"
+category: "Product formulation"
 evidence_grade: "Under Review"
 formulation_checked: "2026-10-02"
 ---
