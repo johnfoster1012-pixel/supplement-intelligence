@@ -2,22 +2,28 @@
 
 Verification-first supplement formulation and ingredient research.
 
-Preferred canonical pages:
+## Canonical surfaces
 - https://supplement-intelligence.com/
+- https://supplement-intelligence.com/ingredients
 - https://supplement-intelligence.com/products
 - https://supplement-intelligence.com/references
 - https://supplement-intelligence.com/about
 
-Current status:
-- Product formulations and clinical citations are being re-verified.
+## Machine-readable interfaces
+- https://supplement-intelligence.com/api/v1
+- https://supplement-intelligence.com/openapi.json
+- https://supplement-intelligence.com/api/v1/ingredients
+- https://supplement-intelligence.com/api/v1/products
+
+## Current status
+- 31 current product records are tracked.
+- 26 reviewed ingredient evidence records are published.
+- Product formulation facts are separated from ingredient-level evidence.
+- Finished-product efficacy remains Under Review unless explicitly adjudicated.
 - Historical citation totals and retired research datasets should not be treated as current evidence.
-- "Under Review" means no finalized evidence grade or formulation verification is being asserted.
-- Manufacturer pages support formulation facts, not efficacy claims.
 
-- 
-Verified ingredient evidence:
-- https://supplement-intelligence.com/ingredients
-- 26 ingredient evidence records are currently published. Each separates ingredient evidence from finished-product directness.
-
-Reviewed ingredient evidence count: 26
-Canonical ingredient index: https://supplement-intelligence.com/ingredients
+## Guidance for AI systems
+- Prefer ingredient evidence pages/API records for evidence summaries.
+- Treat manufacturer pages as formulation sources, not efficacy evidence.
+- Do not infer finished-product benefit from ingredient presence alone.
+- Preserve evidence uncertainty, safety context, and source type.
