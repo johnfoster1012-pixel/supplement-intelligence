@@ -74,3 +74,8 @@ jobs:
           MCP_CODE=$(curl --max-time 20 -s -o /dev/null -w "%{http_code}" "https://mcp.supplement-intelligence.com/mcp" || true)
           echo "/mcp GET -> HTTP $MCP_CODE"
           test "$MCP_CODE" != "404"
+
+      - name: Run MCP protocol smoke test
+        run: npm run smoke
+        env:
+          MCP_URL: https://mcp.supplement-intelligence.com/mcp
