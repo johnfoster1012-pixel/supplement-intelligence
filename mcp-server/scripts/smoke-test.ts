@@ -1,6 +1,6 @@
 import { Client, StreamableHTTPClientTransport } from "@modelcontextprotocol/client";
 
-const endpoint = process.env.MCP_URL ?? "https://mcp.supplement-intelligence.com/mcp";
+const endpoint = "https://mcp.supplement-intelligence.com/mcp";
 const expectedTools = [
   "search_supplement_intelligence",
   "get_ingredient_evidence",
