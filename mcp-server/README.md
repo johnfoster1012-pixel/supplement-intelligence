@@ -7,7 +7,7 @@ This directory contains the remote MCP server for the Supplement Intelligence Ch
 - MCP: https://mcp.supplement-intelligence.com/mcp
 - Health: https://mcp.supplement-intelligence.com/health
 
-The Worker is stateless and read-only. It uses the public Supplement Intelligence API as its source of truth.
+The Worker is stateless and read-only. It reads the verified `products-data.json` and `ingredient-evidence.json` files directly from the repository as its source of truth.
 
 ## Tools
 
