@@ -1,7 +1,7 @@
 ---
 title: "V-LOVKAFE"
 product_url: "/products/v-lovkafe"
-category: "cognitive/coffee"
+category: "Product formulation"
 evidence_grade: "Under Review"
 formulation_checked: "2026-10-02"
 ---
