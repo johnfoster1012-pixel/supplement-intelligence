@@ -12,7 +12,7 @@ const IS_PREVIEW = CONTENT_BRANCH_NAME !== 'main';
 const GITHUB_RAW_BASE = (typeof CONTENT_BASE !== 'undefined' && CONTENT_BASE)
   ? CONTENT_BASE
   : `https://raw.githubusercontent.com/johnfoster1012-pixel/supplement-intelligence/${CONTENT_BRANCH_NAME}/`;
-const VERSION = 'Supplement Intelligence v11';
+const VERSION = 'Supplement Intelligence v11.1';
 
 const VALID_INGREDIENT_SLUGS = new Set([
   'alpha-lipoic-acid',
