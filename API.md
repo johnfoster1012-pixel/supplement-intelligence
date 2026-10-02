@@ -56,3 +56,7 @@ The API allows cross-origin read access for GET/HEAD requests and uses short pub
 ## Plugin preparation
 
 See `plugin/TOOL_DESIGN.md` for the proposed MCP tool surface.
+
+## Deployment status
+
+Deployment health checks verify the API index, search, ingredient, product, and OpenAPI endpoints after each relevant production deploy.
