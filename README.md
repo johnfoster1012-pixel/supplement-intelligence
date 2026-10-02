@@ -19,3 +19,7 @@ Supplement Intelligence may earn referral credit from purchases made through som
 
 ## Disclaimer
 General informational use only; not individualized medical advice.
+
+## Public API
+
+A read-only API is available under `/api/v1`, with an OpenAPI 3.1 contract at `/openapi.json`. See `API.md` and `plugin/TOOL_DESIGN.md`.
