@@ -86,7 +86,9 @@ async function handleRequest(request) {
   if (path === '/articles') return proxyRawText('articles/index.html', 'text/html; charset=utf-8');
   if (path === '/research') return redirect(url, '/articles');
   if (path === '/ingredients') return proxyRawText('ingredients/index.html', 'text/html; charset=utf-8');
-  if (path === '/database') return proxyRawText('database/index.html', 'text/html; charset=utf-8');
+  if (path === '/database') return redirect(url, '/references');
+  if (path === '/about' || path === '/about.html') return proxyRawText('site/about.html', 'text/html; charset=utf-8');
+  if (path === '/references' || path === '/references.html') return proxyRawText('site/references.html', 'text/html; charset=utf-8');
 
   const productMatch = path.match(/^\/products\/([a-z0-9-]+)$/);
   if (productMatch) return handleProduct(url, productMatch[1]);
