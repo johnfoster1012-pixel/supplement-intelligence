@@ -6,7 +6,8 @@
   "scripts": {
     "typecheck": "tsc --noEmit",
     "deploy": "wrangler deploy",
-    "dev": "wrangler dev"
+    "dev": "wrangler dev",
+    "smoke": "tsx scripts/smoke-test.ts"
   },
   "dependencies": {
     "@modelcontextprotocol/server": "^2.0.0",
@@ -14,6 +15,8 @@
   },
   "devDependencies": {
     "typescript": "^5.9.0",
-    "wrangler": "^4.0.0"
+    "wrangler": "^4.0.0",
+    "@modelcontextprotocol/client": "^2.0.0",
+    "tsx": "^4.20.0"
   }
 }
