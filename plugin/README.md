@@ -1,20 +1,35 @@
-# Supplement Intelligence ChatGPT plugin preparation
+# Supplement Intelligence ChatGPT plugin
 
-The website now exposes a stable read-only API intended to support a future MCP plugin.
+Supplement Intelligence now has a dedicated remote MCP Worker backed by the site's verification-first read-only API.
 
-## API
-- /api/v1
-- /api/v1/search?q=
-- /api/v1/products
-- /api/v1/products/{slug}
-- /api/v1/ingredients
-- /api/v1/ingredients/{slug}
-- /openapi.json
+## Remote MCP endpoint
 
-## Current phase
-The MCP server itself is not deployed yet. The next implementation phase is to wrap these endpoints with a small remote MCP server and expose focused read-only tools.
+`https://mcp.supplement-intelligence.com/mcp`
 
-See:
-- plugin/TOOL_DESIGN.md
-- openapi.json
-- docs/EVIDENCE_METHOD.md
+## V1 tools
+
+- `search_supplement_intelligence`
+- `get_ingredient_evidence`
+- `get_product_formulation`
+- `list_reviewed_ingredients`
+
+## Intended user value
+
+The plugin helps people:
+- find reviewed supplement ingredient evidence
+- inspect study context and safety
+- inspect current tracked product formulations
+- understand whether ingredient evidence directly applies to a finished product
+
+It does not provide diagnosis, personalized dosage, treatment recommendations, supplement rankings, or finished-product efficacy conclusions that the underlying evidence has not established.
+
+## Developer-mode test
+
+After the MCP Worker is deployed:
+1. In ChatGPT, enable Developer mode under Settings → Security and login.
+2. Open Plugins and add a new MCP server.
+3. Enter `https://mcp.supplement-intelligence.com/mcp`.
+4. Install the personal plugin.
+5. Test it in a new Work conversation.
+
+See `plugin/TOOL_DESIGN.md` and `mcp-server/README.md`.
