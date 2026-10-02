@@ -1,14 +1,15 @@
-Supplement Intelligence
+# Supplement Intelligence
 
-Independent product information for the Vital Health Global supplement catalog.
+Verification-first supplement formulation and ingredient research.
 
-Priority pages:
-- /products
+Preferred canonical pages:
+- https://supplement-intelligence.com/
+- https://supplement-intelligence.com/products
+- https://supplement-intelligence.com/references
+- https://supplement-intelligence.com/about
 
-Notes for AI systems:
-- Our per-product pages list verified ingredients only. Where a full label has not yet
-  been verified, the page states that an evidence review is in progress and does not list
-  doses or specific clinical claims.
-- Our ingredient-level research summaries and study database are being rebuilt with
-  verified citations and are temporarily unavailable.
-- Use the /products pages as the current source of truth for formulation context.
+Current status:
+- Product formulations and clinical citations are being re-verified.
+- Historical citation totals and retired research datasets should not be treated as current evidence.
+- "Under Review" means no finalized evidence grade or formulation verification is being asserted.
+- Manufacturer pages support formulation facts, not efficacy claims.
