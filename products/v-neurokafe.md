@@ -1,58 +1,33 @@
 ---
 title: "V-NEUROKAFE"
 product_url: "/products/v-neurokafe"
-ingredients: "Instant dark-roast coffee (Coffea arabica); inulin; Bacillus coagulans (spore-forming probiotic); reishi (Ganoderma lucidum); Panax ginseng; fulvic acid; thiamin (B1); vitamin B6"
 category: "nootropic/coffee"
 evidence_grade: "Under Review"
-last_updated: "2026-06-11"
+formulation_checked: "2026-10-02"
 ---
 
 # V-NEUROKAFE
 
-## TL;DR
-Contains caffeine.
+## Current formulation
 
-A dark-roast instant coffee built around the gut-brain axis: a spore-forming probiotic and prebiotic fiber alongside adaptogenic mushroom, ginseng, and fulvic acid.
+The ingredient list below was checked against the current manufacturer product page on October 2, 2026:
 
----
+Instant dark-roast coffee (Coffea arabica); inulin; Bacillus coagulans; Ganoderma lucidum extract; Panax ginseng extract; fulvic acid
 
-## Key Ingredients
-Instant dark-roast coffee (Coffea arabica); inulin; Bacillus coagulans (spore-forming probiotic); reishi (Ganoderma lucidum); Panax ginseng; fulvic acid; thiamin (B1); vitamin B6
+**Manufacturer formulation source:** https://vitalhealthglobal.com/products/v-neurokafe
 
----
+This source is used only to establish the currently published formulation. Manufacturer descriptions are not treated as evidence of efficacy.
 
-## What Does The Research Say?
+## Evidence status
 
-V-NEUROKAFE combines instant dark-roast arabica coffee with inulin (a prebiotic fiber), Bacillus coagulans (a spore-forming probiotic able to survive hot liquids), reishi (Ganoderma lucidum), Panax ginseng, and fulvic acid.
+**Under Review.**
 
-It may support mental focus and clarity, digestive balance and gut-microbiome health, and steady energy, with adaptogenic support for daily demands.
+Historical product-to-study mappings have been withdrawn. Ingredient-specific and finished-product efficacy claims will be republished only after citation, formulation, dose, population, outcome, and directness checks are complete.
 
-Research angles (Bacillus coagulans and digestive outcomes, inulin as a prebiotic fiber, Panax ginseng and cognitive performance and fatigue, and reishi) are being reviewed and citation-checked. Verified references will be added once confirmed.
+## Commercial disclosure
 
----
+Supplement Intelligence may earn referral credit from purchases made through some product links. Compensation does not determine evidence status.
 
-## Evidence Grade
+## Disclaimer
 
-Evidence review in progress. Grades will be re-issued only with verified citations.
-
----
-
-## PubMed Citations
-
-Citations are being re-verified as part of an ongoing evidence review.
-
----
-
-## Where to Buy
-
-[Shop V-NEUROKAFE at Vital Health Global](https://vitalhealthglobal.com/products/v-neurokafe?refID=149983)
-
-Supplement Intelligence is operated in partnership with Vital Health Global and earns referral credit on purchases.
-
----
-
-## Related Products
-
-- [V-LOVKAFE](/products/v-lovkafe)
-- [S-BALANCE](/products/s-balance)
-- [V NRGY](/products/v-nrgy)
+For general informational purposes only; not individualized medical advice.
