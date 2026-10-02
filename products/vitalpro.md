@@ -1,56 +1,33 @@
 ---
 title: "VITALPRO"
 product_url: "/products/vitalpro"
-ingredients: "Whey protein isolate; soy protein isolate; collagen peptides; agave inulin; cinnamon; digestive enzymes; fruit & vegetable blend; functional mushrooms (cordyceps, ganoderma, shiitake); mangosteen and maqui; turmeric; anchovy-derived omega-3; alpha-lipoic acid; AFA algae; coenzyme Q10"
 category: "protein/sports"
 evidence_grade: "Under Review"
-last_updated: "2026-06-11"
+formulation_checked: "2026-10-02"
 ---
 
 # VITALPRO
 
-## TL;DR
-Contains soy, fish (anchovy) and milk (dairy).
+## Current formulation
 
-VITALPRO is a Vital Health Global product. Its verified ingredients include whey protein isolate; soy protein isolate; collagen peptides; agave inulin; cinnamon; digestive enzymes; fruit & vegetable blend; functional mushrooms (cordyceps, ganoderma, shiitake); mangosteen and maqui; turmeric; anchovy-derived omega-3; alpha-lipoic acid; AFA algae; coenzyme Q10. A full evidence review of this product is in progress; ingredient-specific benefit claims and citations have been removed pending verification and will be republished once confirmed.
+The ingredient list below was checked against the current manufacturer product page on October 2, 2026:
 
----
+Whey protein isolate; soy protein isolate; hydrolyzed collagen peptides (grass-fed); agave inulin; cinnamon; amylase; protease; fruit and vegetable blend; cordyceps extract; mangosteen extract; maqui extract; Ganoderma lucidum extract; shiitake extract; turmeric extract (95% curcuminoids); omega-3 powder from anchovy oil; alpha-lipoic acid; AFA algae; coenzyme Q10; natural vanilla flavor; stevia; silica
 
-## Key Ingredients
-Whey protein isolate; soy protein isolate; collagen peptides; agave inulin; cinnamon; digestive enzymes; fruit & vegetable blend; functional mushrooms (cordyceps, ganoderma, shiitake); mangosteen and maqui; turmeric; anchovy-derived omega-3; alpha-lipoic acid; AFA algae; coenzyme Q10
+**Manufacturer formulation source:** https://vitalhealthglobal.com/products/vitalpro
 
----
+This source is used only to establish the currently published formulation. Manufacturer descriptions are not treated as evidence of efficacy.
 
-## What Does The Research Say?
+## Evidence status
 
-Full evidence review in progress.
+**Under Review.**
 
-We are re-verifying this product's ingredient list and the supporting research against the manufacturer's current label and primary sources. Verified, citation-backed information will be republished here once that review is complete.
+Historical product-to-study mappings have been withdrawn. Ingredient-specific and finished-product efficacy claims will be republished only after citation, formulation, dose, population, outcome, and directness checks are complete.
 
----
+## Commercial disclosure
 
-## Evidence Grade
+Supplement Intelligence may earn referral credit from purchases made through some product links. Compensation does not determine evidence status.
 
-Evidence review in progress. Grades will be re-issued only with verified citations.
+## Disclaimer
 
----
-
-## PubMed Citations
-
-Citations are being re-verified as part of an ongoing evidence review.
-
----
-
-## Where to Buy
-
-[Shop VITALPRO at Vital Health Global](https://vitalhealthglobal.com/products/vitalpro?refID=149983)
-
-Supplement Intelligence is operated in partnership with Vital Health Global and earns referral credit on purchases.
-
----
-
-## Related Products
-
-- [V-NITRO](/products/v-nitro)
-- [PERFORMANCE PLUS](/products/performance-plus)
-- [V-ITAREN](/products/v-itaren)
+For general informational purposes only; not individualized medical advice.
