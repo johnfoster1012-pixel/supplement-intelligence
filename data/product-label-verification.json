@@ -1,0 +1,114 @@
+{
+  "generated_at": "2026-10-02",
+  "overall_status": "REVERIFY_ALL",
+  "products": [
+    {
+      "product_slug": "collagen",
+      "verification_status": "needs_reverification"
+    },
+    {
+      "product_slug": "d-fenz-kids",
+      "verification_status": "needs_reverification"
+    },
+    {
+      "product_slug": "genius-shake-kids",
+      "verification_status": "needs_reverification"
+    },
+    {
+      "product_slug": "lattekaffe",
+      "verification_status": "needs_reverification"
+    },
+    {
+      "product_slug": "nourish-plus",
+      "verification_status": "needs_reverification"
+    },
+    {
+      "product_slug": "performance-plus",
+      "verification_status": "needs_reverification"
+    },
+    {
+      "product_slug": "s-balance",
+      "verification_status": "needs_reverification"
+    },
+    {
+      "product_slug": "smartbiotics-kids",
+      "verification_status": "needs_reverification"
+    },
+    {
+      "product_slug": "v-asculax",
+      "verification_status": "needs_reverification"
+    },
+    {
+      "product_slug": "v-control",
+      "verification_status": "needs_reverification"
+    },
+    {
+      "product_slug": "v-curcumax",
+      "verification_status": "needs_reverification"
+    },
+    {
+      "product_slug": "v-daily",
+      "verification_status": "needs_reverification"
+    },
+    {
+      "product_slug": "v-fortyflora",
+      "verification_status": "needs_reverification"
+    },
+    {
+      "product_slug": "v-glutation",
+      "verification_status": "needs_reverification"
+    },
+    {
+      "product_slug": "v-itadol",
+      "verification_status": "needs_reverification"
+    },
+    {
+      "product_slug": "v-italay",
+      "verification_status": "needs_reverification"
+    },
+    {
+      "product_slug": "v-italboost",
+      "verification_status": "needs_reverification"
+    },
+    {
+      "product_slug": "v-itaren",
+      "verification_status": "needs_reverification"
+    },
+    {
+      "product_slug": "v-lovkafe",
+      "verification_status": "needs_reverification"
+    },
+    {
+      "product_slug": "v-neurokafe",
+      "verification_status": "needs_reverification"
+    },
+    {
+      "product_slug": "v-nitro",
+      "verification_status": "needs_reverification"
+    },
+    {
+      "product_slug": "v-nrgy",
+      "verification_status": "needs_reverification"
+    },
+    {
+      "product_slug": "v-omega3",
+      "verification_status": "needs_reverification"
+    },
+    {
+      "product_slug": "v-organex",
+      "verification_status": "needs_reverification"
+    },
+    {
+      "product_slug": "v-tedetox",
+      "verification_status": "needs_reverification"
+    },
+    {
+      "product_slug": "v-thermokafe",
+      "verification_status": "needs_reverification"
+    },
+    {
+      "product_slug": "vitalpro",
+      "verification_status": "needs_reverification"
+    }
+  ]
+}
