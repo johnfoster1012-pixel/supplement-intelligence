@@ -1,0 +1,262 @@
+{
+  "generated_at": "2026-10-02",
+  "methodology_url": "/docs/EVIDENCE_METHOD.md",
+  "note": "Ingredient-level evidence is not automatically finished-product evidence. Product dose, formulation, population, and outcome matching are assessed separately.",
+  "ingredients": {
+    "creatine-monohydrate": {
+      "name": "Creatine monohydrate",
+      "posture": "Strong evidence for specific sports-performance outcomes; product-level directness depends on dose.",
+      "summary": "Numerous human trials support creatine monohydrate for strength, power, training capacity, and repeated high-intensity activity. Evidence is much weaker for endurance performance.",
+      "studied_context": "Common adult research protocols use an optional loading phase followed by about 3–5 g/day, or several weeks of lower daily dosing without loading.",
+      "safety": "NIH ODS reports few safety concerns at typical studied doses in healthy adults; water-related weight gain is common. Individual medical circumstances can change risk.",
+      "product_directness": "PERFORMANCE+ lists creatine monohydrate, but the current manufacturer page does not publish a creatine amount. The site therefore should not claim that the finished product delivers trial-equivalent dosing.",
+      "products": [
+        "performance-plus"
+      ],
+      "sources": [
+        {
+          "type": "NIH ODS",
+          "title": "Dietary Supplements for Exercise and Athletic Performance — Health Professional Fact Sheet",
+          "url": "https://ods.od.nih.gov/factsheets/exerciseandathleticperformance-healthprofessional/"
+        }
+      ]
+    },
+    "omega-3": {
+      "name": "Long-chain omega-3 fatty acids / fish oil",
+      "posture": "Established triglyceride-lowering effect at appropriate EPA/DHA doses; broader cardiovascular outcomes are context-dependent.",
+      "summary": "Long-chain omega-3 supplements can lower triglycerides. NIH ODS notes that high-dose prescription omega-3 therapy is used for elevated triglycerides, while evidence for other cardiovascular endpoints varies by population and dose.",
+      "studied_context": "Clinical effects depend heavily on actual EPA/DHA intake, not simply the presence of fish oil.",
+      "safety": "FDA and EFSA have considered combined EPA+DHA intakes up to about 5 g/day generally safe when used as recommended, though individual risks and medication interactions still matter.",
+      "product_directness": "V-OMEGA3 currently lists Wild Alaska salmon oil but does not publish EPA and DHA amounts on the manufacturer page. A triglyceride-lowering claim cannot be inferred from the ingredient list alone.",
+      "products": [
+        "v-omega3",
+        "nourish-plus",
+        "genius-shake-kids",
+        "vitalpro"
+      ],
+      "sources": [
+        {
+          "type": "NIH ODS",
+          "title": "Omega-3 Fatty Acids — Health Professional Fact Sheet",
+          "url": "https://ods.od.nih.gov/factsheets/Omega3FattyAcids-HealthProfessional/"
+        }
+      ]
+    },
+    "vitamin-d": {
+      "name": "Vitamin D",
+      "posture": "Established nutrient role in calcium/bone physiology and deficiency prevention; many broader supplementation claims remain unproven.",
+      "summary": "Vitamin D is required for calcium absorption and normal bone mineralization. NIH ODS notes that evidence for many non-bone outcomes is inadequate or contradictory, especially in vitamin-D-replete populations.",
+      "studied_context": "Clinical interpretation depends on baseline vitamin D status and dose. Serum 25-hydroxyvitamin D is the usual status marker.",
+      "safety": "Excess supplemental vitamin D can cause hypercalcemia and other serious toxicity. The adult tolerable upper intake level is generally 4,000 IU/day unless medically supervised.",
+      "product_directness": "Several current products list vitamin D3, but their manufacturer pages do not consistently provide dose amounts. Broad immune, metabolic, or performance claims should not be inferred solely from inclusion of vitamin D.",
+      "products": [
+        "d-fenz-kids",
+        "genius-shake-kids",
+        "nourish-plus",
+        "v-daily",
+        "v-italboost",
+        "v-nrgy",
+        "v-omega3"
+      ],
+      "sources": [
+        {
+          "type": "NIH ODS",
+          "title": "Vitamin D — Health Professional Fact Sheet",
+          "url": "https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/"
+        }
+      ]
+    },
+    "magnesium": {
+      "name": "Magnesium",
+      "posture": "Essential nutrient with established physiological roles; supplement benefits depend on baseline status, outcome, form, and dose.",
+      "summary": "Magnesium is essential to many physiological processes. NIH ODS reviews evidence across blood pressure, diabetes, bone health, and migraine, but this does not support a single blanket therapeutic claim for all magnesium products.",
+      "studied_context": "Absorption differs by magnesium salt; citrate, chloride, lactate, and aspartate generally have higher bioavailability than oxide and sulfate.",
+      "safety": "Supplemental magnesium can cause gastrointestinal effects, and excessive amounts can be dangerous, especially with impaired kidney function.",
+      "product_directness": "Several products list magnesium or specific magnesium forms, but dose amounts are often absent. Form-specific cognitive claims, including for magnesium L-threonate, require separate direct evidence.",
+      "products": [
+        "d-fenz-kids",
+        "performance-plus",
+        "smartbiotics-kids",
+        "v-daily",
+        "v-fortyflora",
+        "v-nrgy",
+        "v-organex"
+      ],
+      "sources": [
+        {
+          "type": "NIH ODS",
+          "title": "Magnesium — Health Professional Fact Sheet",
+          "url": "https://ods.od.nih.gov/factsheets/Magnesium-HealthProfessional/"
+        }
+      ]
+    },
+    "probiotics": {
+      "name": "Probiotics",
+      "posture": "Evidence is strain- and indication-specific; generic probiotic claims are not scientifically interchangeable.",
+      "summary": "NIH ODS emphasizes that probiotic effects can be strain-specific. Some GI endpoints show modest benefits for particular strains or combinations, while other conditions have uncertain or negative evidence.",
+      "studied_context": "Species name alone is often insufficient; strain, dose, duration, population, and outcome matter.",
+      "safety": "Usually minor adverse effects in healthy people, but serious infections have been reported in severely ill or immunocompromised people. Special caution is warranted in high-risk populations.",
+      "product_directness": "SMARTBIOTICS KIDS lists named strains, which is more useful than a generic 'probiotic blend,' but product efficacy still requires matching those exact strains and doses to human studies. Other products list probiotics without full dose/CFU information.",
+      "products": [
+        "smartbiotics-kids",
+        "nourish-plus",
+        "v-daily",
+        "v-neurokafe"
+      ],
+      "sources": [
+        {
+          "type": "NIH ODS",
+          "title": "Probiotics — Health Professional Fact Sheet",
+          "url": "https://ods.od.nih.gov/factsheets/Probiotics-HealthProfessional/"
+        }
+      ]
+    },
+    "berberine": {
+      "name": "Berberine",
+      "posture": "Supportive but heterogeneous evidence for glycemic and lipid outcomes in type 2 diabetes; weight-loss evidence is inconclusive.",
+      "summary": "NCCIH reports some evidence that berberine may improve blood glucose, insulin resistance, and lipid measures in people with type 2 diabetes, but study quality, populations, formulations, and effects vary. Evidence for weight loss is not conclusive.",
+      "studied_context": "Published studies use varied formulations and doses, often in people with diabetes or other metabolic disease. Results should not be generalized to all users or all products.",
+      "safety": "Common adverse effects are gastrointestinal. Berberine can interact with medicines and should not be used during pregnancy or breastfeeding or given to infants.",
+      "product_directness": "S-BALANCE and NOURISH+ list berberine, but current manufacturer pages do not establish a trial-equivalent berberine dose. Product-level glucose or weight-loss claims therefore remain unverified.",
+      "products": [
+        "s-balance",
+        "nourish-plus"
+      ],
+      "sources": [
+        {
+          "type": "NCCIH",
+          "title": "Diabetes and Dietary Supplements: What You Need To Know",
+          "url": "https://www.nccih.nih.gov/health/diabetes-and-dietary-supplements-what-you-need-to-know"
+        },
+        {
+          "type": "NCCIH",
+          "title": "Berberine and Weight Loss: What You Need To Know",
+          "url": "https://www.nccih.nih.gov/health/berberine-and-weight-loss-what-you-need-to-know"
+        },
+        {
+          "type": "PubMed systematic review/meta-analysis",
+          "title": "Glucose-lowering effect of berberine on type 2 diabetes",
+          "pmid": "36467075",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36467075/"
+        }
+      ]
+    },
+    "ashwagandha": {
+      "name": "Ashwagandha (Withania somnifera)",
+      "posture": "Some evidence for stress and sleep, but preparation heterogeneity and study quality limit broad conclusions.",
+      "summary": "NCCIH states that some ashwagandha preparations may help stress and insomnia, while evidence for many other promoted uses remains insufficient. Meta-analyses report benefit for stress/anxiety and sleep but also substantial heterogeneity and limitations.",
+      "studied_context": "Trials use different root, leaf, and root/leaf extracts with different standardization and doses, so evidence is not interchangeable across preparations.",
+      "safety": "Short-term use may be tolerated, but long-term safety is unclear. Rare liver injury has been reported. NCCIH advises avoiding use in pregnancy and breastfeeding and notes several potential medication and thyroid/autoimmune concerns.",
+      "product_directness": "NOURISH+ lists ashwagandha but does not publish the extract type, standardization, or dose on the manufacturer page. Trial results cannot be directly assigned to the finished product.",
+      "products": [
+        "nourish-plus"
+      ],
+      "sources": [
+        {
+          "type": "NCCIH",
+          "title": "Ashwagandha: Usefulness and Safety",
+          "url": "https://www.nccih.nih.gov/health/ashwagandha"
+        },
+        {
+          "type": "PubMed meta-analysis",
+          "title": "Effects of Ashwagandha on stress and anxiety",
+          "pmid": "39348746",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39348746/"
+        },
+        {
+          "type": "PubMed meta-analysis",
+          "title": "Effect of Ashwagandha extract on sleep",
+          "pmid": "34559859",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34559859/"
+        }
+      ]
+    },
+    "curcumin": {
+      "name": "Turmeric / curcumin",
+      "posture": "Promising evidence in some outcomes, including osteoarthritis, but formulations vary and authoritative reviews do not support blanket efficacy claims.",
+      "summary": "NCCIH says there is not enough evidence to definitively conclude that turmeric or curcumin is beneficial for any broad health purpose, though research in osteoarthritis and several other areas is active. Meta-analyses of osteoarthritis trials report symptom improvements in some settings.",
+      "studied_context": "Bioavailability varies greatly across curcumin formulations. Evidence from a standardized high-bioavailability extract should not be generalized to ordinary turmeric powder.",
+      "safety": "Conventional oral turmeric/curcumin appears generally tolerated short term, but gastrointestinal adverse effects occur. NCCIH warns that some highly bioavailable formulations have been linked to liver injury.",
+      "product_directness": "Multiple products list turmeric or curcumin-related ingredients, but dose and formulation details are often missing. Finished-product joint, anti-inflammatory, or metabolic claims remain unverified until those details match the studies.",
+      "products": [
+        "v-curcumax",
+        "d-fenz-kids",
+        "nourish-plus",
+        "v-glutation",
+        "v-italboost",
+        "v-nrgy",
+        "vitalpro"
+      ],
+      "sources": [
+        {
+          "type": "NCCIH",
+          "title": "Turmeric: Usefulness and Safety",
+          "url": "https://www.nccih.nih.gov/health/turmeric"
+        },
+        {
+          "type": "PubMed umbrella meta-analysis",
+          "title": "The efficacy of curcumin in relieving osteoarthritis",
+          "pmid": "38576215",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38576215/"
+        }
+      ]
+    },
+    "collagen-peptides": {
+      "name": "Oral collagen peptides",
+      "posture": "Human evidence is mixed and outcome-specific; skin findings are sensitive to study quality/funding, while knee osteoarthritis meta-analysis suggests symptom benefit.",
+      "summary": "Recent reviews of randomized trials report improvements in some skin and osteoarthritis outcomes, but skin evidence becomes much less convincing when analyses focus on higher-quality or non-industry-funded trials. Study products and collagen types vary.",
+      "studied_context": "Hydrolyzed collagen products differ by source, peptide profile, dose, and co-ingredients. Finished-product claims require a match to the studied preparation and dose.",
+      "safety": "Generally well tolerated in trials, but allergen/source issues matter, including fish and bovine sources.",
+      "product_directness": "COLLAGEN COMPLEX contains both bovine and marine collagen plus multiple co-ingredients, but the manufacturer page does not publish a collagen dose. Existing trial results should be presented as ingredient-level evidence, not proof of product efficacy.",
+      "products": [
+        "collagen",
+        "vitalpro"
+      ],
+      "sources": [
+        {
+          "type": "PubMed meta-analysis",
+          "title": "Effects of Collagen Supplements on Skin Aging",
+          "pmid": "40324552",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40324552/"
+        },
+        {
+          "type": "PubMed systematic review/meta-analysis",
+          "title": "Effect of collagen supplementation on knee osteoarthritis",
+          "pmid": "39212129",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39212129/"
+        }
+      ]
+    },
+    "glutathione": {
+      "name": "Oral glutathione",
+      "posture": "Bioavailability is formulation- and duration-dependent; biomarker changes are documented, but clinical health-outcome benefits remain uncertain.",
+      "summary": "Human studies have produced different findings. An older single-dose study found negligible systemic availability, while a 6-month randomized trial reported increased glutathione stores, and newer pharmacokinetic research suggests formulation-dependent absorption.",
+      "studied_context": "Dose, formulation, duration, and outcome matter. Raising a blood or tissue glutathione marker is not itself proof of a clinical benefit.",
+      "safety": "Short-term studies generally report tolerability, but the evidence base for long-term clinical outcomes and formulation-specific safety is limited.",
+      "product_directness": "V-GLUTATION lists glutathione but does not provide a dose or formulation specification on the current manufacturer page. Clinical benefit claims should remain under review.",
+      "products": [
+        "v-glutation"
+      ],
+      "sources": [
+        {
+          "type": "PubMed RCT",
+          "title": "Randomized controlled trial of oral glutathione supplementation on body stores of glutathione",
+          "pmid": "24791752",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/24791752/"
+        },
+        {
+          "type": "PubMed pharmacokinetic study",
+          "title": "The systemic availability of oral glutathione",
+          "pmid": "1362956",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/1362956/"
+        },
+        {
+          "type": "PubMed randomized crossover trial",
+          "title": "A Targeted Metabolomic Assessment of Oral Glutathione Bioavailability and Safety in Humans",
+          "pmid": "41897500",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41897500/"
+        }
+      ]
+    }
+  }
+}
