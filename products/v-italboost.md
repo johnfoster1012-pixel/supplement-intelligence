@@ -1,7 +1,7 @@
 ---
 title: "V-ITALBOOST"
 product_url: "/products/v-italboost"
-category: "immune"
+category: "Product formulation"
 evidence_grade: "Under Review"
 formulation_checked: "2026-10-02"
 ---
