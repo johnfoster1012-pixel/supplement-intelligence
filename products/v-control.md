@@ -1,7 +1,7 @@
 ---
 title: "V-CONTROL"
 product_url: "/products/v-control"
-category: "blood sugar/metabolic"
+category: "Product formulation"
 evidence_grade: "Under Review"
 formulation_checked: "2026-10-02"
 ---
