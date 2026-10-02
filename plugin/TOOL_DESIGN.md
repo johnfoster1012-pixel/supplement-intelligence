@@ -13,8 +13,10 @@ OpenAI's current plugin guidance recommends exposing focused tools that correspo
 ### search_supplement_intelligence
 User goal: Find relevant products or ingredient evidence from natural-language terms.
 
-Backend:
-- GET /api/v1/search?q={query}
+Backend source:
+- `products-data.json`
+- `ingredient-evidence.json`
+- search is performed inside the MCP Worker
 
 Suggested annotation:
 - readOnlyHint: true
@@ -22,8 +24,8 @@ Suggested annotation:
 ### get_ingredient_evidence
 User goal: Understand the evidence, studied context, safety, and source quality for a specific ingredient.
 
-Backend:
-- GET /api/v1/ingredients/{slug}
+Backend source:
+- `ingredient-evidence.json`
 
 Suggested annotation:
 - readOnlyHint: true
@@ -36,8 +38,8 @@ Important response behavior:
 ### get_product_formulation
 User goal: Inspect the current manufacturer-verified formulation status of a tracked product and see which ingredient evidence pages are relevant.
 
-Backend:
-- GET /api/v1/products/{slug}
+Backend source:
+- `products-data.json`
 
 Suggested annotation:
 - readOnlyHint: true
@@ -50,8 +52,8 @@ Important response behavior:
 ### list_reviewed_ingredients
 User goal: Browse the current reviewed evidence library.
 
-Backend:
-- GET /api/v1/ingredients
+Backend source:
+- `ingredient-evidence.json`
 
 Suggested annotation:
 - readOnlyHint: true

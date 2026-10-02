@@ -1,7 +1,7 @@
 import { createMcpHandler, McpServer } from "@modelcontextprotocol/server";
 import * as z from "zod/v4";
 
-const API_BASE = "https://supplement-intelligence.com/api/v1";
+const DATA_BASE = "https://raw.githubusercontent.com/johnfoster1012-pixel/supplement-intelligence/main/";
 const SERVER_NAME = "supplement-intelligence";
 const SERVER_VERSION = "1.0.0";
 
@@ -14,34 +14,39 @@ const readOnlyAnnotations = {
 
 type JsonObject = Record<string, unknown>;
 
-async function fetchJson(path: string): Promise<JsonObject> {
-  const response = await fetch(API_BASE + path, {
+async function fetchJsonFile(path: string): Promise<JsonObject> {
+  const response = await fetch(DATA_BASE + path, {
     headers: {
       "Accept": "application/json",
       "User-Agent": "Supplement-Intelligence-MCP/1.0",
     },
   });
 
-  let payload: unknown = null;
-  try {
-    payload = await response.json();
-  } catch {
-    // handled below
+  if (!response.ok) {
+    throw new Error(`Supplement Intelligence source file returned HTTP ${response.status}: ${path}`);
   }
 
-  if (!response.ok) {
-    const message =
-      payload && typeof payload === "object" && "error" in payload
-        ? String((payload as JsonObject).error)
-        : `Supplement Intelligence API returned HTTP ${response.status}`;
-    throw new Error(message);
+  const text = await response.text();
+  let payload: unknown;
+  try {
+    payload = JSON.parse(text);
+  } catch {
+    throw new Error(`Supplement Intelligence source file was not valid JSON: ${path}`);
   }
 
   if (!payload || typeof payload !== "object" || Array.isArray(payload)) {
-    throw new Error("Supplement Intelligence API returned an invalid response.");
+    throw new Error(`Supplement Intelligence source file had an unexpected shape: ${path}`);
   }
 
   return payload as JsonObject;
+}
+
+async function getProductsDocument(): Promise<JsonObject> {
+  return fetchJsonFile("products-data.json");
+}
+
+async function getIngredientDocument(): Promise<JsonObject> {
+  return fetchJsonFile("ingredient-evidence.json");
 }
 
 function asToolError(error: unknown) {
@@ -101,11 +106,57 @@ function createServer(): McpServer {
     },
     async ({ query }) => {
       try {
-        const data = await fetchJson(`/search?q=${encodeURIComponent(query)}`);
+        const [productsDoc, ingredientDoc] = await Promise.all([
+          getProductsDocument(),
+          getIngredientDocument(),
+        ]);
+
+        const q = query.trim().toLowerCase();
+        const productMap =
+          productsDoc.products && typeof productsDoc.products === "object"
+            ? (productsDoc.products as Record<string, JsonObject>)
+            : {};
+        const ingredientMap =
+          ingredientDoc.ingredients && typeof ingredientDoc.ingredients === "object"
+            ? (ingredientDoc.ingredients as Record<string, JsonObject>)
+            : {};
+
+        const productResults = Object.values(productMap)
+          .filter((p) =>
+            [p.name, p.slug, p.ingredients].some((v) =>
+              String(v ?? "").toLowerCase().includes(q)
+            )
+          )
+          .slice(0, 20)
+          .map((p) => ({
+            type: "product" as const,
+            slug: String(p.slug ?? ""),
+            name: String(p.name ?? ""),
+            canonical_url: `https://supplement-intelligence.com/products/${String(p.slug ?? "")}`,
+            formulation_status: p.formulationStatus == null ? null : String(p.formulationStatus),
+            evidence_status: String(p.evidenceGrade ?? "Under Review"),
+          }));
+
+        const ingredientResults = Object.entries(ingredientMap)
+          .filter(([slug, x]) =>
+            [slug, x.name, x.posture, x.summary].some((v) =>
+              String(v ?? "").toLowerCase().includes(q)
+            )
+          )
+          .slice(0, 20)
+          .map(([slug, x]) => ({
+            type: "ingredient" as const,
+            slug,
+            name: String(x.name ?? slug),
+            canonical_url: `https://supplement-intelligence.com/ingredients/${slug}`,
+            evidence_posture: String(x.posture ?? ""),
+          }));
+
+        const results = [...ingredientResults, ...productResults];
         const output = {
-          query: String(data.query ?? query),
-          count: Number(data.count ?? 0),
-          results: Array.isArray(data.results) ? data.results : [],
+          query: q,
+          count: results.length,
+          results,
         };
         return {
           content: [
@@ -156,10 +207,17 @@ function createServer(): McpServer {
     },
     async ({ slug }) => {
       try {
-        const data = await fetchJson(`/ingredients/${encodeURIComponent(slug)}`);
+        const doc = await getIngredientDocument();
+        const map =
+          doc.ingredients && typeof doc.ingredients === "object"
+            ? (doc.ingredients as Record<string, JsonObject>)
+            : {};
+        const data = map[slug];
+        if (!data) throw new Error("Ingredient not found.");
+
         const output = {
-          slug: String(data.slug ?? slug),
-          canonical_url: String(data.canonical_url ?? `https://supplement-intelligence.com/ingredients/${slug}`),
+          slug,
+          canonical_url: `https://supplement-intelligence.com/ingredients/${slug}`,
           name: String(data.name ?? slug),
           posture: String(data.posture ?? ""),
           summary: String(data.summary ?? ""),
@@ -168,10 +226,8 @@ function createServer(): McpServer {
           product_directness: String(data.product_directness ?? ""),
           products: Array.isArray(data.products) ? data.products.map(String) : [],
           sources: Array.isArray(data.sources) ? data.sources : [],
-          interpretation: String(
-            data.interpretation ??
-              "Ingredient-level evidence is not proof that a finished product has the same effect."
-          ),
+          interpretation:
+            "Ingredient-level evidence is not proof that a finished product has the same effect.",
         };
         return {
           content: [
@@ -225,23 +281,31 @@ function createServer(): McpServer {
     },
     async ({ slug }) => {
       try {
-        const data = await fetchJson(`/products/${encodeURIComponent(slug)}`);
+        const doc = await getProductsDocument();
+        const map =
+          doc.products && typeof doc.products === "object"
+            ? (doc.products as Record<string, JsonObject>)
+            : {};
+        const data = map[slug];
+        if (!data) throw new Error("Product not found.");
+
         const output = {
-          slug: String(data.slug ?? slug),
+          slug,
           name: String(data.name ?? slug),
-          canonical_url: String(data.canonical_url ?? `https://supplement-intelligence.com/products/${slug}`),
+          canonical_url: `https://supplement-intelligence.com/products/${slug}`,
           ingredients: data.ingredients == null ? null : String(data.ingredients),
-          formulation_status: data.formulation_status == null ? null : String(data.formulation_status),
-          formulation_source: data.formulation_source == null ? null : String(data.formulation_source),
-          evidence_status: String(data.evidence_status ?? "Under Review"),
-          evidence_note: data.evidence_note == null ? null : String(data.evidence_note),
-          ingredient_evidence_links: Array.isArray(data.ingredient_evidence_links)
-            ? data.ingredient_evidence_links
+          formulation_status:
+            data.formulationStatus == null ? null : String(data.formulationStatus),
+          formulation_source:
+            data.formulationSource == null ? null : String(data.formulationSource),
+          evidence_status: String(data.evidenceGrade ?? "Under Review"),
+          evidence_note:
+            data.evidenceGradeText == null ? null : String(data.evidenceGradeText),
+          ingredient_evidence_links: Array.isArray(data.ingredientEvidenceLinks)
+            ? data.ingredientEvidenceLinks
             : [],
-          commercial_disclosure: String(
-            data.commercial_disclosure ??
-              "Supplement Intelligence may earn referral credit from some product links."
-          ),
+          commercial_disclosure:
+            "Supplement Intelligence may earn referral credit from some product links.",
         };
         return {
           content: [
@@ -281,10 +345,21 @@ function createServer(): McpServer {
     },
     async () => {
       try {
-        const data = await fetchJson("/ingredients");
+        const doc = await getIngredientDocument();
+        const map =
+          doc.ingredients && typeof doc.ingredients === "object"
+            ? (doc.ingredients as Record<string, JsonObject>)
+            : {};
+        const ingredients = Object.entries(map).map(([slug, x]) => ({
+          slug,
+          name: String(x.name ?? slug),
+          canonical_url: `https://supplement-intelligence.com/ingredients/${slug}`,
+          evidence_posture: String(x.posture ?? ""),
+          related_products: Array.isArray(x.products) ? x.products.map(String) : [],
+        }));
         const output = {
-          count: Number(data.count ?? 0),
-          ingredients: Array.isArray(data.ingredients) ? data.ingredients : [],
+          count: ingredients.length,
+          ingredients,
         };
         return {
           content: [
@@ -315,7 +390,7 @@ export default {
         ok: true,
         service: "supplement-intelligence-mcp",
         version: SERVER_VERSION,
-        api: API_BASE,
+        data_source: DATA_BASE,
       });
     }
 
@@ -323,6 +398,7 @@ export default {
       return Response.json({
         name: "Supplement Intelligence MCP",
         version: SERVER_VERSION,
+        data_source: DATA_BASE,
         mcp_endpoint: "https://mcp.supplement-intelligence.com/mcp",
         health: "https://mcp.supplement-intelligence.com/health",
         tools: [
