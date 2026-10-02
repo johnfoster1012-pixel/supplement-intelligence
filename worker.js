@@ -1,17 +1,9 @@
 /**
- * Supplement Intelligence Worker v9 — content-correction
+ * Supplement Intelligence Worker v10 — verification-first rebuild.
  *
- * Canonical surface: /products/:slug (Worker-rendered from repo data).
- * - 301s known root hub slugs (/:slug/) to /products/:slug (Worker-canonical, Path B).
- * - 301s retired article/ingredient/database URLs to their corrected destinations
- *   (server-side replacement for the interim meta-refresh stubs).
- * - Any path not explicitly handled (including "/") passes through to origin via
- *   fetch(request), so deploying on a /* route can never 404 the homepage.
- *
- * Preview: `wrangler dev --var CONTENT_BRANCH:content-correction` renders branch
- * content; the pass-through returns a text marker locally (fetch(request) to the
- * dev host would self-loop). In production CONTENT_BRANCH is unset: content comes
- * from main and pass-through hits origin.
+ * Canonical surfaces are Worker-rendered product pages and verified ingredient
+ * evidence pages. Historical study/database routes are redirected away from
+ * withdrawn data. The root homepage is price-free and Worker-rendered.
  */
 const CONTENT_BRANCH_NAME = (typeof CONTENT_BRANCH !== 'undefined' && CONTENT_BRANCH) ? CONTENT_BRANCH : 'main';
 const IS_PREVIEW = CONTENT_BRANCH_NAME !== 'main';
@@ -66,9 +58,9 @@ const INGREDIENT_REDIRECTS = new Map([
 
 // Retired study-database pages (fabricated topics).
 const DATABASE_REDIRECTS = new Map([
-  ['berberine-studies', '/products'],
-  ['ashwagandha-studies', '/products'],
-  ['nac-studies', '/products'],
+  ['berberine-studies', '/ingredients/berberine'],
+  ['ashwagandha-studies', '/ingredients/ashwagandha'],
+  ['nac-studies', '/references'],
 ]);
 
 let cache = { template: null, productsData: null, ts: 0 };
