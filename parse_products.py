@@ -38,17 +38,26 @@ def main():
     if products_doc.get("totalProducts") != len(products):
         errors.append("products-data.json totalProducts does not match product count")
 
+    if len(products) != 31:
+        errors.append(f"expected 31 current catalog products, found {len(products)}")
+
     for slug, product in products.items():
         row = ledger.get(slug)
         if not row:
             errors.append(f"{slug}: missing label-verification ledger row")
             continue
 
-        if row.get("verification_status") != "verified_current_manufacturer_page":
-            errors.append(f"{slug}: formulation is not marked verified")
-
-        if row.get("ingredients") != product.get("ingredients"):
-            errors.append(f"{slug}: ingredient list differs between product data and ledger")
+        status = row.get("verification_status")
+        if status == "verified_current_manufacturer_page":
+            if row.get("ingredients") != product.get("ingredients"):
+                errors.append(f"{slug}: ingredient list differs between product data and ledger")
+        elif status == "manufacturer_page_missing_complete_ingredient_panel":
+            if row.get("ingredients") is not None:
+                errors.append(f"{slug}: unverified formulation should not store ledger ingredients")
+            if not product.get("manufacturerDescriptionMentions"):
+                errors.append(f"{slug}: missing-panel record should preserve clearly labeled manufacturer-description mentions")
+        else:
+            errors.append(f"{slug}: unexpected formulation verification status {status!r}")
 
         if not product.get("formulationSource"):
             errors.append(f"{slug}: missing formulationSource")
