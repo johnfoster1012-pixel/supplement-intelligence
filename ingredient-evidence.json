@@ -262,6 +262,396 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/41897500/"
         }
       ]
+    },
+    "caffeine": {
+      "name": "Caffeine",
+      "posture": "Strong evidence for acute ergogenic effects in endurance and some high-intensity/resistance-performance outcomes; effects depend on dose, timing, habitual use, and individual sensitivity.",
+      "summary": "NIH ODS describes numerous clinical trials with mostly consistent findings that caffeine can improve endurance-type and intermittent long-duration performance when taken before activity. Recent meta-analyses also support improvements in aerobic time-trial performance and some resistance-exercise power outcomes.",
+      "studied_context": "Common performance studies use roughly 2–6 mg/kg before exercise, often 15–60 minutes pre-exercise. Higher doses do not necessarily improve results and increase adverse effects.",
+      "safety": "For healthy adults, total caffeine intake around 400 mg/day is generally considered a level not usually associated with dangerous effects, but insomnia, anxiety, restlessness, nausea, tachycardia, and arrhythmia can occur. Combining multiple caffeine sources increases risk.",
+      "product_directness": "LATTEKAFFE, V-LOVKAFE, V-NEUROKAFE, V-NRGY, V-ORGANEX, and V-THERMOKAFE contain coffee, caffeine, guarana, or related caffeine sources. The current manufacturer pages do not publish total caffeine per serving for these products, so trial-equivalent dosing and performance effects cannot be inferred.",
+      "products": [
+        "lattekaffe",
+        "v-lovkafe",
+        "v-neurokafe",
+        "v-nrgy",
+        "v-organex",
+        "v-thermokafe"
+      ],
+      "sources": [
+        {
+          "type": "NIH ODS",
+          "title": "Dietary Supplements for Exercise and Athletic Performance — Health Professional Fact Sheet",
+          "url": "https://ods.od.nih.gov/factsheets/exerciseandathleticperformance-healthprofessional/"
+        },
+        {
+          "type": "PubMed systematic review/meta-analysis",
+          "title": "Dose-Response Effect of Oral Caffeine Use on Aerobic Exercise Performance",
+          "pmid": "42356375",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42356375/"
+        },
+        {
+          "type": "PubMed umbrella review",
+          "title": "Caffeine supplementation and exercise performance",
+          "pmid": "30926628",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30926628/"
+        }
+      ]
+    },
+    "l-theanine": {
+      "name": "L-theanine",
+      "posture": "Possible small acute cognitive/mood benefits, especially when combined with caffeine; magnitude and clinical relevance remain uncertain.",
+      "summary": "A 2025 systematic review/meta-analysis of randomized trials found small-to-moderate differences favoring L-theanine plus caffeine for selected attention, reaction-time, and mood outcomes, with frequent uncertainty in confidence intervals. L-theanine alone showed limited signals for some outcomes.",
+      "studied_context": "Effects in the literature are acute and task-specific, and often studied in combination with caffeine. Dose ratios and timing vary.",
+      "safety": "Short-term trial data generally suggest tolerability, but evidence is not sufficient to support broad therapeutic claims or long-term cognitive-health claims.",
+      "product_directness": "V-NRGY lists L-theanine together with caffeine-containing ingredients, but the manufacturer page does not publish an L-theanine dose or caffeine-to-theanine ratio. Study effects cannot be directly assigned to the finished product.",
+      "products": [
+        "v-nrgy"
+      ],
+      "sources": [
+        {
+          "type": "PubMed systematic review/meta-analysis",
+          "title": "Effects of Tea, L-Theanine, or L-Theanine plus Caffeine on Cognition, Sleep, and Mood",
+          "pmid": "40314930",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40314930/"
+        }
+      ]
+    },
+    "panax-ginseng": {
+      "name": "Panax ginseng",
+      "posture": "Human evidence is mixed and outcome-specific; small signals exist for fatigue and some cognitive outcomes, while athletic-performance evidence is largely negative.",
+      "summary": "NCCIH reports small or preliminary evidence for some cognitive measures in middle-aged adults and a small possible effect on general fatigue, but notes that research on blood-sugar control is conflicting and that most research does not show improved athletic performance.",
+      "studied_context": "Trials use different preparations, ginsenoside concentrations, doses, and populations. 'Panax ginseng' on an ingredient list is not enough to establish equivalence to a studied extract.",
+      "safety": "Short-term oral use up to about 6 months appears reasonably tolerated for most people. Insomnia is common; serious allergic reactions and liver injury are rare. Ginseng may affect blood sugar, clotting, autoimmune conditions, and medications.",
+      "product_directness": "V-LOVKAFE, V-NEUROKAFE, and V-THERMOKAFE list Panax ginseng, but current manufacturer pages do not publish extract standardization or dose. Claims about fatigue, cognition, sexual function, or performance remain indirect.",
+      "products": [
+        "v-lovkafe",
+        "v-neurokafe",
+        "v-thermokafe"
+      ],
+      "sources": [
+        {
+          "type": "NCCIH",
+          "title": "Asian Ginseng: Usefulness and Safety",
+          "url": "https://www.nccih.nih.gov/health/asian-ginseng"
+        },
+        {
+          "type": "NCCIH",
+          "title": "Herb-Drug Interactions: What the Science Says",
+          "url": "https://www.nccih.nih.gov/health/providers/digest/herb-drug-interactions-science"
+        }
+      ]
+    },
+    "l-arginine": {
+      "name": "L-arginine",
+      "posture": "Little evidence that oral arginine meaningfully improves exercise performance in healthy active adults.",
+      "summary": "NIH ODS describes limited and conflicting clinical trials and concludes that arginine generally has little to no effect on strength, endurance, nitric-oxide measures, blood flow, or recovery in healthy active adults.",
+      "studied_context": "Studies have used a wide range, roughly 2–20 g/day. Oral arginine is less efficient than citrulline at raising blood arginine because of intestinal and hepatic metabolism.",
+      "safety": "Short-term use up to about 9 g/day has generally been tolerated in studies; higher doses more often cause gastrointestinal symptoms and may lower blood pressure.",
+      "product_directness": "V-NITRO lists L-arginine but does not publish its amount. The presence of arginine therefore does not support a nitric-oxide, pump, strength, endurance, or recovery claim for the finished product.",
+      "products": [
+        "v-nitro"
+      ],
+      "sources": [
+        {
+          "type": "NIH ODS",
+          "title": "Dietary Supplements for Exercise and Athletic Performance — Arginine",
+          "url": "https://ods.od.nih.gov/factsheets/exerciseandathleticperformance-healthprofessional/"
+        }
+      ]
+    },
+    "l-citrulline": {
+      "name": "L-citrulline / citrulline malate",
+      "posture": "Evidence for exercise performance is mixed; recent meta-analyses do not show robust improvements in aerobic performance or maximal strength.",
+      "summary": "A systematic review/meta-analysis found no significant overall benefit of citrulline on aerobic performance, perceived exertion, oxygen kinetics, or lactate. A separate meta-analysis found no overall strength benefit from citrulline malate in resistance-trained adults. Some acute studies suggest possible effects on repetition performance, but results are not consistent enough for a broad performance claim.",
+      "studied_context": "Citrulline and citrulline malate are not interchangeable; trials use different amounts, malate ratios, and timing. Acute protocols are common.",
+      "safety": "Short-term studies generally report good tolerability, but the safety of higher-dose long-term use is less established.",
+      "product_directness": "V-NITRO lists L-citrulline but does not publish dose or whether it is free L-citrulline versus a citrulline-malate protocol. Trial outcomes cannot be directly assigned to the product.",
+      "products": [
+        "v-nitro"
+      ],
+      "sources": [
+        {
+          "type": "PubMed systematic review/meta-analysis",
+          "title": "Effects of Citrulline Supplementation on Aerobic Exercise Performance",
+          "pmid": "36079738",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36079738/"
+        },
+        {
+          "type": "PubMed systematic review/meta-analysis",
+          "title": "Effects of Citrulline Malate Supplementation on Muscle Strength",
+          "pmid": "34176406",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34176406/"
+        },
+        {
+          "type": "NIH ODS",
+          "title": "Dietary Supplements for Exercise and Athletic Performance — Citrulline",
+          "url": "https://ods.od.nih.gov/factsheets/exerciseandathleticperformance-healthprofessional/"
+        }
+      ]
+    },
+    "glucosamine": {
+      "name": "Glucosamine",
+      "posture": "Knee-osteoarthritis evidence is inconsistent and formulation-specific; major professional guidelines disagree.",
+      "summary": "NCCIH concludes that it remains uncertain whether glucosamine helps knee osteoarthritis symptoms. Some studies and guidelines report possible benefit for particular prescription crystalline glucosamine sulfate preparations, while U.S. rheumatology and OARSI guidelines have recommended against glucosamine because higher-quality evidence has not shown important benefit.",
+      "studied_context": "Glucosamine sulfate and glucosamine hydrochloride should not be assumed equivalent. Product quality and pharmaceutical-grade preparations may materially affect results.",
+      "safety": "Large osteoarthritis studies have not identified major safety problems, but glucosamine may affect blood glucose in some people and has been associated with increased bleeding risk in people using warfarin.",
+      "product_directness": "V-ITADOL lists glucosamine, but its current manufacturer page does not identify the glucosamine salt or dose. Evidence from specific pharmaceutical-grade glucosamine sulfate cannot be assigned to the finished product.",
+      "products": [
+        "v-itadol"
+      ],
+      "sources": [
+        {
+          "type": "NCCIH",
+          "title": "Glucosamine and Chondroitin for Osteoarthritis",
+          "url": "https://www.nccih.nih.gov/health/glucosamine-and-chondroitin-for-osteoarthritis-what-you-need-to-know"
+        }
+      ]
+    },
+    "msm": {
+      "name": "Methylsulfonylmethane (MSM)",
+      "posture": "Limited human evidence suggests possible short-term knee-pain/function benefit, but the evidence is positive rather than definitive and long-term efficacy/safety remain uncertain.",
+      "summary": "Small randomized trials have reported improvements in pain or function in knee osteoarthritis at gram-level daily doses. A systematic review concluded that the more rigorous MSM trials were positive but not definitive, and further efficacy and long-term safety studies were needed. A trial in military trainees did not show preventive benefit for knee pain.",
+      "studied_context": "Positive trials used gram-level MSM dosing for roughly 8–12 weeks. Different combination products and lower doses should not be assumed equivalent.",
+      "safety": "Short-term trials generally report tolerability, but long-term safety data are limited. Evidence from reviews may include industry-linked authors, which should be considered when interpreting certainty.",
+      "product_directness": "V-ASCULAX, V-CURCUMAX, V-DAILY, V-ITADOL, and V-DAILY SACHET list MSM, but current manufacturer pages do not publish MSM dose. The site should not imply osteoarthritis benefit from presence alone.",
+      "products": [
+        "v-asculax",
+        "v-curcumax",
+        "v-daily",
+        "v-itadol",
+        "v-daily-sachet"
+      ],
+      "sources": [
+        {
+          "type": "PubMed systematic review",
+          "title": "Systematic review of DMSO and MSM in osteoarthritis",
+          "pmid": "18417375",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/18417375/"
+        },
+        {
+          "type": "PubMed randomized trial",
+          "title": "Efficacy of MSM in osteoarthritis pain of the knee",
+          "pmid": "16309928",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/16309928/"
+        },
+        {
+          "type": "PubMed randomized trial",
+          "title": "MSM versus placebo to prevent knee pain in military trainees",
+          "pmid": "29214616",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29214616/"
+        }
+      ]
+    },
+    "valerian": {
+      "name": "Valerian",
+      "posture": "Evidence for insomnia is inconsistent; authoritative guidance does not support valerian as an established treatment for chronic insomnia.",
+      "summary": "NCCIH states there is not enough evidence to determine whether valerian is useful for any health condition. Sleep trials have inconsistent results, and the American Academy of Sleep Medicine recommended against valerian for chronic insomnia in adults.",
+      "studied_context": "Short-term studies have often used about 300–600 mg/day, but preparations vary and the mechanism is not well standardized.",
+      "safety": "Short-term use appears generally tolerated for most adults, but long-term safety is unknown. Sedation, headache, stomach upset, vivid dreams, and rare liver injury have been reported. Valerian should not be combined casually with alcohol or sedatives.",
+      "product_directness": "V-ITALAY lists valerian but does not publish dose or extract standardization. A general 'sleep support' claim should therefore remain under review.",
+      "products": [
+        "v-italay"
+      ],
+      "sources": [
+        {
+          "type": "NCCIH",
+          "title": "Valerian: Usefulness and Safety",
+          "url": "https://www.nccih.nih.gov/health/valerian"
+        }
+      ]
+    },
+    "echinacea": {
+      "name": "Echinacea",
+      "posture": "May slightly reduce the chance of developing a cold; evidence that it shortens cold duration is unclear.",
+      "summary": "NCCIH reports that taking echinacea may slightly reduce the chance of catching a cold, but it remains unclear whether it shortens the duration of a cold. Evidence for other promoted uses is insufficient.",
+      "studied_context": "Echinacea species, plant parts, extraction methods, and preparations vary substantially across studies.",
+      "safety": "Short-term use is likely safe for most adults, but allergic reactions can occur and may be severe. Digestive symptoms are common; interactions with immunosuppressants, caffeine, and some liver-metabolized drugs are possible.",
+      "product_directness": "V-ITALBOOST lists echinacea but does not publish species, extract type, or dose. The product should not be described as preventing or treating respiratory infections based on echinacea alone.",
+      "products": [
+        "v-italboost"
+      ],
+      "sources": [
+        {
+          "type": "NCCIH",
+          "title": "Echinacea: Usefulness and Safety",
+          "url": "https://www.nccih.nih.gov/health/echinacea"
+        }
+      ]
+    },
+    "senna": {
+      "name": "Senna / sennosides",
+      "posture": "Established stimulant laxative for short-term constipation; this does not establish a 'detox' benefit.",
+      "summary": "MedlinePlus identifies senna as a stimulant laxative used short term for constipation and bowel evacuation. It increases intestinal activity to produce a bowel movement, typically within 6–12 hours.",
+      "studied_context": "Evidence and regulated OTC use relate to laxation/constipation, not removal of toxins, liver detoxification, or chronic digestive cleansing.",
+      "safety": "MedlinePlus advises not using senna for more than one week without medical guidance. Cramping, nausea, stomach discomfort, dependence with frequent/continued use, and medication interactions are important considerations.",
+      "product_directness": "V-TEDETOX contains senna leaf and senna extract, but the manufacturer page does not provide sennoside dose. The evidence supports a laxative mechanism, not the broader 'detox' positioning.",
+      "products": [
+        "v-tedetox"
+      ],
+      "sources": [
+        {
+          "type": "MedlinePlus",
+          "title": "Senna Drug Information",
+          "url": "https://medlineplus.gov/druginfo/meds/a601112.html"
+        },
+        {
+          "type": "Clinical practice guideline",
+          "title": "AGA-ACG Guideline: Pharmacological Management of Chronic Idiopathic Constipation",
+          "pmid": "37204227",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37204227/"
+        }
+      ]
+    },
+    "milk-thistle": {
+      "name": "Milk thistle (silymarin)",
+      "posture": "Insufficient high-quality evidence to conclude that milk thistle treats liver disease; human findings are inconsistent.",
+      "summary": "NCCIH states there is not enough high-quality evidence to reach definite conclusions about milk thistle. Trials in multiple liver diseases have been conflicting or too limited, including NCCIH-funded studies that did not show benefit for hepatitis C or NASH.",
+      "studied_context": "Milk-thistle extracts vary substantially in silymarin composition, standardization, and product quality. Results from one extract should not be generalized to all milk-thistle ingredients.",
+      "safety": "Oral milk thistle is generally well tolerated, with gastrointestinal effects most common. Allergic reactions can occur, and NCCIH notes quality concerns including mislabeled silymarin content and contamination in some products.",
+      "product_directness": "V-ORGANEX and V-TEDETOX list milk thistle, but current manufacturer pages do not provide a standardized silymarin amount. Liver or detoxification efficacy should not be inferred from inclusion.",
+      "products": [
+        "v-organex",
+        "v-tedetox"
+      ],
+      "sources": [
+        {
+          "type": "NCCIH",
+          "title": "Milk Thistle: Usefulness and Safety",
+          "url": "https://www.nccih.nih.gov/health/milk-thistle"
+        }
+      ]
+    },
+    "alpha-lipoic-acid": {
+      "name": "Alpha-lipoic acid (ALA)",
+      "posture": "Evidence does not support ALA as a general blood-sugar/lipid treatment; diabetic-neuropathy pain evidence is mixed.",
+      "summary": "NCCIH reports that a 2019 review found ALA no better than placebo for blood sugar, cholesterol, or triglycerides in type 2 diabetes. Reviews of diabetic neuropathy have produced inconsistent results, though some analyses suggest pain reduction.",
+      "studied_context": "Most clinically relevant ALA trials involve people with diabetes or diabetic neuropathy. Those findings should not be generalized to healthy users or broad 'metabolic support' claims.",
+      "safety": "Large reviews generally find ALA reasonably tolerated; common side effects include headache, heartburn, nausea, and vomiting.",
+      "product_directness": "NOURISH PLUS, S-BALANCE, and VITALPRO list ALA, but current manufacturer pages do not publish ALA dose. Finished-product glucose, neuropathy, or metabolic claims remain unverified.",
+      "products": [
+        "nourish-plus",
+        "s-balance",
+        "vitalpro"
+      ],
+      "sources": [
+        {
+          "type": "NCCIH",
+          "title": "Diabetes and Dietary Supplements: What You Need To Know",
+          "url": "https://www.nccih.nih.gov/health/diabetes-and-dietary-supplements-what-you-need-to-know"
+        }
+      ]
+    },
+    "coenzyme-q10": {
+      "name": "Coenzyme Q10 (CoQ10)",
+      "posture": "Evidence is condition-specific and mixed; it does not support a general energy, performance, or cardiovascular-prevention claim.",
+      "summary": "NCCIH describes evidence for heart-disease prevention, heart failure, statin-associated muscle pain, blood pressure, and Parkinson's disease as inconclusive or negative overall. A newer 2024 meta-analysis of randomized heart-failure trials reported reductions in mortality/hospitalization, but evidence quality varied across outcomes and this finding applies to heart-failure populations, not healthy consumers.",
+      "studied_context": "CoQ10 trials differ in dose, formulation, background therapy, and disease severity. Cardiovascular-disease treatment findings should not be generalized to general wellness products.",
+      "safety": "Reported serious side effects are uncommon; mild insomnia or gastrointestinal effects can occur. CoQ10 may interact with warfarin, insulin, and some cancer therapies.",
+      "product_directness": "NOURISH PLUS, V-DAILY, VITALPRO, and V-DAILY SACHET list CoQ10 without a published dose or formulation. Finished-product cardiovascular or energy claims are therefore indirect.",
+      "products": [
+        "nourish-plus",
+        "v-daily",
+        "vitalpro",
+        "v-daily-sachet"
+      ],
+      "sources": [
+        {
+          "type": "NCCIH",
+          "title": "Coenzyme Q10",
+          "url": "https://www.nccih.nih.gov/health/coenzyme-q10"
+        },
+        {
+          "type": "PubMed meta-analysis",
+          "title": "Efficacy and safety of coenzyme Q10 in heart failure",
+          "pmid": "39462324",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39462324/"
+        }
+      ]
+    },
+    "resveratrol": {
+      "name": "Resveratrol",
+      "posture": "Human evidence is heterogeneous and does not establish an anti-aging or longevity benefit; some cardiometabolic biomarkers may improve in selected populations.",
+      "summary": "Meta-analyses of randomized trials report modest improvements in some cardiometabolic markers in people with metabolic syndrome, but results vary by population and protocol. A 2025 meta-analysis found no significant overall effect of resveratrol on human SIRT1 gene expression, protein expression, or serum levels, undermining simplistic 'SIRT1 activation equals anti-aging' claims.",
+      "studied_context": "Human trials vary greatly in dose, formulation, duration, health status, and outcome. Biomarker changes are not equivalent to demonstrated reductions in disease events or slower aging.",
+      "safety": "Human trials generally report reasonable tolerability, but gastrointestinal effects increase at higher doses and long-term efficacy/safety remain incompletely established. Reviews note poor bioavailability and substantial protocol-dependent variability.",
+      "product_directness": "COLLAGEN COMPLEX and NOURISH PLUS list resveratrol without a published dose. The current evidence does not justify assigning anti-aging, longevity, or cardiometabolic treatment effects to these finished products.",
+      "products": [
+        "collagen",
+        "nourish-plus"
+      ],
+      "sources": [
+        {
+          "type": "PubMed systematic review",
+          "title": "Resveratrol for the Management of Human Health: Gaps and Opportunities",
+          "pmid": "38255828",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38255828/"
+        },
+        {
+          "type": "PubMed meta-analysis",
+          "title": "Usefulness of resveratrol supplementation in cardiometabolic risk factors",
+          "pmid": "32529112",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32529112/"
+        },
+        {
+          "type": "PubMed meta-analysis",
+          "title": "Impact of Resveratrol Supplementation on Human Sirtuin 1",
+          "pmid": "40158656",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40158656/"
+        }
+      ]
+    },
+    "zinc": {
+      "name": "Zinc",
+      "posture": "Essential nutrient with established deficiency-related roles; cold-treatment effects are formulation- and dose-specific and should not be generalized to ordinary supplement blends.",
+      "summary": "NIH ODS describes zinc as essential for enzyme activity, immune function, protein/DNA synthesis, wound healing, growth, and cell signaling. Meta-analyses of oral zinc for acute respiratory infections/common colds suggest that some formulations, particularly lozenges, may shorten illness duration, but results are heterogeneous and depend on formulation and dose.",
+      "studied_context": "Cold-treatment trials often use lozenges and elemental-zinc exposures very different from multivitamin or powder formulations. Nutritional adequacy is distinct from therapeutic-dose cold treatment.",
+      "safety": "The adult tolerable upper intake level is 40 mg/day. Chronic intakes around 50 mg/day or more can impair copper absorption and may reduce immune function and HDL cholesterol; nausea and gastrointestinal effects also occur.",
+      "product_directness": "D-FENZ KIDS, NOURISH PLUS, V-DAILY, and V-DAILY SACHET list zinc but are not zinc-lozenge cold-treatment products, and current pages do not consistently publish zinc dose. Cold-duration findings should not be assigned to these products.",
+      "products": [
+        "d-fenz-kids",
+        "nourish-plus",
+        "v-daily",
+        "v-daily-sachet"
+      ],
+      "sources": [
+        {
+          "type": "NIH ODS",
+          "title": "Zinc — Health Professional Fact Sheet",
+          "url": "https://ods.od.nih.gov/factsheets/Zinc-HealthProfessional/"
+        },
+        {
+          "type": "PubMed systematic review/meta-analysis",
+          "title": "Zinc for prevention or treatment of acute viral respiratory tract infections",
+          "pmid": "34728441",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34728441/"
+        }
+      ]
+    },
+    "vitamin-c": {
+      "name": "Vitamin C",
+      "posture": "Essential nutrient with established physiologic roles; routine supplementation does not prevent colds in the general population, though regular use may modestly shorten duration.",
+      "summary": "NIH ODS states that vitamin C is essential for collagen synthesis, antioxidant function, immune function, and nonheme-iron absorption. Regular supplementation at 200 mg/day or more does not appear to reduce cold incidence in the general population, although it can modestly shorten duration; starting vitamin C after symptoms begin does not appear beneficial.",
+      "studied_context": "Cold studies typically evaluate defined vitamin C doses taken regularly. Those results should not be generalized to multi-ingredient products with unknown vitamin C amounts.",
+      "safety": "Vitamin C has relatively low toxicity, but high doses can cause diarrhea, nausea, and abdominal cramps. The adult tolerable upper intake level is 2,000 mg/day; special considerations include kidney-stone risk in susceptible people and interactions during some cancer treatments.",
+      "product_directness": "COLLAGEN COMPLEX, D-FENZ KIDS, GENIUS SHAKE KIDS, V-CURCUMAX, V-GLUTATION, V-NRGY, V-GLUTATION PLUS, and V-DAILY SACHET list vitamin C. Because doses are not consistently published, broad immune or cold-prevention claims cannot be inferred.",
+      "products": [
+        "collagen",
+        "d-fenz-kids",
+        "genius-shake-kids",
+        "v-curcumax",
+        "v-glutation",
+        "v-nrgy",
+        "v-glutation-plus",
+        "v-daily-sachet"
+      ],
+      "sources": [
+        {
+          "type": "NIH ODS",
+          "title": "Vitamin C — Health Professional Fact Sheet",
+          "url": "https://ods.od.nih.gov/factsheets/VitaminC-HealthProfessional/"
+        }
+      ]
     }
   }
 }
