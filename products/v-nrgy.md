@@ -1,56 +1,33 @@
 ---
 title: "V NRGY"
 product_url: "/products/v-nrgy"
-ingredients: "Caffeine from green-coffee bean; L-theanine; L-carnitine; DMAE; quercetin; green tea extract; guarana; saffron; pine-bark extract; turmeric (standardized to curcuminoids); vitamin C; vitamins B1, B3, B6, B7 and B12; vitamin D3; magnesium; chromium; cayenne; orange"
-category: ""
+category: "under review"
 evidence_grade: "Under Review"
-last_updated: "2026-06-11"
+formulation_checked: "2026-10-02"
 ---
 
 # V NRGY
 
-## TL;DR
-Contains caffeine from multiple sources.
+## Current formulation
 
-V NRGY is a Vital Health Global product. Its verified ingredients include caffeine from green-coffee bean; L-theanine; L-carnitine; DMAE; quercetin; green tea extract; guarana; saffron; pine-bark extract; turmeric (standardized to curcuminoids); vitamin C; vitamins B1, B3, B6, B7 and B12; vitamin D3; magnesium; chromium; cayenne; orange. A full evidence review of this product is in progress; ingredient-specific benefit claims and citations have been removed pending verification and will be republished once confirmed.
+The ingredient list below was checked against the current manufacturer product page on October 2, 2026:
 
----
+Orange powder; orange flavor; guar gum; citric acid; DMAE; natural caffeine from green coffee bean extract; vitamin C; silicon dioxide; L-carnitine tartrate; turmeric root extract (95% curcuminoids); vitamin D3; niacin; quercetin; L-theanine; green tea extract; guarana extract; green coffee bean extract; pine bark extract; saffron extract; stevia; magnesium citrate; chromium picolinate; cayenne pepper extract; vitamin B6; biotin; vitamin B12; thiamine
 
-## Key Ingredients
-Caffeine from green-coffee bean; L-theanine; L-carnitine; DMAE; quercetin; green tea extract; guarana; saffron; pine-bark extract; turmeric (standardized to curcuminoids); vitamin C; vitamins B1, B3, B6, B7 and B12; vitamin D3; magnesium; chromium; cayenne; orange
+**Manufacturer formulation source:** https://vitalhealthglobal.com/products/v-nrgy
 
----
+This source is used only to establish the currently published formulation. Manufacturer descriptions are not treated as evidence of efficacy.
 
-## What Does The Research Say?
+## Evidence status
 
-Full evidence review in progress.
+**Under Review.**
 
-We are re-verifying this product's ingredient list and the supporting research against the manufacturer's current label and primary sources. Verified, citation-backed information will be republished here once that review is complete.
+Historical product-to-study mappings have been withdrawn. Ingredient-specific and finished-product efficacy claims will be republished only after citation, formulation, dose, population, outcome, and directness checks are complete.
 
----
+## Commercial disclosure
 
-## Evidence Grade
+Supplement Intelligence may earn referral credit from purchases made through some product links. Compensation does not determine evidence status.
 
-Evidence review in progress. Grades will be re-issued only with verified citations.
+## Disclaimer
 
----
-
-## PubMed Citations
-
-Citations are being re-verified as part of an ongoing evidence review.
-
----
-
-## Where to Buy
-
-[Shop V NRGY at Vital Health Global](https://vitalhealthglobal.com/products/v-nrgy?refID=149983)
-
-Supplement Intelligence is operated in partnership with Vital Health Global and earns referral credit on purchases.
-
----
-
-## Related Products
-
-- [V-ITALAY](/products/v-italay)
-- [V-LOVKAFE](/products/v-lovkafe)
-- [V-NITRO](/products/v-nitro)
+For general informational purposes only; not individualized medical advice.
