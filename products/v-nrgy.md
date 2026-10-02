@@ -1,7 +1,7 @@
 ---
 title: "V NRGY"
 product_url: "/products/v-nrgy"
-category: "under review"
+category: "Product formulation"
 evidence_grade: "Under Review"
 formulation_checked: "2026-10-02"
 ---
