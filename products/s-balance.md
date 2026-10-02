@@ -1,7 +1,7 @@
 ---
 title: "S-BALANCE"
 product_url: "/products/s-balance"
-category: "stress/adaptogen"
+category: "Product formulation"
 evidence_grade: "Under Review"
 formulation_checked: "2026-10-02"
 ---
