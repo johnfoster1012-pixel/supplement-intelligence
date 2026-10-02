@@ -1,114 +1,304 @@
 {
   "generated_at": "2026-10-02",
-  "overall_status": "REVERIFY_ALL",
+  "source_policy": "Verified against the current Vital Health Global product page. This verifies formulation text only, not efficacy, dosage adequacy, or clinical benefit.",
+  "overall_status": "CURRENT_MANUFACTURER_PAGES_CHECKED",
   "products": [
     {
       "product_slug": "collagen",
-      "verification_status": "needs_reverification"
+      "product_name": "COLLAGEN COMPLEX",
+      "manufacturer_url": "https://vitalhealthglobal.com/products/vitalage-collagen",
+      "checked_at": "2026-10-02",
+      "source_type": "manufacturer_product_page",
+      "verification_status": "verified_current_manufacturer_page",
+      "ingredients": "Hydrolyzed bovine collagen peptides (types I, II, III; grass-fed); hydrolyzed marine collagen peptides (fish); natural raspberry flavor; organic dehydrated beet powder; bone and connective-tissue broth powder; vitamin C; vitamin E; resveratrol; stevia; biotin; hyaluronic acid; astaxanthin; black pepper extract (95% piperine); nicotinamide adenine dinucleotide (NAD)",
+      "evidence_status": "under_review",
+      "notes": ""
     },
     {
       "product_slug": "d-fenz-kids",
-      "verification_status": "needs_reverification"
+      "product_name": "D-FENZ KIDS",
+      "manufacturer_url": "https://vitalhealthglobal.com/products/dfence-kids",
+      "checked_at": "2026-10-02",
+      "source_type": "manufacturer_product_page",
+      "verification_status": "verified_current_manufacturer_page",
+      "ingredients": "Inulin; natural lime flavor; vitamin C (ascorbic acid); stevia; magnesium L-threonate; niacin (niacinamide); zinc (zinc citrate); tetrahydrocurcumin (from Curcuma longa); vitamin D3 (cholecalciferol)",
+      "evidence_status": "under_review",
+      "notes": ""
     },
     {
       "product_slug": "genius-shake-kids",
-      "verification_status": "needs_reverification"
+      "product_name": "GENIUS SHAKE KIDS",
+      "manufacturer_url": "https://vitalhealthglobal.com/products/genius-shake",
+      "checked_at": "2026-10-02",
+      "source_type": "manufacturer_product_page",
+      "verification_status": "verified_current_manufacturer_page",
+      "ingredients": "Allulose; whey protein isolate; coconut powder; inulin; cocoa powder; vitamin A; vitamin C; calcium; iron; spinach; carrot; red pitahaya; sweet potato; orange; banana; mango; noni; mangosteen; strawberry; maitake; shiitake; grape; blueberry; kiwi; vitamin E; niacin; pantothenic acid; omega-6; omega-3; vitamin B6; thiamin; folate; vitamin K; vitamin D3; biotin; vitamin B12",
+      "evidence_status": "under_review",
+      "notes": ""
     },
     {
       "product_slug": "lattekaffe",
-      "verification_status": "needs_reverification"
+      "product_name": "LATTEKAFFE",
+      "manufacturer_url": "https://vitalhealthglobal.com/products/lattekaffe",
+      "checked_at": "2026-10-02",
+      "source_type": "manufacturer_product_page",
+      "verification_status": "verified_current_manufacturer_page",
+      "ingredients": "Instant roasted black coffee (Coffea arabica); Lion's Mane; Cordyceps; King Oyster; Reishi; Turkey Tail; Almond Mushroom; Chaga; Maitake; Shiitake; Antrodia; black pepper; biotin (vitamin B7); MCT oil; coconut cream",
+      "evidence_status": "under_review",
+      "notes": ""
     },
     {
       "product_slug": "nourish-plus",
-      "verification_status": "needs_reverification"
+      "product_name": "NOURISH PLUS",
+      "manufacturer_url": "https://vitalhealthglobal.com/products/nourish",
+      "checked_at": "2026-10-02",
+      "source_type": "manufacturer_product_page",
+      "verification_status": "verified_current_manufacturer_page",
+      "ingredients": "Pea protein; rice protein; hemp protein; pumpkin-seed protein; coconut milk; MCT powder; cordyceps; mangosteen; shiitake; maca; ashwagandha; turkey tail; chaga; holy basil; ginger; beetroot; strawberry; mango; green apple; blueberry; noni; dragon fruit; banana; tomato; grape; camu camu; kale; goji berry; cherry; chlorella; moringa; spirulina; alpha-lipoic acid; resveratrol; maqui berry; broccoli; reishi; coenzyme Q10; quercetin; Lactobacillus plantarum; L. rhamnosus; L. casei; Bifidobacterium lactis; B. adolescentis; B. longum; berberine HCl; turmeric; spinach; green tea extract; bitter melon; protease; amylase; AFA algae; omega-3; vitamins A, C, D, E and K; thiamine; riboflavin; niacin; vitamin B6; folate; vitamin B12; biotin; pantothenic acid; calcium; iodine; magnesium; zinc; selenium; copper; manganese; chromium; cacao powder; chia powder; sunflower lecithin; stevia",
+      "evidence_status": "under_review",
+      "notes": ""
     },
     {
       "product_slug": "performance-plus",
-      "verification_status": "needs_reverification"
+      "product_name": "PERFORMANCE PLUS",
+      "manufacturer_url": "https://vitalhealthglobal.com/products/performance",
+      "checked_at": "2026-10-02",
+      "source_type": "manufacturer_product_page",
+      "verification_status": "verified_current_manufacturer_page",
+      "ingredients": "Magnesium glycinate; magnesium L-threonate; magnesium citrate; potassium citrate; sodium chloride; L-leucine; L-phenylalanine; L-lysine; L-threonine; L-valine; L-isoleucine; L-histidine; L-methionine; creatine monohydrate; myo-inositol; cherry pulp; guar gum; stevia",
+      "evidence_status": "under_review",
+      "notes": ""
     },
     {
       "product_slug": "s-balance",
-      "verification_status": "needs_reverification"
+      "product_name": "S-BALANCE",
+      "manufacturer_url": "https://vitalhealthglobal.com/products/s-balance",
+      "checked_at": "2026-10-02",
+      "source_type": "manufacturer_product_page",
+      "verification_status": "verified_current_manufacturer_page",
+      "ingredients": "Berberine (Berberis vulgaris); cranberry; fenugreek; alpha-lipoic acid (ALA); cinnamon bark extract; gelatin capsule; silica",
+      "evidence_status": "under_review",
+      "notes": "Previous repo formulation conflicted materially with the current manufacturer page."
     },
     {
       "product_slug": "smartbiotics-kids",
-      "verification_status": "needs_reverification"
+      "product_name": "SMARTBIOTICS KIDS",
+      "manufacturer_url": "https://vitalhealthglobal.com/products/smartbiotics",
+      "checked_at": "2026-10-02",
+      "source_type": "manufacturer_product_page",
+      "verification_status": "verified_current_manufacturer_page",
+      "ingredients": "Mango pulp; inulin; stevia; magnesium L-threonate; choline L-bitartrate; Lactobacillus rhamnosus GG; Bifidobacterium lactis Bl-04; L. gasseri; L. reuteri; L. casei; L. acidophilus; B. breve; B. longum; L. paracasei; B. infantis; Lion's Mane; amylase; lipase; protease; galactooligosaccharides",
+      "evidence_status": "under_review",
+      "notes": ""
     },
     {
       "product_slug": "v-asculax",
-      "verification_status": "needs_reverification"
+      "product_name": "V-ASCULAX",
+      "manufacturer_url": "https://vitalhealthglobal.com/products/v-asculax",
+      "checked_at": "2026-10-02",
+      "source_type": "manufacturer_product_page",
+      "verification_status": "verified_current_manufacturer_page",
+      "ingredients": "Artichoke; rosemary; MSM (methylsulfonylmethane); horsetail; rue; witch hazel",
+      "evidence_status": "under_review",
+      "notes": ""
     },
     {
       "product_slug": "v-control",
-      "verification_status": "needs_reverification"
+      "product_name": "V-CONTROL",
+      "manufacturer_url": "https://vitalhealthglobal.com/products/v-control",
+      "checked_at": "2026-10-02",
+      "source_type": "manufacturer_product_page",
+      "verification_status": "verified_current_manufacturer_page",
+      "ingredients": "Lemon balm fruit extract; spirulina algae extract; acerola fruit powder; nopal leaf powder; silica",
+      "evidence_status": "under_review",
+      "notes": "Previous repo formulation included tejocote, which is not listed on the current manufacturer page."
     },
     {
       "product_slug": "v-curcumax",
-      "verification_status": "needs_reverification"
+      "product_name": "V-CURCUMAX",
+      "manufacturer_url": "https://vitalhealthglobal.com/products/v-curcumax",
+      "checked_at": "2026-10-02",
+      "source_type": "manufacturer_product_page",
+      "verification_status": "verified_current_manufacturer_page",
+      "ingredients": "Turmeric; MSM (methylsulfonylmethane); chondroitin; vitamin C; selenium",
+      "evidence_status": "under_review",
+      "notes": ""
     },
     {
       "product_slug": "v-daily",
-      "verification_status": "needs_reverification"
+      "product_name": "V-DAILY",
+      "manufacturer_url": "https://vitalhealthglobal.com/products/v-daily",
+      "checked_at": "2026-10-02",
+      "source_type": "manufacturer_product_page",
+      "verification_status": "verified_current_manufacturer_page",
+      "ingredients": "Vitamins A, C, D3, E and K; thiamin; riboflavin; niacin; vitamin B6; folate (L-5-methyltetrahydrofolate); vitamin B12 (methylcobalamin); biotin; pantothenic acid; calcium; iron; magnesium; zinc; iodine; copper; chromium; potassium; fruits/greens/mushrooms blend (green apple, cherry, blueberry, broccoli, carrot, acerola, beet, spirulina, cauliflower sprout, chlorella, cordyceps, reishi, nettle, parsley, shiitake, pineapple, grape, tomato); amino acid blend; trace minerals; inositol; MSM; FOS; Lactobacillus acidophilus; Bacillus coagulans; amla bioflavonoids; beet root extract; coenzyme Q10; boron; inulin; lime flavoring; guar gum; citric acid; steviol glycosides; silicon dioxide",
+      "evidence_status": "under_review",
+      "notes": ""
     },
     {
       "product_slug": "v-fortyflora",
-      "verification_status": "needs_reverification"
+      "product_name": "V-FORTYFLORA",
+      "manufacturer_url": "https://vitalhealthglobal.com/products/v-fortyflora",
+      "checked_at": "2026-10-02",
+      "source_type": "manufacturer_product_page",
+      "verification_status": "verified_current_manufacturer_page",
+      "ingredients": "Magnesium; lysine; calcium; activated charcoal",
+      "evidence_status": "under_review",
+      "notes": "Previous positioning as a probiotic conflicted with the current manufacturer ingredient list."
     },
     {
       "product_slug": "v-glutation",
-      "verification_status": "needs_reverification"
+      "product_name": "V-GLUTATION",
+      "manufacturer_url": "https://vitalhealthglobal.com/products/v-glutation",
+      "checked_at": "2026-10-02",
+      "source_type": "manufacturer_product_page",
+      "verification_status": "verified_current_manufacturer_page",
+      "ingredients": "Vitamin C; glutathione; turmeric; Rose of Castile",
+      "evidence_status": "under_review",
+      "notes": ""
     },
     {
       "product_slug": "v-itadol",
-      "verification_status": "needs_reverification"
+      "product_name": "V-ITADOL",
+      "manufacturer_url": "https://vitalhealthglobal.com/products/v-itadol",
+      "checked_at": "2026-10-02",
+      "source_type": "manufacturer_product_page",
+      "verification_status": "verified_current_manufacturer_page",
+      "ingredients": "Glucosamine; sarsaparilla; MSM (methylsulfonylmethane)",
+      "evidence_status": "under_review",
+      "notes": ""
     },
     {
       "product_slug": "v-italay",
-      "verification_status": "needs_reverification"
+      "product_name": "V-ITALAY",
+      "manufacturer_url": "https://vitalhealthglobal.com/products/v-italay",
+      "checked_at": "2026-10-02",
+      "source_type": "manufacturer_product_page",
+      "verification_status": "verified_current_manufacturer_page",
+      "ingredients": "Green tea; passionflower; valerian; mint; Tumba Vaquero",
+      "evidence_status": "under_review",
+      "notes": ""
     },
     {
       "product_slug": "v-italboost",
-      "verification_status": "needs_reverification"
+      "product_name": "V-ITALBOOST",
+      "manufacturer_url": "https://vitalhealthglobal.com/products/vitalboost",
+      "checked_at": "2026-10-02",
+      "source_type": "manufacturer_product_page",
+      "verification_status": "verified_current_manufacturer_page",
+      "ingredients": "Garlic extract; ginger extract; vitamins C and D; echinacea; fenugreek extract; cinnamon; turmeric; cayenne pepper extract",
+      "evidence_status": "under_review",
+      "notes": ""
     },
     {
       "product_slug": "v-itaren",
-      "verification_status": "needs_reverification"
+      "product_name": "V-ITAREN",
+      "manufacturer_url": "https://vitalhealthglobal.com/products/v-itaren",
+      "checked_at": "2026-10-02",
+      "source_type": "manufacturer_product_page",
+      "verification_status": "verified_current_manufacturer_page",
+      "ingredients": "Hibiscus (Jamaica grass); horsetail; dandelion root; toad grass (Eryngium heterophyllum); moringa leaf; uva ursi leaf; gelatin capsule; silica",
+      "evidence_status": "under_review",
+      "notes": ""
     },
     {
       "product_slug": "v-lovkafe",
-      "verification_status": "needs_reverification"
+      "product_name": "V-LOVKAFE",
+      "manufacturer_url": "https://vitalhealthglobal.com/products/v-lovekafe",
+      "checked_at": "2026-10-02",
+      "source_type": "manufacturer_product_page",
+      "verification_status": "verified_current_manufacturer_page",
+      "ingredients": "Instant dark-roast coffee (Coffea arabica); Tribulus terrestris fruit extract; Tongkat Ali root extract; Himalayan shilajit extract; Panax ginseng root extract",
+      "evidence_status": "under_review",
+      "notes": ""
     },
     {
       "product_slug": "v-neurokafe",
-      "verification_status": "needs_reverification"
+      "product_name": "V-NEUROKAFE",
+      "manufacturer_url": "https://vitalhealthglobal.com/products/v-neurokafe",
+      "checked_at": "2026-10-02",
+      "source_type": "manufacturer_product_page",
+      "verification_status": "verified_current_manufacturer_page",
+      "ingredients": "Instant dark-roast coffee (Coffea arabica); inulin; Bacillus coagulans; Ganoderma lucidum extract; Panax ginseng extract; fulvic acid",
+      "evidence_status": "under_review",
+      "notes": "Previous repo formulation included B1/B6 and older evidence mappings to L-theanine; these are not listed on the current manufacturer page."
     },
     {
       "product_slug": "v-nitro",
-      "verification_status": "needs_reverification"
+      "product_name": "V-NITRO",
+      "manufacturer_url": "https://vitalhealthglobal.com/products/v-nitro",
+      "checked_at": "2026-10-02",
+      "source_type": "manufacturer_product_page",
+      "verification_status": "verified_current_manufacturer_page",
+      "ingredients": "Water; L-arginine; L-citrulline; natural orange flavor; glycerin; niacinamide (vitamin B3); potassium; black pepper with 95% piperine; beetroot; noni; moringa; red spinach; citric acid; potassium sorbate; potassium benzoate; stevia",
+      "evidence_status": "under_review",
+      "notes": ""
     },
     {
       "product_slug": "v-nrgy",
-      "verification_status": "needs_reverification"
+      "product_name": "V NRGY",
+      "manufacturer_url": "https://vitalhealthglobal.com/products/v-nrgy",
+      "checked_at": "2026-10-02",
+      "source_type": "manufacturer_product_page",
+      "verification_status": "verified_current_manufacturer_page",
+      "ingredients": "Orange powder; orange flavor; guar gum; citric acid; DMAE; natural caffeine from green coffee bean extract; vitamin C; silicon dioxide; L-carnitine tartrate; turmeric root extract (95% curcuminoids); vitamin D3; niacin; quercetin; L-theanine; green tea extract; guarana extract; green coffee bean extract; pine bark extract; saffron extract; stevia; magnesium citrate; chromium picolinate; cayenne pepper extract; vitamin B6; biotin; vitamin B12; thiamine",
+      "evidence_status": "under_review",
+      "notes": ""
     },
     {
       "product_slug": "v-omega3",
-      "verification_status": "needs_reverification"
+      "product_name": "V-OMEGA3",
+      "manufacturer_url": "https://vitalhealthglobal.com/products/v-omega-3",
+      "checked_at": "2026-10-02",
+      "source_type": "manufacturer_product_page",
+      "verification_status": "verified_current_manufacturer_page",
+      "ingredients": "Astaxanthin; tocotrienols; vitamin A; vitamin D3; vitamin E; Wild Alaska salmon oil",
+      "evidence_status": "under_review",
+      "notes": ""
     },
     {
       "product_slug": "v-organex",
-      "verification_status": "needs_reverification"
+      "product_name": "V-ORGANEX",
+      "manufacturer_url": "https://vitalhealthglobal.com/products/v-organex",
+      "checked_at": "2026-10-02",
+      "source_type": "manufacturer_product_page",
+      "verification_status": "verified_current_manufacturer_page",
+      "ingredients": "Boldo; milk thistle; Quassia/Casia amara; Sapo herb; guarana; magnesium; chicory; artichoke",
+      "evidence_status": "under_review",
+      "notes": ""
     },
     {
       "product_slug": "v-tedetox",
-      "verification_status": "needs_reverification"
+      "product_name": "V-TEDETOX",
+      "manufacturer_url": "https://vitalhealthglobal.com/products/v-tedetox",
+      "checked_at": "2026-10-02",
+      "source_type": "manufacturer_product_page",
+      "verification_status": "verified_current_manufacturer_page",
+      "ingredients": "Senna leaf; milk thistle leaf; cactus pad; persimmon leaf; blessed thistle leaf; chamomile flower; mallow leaf; marshmallow leaf; ginger root powder; senna leaf extract",
+      "evidence_status": "under_review",
+      "notes": ""
     },
     {
       "product_slug": "v-thermokafe",
-      "verification_status": "needs_reverification"
+      "product_name": "V THERMOKAFE",
+      "manufacturer_url": "https://vitalhealthglobal.com/products/v-thermokafe",
+      "checked_at": "2026-10-02",
+      "source_type": "manufacturer_product_page",
+      "verification_status": "verified_current_manufacturer_page",
+      "ingredients": "Instant dark-roast coffee (Coffea arabica); guarana extract; white willow extract; standardized green tea extract; Fucus vesiculosus seaweed; ginger extract; Panax ginseng root extract; yerba mate leaf; cayenne pepper",
+      "evidence_status": "under_review",
+      "notes": ""
     },
     {
       "product_slug": "vitalpro",
-      "verification_status": "needs_reverification"
+      "product_name": "VITALPRO",
+      "manufacturer_url": "https://vitalhealthglobal.com/products/vitalpro",
+      "checked_at": "2026-10-02",
+      "source_type": "manufacturer_product_page",
+      "verification_status": "verified_current_manufacturer_page",
+      "ingredients": "Whey protein isolate; soy protein isolate; hydrolyzed collagen peptides (grass-fed); agave inulin; cinnamon; amylase; protease; fruit and vegetable blend; cordyceps extract; mangosteen extract; maqui extract; Ganoderma lucidum extract; shiitake extract; turmeric extract (95% curcuminoids); omega-3 powder from anchovy oil; alpha-lipoic acid; AFA algae; coenzyme Q10; natural vanilla flavor; stevia; silica",
+      "evidence_status": "under_review",
+      "notes": ""
     }
   ]
 }
