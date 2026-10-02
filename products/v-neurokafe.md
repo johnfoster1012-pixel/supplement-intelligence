@@ -1,7 +1,7 @@
 ---
 title: "V-NEUROKAFE"
 product_url: "/products/v-neurokafe"
-category: "nootropic/coffee"
+category: "Product formulation"
 evidence_grade: "Under Review"
 formulation_checked: "2026-10-02"
 ---
