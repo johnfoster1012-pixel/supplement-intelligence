@@ -1,0 +1,38 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "supplement-intelligence",
+  "version": "1.0.0",
+  "description": "Verification-first supplement ingredient evidence and current product formulation research.",
+  "author": {
+    "name": "Supplement Intelligence",
+    "url": "https://supplement-intelligence.com"
+  },
+  "homepage": "https://supplement-intelligence.com",
+  "repository": "https://github.com/johnfoster1012-pixel/supplement-intelligence",
+  "keywords": [
+    "supplements",
+    "ingredient-research",
+    "clinical-evidence",
+    "formulations"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Supplement Intelligence",
+        "shortDescription": "Research supplement ingredients and product formulations.",
+        "longDescription": "Review verification-first supplement ingredient evidence, safety context, study directness, and current tracked product formulations without treating ingredient evidence as proof of finished-product efficacy.",
+        "developerName": "Supplement Intelligence",
+        "category": "Health",
+        "capabilities": [
+          "Read"
+        ],
+        "websiteURL": "https://supplement-intelligence.com",
+        "defaultPrompt": [
+          "What does the evidence say about creatine monohydrate?",
+          "Does S-BALANCE contain berberine, and is its finished-product efficacy verified?",
+          "What safety concerns are noted for ashwagandha?"
+        ]
+      }
+    }
+  }
+}
