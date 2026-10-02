@@ -1,7 +1,7 @@
 ---
 title: "V-DAILY"
 product_url: "/products/v-daily"
-category: "multivitamin"
+category: "Product formulation"
 evidence_grade: "Under Review"
 formulation_checked: "2026-10-02"
 ---
