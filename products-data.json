@@ -21,7 +21,27 @@
       "articleUrl": null,
       "shopUrl": "https://vitalhealthglobal.com/products/vitalage-collagen?refID=149983",
       "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
-      "formulationSource": "https://vitalhealthglobal.com/products/vitalage-collagen"
+      "formulationSource": "https://vitalhealthglobal.com/products/vitalage-collagen",
+      "ingredientEvidenceLinks": [
+        {
+          "slug": "collagen-peptides",
+          "name": "Oral collagen peptides",
+          "url": "/ingredients/collagen-peptides",
+          "posture": "Human evidence is mixed and outcome-specific; skin findings are sensitive to study quality/funding, while knee osteoarthritis meta-analysis suggests symptom benefit."
+        },
+        {
+          "slug": "resveratrol",
+          "name": "Resveratrol",
+          "url": "/ingredients/resveratrol",
+          "posture": "Human evidence is heterogeneous and low-certainty for many cardiometabolic outcomes; anti-aging or longevity claims are not established."
+        },
+        {
+          "slug": "vitamin-c",
+          "name": "Vitamin C",
+          "url": "/ingredients/vitamin-c",
+          "posture": "Essential nutrient with established physiological roles; routine supplementation does not prevent colds in the general population, though it may modestly shorten them."
+        }
+      ]
     },
     "d-fenz-kids": {
       "slug": "d-fenz-kids",
@@ -42,7 +62,39 @@
       "articleUrl": null,
       "shopUrl": "https://vitalhealthglobal.com/products/dfence-kids?refID=149983",
       "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
-      "formulationSource": "https://vitalhealthglobal.com/products/dfence-kids"
+      "formulationSource": "https://vitalhealthglobal.com/products/dfence-kids",
+      "ingredientEvidenceLinks": [
+        {
+          "slug": "magnesium",
+          "name": "Magnesium",
+          "url": "/ingredients/magnesium",
+          "posture": "Essential nutrient with established physiological roles; supplement benefits depend on baseline status, outcome, form, and dose."
+        },
+        {
+          "slug": "curcumin",
+          "name": "Turmeric / curcumin",
+          "url": "/ingredients/curcumin",
+          "posture": "Promising evidence in some outcomes, including osteoarthritis, but formulations vary and authoritative reviews do not support blanket efficacy claims."
+        },
+        {
+          "slug": "vitamin-c",
+          "name": "Vitamin C",
+          "url": "/ingredients/vitamin-c",
+          "posture": "Essential nutrient with established physiological roles; routine supplementation does not prevent colds in the general population, though it may modestly shorten them."
+        },
+        {
+          "slug": "vitamin-d",
+          "name": "Vitamin D",
+          "url": "/ingredients/vitamin-d",
+          "posture": "Established nutrient role in calcium/bone physiology and deficiency prevention; many broader supplementation claims remain unproven."
+        },
+        {
+          "slug": "zinc",
+          "name": "Zinc",
+          "url": "/ingredients/zinc",
+          "posture": "Essential nutrient with established deficiency-related roles; cold benefits are formulation- and timing-specific rather than a generic property of zinc-containing supplements."
+        }
+      ]
     },
     "genius-shake-kids": {
       "slug": "genius-shake-kids",
@@ -63,7 +115,27 @@
       "articleUrl": null,
       "shopUrl": "https://vitalhealthglobal.com/products/genius-shake?refID=149983",
       "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
-      "formulationSource": "https://vitalhealthglobal.com/products/genius-shake"
+      "formulationSource": "https://vitalhealthglobal.com/products/genius-shake",
+      "ingredientEvidenceLinks": [
+        {
+          "slug": "omega-3",
+          "name": "Long-chain omega-3 fatty acids / fish oil",
+          "url": "/ingredients/omega-3",
+          "posture": "Established triglyceride-lowering effect at appropriate EPA/DHA doses; broader cardiovascular outcomes are context-dependent."
+        },
+        {
+          "slug": "vitamin-c",
+          "name": "Vitamin C",
+          "url": "/ingredients/vitamin-c",
+          "posture": "Essential nutrient with established physiological roles; routine supplementation does not prevent colds in the general population, though it may modestly shorten them."
+        },
+        {
+          "slug": "vitamin-d",
+          "name": "Vitamin D",
+          "url": "/ingredients/vitamin-d",
+          "posture": "Established nutrient role in calcium/bone physiology and deficiency prevention; many broader supplementation claims remain unproven."
+        }
+      ]
     },
     "lattekaffe": {
       "slug": "lattekaffe",
@@ -84,7 +156,15 @@
       "articleUrl": null,
       "shopUrl": "https://vitalhealthglobal.com/products/lattekaffe?refID=149983",
       "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
-      "formulationSource": "https://vitalhealthglobal.com/products/lattekaffe"
+      "formulationSource": "https://vitalhealthglobal.com/products/lattekaffe",
+      "ingredientEvidenceLinks": [
+        {
+          "slug": "caffeine",
+          "name": "Caffeine",
+          "url": "/ingredients/caffeine",
+          "posture": "Good evidence for some endurance and high-intensity intermittent performance outcomes; effects vary by dose, habitual use, timing, and individual response."
+        }
+      ]
     },
     "nourish-plus": {
       "slug": "nourish-plus",
@@ -105,7 +185,75 @@
       "articleUrl": null,
       "shopUrl": "https://vitalhealthglobal.com/products/nourish?refID=149983",
       "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
-      "formulationSource": "https://vitalhealthglobal.com/products/nourish"
+      "formulationSource": "https://vitalhealthglobal.com/products/nourish",
+      "ingredientEvidenceLinks": [
+        {
+          "slug": "alpha-lipoic-acid",
+          "name": "Alpha-lipoic acid (ALA)",
+          "url": "/ingredients/alpha-lipoic-acid",
+          "posture": "Some evidence for reducing sensory symptoms of diabetic peripheral neuropathy; evidence does not justify generic blood-sugar or weight-management claims."
+        },
+        {
+          "slug": "ashwagandha",
+          "name": "Ashwagandha (Withania somnifera)",
+          "url": "/ingredients/ashwagandha",
+          "posture": "Some evidence for stress and sleep, but preparation heterogeneity and study quality limit broad conclusions."
+        },
+        {
+          "slug": "berberine",
+          "name": "Berberine",
+          "url": "/ingredients/berberine",
+          "posture": "Supportive but heterogeneous evidence for glycemic and lipid outcomes in type 2 diabetes; weight-loss evidence is inconclusive."
+        },
+        {
+          "slug": "caffeine",
+          "name": "Caffeine",
+          "url": "/ingredients/caffeine",
+          "posture": "Good evidence for some endurance and high-intensity intermittent performance outcomes; effects vary by dose, habitual use, timing, and individual response."
+        },
+        {
+          "slug": "coenzyme-q10",
+          "name": "Coenzyme Q10 (CoQ10)",
+          "url": "/ingredients/coenzyme-q10",
+          "posture": "Evidence is condition-specific and generally inconclusive for many promoted uses; broad energy, heart, or statin-muscle claims are not established."
+        },
+        {
+          "slug": "omega-3",
+          "name": "Long-chain omega-3 fatty acids / fish oil",
+          "url": "/ingredients/omega-3",
+          "posture": "Established triglyceride-lowering effect at appropriate EPA/DHA doses; broader cardiovascular outcomes are context-dependent."
+        },
+        {
+          "slug": "probiotics",
+          "name": "Probiotics",
+          "url": "/ingredients/probiotics",
+          "posture": "Evidence is strain- and indication-specific; generic probiotic claims are not scientifically interchangeable."
+        },
+        {
+          "slug": "resveratrol",
+          "name": "Resveratrol",
+          "url": "/ingredients/resveratrol",
+          "posture": "Human evidence is heterogeneous and low-certainty for many cardiometabolic outcomes; anti-aging or longevity claims are not established."
+        },
+        {
+          "slug": "curcumin",
+          "name": "Turmeric / curcumin",
+          "url": "/ingredients/curcumin",
+          "posture": "Promising evidence in some outcomes, including osteoarthritis, but formulations vary and authoritative reviews do not support blanket efficacy claims."
+        },
+        {
+          "slug": "vitamin-d",
+          "name": "Vitamin D",
+          "url": "/ingredients/vitamin-d",
+          "posture": "Established nutrient role in calcium/bone physiology and deficiency prevention; many broader supplementation claims remain unproven."
+        },
+        {
+          "slug": "zinc",
+          "name": "Zinc",
+          "url": "/ingredients/zinc",
+          "posture": "Essential nutrient with established deficiency-related roles; cold benefits are formulation- and timing-specific rather than a generic property of zinc-containing supplements."
+        }
+      ]
     },
     "performance-plus": {
       "slug": "performance-plus",
@@ -126,7 +274,21 @@
       "articleUrl": null,
       "shopUrl": "https://vitalhealthglobal.com/products/performance?refID=149983",
       "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
-      "formulationSource": "https://vitalhealthglobal.com/products/performance"
+      "formulationSource": "https://vitalhealthglobal.com/products/performance",
+      "ingredientEvidenceLinks": [
+        {
+          "slug": "creatine-monohydrate",
+          "name": "Creatine monohydrate",
+          "url": "/ingredients/creatine-monohydrate",
+          "posture": "Strong evidence for specific sports-performance outcomes; product-level directness depends on dose."
+        },
+        {
+          "slug": "magnesium",
+          "name": "Magnesium",
+          "url": "/ingredients/magnesium",
+          "posture": "Essential nutrient with established physiological roles; supplement benefits depend on baseline status, outcome, form, and dose."
+        }
+      ]
     },
     "s-balance": {
       "slug": "s-balance",
@@ -147,7 +309,21 @@
       "articleUrl": null,
       "shopUrl": "https://vitalhealthglobal.com/products/s-balance?refID=149983",
       "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
-      "formulationSource": "https://vitalhealthglobal.com/products/s-balance"
+      "formulationSource": "https://vitalhealthglobal.com/products/s-balance",
+      "ingredientEvidenceLinks": [
+        {
+          "slug": "alpha-lipoic-acid",
+          "name": "Alpha-lipoic acid (ALA)",
+          "url": "/ingredients/alpha-lipoic-acid",
+          "posture": "Some evidence for reducing sensory symptoms of diabetic peripheral neuropathy; evidence does not justify generic blood-sugar or weight-management claims."
+        },
+        {
+          "slug": "berberine",
+          "name": "Berberine",
+          "url": "/ingredients/berberine",
+          "posture": "Supportive but heterogeneous evidence for glycemic and lipid outcomes in type 2 diabetes; weight-loss evidence is inconclusive."
+        }
+      ]
     },
     "smartbiotics-kids": {
       "slug": "smartbiotics-kids",
@@ -168,7 +344,21 @@
       "articleUrl": null,
       "shopUrl": "https://vitalhealthglobal.com/products/smartbiotics?refID=149983",
       "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
-      "formulationSource": "https://vitalhealthglobal.com/products/smartbiotics"
+      "formulationSource": "https://vitalhealthglobal.com/products/smartbiotics",
+      "ingredientEvidenceLinks": [
+        {
+          "slug": "magnesium",
+          "name": "Magnesium",
+          "url": "/ingredients/magnesium",
+          "posture": "Essential nutrient with established physiological roles; supplement benefits depend on baseline status, outcome, form, and dose."
+        },
+        {
+          "slug": "probiotics",
+          "name": "Probiotics",
+          "url": "/ingredients/probiotics",
+          "posture": "Evidence is strain- and indication-specific; generic probiotic claims are not scientifically interchangeable."
+        }
+      ]
     },
     "v-asculax": {
       "slug": "v-asculax",
@@ -189,7 +379,15 @@
       "articleUrl": null,
       "shopUrl": "https://vitalhealthglobal.com/products/v-asculax?refID=149983",
       "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
-      "formulationSource": "https://vitalhealthglobal.com/products/v-asculax"
+      "formulationSource": "https://vitalhealthglobal.com/products/v-asculax",
+      "ingredientEvidenceLinks": [
+        {
+          "slug": "msm",
+          "name": "Methylsulfonylmethane (MSM)",
+          "url": "/ingredients/msm",
+          "posture": "Evidence is too limited to draw reliable conclusions for osteoarthritis or chronic pain."
+        }
+      ]
     },
     "v-control": {
       "slug": "v-control",
@@ -210,7 +408,8 @@
       "articleUrl": null,
       "shopUrl": "https://vitalhealthglobal.com/products/v-control?refID=149983",
       "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
-      "formulationSource": "https://vitalhealthglobal.com/products/v-control"
+      "formulationSource": "https://vitalhealthglobal.com/products/v-control",
+      "ingredientEvidenceLinks": []
     },
     "v-curcumax": {
       "slug": "v-curcumax",
@@ -231,7 +430,27 @@
       "articleUrl": null,
       "shopUrl": "https://vitalhealthglobal.com/products/v-curcumax?refID=149983",
       "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
-      "formulationSource": "https://vitalhealthglobal.com/products/v-curcumax"
+      "formulationSource": "https://vitalhealthglobal.com/products/v-curcumax",
+      "ingredientEvidenceLinks": [
+        {
+          "slug": "msm",
+          "name": "Methylsulfonylmethane (MSM)",
+          "url": "/ingredients/msm",
+          "posture": "Evidence is too limited to draw reliable conclusions for osteoarthritis or chronic pain."
+        },
+        {
+          "slug": "curcumin",
+          "name": "Turmeric / curcumin",
+          "url": "/ingredients/curcumin",
+          "posture": "Promising evidence in some outcomes, including osteoarthritis, but formulations vary and authoritative reviews do not support blanket efficacy claims."
+        },
+        {
+          "slug": "vitamin-c",
+          "name": "Vitamin C",
+          "url": "/ingredients/vitamin-c",
+          "posture": "Essential nutrient with established physiological roles; routine supplementation does not prevent colds in the general population, though it may modestly shorten them."
+        }
+      ]
     },
     "v-daily": {
       "slug": "v-daily",
@@ -252,7 +471,45 @@
       "articleUrl": null,
       "shopUrl": "https://vitalhealthglobal.com/products/v-daily?refID=149983",
       "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
-      "formulationSource": "https://vitalhealthglobal.com/products/v-daily"
+      "formulationSource": "https://vitalhealthglobal.com/products/v-daily",
+      "ingredientEvidenceLinks": [
+        {
+          "slug": "coenzyme-q10",
+          "name": "Coenzyme Q10 (CoQ10)",
+          "url": "/ingredients/coenzyme-q10",
+          "posture": "Evidence is condition-specific and generally inconclusive for many promoted uses; broad energy, heart, or statin-muscle claims are not established."
+        },
+        {
+          "slug": "magnesium",
+          "name": "Magnesium",
+          "url": "/ingredients/magnesium",
+          "posture": "Essential nutrient with established physiological roles; supplement benefits depend on baseline status, outcome, form, and dose."
+        },
+        {
+          "slug": "msm",
+          "name": "Methylsulfonylmethane (MSM)",
+          "url": "/ingredients/msm",
+          "posture": "Evidence is too limited to draw reliable conclusions for osteoarthritis or chronic pain."
+        },
+        {
+          "slug": "probiotics",
+          "name": "Probiotics",
+          "url": "/ingredients/probiotics",
+          "posture": "Evidence is strain- and indication-specific; generic probiotic claims are not scientifically interchangeable."
+        },
+        {
+          "slug": "vitamin-d",
+          "name": "Vitamin D",
+          "url": "/ingredients/vitamin-d",
+          "posture": "Established nutrient role in calcium/bone physiology and deficiency prevention; many broader supplementation claims remain unproven."
+        },
+        {
+          "slug": "zinc",
+          "name": "Zinc",
+          "url": "/ingredients/zinc",
+          "posture": "Essential nutrient with established deficiency-related roles; cold benefits are formulation- and timing-specific rather than a generic property of zinc-containing supplements."
+        }
+      ]
     },
     "v-fortyflora": {
       "slug": "v-fortyflora",
@@ -273,7 +530,15 @@
       "articleUrl": null,
       "shopUrl": "https://vitalhealthglobal.com/products/v-fortyflora?refID=149983",
       "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
-      "formulationSource": "https://vitalhealthglobal.com/products/v-fortyflora"
+      "formulationSource": "https://vitalhealthglobal.com/products/v-fortyflora",
+      "ingredientEvidenceLinks": [
+        {
+          "slug": "magnesium",
+          "name": "Magnesium",
+          "url": "/ingredients/magnesium",
+          "posture": "Essential nutrient with established physiological roles; supplement benefits depend on baseline status, outcome, form, and dose."
+        }
+      ]
     },
     "v-glutation": {
       "slug": "v-glutation",
@@ -294,7 +559,27 @@
       "articleUrl": null,
       "shopUrl": "https://vitalhealthglobal.com/products/v-glutation?refID=149983",
       "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
-      "formulationSource": "https://vitalhealthglobal.com/products/v-glutation"
+      "formulationSource": "https://vitalhealthglobal.com/products/v-glutation",
+      "ingredientEvidenceLinks": [
+        {
+          "slug": "glutathione",
+          "name": "Oral glutathione",
+          "url": "/ingredients/glutathione",
+          "posture": "Bioavailability is formulation- and duration-dependent; biomarker changes are documented, but clinical health-outcome benefits remain uncertain."
+        },
+        {
+          "slug": "curcumin",
+          "name": "Turmeric / curcumin",
+          "url": "/ingredients/curcumin",
+          "posture": "Promising evidence in some outcomes, including osteoarthritis, but formulations vary and authoritative reviews do not support blanket efficacy claims."
+        },
+        {
+          "slug": "vitamin-c",
+          "name": "Vitamin C",
+          "url": "/ingredients/vitamin-c",
+          "posture": "Essential nutrient with established physiological roles; routine supplementation does not prevent colds in the general population, though it may modestly shorten them."
+        }
+      ]
     },
     "v-itadol": {
       "slug": "v-itadol",
@@ -315,7 +600,21 @@
       "articleUrl": null,
       "shopUrl": "https://vitalhealthglobal.com/products/v-itadol?refID=149983",
       "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
-      "formulationSource": "https://vitalhealthglobal.com/products/v-itadol"
+      "formulationSource": "https://vitalhealthglobal.com/products/v-itadol",
+      "ingredientEvidenceLinks": [
+        {
+          "slug": "glucosamine",
+          "name": "Glucosamine",
+          "url": "/ingredients/glucosamine",
+          "posture": "Conflicting evidence for knee osteoarthritis symptoms; preparation-specific findings and guideline disagreement make broad claims inappropriate."
+        },
+        {
+          "slug": "msm",
+          "name": "Methylsulfonylmethane (MSM)",
+          "url": "/ingredients/msm",
+          "posture": "Evidence is too limited to draw reliable conclusions for osteoarthritis or chronic pain."
+        }
+      ]
     },
     "v-italay": {
       "slug": "v-italay",
@@ -336,7 +635,21 @@
       "articleUrl": null,
       "shopUrl": "https://vitalhealthglobal.com/products/v-italay?refID=149983",
       "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
-      "formulationSource": "https://vitalhealthglobal.com/products/v-italay"
+      "formulationSource": "https://vitalhealthglobal.com/products/v-italay",
+      "ingredientEvidenceLinks": [
+        {
+          "slug": "caffeine",
+          "name": "Caffeine",
+          "url": "/ingredients/caffeine",
+          "posture": "Good evidence for some endurance and high-intensity intermittent performance outcomes; effects vary by dose, habitual use, timing, and individual response."
+        },
+        {
+          "slug": "valerian",
+          "name": "Valerian (Valeriana officinalis)",
+          "url": "/ingredients/valerian",
+          "posture": "Evidence for sleep problems is inconsistent; authoritative guidance does not support presenting valerian as an established insomnia treatment."
+        }
+      ]
     },
     "v-italboost": {
       "slug": "v-italboost",
@@ -357,7 +670,27 @@
       "articleUrl": null,
       "shopUrl": "https://vitalhealthglobal.com/products/vitalboost?refID=149983",
       "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
-      "formulationSource": "https://vitalhealthglobal.com/products/vitalboost"
+      "formulationSource": "https://vitalhealthglobal.com/products/vitalboost",
+      "ingredientEvidenceLinks": [
+        {
+          "slug": "echinacea",
+          "name": "Echinacea",
+          "url": "/ingredients/echinacea",
+          "posture": "Possible small effect on cold incidence for some preparations; evidence for shortening or treating colds remains uncertain and product-specific."
+        },
+        {
+          "slug": "curcumin",
+          "name": "Turmeric / curcumin",
+          "url": "/ingredients/curcumin",
+          "posture": "Promising evidence in some outcomes, including osteoarthritis, but formulations vary and authoritative reviews do not support blanket efficacy claims."
+        },
+        {
+          "slug": "vitamin-d",
+          "name": "Vitamin D",
+          "url": "/ingredients/vitamin-d",
+          "posture": "Established nutrient role in calcium/bone physiology and deficiency prevention; many broader supplementation claims remain unproven."
+        }
+      ]
     },
     "v-itaren": {
       "slug": "v-itaren",
@@ -378,7 +711,8 @@
       "articleUrl": null,
       "shopUrl": "https://vitalhealthglobal.com/products/v-itaren?refID=149983",
       "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
-      "formulationSource": "https://vitalhealthglobal.com/products/v-itaren"
+      "formulationSource": "https://vitalhealthglobal.com/products/v-itaren",
+      "ingredientEvidenceLinks": []
     },
     "v-lovkafe": {
       "slug": "v-lovkafe",
@@ -399,7 +733,21 @@
       "articleUrl": null,
       "shopUrl": "https://vitalhealthglobal.com/products/v-lovekafe?refID=149983",
       "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
-      "formulationSource": "https://vitalhealthglobal.com/products/v-lovekafe"
+      "formulationSource": "https://vitalhealthglobal.com/products/v-lovekafe",
+      "ingredientEvidenceLinks": [
+        {
+          "slug": "caffeine",
+          "name": "Caffeine",
+          "url": "/ingredients/caffeine",
+          "posture": "Good evidence for some endurance and high-intensity intermittent performance outcomes; effects vary by dose, habitual use, timing, and individual response."
+        },
+        {
+          "slug": "panax-ginseng",
+          "name": "Panax ginseng (Asian ginseng)",
+          "url": "/ingredients/panax-ginseng",
+          "posture": "Limited human evidence suggests possible small benefits for fatigue and selected cognitive measures; broad adaptogen, performance, or immune claims are not established."
+        }
+      ]
     },
     "v-neurokafe": {
       "slug": "v-neurokafe",
@@ -420,7 +768,27 @@
       "articleUrl": null,
       "shopUrl": "https://vitalhealthglobal.com/products/v-neurokafe?refID=149983",
       "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
-      "formulationSource": "https://vitalhealthglobal.com/products/v-neurokafe"
+      "formulationSource": "https://vitalhealthglobal.com/products/v-neurokafe",
+      "ingredientEvidenceLinks": [
+        {
+          "slug": "caffeine",
+          "name": "Caffeine",
+          "url": "/ingredients/caffeine",
+          "posture": "Good evidence for some endurance and high-intensity intermittent performance outcomes; effects vary by dose, habitual use, timing, and individual response."
+        },
+        {
+          "slug": "panax-ginseng",
+          "name": "Panax ginseng (Asian ginseng)",
+          "url": "/ingredients/panax-ginseng",
+          "posture": "Limited human evidence suggests possible small benefits for fatigue and selected cognitive measures; broad adaptogen, performance, or immune claims are not established."
+        },
+        {
+          "slug": "probiotics",
+          "name": "Probiotics",
+          "url": "/ingredients/probiotics",
+          "posture": "Evidence is strain- and indication-specific; generic probiotic claims are not scientifically interchangeable."
+        }
+      ]
     },
     "v-nitro": {
       "slug": "v-nitro",
@@ -441,7 +809,21 @@
       "articleUrl": null,
       "shopUrl": "https://vitalhealthglobal.com/products/v-nitro?refID=149983",
       "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
-      "formulationSource": "https://vitalhealthglobal.com/products/v-nitro"
+      "formulationSource": "https://vitalhealthglobal.com/products/v-nitro",
+      "ingredientEvidenceLinks": [
+        {
+          "slug": "l-arginine",
+          "name": "L-arginine",
+          "url": "/ingredients/l-arginine",
+          "posture": "Little scientific support for improving strength, exercise performance, or recovery in healthy active adults."
+        },
+        {
+          "slug": "l-citrulline",
+          "name": "L-citrulline / citrulline malate",
+          "url": "/ingredients/l-citrulline",
+          "posture": "Exercise-performance evidence is limited and conflicting; some acute resistance-exercise studies are positive, but overall support remains weak."
+        }
+      ]
     },
     "v-nrgy": {
       "slug": "v-nrgy",
@@ -462,7 +844,45 @@
       "articleUrl": null,
       "shopUrl": "https://vitalhealthglobal.com/products/v-nrgy?refID=149983",
       "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
-      "formulationSource": "https://vitalhealthglobal.com/products/v-nrgy"
+      "formulationSource": "https://vitalhealthglobal.com/products/v-nrgy",
+      "ingredientEvidenceLinks": [
+        {
+          "slug": "caffeine",
+          "name": "Caffeine",
+          "url": "/ingredients/caffeine",
+          "posture": "Good evidence for some endurance and high-intensity intermittent performance outcomes; effects vary by dose, habitual use, timing, and individual response."
+        },
+        {
+          "slug": "l-theanine",
+          "name": "L-theanine",
+          "url": "/ingredients/l-theanine",
+          "posture": "Promising but not conclusive evidence for selected attention and cognitive outcomes; combination effects with caffeine are modest and context-specific."
+        },
+        {
+          "slug": "magnesium",
+          "name": "Magnesium",
+          "url": "/ingredients/magnesium",
+          "posture": "Essential nutrient with established physiological roles; supplement benefits depend on baseline status, outcome, form, and dose."
+        },
+        {
+          "slug": "curcumin",
+          "name": "Turmeric / curcumin",
+          "url": "/ingredients/curcumin",
+          "posture": "Promising evidence in some outcomes, including osteoarthritis, but formulations vary and authoritative reviews do not support blanket efficacy claims."
+        },
+        {
+          "slug": "vitamin-c",
+          "name": "Vitamin C",
+          "url": "/ingredients/vitamin-c",
+          "posture": "Essential nutrient with established physiological roles; routine supplementation does not prevent colds in the general population, though it may modestly shorten them."
+        },
+        {
+          "slug": "vitamin-d",
+          "name": "Vitamin D",
+          "url": "/ingredients/vitamin-d",
+          "posture": "Established nutrient role in calcium/bone physiology and deficiency prevention; many broader supplementation claims remain unproven."
+        }
+      ]
     },
     "v-omega3": {
       "slug": "v-omega3",
@@ -483,7 +903,21 @@
       "articleUrl": null,
       "shopUrl": "https://vitalhealthglobal.com/products/v-omega-3?refID=149983",
       "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
-      "formulationSource": "https://vitalhealthglobal.com/products/v-omega-3"
+      "formulationSource": "https://vitalhealthglobal.com/products/v-omega-3",
+      "ingredientEvidenceLinks": [
+        {
+          "slug": "omega-3",
+          "name": "Long-chain omega-3 fatty acids / fish oil",
+          "url": "/ingredients/omega-3",
+          "posture": "Established triglyceride-lowering effect at appropriate EPA/DHA doses; broader cardiovascular outcomes are context-dependent."
+        },
+        {
+          "slug": "vitamin-d",
+          "name": "Vitamin D",
+          "url": "/ingredients/vitamin-d",
+          "posture": "Established nutrient role in calcium/bone physiology and deficiency prevention; many broader supplementation claims remain unproven."
+        }
+      ]
     },
     "v-organex": {
       "slug": "v-organex",
@@ -504,7 +938,27 @@
       "articleUrl": null,
       "shopUrl": "https://vitalhealthglobal.com/products/v-organex?refID=149983",
       "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
-      "formulationSource": "https://vitalhealthglobal.com/products/v-organex"
+      "formulationSource": "https://vitalhealthglobal.com/products/v-organex",
+      "ingredientEvidenceLinks": [
+        {
+          "slug": "caffeine",
+          "name": "Caffeine",
+          "url": "/ingredients/caffeine",
+          "posture": "Good evidence for some endurance and high-intensity intermittent performance outcomes; effects vary by dose, habitual use, timing, and individual response."
+        },
+        {
+          "slug": "magnesium",
+          "name": "Magnesium",
+          "url": "/ingredients/magnesium",
+          "posture": "Essential nutrient with established physiological roles; supplement benefits depend on baseline status, outcome, form, and dose."
+        },
+        {
+          "slug": "milk-thistle",
+          "name": "Milk thistle (Silybum marianum)",
+          "url": "/ingredients/milk-thistle",
+          "posture": "Insufficient high-quality evidence for liver-disease benefits; broad liver-detox claims are not supported."
+        }
+      ]
     },
     "v-tedetox": {
       "slug": "v-tedetox",
@@ -525,7 +979,21 @@
       "articleUrl": null,
       "shopUrl": "https://vitalhealthglobal.com/products/v-tedetox?refID=149983",
       "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
-      "formulationSource": "https://vitalhealthglobal.com/products/v-tedetox"
+      "formulationSource": "https://vitalhealthglobal.com/products/v-tedetox",
+      "ingredientEvidenceLinks": [
+        {
+          "slug": "milk-thistle",
+          "name": "Milk thistle (Silybum marianum)",
+          "url": "/ingredients/milk-thistle",
+          "posture": "Insufficient high-quality evidence for liver-disease benefits; broad liver-detox claims are not supported."
+        },
+        {
+          "slug": "senna",
+          "name": "Senna",
+          "url": "/ingredients/senna",
+          "posture": "Established stimulant-laxative activity for short-term constipation; this does not support broad detox claims."
+        }
+      ]
     },
     "v-thermokafe": {
       "slug": "v-thermokafe",
@@ -546,7 +1014,21 @@
       "articleUrl": null,
       "shopUrl": "https://vitalhealthglobal.com/products/v-thermokafe?refID=149983",
       "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
-      "formulationSource": "https://vitalhealthglobal.com/products/v-thermokafe"
+      "formulationSource": "https://vitalhealthglobal.com/products/v-thermokafe",
+      "ingredientEvidenceLinks": [
+        {
+          "slug": "caffeine",
+          "name": "Caffeine",
+          "url": "/ingredients/caffeine",
+          "posture": "Good evidence for some endurance and high-intensity intermittent performance outcomes; effects vary by dose, habitual use, timing, and individual response."
+        },
+        {
+          "slug": "panax-ginseng",
+          "name": "Panax ginseng (Asian ginseng)",
+          "url": "/ingredients/panax-ginseng",
+          "posture": "Limited human evidence suggests possible small benefits for fatigue and selected cognitive measures; broad adaptogen, performance, or immune claims are not established."
+        }
+      ]
     },
     "vitalpro": {
       "slug": "vitalpro",
@@ -567,7 +1049,39 @@
       "articleUrl": null,
       "shopUrl": "https://vitalhealthglobal.com/products/vitalpro?refID=149983",
       "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
-      "formulationSource": "https://vitalhealthglobal.com/products/vitalpro"
+      "formulationSource": "https://vitalhealthglobal.com/products/vitalpro",
+      "ingredientEvidenceLinks": [
+        {
+          "slug": "alpha-lipoic-acid",
+          "name": "Alpha-lipoic acid (ALA)",
+          "url": "/ingredients/alpha-lipoic-acid",
+          "posture": "Some evidence for reducing sensory symptoms of diabetic peripheral neuropathy; evidence does not justify generic blood-sugar or weight-management claims."
+        },
+        {
+          "slug": "coenzyme-q10",
+          "name": "Coenzyme Q10 (CoQ10)",
+          "url": "/ingredients/coenzyme-q10",
+          "posture": "Evidence is condition-specific and generally inconclusive for many promoted uses; broad energy, heart, or statin-muscle claims are not established."
+        },
+        {
+          "slug": "omega-3",
+          "name": "Long-chain omega-3 fatty acids / fish oil",
+          "url": "/ingredients/omega-3",
+          "posture": "Established triglyceride-lowering effect at appropriate EPA/DHA doses; broader cardiovascular outcomes are context-dependent."
+        },
+        {
+          "slug": "collagen-peptides",
+          "name": "Oral collagen peptides",
+          "url": "/ingredients/collagen-peptides",
+          "posture": "Human evidence is mixed and outcome-specific; skin findings are sensitive to study quality/funding, while knee osteoarthritis meta-analysis suggests symptom benefit."
+        },
+        {
+          "slug": "curcumin",
+          "name": "Turmeric / curcumin",
+          "url": "/ingredients/curcumin",
+          "posture": "Promising evidence in some outcomes, including osteoarthritis, but formulations vary and authoritative reviews do not support blanket efficacy claims."
+        }
+      ]
     },
     "v-glutation-plus": {
       "slug": "v-glutation-plus",
@@ -588,7 +1102,27 @@
       "citations": [],
       "relatedProducts": [],
       "totalCitations": 0,
-      "articleUrl": null
+      "articleUrl": null,
+      "ingredientEvidenceLinks": [
+        {
+          "slug": "glutathione",
+          "name": "Oral glutathione",
+          "url": "/ingredients/glutathione",
+          "posture": "Bioavailability is formulation- and duration-dependent; biomarker changes are documented, but clinical health-outcome benefits remain uncertain."
+        },
+        {
+          "slug": "curcumin",
+          "name": "Turmeric / curcumin",
+          "url": "/ingredients/curcumin",
+          "posture": "Promising evidence in some outcomes, including osteoarthritis, but formulations vary and authoritative reviews do not support blanket efficacy claims."
+        },
+        {
+          "slug": "vitamin-c",
+          "name": "Vitamin C",
+          "url": "/ingredients/vitamin-c",
+          "posture": "Essential nutrient with established physiological roles; routine supplementation does not prevent colds in the general population, though it may modestly shorten them."
+        }
+      ]
     },
     "v-daily-sachet": {
       "slug": "v-daily-sachet",
@@ -609,7 +1143,51 @@
       "citations": [],
       "relatedProducts": [],
       "totalCitations": 0,
-      "articleUrl": null
+      "articleUrl": null,
+      "ingredientEvidenceLinks": [
+        {
+          "slug": "coenzyme-q10",
+          "name": "Coenzyme Q10 (CoQ10)",
+          "url": "/ingredients/coenzyme-q10",
+          "posture": "Evidence is condition-specific and generally inconclusive for many promoted uses; broad energy, heart, or statin-muscle claims are not established."
+        },
+        {
+          "slug": "magnesium",
+          "name": "Magnesium",
+          "url": "/ingredients/magnesium",
+          "posture": "Essential nutrient with established physiological roles; supplement benefits depend on baseline status, outcome, form, and dose."
+        },
+        {
+          "slug": "msm",
+          "name": "Methylsulfonylmethane (MSM)",
+          "url": "/ingredients/msm",
+          "posture": "Evidence is too limited to draw reliable conclusions for osteoarthritis or chronic pain."
+        },
+        {
+          "slug": "probiotics",
+          "name": "Probiotics",
+          "url": "/ingredients/probiotics",
+          "posture": "Evidence is strain- and indication-specific; generic probiotic claims are not scientifically interchangeable."
+        },
+        {
+          "slug": "vitamin-c",
+          "name": "Vitamin C",
+          "url": "/ingredients/vitamin-c",
+          "posture": "Essential nutrient with established physiological roles; routine supplementation does not prevent colds in the general population, though it may modestly shorten them."
+        },
+        {
+          "slug": "vitamin-d",
+          "name": "Vitamin D",
+          "url": "/ingredients/vitamin-d",
+          "posture": "Established nutrient role in calcium/bone physiology and deficiency prevention; many broader supplementation claims remain unproven."
+        },
+        {
+          "slug": "zinc",
+          "name": "Zinc",
+          "url": "/ingredients/zinc",
+          "posture": "Essential nutrient with established deficiency-related roles; cold benefits are formulation- and timing-specific rather than a generic property of zinc-containing supplements."
+        }
+      ]
     },
     "v-harmony": {
       "slug": "v-harmony",
@@ -641,7 +1219,8 @@
       "citations": [],
       "relatedProducts": [],
       "totalCitations": 0,
-      "articleUrl": null
+      "articleUrl": null,
+      "ingredientEvidenceLinks": []
     },
     "v-prime": {
       "slug": "v-prime",
@@ -676,7 +1255,8 @@
       "citations": [],
       "relatedProducts": [],
       "totalCitations": 0,
-      "articleUrl": null
+      "articleUrl": null,
+      "ingredientEvidenceLinks": []
     }
   },
   "catalogCheckedAt": "2026-10-02",
