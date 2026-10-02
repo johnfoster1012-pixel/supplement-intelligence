@@ -596,16 +596,7 @@
       "name": "Vital Health Global"
     },
     "category": "{{PRODUCT_CATEGORY}}",
-    "url": "https://supplement-intelligence.com/products/{{PRODUCT_SLUG}}",
-    "offers": {
-      "@type": "Offer",
-      "url": "https://vitalhealthglobal.com/products",
-      "availability": "https://schema.org/InStock",
-      "seller": {
-        "@type": "Organization",
-        "name": "Vital Health Global"
-      }
-    }
+    "url": "https://supplement-intelligence.com/products/{{PRODUCT_SLUG}}"
   }
   </script>
 </head>
@@ -637,7 +628,7 @@
     <div class="product-header">
       <div class="product-badges">
         <span class="badge badge-category">{{PRODUCT_CATEGORY}}</span>
-        <span class="badge badge-grade">Evidence Grade {{EVIDENCE_GRADE}}</span>
+        <span class="badge badge-grade">Evidence Status: {{EVIDENCE_GRADE}}</span>
         <span class="badge badge-citations">{{TOTAL_CITATIONS}} Citations</span>
       </div>
       <h1>{{PRODUCT_NAME}}</h1>
@@ -662,8 +653,13 @@
     </div>
     
     <div class="mechanism-box">
-      <h3>⚙️ Mechanism of Action</h3>
+      <h3>Mechanism status</h3>
       <p>{{MECHANISM}}</p>
+    </div>
+    
+    <h2 id="ingredient-evidence">Verified Ingredient Evidence</h2>
+    <div class="research-content">
+      {{INGREDIENT_EVIDENCE_LINKS}}
     </div>
     
     <h2 id="citations">PubMed Citations</h2>
@@ -701,7 +697,7 @@
       <h3>Evidence Summary</h3>
       <div class="grade-display">
         <div class="grade-letter">{{EVIDENCE_GRADE}}</div>
-        <div class="grade-label">Evidence Grade</div>
+        <div class="grade-label">Evidence Status</div>
       </div>
       <div class="stat-row">
         <span class="stat-label">PubMed Citations</span>
@@ -721,6 +717,7 @@
       <h3>On This Page</h3>
       <ol>
         <li><a href="#research">Research Evidence</a></li>
+        <li><a href="#ingredient-evidence">Ingredient Evidence</a></li>
         <li><a href="#citations">PubMed Citations</a></li>
         <li><a href="#faqs">FAQs</a></li>
         <li><a href="#related">Related Products</a></li>
