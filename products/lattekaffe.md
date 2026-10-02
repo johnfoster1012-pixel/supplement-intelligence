@@ -1,7 +1,7 @@
 ---
 title: "LATTEKAFFE"
 product_url: "/products/lattekaffe"
-category: "beauty/coffee"
+category: "Product formulation"
 evidence_grade: "Under Review"
 formulation_checked: "2026-10-02"
 ---
