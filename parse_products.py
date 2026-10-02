@@ -8,6 +8,7 @@ product-label verification ledger.
 
 from pathlib import Path
 import json
+import re
 import sys
 
 ROOT = Path(__file__).resolve().parent
@@ -81,6 +82,37 @@ def main():
                 )
         if not item.get("sources"):
             errors.append(f"{ingredient_slug}: has no authoritative/primary sources")
+
+        ingredient_page = ROOT / "ingredients" / f"{ingredient_slug}.html"
+        if not ingredient_page.exists():
+            errors.append(f"{ingredient_slug}: missing published ingredient HTML page")
+
+        for source in item.get("sources", []):
+            url = source.get("url", "")
+            if not url.startswith("https://"):
+                errors.append(f"{ingredient_slug}: source URL is not HTTPS: {url!r}")
+
+    if len(evidence) != 26:
+        errors.append(f"expected 26 current ingredient evidence records, found {len(evidence)}")
+
+    # Public product data should not reintroduce merchant pricing.
+    def walk(obj, path="root"):
+        if isinstance(obj, dict):
+            for key, value in obj.items():
+                if "price" in key.lower():
+                    errors.append(f"{path}.{key}: product-facing data contains a price field")
+                walk(value, f"{path}.{key}")
+        elif isinstance(obj, list):
+            for i, value in enumerate(obj):
+                walk(value, f"{path}[{i}]")
+
+    walk(products_doc)
+
+    money_pattern = re.compile(r"\$\s*\d")
+    for md_path in (ROOT / "products").glob("*.md"):
+        text = md_path.read_text(encoding="utf-8")
+        if money_pattern.search(text):
+            errors.append(f"{md_path.name}: product Markdown contains a displayed dollar price")
 
     if errors:
         print("VALIDATION FAILED")
