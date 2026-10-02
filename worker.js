@@ -82,7 +82,7 @@ async function handleRequest(request) {
   if (path === '/robots.txt') return proxyRawText('robots.txt', 'text/plain; charset=utf-8');
   if (path === '/sitemap.xml') return proxyRawText('sitemap.xml', 'application/xml; charset=utf-8');
 
-  if (path === '/') return handleProductsIndex();
+  if (path === '/') return handleHome();
   if (path === '/products') return handleProductsIndex();
   if (path === '/formulary') return redirect(url, '/products');
   if (path === '/articles') return proxyRawText('articles/index.html', 'text/html; charset=utf-8');
@@ -156,6 +156,11 @@ async function handleProduct(url, slug) {
     status: 200,
     headers: htmlHeaders({ 'X-Product': slug, 'X-Powered-By': VERSION })
   });
+}
+
+async function handleHome() {
+  const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Supplement Intelligence | Verification-First Supplement Research</title><meta name="description" content="Verification-first supplement formulation and evidence research."><link rel="canonical" href="https://supplement-intelligence.com/"><style>body{font-family:Arial,sans-serif;max-width:980px;margin:0 auto;padding:28px;line-height:1.65;color:#18202a}a{color:#0a66c2;text-decoration:none}.box{border:1px solid #e5e7eb;border-radius:14px;padding:20px;margin:18px 0}</style></head><body><header><strong>Supplement Intelligence</strong> · <a href="/products">Products</a> · <a href="/references">Research status</a> · <a href="/about">About</a></header><h1>Supplement research with a verification-first standard</h1><p>Supplement Intelligence organizes supplement product data and supporting research. Product labels and citations are being re-verified before evidence claims are republished.</p><p><a href="/products"><strong>Browse product records →</strong></a></p><div class="box"><h2>Current evidence status</h2><p>Historical citation sets that did not meet the current verification standard have been withdrawn. Product pages marked Under Review should not be interpreted as having a finalized evidence grade or verified formulation.</p></div><div class="box"><h2>Commercial disclosure</h2><p>Supplement Intelligence may earn referral credit from purchases made through some product links. Compensation does not determine evidence status.</p></div><p>For informational purposes only; not individualized medical advice.</p></body></html>`;
+  return new Response(html,{status:200,headers:htmlHeaders({'X-Powered-By':VERSION})});
 }
 
 async function handleProductsIndex() {
