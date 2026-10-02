@@ -261,6 +261,7 @@ function renderProductPage(template, product) {
   html = html.replace(/\{\{RESEARCH_CONTENT\}\}/g, formatParagraphs(publicResearch));
   html = html.replace(/\{\{MECHANISM\}\}/g, formatParagraphs((product.mechanism || '').replace(/^The mechanism is:\s*/i, '')));
   html = html.replace(/\{\{INGREDIENTS_LIST\}\}/g, formatIngredients(publicIngredients));
+  html = html.replace(/\{\{INGREDIENT_EVIDENCE_LINKS\}\}/g, formatIngredientEvidenceLinks(product.ingredientEvidenceLinks || []));
   html = html.replace(/\{\{CITATIONS_LIST\}\}/g, formatCitations(citations));
   html = html.replace(/\{\{FAQS_LIST\}\}/g, formatFaqs(product.faqs || []));
   html = html.replace(/\{\{RELATED_PRODUCTS\}\}/g, formatRelatedProducts(product.relatedProducts || []));
@@ -306,6 +307,16 @@ function formatParagraphs(text) {
 function formatIngredients(text) {
   const items = normalizeText(text).split(';').map(x => x.trim()).filter(Boolean);
   return items.map(item => `<li>${escapeHtml(item)}</li>`).join('');
+}
+
+function formatIngredientEvidenceLinks(items) {
+  if (!items.length) {
+    return '<p>No verified ingredient evidence page is linked to this product yet.</p>';
+  }
+  return '<ul>' + items.map(item =>
+    '<li><a href="' + escapeHtml(item.url) + '"><strong>' + escapeHtml(item.name) + '</strong></a> — ' +
+    escapeHtml(item.posture || 'Evidence summary available.') + '</li>'
+  ).join('') + '</ul>';
 }
 
 function formatCitations(citations) {
