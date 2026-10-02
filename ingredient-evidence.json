@@ -56,7 +56,8 @@
         "v-daily",
         "v-italboost",
         "v-nrgy",
-        "v-omega3"
+        "v-omega3",
+        "v-daily-sachet"
       ],
       "sources": [
         {
@@ -80,7 +81,8 @@
         "v-daily",
         "v-fortyflora",
         "v-nrgy",
-        "v-organex"
+        "v-organex",
+        "v-daily-sachet"
       ],
       "sources": [
         {
@@ -101,7 +103,8 @@
         "smartbiotics-kids",
         "nourish-plus",
         "v-daily",
-        "v-neurokafe"
+        "v-neurokafe",
+        "v-daily-sachet"
       ],
       "sources": [
         {
@@ -185,7 +188,8 @@
         "v-glutation",
         "v-italboost",
         "v-nrgy",
-        "vitalpro"
+        "vitalpro",
+        "v-glutation-plus"
       ],
       "sources": [
         {
@@ -235,7 +239,8 @@
       "safety": "Short-term studies generally report tolerability, but the evidence base for long-term clinical outcomes and formulation-specific safety is limited.",
       "product_directness": "V-GLUTATION lists glutathione but does not provide a dose or formulation specification on the current manufacturer page. Clinical benefit claims should remain under review.",
       "products": [
-        "v-glutation"
+        "v-glutation",
+        "v-glutation-plus"
       ],
       "sources": [
         {
