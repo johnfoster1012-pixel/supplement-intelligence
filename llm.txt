@@ -14,6 +14,7 @@ Current status:
 - "Under Review" means no finalized evidence grade or formulation verification is being asserted.
 - Manufacturer pages support formulation facts, not efficacy claims.
 
+- 
 Verified ingredient evidence:
 - https://supplement-intelligence.com/ingredients
-- Core pages currently include creatine monohydrate, omega-3, vitamin D, magnesium, probiotics, berberine, ashwagandha, curcumin, collagen peptides, and glutathione.
+- 26 ingredient evidence records are currently published. Each separates ingredient evidence from finished-product directness.
