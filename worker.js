@@ -207,6 +207,10 @@ function renderProductPage(template, product) {
   let html = template;
   const citations = product.citations || [];
   const grade = product.evidenceGrade || 'Under Review';
+  const underReview = String(grade).toLowerCase() === 'under review';
+  const publicIngredients = underReview ? 'Formulation re-verification in progress.' : (product.ingredients || '');
+  const publicTldr = underReview ? 'This product record is undergoing current-label and evidence re-verification. Ingredient-specific efficacy claims are not being asserted until that review is complete.' : (product.tldr || '');
+  const publicResearch = underReview ? 'Evidence review in progress. Verified references will be republished only after the current formulation and study-to-claim mapping are confirmed.' : (product.research || '');
 
   // Grades are void until re-derived from verified ingredients; citation counts are
   // honest (most are 0 pending verification) — render review-state text, not "0 Citations".
@@ -219,15 +223,15 @@ function renderProductPage(template, product) {
   html = html.replace(/\{\{PRODUCT_SLUG\}\}/g, product.slug);
   html = html.replace(/\{\{PRODUCT_CATEGORY\}\}/g, escapeHtml(product.category || 'General'));
   html = html.replace(/\{\{PRODUCT_CATEGORY_DISPLAY\}\}/g, escapeHtml(formatCategory(product.category)));
-  html = html.replace(/\{\{PRODUCT_INGREDIENTS\}\}/g, escapeHtml(product.ingredients));
+  html = html.replace(/\{\{PRODUCT_INGREDIENTS\}\}/g, escapeHtml(publicIngredients));
   html = html.replace(/\{\{EVIDENCE_GRADE\}\}/g, escapeHtml(grade));
   html = html.replace(/\{\{TOTAL_CITATIONS\}\}/g, String(product.totalCitations || citations.length));
   html = html.replace(/\{\{LAST_UPDATED\}\}/g, escapeHtml(formatDate(product.lastUpdated)));
-  html = html.replace(/\{\{PRODUCT_TLDR\}\}/g, formatParagraphs(product.tldr || ''));
-  html = html.replace(/\{\{PRODUCT_TLDR_SHORT\}\}/g, escapeHtml(truncateText(product.tldr || '', 160)));
-  html = html.replace(/\{\{RESEARCH_CONTENT\}\}/g, formatParagraphs(product.research || ''));
+  html = html.replace(/\{\{PRODUCT_TLDR\}\}/g, formatParagraphs(publicTldr));
+  html = html.replace(/\{\{PRODUCT_TLDR_SHORT\}\}/g, escapeHtml(truncateText(publicTldr, 160)));
+  html = html.replace(/\{\{RESEARCH_CONTENT\}\}/g, formatParagraphs(publicResearch));
   html = html.replace(/\{\{MECHANISM\}\}/g, formatParagraphs((product.mechanism || '').replace(/^The mechanism is:\s*/i, '')));
-  html = html.replace(/\{\{INGREDIENTS_LIST\}\}/g, formatIngredients(product.ingredients || ''));
+  html = html.replace(/\{\{INGREDIENTS_LIST\}\}/g, formatIngredients(publicIngredients));
   html = html.replace(/\{\{CITATIONS_LIST\}\}/g, formatCitations(citations));
   html = html.replace(/\{\{FAQS_LIST\}\}/g, formatFaqs(product.faqs || []));
   html = html.replace(/\{\{RELATED_PRODUCTS\}\}/g, formatRelatedProducts(product.relatedProducts || []));
