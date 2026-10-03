@@ -1,2 +1,5 @@
 .DS_Store
 briefing/
+
+# Generated MCP deployment snapshots
+mcp-server/data/*.json
