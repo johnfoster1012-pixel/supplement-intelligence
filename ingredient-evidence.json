@@ -26,7 +26,21 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/40944139/"
         }
       ],
-      "last_reviewed_at": "2026-10-02"
+      "last_reviewed_at": "2026-10-02",
+      "review_evidence": [
+        {
+          "title": "The Effects of Creatine Supplementation on Upper- and Lower-Body Strength and Power: A Systematic Review and Meta-Analysis",
+          "pmid": "40944139",
+          "study_type": "Systematic review and meta-analysis of randomized trials",
+          "population": "Adults across exercise/training contexts; 69 studies, 1,937 participants",
+          "evidence_scope": "Muscular strength and power outcomes",
+          "finding": "Creatine, especially with resistance training, produced small but significant improvements in several compound-lift strength and power outcomes, but benefits were not uniform across all measures.",
+          "limitations": "Subgroup effects varied by age, sex, training status, outcome, dose, and study design; several outcomes were not significantly improved.",
+          "directness": "Relevant human evidence",
+          "verified_at": "2026-10-02",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40944139/"
+        }
+      ]
     },
     "omega-3": {
       "name": "Long-chain omega-3 fatty acids / fish oil",
@@ -60,7 +74,33 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/35290840/"
         }
       ],
-      "last_reviewed_at": "2026-10-02"
+      "last_reviewed_at": "2026-10-02",
+      "review_evidence": [
+        {
+          "title": "Association Between Omega-3 Fatty Acid Intake and Dyslipidemia: A Continuous Dose-Response Meta-Analysis of Randomized Controlled Trials",
+          "pmid": "37264945",
+          "study_type": "Dose-response meta-analysis of randomized controlled trials",
+          "population": "Adults in randomized trials of EPA+DHA supplementation",
+          "evidence_scope": "Triglycerides and other lipid outcomes",
+          "finding": "EPA+DHA supplementation showed a dose-responsive triglyceride-lowering effect; lipid effects varied by outcome and dose.",
+          "limitations": "Lipid changes do not establish broad cardiovascular-event prevention, and results depend on actual EPA/DHA intake rather than generic fish-oil presence.",
+          "directness": "Relevant human evidence",
+          "verified_at": "2026-10-02",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37264945/"
+        },
+        {
+          "title": "Dose-related meta-analysis for Omega-3 fatty acids supplementation on major adverse cardiovascular events",
+          "pmid": "35290840",
+          "study_type": "Meta-analysis of long-term randomized controlled trials",
+          "population": "19 randomized trials; 97,709 participants",
+          "evidence_scope": "All-cause mortality, cardiac death, myocardial infarction, and stroke",
+          "finding": "Omega-3 supplementation was not consistently associated with lower major cardiovascular outcomes across dose categories.",
+          "limitations": "Results varied by dose, formulation, prevention setting, statin use, and trial design; findings should not be generalized to triglyceride treatment.",
+          "directness": "Relevant human evidence",
+          "verified_at": "2026-10-02",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35290840/"
+        }
+      ]
     },
     "vitamin-d": {
       "name": "Vitamin D",
@@ -98,7 +138,33 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/37120684/"
         }
       ],
-      "last_reviewed_at": "2026-10-02"
+      "last_reviewed_at": "2026-10-02",
+      "review_evidence": [
+        {
+          "title": "Effect of Vitamin D Supplementation on Risk of Fractures and Falls According to Dosage and Interval: A Meta-Analysis",
+          "pmid": "35504603",
+          "study_type": "Meta-analysis of randomized controlled trials",
+          "population": "Adults across 32 randomized studies",
+          "evidence_scope": "Fracture and fall outcomes",
+          "finding": "Benefits were not uniform across dosing regimens; some daily-dose subgroups showed lower fracture/fall risk while other dosing patterns did not.",
+          "limitations": "Effects depend on dose, dosing interval, calcium co-administration, baseline status, age, and population; subgroup findings should not be treated as universal.",
+          "directness": "Relevant human evidence",
+          "verified_at": "2026-10-02",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35504603/"
+        },
+        {
+          "title": "Effects of intermittent or single high-dose vitamin D supplementation on risk of falls and fractures: a systematic review and meta-analysis",
+          "pmid": "37120684",
+          "study_type": "Systematic review and meta-analysis of randomized controlled trials",
+          "population": "Adults in 15 randomized trials of intermittent or single high-dose vitamin D",
+          "evidence_scope": "Falls and fractures",
+          "finding": "Intermittent or single high-dose vitamin D did not prevent falls or fractures and may increase fall risk.",
+          "limitations": "Applies to intermittent/high-dose regimens and should not be generalized to routine daily replacement in deficient individuals.",
+          "directness": "Relevant human evidence",
+          "verified_at": "2026-10-02",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37120684/"
+        }
+      ]
     },
     "magnesium": {
       "name": "Magnesium",
@@ -130,7 +196,21 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/41000008/"
         }
       ],
-      "last_reviewed_at": "2026-10-02"
+      "last_reviewed_at": "2026-10-02",
+      "review_evidence": [
+        {
+          "title": "Magnesium Supplementation and Blood Pressure: A Systematic Review and Meta-Analysis of Randomized Controlled Trials",
+          "pmid": "41000008",
+          "study_type": "Systematic review, meta-analysis, and dose-response analysis of randomized trials",
+          "population": "38 randomized trials; 2,709 participants",
+          "evidence_scope": "Systolic and diastolic blood pressure",
+          "finding": "Magnesium supplementation modestly reduced blood pressure overall, with larger reductions in hypertensive participants on medication and in people with hypomagnesemia.",
+          "limitations": "High between-study heterogeneity; normotensive groups did not show clear benefit and no dose-response relationship was established.",
+          "directness": "Relevant human evidence",
+          "verified_at": "2026-10-02",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41000008/"
+        }
+      ]
     },
     "probiotics": {
       "name": "Probiotics",
@@ -165,7 +245,21 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/41682832/"
         }
       ],
-      "last_reviewed_at": "2026-10-02"
+      "last_reviewed_at": "2026-10-02",
+      "review_evidence": [
+        {
+          "title": "Strain-Specificity and Disease-Specificity of Probiotic Efficacy: A Systematic Review and Meta-Analysis",
+          "pmid": "29868585",
+          "study_type": "Systematic review and meta-analysis",
+          "population": "228 controlled trials across multiple probiotic strains and indications",
+          "evidence_scope": "Strain-specific and disease-specific probiotic efficacy",
+          "finding": "Efficacy differed materially by strain and disease indication; pooling different probiotics can produce misleading generalizations.",
+          "limitations": "Findings cannot be transferred from one strain, mixture, dose, population, or indication to another.",
+          "directness": "Relevant human evidence",
+          "verified_at": "2026-10-02",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29868585/"
+        }
+      ]
     },
     "berberine": {
       "name": "Berberine",
@@ -352,7 +446,21 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/42356375/"
         }
       ],
-      "last_reviewed_at": "2026-10-02"
+      "last_reviewed_at": "2026-10-02",
+      "review_evidence": [
+        {
+          "title": "Wake up and smell the coffee: caffeine supplementation and exercise performance-an umbrella review of 21 published meta-analyses",
+          "pmid": "30926628",
+          "study_type": "Umbrella review of meta-analyses",
+          "population": "11 reviews containing 21 meta-analyses of exercise-performance outcomes",
+          "evidence_scope": "Aerobic endurance, strength, muscular endurance, power, jumping, and exercise speed",
+          "finding": "Caffeine showed ergogenic effects across several performance domains, with the strongest and most consistent evidence in endurance-related outcomes.",
+          "limitations": "Prediction intervals were not uniformly positive and evidence quality ranged from moderate to low/very low for some outcomes; individual response varies.",
+          "directness": "Relevant human evidence",
+          "verified_at": "2026-10-02",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30926628/"
+        }
+      ]
     },
     "l-theanine": {
       "name": "L-theanine",
@@ -410,7 +518,21 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/39474788/"
         }
       ],
-      "last_reviewed_at": "2026-10-02"
+      "last_reviewed_at": "2026-10-02",
+      "review_evidence": [
+        {
+          "title": "Ginseng and Ginseng Herbal Formulas for Symptomatic Management of Fatigue: A Systematic Review and Meta-Analysis",
+          "pmid": "36730693",
+          "study_type": "Systematic review and meta-analysis of randomized clinical trials",
+          "population": "19 randomized clinical trials across fatigue populations",
+          "evidence_scope": "Fatigue severity, quality of life, and adverse events",
+          "finding": "The pooled overall analysis did not show a significant fatigue reduction, although small benefits appeared in selected subgroups such as chronic or general fatigue.",
+          "limitations": "Effects were small and varied by ginseng type, fatigue condition, and assessment method; herbal formulas are not interchangeable with standardized Panax ginseng products.",
+          "directness": "Relevant human evidence",
+          "verified_at": "2026-10-02",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36730693/"
+        }
+      ]
     },
     "l-arginine": {
       "name": "L-arginine",
@@ -441,7 +563,33 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/33587327/"
         }
       ],
-      "last_reviewed_at": "2026-10-02"
+      "last_reviewed_at": "2026-10-02",
+      "review_evidence": [
+        {
+          "title": "Effects of Arginine Supplementation on Athletic Performance Based on Energy Metabolism: A Systematic Review and Meta-Analysis",
+          "pmid": "32370176",
+          "study_type": "Systematic review and meta-analysis",
+          "population": "18 studies; 15 included in pooled performance analyses",
+          "evidence_scope": "Aerobic and anaerobic exercise performance",
+          "finding": "Pooled analyses reported possible improvements in selected aerobic and anaerobic performance outcomes.",
+          "limitations": "Aerobic estimates showed substantial heterogeneity and protocols varied in dose, timing, training status, and outcome; results do not establish a broadly reliable ergogenic effect.",
+          "directness": "Relevant human evidence",
+          "verified_at": "2026-10-02",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32370176/"
+        },
+        {
+          "title": "The effect of L-arginine supplementation on maximal oxygen uptake: A systematic review and meta-analysis",
+          "pmid": "33587327",
+          "study_type": "Systematic review and meta-analysis of randomized clinical trials",
+          "population": "11 randomized clinical trials in healthy people",
+          "evidence_scope": "Maximal oxygen uptake (VO2max)",
+          "finding": "The pooled estimate favored a small increase in VO2max with L-arginine.",
+          "limitations": "VO2max is a surrogate performance measure and the evidence base was limited; findings do not establish strength, recovery, or finished-product efficacy.",
+          "directness": "Relevant human evidence",
+          "verified_at": "2026-10-02",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33587327/"
+        }
+      ]
     },
     "l-citrulline": {
       "name": "L-citrulline / citrulline malate",
@@ -490,7 +638,21 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/30566740/"
         }
       ],
-      "last_reviewed_at": "2026-10-02"
+      "last_reviewed_at": "2026-10-02",
+      "review_evidence": [
+        {
+          "title": "Effects of Oral Glucosamine Sulfate on Osteoarthritis-Related Pain and Joint-Space Changes: Systematic Review and Meta-Analysis",
+          "pmid": "30566740",
+          "study_type": "Systematic review and meta-analysis of randomized double-blind placebo-controlled trials",
+          "population": "17 studies for osteoarthritis pain; 4 studies for joint-space narrowing",
+          "evidence_scope": "Osteoarthritis pain and structural joint-space outcomes",
+          "finding": "Glucosamine sulfate showed a small-to-moderate pooled reduction in pain but little evidence of improved joint-space narrowing.",
+          "limitations": "Effects were smaller in non-industry studies; results apply to glucosamine sulfate and should not be generalized to unspecified forms or finished products.",
+          "directness": "Relevant human evidence",
+          "verified_at": "2026-10-02",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30566740/"
+        }
+      ]
     },
     "msm": {
       "name": "Methylsulfonylmethane (MSM)",
@@ -519,7 +681,21 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/19474240/"
         }
       ],
-      "last_reviewed_at": "2026-10-02"
+      "last_reviewed_at": "2026-10-02",
+      "review_evidence": [
+        {
+          "title": "Meta-analysis of the related nutritional supplements dimethyl sulfoxide and methylsulfonylmethane in the treatment of osteoarthritis of the knee",
+          "pmid": "19474240",
+          "study_type": "Meta-analysis of randomized or quasi-randomized trials",
+          "population": "3 eligible trials; 326 participants, including one MSM trial",
+          "evidence_scope": "Osteoarthritis pain",
+          "finding": "The pooled pain reduction was not statistically or clinically significant.",
+          "limitations": "Very small evidence base, mixed DMSO/MSM interventions, heterogeneity, and short/inadequate treatment periods limit inference about MSM.",
+          "directness": "Relevant human evidence",
+          "verified_at": "2026-10-02",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/19474240/"
+        }
+      ]
     },
     "valerian": {
       "name": "Valerian (Valeriana officinalis)",
@@ -544,7 +720,21 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/38359657/"
         }
       ],
-      "last_reviewed_at": "2026-10-02"
+      "last_reviewed_at": "2026-10-02",
+      "review_evidence": [
+        {
+          "title": "Does valerian work for insomnia? An umbrella review of the evidence",
+          "pmid": "38359657",
+          "study_type": "Umbrella review of systematic reviews",
+          "population": "8 eligible systematic reviews of valerian for sleep disturbances/insomnia",
+          "evidence_scope": "Insomnia and sleep quality",
+          "finding": "The review found no convincing evidence that valerian treats insomnia, though subjective sleep-quality improvement was reported in some analyses.",
+          "limitations": "Existing studies are heterogeneous, often low quality, and use variable valerian preparations; objective sleep measures are not consistently improved.",
+          "directness": "Relevant human evidence",
+          "verified_at": "2026-10-02",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38359657/"
+        }
+      ]
     },
     "echinacea": {
       "name": "Echinacea",
@@ -569,7 +759,21 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/24554461/"
         }
       ],
-      "last_reviewed_at": "2026-10-02"
+      "last_reviewed_at": "2026-10-02",
+      "review_evidence": [
+        {
+          "title": "Echinacea for preventing and treating the common cold",
+          "pmid": "24554461",
+          "study_type": "Cochrane systematic review",
+          "population": "24 double-blind trials; 4,631 participants",
+          "evidence_scope": "Prevention and treatment of the common cold",
+          "finding": "No clear treatment benefit was established; a weak preventive effect from some preparations remained possible.",
+          "limitations": "Strong clinical heterogeneity across species, plant parts, extracts, and trial methods prevented broad pooling and product-level generalization.",
+          "directness": "Relevant human evidence",
+          "verified_at": "2026-10-02",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/24554461/"
+        }
+      ]
     },
     "senna": {
       "name": "Senna",
@@ -600,7 +804,21 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/32969946/"
         }
       ],
-      "last_reviewed_at": "2026-10-02"
+      "last_reviewed_at": "2026-10-02",
+      "review_evidence": [
+        {
+          "title": "Efficacy and Safety of Over-the-Counter Therapies for Chronic Constipation: An Updated Systematic Review",
+          "pmid": "33767108",
+          "study_type": "Systematic review of randomized controlled trials",
+          "population": "41 randomized trials of over-the-counter constipation therapies in adults",
+          "evidence_scope": "Chronic constipation efficacy and safety",
+          "finding": "The review judged evidence for senna as good and supportive of use as a laxative for chronic constipation.",
+          "limitations": "The review covered multiple therapies and trial designs; this supports laxative activity, not detoxification, weight loss, or systemic-cleansing claims.",
+          "directness": "Relevant human evidence",
+          "verified_at": "2026-10-02",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33767108/"
+        }
+      ]
     },
     "milk-thistle": {
       "name": "Milk thistle (Silybum marianum)",
@@ -632,7 +850,21 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/18334810/"
         }
       ],
-      "last_reviewed_at": "2026-10-02"
+      "last_reviewed_at": "2026-10-02",
+      "review_evidence": [
+        {
+          "title": "Milk thistle for the treatment of liver disease: a systematic review and meta-analysis",
+          "pmid": "12427501",
+          "study_type": "Systematic review and meta-analysis of randomized placebo-controlled trials",
+          "population": "14 trials in people with liver disease",
+          "evidence_scope": "Mortality, liver histology, and biochemical liver outcomes",
+          "finding": "Milk thistle did not show reliable improvements in mortality, histology, or clinically meaningful liver-function outcomes.",
+          "limitations": "Trials were heterogeneous and often small; evidence was insufficient to exclude benefit or harm for specific preparations or subgroups.",
+          "directness": "Relevant human evidence",
+          "verified_at": "2026-10-02",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/12427501/"
+        }
+      ]
     },
     "alpha-lipoic-acid": {
       "name": "Alpha-lipoic acid (ALA)",
@@ -692,7 +924,33 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/41158831/"
         }
       ],
-      "last_reviewed_at": "2026-10-02"
+      "last_reviewed_at": "2026-10-02",
+      "review_evidence": [
+        {
+          "title": "Efficacy and safety of coenzyme Q10 in heart failure: a meta-analysis of randomized controlled trials",
+          "pmid": "39462324",
+          "study_type": "Meta-analysis of randomized controlled trials",
+          "population": "33 randomized studies in people with heart failure",
+          "evidence_scope": "Mortality, hospitalization, functional status, biomarkers, and exercise capacity",
+          "finding": "The pooled analysis reported lower all-cause mortality and heart-failure hospitalization and improvement in some functional outcomes.",
+          "limitations": "Evidence quality varied by endpoint and the authors noted small studies and variable study quality; findings apply to heart-failure populations, not general cardiovascular prevention or energy claims.",
+          "directness": "Relevant human evidence",
+          "verified_at": "2026-10-02",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39462324/"
+        },
+        {
+          "title": "Effects of coenzyme Q10 supplementation on myopathy in statin-treated patients: a systematic review and meta-analysis",
+          "pmid": "41158831",
+          "study_type": "Systematic review and meta-analysis of randomized controlled trials",
+          "population": "7 randomized trials; 389 statin-treated adults",
+          "evidence_scope": "Statin-associated muscle pain",
+          "finding": "The pooled analysis found a modest reduction in muscle-pain intensity with CoQ10.",
+          "limitations": "Only seven small trials were included, treatment durations were short, and results were mixed across individual trials; more research is needed.",
+          "directness": "Relevant human evidence",
+          "verified_at": "2026-10-02",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41158831/"
+        }
+      ]
     },
     "resveratrol": {
       "name": "Resveratrol",
@@ -745,7 +1003,21 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/38719213/"
         }
       ],
-      "last_reviewed_at": "2026-10-02"
+      "last_reviewed_at": "2026-10-02",
+      "review_evidence": [
+        {
+          "title": "Zinc for prevention and treatment of the common cold",
+          "pmid": "38719213",
+          "study_type": "Cochrane systematic review",
+          "population": "Randomized studies of zinc for common-cold prevention or treatment",
+          "evidence_scope": "Cold incidence, duration, symptoms, and adverse events",
+          "finding": "Zinc may have little or no effect on preventing colds but may shorten the duration of an ongoing cold.",
+          "limitations": "Interventions, formulations, doses, co-therapies, and outcomes varied widely; non-serious adverse events were more frequent with zinc.",
+          "directness": "Relevant human evidence",
+          "verified_at": "2026-10-02",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38719213/"
+        }
+      ]
     },
     "vitamin-c": {
       "name": "Vitamin C",
@@ -783,7 +1055,21 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/38082300/"
         }
       ],
-      "last_reviewed_at": "2026-10-02"
+      "last_reviewed_at": "2026-10-02",
+      "review_evidence": [
+        {
+          "title": "Vitamin C for preventing and treating the common cold",
+          "pmid": "23440782",
+          "study_type": "Cochrane systematic review and meta-analysis",
+          "population": "29 trial comparisons; 11,306 participants contributed to cold-incidence analyses",
+          "evidence_scope": "Cold incidence, duration, and severity",
+          "finding": "Regular vitamin C did not materially reduce cold incidence in the general population but modestly shortened cold duration; therapeutic use after symptom onset was not consistently beneficial.",
+          "limitations": "Effects differed in people under extreme physical stress and by dosing context; findings should not be generalized to all immune claims.",
+          "directness": "Relevant human evidence",
+          "verified_at": "2026-10-02",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23440782/"
+        }
+      ]
     }
   }
 }
