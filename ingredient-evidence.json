@@ -289,7 +289,22 @@
           "pmid": "36467075",
           "url": "https://pubmed.ncbi.nlm.nih.gov/36467075/"
         }
-      ]
+      ],
+      "review_evidence": [
+        {
+          "title": "Glucose-lowering effect of berberine on type 2 diabetes: A systematic review and meta-analysis",
+          "pmid": "36467075",
+          "study_type": "Systematic review and meta-analysis of randomized controlled trials",
+          "population": "37 studies; 3,048 people with type 2 diabetes",
+          "evidence_scope": "Fasting glucose, HbA1c, 2-hour postprandial glucose, and adverse events",
+          "finding": "Pooled analyses found reductions in fasting glucose, HbA1c, and 2-hour postprandial glucose; hypoglycemia risk was not significantly increased.",
+          "limitations": "Trials varied in baseline glycemia, dose, formulation, and co-therapy. Findings apply to people with type 2 diabetes and do not establish weight-loss efficacy or finished-product effects.",
+          "directness": "Relevant human evidence",
+          "verified_at": "2026-10-02",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36467075/"
+        }
+      ],
+      "last_reviewed_at": "2026-10-02"
     },
     "ashwagandha": {
       "name": "Ashwagandha (Withania somnifera)",
@@ -319,7 +334,34 @@
           "pmid": "34559859",
           "url": "https://pubmed.ncbi.nlm.nih.gov/34559859/"
         }
-      ]
+      ],
+      "review_evidence": [
+        {
+          "title": "Effects of Ashwagandha (Withania Somnifera) on stress and anxiety: A systematic review and meta-analysis",
+          "pmid": "39348746",
+          "study_type": "Systematic review and meta-analysis of randomized controlled trials",
+          "population": "9 randomized trials; 558 participants",
+          "evidence_scope": "Perceived stress, anxiety, cortisol, and safety",
+          "finding": "Pooled results favored ashwagandha for perceived stress, anxiety scores, and cortisol compared with placebo.",
+          "limitations": "Formulations and doses varied, the evidence base was relatively small, and long-term safety remains insufficiently characterized.",
+          "directness": "Relevant human evidence",
+          "verified_at": "2026-10-02",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39348746/"
+        },
+        {
+          "title": "Effect of Ashwagandha (Withania somnifera) extract on sleep: A systematic review and meta-analysis",
+          "pmid": "34559859",
+          "study_type": "Systematic review and meta-analysis of randomized controlled trials",
+          "population": "5 randomized trials; 400 adults",
+          "evidence_scope": "Sleep quantity, sleep quality, alertness, anxiety, and quality of life",
+          "finding": "Ashwagandha produced a small overall improvement in sleep, with larger effects in insomnia, at doses of at least 600 mg/day, and with at least 8 weeks of treatment.",
+          "limitations": "The trial base was small and heterogeneous (I² 62% for overall sleep), and long-term safety data were limited.",
+          "directness": "Relevant human evidence",
+          "verified_at": "2026-10-02",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34559859/"
+        }
+      ],
+      "last_reviewed_at": "2026-10-02"
     },
     "curcumin": {
       "name": "Turmeric / curcumin",
@@ -350,7 +392,22 @@
           "pmid": "38576215",
           "url": "https://pubmed.ncbi.nlm.nih.gov/38576215/"
         }
-      ]
+      ],
+      "review_evidence": [
+        {
+          "title": "The efficacy of curcumin in relieving osteoarthritis: A meta-analysis of meta-analyses",
+          "pmid": "38576215",
+          "study_type": "Umbrella meta-analysis of prior meta-analyses of randomized controlled trials",
+          "population": "11 included meta-analyses of osteoarthritis trials",
+          "evidence_scope": "Pain, WOMAC total, function, and stiffness outcomes in osteoarthritis",
+          "finding": "Pooled umbrella-level analyses favored curcumin for multiple osteoarthritis pain and function outcomes.",
+          "limitations": "Underlying trials and meta-analyses used varied curcumin formulations, doses, and methods; results do not establish equivalence across curcumin products or ordinary turmeric powder.",
+          "directness": "Relevant human evidence",
+          "verified_at": "2026-10-02",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38576215/"
+        }
+      ],
+      "last_reviewed_at": "2026-10-02"
     },
     "collagen-peptides": {
       "name": "Oral collagen peptides",
@@ -376,7 +433,34 @@
           "pmid": "39212129",
           "url": "https://pubmed.ncbi.nlm.nih.gov/39212129/"
         }
-      ]
+      ],
+      "review_evidence": [
+        {
+          "title": "Effects of Collagen Supplements on Skin Aging: A Systematic Review and Meta-Analysis of Randomized Controlled Trials",
+          "pmid": "40324552",
+          "study_type": "Systematic review and meta-analysis of randomized controlled trials",
+          "population": "23 randomized trials; 1,474 participants",
+          "evidence_scope": "Skin hydration, elasticity, and wrinkles",
+          "finding": "Overall pooled results favored collagen, but effects disappeared in non-industry-funded studies and high-quality study subgroups.",
+          "limitations": "Results were sensitive to funding source and study quality, so pooled positive findings should not be treated as robust proof of skin-aging efficacy.",
+          "directness": "Relevant human evidence",
+          "verified_at": "2026-10-02",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40324552/"
+        },
+        {
+          "title": "Effect of collagen supplementation on knee osteoarthritis: an updated systematic review and meta-analysis of randomised controlled trials",
+          "pmid": "39212129",
+          "study_type": "Systematic review and meta-analysis of randomized controlled trials",
+          "population": "11 randomized trials; 870 participants with knee osteoarthritis",
+          "evidence_scope": "Knee osteoarthritis pain and function",
+          "finding": "Pooled results favored oral collagen for both pain and function outcomes.",
+          "limitations": "Between-study heterogeneity was high for both function (I² 75%) and pain (I² 88%), and collagen preparations varied.",
+          "directness": "Relevant human evidence",
+          "verified_at": "2026-10-02",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39212129/"
+        }
+      ],
+      "last_reviewed_at": "2026-10-02"
     },
     "glutathione": {
       "name": "Oral glutathione",
@@ -485,7 +569,22 @@
           "pmid": "40314930",
           "url": "https://pubmed.ncbi.nlm.nih.gov/40314930/"
         }
-      ]
+      ],
+      "review_evidence": [
+        {
+          "title": "Cognitive and affective effects of L-Theanine: a systematic review and meta-analysis of 31 randomized trials",
+          "pmid": "42410082",
+          "study_type": "Systematic review and meta-analysis of randomized controlled trials",
+          "population": "31 randomized trials; 1,168 healthy and clinical participants",
+          "evidence_scope": "Attention, stress, anxiety, depressive symptoms, fatigue, and safety",
+          "finding": "A single 200 mg dose improved choice reaction time; acute stress effects were modest, fatigue was not improved, and anxiety findings were inconsistent.",
+          "limitations": "Some stress findings were influenced by high-risk-of-bias studies, clinical outcomes were inconsistent, and stronger confirmation is needed outside short-term attention effects.",
+          "directness": "Relevant human evidence",
+          "verified_at": "2026-10-02",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42410082/"
+        }
+      ],
+      "last_reviewed_at": "2026-10-02"
     },
     "panax-ginseng": {
       "name": "Panax ginseng (Asian ginseng)",
@@ -613,7 +712,22 @@
           "pmid": "30895562",
           "url": "https://pubmed.ncbi.nlm.nih.gov/30895562/"
         }
-      ]
+      ],
+      "review_evidence": [
+        {
+          "title": "Acute Effects of Citrulline Supplementation on High-Intensity Strength and Power Performance: A Systematic Review and Meta-Analysis",
+          "pmid": "30895562",
+          "study_type": "Systematic review and meta-analysis",
+          "population": "12 studies; 13 independent samples; 198 healthy participants",
+          "evidence_scope": "High-intensity strength and power performance",
+          "finding": "The pooled analysis found a statistically significant but small benefit versus placebo (Hedges' g 0.20).",
+          "limitations": "The effect was small, every individual study confidence interval crossed the null, and results may depend on citrulline form, dose, sex, age, and task.",
+          "directness": "Relevant human evidence",
+          "verified_at": "2026-10-02",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30895562/"
+        }
+      ],
+      "last_reviewed_at": "2026-10-02"
     },
     "glucosamine": {
       "name": "Glucosamine",
@@ -890,7 +1004,22 @@
           "pmid": "37630823",
           "url": "https://pubmed.ncbi.nlm.nih.gov/37630823/"
         }
-      ]
+      ],
+      "review_evidence": [
+        {
+          "title": "Effects of Oral Alpha-Lipoic Acid Treatment on Diabetic Polyneuropathy: A Meta-Analysis and Systematic Review",
+          "pmid": "37630823",
+          "study_type": "Systematic review and meta-analysis of randomized controlled trials",
+          "population": "10 randomized trials; 1,242 people with diabetic sensorimotor peripheral neuropathy",
+          "evidence_scope": "Neuropathy symptom and neurologic scores",
+          "finding": "Oral alpha-lipoic acid improved total symptom scores and some neurologic disability measures, while several objective or secondary outcomes were not improved.",
+          "limitations": "The evidence applies to diabetic polyneuropathy rather than general glucose control or weight loss; several outcomes were null and some pooled estimates were heterogeneous.",
+          "directness": "Relevant human evidence",
+          "verified_at": "2026-10-02",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37630823/"
+        }
+      ],
+      "last_reviewed_at": "2026-10-02"
     },
     "coenzyme-q10": {
       "name": "Coenzyme Q10 (CoQ10)",
