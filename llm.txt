@@ -17,7 +17,7 @@ Verification-first supplement formulation and ingredient research.
 
 ## Current status
 - 31 current product records are tracked.
-- 26 reviewed ingredient evidence records are published.
+- 34 reviewed ingredient evidence records are published.
 - Product formulation facts are separated from ingredient-level evidence.
 - Finished-product efficacy remains Under Review unless explicitly adjudicated.
 - Historical citation totals and retired research datasets should not be treated as current evidence.
@@ -27,3 +27,4 @@ Verification-first supplement formulation and ingredient research.
 - Treat manufacturer pages as formulation sources, not efficacy evidence.
 - Do not infer finished-product benefit from ingredient presence alone.
 - Preserve evidence uncertainty, safety context, and source type.
+- Structured review-level evidence should be interpreted with its stated population, finding, and limitations.
