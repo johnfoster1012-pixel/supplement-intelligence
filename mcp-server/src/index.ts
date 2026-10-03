@@ -4,7 +4,7 @@ import productsSnapshot from "../data/products-data.json";
 import ingredientSnapshot from "../data/ingredient-evidence.json";
 
 const SERVER_NAME = "supplement-intelligence";
-const SERVER_VERSION = "1.1.0";
+const SERVER_VERSION = "1.2.0";
 const DATA_SOURCE = "bundled-repository-snapshot";
 const PRODUCTS_DOC = productsSnapshot as unknown as JsonObject;
 const INGREDIENT_DOC = ingredientSnapshot as unknown as JsonObject;
@@ -117,6 +117,24 @@ const sourceSchema = z.object({
   title: z.string(),
   url: z.string().url(),
   pmid: z.string().optional(),
+});
+
+const reviewEvidenceSchema = z.object({
+  title: z.string(),
+  pmid: z.string(),
+  study_type: z.string(),
+  population: z.string(),
+  evidence_scope: z.string(),
+  finding: z.string(),
+  limitations: z.string(),
+  directness: z.enum([
+    "Direct human evidence",
+    "Relevant human evidence",
+    "Preliminary human evidence",
+    "Mechanistic evidence",
+  ]),
+  verified_at: z.string(),
+  url: z.string().url(),
 });
 
 function createServer(): McpServer {
@@ -243,6 +261,7 @@ function createServer(): McpServer {
         data_version: z.string(),
         last_reviewed_at: z.string(),
         source_count: z.number().int().nonnegative(),
+        review_evidence_count: z.number().int().nonnegative(),
         name: z.string(),
         posture: z.string(),
         summary: z.string(),
@@ -251,6 +270,7 @@ function createServer(): McpServer {
         product_directness: z.string(),
         products: z.array(z.string()),
         sources: z.array(sourceSchema),
+        review_evidence: z.array(reviewEvidenceSchema),
         interpretation: z.string(),
       }),
       annotations: readOnlyAnnotations,
@@ -267,12 +287,14 @@ function createServer(): McpServer {
         if (!data) throw new Error("Ingredient not found.");
 
         const sources = Array.isArray(data.sources) ? data.sources : [];
+        const reviewEvidence = Array.isArray(data.review_evidence) ? data.review_evidence : [];
         const output = {
           slug,
           canonical_url: `https://supplement-intelligence.com/ingredients/${slug}`,
           data_version: INGREDIENT_DATA_VERSION,
           last_reviewed_at: String(data.last_reviewed_at ?? INGREDIENT_DATA_VERSION),
           source_count: sources.length,
+          review_evidence_count: reviewEvidence.length,
           name: String(data.name ?? slug),
           posture: String(data.posture ?? ""),
           summary: String(data.summary ?? ""),
@@ -281,6 +303,7 @@ function createServer(): McpServer {
           product_directness: String(data.product_directness ?? ""),
           products: Array.isArray(data.products) ? data.products.map(String) : [],
           sources,
+          review_evidence: reviewEvidence,
           interpretation:
             "Ingredient-level evidence is not proof that a finished product has the same effect.",
         };

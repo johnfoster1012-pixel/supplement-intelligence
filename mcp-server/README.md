@@ -18,6 +18,10 @@ The Worker is stateless and read-only. V1.1 bundles exact snapshots of the verif
 - Tool responses expose `data_version`; ingredient responses add `last_reviewed_at` and `source_count`; product responses add `catalog_checked_at` and `formulation_checked_at`.
 - Application telemetry logs only tool name, success/error, latency, and data version. Query content is not logged by the telemetry wrapper.
 
+## V1.2 structured evidence
+
+For reviewed ingredients with higher-level human evidence, `get_ingredient_evidence` can return a `review_evidence` array with review type, PMID, population/scope, finding, limitations, directness, verification date, and source URL. Findings and limitations are intentionally returned together.
+
 ## Tools
 
 ### search_supplement_intelligence

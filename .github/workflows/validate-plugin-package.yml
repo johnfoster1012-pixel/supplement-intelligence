@@ -50,13 +50,13 @@ jobs:
       - name: Build upload ZIP
         run: |
           cd plugin-package
-          zip -r ../supplement-intelligence-plugin-v1.1.0.zip . -x '*.DS_Store'
+          zip -r ../supplement-intelligence-plugin-v1.2.0.zip . -x '*.DS_Store'
           cd ..
-          unzip -l supplement-intelligence-plugin-v1.1.0.zip
+          unzip -l supplement-intelligence-plugin-v1.2.0.zip
 
       - name: Upload plugin ZIP artifact
         uses: actions/upload-artifact@v4
         with:
-          name: supplement-intelligence-plugin-v1.1.0
-          path: supplement-intelligence-plugin-v1.1.0.zip
+          name: supplement-intelligence-plugin-v1.2.0
+          path: supplement-intelligence-plugin-v1.2.0.zip
           if-no-files-found: error

@@ -10,7 +10,7 @@ const expectedTools = [
 
 const client = new Client({
   name: "supplement-intelligence-smoke-test",
-  version: "1.1.0",
+  version: "1.2.0",
 });
 
 async function callTool(name: string, args: Record<string, unknown>) {
@@ -59,6 +59,9 @@ try {
   if (!ingredientJson.includes("last_reviewed_at") || !ingredientJson.includes("source_count")) {
     throw new Error("Ingredient evidence response is missing freshness/source metadata.");
   }
+  if (!ingredientJson.includes("review_evidence") || !ingredientJson.includes("limitations") || !ingredientJson.includes("40944139")) {
+    throw new Error("Ingredient evidence response is missing structured review-level evidence.");
+  }
 
   const product = await callTool("get_product_formulation", { slug: "s-balance" });
   const productJson = JSON.stringify(product.structuredContent ?? product.content).toLowerCase();
@@ -77,6 +80,7 @@ try {
           "fish-oil-synonym",
           "coq10-synonym",
           "ingredient-freshness",
+          "structured-review-evidence",
           "product-freshness",
         ],
         protocolEra: client.getProtocolEra(),

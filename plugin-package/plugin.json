@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "supplement-intelligence",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Verification-first supplement ingredient evidence and current product formulation research.",
   "author": {
     "name": "Supplement Intelligence",
@@ -48,7 +48,7 @@
               "description": "Retrieve evidence for a reviewed ingredient",
               "prompt": "What does the evidence say about creatine monohydrate?",
               "tools_triggered": "get_ingredient_evidence",
-              "expected_behavior": "Returns the creatine evidence posture, studied context, safety context, product-directness limitation, and source links without turning ingredient evidence into a finished-product claim."
+              "expected_behavior": "Returns the creatine evidence posture, studied context, safety context, structured review-level evidence with limitations, product-directness limitation, and source links without turning ingredient evidence into a finished-product claim."
             },
             {
               "description": "Retrieve current formulation for a tracked product",
@@ -97,7 +97,7 @@
         "commerce_description": "This plugin does not sell products or process payments."
       },
       "publication": {
-        "release_notes": "V1.1 bundles the verified evidence/product snapshot with the MCP Worker, adds freshness and source-count metadata, synonym-aware search, privacy-safe operational telemetry, and stronger production smoke tests."
+        "release_notes": "V1.2 adds structured review-level evidence metadata, including review type, population/scope, finding, limitations, directness, PMID, and verification date, while preserving ingredient-versus-finished-product boundaries."
       }
     }
   }
