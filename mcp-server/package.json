@@ -7,7 +7,11 @@
     "typecheck": "tsc --noEmit",
     "deploy": "wrangler deploy",
     "dev": "wrangler dev",
-    "smoke": "tsx scripts/smoke-test.ts"
+    "smoke": "tsx scripts/smoke-test.ts",
+    "sync-data": "node scripts/sync-data.mjs",
+    "pretypecheck": "npm run sync-data",
+    "predeploy": "npm run sync-data",
+    "predev": "npm run sync-data"
   },
   "dependencies": {
     "@modelcontextprotocol/server": "^2.0.0",

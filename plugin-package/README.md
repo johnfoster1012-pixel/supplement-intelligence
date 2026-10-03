@@ -18,3 +18,9 @@ The production deployment includes an automated MCP client smoke test that initi
 ## Before public submission
 
 Test the server in ChatGPT Developer mode and exercise the prompts in `EVALS.md`. Review public-directory metadata, legal/privacy URLs, branding assets, and submission requirements before uploading a release ZIP.
+
+## Canonical release artifact
+
+The plugin-package workflow runs on pull requests and on pushes to `main`. For public submission, use the ZIP artifact produced from the current `main` commit rather than a feature-branch artifact.
+
+See `docs/PLUGIN_RELEASE_CHECKLIST.md` for the full release and submission sequence.
