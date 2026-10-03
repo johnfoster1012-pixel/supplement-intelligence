@@ -74,6 +74,30 @@ def main():
             errors.append(f"{slug}: ledger contains product absent from products-data.json")
 
     evidence = evidence_doc.get("ingredients", {})
+
+    for product_slug, product in products.items():
+        for link in product.get("ingredientEvidenceLinks", []):
+            ingredient_slug = link.get("slug")
+            item = evidence.get(ingredient_slug)
+            if not item:
+                errors.append(
+                    f"{product_slug}: ingredientEvidenceLinks references unknown ingredient {ingredient_slug!r}"
+                )
+                continue
+            expected_url = f"/ingredients/{ingredient_slug}"
+            if link.get("name") != item.get("name"):
+                errors.append(
+                    f"{product_slug}: linked ingredient name for {ingredient_slug} differs from evidence record"
+                )
+            if link.get("posture") != item.get("posture"):
+                errors.append(
+                    f"{product_slug}: linked posture for {ingredient_slug} differs from evidence record"
+                )
+            if link.get("url") != expected_url:
+                errors.append(
+                    f"{product_slug}: linked URL for {ingredient_slug} should be {expected_url}"
+                )
+
     for ingredient_slug, item in evidence.items():
         for product_slug in item.get("products", []):
             if product_slug not in products:
