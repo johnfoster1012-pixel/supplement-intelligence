@@ -18,8 +18,15 @@
           "type": "NIH ODS",
           "title": "Dietary Supplements for Exercise and Athletic Performance — Health Professional Fact Sheet",
           "url": "https://ods.od.nih.gov/factsheets/exerciseandathleticperformance-healthprofessional/"
+        },
+        {
+          "type": "PubMed systematic review/meta-analysis",
+          "title": "The Effects of Creatine Supplementation on Upper- and Lower-Body Strength and Power: A Systematic Review and Meta-Analysis",
+          "pmid": "40944139",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40944139/"
         }
-      ]
+      ],
+      "last_reviewed_at": "2026-10-02"
     },
     "omega-3": {
       "name": "Long-chain omega-3 fatty acids / fish oil",
@@ -39,8 +46,21 @@
           "type": "NIH ODS",
           "title": "Omega-3 Fatty Acids — Health Professional Fact Sheet",
           "url": "https://ods.od.nih.gov/factsheets/Omega3FattyAcids-HealthProfessional/"
+        },
+        {
+          "type": "PubMed dose-response meta-analysis",
+          "title": "Association Between Omega-3 Fatty Acid Intake and Dyslipidemia: A Continuous Dose-Response Meta-Analysis of Randomized Controlled Trials",
+          "pmid": "37264945",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37264945/"
+        },
+        {
+          "type": "PubMed meta-analysis",
+          "title": "Dose-related meta-analysis for Omega-3 fatty acids supplementation on major adverse cardiovascular events",
+          "pmid": "35290840",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35290840/"
         }
-      ]
+      ],
+      "last_reviewed_at": "2026-10-02"
     },
     "vitamin-d": {
       "name": "Vitamin D",
@@ -64,8 +84,21 @@
           "type": "NIH ODS",
           "title": "Vitamin D — Health Professional Fact Sheet",
           "url": "https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/"
+        },
+        {
+          "type": "PubMed meta-analysis",
+          "title": "Effect of Vitamin D Supplementation on Risk of Fractures and Falls According to Dosage and Interval: A Meta-Analysis",
+          "pmid": "35504603",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35504603/"
+        },
+        {
+          "type": "PubMed systematic review/meta-analysis",
+          "title": "Effects of intermittent or single high-dose vitamin D supplementation on risk of falls and fractures: a systematic review and meta-analysis",
+          "pmid": "37120684",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37120684/"
         }
-      ]
+      ],
+      "last_reviewed_at": "2026-10-02"
     },
     "magnesium": {
       "name": "Magnesium",
@@ -89,8 +122,15 @@
           "type": "NIH ODS",
           "title": "Magnesium — Health Professional Fact Sheet",
           "url": "https://ods.od.nih.gov/factsheets/Magnesium-HealthProfessional/"
+        },
+        {
+          "type": "PubMed systematic review/meta-analysis",
+          "title": "Magnesium Supplementation and Blood Pressure: A Systematic Review and Meta-Analysis of Randomized Controlled Trials",
+          "pmid": "41000008",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41000008/"
         }
-      ]
+      ],
+      "last_reviewed_at": "2026-10-02"
     },
     "probiotics": {
       "name": "Probiotics",
@@ -111,8 +151,21 @@
           "type": "NIH ODS",
           "title": "Probiotics — Health Professional Fact Sheet",
           "url": "https://ods.od.nih.gov/factsheets/Probiotics-HealthProfessional/"
+        },
+        {
+          "type": "PubMed systematic review/meta-analysis",
+          "title": "Strain-Specificity and Disease-Specificity of Probiotic Efficacy: A Systematic Review and Meta-Analysis",
+          "pmid": "29868585",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29868585/"
+        },
+        {
+          "type": "PubMed systematic review/meta-analysis",
+          "title": "Strain-Specific Systematic Review with Meta-Analysis of Probiotics Efficacy in the Treatment of Irritable Bowel Syndrome",
+          "pmid": "41682832",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41682832/"
         }
-      ]
+      ],
+      "last_reviewed_at": "2026-10-02"
     },
     "berberine": {
       "name": "Berberine",
@@ -285,8 +338,21 @@
           "type": "NIH ODS",
           "title": "Dietary Supplements for Exercise and Athletic Performance — Health Professional Fact Sheet",
           "url": "https://ods.od.nih.gov/factsheets/ExerciseAndAthleticPerformance-HealthProfessional/"
+        },
+        {
+          "type": "PubMed umbrella review",
+          "title": "Wake up and smell the coffee: caffeine supplementation and exercise performance-an umbrella review of 21 published meta-analyses",
+          "pmid": "30926628",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30926628/"
+        },
+        {
+          "type": "PubMed systematic review/meta-analysis",
+          "title": "Dose-Response Effect of Oral Caffeine Use on Aerobic Exercise Performance: A Systematic Review and Meta-Analysis",
+          "pmid": "42356375",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42356375/"
         }
-      ]
+      ],
+      "last_reviewed_at": "2026-10-02"
     },
     "l-theanine": {
       "name": "L-theanine",
@@ -315,8 +381,8 @@
     },
     "panax-ginseng": {
       "name": "Panax ginseng (Asian ginseng)",
-      "posture": "Limited human evidence suggests possible small benefits for fatigue and selected cognitive measures; broad adaptogen, performance, or immune claims are not established.",
-      "summary": "NCCIH reports a small amount of evidence for selected cognitive effects in middle-aged adults and a possible small effect on general fatigue, while emphasizing that most trials are small and short.",
+      "posture": "Small or context-specific fatigue and cognitive effects are possible, but pooled results are inconsistent and broad adaptogen or performance claims are not established.",
+      "summary": "Systematic reviews report mixed results. Some analyses find small fatigue benefits in selected populations, while pooled overall fatigue and physical-performance outcomes are inconsistent. Cognitive findings are also outcome- and preparation-specific, so results should not be generalized across ginseng products.",
       "studied_context": "Ginseng preparations differ substantially in extraction method and ginsenoside content. Findings from one preparation should not be generalized to an unspecified ginseng extract.",
       "safety": "Short-term oral use appears generally tolerated for many adults, but insomnia is common. NCCIH notes possible drug interactions, blood-clotting concerns, blood-sugar effects, autoimmune concerns, and pregnancy cautions.",
       "product_directness": "V-LOVKAFE, V-NEUROKAFE, and V THERMOKAFE list Panax ginseng, but the current manufacturer pages do not publish extract standardization or dose. Trial findings cannot be assigned directly to these products.",
@@ -330,13 +396,26 @@
           "type": "NCCIH",
           "title": "Asian Ginseng: Usefulness and Safety",
           "url": "https://www.nccih.nih.gov/health/asian-ginseng"
+        },
+        {
+          "type": "PubMed systematic review/meta-analysis",
+          "title": "Ginseng and Ginseng Herbal Formulas for Symptomatic Management of Fatigue: A Systematic Review and Meta-Analysis",
+          "pmid": "36730693",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36730693/"
+        },
+        {
+          "type": "PubMed systematic review/meta-analysis",
+          "title": "Effects of Ginseng on Cognitive Function: A Systematic Review and Meta-Analysis",
+          "pmid": "39474788",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39474788/"
         }
-      ]
+      ],
+      "last_reviewed_at": "2026-10-02"
     },
     "l-arginine": {
       "name": "L-arginine",
-      "posture": "Little scientific support for improving strength, exercise performance, or recovery in healthy active adults.",
-      "summary": "NIH ODS concludes that supplemental arginine has limited and conflicting performance evidence. Across studied doses, most research shows little to no improvement in aerobic or anaerobic performance, recovery, or muscle blood flow.",
+      "posture": "Mixed human evidence for selected aerobic and anaerobic performance outcomes; possible benefits are small or context-dependent and do not support broad performance claims.",
+      "summary": "NIH ODS describes arginine performance findings as limited and conflicting. Newer meta-analyses report possible improvements in selected aerobic/anaerobic tests and VO2max, but effects vary by protocol and some pooled analyses show substantial heterogeneity. The evidence is not strong enough to treat arginine as a broadly reliable ergogenic aid.",
       "studied_context": "Clinical studies have commonly used about 2–20 g/day, often far above the amount that can be inferred from a multi-ingredient product with no disclosed dose.",
       "safety": "Short-term studies suggest up to about 9 g/day is generally tolerated, while higher doses more often cause gastrointestinal symptoms and can modestly lower blood pressure. Long-term high-dose safety is uncertain.",
       "product_directness": "V-NITRO lists L-arginine but does not publish its amount. A nitric-oxide, pump, strength, or performance benefit cannot be inferred from ingredient presence alone.",
@@ -348,8 +427,21 @@
           "type": "NIH ODS",
           "title": "Dietary Supplements for Exercise and Athletic Performance — Arginine",
           "url": "https://ods.od.nih.gov/factsheets/ExerciseAndAthleticPerformance-HealthProfessional/"
+        },
+        {
+          "type": "PubMed systematic review/meta-analysis",
+          "title": "Effects of Arginine Supplementation on Athletic Performance Based on Energy Metabolism: A Systematic Review and Meta-Analysis",
+          "pmid": "32370176",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32370176/"
+        },
+        {
+          "type": "PubMed systematic review/meta-analysis",
+          "title": "The effect of L-arginine supplementation on maximal oxygen uptake: A systematic review and meta-analysis",
+          "pmid": "33587327",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33587327/"
         }
-      ]
+      ],
+      "last_reviewed_at": "2026-10-02"
     },
     "l-citrulline": {
       "name": "L-citrulline / citrulline malate",
@@ -378,7 +470,7 @@
     "glucosamine": {
       "name": "Glucosamine",
       "posture": "Conflicting evidence for knee osteoarthritis symptoms; preparation-specific findings and guideline disagreement make broad claims inappropriate.",
-      "summary": "NCCIH notes substantial research but inconsistent results. Some prescription crystalline glucosamine sulfate preparations have produced more favorable findings, while major U.S. guidelines have recommended against glucosamine for knee osteoarthritis.",
+      "summary": "Evidence is formulation-specific. A meta-analysis of oral glucosamine sulfate found a small-to-moderate reduction in osteoarthritis pain with little effect on joint-space narrowing, while authoritative guidance and other evidence remain inconsistent. Prescription crystalline glucosamine sulfate should not be treated as interchangeable with unspecified glucosamine products.",
       "studied_context": "Glucosamine sulfate, glucosamine hydrochloride, and pharmaceutical-grade preparations should not be treated as interchangeable. Dose and formulation are central to evidence interpretation.",
       "safety": "Large osteoarthritis trials have not identified major safety problems, but glucosamine may affect blood glucose in some people and may increase bleeding risk with warfarin.",
       "product_directness": "V-ITADOL lists glucosamine without a published form or dose. Its finished-product effect on osteoarthritis pain or joint function remains unverified.",
@@ -390,13 +482,20 @@
           "type": "NCCIH",
           "title": "Glucosamine and Chondroitin for Osteoarthritis: What You Need To Know",
           "url": "https://www.nccih.nih.gov/health/glucosamine-and-chondroitin-for-osteoarthritis-what-you-need-to-know"
+        },
+        {
+          "type": "PubMed systematic review/meta-analysis",
+          "title": "Effects of Oral Glucosamine Sulfate on Osteoarthritis-Related Pain and Joint-Space Changes: Systematic Review and Meta-Analysis",
+          "pmid": "30566740",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30566740/"
         }
-      ]
+      ],
+      "last_reviewed_at": "2026-10-02"
     },
     "msm": {
       "name": "Methylsulfonylmethane (MSM)",
       "posture": "Evidence is too limited to draw reliable conclusions for osteoarthritis or chronic pain.",
-      "summary": "NCCIH states that very little research has been done on MSM for osteoarthritis and that no conclusions can be reached about its effects.",
+      "summary": "The evidence base remains small. A meta-analysis including MSM/DMSO trials did not find a clinically meaningful reduction in osteoarthritis pain, and authoritative reviews continue to conclude that reliable efficacy conclusions cannot be drawn.",
       "studied_context": "Small studies use different doses, durations, and combination products, making generalized efficacy claims unreliable.",
       "safety": "The limited evidence base also limits confidence about uncommon adverse effects and long-term use, especially in multi-ingredient products.",
       "product_directness": "V-ASCULAX, V-CURCUMAX, V-DAILY, V-ITADOL, and V-DAILY SACHET list MSM, but current manufacturer pages do not establish a study-matched MSM dose. Finished-product joint or pain claims remain unsupported.",
@@ -412,13 +511,20 @@
           "type": "NCCIH",
           "title": "7 Things To Know About Complementary Health Approaches for Osteoarthritis",
           "url": "https://www.nccih.nih.gov/health/tips/things-to-know-about-complementary-health-approaches-for-osteoarthritis"
+        },
+        {
+          "type": "PubMed meta-analysis",
+          "title": "Meta-analysis of the related nutritional supplements dimethyl sulfoxide and methylsulfonylmethane in the treatment of osteoarthritis of the knee",
+          "pmid": "19474240",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/19474240/"
         }
-      ]
+      ],
+      "last_reviewed_at": "2026-10-02"
     },
     "valerian": {
       "name": "Valerian (Valeriana officinalis)",
       "posture": "Evidence for sleep problems is inconsistent; authoritative guidance does not support presenting valerian as an established insomnia treatment.",
-      "summary": "NCCIH states that evidence for sleep problems is inconsistent and that there is not enough evidence to determine whether valerian is useful for any health condition. The American Academy of Sleep Medicine recommended against valerian for chronic insomnia in adults.",
+      "summary": "A 2024 umbrella review found no convincing evidence that valerian treats insomnia, although some reviews report subjective sleep-quality improvement. Objective sleep outcomes, preparations, and study quality remain inconsistent.",
       "studied_context": "Short-term studies commonly use valerian root preparations at roughly 300–600 mg/day, but extracts and preparations vary.",
       "safety": "Short-term use appears generally tolerated in many adults, but long-term safety is unknown. Sedative effects, withdrawal after chronic use, and rare liver injury reports warrant caution.",
       "product_directness": "V-ITALAY lists valerian but does not publish a valerian dose or standardized extract. A sleep or insomnia efficacy claim cannot be assigned to the finished product.",
@@ -430,13 +536,20 @@
           "type": "NCCIH",
           "title": "Valerian: Usefulness and Safety",
           "url": "https://www.nccih.nih.gov/health/valerian"
+        },
+        {
+          "type": "PubMed umbrella review",
+          "title": "Does valerian work for insomnia? An umbrella review of the evidence",
+          "pmid": "38359657",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38359657/"
         }
-      ]
+      ],
+      "last_reviewed_at": "2026-10-02"
     },
     "echinacea": {
       "name": "Echinacea",
       "posture": "Possible small effect on cold incidence for some preparations; evidence for shortening or treating colds remains uncertain and product-specific.",
-      "summary": "NCCIH reports that echinacea may slightly reduce the chance of catching a cold, but it remains unclear whether it shortens cold duration. Echinacea species, plant parts, and extraction methods vary widely, so findings do not transfer cleanly across products.",
+      "summary": "The 2014 Cochrane review found that echinacea products had not been shown to provide clear treatment benefit for colds, though a weak preventive effect from some preparations remained possible. Species, plant parts, and extraction methods vary widely, limiting generalization across products.",
       "studied_context": "Clinical trials use different Echinacea species and preparations. Without species, plant part, extract, and dose information, direct comparison to the research is weak.",
       "safety": "Short-term use is likely safe for many adults, but gastrointestinal effects and allergic reactions can occur. Drug interactions are possible, and evidence in children, pregnancy, and breastfeeding is limited.",
       "product_directness": "V-ITALBOOST lists echinacea but does not publish species, plant part, extract standardization, or dose. Finished-product cold or immune claims therefore remain unverified.",
@@ -448,13 +561,20 @@
           "type": "NCCIH",
           "title": "Echinacea: Usefulness and Safety",
           "url": "https://www.nccih.nih.gov/health/echinacea"
+        },
+        {
+          "type": "Cochrane systematic review",
+          "title": "Echinacea for preventing and treating the common cold",
+          "pmid": "24554461",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/24554461/"
         }
-      ]
+      ],
+      "last_reviewed_at": "2026-10-02"
     },
     "senna": {
       "name": "Senna",
-      "posture": "Established stimulant-laxative activity for short-term constipation; this does not support broad detox claims.",
-      "summary": "NCBI LiverTox describes senna as a widely used nonprescription herbal laxative. Its recognized pharmacologic role is bowel stimulation, not systemic detoxification.",
+      "posture": "Established stimulant-laxative activity with supportive constipation evidence; this does not support broad detox or weight-loss claims.",
+      "summary": "Senna is a stimulant laxative with human evidence supporting increased bowel movements and symptom improvement in constipation. That pharmacologic laxative effect is distinct from claims of systemic detoxification, fat loss, or generalized cleansing.",
       "studied_context": "Senna products vary in sennoside content and dosing. Short-term constipation use is distinct from prolonged use or multi-herb detox regimens.",
       "safety": "Senna is generally tolerated when used as recommended for short periods, but high doses or prolonged use can cause adverse effects and has been associated with clinically apparent liver injury.",
       "product_directness": "V-TEDETOX contains senna leaf and senna extract, but the current manufacturer page does not publish sennoside content or dose. The site should not imply a predictable laxative effect or a detox benefit from ingredient presence alone.",
@@ -466,13 +586,26 @@
           "type": "NCBI LiverTox",
           "title": "Senna",
           "url": "https://www.ncbi.nlm.nih.gov/books/NBK547922/"
+        },
+        {
+          "type": "PubMed systematic review",
+          "title": "Efficacy and Safety of Over-the-Counter Therapies for Chronic Constipation: An Updated Systematic Review",
+          "pmid": "33767108",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33767108/"
+        },
+        {
+          "type": "PubMed randomized controlled trial",
+          "title": "Senna Versus Magnesium Oxide for the Treatment of Chronic Constipation: A Randomized, Placebo-Controlled Trial",
+          "pmid": "32969946",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32969946/"
         }
-      ]
+      ],
+      "last_reviewed_at": "2026-10-02"
     },
     "milk-thistle": {
       "name": "Milk thistle (Silybum marianum)",
       "posture": "Insufficient high-quality evidence for liver-disease benefits; broad liver-detox claims are not supported.",
-      "summary": "NCCIH states that there is not enough high-quality evidence to reach definite conclusions about milk thistle for health conditions. Clinical trials in liver diseases have been conflicting or too limited.",
+      "summary": "Systematic reviews of randomized trials have not shown reliable improvements in mortality, liver histology, or clinically meaningful liver-function outcomes. Evidence remains insufficient to support broad liver-treatment or detox claims.",
       "studied_context": "Milk-thistle extracts differ in silymarin content and composition. Evidence from a standardized extract should not be generalized to unspecified milk-thistle powder.",
       "safety": "Oral use is usually well tolerated, with digestive symptoms most common. Allergic reactions and supplement-quality problems can occur, and drug interactions are possible.",
       "product_directness": "V-ORGANEX and V-TEDETOX list milk thistle, but the current manufacturer pages do not publish silymarin standardization or dose. Liver-support efficacy remains unverified.",
@@ -485,8 +618,21 @@
           "type": "NCCIH",
           "title": "Milk Thistle: Usefulness and Safety",
           "url": "https://www.nccih.nih.gov/health/milk-thistle"
+        },
+        {
+          "type": "PubMed systematic review/meta-analysis",
+          "title": "Milk thistle for the treatment of liver disease: a systematic review and meta-analysis",
+          "pmid": "12427501",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/12427501/"
+        },
+        {
+          "type": "PubMed systematic review/meta-analysis",
+          "title": "An updated systematic review with meta-analysis for the clinical evidence of silymarin",
+          "pmid": "18334810",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/18334810/"
         }
-      ]
+      ],
+      "last_reviewed_at": "2026-10-02"
     },
     "alpha-lipoic-acid": {
       "name": "Alpha-lipoic acid (ALA)",
@@ -516,8 +662,8 @@
     },
     "coenzyme-q10": {
       "name": "Coenzyme Q10 (CoQ10)",
-      "posture": "Evidence is condition-specific and generally inconclusive for many promoted uses; broad energy, heart, or statin-muscle claims are not established.",
-      "summary": "NCCIH reports inconclusive evidence for prevention of heart disease and heart failure, no meaningful support for statin-associated muscle pain, and limited evidence for selected outcomes such as some complications of heart surgery or migraine frequency.",
+      "posture": "Condition-specific evidence is mixed; recent meta-analyses suggest possible benefits in heart failure and statin-associated muscle symptoms, but certainty varies and broad energy or prevention claims are not established.",
+      "summary": "Recent meta-analyses report favorable outcomes for some heart-failure endpoints and a possible reduction in statin-associated muscle pain, while other reviews have found inconsistent or null effects. Evidence differs by condition, formulation, dose, and study quality, so CoQ10 should not be presented as a general cardiovascular or energy enhancer.",
       "studied_context": "Clinical studies vary widely in dose, disease population, formulation, and treatment duration. CoQ10 presence in a multi-ingredient product is not enough to infer a studied clinical effect.",
       "safety": "Serious adverse effects are uncommon in available data, but mild insomnia or digestive symptoms can occur. CoQ10 may interact with warfarin, insulin, and some cancer treatments.",
       "product_directness": "NOURISH+, V-DAILY, VITALPRO, and V-DAILY SACHET list CoQ10 but do not publish a study-matched dose. Finished-product cardiovascular, energy, or statin-related claims remain unverified.",
@@ -532,8 +678,21 @@
           "type": "NCCIH",
           "title": "Coenzyme Q10",
           "url": "https://www.nccih.nih.gov/health/coenzyme-q10"
+        },
+        {
+          "type": "PubMed meta-analysis",
+          "title": "Efficacy and safety of coenzyme Q10 in heart failure: a meta-analysis of randomized controlled trials",
+          "pmid": "39462324",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39462324/"
+        },
+        {
+          "type": "PubMed systematic review/meta-analysis",
+          "title": "Effects of coenzyme Q10 supplementation on myopathy in statin-treated patients: a systematic review and meta-analysis",
+          "pmid": "41158831",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41158831/"
         }
-      ]
+      ],
+      "last_reviewed_at": "2026-10-02"
     },
     "resveratrol": {
       "name": "Resveratrol",
@@ -563,7 +722,7 @@
     "zinc": {
       "name": "Zinc",
       "posture": "Essential nutrient with established deficiency-related roles; cold benefits are formulation- and timing-specific rather than a generic property of zinc-containing supplements.",
-      "summary": "NIH ODS notes that zinc is essential for immune function, growth, protein/DNA synthesis, and wound healing. For the common cold, some lozenge or syrup studies suggest shorter symptom duration when started early, but evidence certainty is low and severity effects are inconsistent.",
+      "summary": "Zinc is an essential nutrient. A 2024 Cochrane review found little or no effect on preventing colds but suggested zinc may shorten the duration of an ongoing cold, with more non-serious adverse events and substantial variation across formulations and study methods.",
       "studied_context": "Cold studies generally use zinc acetate or gluconate lozenges/syrups at substantially higher short-term intakes than typical multivitamin doses. Those results should not be generalized to ordinary oral powders or capsules.",
       "safety": "Excess zinc can cause nausea and other adverse effects and can interfere with copper status and some medications. Dose and duration matter.",
       "product_directness": "D-FENZ KIDS, NOURISH+, V-DAILY, and V-DAILY SACHET list zinc, but their use forms and amounts are not equivalent to studied cold lozenges. A cold-treatment claim would be inappropriate.",
@@ -578,13 +737,20 @@
           "type": "NIH ODS",
           "title": "Zinc — Health Professional Fact Sheet",
           "url": "https://ods.od.nih.gov/factsheets/Zinc-HealthProfessional/"
+        },
+        {
+          "type": "Cochrane systematic review",
+          "title": "Zinc for prevention and treatment of the common cold",
+          "pmid": "38719213",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38719213/"
         }
-      ]
+      ],
+      "last_reviewed_at": "2026-10-02"
     },
     "vitamin-c": {
       "name": "Vitamin C",
       "posture": "Essential nutrient with established physiological roles; routine supplementation does not prevent colds in the general population, though it may modestly shorten them.",
-      "summary": "NIH ODS states that vitamin C is required for collagen synthesis and other physiological functions. Regular supplementation generally does not reduce cold incidence in the general population, but may modestly shorten cold duration; taking vitamin C only after symptoms start does not appear beneficial.",
+      "summary": "Vitamin C is an essential nutrient. Regular supplementation generally does not prevent colds in the general population, but systematic reviews find modest reductions in cold duration and, in some analyses, severity. Starting vitamin C only after symptoms begin has not shown consistent benefit.",
       "studied_context": "Common-cold evidence often examines regular intake of at least 200 mg/day, with larger effects in people exposed to extreme physical stress or with marginal vitamin C status.",
       "safety": "High oral doses can cause diarrhea, nausea, and abdominal cramps. The adult tolerable upper intake level is 2,000 mg/day, and high doses can worsen iron overload in people with hemochromatosis.",
       "product_directness": "Several current products list vitamin C, but most do not publish a dose that can be matched to specific trials. Ingredient presence supports a nutrient-content statement, not a finished-product cold, immune, collagen, or antioxidant efficacy claim.",
@@ -603,8 +769,21 @@
           "type": "NIH ODS",
           "title": "Vitamin C — Health Professional Fact Sheet",
           "url": "https://ods.od.nih.gov/factsheets/VitaminC-HealthProfessional/"
+        },
+        {
+          "type": "Cochrane systematic review",
+          "title": "Vitamin C for preventing and treating the common cold",
+          "pmid": "23440782",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23440782/"
+        },
+        {
+          "type": "PubMed meta-analysis",
+          "title": "Vitamin C reduces the severity of common colds: a meta-analysis",
+          "pmid": "38082300",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38082300/"
         }
-      ]
+      ],
+      "last_reviewed_at": "2026-10-02"
     }
   }
 }
