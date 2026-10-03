@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "supplement-intelligence",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Verification-first supplement ingredient evidence and current product formulation research.",
   "author": {
     "name": "Supplement Intelligence",
@@ -32,9 +32,9 @@
         "privacyPolicyURL": "https://supplement-intelligence.com/privacy",
         "termsOfServiceURL": "https://supplement-intelligence.com/terms",
         "defaultPrompt": [
-          "What does the evidence say about creatine monohydrate?",
-          "Does S-BALANCE contain berberine?",
-          "What safety concerns are noted for ashwagandha?"
+          "Does V-OMEGA3 disclose enough EPA/DHA to compare it with triglyceride studies?",
+          "Does the evidence for berberine directly apply to S-BALANCE?",
+          "What does the evidence say about creatine monohydrate?"
         ],
         "brandColor": "#1F6FEB",
         "composerIcon": "./assets/icon.svg",
@@ -97,7 +97,7 @@
         "commerce_description": "This plugin does not sell products or process payments."
       },
       "publication": {
-        "release_notes": "Initial Supplement Intelligence plugin package with four read-only MCP tools, one supplement-evidence research skill, verification-first evidence handling, and no custom UI."
+        "release_notes": "V1.1 bundles the verified evidence/product snapshot with the MCP Worker, adds freshness and source-count metadata, synonym-aware search, privacy-safe operational telemetry, and stronger production smoke tests."
       }
     }
   }
