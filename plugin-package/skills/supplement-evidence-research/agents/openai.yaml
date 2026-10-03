@@ -1,3 +1,14 @@
+interface:
+  display_name: "Supplement Evidence"
+  short_description: "Research supplement evidence"
+  default_prompt: "What does the evidence say about creatine monohydrate?"
+
+policy:
+  products:
+    - CHAT
+    - CODEX
+  allow_implicit_invocation: true
+
 dependencies:
   tools:
     - type: "mcp"
