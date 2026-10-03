@@ -69,6 +69,24 @@ try {
     throw new Error("Product formulation response is missing freshness metadata.");
   }
 
+  const hibiscus = await callTool("search_supplement_intelligence", { query: "hibiscus" });
+  const hibiscusJson = JSON.stringify(hibiscus.structuredContent ?? hibiscus.content).toLowerCase();
+  if (!hibiscusJson.includes('"slug":"hibiscus"') && !hibiscusJson.includes('"slug": "hibiscus"')) {
+    throw new Error("Expanded-library search did not resolve hibiscus.");
+  }
+
+  const uvaUrsi = await callTool("get_ingredient_evidence", { slug: "uva-ursi" });
+  const uvaUrsiJson = JSON.stringify(uvaUrsi.structuredContent ?? uvaUrsi.content).toLowerCase();
+  if (!uvaUrsiJson.includes("v-itaren") || !uvaUrsiJson.includes("34111592")) {
+    throw new Error("Uva-ursi evidence response is missing V-ITAREN linkage or reviewed trial evidence.");
+  }
+
+  const library = await callTool("list_reviewed_ingredients", {});
+  const libraryJson = JSON.stringify(library.structuredContent ?? library.content).toLowerCase();
+  if (!libraryJson.includes('"count":34') && !libraryJson.includes('"count": 34')) {
+    throw new Error("Reviewed ingredient library did not report 34 topics.");
+  }
+
   console.log(
     JSON.stringify(
       {
@@ -82,6 +100,9 @@ try {
           "ingredient-freshness",
           "structured-review-evidence",
           "product-freshness",
+          "expanded-hibiscus-search",
+          "uva-ursi-v-itaren-linkage",
+          "34-topic-library",
         ],
         protocolEra: client.getProtocolEra(),
         server: client.getServerVersion(),
