@@ -26,21 +26,7 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/40944139/"
         }
       ],
-      "last_reviewed_at": "2026-10-02",
-      "review_evidence": [
-        {
-          "title": "The Effects of Creatine Supplementation on Upper- and Lower-Body Strength and Power: A Systematic Review and Meta-Analysis",
-          "pmid": "40944139",
-          "study_type": "Systematic review and meta-analysis of randomized trials",
-          "population": "Adults across exercise/training contexts; 69 studies, 1,937 participants",
-          "evidence_scope": "Muscular strength and power outcomes",
-          "finding": "Creatine, especially with resistance training, produced small but significant improvements in several compound-lift strength and power outcomes, but benefits were not uniform across all measures.",
-          "limitations": "Subgroup effects varied by age, sex, training status, outcome, dose, and study design; several outcomes were not significantly improved.",
-          "directness": "Relevant human evidence",
-          "verified_at": "2026-10-02",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/40944139/"
-        }
-      ]
+      "last_reviewed_at": "2026-10-02"
     },
     "omega-3": {
       "name": "Long-chain omega-3 fatty acids / fish oil",
@@ -74,33 +60,7 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/35290840/"
         }
       ],
-      "last_reviewed_at": "2026-10-02",
-      "review_evidence": [
-        {
-          "title": "Association Between Omega-3 Fatty Acid Intake and Dyslipidemia: A Continuous Dose-Response Meta-Analysis of Randomized Controlled Trials",
-          "pmid": "37264945",
-          "study_type": "Dose-response meta-analysis of randomized controlled trials",
-          "population": "Adults in randomized trials of EPA+DHA supplementation",
-          "evidence_scope": "Triglycerides and other lipid outcomes",
-          "finding": "EPA+DHA supplementation showed a dose-responsive triglyceride-lowering effect; lipid effects varied by outcome and dose.",
-          "limitations": "Lipid changes do not establish broad cardiovascular-event prevention, and results depend on actual EPA/DHA intake rather than generic fish-oil presence.",
-          "directness": "Relevant human evidence",
-          "verified_at": "2026-10-02",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/37264945/"
-        },
-        {
-          "title": "Dose-related meta-analysis for Omega-3 fatty acids supplementation on major adverse cardiovascular events",
-          "pmid": "35290840",
-          "study_type": "Meta-analysis of long-term randomized controlled trials",
-          "population": "19 randomized trials; 97,709 participants",
-          "evidence_scope": "All-cause mortality, cardiac death, myocardial infarction, and stroke",
-          "finding": "Omega-3 supplementation was not consistently associated with lower major cardiovascular outcomes across dose categories.",
-          "limitations": "Results varied by dose, formulation, prevention setting, statin use, and trial design; findings should not be generalized to triglyceride treatment.",
-          "directness": "Relevant human evidence",
-          "verified_at": "2026-10-02",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/35290840/"
-        }
-      ]
+      "last_reviewed_at": "2026-10-02"
     },
     "vitamin-d": {
       "name": "Vitamin D",
@@ -138,33 +98,7 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/37120684/"
         }
       ],
-      "last_reviewed_at": "2026-10-02",
-      "review_evidence": [
-        {
-          "title": "Effect of Vitamin D Supplementation on Risk of Fractures and Falls According to Dosage and Interval: A Meta-Analysis",
-          "pmid": "35504603",
-          "study_type": "Meta-analysis of randomized controlled trials",
-          "population": "Adults across 32 randomized studies",
-          "evidence_scope": "Fracture and fall outcomes",
-          "finding": "Benefits were not uniform across dosing regimens; some daily-dose subgroups showed lower fracture/fall risk while other dosing patterns did not.",
-          "limitations": "Effects depend on dose, dosing interval, calcium co-administration, baseline status, age, and population; subgroup findings should not be treated as universal.",
-          "directness": "Relevant human evidence",
-          "verified_at": "2026-10-02",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/35504603/"
-        },
-        {
-          "title": "Effects of intermittent or single high-dose vitamin D supplementation on risk of falls and fractures: a systematic review and meta-analysis",
-          "pmid": "37120684",
-          "study_type": "Systematic review and meta-analysis of randomized controlled trials",
-          "population": "Adults in 15 randomized trials of intermittent or single high-dose vitamin D",
-          "evidence_scope": "Falls and fractures",
-          "finding": "Intermittent or single high-dose vitamin D did not prevent falls or fractures and may increase fall risk.",
-          "limitations": "Applies to intermittent/high-dose regimens and should not be generalized to routine daily replacement in deficient individuals.",
-          "directness": "Relevant human evidence",
-          "verified_at": "2026-10-02",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/37120684/"
-        }
-      ]
+      "last_reviewed_at": "2026-10-02"
     },
     "magnesium": {
       "name": "Magnesium",
@@ -196,21 +130,7 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/41000008/"
         }
       ],
-      "last_reviewed_at": "2026-10-02",
-      "review_evidence": [
-        {
-          "title": "Magnesium Supplementation and Blood Pressure: A Systematic Review and Meta-Analysis of Randomized Controlled Trials",
-          "pmid": "41000008",
-          "study_type": "Systematic review, meta-analysis, and dose-response analysis of randomized trials",
-          "population": "38 randomized trials; 2,709 participants",
-          "evidence_scope": "Systolic and diastolic blood pressure",
-          "finding": "Magnesium supplementation modestly reduced blood pressure overall, with larger reductions in hypertensive participants on medication and in people with hypomagnesemia.",
-          "limitations": "High between-study heterogeneity; normotensive groups did not show clear benefit and no dose-response relationship was established.",
-          "directness": "Relevant human evidence",
-          "verified_at": "2026-10-02",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41000008/"
-        }
-      ]
+      "last_reviewed_at": "2026-10-02"
     },
     "probiotics": {
       "name": "Probiotics",
@@ -245,21 +165,7 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/41682832/"
         }
       ],
-      "last_reviewed_at": "2026-10-02",
-      "review_evidence": [
-        {
-          "title": "Strain-Specificity and Disease-Specificity of Probiotic Efficacy: A Systematic Review and Meta-Analysis",
-          "pmid": "29868585",
-          "study_type": "Systematic review and meta-analysis",
-          "population": "228 controlled trials across multiple probiotic strains and indications",
-          "evidence_scope": "Strain-specific and disease-specific probiotic efficacy",
-          "finding": "Efficacy differed materially by strain and disease indication; pooling different probiotics can produce misleading generalizations.",
-          "limitations": "Findings cannot be transferred from one strain, mixture, dose, population, or indication to another.",
-          "directness": "Relevant human evidence",
-          "verified_at": "2026-10-02",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/29868585/"
-        }
-      ]
+      "last_reviewed_at": "2026-10-02"
     },
     "berberine": {
       "name": "Berberine",
@@ -446,21 +352,7 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/42356375/"
         }
       ],
-      "last_reviewed_at": "2026-10-02",
-      "review_evidence": [
-        {
-          "title": "Wake up and smell the coffee: caffeine supplementation and exercise performance-an umbrella review of 21 published meta-analyses",
-          "pmid": "30926628",
-          "study_type": "Umbrella review of meta-analyses",
-          "population": "11 reviews containing 21 meta-analyses of exercise-performance outcomes",
-          "evidence_scope": "Aerobic endurance, strength, muscular endurance, power, jumping, and exercise speed",
-          "finding": "Caffeine showed ergogenic effects across several performance domains, with the strongest and most consistent evidence in endurance-related outcomes.",
-          "limitations": "Prediction intervals were not uniformly positive and evidence quality ranged from moderate to low/very low for some outcomes; individual response varies.",
-          "directness": "Relevant human evidence",
-          "verified_at": "2026-10-02",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/30926628/"
-        }
-      ]
+      "last_reviewed_at": "2026-10-02"
     },
     "l-theanine": {
       "name": "L-theanine",
@@ -518,21 +410,7 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/39474788/"
         }
       ],
-      "last_reviewed_at": "2026-10-02",
-      "review_evidence": [
-        {
-          "title": "Ginseng and Ginseng Herbal Formulas for Symptomatic Management of Fatigue: A Systematic Review and Meta-Analysis",
-          "pmid": "36730693",
-          "study_type": "Systematic review and meta-analysis of randomized clinical trials",
-          "population": "19 randomized clinical trials across fatigue populations",
-          "evidence_scope": "Fatigue severity, quality of life, and adverse events",
-          "finding": "The pooled overall analysis did not show a significant fatigue reduction, although small benefits appeared in selected subgroups such as chronic or general fatigue.",
-          "limitations": "Effects were small and varied by ginseng type, fatigue condition, and assessment method; herbal formulas are not interchangeable with standardized Panax ginseng products.",
-          "directness": "Relevant human evidence",
-          "verified_at": "2026-10-02",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/36730693/"
-        }
-      ]
+      "last_reviewed_at": "2026-10-02"
     },
     "l-arginine": {
       "name": "L-arginine",
@@ -563,33 +441,7 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/33587327/"
         }
       ],
-      "last_reviewed_at": "2026-10-02",
-      "review_evidence": [
-        {
-          "title": "Effects of Arginine Supplementation on Athletic Performance Based on Energy Metabolism: A Systematic Review and Meta-Analysis",
-          "pmid": "32370176",
-          "study_type": "Systematic review and meta-analysis",
-          "population": "18 studies; 15 included in pooled performance analyses",
-          "evidence_scope": "Aerobic and anaerobic exercise performance",
-          "finding": "Pooled analyses reported possible improvements in selected aerobic and anaerobic performance outcomes.",
-          "limitations": "Aerobic estimates showed substantial heterogeneity and protocols varied in dose, timing, training status, and outcome; results do not establish a broadly reliable ergogenic effect.",
-          "directness": "Relevant human evidence",
-          "verified_at": "2026-10-02",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/32370176/"
-        },
-        {
-          "title": "The effect of L-arginine supplementation on maximal oxygen uptake: A systematic review and meta-analysis",
-          "pmid": "33587327",
-          "study_type": "Systematic review and meta-analysis of randomized clinical trials",
-          "population": "11 randomized clinical trials in healthy people",
-          "evidence_scope": "Maximal oxygen uptake (VO2max)",
-          "finding": "The pooled estimate favored a small increase in VO2max with L-arginine.",
-          "limitations": "VO2max is a surrogate performance measure and the evidence base was limited; findings do not establish strength, recovery, or finished-product efficacy.",
-          "directness": "Relevant human evidence",
-          "verified_at": "2026-10-02",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/33587327/"
-        }
-      ]
+      "last_reviewed_at": "2026-10-02"
     },
     "l-citrulline": {
       "name": "L-citrulline / citrulline malate",
@@ -638,21 +490,7 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/30566740/"
         }
       ],
-      "last_reviewed_at": "2026-10-02",
-      "review_evidence": [
-        {
-          "title": "Effects of Oral Glucosamine Sulfate on Osteoarthritis-Related Pain and Joint-Space Changes: Systematic Review and Meta-Analysis",
-          "pmid": "30566740",
-          "study_type": "Systematic review and meta-analysis of randomized double-blind placebo-controlled trials",
-          "population": "17 studies for osteoarthritis pain; 4 studies for joint-space narrowing",
-          "evidence_scope": "Osteoarthritis pain and structural joint-space outcomes",
-          "finding": "Glucosamine sulfate showed a small-to-moderate pooled reduction in pain but little evidence of improved joint-space narrowing.",
-          "limitations": "Effects were smaller in non-industry studies; results apply to glucosamine sulfate and should not be generalized to unspecified forms or finished products.",
-          "directness": "Relevant human evidence",
-          "verified_at": "2026-10-02",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/30566740/"
-        }
-      ]
+      "last_reviewed_at": "2026-10-02"
     },
     "msm": {
       "name": "Methylsulfonylmethane (MSM)",
@@ -681,21 +519,7 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/19474240/"
         }
       ],
-      "last_reviewed_at": "2026-10-02",
-      "review_evidence": [
-        {
-          "title": "Meta-analysis of the related nutritional supplements dimethyl sulfoxide and methylsulfonylmethane in the treatment of osteoarthritis of the knee",
-          "pmid": "19474240",
-          "study_type": "Meta-analysis of randomized or quasi-randomized trials",
-          "population": "3 eligible trials; 326 participants, including one MSM trial",
-          "evidence_scope": "Osteoarthritis pain",
-          "finding": "The pooled pain reduction was not statistically or clinically significant.",
-          "limitations": "Very small evidence base, mixed DMSO/MSM interventions, heterogeneity, and short/inadequate treatment periods limit inference about MSM.",
-          "directness": "Relevant human evidence",
-          "verified_at": "2026-10-02",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/19474240/"
-        }
-      ]
+      "last_reviewed_at": "2026-10-02"
     },
     "valerian": {
       "name": "Valerian (Valeriana officinalis)",
@@ -720,21 +544,7 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/38359657/"
         }
       ],
-      "last_reviewed_at": "2026-10-02",
-      "review_evidence": [
-        {
-          "title": "Does valerian work for insomnia? An umbrella review of the evidence",
-          "pmid": "38359657",
-          "study_type": "Umbrella review of systematic reviews",
-          "population": "8 eligible systematic reviews of valerian for sleep disturbances/insomnia",
-          "evidence_scope": "Insomnia and sleep quality",
-          "finding": "The review found no convincing evidence that valerian treats insomnia, though subjective sleep-quality improvement was reported in some analyses.",
-          "limitations": "Existing studies are heterogeneous, often low quality, and use variable valerian preparations; objective sleep measures are not consistently improved.",
-          "directness": "Relevant human evidence",
-          "verified_at": "2026-10-02",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/38359657/"
-        }
-      ]
+      "last_reviewed_at": "2026-10-02"
     },
     "echinacea": {
       "name": "Echinacea",
@@ -759,21 +569,7 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/24554461/"
         }
       ],
-      "last_reviewed_at": "2026-10-02",
-      "review_evidence": [
-        {
-          "title": "Echinacea for preventing and treating the common cold",
-          "pmid": "24554461",
-          "study_type": "Cochrane systematic review",
-          "population": "24 double-blind trials; 4,631 participants",
-          "evidence_scope": "Prevention and treatment of the common cold",
-          "finding": "No clear treatment benefit was established; a weak preventive effect from some preparations remained possible.",
-          "limitations": "Strong clinical heterogeneity across species, plant parts, extracts, and trial methods prevented broad pooling and product-level generalization.",
-          "directness": "Relevant human evidence",
-          "verified_at": "2026-10-02",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/24554461/"
-        }
-      ]
+      "last_reviewed_at": "2026-10-02"
     },
     "senna": {
       "name": "Senna",
@@ -804,21 +600,7 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/32969946/"
         }
       ],
-      "last_reviewed_at": "2026-10-02",
-      "review_evidence": [
-        {
-          "title": "Efficacy and Safety of Over-the-Counter Therapies for Chronic Constipation: An Updated Systematic Review",
-          "pmid": "33767108",
-          "study_type": "Systematic review of randomized controlled trials",
-          "population": "41 randomized trials of over-the-counter constipation therapies in adults",
-          "evidence_scope": "Chronic constipation efficacy and safety",
-          "finding": "The review judged evidence for senna as good and supportive of use as a laxative for chronic constipation.",
-          "limitations": "The review covered multiple therapies and trial designs; this supports laxative activity, not detoxification, weight loss, or systemic-cleansing claims.",
-          "directness": "Relevant human evidence",
-          "verified_at": "2026-10-02",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/33767108/"
-        }
-      ]
+      "last_reviewed_at": "2026-10-02"
     },
     "milk-thistle": {
       "name": "Milk thistle (Silybum marianum)",
@@ -850,21 +632,7 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/18334810/"
         }
       ],
-      "last_reviewed_at": "2026-10-02",
-      "review_evidence": [
-        {
-          "title": "Milk thistle for the treatment of liver disease: a systematic review and meta-analysis",
-          "pmid": "12427501",
-          "study_type": "Systematic review and meta-analysis of randomized placebo-controlled trials",
-          "population": "14 trials in people with liver disease",
-          "evidence_scope": "Mortality, liver histology, and biochemical liver outcomes",
-          "finding": "Milk thistle did not show reliable improvements in mortality, histology, or clinically meaningful liver-function outcomes.",
-          "limitations": "Trials were heterogeneous and often small; evidence was insufficient to exclude benefit or harm for specific preparations or subgroups.",
-          "directness": "Relevant human evidence",
-          "verified_at": "2026-10-02",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/12427501/"
-        }
-      ]
+      "last_reviewed_at": "2026-10-02"
     },
     "alpha-lipoic-acid": {
       "name": "Alpha-lipoic acid (ALA)",
@@ -924,33 +692,7 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/41158831/"
         }
       ],
-      "last_reviewed_at": "2026-10-02",
-      "review_evidence": [
-        {
-          "title": "Efficacy and safety of coenzyme Q10 in heart failure: a meta-analysis of randomized controlled trials",
-          "pmid": "39462324",
-          "study_type": "Meta-analysis of randomized controlled trials",
-          "population": "33 randomized studies in people with heart failure",
-          "evidence_scope": "Mortality, hospitalization, functional status, biomarkers, and exercise capacity",
-          "finding": "The pooled analysis reported lower all-cause mortality and heart-failure hospitalization and improvement in some functional outcomes.",
-          "limitations": "Evidence quality varied by endpoint and the authors noted small studies and variable study quality; findings apply to heart-failure populations, not general cardiovascular prevention or energy claims.",
-          "directness": "Relevant human evidence",
-          "verified_at": "2026-10-02",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39462324/"
-        },
-        {
-          "title": "Effects of coenzyme Q10 supplementation on myopathy in statin-treated patients: a systematic review and meta-analysis",
-          "pmid": "41158831",
-          "study_type": "Systematic review and meta-analysis of randomized controlled trials",
-          "population": "7 randomized trials; 389 statin-treated adults",
-          "evidence_scope": "Statin-associated muscle pain",
-          "finding": "The pooled analysis found a modest reduction in muscle-pain intensity with CoQ10.",
-          "limitations": "Only seven small trials were included, treatment durations were short, and results were mixed across individual trials; more research is needed.",
-          "directness": "Relevant human evidence",
-          "verified_at": "2026-10-02",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41158831/"
-        }
-      ]
+      "last_reviewed_at": "2026-10-02"
     },
     "resveratrol": {
       "name": "Resveratrol",
@@ -1003,21 +745,7 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/38719213/"
         }
       ],
-      "last_reviewed_at": "2026-10-02",
-      "review_evidence": [
-        {
-          "title": "Zinc for prevention and treatment of the common cold",
-          "pmid": "38719213",
-          "study_type": "Cochrane systematic review",
-          "population": "Randomized studies of zinc for common-cold prevention or treatment",
-          "evidence_scope": "Cold incidence, duration, symptoms, and adverse events",
-          "finding": "Zinc may have little or no effect on preventing colds but may shorten the duration of an ongoing cold.",
-          "limitations": "Interventions, formulations, doses, co-therapies, and outcomes varied widely; non-serious adverse events were more frequent with zinc.",
-          "directness": "Relevant human evidence",
-          "verified_at": "2026-10-02",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/38719213/"
-        }
-      ]
+      "last_reviewed_at": "2026-10-02"
     },
     "vitamin-c": {
       "name": "Vitamin C",
@@ -1053,310 +781,6 @@
           "title": "Vitamin C reduces the severity of common colds: a meta-analysis",
           "pmid": "38082300",
           "url": "https://pubmed.ncbi.nlm.nih.gov/38082300/"
-        }
-      ],
-      "last_reviewed_at": "2026-10-02",
-      "review_evidence": [
-        {
-          "title": "Vitamin C for preventing and treating the common cold",
-          "pmid": "23440782",
-          "study_type": "Cochrane systematic review and meta-analysis",
-          "population": "29 trial comparisons; 11,306 participants contributed to cold-incidence analyses",
-          "evidence_scope": "Cold incidence, duration, and severity",
-          "finding": "Regular vitamin C did not materially reduce cold incidence in the general population but modestly shortened cold duration; therapeutic use after symptom onset was not consistently beneficial.",
-          "limitations": "Effects differed in people under extreme physical stress and by dosing context; findings should not be generalized to all immune claims.",
-          "directness": "Relevant human evidence",
-          "verified_at": "2026-10-02",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/23440782/"
-        }
-      ]
-    },
-    "lemon-balm": {
-      "name": "Lemon balm (Melissa officinalis)",
-      "posture": "Promising but heterogeneous human evidence for anxiety and depressive symptoms; preparation differences and a small trial base limit broad mood or sleep claims.",
-      "summary": "A systematic review and meta-analysis of clinical trials reported improvements in anxiety and depressive symptom scores, but the authors emphasized high heterogeneity, few trials, and methodological differences. EMA has a herbal monograph for Melissa officinalis leaf in traditional-use areas including mild mental stress and sleep complaints; this is not equivalent to proof for every lemon-balm preparation.",
-      "studied_context": "Clinical studies use varied Melissa officinalis preparations, doses, durations, and populations. The review-level evidence does not establish interchangeability between leaf preparations, extracts made from other plant parts, or combination products.",
-      "safety": "The clinical-trial meta-analysis did not identify serious adverse effects, but the evidence base is small and heterogeneous. The reviewed sources do not establish long-term safety for all extracts or doses.",
-      "product_directness": "V-CONTROL lists 'lemon balm fruit extract' without dose or standardization. The reviewed EMA monograph centers on Melissa leaf and the clinical literature uses varied preparations, so direct applicability to the finished product is not established.",
-      "products": [
-        "v-control"
-      ],
-      "sources": [
-        {
-          "type": "PubMed systematic review/meta-analysis",
-          "title": "The effects of lemon balm (Melissa officinalis L.) on depression and anxiety in clinical trials: A systematic review and meta-analysis",
-          "pmid": "34449930",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/34449930/"
-        },
-        {
-          "type": "European Medicines Agency",
-          "title": "Melissae folium - herbal medicinal product",
-          "url": "https://www.ema.europa.eu/en/medicines/herbal/melissae-folium"
-        }
-      ],
-      "review_evidence": [
-        {
-          "title": "The effects of lemon balm (Melissa officinalis L.) on depression and anxiety in clinical trials: A systematic review and meta-analysis",
-          "pmid": "34449930",
-          "study_type": "Systematic review and meta-analysis of randomized clinical trials",
-          "population": "People with acute or chronic anxiety or depressive symptoms across a small number of clinical trials",
-          "evidence_scope": "Anxiety and depressive symptom scores",
-          "finding": "Pooled analyses favored lemon balm for anxiety and depressive symptoms.",
-          "limitations": "High between-study heterogeneity, a small number of trials, and differences in preparations and methods limit confidence and generalizability.",
-          "directness": "Relevant human evidence",
-          "verified_at": "2026-10-02",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/34449930/"
-        }
-      ],
-      "last_reviewed_at": "2026-10-02"
-    },
-    "spirulina": {
-      "name": "Spirulina (Arthrospira/Spirulina)",
-      "posture": "Some human evidence supports modest blood-pressure lowering in selected adults, but the trial base is limited and generic cardiometabolic claims remain uncertain.",
-      "summary": "A GRADE-assessed systematic review and meta-analysis of randomized trials reported modest reductions in systolic and diastolic blood pressure, particularly in several higher-risk subgroups. The authors still noted a low number of studies and participants and an unresolved dose-response relationship.",
-      "studied_context": "Randomized trials use different spirulina preparations, doses, populations, and intervention durations. Blood-pressure findings should not be generalized to unrelated outcomes or to products with undisclosed amounts.",
-      "safety": "LiverTox reports that controlled trials generally have not shown liver enzyme elevations or clinically apparent liver injury, but rare possible liver-injury reports exist. Commercial spirulina can also be contaminated with toxin-producing cyanobacteria, making product quality relevant.",
-      "product_directness": "V-CONTROL lists spirulina algae extract but does not disclose the amount, extract characterization, or contaminant testing on the tracked manufacturer page. Trial results therefore cannot be directly assigned to the product.",
-      "products": [
-        "v-control"
-      ],
-      "sources": [
-        {
-          "type": "PubMed GRADE-assessed systematic review/meta-analysis",
-          "title": "The Effect of Spirulina Supplementation on Blood Pressure in Adults: A GRADE-Assessed Systematic Review and Meta-Analysis of Randomized Clinical Trials",
-          "pmid": "39529406",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39529406/"
-        },
-        {
-          "type": "NCBI LiverTox",
-          "title": "Spirulina",
-          "url": "https://www.ncbi.nlm.nih.gov/books/NBK548312/"
-        }
-      ],
-      "review_evidence": [
-        {
-          "title": "The Effect of Spirulina Supplementation on Blood Pressure in Adults: A GRADE-Assessed Systematic Review and Meta-Analysis of Randomized Clinical Trials",
-          "pmid": "39529406",
-          "study_type": "GRADE-assessed systematic review and meta-analysis of randomized controlled trials",
-          "population": "Adults in randomized trials of spirulina supplementation",
-          "evidence_scope": "Systolic and diastolic blood pressure",
-          "finding": "The pooled analysis reported modest reductions in systolic and diastolic blood pressure.",
-          "limitations": "The number of studies and participants was limited, heterogeneity was present, and dose-response/meta-regression did not establish a clear intervention threshold.",
-          "directness": "Relevant human evidence",
-          "verified_at": "2026-10-02",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39529406/"
-        }
-      ],
-      "last_reviewed_at": "2026-10-02"
-    },
-    "nopal": {
-      "name": "Nopal / prickly pear cactus (Opuntia ficus-indica)",
-      "posture": "Limited and heterogeneous human evidence for selected metabolic and body-composition outcomes; a clinically established weight-loss effect has not been shown.",
-      "summary": "A systematic review and meta-analysis of randomized trials found no significant effect on body weight, while some secondary body-composition, blood-pressure, and cholesterol outcomes favored Opuntia. Small controlled studies also report acute postprandial glucose effects, but preparations and doses vary substantially.",
-      "studied_context": "Studies use whole or steamed nopal, cladodes, fruit-skin/cladode extracts, or other Opuntia preparations. Food-scale doses and standardized extracts are not interchangeable.",
-      "safety": "The meta-analysis reported adverse events including gastric intolerance and flu-like symptoms. The reviewed evidence is too heterogeneous to establish a single safety profile for all concentrated extracts and doses.",
-      "product_directness": "V-CONTROL lists 'nopal leaf powder' without an amount. Reviewed studies use Opuntia foods, cladodes, or characterized extracts, so formulation and dose matching to V-CONTROL cannot be established.",
-      "products": [
-        "v-control"
-      ],
-      "sources": [
-        {
-          "type": "PubMed systematic review/meta-analysis",
-          "title": "The effect of cactus pear (Opuntia ficus-indica) on body weight and cardiovascular risk factors: a systematic review and meta-analysis of randomized clinical trials",
-          "pmid": "25837206",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/25837206/"
-        },
-        {
-          "type": "PubMed controlled clinical trial",
-          "title": "The effect of nopal (Opuntia ficus indica) on postprandial blood glucose, incretins, and antioxidant activity in Mexican patients with type 2 diabetes after consumption of two different composition breakfasts",
-          "pmid": "25132122",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/25132122/"
-        }
-      ],
-      "review_evidence": [
-        {
-          "title": "The effect of cactus pear (Opuntia ficus-indica) on body weight and cardiovascular risk factors: a systematic review and meta-analysis of randomized clinical trials",
-          "pmid": "25837206",
-          "study_type": "Systematic review and meta-analysis of randomized clinical trials",
-          "population": "Adults in seven eligible randomized clinical trials; five trials contributed to pooled analyses",
-          "evidence_scope": "Body weight, body composition, blood pressure, and lipid outcomes",
-          "finding": "The pooled analysis did not find a significant body-weight reduction, although some secondary outcomes favored Opuntia.",
-          "limitations": "Few trials, heterogeneous designs, inconsistent reporting quality, and substantial heterogeneity for body weight limit confidence and generalizability.",
-          "directness": "Relevant human evidence",
-          "verified_at": "2026-10-02",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/25837206/"
-        }
-      ],
-      "last_reviewed_at": "2026-10-02"
-    },
-    "hibiscus": {
-      "name": "Hibiscus (Hibiscus sabdariffa)",
-      "posture": "Supportive human evidence for modest blood-pressure reduction; lipid and glycemic effects are less consistent and depend on population, preparation, and outcome.",
-      "summary": "Systematic reviews and meta-analyses of randomized trials generally report reductions in systolic and diastolic blood pressure, especially in people with elevated baseline blood pressure. Lipid and glycemic findings are more variable, and long-term therapeutic-dose safety and optimal dosing remain incompletely defined.",
-      "studied_context": "Trials use Hibiscus sabdariffa beverages, teas, extracts, and varying doses for several weeks or longer. Effects are population- and preparation-dependent.",
-      "safety": "A recent umbrella review did not find an overall increase in adverse-event risk, but it emphasized that long-term and therapeutic-dose safety needs further study. Product preparation and dose remain important.",
-      "product_directness": "V-ITAREN lists hibiscus ('Jamaica grass') but does not disclose the plant part, preparation, standardization, or dose. Blood-pressure trial results therefore cannot be assigned directly to the finished product.",
-      "products": [
-        "v-itaren"
-      ],
-      "sources": [
-        {
-          "type": "PubMed umbrella review/meta-analysis",
-          "title": "Efficacy and safety of Hibiscus sabdariffa in cardiometabolic health: An overview of reviews and updated dose-response meta-analysis",
-          "pmid": "39870328",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39870328/"
-        },
-        {
-          "type": "PubMed systematic review/meta-analysis",
-          "title": "A systematic review and meta-analysis of the effects of Hibiscus sabdariffa on blood pressure and cardiometabolic markers",
-          "pmid": "34927694",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/34927694/"
-        }
-      ],
-      "review_evidence": [
-        {
-          "title": "Efficacy and safety of Hibiscus sabdariffa in cardiometabolic health: An overview of reviews and updated dose-response meta-analysis",
-          "pmid": "39870328",
-          "study_type": "Umbrella review and updated dose-response meta-analysis of randomized controlled trials",
-          "population": "26 randomized controlled trials involving 1,797 participants",
-          "evidence_scope": "Blood pressure, lipids, glycemic control, anthropometrics, inflammation, oxidative stress, liver enzymes, and safety",
-          "finding": "The updated synthesis found the most credible benefit for blood-pressure lowering, with additional favorable changes in some lipid and glycemic markers.",
-          "limitations": "Certainty and credibility varied by outcome and subgroup; long-term and therapeutic-dose safety remain incompletely characterized.",
-          "directness": "Relevant human evidence",
-          "verified_at": "2026-10-02",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39870328/"
-        }
-      ],
-      "last_reviewed_at": "2026-10-02"
-    },
-    "moringa": {
-      "name": "Moringa (Moringa oleifera)",
-      "posture": "Human cardiometabolic evidence is inconsistent and very low certainty overall; broad glucose, lipid, weight, or blood-pressure claims are not established.",
-      "summary": "A 2025 GRADE-assessed meta-analysis of randomized trials found no significant effect on most cardiometabolic outcomes and rated certainty very low. A modest diastolic blood-pressure signal was not robust in sensitivity analysis. Small individual trials likewise show inconsistent, non-dose-dependent effects.",
-      "studied_context": "Trials use different Moringa oleifera leaf powders or preparations, doses, populations, and durations. Many studies are small and heterogeneous.",
-      "safety": "The small and heterogeneous randomized-trial evidence base does not provide strong long-term safety certainty for concentrated or high-dose preparations. Safety conclusions should remain preparation-specific.",
-      "product_directness": "V-ITAREN lists moringa leaf without a disclosed amount or preparation details. The current low-certainty human evidence cannot establish finished-product cardiometabolic efficacy.",
-      "products": [
-        "v-itaren"
-      ],
-      "sources": [
-        {
-          "type": "PubMed GRADE-assessed meta-analysis",
-          "title": "Effects of Moringa oleifera Lam. Supplementation on Cardiometabolic Outcomes: A Meta-Analysis of Randomized Controlled Trials with GRADE Assessment",
-          "pmid": "41305552",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41305552/"
-        },
-        {
-          "type": "PubMed randomized clinical trial",
-          "title": "Effects of Moringa oleifera leaves on the blood glucose, blood pressure, and lipid profile of type 2 diabetic subjects: A parallel group randomized clinical trial of efficacy",
-          "pmid": "37229639",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/37229639/"
-        }
-      ],
-      "review_evidence": [
-        {
-          "title": "Effects of Moringa oleifera Lam. Supplementation on Cardiometabolic Outcomes: A Meta-Analysis of Randomized Controlled Trials with GRADE Assessment",
-          "pmid": "41305552",
-          "study_type": "Systematic review and meta-analysis of randomized controlled trials with GRADE assessment",
-          "population": "Nine randomized controlled trials; 341 participants in intervention groups and 308 controls",
-          "evidence_scope": "Anthropometrics, lipid profile, glycemic indices, and blood pressure",
-          "finding": "No significant effect was found for most outcomes; a modest diastolic blood-pressure reduction was observed but was not robust in sensitivity analysis.",
-          "limitations": "Risk of bias, substantial heterogeneity, indirectness, and methodological limitations reduced certainty to very low for all evaluated outcomes.",
-          "directness": "Relevant human evidence",
-          "verified_at": "2026-10-02",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41305552/"
-        }
-      ],
-      "last_reviewed_at": "2026-10-02"
-    },
-    "dandelion": {
-      "name": "Dandelion (Taraxacum officinale)",
-      "posture": "Traditional-use support exists for urinary and gastrointestinal indications, but direct human efficacy evidence is sparse and plant-part specific.",
-      "summary": "EMA maintains herbal monographs for dandelion root and other preparations. A small 17-person human pilot reported short-term diuretic signals after a fresh dandelion leaf extract, but this does not establish efficacy for dandelion root or for chronic use.",
-      "studied_context": "The cited human diuretic pilot used fresh leaf hydroethanolic extract over one day. V-ITAREN lists dandelion root, which is a different plant part and should not inherit the leaf-extract result.",
-      "safety": "EMA's dandelion-root monograph includes use restrictions and contraindications, including hypersensitivity to Asteraceae, and notes that adequate fluid intake is required for urinary-use preparations. Clinical evidence is too sparse to define safety for all concentrated extracts.",
-      "product_directness": "V-ITAREN lists dandelion root. The direct human diuretic pilot reviewed here studied leaf extract, not root, and V-ITAREN does not disclose dose or extraction details. Product-level efficacy is therefore unverified.",
-      "products": [
-        "v-itaren"
-      ],
-      "sources": [
-        {
-          "type": "European Medicines Agency",
-          "title": "Taraxaci officinalis radix - herbal medicinal product",
-          "url": "https://www.ema.europa.eu/en/medicines/herbal/taraxaci-officinalis-radix"
-        },
-        {
-          "type": "PubMed clinical pilot study",
-          "title": "The diuretic effect in human subjects of an extract of Taraxacum officinale folium over a single day",
-          "pmid": "19678785",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/19678785/"
-        }
-      ],
-      "last_reviewed_at": "2026-10-02"
-    },
-    "horsetail": {
-      "name": "Horsetail (Equisetum arvense)",
-      "posture": "Small human trials suggest diuretic and blood-pressure effects for standardized extracts, but the evidence base is limited and does not support broad or finished-product claims.",
-      "summary": "A randomized crossover trial in 36 healthy men found an acute diuretic effect with a standardized dried extract. A separate small randomized trial in stage-I hypertension reported blood-pressure reductions similar to hydrochlorothiazide over three months. These findings require replication and should not be generalized across unstandardized horsetail products.",
-      "studied_context": "The human trials used a standardized dry Equisetum arvense extract at 900 mg/day. One was a four-day crossover diuretic study in healthy men; the other was a three-month trial in 58 people with stage-I hypertension.",
-      "safety": "The small trials reported few minor adverse events and no major laboratory toxicity over the studied periods. LiverTox notes rare reports in which horsetail was implicated in herb-associated liver injury, but causal detail is limited.",
-      "product_directness": "V-ITAREN lists horsetail without dose or extract standardization. The 900 mg/day standardized-extract trial results cannot be assigned directly to this finished product.",
-      "products": [
-        "v-itaren"
-      ],
-      "sources": [
-        {
-          "type": "PubMed randomized double-blind clinical trial",
-          "title": "Randomized, Double-Blind Clinical Trial to Assess the Acute Diuretic Effect of Equisetum arvense (Field Horsetail) in Healthy Volunteers",
-          "pmid": "24723963",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/24723963/"
-        },
-        {
-          "type": "PubMed randomized clinical trial",
-          "title": "Antihypertensive effect of Equisetum arvense L.: a double-blind, randomized efficacy and safety clinical trial",
-          "pmid": "35168030",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/35168030/"
-        },
-        {
-          "type": "European Medicines Agency",
-          "title": "Equiseti herba - herbal medicinal product",
-          "url": "https://www.ema.europa.eu/en/medicines/herbal/equiseti-herba"
-        },
-        {
-          "type": "NCBI LiverTox",
-          "title": "Horsetail",
-          "url": "https://www.ncbi.nlm.nih.gov/books/NBK583202/"
-        }
-      ],
-      "last_reviewed_at": "2026-10-02"
-    },
-    "uva-ursi": {
-      "name": "Uva ursi / bearberry (Arctostaphylos uva-ursi)",
-      "posture": "Human trials do not establish uva ursi as an equivalent treatment for uncomplicated UTI; symptom benefit was absent or inferior to antibiotic therapy in reviewed trials.",
-      "summary": "In a 382-woman factorial randomized trial, uva ursi did not improve urinary-frequency symptoms or significantly reduce antibiotic use versus placebo. In a later 398-woman trial, initial uva-ursi treatment reduced antibiotic courses but failed symptom non-inferiority and had more pyelonephritis events than fosfomycin.",
-      "studied_context": "The clinical trials involved adult women with suspected uncomplicated urinary tract infection and used defined uva-ursi/arbutin preparations for short treatment periods. These results concern symptomatic UTI treatment strategies, not general urinary wellness.",
-      "safety": "The 398-participant trial reported greater symptom burden and eight pyelonephritis cases in the uva-ursi group versus two with fosfomycin. Uva ursi should not be presented as a proven substitute for standard UTI evaluation or treatment.",
-      "product_directness": "V-ITAREN lists uva ursi leaf but does not disclose the arbutin content or dose used in the reviewed trials. The product therefore cannot be assumed to reproduce the trial exposure or outcome.",
-      "products": [
-        "v-itaren"
-      ],
-      "sources": [
-        {
-          "type": "PubMed randomized controlled trial",
-          "title": "Uva-ursi extract and ibuprofen as alternative treatments for uncomplicated urinary tract infection in women (ATAFUTI): a factorial randomized trial",
-          "pmid": "30685500",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/30685500/"
-        },
-        {
-          "type": "PubMed randomized controlled trial",
-          "title": "Herbal treatment with uva ursi extract versus fosfomycin in women with uncomplicated urinary tract infection in primary care: a randomized controlled trial",
-          "pmid": "34111592",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/34111592/"
-        },
-        {
-          "type": "European Medicines Agency",
-          "title": "Uvae ursi folium - herbal medicinal product",
-          "url": "https://www.ema.europa.eu/en/medicines/herbal/uvae-ursi-folium"
         }
       ],
       "last_reviewed_at": "2026-10-02"
