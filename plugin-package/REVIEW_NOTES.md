@@ -34,7 +34,7 @@ and complete Verify Domain before final submission.
 V1 returns structured MCP content only and does not advertise a UI output template. Screenshots are intentionally omitted.
 
 ## V1.1 data freshness
-The MCP Worker bundles exact snapshots of `products-data.json` and `ingredient-evidence.json` at deployment. CI fails if those bundled copies drift from the repository source files. Tool outputs expose explicit data-version and review/check-date fields so ChatGPT does not need to infer freshness from prose.
+The MCP Worker bundles generated snapshots of the root `products-data.json` and `ingredient-evidence.json` source files at deployment. The sync step runs automatically before validation/deployment, and generated copies are not maintained in Git. Tool outputs expose explicit data-version and review/check-date fields so ChatGPT does not need to infer freshness from prose.
 
 ## Operational telemetry
 V1.1 logs only tool name, success/error status, latency, and data version. Query text, ingredient/product input, medical details, and returned content are not logged by the application telemetry wrapper.
