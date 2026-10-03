@@ -400,7 +400,7 @@
       "research": "Evidence review in progress. Ingredient-level evidence will not be treated as finished-product evidence unless formulation, dose, population, duration, outcome, and study context are sufficiently relevant.",
       "mechanism": "Under review.",
       "evidenceGrade": "Under Review",
-      "evidenceGradeText": "No finalized finished-product evidence grade is being asserted.",
+      "evidenceGradeText": "Ingredient-level evidence is now linked for lemon balm, spirulina, and nopal. Acerola and silica are not treated as separate reviewed efficacy topics here. Finished-product efficacy remains Under Review because doses, preparation matching, and direct product trials are not established.",
       "faqs": [],
       "citations": [],
       "relatedProducts": [],
@@ -409,7 +409,26 @@
       "shopUrl": "https://vitalhealthglobal.com/products/v-control?refID=149983",
       "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
       "formulationSource": "https://vitalhealthglobal.com/products/v-control",
-      "ingredientEvidenceLinks": []
+      "ingredientEvidenceLinks": [
+        {
+          "slug": "lemon-balm",
+          "name": "Lemon balm (Melissa officinalis)",
+          "url": "/ingredients/lemon-balm",
+          "posture": "Promising but heterogeneous human evidence for anxiety and depressive symptoms; preparation differences and a small trial base limit broad mood or sleep claims."
+        },
+        {
+          "slug": "spirulina",
+          "name": "Spirulina (Arthrospira/Spirulina)",
+          "url": "/ingredients/spirulina",
+          "posture": "Some human evidence supports modest blood-pressure lowering in selected adults, but the trial base is limited and generic cardiometabolic claims remain uncertain."
+        },
+        {
+          "slug": "nopal",
+          "name": "Nopal / prickly pear cactus (Opuntia ficus-indica)",
+          "url": "/ingredients/nopal",
+          "posture": "Limited and heterogeneous human evidence for selected metabolic and body-composition outcomes; a clinically established weight-loss effect has not been shown."
+        }
+      ]
     },
     "v-curcumax": {
       "slug": "v-curcumax",
@@ -703,7 +722,7 @@
       "research": "Evidence review in progress. Ingredient-level evidence will not be treated as finished-product evidence unless formulation, dose, population, duration, outcome, and study context are sufficiently relevant.",
       "mechanism": "Under review.",
       "evidenceGrade": "Under Review",
-      "evidenceGradeText": "No finalized finished-product evidence grade is being asserted.",
+      "evidenceGradeText": "Ingredient-level evidence is now linked for hibiscus, horsetail, dandelion, moringa, and uva ursi. Eryngium heterophyllum, gelatin, and silica are not treated as reviewed efficacy topics here. Finished-product efficacy remains Under Review because doses, preparation matching, and direct product trials are not established.",
       "faqs": [],
       "citations": [],
       "relatedProducts": [],
@@ -712,7 +731,38 @@
       "shopUrl": "https://vitalhealthglobal.com/products/v-itaren?refID=149983",
       "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
       "formulationSource": "https://vitalhealthglobal.com/products/v-itaren",
-      "ingredientEvidenceLinks": []
+      "ingredientEvidenceLinks": [
+        {
+          "slug": "hibiscus",
+          "name": "Hibiscus (Hibiscus sabdariffa)",
+          "url": "/ingredients/hibiscus",
+          "posture": "Supportive human evidence for modest blood-pressure reduction; lipid and glycemic effects are less consistent and depend on population, preparation, and outcome."
+        },
+        {
+          "slug": "horsetail",
+          "name": "Horsetail (Equisetum arvense)",
+          "url": "/ingredients/horsetail",
+          "posture": "Small human trials suggest diuretic and blood-pressure effects for standardized extracts, but the evidence base is limited and does not support broad or finished-product claims."
+        },
+        {
+          "slug": "dandelion",
+          "name": "Dandelion (Taraxacum officinale)",
+          "url": "/ingredients/dandelion",
+          "posture": "Traditional-use support exists for urinary and gastrointestinal indications, but direct human efficacy evidence is sparse and plant-part specific."
+        },
+        {
+          "slug": "moringa",
+          "name": "Moringa (Moringa oleifera)",
+          "url": "/ingredients/moringa",
+          "posture": "Human cardiometabolic evidence is inconsistent and very low certainty overall; broad glucose, lipid, weight, or blood-pressure claims are not established."
+        },
+        {
+          "slug": "uva-ursi",
+          "name": "Uva ursi / bearberry (Arctostaphylos uva-ursi)",
+          "url": "/ingredients/uva-ursi",
+          "posture": "Human trials do not establish uva ursi as an equivalent treatment for uncomplicated UTI; symptom benefit was absent or inferior to antibiotic therapy in reviewed trials."
+        }
+      ]
     },
     "v-lovkafe": {
       "slug": "v-lovkafe",
