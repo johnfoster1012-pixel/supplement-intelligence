@@ -19,19 +19,59 @@
     "com.openai": {
       "interface": {
         "displayName": "Supplement Intelligence",
-        "shortDescription": "Research supplement ingredients and product formulations.",
-        "longDescription": "Review verification-first supplement ingredient evidence, safety context, study directness, and current tracked product formulations without treating ingredient evidence as proof of finished-product efficacy.",
+        "shortDescription": "Supplement evidence research",
+        "longDescription": "Research reviewed supplement ingredients and current tracked product formulations. Supplement Intelligence summarizes evidence posture, studied context, safety considerations, and product-directness limitations while keeping ingredient-level evidence separate from finished-product efficacy. It does not provide diagnosis, personalized dosage, treatment recommendations, or unsupported product rankings.",
         "developerName": "Supplement Intelligence",
-        "category": "Health",
+        "category": "Healthcare",
         "capabilities": [
-          "Read"
+          "Search ingredient evidence",
+          "Read product formulations",
+          "Review safety context"
         ],
         "websiteURL": "https://supplement-intelligence.com",
+        "supportURL": "https://supplement-intelligence.com/support",
+        "privacyPolicyURL": "https://supplement-intelligence.com/privacy",
+        "termsOfServiceURL": "https://supplement-intelligence.com/terms",
         "defaultPrompt": [
           "What does the evidence say about creatine monohydrate?",
-          "Does S-BALANCE contain berberine, and is its finished-product efficacy verified?",
+          "Does S-BALANCE contain berberine, and is its efficacy verified?",
           "What safety concerns are noted for ashwagandha?"
-        ]
+        ],
+        "brandColor": "#1F6FEB",
+        "composerIcon": "./assets/icon.svg",
+        "logo": "./assets/logo.svg"
+      },
+      "onboardingSkill": "./skills/supplement-evidence-research/SKILL.md",
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Ingredient evidence lookup",
+              "prompt": "What does the evidence say about creatine monohydrate?",
+              "expected_tool": "get_ingredient_evidence"
+            },
+            {
+              "description": "Product formulation lookup",
+              "prompt": "Does S-BALANCE contain berberine?",
+              "expected_tool": "get_product_formulation"
+            },
+            {
+              "description": "Browse reviewed topics",
+              "prompt": "What ingredients have you reviewed?",
+              "expected_tool": "list_reviewed_ingredients"
+            }
+          ],
+          "negative": [
+            {
+              "description": "Unrelated weather request",
+              "prompt": "What is the weather tomorrow?"
+            },
+            {
+              "description": "Unrelated writing request",
+              "prompt": "Write me a sales email."
+            }
+          ]
+        }
       }
     }
   }
