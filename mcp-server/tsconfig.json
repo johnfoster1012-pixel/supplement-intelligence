@@ -9,7 +9,9 @@
       "ES2022",
       "WebWorker"
     ],
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true
   },
   "include": [
     "src/**/*.ts",

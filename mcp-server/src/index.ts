@@ -1,9 +1,16 @@
 import { createMcpHandler, McpServer } from "@modelcontextprotocol/server";
 import * as z from "zod/v4";
+import productsSnapshot from "../data/products-data.json";
+import ingredientSnapshot from "../data/ingredient-evidence.json";
 
-const DATA_BASE = "https://raw.githubusercontent.com/johnfoster1012-pixel/supplement-intelligence/main/";
 const SERVER_NAME = "supplement-intelligence";
-const SERVER_VERSION = "1.0.0";
+const SERVER_VERSION = "1.1.0";
+const DATA_SOURCE = "bundled-repository-snapshot";
+const PRODUCTS_DOC = productsSnapshot as unknown as JsonObject;
+const INGREDIENT_DOC = ingredientSnapshot as unknown as JsonObject;
+const PRODUCT_DATA_VERSION = String(PRODUCTS_DOC.generatedAt ?? PRODUCTS_DOC.catalogCheckedAt ?? "unknown");
+const INGREDIENT_DATA_VERSION = String(INGREDIENT_DOC.generated_at ?? "unknown");
+const DATA_VERSION = `products:${PRODUCT_DATA_VERSION};ingredients:${INGREDIENT_DATA_VERSION}`;
 
 interface Env {
   OPENAI_APPS_CHALLENGE?: string;
@@ -12,45 +19,79 @@ interface Env {
 const readOnlyAnnotations = {
   readOnlyHint: true,
   destructiveHint: false,
-  openWorldHint: true,
+  openWorldHint: false,
   idempotentHint: true,
 } as const;
 
 type JsonObject = Record<string, unknown>;
 
-async function fetchJsonFile(path: string): Promise<JsonObject> {
-  const response = await fetch(DATA_BASE + path, {
-    headers: {
-      "Accept": "application/json",
-      "User-Agent": "Supplement-Intelligence-MCP/1.0",
-    },
-  });
+const SEARCH_ALIASES: Record<string, string[]> = {
+  "fish oil": ["omega 3", "omega-3", "long chain omega 3", "epa dha"],
+  "omega 3": ["fish oil", "omega-3", "long chain omega 3", "epa dha"],
+  "omega-3": ["fish oil", "omega 3", "long chain omega 3", "epa dha"],
+  "d3": ["vitamin d", "vitamin d3"],
+  "vitamin d3": ["vitamin d", "d3"],
+  "coq10": ["coenzyme q10", "co q10"],
+  "coenzyme q10": ["coq10", "co q10"],
+  "ala": ["alpha lipoic acid", "alpha-lipoic acid"],
+  "alpha lipoic acid": ["ala", "alpha-lipoic acid"],
+  "turmeric": ["curcumin"],
+  "curcumin": ["turmeric"],
+  "msm": ["methylsulfonylmethane"],
+  "methylsulfonylmethane": ["msm"],
+  "citrulline malate": ["citrulline", "l citrulline"],
+  "l citrulline": ["citrulline", "citrulline malate"],
+  "l arginine": ["arginine"],
+  "arginine": ["l arginine"],
+};
 
-  if (!response.ok) {
-    throw new Error(`Supplement Intelligence source file returned HTTP ${response.status}: ${path}`);
-  }
-
-  const text = await response.text();
-  let payload: unknown;
-  try {
-    payload = JSON.parse(text);
-  } catch {
-    throw new Error(`Supplement Intelligence source file was not valid JSON: ${path}`);
-  }
-
-  if (!payload || typeof payload !== "object" || Array.isArray(payload)) {
-    throw new Error(`Supplement Intelligence source file had an unexpected shape: ${path}`);
-  }
-
-  return payload as JsonObject;
+function normalizeSearchText(value: unknown): string {
+  return String(value ?? "")
+    .toLowerCase()
+    .replace(/[+/_-]+/g, " ")
+    .replace(/[^a-z0-9\s]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
-async function getProductsDocument(): Promise<JsonObject> {
-  return fetchJsonFile("products-data.json");
+function searchTerms(query: string): string[] {
+  const normalized = normalizeSearchText(query);
+  const terms = new Set<string>([normalized]);
+  for (const [key, aliases] of Object.entries(SEARCH_ALIASES)) {
+    if (normalized === key || normalized.includes(key)) {
+      terms.add(key);
+      aliases.forEach((alias) => terms.add(normalizeSearchText(alias)));
+    }
+  }
+  return [...terms].filter(Boolean);
 }
 
-async function getIngredientDocument(): Promise<JsonObject> {
-  return fetchJsonFile("ingredient-evidence.json");
+function matchesSearch(values: unknown[], terms: string[]): boolean {
+  const haystack = normalizeSearchText(values.map((v) => String(v ?? "")).join(" "));
+  return terms.some((term) => haystack.includes(term));
+}
+
+function getProductsDocument(): JsonObject {
+  return PRODUCTS_DOC;
+}
+
+function getIngredientDocument(): JsonObject {
+  return INGREDIENT_DOC;
+}
+
+function extractIsoDate(value: unknown): string | null {
+  const match = String(value ?? "").match(/\b(20\d{2}-\d{2}-\d{2})\b/);
+  return match ? match[1] : null;
+}
+
+function logToolEvent(tool: string, status: "success" | "error", startedAt: number): void {
+  console.log(JSON.stringify({
+    event: "mcp_tool_call",
+    tool,
+    status,
+    duration_ms: Date.now() - startedAt,
+    data_version: DATA_VERSION,
+  }));
 }
 
 function asToolError(error: unknown) {
@@ -103,19 +144,21 @@ function createServer(): McpServer {
       }),
       outputSchema: z.object({
         query: z.string(),
+        query_normalized: z.string(),
+        data_version: z.string(),
         count: z.number().int().nonnegative(),
         results: z.array(searchResultSchema),
       }),
       annotations: readOnlyAnnotations,
     },
     async ({ query }) => {
+      const startedAt = Date.now();
       try {
-        const [productsDoc, ingredientDoc] = await Promise.all([
-          getProductsDocument(),
-          getIngredientDocument(),
-        ]);
+        const productsDoc = getProductsDocument();
+        const ingredientDoc = getIngredientDocument();
 
-        const q = query.trim().toLowerCase();
+        const q = normalizeSearchText(query);
+        const terms = searchTerms(query);
         const productMap =
           productsDoc.products && typeof productsDoc.products === "object"
             ? (productsDoc.products as Record<string, JsonObject>)
@@ -127,9 +170,7 @@ function createServer(): McpServer {
 
         const productResults = Object.values(productMap)
           .filter((p) =>
-            [p.name, p.slug, p.ingredients].some((v) =>
-              String(v ?? "").toLowerCase().includes(q)
-            )
+            matchesSearch([p.name, p.slug, p.ingredients], terms)
           )
           .slice(0, 20)
           .map((p) => ({
@@ -143,9 +184,7 @@ function createServer(): McpServer {
 
         const ingredientResults = Object.entries(ingredientMap)
           .filter(([slug, x]) =>
-            [slug, x.name, x.posture, x.summary].some((v) =>
-              String(v ?? "").toLowerCase().includes(q)
-            )
+            matchesSearch([slug, x.name, x.posture, x.summary], terms)
           )
           .slice(0, 20)
           .map(([slug, x]) => ({
@@ -158,10 +197,13 @@ function createServer(): McpServer {
 
         const results = [...ingredientResults, ...productResults];
         const output = {
-          query: q,
+          query: query.trim(),
+          query_normalized: q,
+          data_version: DATA_VERSION,
           count: results.length,
           results,
         };
+        logToolEvent("search_supplement_intelligence", "success", startedAt);
         return {
           content: [
             {
@@ -175,6 +217,7 @@ function createServer(): McpServer {
           structuredContent: output,
         };
       } catch (error) {
+        logToolEvent("search_supplement_intelligence", "error", startedAt);
         return asToolError(error);
       }
     }
@@ -197,6 +240,9 @@ function createServer(): McpServer {
       outputSchema: z.object({
         slug: z.string(),
         canonical_url: z.string().url(),
+        data_version: z.string(),
+        last_reviewed_at: z.string(),
+        source_count: z.number().int().nonnegative(),
         name: z.string(),
         posture: z.string(),
         summary: z.string(),
@@ -210,8 +256,9 @@ function createServer(): McpServer {
       annotations: readOnlyAnnotations,
     },
     async ({ slug }) => {
+      const startedAt = Date.now();
       try {
-        const doc = await getIngredientDocument();
+        const doc = getIngredientDocument();
         const map =
           doc.ingredients && typeof doc.ingredients === "object"
             ? (doc.ingredients as Record<string, JsonObject>)
@@ -219,9 +266,13 @@ function createServer(): McpServer {
         const data = map[slug];
         if (!data) throw new Error("Ingredient not found.");
 
+        const sources = Array.isArray(data.sources) ? data.sources : [];
         const output = {
           slug,
           canonical_url: `https://supplement-intelligence.com/ingredients/${slug}`,
+          data_version: INGREDIENT_DATA_VERSION,
+          last_reviewed_at: INGREDIENT_DATA_VERSION,
+          source_count: sources.length,
           name: String(data.name ?? slug),
           posture: String(data.posture ?? ""),
           summary: String(data.summary ?? ""),
@@ -229,20 +280,22 @@ function createServer(): McpServer {
           safety: String(data.safety ?? ""),
           product_directness: String(data.product_directness ?? ""),
           products: Array.isArray(data.products) ? data.products.map(String) : [],
-          sources: Array.isArray(data.sources) ? data.sources : [],
+          sources,
           interpretation:
             "Ingredient-level evidence is not proof that a finished product has the same effect.",
         };
+        logToolEvent("get_ingredient_evidence", "success", startedAt);
         return {
           content: [
             {
               type: "text",
-              text: `${output.name}: ${output.posture} Source: ${output.canonical_url}`,
+              text: `${output.name}: ${output.posture} Reviewed ${output.last_reviewed_at}. Source: ${output.canonical_url}`,
             },
           ],
           structuredContent: output,
         };
       } catch (error) {
+        logToolEvent("get_ingredient_evidence", "error", startedAt);
         return asToolError(error);
       }
     }
@@ -266,6 +319,9 @@ function createServer(): McpServer {
         slug: z.string(),
         name: z.string(),
         canonical_url: z.string().url(),
+        data_version: z.string(),
+        catalog_checked_at: z.string(),
+        formulation_checked_at: z.string().nullable(),
         ingredients: z.string().nullable(),
         formulation_status: z.string().nullable(),
         formulation_source: z.string().url().nullable(),
@@ -284,8 +340,9 @@ function createServer(): McpServer {
       annotations: readOnlyAnnotations,
     },
     async ({ slug }) => {
+      const startedAt = Date.now();
       try {
-        const doc = await getProductsDocument();
+        const doc = getProductsDocument();
         const map =
           doc.products && typeof doc.products === "object"
             ? (doc.products as Record<string, JsonObject>)
@@ -293,13 +350,17 @@ function createServer(): McpServer {
         const data = map[slug];
         if (!data) throw new Error("Product not found.");
 
+        const formulationStatus =
+          data.formulationStatus == null ? null : String(data.formulationStatus);
         const output = {
           slug,
           name: String(data.name ?? slug),
           canonical_url: `https://supplement-intelligence.com/products/${slug}`,
+          data_version: PRODUCT_DATA_VERSION,
+          catalog_checked_at: String(doc.catalogCheckedAt ?? PRODUCT_DATA_VERSION),
+          formulation_checked_at: extractIsoDate(formulationStatus),
           ingredients: data.ingredients == null ? null : String(data.ingredients),
-          formulation_status:
-            data.formulationStatus == null ? null : String(data.formulationStatus),
+          formulation_status: formulationStatus,
           formulation_source:
             data.formulationSource == null ? null : String(data.formulationSource),
           evidence_status: String(data.evidenceGrade ?? "Under Review"),
@@ -311,6 +372,7 @@ function createServer(): McpServer {
           commercial_disclosure:
             "Supplement Intelligence may earn referral credit from some product links.",
         };
+        logToolEvent("get_product_formulation", "success", startedAt);
         return {
           content: [
             {
@@ -321,6 +383,7 @@ function createServer(): McpServer {
           structuredContent: output,
         };
       } catch (error) {
+        logToolEvent("get_product_formulation", "error", startedAt);
         return asToolError(error);
       }
     }
@@ -334,6 +397,8 @@ function createServer(): McpServer {
         "List the ingredient evidence topics currently reviewed and published by Supplement Intelligence. Use this when the user wants to browse available evidence topics rather than search for one known ingredient.",
       inputSchema: z.object({}),
       outputSchema: z.object({
+        data_version: z.string(),
+        last_reviewed_at: z.string(),
         count: z.number().int().nonnegative(),
         ingredients: z.array(
           z.object({
@@ -348,8 +413,9 @@ function createServer(): McpServer {
       annotations: readOnlyAnnotations,
     },
     async () => {
+      const startedAt = Date.now();
       try {
-        const doc = await getIngredientDocument();
+        const doc = getIngredientDocument();
         const map =
           doc.ingredients && typeof doc.ingredients === "object"
             ? (doc.ingredients as Record<string, JsonObject>)
@@ -362,9 +428,12 @@ function createServer(): McpServer {
           related_products: Array.isArray(x.products) ? x.products.map(String) : [],
         }));
         const output = {
+          data_version: INGREDIENT_DATA_VERSION,
+          last_reviewed_at: INGREDIENT_DATA_VERSION,
           count: ingredients.length,
           ingredients,
         };
+        logToolEvent("list_reviewed_ingredients", "success", startedAt);
         return {
           content: [
             {
@@ -375,6 +444,7 @@ function createServer(): McpServer {
           structuredContent: output,
         };
       } catch (error) {
+        logToolEvent("list_reviewed_ingredients", "error", startedAt);
         return asToolError(error);
       }
     }
@@ -404,7 +474,8 @@ export default {
         ok: true,
         service: "supplement-intelligence-mcp",
         version: SERVER_VERSION,
-        data_source: DATA_BASE,
+        data_source: DATA_SOURCE,
+        data_version: DATA_VERSION,
       });
     }
 
@@ -412,7 +483,8 @@ export default {
       return Response.json({
         name: "Supplement Intelligence MCP",
         version: SERVER_VERSION,
-        data_source: DATA_BASE,
+        data_source: DATA_SOURCE,
+        data_version: DATA_VERSION,
         mcp_endpoint: "https://mcp.supplement-intelligence.com/mcp",
         health: "https://mcp.supplement-intelligence.com/health",
         tools: [

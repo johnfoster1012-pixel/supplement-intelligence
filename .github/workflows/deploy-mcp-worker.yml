@@ -6,6 +6,8 @@ on:
       - main
     paths:
       - 'mcp-server/**'
+      - 'products-data.json'
+      - 'ingredient-evidence.json'
       - '.github/workflows/deploy-mcp-worker.yml'
   workflow_dispatch:
 
