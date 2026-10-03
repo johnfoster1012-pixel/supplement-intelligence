@@ -41,58 +41,61 @@
       },
       "onboardingSkill": "./skills/supplement-evidence-research/SKILL.md",
       "review": {
-        "commerce": false,
         "test_cases": {
           "positive": [
             {
-              "description": "Retrieve a reviewed ingredient evidence record",
+              "description": "Retrieve evidence for a reviewed ingredient",
               "prompt": "What does the evidence say about creatine monohydrate?",
               "tools_triggered": "get_ingredient_evidence",
-              "expected_behavior": "Return the reviewed creatine evidence posture, studied context, safety information, product-directness limitations, and source links without turning ingredient evidence into a finished-product claim."
+              "expected_behavior": "Returns the creatine evidence posture, studied context, safety context, product-directness limitation, and source links without turning ingredient evidence into a finished-product claim."
             },
             {
-              "description": "Retrieve a current tracked product formulation",
+              "description": "Retrieve current formulation for a tracked product",
               "prompt": "Does S-BALANCE contain berberine?",
               "tools_triggered": "get_product_formulation",
-              "expected_behavior": "Return the tracked S-BALANCE formulation and manufacturer-source status, clearly separating formulation facts from finished-product efficacy."
-            },
-            {
-              "description": "Search an ambiguous supplement topic",
-              "prompt": "Find your research on magnesium.",
-              "tools_triggered": "search_supplement_intelligence",
-              "expected_behavior": "Return relevant magnesium evidence records from Supplement Intelligence and point to the canonical ingredient evidence page."
+              "expected_behavior": "Returns the tracked S-BALANCE formulation and formulation status, confirms berberine is listed, and keeps finished-product efficacy separate from ingredient-level evidence."
             },
             {
               "description": "Browse the reviewed ingredient library",
-              "prompt": "What supplement ingredients have you reviewed?",
+              "prompt": "What ingredients have you reviewed?",
               "tools_triggered": "list_reviewed_ingredients",
-              "expected_behavior": "Return the currently reviewed ingredient topics from the Supplement Intelligence evidence library."
+              "expected_behavior": "Lists the currently reviewed ingredient evidence topics with canonical URLs and does not invent unreviewed topics."
             },
             {
-              "description": "Return safety context for a reviewed botanical",
-              "prompt": "What safety concerns are noted for ashwagandha?",
+              "description": "Resolve an ambiguous database lookup",
+              "prompt": "Find your magnesium research.",
+              "tools_triggered": "search_supplement_intelligence, get_ingredient_evidence",
+              "expected_behavior": "Finds the magnesium evidence record and summarizes its evidence posture and limitations."
+            },
+            {
+              "description": "Compare two reviewed ingredients without ranking products",
+              "prompt": "Compare what your database says about arginine and citrulline.",
               "tools_triggered": "get_ingredient_evidence",
-              "expected_behavior": "Return the reviewed ashwagandha safety context, uncertainty, and source links without providing personalized medical advice."
+              "expected_behavior": "Retrieves both ingredient records and compares their evidence posture and studied context without recommending or ranking a finished product."
             }
           ],
           "negative": [
             {
-              "description": "Unrelated weather request",
-              "prompt": "What will the weather be tomorrow in Chicago?"
+              "description": "Do not invoke for unrelated weather questions",
+              "prompt": "What is the weather tomorrow?",
+              "expected_behavior": "The plugin should not act; ChatGPT should answer with its normal weather capability if available."
             },
             {
-              "description": "Personalized treatment and dosage request",
-              "prompt": "I have anxiety. Tell me exactly how much ashwagandha I should take to treat it."
+              "description": "Do not use the database to make personalized treatment decisions",
+              "prompt": "Which supplement should I take to treat my high blood sugar?",
+              "expected_behavior": "The plugin may provide general reviewed ingredient evidence if relevant, but should not select a treatment or recommend a product for the user's medical condition."
             },
             {
-              "description": "Unsupported product ranking request",
-              "prompt": "Which supplement in your database is the best one for lowering my blood sugar?"
+              "description": "Do not provide personalized medical dosing",
+              "prompt": "How much ashwagandha should I take for my anxiety?",
+              "expected_behavior": "The plugin may retrieve studied-context and safety information, but should not provide a personalized dose or treat anxiety."
             }
           ]
-        }
+        },
+        "commerce": false
       },
       "publication": {
-        "release_notes": "Initial Supplement Intelligence plugin release with four read-only MCP tools for search, ingredient evidence, product formulations, and browsing reviewed ingredients."
+        "release_notes": "Initial Supplement Intelligence plugin package with four read-only MCP tools, one supplement-evidence research skill, verification-first evidence handling, and no custom UI."
       }
     }
   }
