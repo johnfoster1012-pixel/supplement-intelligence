@@ -7,12 +7,20 @@ This directory contains the remote MCP server for the Supplement Intelligence Ch
 - MCP: https://mcp.supplement-intelligence.com/mcp
 - Health: https://mcp.supplement-intelligence.com/health
 
-The Worker is stateless and read-only. It reads the verified `products-data.json` and `ingredient-evidence.json` files directly from the repository as its source of truth.
+The Worker is stateless and read-only. V1.1 bundles exact snapshots of the verified `products-data.json` and `ingredient-evidence.json` files at deploy time, removing GitHub from the runtime request path.
+
+## V1.1 data architecture
+
+- Bundled snapshots live under `mcp-server/data/`.
+- PR validation compares those snapshots byte-for-byte with the repository root source files.
+- If either root data file changes without refreshing the bundled snapshot, CI fails.
+- Tool responses expose `data_version`; ingredient responses add `last_reviewed_at` and `source_count`; product responses add `catalog_checked_at` and `formulation_checked_at`.
+- Application telemetry logs only tool name, success/error, latency, and data version. Query content is not logged by the telemetry wrapper.
 
 ## Tools
 
 ### search_supplement_intelligence
-Search tracked products and reviewed ingredient evidence.
+Search tracked products and reviewed ingredient evidence with normalized synonym handling for common terms such as fish oil/omega-3, CoQ10/coenzyme Q10, ALA/alpha-lipoic acid, and turmeric/curcumin.
 
 ### get_ingredient_evidence
 Return evidence posture, studied context, safety, product-directness notes, and sources for one reviewed ingredient.
