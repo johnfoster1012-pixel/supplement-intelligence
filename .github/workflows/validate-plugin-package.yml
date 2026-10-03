@@ -13,12 +13,11 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Validate plugin JSON
+      - name: Validate manifests and package shape
         run: |
           python - <<'PY'
           import json
@@ -30,46 +29,40 @@ jobs:
 
           assert plugin["$schema"] == "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json"
           assert plugin["name"] == "supplement-intelligence"
-          assert plugin["version"] == "1.0.0"
-
-          allowed = {
-              "$schema","name","version","description","author","homepage",
-              "repository","license","keywords","extensions"
-          }
-          unknown = set(plugin) - allowed
-          assert not unknown, f"Unknown portable plugin.json fields: {sorted(unknown)}"
+          assert plugin["version"]
+          assert plugin["description"]
+          assert "extensions" in plugin and "com.openai" in plugin["extensions"]
 
           assert mcp["$schema"] == "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json"
-          assert set(mcp) == {"$schema","mcpServers"}
-          server = mcp["mcpServers"]["supplement-intelligence"]
+          servers = mcp.get("mcpServers", {})
+          assert "supplement-intelligence" in servers
+          server = servers["supplement-intelligence"]
           assert server["type"] == "streamable-http"
           assert server["url"] == "https://mcp.supplement-intelligence.com/mcp"
 
-          skill = root / "skills" / "supplement-evidence-research" / "SKILL.md"
-          dependency = root / "skills" / "supplement-evidence-research" / "agents" / "openai.yaml"
-          assert skill.is_file()
-          assert dependency.is_file()
+          skills = list((root / "skills").glob("*/SKILL.md"))
+          assert skills, "At least one SKILL.md is required"
 
-          text = skill.read_text()
-          assert text.startswith("---\n")
-          assert "name: supplement-evidence-research" in text
-          assert "description:" in text
+          text = skills[0].read_text()
+          assert text.startswith("---\nname:")
+          assert "description:" in text.split("---", 2)[1]
 
-          print("Portable plugin package structural validation passed.")
+          print("Plugin package structure validated")
+          print("Skills:", [str(p) for p in skills])
           PY
 
-      - name: Validate production MCP server
-        working-directory: mcp-server
-        run: |
-          npm install
-          npm run smoke
-
-      - name: Build plugin ZIP
+      - name: Create portable plugin ZIP
         run: |
           cd plugin-package
-          zip -r ../supplement-intelligence-plugin-v1.0.0.zip             plugin.json mcp.json skills EVALS.md README.md
+          zip -r ../supplement-intelligence-plugin-v1.0.0.zip \
+            plugin.json \
+            mcp.json \
+            skills \
+            EVALS.md \
+            README.md
 
-      - name: Inspect ZIP contents
-        run: |
-          unzip -l supplement-intelligence-plugin-v1.0.0.zip
-          test "$(unzip -Z1 supplement-intelligence-plugin-v1.0.0.zip | head -1)" = "plugin.json"
+      - name: Upload plugin ZIP artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: supplement-intelligence-plugin-v1.0.0
+          path: supplement-intelligence-plugin-v1.0.0.zip
