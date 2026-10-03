@@ -23,6 +23,26 @@ Every published study record should include:
 - evidence directness: direct / indirect / mechanistic
 - verification date and status
 
+## Review-level evidence summaries
+
+For high-level evidence synthesis, an ingredient record may include a `review_evidence` array. Each entry summarizes one systematic review, meta-analysis, umbrella review, or similarly high-level human evidence source.
+
+Required review-level fields:
+- title
+- PMID
+- study type
+- population or review scope
+- evidence scope/outcome
+- main finding
+- important limitations
+- evidence directness
+- verification date
+- stable source URL
+
+A review-level summary is not a substitute for a full trial record. Do not infer an exact dose, formulation, duration, comparator, adverse-event profile, or finished-product effect unless the reviewed source explicitly supports that detail.
+
+Positive pooled findings must be reported together with clinically relevant limitations such as heterogeneity, small-study effects, preparation differences, subgroup dependence, or low certainty.
+
 ## Evidence levels
 - Direct human evidence
 - Relevant human evidence
