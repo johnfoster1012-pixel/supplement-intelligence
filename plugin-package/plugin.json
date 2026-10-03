@@ -22,7 +22,7 @@
         "shortDescription": "Supplement evidence research",
         "longDescription": "Research reviewed supplement ingredient evidence, safety context, studied formulations, and current tracked product formulations. The plugin distinguishes ingredient-level evidence from finished-product efficacy and does not provide personalized diagnosis, treatment, or dosage recommendations.",
         "developerName": "Supplement Intelligence",
-        "category": "Health",
+        "category": "Healthcare",
         "capabilities": [
           "Read"
         ],
