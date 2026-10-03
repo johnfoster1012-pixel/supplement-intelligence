@@ -92,6 +92,46 @@ def main():
             if not url.startswith("https://"):
                 errors.append(f"{ingredient_slug}: source URL is not HTTPS: {url!r}")
 
+        allowed_directness = {
+            "Direct human evidence",
+            "Relevant human evidence",
+            "Preliminary human evidence",
+            "Mechanistic evidence",
+        }
+        source_pmids = {
+            str(source.get("pmid"))
+            for source in item.get("sources", [])
+            if source.get("pmid")
+        }
+        required_review_fields = {
+            "title", "pmid", "study_type", "population", "evidence_scope",
+            "finding", "limitations", "directness", "verified_at", "url"
+        }
+        for i, review in enumerate(item.get("review_evidence", []), 1):
+            missing = sorted(k for k in required_review_fields if not review.get(k))
+            if missing:
+                errors.append(
+                    f"{ingredient_slug}: review_evidence[{i}] missing fields: {', '.join(missing)}"
+                )
+                continue
+            pmid = str(review.get("pmid"))
+            if not re.fullmatch(r"\d+", pmid):
+                errors.append(f"{ingredient_slug}: review_evidence[{i}] invalid PMID {pmid!r}")
+            if pmid not in source_pmids:
+                errors.append(
+                    f"{ingredient_slug}: review_evidence[{i}] PMID {pmid} is not present in sources"
+                )
+            if not str(review.get("url", "")).startswith("https://"):
+                errors.append(f"{ingredient_slug}: review_evidence[{i}] URL is not HTTPS")
+            if not re.fullmatch(r"20\d{2}-\d{2}-\d{2}", str(review.get("verified_at", ""))):
+                errors.append(
+                    f"{ingredient_slug}: review_evidence[{i}] verified_at must be YYYY-MM-DD"
+                )
+            if review.get("directness") not in allowed_directness:
+                errors.append(
+                    f"{ingredient_slug}: review_evidence[{i}] unsupported directness {review.get('directness')!r}"
+                )
+
     if len(evidence) != 26:
         errors.append(f"expected 26 current ingredient evidence records, found {len(evidence)}")
 
