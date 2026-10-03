@@ -84,7 +84,7 @@ jobs:
             return 1
           }
 
-          for url in             "/"             "/products"             "/ingredients"             "/ingredients/creatine-monohydrate"             "/ingredients/berberine"             "/about"             "/references"             "/privacy"             "/terms"             "/support"             "/llms.txt"             "/robots.txt"             "/sitemap.xml"             "/api/v1"             "/api/v1/search?q=creatine"             "/api/v1/ingredients/creatine-monohydrate"             "/api/v1/products/performance-plus"             "/openapi.json"; do
+          for url in             "/"             "/products"             "/ingredients"             "/ingredients/creatine-monohydrate"             "/ingredients/berberine"             "/ingredients/hibiscus"             "/ingredients/lemon-balm"             "/api/v1/ingredients/uva-ursi"             "/about"             "/references"             "/privacy"             "/terms"             "/support"             "/llms.txt"             "/robots.txt"             "/sitemap.xml"             "/api/v1"             "/api/v1/search?q=creatine"             "/api/v1/ingredients/creatine-monohydrate"             "/api/v1/products/performance-plus"             "/openapi.json"; do
             check_url "$url"
           done
 
@@ -95,11 +95,17 @@ jobs:
           API_INDEX=$(curl -L --max-time 20 -s "https://supplement-intelligence.com/api/v1")
           echo "$API_INDEX" | grep -q '"name": "Supplement Intelligence API"'
           echo "$API_INDEX" | grep -q '"products": 31'
-          echo "$API_INDEX" | grep -q '"ingredients": 26'
+          echo "$API_INDEX" | grep -q '"ingredients": 34'
 
           SEARCH_JSON=$(curl -L --max-time 20 -s "https://supplement-intelligence.com/api/v1/search?q=creatine")
           echo "$SEARCH_JSON" | grep -q '"query": "creatine"'
           echo "$SEARCH_JSON" | grep -q '"type": "ingredient"'
+
+          HIBISCUS_JSON=$(curl -L --max-time 20 -s "https://supplement-intelligence.com/api/v1/search?q=hibiscus")
+          echo "$HIBISCUS_JSON" | grep -q '"slug": "hibiscus"'
+
+          VITAREN_JSON=$(curl -L --max-time 20 -s "https://supplement-intelligence.com/api/v1/products/v-itaren")
+          echo "$VITAREN_JSON" | grep -q '"slug": "uva-ursi"'
 
           ROOT_HTML=$(curl -L --max-time 20 -s "https://supplement-intelligence.com/")
           echo "$ROOT_HTML" | grep -q "verification, not marketing claims"
