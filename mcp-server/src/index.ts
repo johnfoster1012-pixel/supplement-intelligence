@@ -271,7 +271,7 @@ function createServer(): McpServer {
           slug,
           canonical_url: `https://supplement-intelligence.com/ingredients/${slug}`,
           data_version: INGREDIENT_DATA_VERSION,
-          last_reviewed_at: INGREDIENT_DATA_VERSION,
+          last_reviewed_at: String(data.last_reviewed_at ?? INGREDIENT_DATA_VERSION),
           source_count: sources.length,
           name: String(data.name ?? slug),
           posture: String(data.posture ?? ""),
