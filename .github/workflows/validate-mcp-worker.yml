@@ -4,6 +4,8 @@ on:
   pull_request:
     paths:
       - 'mcp-server/**'
+      - 'products-data.json'
+      - 'ingredient-evidence.json'
       - '.github/workflows/validate-mcp-worker.yml'
       - '.github/workflows/deploy-mcp-worker.yml'
   workflow_dispatch:
@@ -31,6 +33,11 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+
+      - name: Verify bundled data snapshots
+        run: |
+          cmp -s data/products-data.json ../products-data.json
+          cmp -s data/ingredient-evidence.json ../ingredient-evidence.json
 
       - name: Type-check MCP Worker
         run: npm run typecheck
