@@ -124,6 +124,9 @@ async function handleRequest(request) {
   if (path === '/about' || path === '/about.html') return proxyRawText('site/about.html', 'text/html; charset=utf-8');
   if (path === '/references' || path === '/references.html') return proxyRawText('site/references.html', 'text/html; charset=utf-8');
   if (path === '/disclaimer' || path === '/disclaimer.html') return proxyRawText('site/disclaimer.html', 'text/html; charset=utf-8');
+  if (path === '/privacy' || path === '/privacy.html') return proxyRawText('site/privacy.html', 'text/html; charset=utf-8');
+  if (path === '/terms' || path === '/terms.html') return proxyRawText('site/terms.html', 'text/html; charset=utf-8');
+  if (path === '/support' || path === '/support.html') return proxyRawText('site/support.html', 'text/html; charset=utf-8');
 
   const productMatch = path.match(/^\/products\/([a-z0-9-]+)$/);
   if (productMatch) return handleProduct(url, productMatch[1]);
