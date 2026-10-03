@@ -12,7 +12,16 @@ const IS_PREVIEW = CONTENT_BRANCH_NAME !== 'main';
 const GITHUB_RAW_BASE = (typeof CONTENT_BASE !== 'undefined' && CONTENT_BASE)
   ? CONTENT_BASE
   : `https://raw.githubusercontent.com/johnfoster1012-pixel/supplement-intelligence/${CONTENT_BRANCH_NAME}/`;
-const VERSION = 'Supplement Intelligence v11.3';
+const VERSION = 'Supplement Intelligence v11.4';
+// Give every new Worker isolate a distinct upstream-content namespace. This
+// prevents Cloudflare's subrequest cache from serving a previous deployment's
+// branch-tip JSON/HTML after GitHub content changes.
+const CONTENT_CACHE_NAMESPACE = Date.now().toString(36);
+
+function contentUrl(path) {
+  const separator = path.includes('?') ? '&' : '?';
+  return GITHUB_RAW_BASE + path + separator + 'si_rev=' + CONTENT_CACHE_NAMESPACE;
+}
 
 const VALID_INGREDIENT_SLUGS = new Set([
   'alpha-lipoic-acid',
@@ -257,7 +266,7 @@ async function handleProductsIndex() {
 
 async function proxyRawText(path, contentType) {
   try {
-    const res = await fetch(GITHUB_RAW_BASE + path, { headers: { 'User-Agent': 'Supplement-Intelligence-Worker/11.0' }, cf: { cacheTtl: 3600 } });
+    const res = await fetch(contentUrl(path), { headers: { 'User-Agent': 'Supplement-Intelligence-Worker/11.0' }, cf: { cacheTtl: 3600 } });
     if (!res.ok) return new Response('Temporarily unavailable', { status: 503, headers: textHeaders() });
     const body = normalizeText(await res.text());
     return new Response(body, { status: 200, headers: baseHeaders(contentType) });
@@ -270,7 +279,7 @@ async function getTemplate() {
   const now = Date.now();
   if (cache.template && (now - cache.ts) < CACHE_TTL) return cache.template;
   try {
-    const res = await fetch(GITHUB_RAW_BASE + 'product-template.html', { headers: { 'User-Agent': 'Supplement-Intelligence-Worker/11.0' }, cf: { cacheTtl: 3600 } });
+    const res = await fetch(contentUrl('product-template.html'), { headers: { 'User-Agent': 'Supplement-Intelligence-Worker/11.0' }, cf: { cacheTtl: 3600 } });
     if (res.ok) {
       cache.template = normalizeText(await res.text());
       cache.ts = now;
@@ -284,7 +293,7 @@ async function getProductsData() {
   const now = Date.now();
   if (cache.productsData && (now - cache.ts) < CACHE_TTL) return cache.productsData;
   try {
-    const res = await fetch(GITHUB_RAW_BASE + 'products-data.json', { headers: { 'User-Agent': 'Supplement-Intelligence-Worker/11.0' }, cf: { cacheTtl: 3600 } });
+    const res = await fetch(contentUrl('products-data.json'), { headers: { 'User-Agent': 'Supplement-Intelligence-Worker/11.0' }, cf: { cacheTtl: 3600 } });
     if (res.ok) {
       const json = await res.json();
       cache.productsData = deepNormalize(json);
@@ -299,7 +308,7 @@ async function getIngredientData() {
   const now = Date.now();
   if (cache.ingredientData && (now - cache.ts) < CACHE_TTL) return cache.ingredientData;
   try {
-    const res = await fetch(GITHUB_RAW_BASE + 'ingredient-evidence.json', { headers: { 'User-Agent': 'Supplement-Intelligence-Worker/11.0' }, cf: { cacheTtl: 3600 } });
+    const res = await fetch(contentUrl('ingredient-evidence.json'), { headers: { 'User-Agent': 'Supplement-Intelligence-Worker/11.0' }, cf: { cacheTtl: 3600 } });
     if (res.ok) {
       const json = await res.json();
       cache.ingredientData = deepNormalize(json);
