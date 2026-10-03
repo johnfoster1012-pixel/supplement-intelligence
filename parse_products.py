@@ -132,8 +132,8 @@ def main():
                     f"{ingredient_slug}: review_evidence[{i}] unsupported directness {review.get('directness')!r}"
                 )
 
-    if len(evidence) != 26:
-        errors.append(f"expected 26 current ingredient evidence records, found {len(evidence)}")
+    if len(evidence) != 34:
+        errors.append(f"expected 34 current ingredient evidence records, found {len(evidence)}")
 
     # Public product data should not reintroduce merchant pricing.
     def walk(obj, path="root"):
