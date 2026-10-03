@@ -215,7 +215,7 @@
           "slug": "coenzyme-q10",
           "name": "Coenzyme Q10 (CoQ10)",
           "url": "/ingredients/coenzyme-q10",
-          "posture": "Evidence is condition-specific and generally inconclusive for many promoted uses; broad energy, heart, or statin-muscle claims are not established."
+          "posture": "Condition-specific evidence is mixed; recent meta-analyses suggest possible benefits in heart failure and statin-associated muscle symptoms, but certainty varies and broad energy or prevention claims are not established."
         },
         {
           "slug": "omega-3",
@@ -496,7 +496,7 @@
           "slug": "coenzyme-q10",
           "name": "Coenzyme Q10 (CoQ10)",
           "url": "/ingredients/coenzyme-q10",
-          "posture": "Evidence is condition-specific and generally inconclusive for many promoted uses; broad energy, heart, or statin-muscle claims are not established."
+          "posture": "Condition-specific evidence is mixed; recent meta-analyses suggest possible benefits in heart failure and statin-associated muscle symptoms, but certainty varies and broad energy or prevention claims are not established."
         },
         {
           "slug": "magnesium",
@@ -795,7 +795,7 @@
           "slug": "panax-ginseng",
           "name": "Panax ginseng (Asian ginseng)",
           "url": "/ingredients/panax-ginseng",
-          "posture": "Limited human evidence suggests possible small benefits for fatigue and selected cognitive measures; broad adaptogen, performance, or immune claims are not established."
+          "posture": "Small or context-specific fatigue and cognitive effects are possible, but pooled results are inconsistent and broad adaptogen or performance claims are not established."
         }
       ]
     },
@@ -830,7 +830,7 @@
           "slug": "panax-ginseng",
           "name": "Panax ginseng (Asian ginseng)",
           "url": "/ingredients/panax-ginseng",
-          "posture": "Limited human evidence suggests possible small benefits for fatigue and selected cognitive measures; broad adaptogen, performance, or immune claims are not established."
+          "posture": "Small or context-specific fatigue and cognitive effects are possible, but pooled results are inconsistent and broad adaptogen or performance claims are not established."
         },
         {
           "slug": "probiotics",
@@ -865,7 +865,7 @@
           "slug": "l-arginine",
           "name": "L-arginine",
           "url": "/ingredients/l-arginine",
-          "posture": "Little scientific support for improving strength, exercise performance, or recovery in healthy active adults."
+          "posture": "Mixed human evidence for selected aerobic and anaerobic performance outcomes; possible benefits are small or context-dependent and do not support broad performance claims."
         },
         {
           "slug": "l-citrulline",
@@ -1041,7 +1041,7 @@
           "slug": "senna",
           "name": "Senna",
           "url": "/ingredients/senna",
-          "posture": "Established stimulant-laxative activity for short-term constipation; this does not support broad detox claims."
+          "posture": "Established stimulant-laxative activity with supportive constipation evidence; this does not support broad detox or weight-loss claims."
         }
       ]
     },
@@ -1076,7 +1076,7 @@
           "slug": "panax-ginseng",
           "name": "Panax ginseng (Asian ginseng)",
           "url": "/ingredients/panax-ginseng",
-          "posture": "Limited human evidence suggests possible small benefits for fatigue and selected cognitive measures; broad adaptogen, performance, or immune claims are not established."
+          "posture": "Small or context-specific fatigue and cognitive effects are possible, but pooled results are inconsistent and broad adaptogen or performance claims are not established."
         }
       ]
     },
@@ -1111,7 +1111,7 @@
           "slug": "coenzyme-q10",
           "name": "Coenzyme Q10 (CoQ10)",
           "url": "/ingredients/coenzyme-q10",
-          "posture": "Evidence is condition-specific and generally inconclusive for many promoted uses; broad energy, heart, or statin-muscle claims are not established."
+          "posture": "Condition-specific evidence is mixed; recent meta-analyses suggest possible benefits in heart failure and statin-associated muscle symptoms, but certainty varies and broad energy or prevention claims are not established."
         },
         {
           "slug": "omega-3",
@@ -1199,7 +1199,7 @@
           "slug": "coenzyme-q10",
           "name": "Coenzyme Q10 (CoQ10)",
           "url": "/ingredients/coenzyme-q10",
-          "posture": "Evidence is condition-specific and generally inconclusive for many promoted uses; broad energy, heart, or statin-muscle claims are not established."
+          "posture": "Condition-specific evidence is mixed; recent meta-analyses suggest possible benefits in heart failure and statin-associated muscle symptoms, but certainty varies and broad energy or prevention claims are not established."
         },
         {
           "slug": "magnesium",
