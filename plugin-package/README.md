@@ -1,4 +1,4 @@
-# Supplement Intelligence portable plugin package
+# Supplement Intelligence portable plugin package v1.1.0
 
 This folder is the portable Agent Plugins package for Supplement Intelligence.
 
@@ -13,7 +13,7 @@ This folder is the portable Agent Plugins package for Supplement Intelligence.
 
 https://mcp.supplement-intelligence.com/mcp
 
-The production deployment includes an automated MCP client smoke test that initializes the connection, lists the tools, and successfully calls `search_supplement_intelligence`.
+The production deployment includes an automated MCP client smoke test that initializes the connection, lists the tools, verifies synonym resolution, checks freshness metadata, and exercises ingredient and product calls.
 
 ## Before public submission
 
