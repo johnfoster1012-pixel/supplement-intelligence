@@ -1070,6 +1070,296 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/23440782/"
         }
       ]
+    },
+    "lemon-balm": {
+      "name": "Lemon balm (Melissa officinalis)",
+      "posture": "Promising but heterogeneous human evidence for anxiety and depressive symptoms; preparation differences and a small trial base limit broad mood or sleep claims.",
+      "summary": "A systematic review and meta-analysis of clinical trials reported improvements in anxiety and depressive symptom scores, but the authors emphasized high heterogeneity, few trials, and methodological differences. EMA has a herbal monograph for Melissa officinalis leaf in traditional-use areas including mild mental stress and sleep complaints; this is not equivalent to proof for every lemon-balm preparation.",
+      "studied_context": "Clinical studies use varied Melissa officinalis preparations, doses, durations, and populations. The review-level evidence does not establish interchangeability between leaf preparations, extracts made from other plant parts, or combination products.",
+      "safety": "The clinical-trial meta-analysis did not identify serious adverse effects, but the evidence base is small and heterogeneous. The reviewed sources do not establish long-term safety for all extracts or doses.",
+      "product_directness": "V-CONTROL lists 'lemon balm fruit extract' without dose or standardization. The reviewed EMA monograph centers on Melissa leaf and the clinical literature uses varied preparations, so direct applicability to the finished product is not established.",
+      "products": [
+        "v-control"
+      ],
+      "sources": [
+        {
+          "type": "PubMed systematic review/meta-analysis",
+          "title": "The effects of lemon balm (Melissa officinalis L.) on depression and anxiety in clinical trials: A systematic review and meta-analysis",
+          "pmid": "34449930",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34449930/"
+        },
+        {
+          "type": "European Medicines Agency",
+          "title": "Melissae folium - herbal medicinal product",
+          "url": "https://www.ema.europa.eu/en/medicines/herbal/melissae-folium"
+        }
+      ],
+      "review_evidence": [
+        {
+          "title": "The effects of lemon balm (Melissa officinalis L.) on depression and anxiety in clinical trials: A systematic review and meta-analysis",
+          "pmid": "34449930",
+          "study_type": "Systematic review and meta-analysis of randomized clinical trials",
+          "population": "People with acute or chronic anxiety or depressive symptoms across a small number of clinical trials",
+          "evidence_scope": "Anxiety and depressive symptom scores",
+          "finding": "Pooled analyses favored lemon balm for anxiety and depressive symptoms.",
+          "limitations": "High between-study heterogeneity, a small number of trials, and differences in preparations and methods limit confidence and generalizability.",
+          "directness": "Relevant human evidence",
+          "verified_at": "2026-10-02",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34449930/"
+        }
+      ],
+      "last_reviewed_at": "2026-10-02"
+    },
+    "spirulina": {
+      "name": "Spirulina (Arthrospira/Spirulina)",
+      "posture": "Some human evidence supports modest blood-pressure lowering in selected adults, but the trial base is limited and generic cardiometabolic claims remain uncertain.",
+      "summary": "A GRADE-assessed systematic review and meta-analysis of randomized trials reported modest reductions in systolic and diastolic blood pressure, particularly in several higher-risk subgroups. The authors still noted a low number of studies and participants and an unresolved dose-response relationship.",
+      "studied_context": "Randomized trials use different spirulina preparations, doses, populations, and intervention durations. Blood-pressure findings should not be generalized to unrelated outcomes or to products with undisclosed amounts.",
+      "safety": "LiverTox reports that controlled trials generally have not shown liver enzyme elevations or clinically apparent liver injury, but rare possible liver-injury reports exist. Commercial spirulina can also be contaminated with toxin-producing cyanobacteria, making product quality relevant.",
+      "product_directness": "V-CONTROL lists spirulina algae extract but does not disclose the amount, extract characterization, or contaminant testing on the tracked manufacturer page. Trial results therefore cannot be directly assigned to the product.",
+      "products": [
+        "v-control"
+      ],
+      "sources": [
+        {
+          "type": "PubMed GRADE-assessed systematic review/meta-analysis",
+          "title": "The Effect of Spirulina Supplementation on Blood Pressure in Adults: A GRADE-Assessed Systematic Review and Meta-Analysis of Randomized Clinical Trials",
+          "pmid": "39529406",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39529406/"
+        },
+        {
+          "type": "NCBI LiverTox",
+          "title": "Spirulina",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK548312/"
+        }
+      ],
+      "review_evidence": [
+        {
+          "title": "The Effect of Spirulina Supplementation on Blood Pressure in Adults: A GRADE-Assessed Systematic Review and Meta-Analysis of Randomized Clinical Trials",
+          "pmid": "39529406",
+          "study_type": "GRADE-assessed systematic review and meta-analysis of randomized controlled trials",
+          "population": "Adults in randomized trials of spirulina supplementation",
+          "evidence_scope": "Systolic and diastolic blood pressure",
+          "finding": "The pooled analysis reported modest reductions in systolic and diastolic blood pressure.",
+          "limitations": "The number of studies and participants was limited, heterogeneity was present, and dose-response/meta-regression did not establish a clear intervention threshold.",
+          "directness": "Relevant human evidence",
+          "verified_at": "2026-10-02",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39529406/"
+        }
+      ],
+      "last_reviewed_at": "2026-10-02"
+    },
+    "nopal": {
+      "name": "Nopal / prickly pear cactus (Opuntia ficus-indica)",
+      "posture": "Limited and heterogeneous human evidence for selected metabolic and body-composition outcomes; a clinically established weight-loss effect has not been shown.",
+      "summary": "A systematic review and meta-analysis of randomized trials found no significant effect on body weight, while some secondary body-composition, blood-pressure, and cholesterol outcomes favored Opuntia. Small controlled studies also report acute postprandial glucose effects, but preparations and doses vary substantially.",
+      "studied_context": "Studies use whole or steamed nopal, cladodes, fruit-skin/cladode extracts, or other Opuntia preparations. Food-scale doses and standardized extracts are not interchangeable.",
+      "safety": "The meta-analysis reported adverse events including gastric intolerance and flu-like symptoms. The reviewed evidence is too heterogeneous to establish a single safety profile for all concentrated extracts and doses.",
+      "product_directness": "V-CONTROL lists 'nopal leaf powder' without an amount. Reviewed studies use Opuntia foods, cladodes, or characterized extracts, so formulation and dose matching to V-CONTROL cannot be established.",
+      "products": [
+        "v-control"
+      ],
+      "sources": [
+        {
+          "type": "PubMed systematic review/meta-analysis",
+          "title": "The effect of cactus pear (Opuntia ficus-indica) on body weight and cardiovascular risk factors: a systematic review and meta-analysis of randomized clinical trials",
+          "pmid": "25837206",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/25837206/"
+        },
+        {
+          "type": "PubMed controlled clinical trial",
+          "title": "The effect of nopal (Opuntia ficus indica) on postprandial blood glucose, incretins, and antioxidant activity in Mexican patients with type 2 diabetes after consumption of two different composition breakfasts",
+          "pmid": "25132122",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/25132122/"
+        }
+      ],
+      "review_evidence": [
+        {
+          "title": "The effect of cactus pear (Opuntia ficus-indica) on body weight and cardiovascular risk factors: a systematic review and meta-analysis of randomized clinical trials",
+          "pmid": "25837206",
+          "study_type": "Systematic review and meta-analysis of randomized clinical trials",
+          "population": "Adults in seven eligible randomized clinical trials; five trials contributed to pooled analyses",
+          "evidence_scope": "Body weight, body composition, blood pressure, and lipid outcomes",
+          "finding": "The pooled analysis did not find a significant body-weight reduction, although some secondary outcomes favored Opuntia.",
+          "limitations": "Few trials, heterogeneous designs, inconsistent reporting quality, and substantial heterogeneity for body weight limit confidence and generalizability.",
+          "directness": "Relevant human evidence",
+          "verified_at": "2026-10-02",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/25837206/"
+        }
+      ],
+      "last_reviewed_at": "2026-10-02"
+    },
+    "hibiscus": {
+      "name": "Hibiscus (Hibiscus sabdariffa)",
+      "posture": "Supportive human evidence for modest blood-pressure reduction; lipid and glycemic effects are less consistent and depend on population, preparation, and outcome.",
+      "summary": "Systematic reviews and meta-analyses of randomized trials generally report reductions in systolic and diastolic blood pressure, especially in people with elevated baseline blood pressure. Lipid and glycemic findings are more variable, and long-term therapeutic-dose safety and optimal dosing remain incompletely defined.",
+      "studied_context": "Trials use Hibiscus sabdariffa beverages, teas, extracts, and varying doses for several weeks or longer. Effects are population- and preparation-dependent.",
+      "safety": "A recent umbrella review did not find an overall increase in adverse-event risk, but it emphasized that long-term and therapeutic-dose safety needs further study. Product preparation and dose remain important.",
+      "product_directness": "V-ITAREN lists hibiscus ('Jamaica grass') but does not disclose the plant part, preparation, standardization, or dose. Blood-pressure trial results therefore cannot be assigned directly to the finished product.",
+      "products": [
+        "v-itaren"
+      ],
+      "sources": [
+        {
+          "type": "PubMed umbrella review/meta-analysis",
+          "title": "Efficacy and safety of Hibiscus sabdariffa in cardiometabolic health: An overview of reviews and updated dose-response meta-analysis",
+          "pmid": "39870328",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39870328/"
+        },
+        {
+          "type": "PubMed systematic review/meta-analysis",
+          "title": "A systematic review and meta-analysis of the effects of Hibiscus sabdariffa on blood pressure and cardiometabolic markers",
+          "pmid": "34927694",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34927694/"
+        }
+      ],
+      "review_evidence": [
+        {
+          "title": "Efficacy and safety of Hibiscus sabdariffa in cardiometabolic health: An overview of reviews and updated dose-response meta-analysis",
+          "pmid": "39870328",
+          "study_type": "Umbrella review and updated dose-response meta-analysis of randomized controlled trials",
+          "population": "26 randomized controlled trials involving 1,797 participants",
+          "evidence_scope": "Blood pressure, lipids, glycemic control, anthropometrics, inflammation, oxidative stress, liver enzymes, and safety",
+          "finding": "The updated synthesis found the most credible benefit for blood-pressure lowering, with additional favorable changes in some lipid and glycemic markers.",
+          "limitations": "Certainty and credibility varied by outcome and subgroup; long-term and therapeutic-dose safety remain incompletely characterized.",
+          "directness": "Relevant human evidence",
+          "verified_at": "2026-10-02",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39870328/"
+        }
+      ],
+      "last_reviewed_at": "2026-10-02"
+    },
+    "moringa": {
+      "name": "Moringa (Moringa oleifera)",
+      "posture": "Human cardiometabolic evidence is inconsistent and very low certainty overall; broad glucose, lipid, weight, or blood-pressure claims are not established.",
+      "summary": "A 2025 GRADE-assessed meta-analysis of randomized trials found no significant effect on most cardiometabolic outcomes and rated certainty very low. A modest diastolic blood-pressure signal was not robust in sensitivity analysis. Small individual trials likewise show inconsistent, non-dose-dependent effects.",
+      "studied_context": "Trials use different Moringa oleifera leaf powders or preparations, doses, populations, and durations. Many studies are small and heterogeneous.",
+      "safety": "The small and heterogeneous randomized-trial evidence base does not provide strong long-term safety certainty for concentrated or high-dose preparations. Safety conclusions should remain preparation-specific.",
+      "product_directness": "V-ITAREN lists moringa leaf without a disclosed amount or preparation details. The current low-certainty human evidence cannot establish finished-product cardiometabolic efficacy.",
+      "products": [
+        "v-itaren"
+      ],
+      "sources": [
+        {
+          "type": "PubMed GRADE-assessed meta-analysis",
+          "title": "Effects of Moringa oleifera Lam. Supplementation on Cardiometabolic Outcomes: A Meta-Analysis of Randomized Controlled Trials with GRADE Assessment",
+          "pmid": "41305552",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41305552/"
+        },
+        {
+          "type": "PubMed randomized clinical trial",
+          "title": "Effects of Moringa oleifera leaves on the blood glucose, blood pressure, and lipid profile of type 2 diabetic subjects: A parallel group randomized clinical trial of efficacy",
+          "pmid": "37229639",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37229639/"
+        }
+      ],
+      "review_evidence": [
+        {
+          "title": "Effects of Moringa oleifera Lam. Supplementation on Cardiometabolic Outcomes: A Meta-Analysis of Randomized Controlled Trials with GRADE Assessment",
+          "pmid": "41305552",
+          "study_type": "Systematic review and meta-analysis of randomized controlled trials with GRADE assessment",
+          "population": "Nine randomized controlled trials; 341 participants in intervention groups and 308 controls",
+          "evidence_scope": "Anthropometrics, lipid profile, glycemic indices, and blood pressure",
+          "finding": "No significant effect was found for most outcomes; a modest diastolic blood-pressure reduction was observed but was not robust in sensitivity analysis.",
+          "limitations": "Risk of bias, substantial heterogeneity, indirectness, and methodological limitations reduced certainty to very low for all evaluated outcomes.",
+          "directness": "Relevant human evidence",
+          "verified_at": "2026-10-02",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41305552/"
+        }
+      ],
+      "last_reviewed_at": "2026-10-02"
+    },
+    "dandelion": {
+      "name": "Dandelion (Taraxacum officinale)",
+      "posture": "Traditional-use support exists for urinary and gastrointestinal indications, but direct human efficacy evidence is sparse and plant-part specific.",
+      "summary": "EMA maintains herbal monographs for dandelion root and other preparations. A small 17-person human pilot reported short-term diuretic signals after a fresh dandelion leaf extract, but this does not establish efficacy for dandelion root or for chronic use.",
+      "studied_context": "The cited human diuretic pilot used fresh leaf hydroethanolic extract over one day. V-ITAREN lists dandelion root, which is a different plant part and should not inherit the leaf-extract result.",
+      "safety": "EMA's dandelion-root monograph includes use restrictions and contraindications, including hypersensitivity to Asteraceae, and notes that adequate fluid intake is required for urinary-use preparations. Clinical evidence is too sparse to define safety for all concentrated extracts.",
+      "product_directness": "V-ITAREN lists dandelion root. The direct human diuretic pilot reviewed here studied leaf extract, not root, and V-ITAREN does not disclose dose or extraction details. Product-level efficacy is therefore unverified.",
+      "products": [
+        "v-itaren"
+      ],
+      "sources": [
+        {
+          "type": "European Medicines Agency",
+          "title": "Taraxaci officinalis radix - herbal medicinal product",
+          "url": "https://www.ema.europa.eu/en/medicines/herbal/taraxaci-officinalis-radix"
+        },
+        {
+          "type": "PubMed clinical pilot study",
+          "title": "The diuretic effect in human subjects of an extract of Taraxacum officinale folium over a single day",
+          "pmid": "19678785",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/19678785/"
+        }
+      ],
+      "last_reviewed_at": "2026-10-02"
+    },
+    "horsetail": {
+      "name": "Horsetail (Equisetum arvense)",
+      "posture": "Small human trials suggest diuretic and blood-pressure effects for standardized extracts, but the evidence base is limited and does not support broad or finished-product claims.",
+      "summary": "A randomized crossover trial in 36 healthy men found an acute diuretic effect with a standardized dried extract. A separate small randomized trial in stage-I hypertension reported blood-pressure reductions similar to hydrochlorothiazide over three months. These findings require replication and should not be generalized across unstandardized horsetail products.",
+      "studied_context": "The human trials used a standardized dry Equisetum arvense extract at 900 mg/day. One was a four-day crossover diuretic study in healthy men; the other was a three-month trial in 58 people with stage-I hypertension.",
+      "safety": "The small trials reported few minor adverse events and no major laboratory toxicity over the studied periods. LiverTox notes rare reports in which horsetail was implicated in herb-associated liver injury, but causal detail is limited.",
+      "product_directness": "V-ITAREN lists horsetail without dose or extract standardization. The 900 mg/day standardized-extract trial results cannot be assigned directly to this finished product.",
+      "products": [
+        "v-itaren"
+      ],
+      "sources": [
+        {
+          "type": "PubMed randomized double-blind clinical trial",
+          "title": "Randomized, Double-Blind Clinical Trial to Assess the Acute Diuretic Effect of Equisetum arvense (Field Horsetail) in Healthy Volunteers",
+          "pmid": "24723963",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/24723963/"
+        },
+        {
+          "type": "PubMed randomized clinical trial",
+          "title": "Antihypertensive effect of Equisetum arvense L.: a double-blind, randomized efficacy and safety clinical trial",
+          "pmid": "35168030",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35168030/"
+        },
+        {
+          "type": "European Medicines Agency",
+          "title": "Equiseti herba - herbal medicinal product",
+          "url": "https://www.ema.europa.eu/en/medicines/herbal/equiseti-herba"
+        },
+        {
+          "type": "NCBI LiverTox",
+          "title": "Horsetail",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK583202/"
+        }
+      ],
+      "last_reviewed_at": "2026-10-02"
+    },
+    "uva-ursi": {
+      "name": "Uva ursi / bearberry (Arctostaphylos uva-ursi)",
+      "posture": "Human trials do not establish uva ursi as an equivalent treatment for uncomplicated UTI; symptom benefit was absent or inferior to antibiotic therapy in reviewed trials.",
+      "summary": "In a 382-woman factorial randomized trial, uva ursi did not improve urinary-frequency symptoms or significantly reduce antibiotic use versus placebo. In a later 398-woman trial, initial uva-ursi treatment reduced antibiotic courses but failed symptom non-inferiority and had more pyelonephritis events than fosfomycin.",
+      "studied_context": "The clinical trials involved adult women with suspected uncomplicated urinary tract infection and used defined uva-ursi/arbutin preparations for short treatment periods. These results concern symptomatic UTI treatment strategies, not general urinary wellness.",
+      "safety": "The 398-participant trial reported greater symptom burden and eight pyelonephritis cases in the uva-ursi group versus two with fosfomycin. Uva ursi should not be presented as a proven substitute for standard UTI evaluation or treatment.",
+      "product_directness": "V-ITAREN lists uva ursi leaf but does not disclose the arbutin content or dose used in the reviewed trials. The product therefore cannot be assumed to reproduce the trial exposure or outcome.",
+      "products": [
+        "v-itaren"
+      ],
+      "sources": [
+        {
+          "type": "PubMed randomized controlled trial",
+          "title": "Uva-ursi extract and ibuprofen as alternative treatments for uncomplicated urinary tract infection in women (ATAFUTI): a factorial randomized trial",
+          "pmid": "30685500",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30685500/"
+        },
+        {
+          "type": "PubMed randomized controlled trial",
+          "title": "Herbal treatment with uva ursi extract versus fosfomycin in women with uncomplicated urinary tract infection in primary care: a randomized controlled trial",
+          "pmid": "34111592",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34111592/"
+        },
+        {
+          "type": "European Medicines Agency",
+          "title": "Uvae ursi folium - herbal medicinal product",
+          "url": "https://www.ema.europa.eu/en/medicines/herbal/uvae-ursi-folium"
+        }
+      ],
+      "last_reviewed_at": "2026-10-02"
     }
   }
 }
