@@ -2,8 +2,8 @@
   "openapi": "3.1.0",
   "info": {
     "title": "Supplement Intelligence API",
-    "version": "1.0.0",
-    "description": "Read-only verification-first product formulation and ingredient evidence API. Ingredient-level evidence must not be interpreted as finished-product efficacy."
+    "version": "1.2.0",
+    "description": "Read-only verification-first product formulation and ingredient evidence API. Ingredient detail can include structured review-level human evidence with findings and limitations. Ingredient-level evidence must not be interpreted as finished-product efficacy."
   },
   "servers": [
     {
@@ -110,10 +110,132 @@
         ],
         "responses": {
           "200": {
-            "description": "Ingredient evidence record"
+            "description": "Ingredient evidence record",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IngredientEvidence"
+                }
+              }
+            }
           },
           "404": {
             "description": "Ingredient not found"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ReviewEvidence": {
+        "type": "object",
+        "required": [
+          "title",
+          "pmid",
+          "study_type",
+          "population",
+          "evidence_scope",
+          "finding",
+          "limitations",
+          "directness",
+          "verified_at",
+          "url"
+        ],
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "pmid": {
+            "type": "string",
+            "pattern": "^[0-9]+$"
+          },
+          "study_type": {
+            "type": "string"
+          },
+          "population": {
+            "type": "string"
+          },
+          "evidence_scope": {
+            "type": "string"
+          },
+          "finding": {
+            "type": "string"
+          },
+          "limitations": {
+            "type": "string"
+          },
+          "directness": {
+            "type": "string",
+            "enum": [
+              "Direct human evidence",
+              "Relevant human evidence",
+              "Preliminary human evidence",
+              "Mechanistic evidence"
+            ]
+          },
+          "verified_at": {
+            "type": "string",
+            "format": "date"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          }
+        }
+      },
+      "IngredientEvidence": {
+        "type": "object",
+        "properties": {
+          "slug": {
+            "type": "string"
+          },
+          "canonical_url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "name": {
+            "type": "string"
+          },
+          "posture": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string"
+          },
+          "studied_context": {
+            "type": "string"
+          },
+          "safety": {
+            "type": "string"
+          },
+          "product_directness": {
+            "type": "string"
+          },
+          "products": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "sources": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "review_evidence": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ReviewEvidence"
+            }
+          },
+          "last_reviewed_at": {
+            "type": "string",
+            "format": "date"
+          },
+          "interpretation": {
+            "type": "string"
           }
         }
       }
