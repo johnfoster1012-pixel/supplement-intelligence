@@ -37,6 +37,10 @@ jobs:
           interface = openai["interface"]
           assert len(interface["displayName"]) <= 30
           assert len(interface["shortDescription"]) <= 30
+          assert interface.get("composerIcon") == "./assets/icon.svg"
+          assert interface.get("logo") == "./assets/logo.svg"
+          assert (root / "assets" / "icon.svg").exists()
+          assert (root / "assets" / "logo.svg").exists()
           for key in ["websiteURL", "supportURL", "privacyPolicyURL", "termsOfServiceURL"]:
               value = interface.get(key)
               assert value and value.startswith("https://"), f"missing/invalid {key}"
@@ -76,7 +80,9 @@ jobs:
             mcp.json \
             skills \
             EVALS.md \
-            README.md
+            README.md \
+            REVIEW_NOTES.md \
+            assets
 
       - name: Upload plugin ZIP artifact
         uses: actions/upload-artifact@v4
