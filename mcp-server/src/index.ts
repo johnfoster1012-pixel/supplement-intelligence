@@ -5,6 +5,10 @@ const DATA_BASE = "https://raw.githubusercontent.com/johnfoster1012-pixel/supple
 const SERVER_NAME = "supplement-intelligence";
 const SERVER_VERSION = "1.0.0";
 
+interface Env {
+  OPENAI_APPS_CHALLENGE?: string;
+}
+
 const readOnlyAnnotations = {
   readOnlyHint: true,
   destructiveHint: false,
@@ -382,8 +386,18 @@ function createServer(): McpServer {
 const mcpHandler = createMcpHandler(() => createServer());
 
 export default {
-  async fetch(request: Request): Promise<Response> {
+  async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
+
+    if (url.pathname === "/.well-known/openai-apps-challenge") {
+      if (!env.OPENAI_APPS_CHALLENGE) {
+        return new Response("Not configured", { status: 404 });
+      }
+      return new Response(env.OPENAI_APPS_CHALLENGE, {
+        status: 200,
+        headers: { "Content-Type": "text/plain; charset=utf-8" },
+      });
+    }
 
     if (url.pathname === "/health") {
       return Response.json({
