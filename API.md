@@ -60,3 +60,19 @@ See `plugin/TOOL_DESIGN.md` for the proposed MCP tool surface.
 ## Deployment status
 
 Deployment health checks verify the API index, search, ingredient, product, and OpenAPI endpoints after each relevant production deploy.
+
+
+## Structured review-level evidence
+
+Ingredient-detail responses may include a `review_evidence` array. Each entry represents a verified higher-level human evidence source and includes:
+
+- PMID and source URL
+- study/review type
+- population or review scope
+- evidence scope/outcome
+- main finding
+- important limitations
+- evidence directness
+- verification date
+
+A pooled or statistically significant finding must not be interpreted as a finished-product efficacy claim. Review-level summaries also must not be used to infer an exact dose, formulation, duration, or comparator unless that detail is explicitly supplied.
