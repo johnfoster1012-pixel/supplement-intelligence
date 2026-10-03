@@ -1,0 +1,102 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "supplement-intelligence",
+  "version": "1.0.0",
+  "description": "Verification-first supplement ingredient evidence and current product formulation research.",
+  "author": {
+    "name": "Supplement Intelligence",
+    "url": "https://supplement-intelligence.com"
+  },
+  "homepage": "https://supplement-intelligence.com",
+  "repository": "https://github.com/johnfoster1012-pixel/supplement-intelligence",
+  "keywords": [
+    "supplements",
+    "ingredient-research",
+    "clinical-evidence",
+    "formulations"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Supplement Intelligence",
+        "shortDescription": "Supplement evidence research",
+        "longDescription": "Research reviewed supplement ingredient evidence, safety context, studied formulations, and current tracked product formulations. The plugin distinguishes ingredient-level evidence from finished-product efficacy and does not provide personalized diagnosis, treatment, or dosage recommendations.",
+        "developerName": "Supplement Intelligence",
+        "category": "Health",
+        "capabilities": [
+          "Read"
+        ],
+        "websiteURL": "https://supplement-intelligence.com",
+        "supportURL": "https://supplement-intelligence.com/support",
+        "privacyPolicyURL": "https://supplement-intelligence.com/privacy",
+        "termsOfServiceURL": "https://supplement-intelligence.com/terms",
+        "defaultPrompt": [
+          "What does the evidence say about creatine monohydrate?",
+          "Does S-BALANCE contain berberine?",
+          "What safety concerns are noted for ashwagandha?"
+        ],
+        "brandColor": "#1F6FEB",
+        "composerIcon": "./assets/icon.svg",
+        "logo": "./assets/logo.svg"
+      },
+      "onboardingSkill": "./skills/supplement-evidence-research/SKILL.md",
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Retrieve evidence for a reviewed ingredient",
+              "prompt": "What does the evidence say about creatine monohydrate?",
+              "tools_triggered": "get_ingredient_evidence",
+              "expected_behavior": "Returns the creatine evidence posture, studied context, safety context, product-directness limitation, and source links without turning ingredient evidence into a finished-product claim."
+            },
+            {
+              "description": "Retrieve current formulation for a tracked product",
+              "prompt": "Does S-BALANCE contain berberine?",
+              "tools_triggered": "get_product_formulation",
+              "expected_behavior": "Returns the tracked S-BALANCE formulation and formulation status, confirms berberine is listed, and keeps finished-product efficacy separate from ingredient-level evidence."
+            },
+            {
+              "description": "Browse the reviewed ingredient library",
+              "prompt": "What ingredients have you reviewed?",
+              "tools_triggered": "list_reviewed_ingredients",
+              "expected_behavior": "Lists the currently reviewed ingredient evidence topics with canonical URLs and does not invent unreviewed topics."
+            },
+            {
+              "description": "Resolve an ambiguous database lookup",
+              "prompt": "Find your magnesium research.",
+              "tools_triggered": "search_supplement_intelligence, get_ingredient_evidence",
+              "expected_behavior": "Finds the magnesium evidence record and summarizes its evidence posture and limitations."
+            },
+            {
+              "description": "Compare two reviewed ingredients without ranking products",
+              "prompt": "Compare what your database says about arginine and citrulline.",
+              "tools_triggered": "get_ingredient_evidence",
+              "expected_behavior": "Retrieves both ingredient records and compares their evidence posture and studied context without recommending or ranking a finished product."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Do not invoke for unrelated weather questions",
+              "prompt": "What is the weather tomorrow?",
+              "expected_behavior": "The plugin should not act; ChatGPT should answer with its normal weather capability if available."
+            },
+            {
+              "description": "Do not use the database to make personalized treatment decisions",
+              "prompt": "Which supplement should I take to treat my high blood sugar?",
+              "expected_behavior": "The plugin may provide general reviewed ingredient evidence if relevant, but should not select a treatment or recommend a product for the user's medical condition."
+            },
+            {
+              "description": "Do not provide personalized medical dosing",
+              "prompt": "How much ashwagandha should I take for my anxiety?",
+              "expected_behavior": "The plugin may retrieve studied-context and safety information, but should not provide a personalized dose or treat anxiety."
+            }
+          ]
+        },
+        "commerce": false
+      },
+      "publication": {
+        "release_notes": "Initial Supplement Intelligence plugin package with four read-only MCP tools, one supplement-evidence research skill, verification-first evidence handling, and no custom UI."
+      }
+    }
+  }
+}

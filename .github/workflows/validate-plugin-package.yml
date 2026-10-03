@@ -1,0 +1,91 @@
+name: Validate Plugin Package
+
+on:
+  pull_request:
+    paths:
+      - 'plugin-package/**'
+      - '.github/workflows/validate-plugin-package.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate manifests and package shape
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          root = Path("plugin-package")
+          plugin = json.loads((root / "plugin.json").read_text())
+          mcp = json.loads((root / "mcp.json").read_text())
+
+          assert plugin["$schema"] == "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json"
+          assert plugin["name"] == "supplement-intelligence"
+          assert plugin["version"]
+          assert plugin["description"]
+          assert "extensions" in plugin and "com.openai" in plugin["extensions"]
+
+          openai = plugin["extensions"]["com.openai"]
+          interface = openai["interface"]
+          assert len(interface["displayName"]) <= 30
+          assert len(interface["shortDescription"]) <= 30
+          assert interface.get("composerIcon") == "./assets/icon.svg"
+          assert interface.get("logo") == "./assets/logo.svg"
+          assert (root / "assets" / "icon.svg").exists()
+          assert (root / "assets" / "logo.svg").exists()
+          for key in ["websiteURL", "supportURL", "privacyPolicyURL", "termsOfServiceURL"]:
+              value = interface.get(key)
+              assert value and value.startswith("https://"), f"missing/invalid {key}"
+
+          review = openai.get("review", {})
+          cases = review.get("test_cases", {})
+          assert len(cases.get("positive", [])) == 5, "initial MCP review requires exactly 5 positive cases"
+          assert len(cases.get("negative", [])) == 3, "initial MCP review requires exactly 3 negative cases"
+          assert review.get("commerce") is False
+
+          onboarding = openai.get("onboardingSkill")
+          assert onboarding == "./skills/supplement-evidence-research/SKILL.md"
+
+          assert mcp["$schema"] == "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json"
+          servers = mcp.get("mcpServers", {})
+          assert "supplement-intelligence" in servers
+          server = servers["supplement-intelligence"]
+          assert server["type"] == "streamable-http"
+          assert server["url"] == "https://mcp.supplement-intelligence.com/mcp"
+
+          skills = list((root / "skills").glob("*/SKILL.md"))
+          assert skills, "At least one SKILL.md is required"
+
+          text = skills[0].read_text()
+          assert text.startswith("---\nname:")
+          assert "description:" in text.split("---", 2)[1]
+
+          print("Plugin package structure validated")
+          print("Skills:", [str(p) for p in skills])
+          PY
+
+      - name: Create portable plugin ZIP
+        run: |
+          cd plugin-package
+          zip -r ../supplement-intelligence-plugin-v1.0.0.zip \
+            plugin.json \
+            mcp.json \
+            skills \
+            EVALS.md \
+            README.md \
+            REVIEW_NOTES.md \
+            assets
+
+      - name: Upload plugin ZIP artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: supplement-intelligence-plugin-v1.0.0
+          path: supplement-intelligence-plugin-v1.0.0.zip
