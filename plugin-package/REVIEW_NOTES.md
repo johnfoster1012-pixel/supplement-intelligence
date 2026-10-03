@@ -38,3 +38,6 @@ The MCP Worker bundles generated snapshots of the root `products-data.json` and 
 
 ## Operational telemetry
 V1.1 logs only tool name, success/error status, latency, and data version. Query text, ingredient/product input, medical details, and returned content are not logged by the application telemetry wrapper.
+
+## V1.2 review evidence
+Selected ingredient records include a structured `review_evidence` array derived from verified systematic reviews, meta-analyses, umbrella reviews, or comparable higher-level human evidence. Each record includes the finding and limitations together. These records remain ingredient-level evidence and are never treated as proof of a tracked finished product.
