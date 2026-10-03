@@ -12,7 +12,7 @@ const IS_PREVIEW = CONTENT_BRANCH_NAME !== 'main';
 const GITHUB_RAW_BASE = (typeof CONTENT_BASE !== 'undefined' && CONTENT_BASE)
   ? CONTENT_BASE
   : `https://raw.githubusercontent.com/johnfoster1012-pixel/supplement-intelligence/${CONTENT_BRANCH_NAME}/`;
-const VERSION = 'Supplement Intelligence v11.2';
+const VERSION = 'Supplement Intelligence v11.3';
 
 const VALID_INGREDIENT_SLUGS = new Set([
   'alpha-lipoic-acid',
@@ -40,7 +40,15 @@ const VALID_INGREDIENT_SLUGS = new Set([
   'valerian',
   'vitamin-c',
   'vitamin-d',
-  'zinc'
+  'zinc',
+  'dandelion',
+  'hibiscus',
+  'horsetail',
+  'lemon-balm',
+  'moringa',
+  'nopal',
+  'spirulina',
+  'uva-ursi'
 ]);
 
 const VALID_PRODUCT_SLUGS = new Set([
@@ -202,7 +210,7 @@ async function handleHome() {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Supplement Intelligence | Evidence-Based Ingredient & Supplement Research</title>
-<meta name="description" content="Verification-first supplement research with current product formulations, 26 reviewed ingredient evidence pages, safety context, and primary-source citations.">
+<meta name="description" content="Verification-first supplement research with current product formulations, 34 reviewed ingredient evidence pages, safety context, and primary-source citations.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://supplement-intelligence.com/">
 <meta property="og:title" content="Supplement Intelligence | Evidence-Based Ingredient & Supplement Research">
@@ -224,11 +232,11 @@ header{display:flex;gap:18px;flex-wrap:wrap;align-items:center;margin-bottom:38p
 <header><strong>Supplement Intelligence</strong><a href="/ingredients">Ingredient evidence</a><a href="/products">Products</a><a href="/references">Research status</a><a href="/about">About</a></header>
 <section class="hero">
 <h1>Supplement research built around verification, not marketing claims</h1>
-<p>Supplement Intelligence separates current product-formulation facts from ingredient-level human evidence and from finished-product efficacy. The database currently tracks 31 products and 26 reviewed ingredient evidence pages.</p>
+<p>Supplement Intelligence separates current product-formulation facts from ingredient-level human evidence and from finished-product efficacy. The database currently tracks 31 products and 34 reviewed ingredient evidence pages.</p>
 <p><a href="/ingredients"><strong>Browse ingredient evidence →</strong></a> &nbsp; <a href="/products">Browse product formulations →</a></p>
 </section>
 <section class="grid">
-<div class="card"><h2>Reviewed ingredient evidence</h2><p>Evidence summaries cover studied context, safety, source quality, and whether current products actually match the studied form or dose.</p><p><a href="/ingredients">View all 26 ingredient pages</a></p></div>
+<div class="card"><h2>Reviewed ingredient evidence</h2><p>Evidence summaries cover studied context, safety, source quality, and whether current products actually match the studied form or dose.</p><p><a href="/ingredients">View all 34 ingredient pages</a></p></div>
 <div class="card"><h2>Current product formulations</h2><p>Manufacturer pages are used for formulation facts only. Finished-product efficacy remains Under Review unless explicitly adjudicated.</p><p><a href="/products">View 31 product records</a></p></div>
 <div class="card"><h2>Research methodology</h2><p>Historical citation sets that did not meet the current standard were withdrawn. The current method prioritizes primary research and authoritative government sources.</p><p><a href="/references">Read research status</a></p></div>
 </section>
