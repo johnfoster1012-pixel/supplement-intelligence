@@ -84,7 +84,7 @@ jobs:
             return 1
           }
 
-          for url in             "/"             "/products"             "/ingredients"             "/ingredients/creatine-monohydrate"             "/ingredients/berberine"             "/about"             "/references"             "/llms.txt"             "/robots.txt"             "/sitemap.xml"             "/api/v1"             "/api/v1/search?q=creatine"             "/api/v1/ingredients/creatine-monohydrate"             "/api/v1/products/performance-plus"             "/openapi.json"; do
+          for url in             "/"             "/products"             "/ingredients"             "/ingredients/creatine-monohydrate"             "/ingredients/berberine"             "/about"             "/references"             "/privacy"             "/terms"             "/support"             "/llms.txt"             "/robots.txt"             "/sitemap.xml"             "/api/v1"             "/api/v1/search?q=creatine"             "/api/v1/ingredients/creatine-monohydrate"             "/api/v1/products/performance-plus"             "/openapi.json"; do
             check_url "$url"
           done
 
