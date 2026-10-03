@@ -11,9 +11,10 @@ The Worker is stateless and read-only. V1.1 bundles exact snapshots of the verif
 
 ## V1.1 data architecture
 
-- Bundled snapshots live under `mcp-server/data/`.
-- PR validation compares those snapshots byte-for-byte with the repository root source files.
-- If either root data file changes without refreshing the bundled snapshot, CI fails.
+- `products-data.json` and `ingredient-evidence.json` at the repository root remain the source of truth.
+- `npm run sync-data` generates temporary deployment snapshots under `mcp-server/data/`.
+- Type-check, development, and deployment scripts refresh those snapshots automatically before use.
+- Generated snapshots are gitignored, so there is no second maintained copy to drift out of sync.
 - Tool responses expose `data_version`; ingredient responses add `last_reviewed_at` and `source_count`; product responses add `catalog_checked_at` and `formulation_checked_at`.
 - Application telemetry logs only tool name, success/error, latency, and data version. Query content is not logged by the telemetry wrapper.
 
@@ -47,6 +48,9 @@ cd mcp-server
 npm install
 npm run typecheck
 npx wrangler deploy --dry-run
+
+# Production deploy (also refreshes bundled data)
+npm run deploy
 ```
 
 For protocol inspection, use MCP Inspector against the deployed or local `/mcp` endpoint.
