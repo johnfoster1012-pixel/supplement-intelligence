@@ -1,9 +1,16 @@
 import { createMcpHandler, McpServer } from "@modelcontextprotocol/server";
 import * as z from "zod/v4";
+import productsSnapshot from "../data/products-data.json";
+import ingredientSnapshot from "../data/ingredient-evidence.json";
 
-const DATA_BASE = "https://raw.githubusercontent.com/johnfoster1012-pixel/supplement-intelligence/main/";
 const SERVER_NAME = "supplement-intelligence";
-const SERVER_VERSION = "1.0.0";
+const SERVER_VERSION = "1.1.0";
+const DATA_SOURCE = "bundled-repository-snapshot";
+const PRODUCTS_DOC = productsSnapshot as unknown as JsonObject;
+const INGREDIENT_DOC = ingredientSnapshot as unknown as JsonObject;
+const PRODUCT_DATA_VERSION = String(PRODUCTS_DOC.generatedAt ?? PRODUCTS_DOC.catalogCheckedAt ?? "unknown");
+const INGREDIENT_DATA_VERSION = String(INGREDIENT_DOC.generated_at ?? "unknown");
+const DATA_VERSION = `products:${PRODUCT_DATA_VERSION};ingredients:${INGREDIENT_DATA_VERSION}`;
 
 interface Env {
   OPENAI_APPS_CHALLENGE?: string;
@@ -12,45 +19,79 @@ interface Env {
 const readOnlyAnnotations = {
   readOnlyHint: true,
   destructiveHint: false,
-  openWorldHint: true,
+  openWorldHint: false,
   idempotentHint: true,
 } as const;
 
 type JsonObject = Record<string, unknown>;
 
-async function fetchJsonFile(path: string): Promise<JsonObject> {
-  const response = await fetch(DATA_BASE + path, {
-    headers: {
-      "Accept": "application/json",
-      "User-Agent": "Supplement-Intelligence-MCP/1.0",
-    },
-  });
+const SEARCH_ALIASES: Record<string, string[]> = {
+  "fish oil": ["omega 3", "omega-3", "long chain omega 3", "epa dha"],
+  "omega 3": ["fish oil", "omega-3", "long chain omega 3", "epa dha"],
+  "omega-3": ["fish oil", "omega 3", "long chain omega 3", "epa dha"],
+  "d3": ["vitamin d", "vitamin d3"],
+  "vitamin d3": ["vitamin d", "d3"],
+  "coq10": ["coenzyme q10", "co q10"],
+  "coenzyme q10": ["coq10", "co q10"],
+  "ala": ["alpha lipoic acid", "alpha-lipoic acid"],
+  "alpha lipoic acid": ["ala", "alpha-lipoic acid"],
+  "turmeric": ["curcumin"],
+  "curcumin": ["turmeric"],
+  "msm": ["methylsulfonylmethane"],
+  "methylsulfonylmethane": ["msm"],
+  "citrulline malate": ["citrulline", "l citrulline"],
+  "l citrulline": ["citrulline", "citrulline malate"],
+  "l arginine": ["arginine"],
+  "arginine": ["l arginine"],
+};
 
-  if (!response.ok) {
-    throw new Error(`Supplement Intelligence source file returned HTTP ${response.status}: ${path}`);
-  }
-
-  const text = await response.text();
-  let payload: unknown;
-  try {
-    payload = JSON.parse(text);
-  } catch {
-    throw new Error(`Supplement Intelligence source file was not valid JSON: ${path}`);
-  }
-
-  if (!payload || typeof payload !== "object" || Array.isArray(payload)) {
-    throw new Error(`Supplement Intelligence source file had an unexpected shape: ${path}`);
-  }
-
-  return payload as JsonObject;
+function normalizeSearchText(value: unknown): string {
+  return String(value ?? "")
+    .toLowerCase()
+    .replace(/[+/_-]+/g, " ")
+    .replace(/[^a-z0-9\s]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
-async function getProductsDocument(): Promise<JsonObject> {
-  return fetchJsonFile("products-data.json");
+function searchTerms(query: string): string[] {
+  const normalized = normalizeSearchText(query);
+  const terms = new Set<string>([normalized]);
+  for (const [key, aliases] of Object.entries(SEARCH_ALIASES)) {
+    if (normalized === key || normalized.includes(key)) {
+      terms.add(key);
+      aliases.forEach((alias) => terms.add(normalizeSearchText(alias)));
+    }
+  }
+  return [...terms].filter(Boolean);
 }
 
-async function getIngredientDocument(): Promise<JsonObject> {
-  return fetchJsonFile("ingredient-evidence.json");
+function matchesSearch(values: unknown[], terms: string[]): boolean {
+  const haystack = normalizeSearchText(values.map((v) => String(v ?? "")).join(" "));
+  return terms.some((term) => haystack.includes(term));
+}
+
+function getProductsDocument(): JsonObject {
+  return PRODUCTS_DOC;
+}
+
+function getIngredientDocument(): JsonObject {
+  return INGREDIENT_DOC;
+}
+
+function extractIsoDate(value: unknown): string | null {
+  const match = String(value ?? "").match(/\b(20\d{2}-\d{2}-\d{2})\b/);
+  return match ? match[1] : null;
+}
+
+function logToolEvent(tool: string, status: "success" | "error", startedAt: number): void {
+  console.log(JSON.stringify({
+    event: "mcp_tool_call",
+    tool,
+    status,
+    duration_ms: Date.now() - startedAt,
+    data_version: DATA_VERSION,
+  }));
 }
 
 function asToolError(error: unknown) {
