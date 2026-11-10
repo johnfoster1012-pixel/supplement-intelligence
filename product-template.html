@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{PRODUCT_NAME}} Ingredients & Evidence Status | Supplement Intelligence</title>
   <meta name="description" content="{{PRODUCT_TLDR_SHORT}}">
-    <link rel="canonical" href="https://supplement-intelligence.com/products/{{PRODUCT_SLUG}}">
+  <link rel="canonical" href="https://supplement-intelligence.com/products/{{PRODUCT_SLUG}}">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   
   <!-- Open Graph -->
   <meta property="og:title" content="{{PRODUCT_NAME}} Ingredients & Evidence Status | Supplement Intelligence">
@@ -114,13 +115,17 @@
       align-items: start;
     }
     
+    /* On narrow screens the product content comes first and the summary
+       sidebar follows it; the menu wraps under the logo instead of hiding. */
     @media (max-width: 900px) {
-      .container { grid-template-columns: 1fr; }
-      .sidebar { order: -1; }
+      .container { grid-template-columns: 1fr; gap: 0; }
+      .sidebar { padding-top: 0; }
     }
     
-    @media (max-width: 600px) {
-      .site-header nav { display: none; }
+    @media (max-width: 700px) {
+      .site-header .inner { flex-wrap: wrap; gap: 4px 24px; }
+      .site-header nav { display: flex; flex-wrap: wrap; gap: 0 22px; }
+      .site-header nav a { margin-left: 0; padding: 8px 0; }
     }
     
     /* Main Content */
@@ -451,6 +456,8 @@
       transform: translateY(-2px);
     }
     
+    a.related-card { display: block; }
+    
     .related-card h4 {
       font-size: 0.95rem;
       color: var(--green-dark);
@@ -600,6 +607,17 @@
     "url": "https://supplement-intelligence.com/products/{{PRODUCT_SLUG}}"
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://supplement-intelligence.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://supplement-intelligence.com/products" },
+      { "@type": "ListItem", "position": 3, "name": "{{PRODUCT_NAME}}", "item": "https://supplement-intelligence.com/products/{{PRODUCT_SLUG}}" }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -610,6 +628,7 @@
       <a href="https://supplement-intelligence.com">Home</a>
       <a href="https://supplement-intelligence.com/ingredients">Ingredient Evidence</a>
       <a href="https://supplement-intelligence.com/products">Products</a>
+      <a href="https://supplement-intelligence.com/references">Research Status</a>
       <a href="https://supplement-intelligence.com/about">About</a>
     </nav>
   </div>
@@ -668,10 +687,12 @@
       {{CITATIONS_LIST}}
     </ul>
     
+    <!--IF_FAQS-->
     <h2 id="faqs">Frequently Asked Questions</h2>
     <div class="faqs-container">
       {{FAQS_LIST}}
     </div>
+    <!--/IF_FAQS-->
     
     <div class="cta-box">
       <h2>Manufacturer product information</h2>
@@ -680,10 +701,12 @@
       <p class="cta-disclaimer">Supplement Intelligence is operated in partnership with Vital Health Global and earns referral credit on purchases.</p>
     </div>
     
-    <h2 id="related">Related Products</h2>
+    <!--IF_RELATED-->
+    <h2 id="related">Products With Shared Ingredients</h2>
     <div class="related-grid">
       {{RELATED_PRODUCTS}}
     </div>
+    <!--/IF_RELATED-->
     
     <div class="disclaimer">
       <strong>⚠️ Medical Disclaimer</strong>
@@ -720,8 +743,8 @@
         <li><a href="#research">Research Evidence</a></li>
         <li><a href="#ingredient-evidence">Ingredient Evidence</a></li>
         <li><a href="#citations">PubMed Citations</a></li>
-        <li><a href="#faqs">FAQs</a></li>
-        <li><a href="#related">Related Products</a></li>
+        <!--IF_FAQS--><li><a href="#faqs">FAQs</a></li><!--/IF_FAQS-->
+        <!--IF_RELATED--><li><a href="#related">Shared Ingredients</a></li><!--/IF_RELATED-->
       </ol>
     </div>
 
