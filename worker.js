@@ -7,17 +7,22 @@
  */
 const CONTENT_BRANCH_NAME = (typeof CONTENT_BRANCH !== 'undefined' && CONTENT_BRANCH) ? CONTENT_BRANCH : 'main';
 const IS_PREVIEW = CONTENT_BRANCH_NAME !== 'main';
+const VERSION = 'Supplement Intelligence v11.6';
+const SITE_ORIGIN = 'https://supplement-intelligence.com';
+// CONTENT_REV is the commit SHA the deploy workflow passes in (--var). Content is
+// read from that exact commit, so a deploy can never pick up an older copy of a
+// file from GitHub's or Cloudflare's caches. Without it (manual deploys) content
+// is read from the branch tip.
+const CONTENT_REVISION = (typeof CONTENT_REV !== 'undefined' && CONTENT_REV) ? CONTENT_REV : '';
 // CONTENT_BASE (dev-only var) lets wrangler dev serve content from a local file server
-// before the branch is pushed. Production default: GitHub raw on main.
+// before the branch is pushed.
 const GITHUB_RAW_BASE = (typeof CONTENT_BASE !== 'undefined' && CONTENT_BASE)
   ? CONTENT_BASE
-  : `https://raw.githubusercontent.com/johnfoster1012-pixel/supplement-intelligence/${CONTENT_BRANCH_NAME}/`;
-const VERSION = 'Supplement Intelligence v11.5';
-const SITE_ORIGIN = 'https://supplement-intelligence.com';
-// Give every new Worker isolate a distinct upstream-content namespace. This
-// prevents Cloudflare's subrequest cache from serving a previous deployment's
-// branch-tip JSON/HTML after GitHub content changes.
-const CONTENT_CACHE_NAMESPACE = Date.now().toString(36);
+  : `https://raw.githubusercontent.com/johnfoster1012-pixel/supplement-intelligence/${CONTENT_REVISION || CONTENT_BRANCH_NAME}/`;
+// Cache key for upstream content. It must be a deploy-time constant: Date.now()
+// is 0 while a Worker's global scope runs, so a timestamp here never changed and
+// Cloudflare kept serving the previous deployment's files for up to an hour.
+const CONTENT_CACHE_NAMESPACE = CONTENT_REVISION || VERSION.replace(/[^a-z0-9]+/gi, '-').toLowerCase();
 
 function contentUrl(path) {
   const separator = path.includes('?') ? '&' : '?';
