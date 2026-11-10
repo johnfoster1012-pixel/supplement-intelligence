@@ -7,7 +7,7 @@
  */
 const CONTENT_BRANCH_NAME = (typeof CONTENT_BRANCH !== 'undefined' && CONTENT_BRANCH) ? CONTENT_BRANCH : 'main';
 const IS_PREVIEW = CONTENT_BRANCH_NAME !== 'main';
-const VERSION = 'Supplement Intelligence v11.6';
+const VERSION = 'Supplement Intelligence v11.7';
 const SITE_ORIGIN = 'https://supplement-intelligence.com';
 // CONTENT_REV is the commit SHA the deploy workflow passes in (--var). Content is
 // read from that exact commit, so a deploy can never pick up an older copy of a
@@ -103,6 +103,12 @@ const INGREDIENT_REDIRECTS = new Map([
   ['bacopa-monnieri', '/ingredients']
 ]);
 
+// Retired /pages/* articles that still earn search impressions: 301 to the
+// closest current page instead of 410, so their rankings carry over.
+const LEGACY_PAGE_REDIRECTS = new Map([
+  ['v-daily-all-in-one-nutrition-adults', '/products/v-daily'],
+]);
+
 // Retired study-database pages (fabricated topics).
 const DATABASE_REDIRECTS = new Map([
   ['berberine-studies', '/ingredients/berberine'],
@@ -179,6 +185,8 @@ async function route(request, url, path) {
   }
   // Retired with the old site: the feed and humans.txt described withdrawn
   // articles and an author persona; /pages/* were those articles.
+  const legacyPage = path.match(/^\/pages\/([a-z0-9-]+?)(\.html)?$/);
+  if (legacyPage && LEGACY_PAGE_REDIRECTS.has(legacyPage[1])) return redirect(url, LEGACY_PAGE_REDIRECTS.get(legacyPage[1]));
   if (path === '/feed.xml' || path === '/humans.txt' || path.startsWith('/pages/')) return gone();
 
   if (request.method === 'OPTIONS' && path.startsWith('/api/v1')) return apiOptions();
