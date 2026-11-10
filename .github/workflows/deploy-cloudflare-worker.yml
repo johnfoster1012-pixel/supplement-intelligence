@@ -23,6 +23,7 @@ on:
       - 'llm.txt'
       - 'llms.txt'
       - 'robots.txt'
+      - 'BingSiteAuth.xml'
       - '.github/workflows/deploy-cloudflare-worker.yml'
   workflow_dispatch:
 
@@ -113,3 +114,30 @@ jobs:
             echo "Unexpected displayed pricing found on homepage"
             exit 1
           fi
+
+          # Status codes that must not regress: unknown URLs are real 404s (not the
+          # retired homepage), retired files are 410, and duplicates redirect.
+          expect_status() {
+            url="$1"; want="$2"
+            for attempt in 1 2 3 4 5 6; do
+              HTTP_CODE=$(curl --max-time 20 -s -o /dev/null -w "%{http_code}" "$url" || true)
+              echo "$url -> HTTP $HTTP_CODE, expected $want (attempt $attempt)"
+              if [ "$HTTP_CODE" = "$want" ]; then
+                return 0
+              fi
+              sleep 10
+            done
+            echo "Status verification failed for $url"
+            return 1
+          }
+
+          expect_status "https://supplement-intelligence.com/this-page-should-not-exist" 404
+          expect_status "https://supplement-intelligence.com/feed.xml" 410
+          expect_status "https://supplement-intelligence.com/humans.txt" 410
+          expect_status "https://supplement-intelligence.com/favicon.ico" 200
+          expect_status "https://supplement-intelligence.com/ingredients/berberine/" 301
+          expect_status "https://supplement-intelligence.com/about.html" 301
+          expect_status "https://www.supplement-intelligence.com/ingredients" 301
+
+          BING_XML=$(curl --max-time 20 -s "https://supplement-intelligence.com/BingSiteAuth.xml")
+          echo "$BING_XML" | grep -q "<users>"
