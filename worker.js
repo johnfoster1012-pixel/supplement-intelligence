@@ -12,7 +12,8 @@ const IS_PREVIEW = CONTENT_BRANCH_NAME !== 'main';
 const GITHUB_RAW_BASE = (typeof CONTENT_BASE !== 'undefined' && CONTENT_BASE)
   ? CONTENT_BASE
   : `https://raw.githubusercontent.com/johnfoster1012-pixel/supplement-intelligence/${CONTENT_BRANCH_NAME}/`;
-const VERSION = 'Supplement Intelligence v11.4';
+const VERSION = 'Supplement Intelligence v11.5';
+const SITE_ORIGIN = 'https://supplement-intelligence.com';
 // Give every new Worker isolate a distinct upstream-content namespace. This
 // prevents Cloudflare's subrequest cache from serving a previous deployment's
 // branch-tip JSON/HTML after GitHub content changes.
@@ -104,6 +105,37 @@ const DATABASE_REDIRECTS = new Map([
   ['nac-studies', '/references'],
 ]);
 
+// Same mark as the ChatGPT plugin icon, so the brand matches across surfaces.
+const FAVICON_SVG = '<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-label="Supplement Intelligence"><rect width="128" height="128" rx="24" fill="#1F6FEB"/><path d="M33 37h62v12H33zM33 58h44v12H33zM33 79h62v12H33z" fill="#ffffff" opacity="0.96"/><circle cx="88" cy="64" r="10" fill="#ffffff"/></svg>';
+
+// Shared header, footer and palette for every page that is not built from
+// product-template.html, so the whole site reads as one design.
+const CHROME_CSS = `
+body{max-width:none!important;margin:0!important;padding:0!important;font-family:Georgia,'Times New Roman',serif!important;background:#faf8f5;color:#2a2a2a;line-height:1.7}
+h1,h2,h3{color:#1a3d2e;line-height:1.25}
+a{color:#a8532f}
+.si-main{max-width:900px;margin:0 auto;padding:28px 24px 48px}
+.si-main.si-wide{max-width:1040px}
+.si-main .box,.si-main .card,.si-main .notice,.si-main article{background:#fff}
+.si-header{background:#1a3d2e;border-bottom:4px solid #c4704a}
+.si-header .si-inner{max-width:1140px;margin:0 auto;padding:14px 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 28px}
+.si-logo{color:#fff;font-size:1.5rem;font-weight:700;text-decoration:none;padding:6px 0}
+.si-logo span{color:#e8a082}
+.si-header nav{display:flex;flex-wrap:wrap;gap:0 24px}
+.si-header nav a{color:rgba(255,255,255,.88);text-decoration:none;font-size:.95rem;padding:8px 0}
+.si-header nav a:hover{color:#fff;text-decoration:underline}
+.si-meta{color:#555;font-size:.92rem;margin-top:-6px}
+.si-footer{background:#1a3d2e;color:rgba(255,255,255,.78);text-align:center;padding:32px 24px;font-size:.9rem}
+.si-footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:0 22px;margin-bottom:12px}
+.si-footer a{color:#e8a082;text-decoration:none;padding:8px 0;display:inline-block}
+.si-footer a:hover{text-decoration:underline}
+.si-footer p{margin:6px auto;max-width:720px}
+`;
+
+const SITE_HEADER = '<header class="si-header"><div class="si-inner"><a class="si-logo" href="/">Supplement<span>Intelligence</span></a><nav aria-label="Main"><a href="/ingredients">Ingredient evidence</a><a href="/products">Products</a><a href="/references">Research status</a><a href="/about">About</a></nav></div></header>';
+
+const SITE_FOOTER = '<footer class="si-footer"><nav aria-label="Footer"><a href="/ingredients">Ingredient evidence</a><a href="/products">Products</a><a href="/references">Research status</a><a href="/about">About</a><a href="/support">Support</a><a href="/disclaimer">Disclaimer</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/api/v1">API</a></nav><p>Supplement Intelligence may earn referral credit from some product links. Compensation does not determine evidence status.</p><p>For informational purposes only; not individualized medical advice.</p></footer>';
+
 let cache = { template: null, productsData: null, ingredientData: null, ts: 0 };
 const CACHE_TTL = 3600000;
 
@@ -111,13 +143,38 @@ addEventListener('fetch', event => event.respondWith(handleRequest(event.request
 
 async function handleRequest(request) {
   const url = new URL(request.url);
-  const path = url.pathname.replace(/\/$/, '') || '/';
 
+  // One canonical host: www -> apex, same path and query.
+  if (url.hostname === 'www.supplement-intelligence.com') {
+    return permanentRedirect(SITE_ORIGIN + url.pathname + url.search);
+  }
+
+  // Routes are matched on a lower-case path with no trailing slash.
+  const path = url.pathname.toLowerCase().replace(/\/+$/, '') || '/';
+  const response = await route(request, url, path);
+
+  // A page reached through a non-canonical spelling (/Ingredients/Berberine/,
+  // /about/) redirects to the canonical URL instead of serving a duplicate.
+  // Redirects and errors pass through unchanged, so there is never a second hop.
+  if (response.status === 200 && url.pathname !== path && !path.startsWith('/api/') && path !== '/bingsiteauth.xml') {
+    return redirect(url, path + url.search);
+  }
+  return response;
+}
+
+async function route(request, url, path) {
   if (path === '/llm.txt') return proxyRawText('llm.txt', 'text/plain; charset=utf-8');
   if (path === '/llms.txt') return proxyRawText('llms.txt', 'text/plain; charset=utf-8');
   if (path === '/robots.txt') return proxyRawText('robots.txt', 'text/plain; charset=utf-8');
   if (path === '/sitemap.xml') return proxyRawText('sitemap.xml', 'application/xml; charset=utf-8');
   if (path === '/openapi.json') return proxyRawText('openapi.json', 'application/json; charset=utf-8');
+  if (path === '/bingsiteauth.xml') return proxyRawText('BingSiteAuth.xml', 'application/xml; charset=utf-8');
+  if (path === '/favicon.svg' || path === '/favicon.ico') {
+    return new Response(FAVICON_SVG, { status: 200, headers: { ...baseHeaders('image/svg+xml'), 'Cache-Control': 'public, max-age=604800' } });
+  }
+  // Retired with the old site: the feed and humans.txt described withdrawn
+  // articles and an author persona; /pages/* were those articles.
+  if (path === '/feed.xml' || path === '/humans.txt' || path.startsWith('/pages/')) return gone();
 
   if (request.method === 'OPTIONS' && path.startsWith('/api/v1')) return apiOptions();
   if (path === '/api/v1') return handleApiIndex(request);
@@ -134,16 +191,22 @@ async function handleRequest(request) {
   if (path === '/') return handleHome();
   if (path === '/products') return handleProductsIndex();
   if (path === '/formulary') return redirect(url, '/products');
-  if (path === '/articles') return proxyRawText('articles/index.html', 'text/html; charset=utf-8');
+  if (path === '/articles') return proxyHtml('articles/index.html', { path });
   if (path === '/research') return redirect(url, '/articles');
-  if (path === '/ingredients') return proxyRawText('ingredients/index.html', 'text/html; charset=utf-8');
+  if (path === '/ingredients') return proxyHtml('ingredients/index.html', { path, breadcrumbs: [['Ingredients', '/ingredients']] });
   if (path === '/database') return redirect(url, '/references');
-  if (path === '/about' || path === '/about.html') return proxyRawText('site/about.html', 'text/html; charset=utf-8');
-  if (path === '/references' || path === '/references.html') return proxyRawText('site/references.html', 'text/html; charset=utf-8');
-  if (path === '/disclaimer' || path === '/disclaimer.html') return proxyRawText('site/disclaimer.html', 'text/html; charset=utf-8');
-  if (path === '/privacy' || path === '/privacy.html') return proxyRawText('site/privacy.html', 'text/html; charset=utf-8');
-  if (path === '/terms' || path === '/terms.html') return proxyRawText('site/terms.html', 'text/html; charset=utf-8');
-  if (path === '/support' || path === '/support.html') return proxyRawText('site/support.html', 'text/html; charset=utf-8');
+  if (path === '/about.html') return redirect(url, '/about');
+  if (path === '/about') return proxyHtml('site/about.html', { path: '/about' });
+  if (path === '/references.html') return redirect(url, '/references');
+  if (path === '/references') return proxyHtml('site/references.html', { path: '/references' });
+  if (path === '/disclaimer.html') return redirect(url, '/disclaimer');
+  if (path === '/disclaimer') return proxyHtml('site/disclaimer.html', { path: '/disclaimer' });
+  if (path === '/privacy.html') return redirect(url, '/privacy');
+  if (path === '/privacy') return proxyHtml('site/privacy.html', { path: '/privacy' });
+  if (path === '/terms.html') return redirect(url, '/terms');
+  if (path === '/terms') return proxyHtml('site/terms.html', { path: '/terms' });
+  if (path === '/support.html') return redirect(url, '/support');
+  if (path === '/support') return proxyHtml('site/support.html', { path: '/support' });
 
   const productMatch = path.match(/^\/products\/([a-z0-9-]+)$/);
   if (productMatch) return handleProduct(url, productMatch[1]);
@@ -157,7 +220,7 @@ async function handleRequest(request) {
   const ingredientMatch = path.match(/^\/ingredients\/([a-z0-9-]+)$/);
   if (ingredientMatch) {
     const slug = ingredientMatch[1];
-    if (VALID_INGREDIENT_SLUGS.has(slug)) return proxyRawText(`ingredients/${slug}.html`, 'text/html; charset=utf-8');
+    if (VALID_INGREDIENT_SLUGS.has(slug)) return handleIngredientPage(slug);
     const target = INGREDIENT_REDIRECTS.get(slug);
     return target ? redirect(url, target) : notFound('Ingredient Not Found');
   }
@@ -175,12 +238,28 @@ async function handleRequest(request) {
     if (target) return redirect(url, target);
   }
 
-  // Homepage safety: everything unmatched — including "/", /about, and any unknown
-  // path — passes through to origin (the Pages project) untouched.
+  // Anything unmatched is checked against the legacy origin (the old Pages
+  // project). Real files there (verification keys, images) still pass through,
+  // but its catch-all HTML is the retired homepage, so HTML becomes a real 404.
   if (IS_PREVIEW) {
     return new Response(`PASSTHROUGH -> origin (${url.pathname})`, { status: 200, headers: textHeaders({ 'X-Passthrough': '1' }) });
   }
-  return fetch(request);
+  let originResponse;
+  try {
+    originResponse = await fetch(request);
+  } catch (_) {
+    return notFound('Page Not Found');
+  }
+  const originType = originResponse.headers.get('Content-Type') || '';
+  if (originResponse.status === 200 && originType.includes('text/html')) return notFound('Page Not Found');
+  return originResponse;
+}
+
+function permanentRedirect(location) {
+  return new Response(null, {
+    status: 301,
+    headers: { 'Location': location, 'Cache-Control': 'public, max-age=3600', 'X-Powered-By': VERSION }
+  });
 }
 
 function redirect(url, targetPath) {
@@ -205,7 +284,7 @@ async function handleProduct(url, slug) {
   const product = productsData.products[slug];
   if (!product) return notFound('Product data not found');
 
-  const html = renderProductPage(template, product);
+  const html = renderProductPage(template, product, productsData);
   return new Response(html, {
     status: 200,
     headers: htmlHeaders({ 'X-Product': slug, 'X-Powered-By': VERSION })
@@ -222,23 +301,15 @@ async function handleHome() {
 <meta name="description" content="Verification-first supplement research with current product formulations, 34 reviewed ingredient evidence pages, safety context, and primary-source citations.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://supplement-intelligence.com/">
-<meta property="og:title" content="Supplement Intelligence | Evidence-Based Ingredient & Supplement Research">
-<meta property="og:description" content="Verification-first supplement research with current formulations and reviewed ingredient evidence.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://supplement-intelligence.com/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Supplement Intelligence","url":"https://supplement-intelligence.com/","description":"Verification-first supplement formulation and ingredient evidence research."}</script>
 <style>
-body{font-family:Arial,sans-serif;max-width:1040px;margin:0 auto;padding:28px;line-height:1.65;color:#18202a}
-a{color:#0a66c2;text-decoration:none}a:hover{text-decoration:underline}
-header{display:flex;gap:18px;flex-wrap:wrap;align-items:center;margin-bottom:38px}
-.hero{padding:24px 0 18px}.hero h1{font-size:2.35rem;line-height:1.15;margin-bottom:12px}
+a{text-decoration:none}a:hover{text-decoration:underline}
+.hero{padding:12px 0 18px}.hero h1{font-size:2.35rem;line-height:1.15;margin:0 0 12px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
 .card{border:1px solid #e5e7eb;border-radius:14px;padding:20px}
-.muted{color:#5f6b78}.pill{display:inline-block;border:1px solid #d7dde5;border-radius:999px;padding:4px 10px;margin:3px 4px 3px 0;font-size:.9rem}
+.pill{display:inline-block;background:#fff;border:1px solid #d7dde5;border-radius:999px;padding:8px 14px;margin:4px 6px 4px 0;font-size:.95rem}
 </style>
 </head>
 <body>
-<header><strong>Supplement Intelligence</strong><a href="/ingredients">Ingredient evidence</a><a href="/products">Products</a><a href="/references">Research status</a><a href="/about">About</a></header>
 <section class="hero">
 <h1>Supplement research built around verification, not marketing claims</h1>
 <p>Supplement Intelligence separates current product-formulation facts from ingredient-level human evidence and from finished-product efficacy. The database currently tracks 31 products and 34 reviewed ingredient evidence pages.</p>
@@ -251,10 +322,13 @@ header{display:flex;gap:18px;flex-wrap:wrap;align-items:center;margin-bottom:38p
 </section>
 <h2>Core evidence topics</h2>
 <p><a class="pill" href="/ingredients/creatine-monohydrate">Creatine</a><a class="pill" href="/ingredients/omega-3">Omega-3</a><a class="pill" href="/ingredients/magnesium">Magnesium</a><a class="pill" href="/ingredients/vitamin-d">Vitamin D</a><a class="pill" href="/ingredients/berberine">Berberine</a><a class="pill" href="/ingredients/ashwagandha">Ashwagandha</a><a class="pill" href="/ingredients/curcumin">Curcumin</a><a class="pill" href="/ingredients/caffeine">Caffeine</a></p>
-<div class="card"><h2>Commercial disclosure</h2><p>Supplement Intelligence may earn referral credit from purchases made through some product links. Compensation does not determine evidence status or source selection.</p></div>
-<footer><p class="muted">For informational purposes only; not individualized medical advice. <a href="/disclaimer">Disclaimer</a> · <a href="/api/v1">API</a></p></footer>
 </body></html>`;
-  return new Response(html,{status:200,headers:htmlHeaders({'X-Powered-By':VERSION})});
+  const jsonLd = [{
+    '@context': 'https://schema.org', '@type': 'WebSite', name: 'Supplement Intelligence', url: SITE_ORIGIN + '/',
+    description: 'Verification-first supplement formulation and ingredient evidence research.',
+    publisher: { '@type': 'Organization', name: 'Supplement Intelligence', url: SITE_ORIGIN + '/', logo: SITE_ORIGIN + '/favicon.svg' }
+  }];
+  return new Response(decorate(html, { path: '/', wide: true, jsonLd }), { status: 200, headers: htmlHeaders({ 'X-Powered-By': VERSION }) });
 }
 
 async function handleProductsIndex() {
@@ -264,15 +338,110 @@ async function handleProductsIndex() {
   return new Response(html, { status: 200, headers: htmlHeaders({ 'X-Powered-By': VERSION }) });
 }
 
-async function proxyRawText(path, contentType) {
+// Fetches a repo file as text. Returns { body } on success or { error: Response }.
+async function fetchRaw(path) {
   try {
     const res = await fetch(contentUrl(path), { headers: { 'User-Agent': 'Supplement-Intelligence-Worker/11.0' }, cf: { cacheTtl: 3600 } });
-    if (!res.ok) return new Response('Temporarily unavailable', { status: 503, headers: textHeaders() });
-    const body = normalizeText(await res.text());
-    return new Response(body, { status: 200, headers: baseHeaders(contentType) });
+    if (!res.ok) return { error: new Response('Temporarily unavailable', { status: 503, headers: textHeaders({ 'Cache-Control': 'no-store' }) }) };
+    return { body: normalizeText(await res.text()) };
   } catch (err) {
-    return new Response('Error fetching content: ' + err.message, { status: 500, headers: textHeaders() });
+    return { error: new Response('Error fetching content: ' + err.message, { status: 500, headers: textHeaders({ 'Cache-Control': 'no-store' }) }) };
   }
+}
+
+async function proxyRawText(path, contentType) {
+  const raw = await fetchRaw(path);
+  if (raw.error) return raw.error;
+  return new Response(raw.body, { status: 200, headers: baseHeaders(contentType) });
+}
+
+// Static HTML from the repo, wrapped in the shared header/footer and metadata.
+async function proxyHtml(path, options) {
+  const raw = await fetchRaw(path);
+  if (raw.error) return raw.error;
+  return new Response(decorate(raw.body, options), { status: 200, headers: htmlHeaders({ 'X-Powered-By': VERSION }) });
+}
+
+async function handleIngredientPage(slug) {
+  const [raw, data] = await Promise.all([fetchRaw(`ingredients/${slug}.html`), getIngredientData()]);
+  if (raw.error) return raw.error;
+  const x = data && data.ingredients ? data.ingredients[slug] : null;
+  const path = '/ingredients/' + slug;
+  const options = { path, ogType: 'article', breadcrumbs: [['Ingredients', '/ingredients']] };
+  if (x) {
+    options.breadcrumbs.push([x.name, path]);
+    options.title = `${x.name} Evidence Review: Uses, Safety & Sources | Supplement Intelligence`;
+    options.description = truncateText(`${x.name} evidence review: ${x.posture}`, 158);
+    const reviewed = x.last_reviewed_at || data.generated_at || null;
+    if (reviewed) {
+      options.afterH1 = `<p class="si-meta">Last reviewed ${escapeHtml(formatLongDate(reviewed))} · <a href="/references">How evidence is reviewed</a></p>`;
+    }
+    const page = {
+      '@context': 'https://schema.org', '@type': 'MedicalWebPage',
+      name: `${x.name} evidence review`, description: x.posture, url: SITE_ORIGIN + path,
+      about: { '@type': 'Thing', name: x.name },
+      publisher: { '@type': 'Organization', name: 'Supplement Intelligence', url: SITE_ORIGIN + '/' }
+    };
+    if (reviewed) { page.lastReviewed = reviewed; page.dateModified = reviewed; }
+    options.jsonLd = [page];
+  }
+  return new Response(decorate(raw.body, options), { status: 200, headers: htmlHeaders({ 'X-Powered-By': VERSION }) });
+}
+
+// Adds the shared chrome and head metadata to a complete HTML document.
+// options: path (canonical path), title, description, ogType, wide,
+// breadcrumbs ([[name, path], ...] below Home), jsonLd (array), afterH1, noindex.
+function decorate(html, options = {}) {
+  let out = html;
+  if (options.title) out = out.replace(/<title>[^<]*<\/title>/i, () => `<title>${escapeHtml(options.title)}</title>`);
+  if (options.description) {
+    out = out.replace(/<meta name="description" content="[^"]*">/i, () => `<meta name="description" content="${escapeHtml(options.description)}">`);
+  }
+  const title = decodeEntities((out.match(/<title>([^<]*)<\/title>/i) || [])[1] || 'Supplement Intelligence');
+  const description = decodeEntities((out.match(/<meta name="description" content="([^"]*)">/i) || [])[1] || '');
+  const pageUrl = SITE_ORIGIN + (options.path || '/');
+
+  let head = '<link rel="icon" href="/favicon.svg" type="image/svg+xml">';
+  if (options.noindex) head += '<meta name="robots" content="noindex">';
+  if (!options.noindex && !/property="og:title"/.test(out)) {
+    head += `<meta property="og:title" content="${escapeHtml(title)}">`
+      + (description ? `<meta property="og:description" content="${escapeHtml(description)}">` : '')
+      + `<meta property="og:type" content="${options.ogType || 'website'}">`
+      + `<meta property="og:url" content="${escapeHtml(pageUrl)}">`
+      + '<meta property="og:site_name" content="Supplement Intelligence"><meta name="twitter:card" content="summary">';
+  }
+  const jsonLd = (options.jsonLd || []).slice();
+  if (options.breadcrumbs && options.breadcrumbs.length) jsonLd.push(breadcrumbSchema(options.breadcrumbs));
+  for (const item of jsonLd) head += `<script type="application/ld+json">${safeJson(item)}</script>`;
+  head += `<style>${CHROME_CSS}</style>`;
+
+  out = out.replace(/<\/head>/i, () => head + '</head>');
+  out = out.replace(/<body[^>]*>/i, m => `${m}${SITE_HEADER}<main class="si-main${options.wide ? ' si-wide' : ''}">`);
+  out = out.replace(/<\/body>/i, () => `</main>${SITE_FOOTER}</body>`);
+  if (options.afterH1) out = out.replace(/<\/h1>/i, m => m + options.afterH1);
+  return out;
+}
+
+function breadcrumbSchema(crumbs) {
+  const items = [['Home', '/']].concat(crumbs);
+  return {
+    '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+    itemListElement: items.map(([name, path], i) => ({ '@type': 'ListItem', position: i + 1, name, item: SITE_ORIGIN + path }))
+  };
+}
+
+// JSON for an inline <script>: "<" is escaped so content can never close the tag.
+function safeJson(value) {
+  return JSON.stringify(value).replace(/</g, '\\u003c');
+}
+
+function decodeEntities(text) {
+  return String(text).replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
+}
+
+function formatLongDate(dateStr) {
+  const date = new Date(dateStr + 'T00:00:00Z');
+  return isNaN(date.getTime()) ? String(dateStr) : date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 }
 
 async function getTemplate() {
@@ -462,7 +631,7 @@ async function handleApiIngredient(request, slug) {
   });
 }
 
-function renderProductPage(template, product) {
+function renderProductPage(template, product, productsData) {
   let html = template;
   const citations = product.citations || [];
   const grade = product.evidenceGrade || 'Under Review';
@@ -470,6 +639,18 @@ function renderProductPage(template, product) {
   const formulationVerified = String(product.formulationStatus || '').toLowerCase().startsWith('verified against current manufacturer');
   const publicIngredients = formulationVerified ? (product.ingredients || '') : 'Formulation re-verification in progress.';
   const publicTldr = underReview ? 'This product record is undergoing current-label and evidence re-verification. Ingredient-specific efficacy claims are not being asserted until that review is complete.' : (product.tldr || '');
+  // Each product gets its own search description (name + label ingredients)
+  // rather than the shared under-review sentence, which duplicated across all pages.
+  const metaDescription = formulationVerified
+    ? `${product.name} ingredients and evidence status. Label lists: ${product.ingredients}`
+    : publicTldr;
+  const faqs = product.faqs || [];
+  const related = (product.relatedProducts && product.relatedProducts.length)
+    ? product.relatedProducts
+    : findRelatedProducts(product, productsData);
+  // Sections with nothing to show are removed along with their table-of-contents entries.
+  if (!faqs.length) html = stripSection(html, 'FAQS');
+  if (!related.length) html = stripSection(html, 'RELATED');
   const publicResearch = underReview ? 'Evidence review in progress. Verified references will be republished only after the current formulation and study-to-claim mapping are confirmed.' : (product.research || '');
 
   // Grades are void until re-derived from verified ingredients; citation counts are
@@ -488,14 +669,14 @@ function renderProductPage(template, product) {
   html = html.replace(/\{\{TOTAL_CITATIONS\}\}/g, String(product.totalCitations || citations.length));
   html = html.replace(/\{\{LAST_UPDATED\}\}/g, escapeHtml(formatDate(product.lastUpdated)));
   html = html.replace(/\{\{PRODUCT_TLDR\}\}/g, formatParagraphs(publicTldr));
-  html = html.replace(/\{\{PRODUCT_TLDR_SHORT\}\}/g, escapeHtml(truncateText(publicTldr, 160)));
+  html = html.replace(/\{\{PRODUCT_TLDR_SHORT\}\}/g, escapeHtml(truncateText(metaDescription, 160)));
   html = html.replace(/\{\{RESEARCH_CONTENT\}\}/g, formatParagraphs(publicResearch));
   html = html.replace(/\{\{MECHANISM\}\}/g, formatParagraphs((product.mechanism || '').replace(/^The mechanism is:\s*/i, '')));
   html = html.replace(/\{\{INGREDIENTS_LIST\}\}/g, formatIngredients(publicIngredients));
   html = html.replace(/\{\{INGREDIENT_EVIDENCE_LINKS\}\}/g, formatIngredientEvidenceLinks(product.ingredientEvidenceLinks || []));
   html = html.replace(/\{\{CITATIONS_LIST\}\}/g, formatCitations(citations));
-  html = html.replace(/\{\{FAQS_LIST\}\}/g, formatFaqs(product.faqs || []));
-  html = html.replace(/\{\{RELATED_PRODUCTS\}\}/g, formatRelatedProducts(product.relatedProducts || []));
+  html = html.replace(/\{\{FAQS_LIST\}\}/g, formatFaqs(faqs));
+  html = html.replace(/\{\{RELATED_PRODUCTS\}\}/g, formatRelatedProducts(related));
 
   html = normalizeText(html);
   // Per-product affiliate deep link (replaces the template's generic Vital Health link).
@@ -528,7 +709,8 @@ function renderProductsIndex(productsData) {
     }
     groupsHtml += '</section>';
   }
-  return `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Products | Supplement Intelligence</title><meta name="description" content="Verified product information across the Supplement Intelligence formulary."><link rel="canonical" href="https://supplement-intelligence.com/products"><style>body{font-family:Arial,sans-serif;max-width:980px;margin:0 auto;padding:24px;line-height:1.6}a{color:#0a66c2;text-decoration:none}a:hover{text-decoration:underline}</style></head><body><p><a href="/">Home</a> / Products</p><h1>All Products</h1><p>Independent product information for the Vital Health Global catalog. Product formulation records are undergoing label re-verification; a full evidence review is in progress.</p>${groupsHtml}</body></html>`;
+  const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Vital Health Global Products: Ingredients & Evidence Status | Supplement Intelligence</title><meta name="description" content="Current ingredient lists for ${products.length} Vital Health Global products, checked against manufacturer labels, with links to reviewed evidence for each ingredient."><link rel="canonical" href="https://supplement-intelligence.com/products"><style>a{text-decoration:none}a:hover{text-decoration:underline}</style></head><body><p><a href="/">Home</a> / Products</p><h1>All Products</h1><p>Independent product information for the Vital Health Global catalog. Product formulation records are undergoing label re-verification; a full evidence review is in progress.</p>${groupsHtml}</body></html>`;
+  return decorate(html, { path: '/products', breadcrumbs: [['Products', '/products']] });
 }
 
 function formatParagraphs(text) {
@@ -562,7 +744,25 @@ function formatFaqs(faqs) {
 }
 
 function formatRelatedProducts(relatedProducts) {
-  return relatedProducts.map(r => `<li><a href="${escapeHtml(r.url)}">${escapeHtml(r.name || r.slug)}</a></li>`).join('');
+  return relatedProducts.map(r => `<a class="related-card" href="${escapeHtml(r.url)}"><h4>${escapeHtml(r.name || r.slug)}</h4></a>`).join('');
+}
+
+// Up to four other products that share the most reviewed ingredients with this one.
+function findRelatedProducts(product, productsData) {
+  const own = new Set((product.ingredientEvidenceLinks || []).map(x => x.url));
+  if (!own.size || !productsData || !productsData.products) return [];
+  return Object.values(productsData.products)
+    .filter(p => p.slug !== product.slug)
+    .map(p => ({ p, shared: (p.ingredientEvidenceLinks || []).filter(x => own.has(x.url)).length }))
+    .filter(x => x.shared > 0)
+    .sort((a, b) => b.shared - a.shared || a.p.name.localeCompare(b.p.name))
+    .slice(0, 4)
+    .map(x => ({ url: '/products/' + x.p.slug, name: x.p.name, slug: x.p.slug }));
+}
+
+// Removes every <!--IF_NAME-->...<!--/IF_NAME--> block from the template.
+function stripSection(html, name) {
+  return html.replace(new RegExp(`<!--IF_${name}-->[\\s\\S]*?<!--/IF_${name}-->`, 'g'), '');
 }
 
 // Mojibake repair, behavior-identical to the v8 chain but written with explicit
@@ -616,8 +816,27 @@ function formatDate(dateStr) {
 }
 
 function baseHeaders(contentType) {
-  return { 'Content-Type': contentType, 'Cache-Control': 'public, max-age=3600, s-maxage=86400' };
+  return {
+    'Content-Type': contentType,
+    'Cache-Control': 'public, max-age=3600, s-maxage=86400',
+    'X-Content-Type-Options': 'nosniff',
+    'Referrer-Policy': 'strict-origin-when-cross-origin',
+    'X-Frame-Options': 'SAMEORIGIN',
+    'Strict-Transport-Security': 'max-age=31536000',
+  };
 }
 function htmlHeaders(extra={}) { return { ...baseHeaders('text/html; charset=utf-8'), ...extra }; }
 function textHeaders(extra={}) { return { ...baseHeaders('text/plain; charset=utf-8'), ...extra }; }
-function notFound(msg) { return new Response(msg, { status: 404, headers: textHeaders({ 'X-Powered-By': VERSION }) }); }
+function notFound(msg) {
+  const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeHtml(msg)} | Supplement Intelligence</title></head><body><h1>Page not found</h1><p>That page does not exist or has been retired. Older articles and study lists were withdrawn when the site moved to verified sources.</p><p><a href="/ingredients"><strong>Browse ingredient evidence →</strong></a></p><p><a href="/products">Browse product formulations →</a></p><p><a href="/">Go to the homepage →</a></p></body></html>`;
+  return new Response(decorate(html, { noindex: true }), {
+    status: 404,
+    headers: htmlHeaders({ 'Cache-Control': 'public, max-age=300', 'X-Powered-By': VERSION })
+  });
+}
+function gone() {
+  return new Response('Gone: this resource was retired.', {
+    status: 410,
+    headers: textHeaders({ 'Cache-Control': 'public, max-age=3600', 'X-Robots-Tag': 'noindex', 'X-Powered-By': VERSION })
+  });
+}
