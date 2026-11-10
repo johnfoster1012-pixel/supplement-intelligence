@@ -2,7 +2,7 @@
 
 ## Current architecture
 
-- Cloudflare Worker: `worker.js` (v11.5)
+- Cloudflare Worker: `worker.js` (v11.6)
 - Current product data: `products-data.json`
 - Label-verification ledger: `data/product-label-verification.json`
 - Ingredient evidence: `ingredient-evidence.json`
@@ -50,3 +50,7 @@ Do not publish an efficacy claim solely because an ingredient appears in a produ
 - `/BingSiteAuth.xml` and `/favicon.ico` / `/favicon.svg` are served by the Worker.
 - The Worker wraps the home, index, ingredient and policy pages in one shared header and footer (`decorate()` in `worker.js`) and adds Open Graph tags and structured data. Ingredient pages take their title, description and "Last reviewed" date from `ingredient-evidence.json`.
 - Product pages hide the FAQ and related sections when they are empty. Related products are derived from shared ingredient evidence links.
+
+## Content pinning (v11.6)
+
+The deploy workflow passes the commit SHA to the Worker as `CONTENT_REV`. The Worker reads the template, data and static pages from that exact commit on GitHub, so every deploy serves the files it was built with. Content changes go live when the deploy workflow runs, which it does on every push to `main` that touches those files.
