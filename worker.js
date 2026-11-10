@@ -7,7 +7,7 @@
  */
 const CONTENT_BRANCH_NAME = (typeof CONTENT_BRANCH !== 'undefined' && CONTENT_BRANCH) ? CONTENT_BRANCH : 'main';
 const IS_PREVIEW = CONTENT_BRANCH_NAME !== 'main';
-const VERSION = 'Supplement Intelligence v11.7';
+const VERSION = 'Supplement Intelligence v11.8';
 const SITE_ORIGIN = 'https://supplement-intelligence.com';
 // CONTENT_REV is the commit SHA the deploy workflow passes in (--var). Content is
 // read from that exact commit, so a deploy can never pick up an older copy of a
@@ -103,6 +103,20 @@ const INGREDIENT_REDIRECTS = new Map([
   ['bacopa-monnieri', '/ingredients']
 ]);
 
+// GLP-1 guides: static HTML in glp-1/, keyed by URL slug ('' is the hub at /glp-1).
+// `reviewed` drives the visible "Last reviewed" line and the structured data.
+const GLP1_GUIDES = new Map([
+  ['', { file: 'glp-1/index.html', name: 'Supplements on GLP-1 drugs', reviewed: '2026-11-10' }],
+  ['berberine-vs-ozempic', { file: 'glp-1/berberine-vs-ozempic.html', name: 'Berberine vs Ozempic', reviewed: '2026-11-10' }],
+]);
+
+// Guides to point to from an ingredient page: slug -> [[label, path], ...].
+const INGREDIENT_GUIDE_LINKS = new Map([
+  ['berberine', [['Berberine vs Ozempic', '/glp-1/berberine-vs-ozempic']]],
+  ['creatine-monohydrate', [['Supplements on GLP-1 drugs', '/glp-1']]],
+  ['magnesium', [['Supplements on GLP-1 drugs', '/glp-1']]],
+]);
+
 // Retired /pages/* articles that still earn search impressions: 301 to the
 // closest current page instead of 410, so their rankings carry over.
 const LEGACY_PAGE_REDIRECTS = new Map([
@@ -136,6 +150,15 @@ a{color:#a8532f}
 .si-header nav a{color:rgba(255,255,255,.88);text-decoration:none;font-size:.95rem;padding:8px 0}
 .si-header nav a:hover{color:#fff;text-decoration:underline}
 .si-meta{color:#555;font-size:.92rem;margin-top:-6px}
+.si-verdict{background:#fff;border:1px solid #e5e7eb;border-left:5px solid #c4704a;border-radius:0 12px 12px 0;padding:16px 20px;margin:18px 0}
+.si-verdict p{margin:6px 0}
+.si-table-wrap{overflow-x:auto;margin:18px 0}
+.si-main table{border-collapse:collapse;width:100%;background:#fff;font-size:.95rem}
+.si-main th,.si-main td{border:1px solid #e5e7eb;padding:10px 12px;text-align:left;vertical-align:top}
+.si-main th{background:#e8f0ec;color:#1a3d2e}
+.si-sources li{margin-bottom:8px}
+.si-main details{background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:12px 16px;margin:10px 0}
+.si-main summary{font-weight:700;color:#1a3d2e;cursor:pointer}
 .si-footer{background:#1a3d2e;color:rgba(255,255,255,.78);text-align:center;padding:32px 24px;font-size:.9rem}
 .si-footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:0 22px;margin-bottom:12px}
 .si-footer a{color:#e8a082;text-decoration:none;padding:8px 0;display:inline-block}
@@ -143,9 +166,9 @@ a{color:#a8532f}
 .si-footer p{margin:6px auto;max-width:720px}
 `;
 
-const SITE_HEADER = '<header class="si-header"><div class="si-inner"><a class="si-logo" href="/">Supplement<span>Intelligence</span></a><nav aria-label="Main"><a href="/ingredients">Ingredient evidence</a><a href="/products">Products</a><a href="/references">Research status</a><a href="/about">About</a></nav></div></header>';
+const SITE_HEADER = '<header class="si-header"><div class="si-inner"><a class="si-logo" href="/">Supplement<span>Intelligence</span></a><nav aria-label="Main"><a href="/glp-1">GLP-1</a><a href="/ingredients">Ingredient evidence</a><a href="/products">Products</a><a href="/references">Research status</a><a href="/about">About</a></nav></div></header>';
 
-const SITE_FOOTER = '<footer class="si-footer"><nav aria-label="Footer"><a href="/ingredients">Ingredient evidence</a><a href="/products">Products</a><a href="/references">Research status</a><a href="/about">About</a><a href="/support">Support</a><a href="/disclaimer">Disclaimer</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/api/v1">API</a></nav><p>Supplement Intelligence may earn referral credit from some product links. Compensation does not determine evidence status.</p><p>For informational purposes only; not individualized medical advice.</p></footer>';
+const SITE_FOOTER = '<footer class="si-footer"><nav aria-label="Footer"><a href="/glp-1">GLP-1 guides</a><a href="/ingredients">Ingredient evidence</a><a href="/products">Products</a><a href="/references">Research status</a><a href="/about">About</a><a href="/support">Support</a><a href="/disclaimer">Disclaimer</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/api/v1">API</a></nav><p>Supplement Intelligence may earn referral credit from some product links. Compensation does not determine evidence status.</p><p>For informational purposes only; not individualized medical advice.</p></footer>';
 
 let cache = { template: null, productsData: null, ingredientData: null, ts: 0 };
 const CACHE_TTL = 3600000;
@@ -220,6 +243,12 @@ async function route(request, url, path) {
   if (path === '/terms') return proxyHtml('site/terms.html', { path: '/terms' });
   if (path === '/support.html') return redirect(url, '/support');
   if (path === '/support') return proxyHtml('site/support.html', { path: '/support' });
+
+  const guideMatch = path.match(/^\/glp-1(?:\/([a-z0-9-]+))?$/);
+  if (guideMatch) {
+    const guide = GLP1_GUIDES.get(guideMatch[1] || '');
+    return guide ? handleGuide(path, guide) : notFound('Guide Not Found');
+  }
 
   const productMatch = path.match(/^\/products\/([a-z0-9-]+)$/);
   if (productMatch) return handleProduct(url, productMatch[1]);
@@ -329,6 +358,7 @@ a{text-decoration:none}a:hover{text-decoration:underline}
 <p><a href="/ingredients"><strong>Browse ingredient evidence →</strong></a> &nbsp; <a href="/products">Browse product formulations →</a></p>
 </section>
 <section class="grid">
+<div class="card"><h2>Supplements and GLP-1 drugs</h2><p>What trials show, and do not show, about creatine, protein, fiber, magnesium and biotin for people taking semaglutide or tirzepatide.</p><p><a href="/glp-1">Read the GLP-1 guide</a> · <a href="/glp-1/berberine-vs-ozempic">Berberine vs Ozempic</a></p></div>
 <div class="card"><h2>Reviewed ingredient evidence</h2><p>Evidence summaries cover studied context, safety, source quality, and whether current products actually match the studied form or dose.</p><p><a href="/ingredients">View all 34 ingredient pages</a></p></div>
 <div class="card"><h2>Current product formulations</h2><p>Manufacturer pages are used for formulation facts only. Finished-product efficacy remains Under Review unless explicitly adjudicated.</p><p><a href="/products">View 31 product records</a></p></div>
 <div class="card"><h2>Research methodology</h2><p>Historical citation sets that did not meet the current standard were withdrawn. The current method prioritizes primary research and authoritative government sources.</p><p><a href="/references">Read research status</a></p></div>
@@ -375,6 +405,27 @@ async function proxyHtml(path, options) {
   return new Response(decorate(raw.body, options), { status: 200, headers: htmlHeaders({ 'X-Powered-By': VERSION }) });
 }
 
+// A guide page: static HTML plus the shared chrome, review date and schema.
+async function handleGuide(path, guide) {
+  const raw = await fetchRaw(guide.file);
+  if (raw.error) return raw.error;
+  const isHub = path === '/glp-1';
+  const breadcrumbs = [['GLP-1', '/glp-1']];
+  if (!isHub) breadcrumbs.push([guide.name, path]);
+  const description = decodeEntities((raw.body.match(/<meta name="description" content="([^"]*)">/i) || [])[1] || '');
+  const options = {
+    path, ogType: 'article', breadcrumbs,
+    afterH1: `<p class="si-meta">Last reviewed ${escapeHtml(formatLongDate(guide.reviewed))} · <a href="/references">How evidence is reviewed</a></p>`,
+    jsonLd: [{
+      '@context': 'https://schema.org', '@type': 'MedicalWebPage',
+      name: guide.name, description, url: SITE_ORIGIN + path,
+      lastReviewed: guide.reviewed, dateModified: guide.reviewed,
+      publisher: { '@type': 'Organization', name: 'Supplement Intelligence', url: SITE_ORIGIN + '/' }
+    }]
+  };
+  return new Response(decorate(raw.body, options), { status: 200, headers: htmlHeaders({ 'X-Powered-By': VERSION }) });
+}
+
 async function handleIngredientPage(slug) {
   const [raw, data] = await Promise.all([fetchRaw(`ingredients/${slug}.html`), getIngredientData()]);
   if (raw.error) return raw.error;
@@ -388,6 +439,11 @@ async function handleIngredientPage(slug) {
     const reviewed = x.last_reviewed_at || data.generated_at || null;
     if (reviewed) {
       options.afterH1 = `<p class="si-meta">Last reviewed ${escapeHtml(formatLongDate(reviewed))} · <a href="/references">How evidence is reviewed</a></p>`;
+    }
+    const guideLinks = INGREDIENT_GUIDE_LINKS.get(slug) || [];
+    if (guideLinks.length) {
+      options.afterH1 = (options.afterH1 || '') + '<p class="si-meta">Related guide: '
+        + guideLinks.map(([label, href]) => `<a href="${href}">${escapeHtml(label)}</a>`).join(' · ') + '</p>';
     }
     const page = {
       '@context': 'https://schema.org', '@type': 'MedicalWebPage',

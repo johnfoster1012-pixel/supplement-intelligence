@@ -2,7 +2,7 @@
 
 ## Current architecture
 
-- Cloudflare Worker: `worker.js` (v11.6)
+- Cloudflare Worker: `worker.js` (v11.8)
 - Current product data: `products-data.json`
 - Label-verification ledger: `data/product-label-verification.json`
 - Ingredient evidence: `ingredient-evidence.json`
@@ -54,3 +54,9 @@ Do not publish an efficacy claim solely because an ingredient appears in a produ
 ## Content pinning (v11.6)
 
 The deploy workflow passes the commit SHA to the Worker as `CONTENT_REV`. The Worker reads the template, data and static pages from that exact commit on GitHub, so every deploy serves the files it was built with. Content changes go live when the deploy workflow runs, which it does on every push to `main` that touches those files.
+
+## GLP-1 guides (v11.8)
+
+Guide pages are static HTML in `glp-1/`, registered in `GLP1_GUIDES` in `worker.js` (slug, file, name, review date). The Worker adds the shared chrome, the "Last reviewed" line and structured data. To add a guide: add the HTML file, register it in `GLP1_GUIDES`, and add its URL to `sitemap.xml`. `INGREDIENT_GUIDE_LINKS` adds a "Related guide" link to ingredient pages.
+
+Every figure on a guide page must come from a source listed on that page. Statements that no trial was found must name the date the search was run.
