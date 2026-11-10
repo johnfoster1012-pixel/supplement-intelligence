@@ -17,6 +17,7 @@ on:
       - 'docs/**'
       - 'products/**'
       - 'ingredients/**'
+      - 'glp-1/**'
       - 'articles/**'
       - 'site/**'
       - 'sitemap.xml'
