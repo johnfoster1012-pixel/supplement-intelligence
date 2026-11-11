@@ -7,7 +7,7 @@
  */
 const CONTENT_BRANCH_NAME = (typeof CONTENT_BRANCH !== 'undefined' && CONTENT_BRANCH) ? CONTENT_BRANCH : 'main';
 const IS_PREVIEW = CONTENT_BRANCH_NAME !== 'main';
-const VERSION = 'Supplement Intelligence v11.10';
+const VERSION = 'Supplement Intelligence v11.11';
 const SITE_ORIGIN = 'https://supplement-intelligence.com';
 // CONTENT_REV is the commit SHA the deploy workflow passes in (--var). Content is
 // read from that exact commit, so a deploy can never pick up an older copy of a
@@ -134,8 +134,7 @@ const DATABASE_REDIRECTS = new Map([
 // Same mark as the ChatGPT plugin icon, so the brand matches across surfaces.
 const FAVICON_SVG = '<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-label="Supplement Intelligence"><rect width="128" height="128" rx="24" fill="#1F6FEB"/><path d="M33 37h62v12H33zM33 58h44v12H33zM33 79h62v12H33z" fill="#ffffff" opacity="0.96"/><circle cx="88" cy="64" r="10" fill="#ffffff"/></svg>';
 
-// Shared header, footer and palette for every page that is not built from
-// product-template.html, so the whole site reads as one design.
+// Shared header, footer and palette for every page, so the whole site reads as one design.
 const CHROME_CSS = `
 body{max-width:none!important;margin:0!important;padding:0!important;font-family:Georgia,'Times New Roman',serif!important;background:#faf8f5;color:#2a2a2a;line-height:1.7}
 h1,h2,h3{color:#1a3d2e;line-height:1.25}
@@ -160,6 +159,32 @@ a{color:#a8532f}
 .si-sources li{margin-bottom:8px}
 .si-main details{background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:12px 16px;margin:10px 0}
 .si-main summary{font-weight:700;color:#1a3d2e;cursor:pointer}
+.si-crumbs{font-size:.92rem;color:#555}
+.si-small{font-size:.9rem;color:#555}
+.si-btn{display:block;text-align:center;background:#c4704a;color:#fff!important;text-decoration:none;font-weight:700;padding:12px 16px;border-radius:10px;margin:14px 0 8px}
+.si-btn:hover{background:#a8532f}
+.si-p-top{display:grid;grid-template-columns:1fr;gap:4px 24px;align-items:start}
+@media(min-width:820px){.si-p-top{grid-template-columns:minmax(0,1fr) 300px}.si-p-top .si-p-image{grid-column:1/-1}}
+.si-p-facts{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 18px;margin:18px 0}
+.si-p-facts dl{margin:0}
+.si-p-facts dl div{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px solid #f0ece6}
+.si-p-facts dt{color:#555;font-size:.92rem}
+.si-p-facts dd{margin:0;font-weight:700;color:#1a3d2e;text-align:right}
+.si-p-image{margin:18px 0 0;text-align:center}
+.si-p-image img{max-width:100%;height:auto;max-height:360px;object-fit:contain;background:#fff;border-radius:12px}
+.si-chips{list-style:none;padding:0;margin:12px 0 18px;display:flex;flex-wrap:wrap;gap:8px}
+.si-chip{background:#fff;border:1px solid #e5e7eb;border-radius:999px;padding:6px 14px;font-size:.95rem}
+.si-chip-on{background:#e8f0ec;border-color:#c9dcd2}
+.si-chip a{text-decoration:none;font-weight:700}
+.si-chip a:hover{text-decoration:underline}
+.si-cards{display:grid;grid-template-columns:1fr;gap:14px;margin:14px 0 20px}
+@media(min-width:720px){.si-cards{grid-template-columns:1fr 1fr}}
+.si-main .si-card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 18px;margin:0}
+.si-card h3{margin:0 0 6px;font-size:1.1rem}
+.si-card h3 a{text-decoration:none}
+.si-card p{margin:6px 0}
+.si-card-link{font-size:.92rem}
+.si-input{width:100%;max-width:420px;font:inherit;padding:10px 12px;border:1px solid #cfc8bf;border-radius:10px;background:#fff;margin-top:4px;box-sizing:border-box}
 .si-footer{background:#1a3d2e;color:rgba(255,255,255,.78);text-align:center;padding:32px 24px;font-size:.9rem}
 .si-footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:0 22px;margin-bottom:12px}
 .si-footer a{color:#e8a082;text-decoration:none;padding:8px 0;display:inline-block}
@@ -171,7 +196,7 @@ const SITE_HEADER = '<header class="si-header"><div class="si-inner"><a class="s
 
 const SITE_FOOTER = '<footer class="si-footer"><nav aria-label="Footer"><a href="/glp-1">GLP-1 guides</a><a href="/ingredients">Ingredient evidence</a><a href="/products">Products</a><a href="/references">Research status</a><a href="/about">About</a><a href="/support">Support</a><a href="/disclaimer">Disclaimer</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/api/v1">API</a></nav><p>Supplement Intelligence may earn referral credit from some product links. Compensation does not determine evidence status.</p><p>For informational purposes only; not individualized medical advice.</p></footer>';
 
-let cache = { template: null, productsData: null, ingredientData: null, ts: 0 };
+let cache = { productsData: null, ingredientData: null, ts: 0 };
 const CACHE_TTL = 3600000;
 
 addEventListener('fetch', event => event.respondWith(handleRequest(event.request)));
@@ -320,14 +345,14 @@ async function handleProduct(url, slug) {
   if (slug === 'nourish-plus-kids') return redirect(url, '/products/nourish-plus');
   if (!VALID_PRODUCT_SLUGS.has(slug)) return notFound('Product Not Found');
 
-  const [template, productsData] = await Promise.all([getTemplate(), getProductsData()]);
-  if (!template || !productsData) {
+  const productsData = await getProductsData();
+  if (!productsData) {
     return new Response('Unable to load product page resources', { status: 503, headers: textHeaders() });
   }
   const product = productsData.products[slug];
   if (!product) return notFound('Product data not found');
 
-  const html = renderProductPage(template, product, productsData);
+  const html = renderProductPage(product, productsData);
   return new Response(html, {
     status: 200,
     headers: htmlHeaders({ 'X-Product': slug, 'X-Powered-By': VERSION })
@@ -515,20 +540,6 @@ function formatLongDate(dateStr) {
   return isNaN(date.getTime()) ? String(dateStr) : date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 }
 
-async function getTemplate() {
-  const now = Date.now();
-  if (cache.template && (now - cache.ts) < CACHE_TTL) return cache.template;
-  try {
-    const res = await fetch(contentUrl('product-template.html'), { headers: { 'User-Agent': 'Supplement-Intelligence-Worker/11.0' }, cf: { cacheTtl: 3600 } });
-    if (res.ok) {
-      cache.template = normalizeText(await res.text());
-      cache.ts = now;
-      return cache.template;
-    }
-  } catch (_) {}
-  return cache.template;
-}
-
 async function getProductsData() {
   const now = Date.now();
   if (cache.productsData && (now - cache.ts) < CACHE_TTL) return cache.productsData;
@@ -702,120 +713,133 @@ async function handleApiIngredient(request, slug) {
   });
 }
 
-function renderProductPage(template, product, productsData) {
-  let html = template;
-  const citations = product.citations || [];
-  const grade = product.evidenceGrade || 'Under Review';
-  const underReview = String(grade).toLowerCase() === 'under review';
+// Product pages share the site header, footer and palette (via decorate).
+// Content order: what the product is, what is on the label, what research says
+// about those ingredients, similar products, and where the information comes from.
+function renderProductPage(product, productsData) {
+  const name = product.name;
   const formulationVerified = String(product.formulationStatus || '').toLowerCase().startsWith('verified against current manufacturer');
-  const publicIngredients = formulationVerified ? (product.ingredients || '') : 'Formulation re-verification in progress.';
-  const publicTldr = underReview ? 'This product record is undergoing current-label and evidence re-verification. Ingredient-specific efficacy claims are not being asserted until that review is complete.' : (product.tldr || '');
-  // Each product gets its own search description (name + label ingredients)
-  // rather than the shared under-review sentence, which duplicated across all pages.
-  const metaDescription = formulationVerified
-    ? `${product.name} ingredients and evidence status. Label lists: ${product.ingredients}`
-    : publicTldr;
-  const faqs = product.faqs || [];
-  const related = (product.relatedProducts && product.relatedProducts.length)
-    ? product.relatedProducts
-    : findRelatedProducts(product, productsData);
-  // Sections with nothing to show are removed along with their table-of-contents entries.
-  if (!faqs.length) html = stripSection(html, 'FAQS');
-  if (!related.length) html = stripSection(html, 'RELATED');
-  const publicResearch = underReview ? 'Evidence review in progress. Verified references will be republished only after the current formulation and study-to-claim mapping are confirmed.' : (product.research || '');
+  const labelItems = formulationVerified ? normalizeText(product.ingredients || '').split(';').map(x => x.trim()).filter(Boolean) : [];
+  const evidence = product.ingredientEvidenceLinks || [];
+  const checked = formatLongDate(product.lastUpdated);
+  const shopUrl = product.shopUrl || 'https://vitalhealthglobal.com/products';
+  const related = (product.relatedProducts && product.relatedProducts.length) ? product.relatedProducts : findRelatedProducts(product, productsData);
 
-  // Grades are void until re-derived from verified ingredients; citation counts are
-  // honest (most are 0 pending verification) — render review-state text, not "0 Citations".
-  if (citations.length === 0) {
-    html = html.replace(/\{\{TOTAL_CITATIONS\}\}\s*Citations/g, 'Citations under review');
-    html = html.replace(/\{\{TOTAL_CITATIONS\}\}/g, '—');
+  // Which label items have an evidence review: the label item must contain the
+  // reviewed ingredient's common name (text before any "(" or "/").
+  const reviewedFor = item => {
+    const lower = item.toLowerCase();
+    return evidence.find(e => {
+      const base = String(e.name || '').split(/[(\/]/)[0].trim().toLowerCase();
+      return base && lower.includes(base);
+    });
+  };
+
+  const title = `${name} Ingredients & Evidence Status | Supplement Intelligence`;
+  const description = formulationVerified
+    ? truncateText(`${name} ingredients and evidence status. Label lists: ${product.ingredients}`, 160)
+    : truncateText(`${name}: the manufacturer has not published a complete ingredient list, so the ingredients cannot be reviewed yet.`, 160);
+
+  let summary;
+  if (!formulationVerified) {
+    summary = `<p><strong>At a glance.</strong> When we checked the manufacturer's page on ${escapeHtml(checked)}, it did not publish a complete ingredient list for ${escapeHtml(name)}, so there is nothing to review yet. We will add the ingredients once the full label is available.</p>`;
+  } else {
+    const reviewedCount = evidence.length;
+    summary = `<p><strong>At a glance.</strong> ${escapeHtml(name)} lists ${labelItems.length} ingredient${labelItems.length === 1 ? '' : 's'}. `
+      + (reviewedCount
+        ? `We have reviewed the human research on ${reviewedCount} of them, summarized below.</p>`
+        : 'None of them has an evidence review on this site yet.</p>')
+      + '<p>Studies of single ingredients cannot show what this product does: the amounts, form and combination in a finished product may differ from what was studied, and we have not reviewed trials of the product itself.</p>';
   }
 
-  html = html.replace(/\{\{PRODUCT_NAME\}\}/g, escapeHtml(product.name));
-  html = html.replace(/\{\{PRODUCT_SLUG\}\}/g, product.slug);
-  html = html.replace(/\{\{PRODUCT_CATEGORY\}\}/g, escapeHtml(product.category || 'General'));
-  html = html.replace(/\{\{PRODUCT_CATEGORY_DISPLAY\}\}/g, escapeHtml(formatCategory(product.category)));
-  html = html.replace(/\{\{PRODUCT_INGREDIENTS\}\}/g, escapeHtml(publicIngredients));
-  html = html.replace(/\{\{EVIDENCE_GRADE\}\}/g, escapeHtml(grade));
-  html = html.replace(/\{\{TOTAL_CITATIONS\}\}/g, String(product.totalCitations || citations.length));
-  html = html.replace(/\{\{LAST_UPDATED\}\}/g, escapeHtml(formatDate(product.lastUpdated)));
-  html = html.replace(/\{\{PRODUCT_TLDR\}\}/g, formatParagraphs(publicTldr));
-  html = html.replace(/\{\{PRODUCT_TLDR_SHORT\}\}/g, escapeHtml(truncateText(metaDescription, 160)));
-  html = html.replace(/\{\{RESEARCH_CONTENT\}\}/g, formatParagraphs(publicResearch));
-  html = html.replace(/\{\{MECHANISM\}\}/g, formatParagraphs((product.mechanism || '').replace(/^The mechanism is:\s*/i, '')));
-  html = html.replace(/\{\{INGREDIENTS_LIST\}\}/g, formatIngredients(publicIngredients));
-  html = html.replace(/\{\{INGREDIENT_EVIDENCE_LINKS\}\}/g, formatIngredientEvidenceLinks(product.ingredientEvidenceLinks || []));
-  html = html.replace(/\{\{CITATIONS_LIST\}\}/g, formatCitations(citations));
-  html = html.replace(/\{\{FAQS_LIST\}\}/g, formatFaqs(faqs));
-  html = html.replace(/\{\{RELATED_PRODUCTS\}\}/g, formatRelatedProducts(related));
+  const facts = `<aside class="si-p-facts" aria-label="Product facts">
+<dl>
+<div><dt>Ingredients on label</dt><dd>${formulationVerified ? labelItems.length : 'Not published'}</dd></div>
+<div><dt>With evidence reviews</dt><dd>${evidence.length}</dd></div>
+<div><dt>Label checked</dt><dd>${escapeHtml(checked)}</dd></div>
+</dl>
+<a class="si-btn" href="${escapeHtml(shopUrl)}" target="_blank" rel="sponsored noopener">View ${escapeHtml(name)} at Vital Health Global</a>
+<p class="si-small">We earn referral credit if you buy through this link. It does not change what we write.</p>
+</aside>`;
 
-  html = normalizeText(html);
-  // Per-product affiliate deep link (replaces the template's generic Vital Health link).
-  // Done after normalizeText so the exact URL (hyphens/refID) is preserved.
-  const shopUrl = product.shopUrl || 'https://vitalhealthglobal.com/products';
-  return html.split('https://vitalhealthglobal.com/products').join(shopUrl);
+  const image = product.image && product.image.src
+    ? `<figure class="si-p-image"><img src="${escapeHtml(product.image.src)}" alt="${escapeHtml(product.image.alt || name)}" width="480" height="480" loading="eager"></figure>`
+    : '';
+
+  let labelHtml = '';
+  if (labelItems.length) {
+    labelHtml = '<h2 id="label">What is in ' + escapeHtml(name) + '</h2><p class="si-small">From the manufacturer\'s product page, in label order. Linked ingredients have an evidence review on this site.</p><ul class="si-chips">'
+      + labelItems.map(item => {
+        const e = reviewedFor(item);
+        return e
+          ? `<li class="si-chip si-chip-on"><a href="${escapeHtml(e.url)}">${escapeHtml(item)}</a></li>`
+          : `<li class="si-chip">${escapeHtml(item)}</li>`;
+      }).join('') + '</ul>';
+  }
+
+  let evidenceHtml = '';
+  if (evidence.length) {
+    evidenceHtml = '<h2 id="evidence">What the research says about its ingredients</h2><div class="si-cards">'
+      + evidence.map(e => `<article class="si-card"><h3><a href="${escapeHtml(e.url)}">${escapeHtml(e.name)}</a></h3><p>${escapeHtml(e.posture || '')}</p><p class="si-card-link"><a href="${escapeHtml(e.url)}">Read the evidence review →</a></p></article>`).join('')
+      + '</div>';
+  }
+
+  const relatedHtml = related.length
+    ? '<h2 id="related">Products with shared ingredients</h2><ul class="si-chips">' + related.map(r => `<li class="si-chip si-chip-on"><a href="${escapeHtml(r.url)}">${escapeHtml(r.name || r.slug)}</a></li>`).join('') + '</ul>'
+    : '';
+
+  const source = product.formulationSource
+    ? `<a href="${escapeHtml(product.formulationSource)}" rel="noopener">manufacturer's product page</a>`
+    : "manufacturer's product page";
+  const aboutHtml = `<h2 id="about">About this page</h2>
+<p>The ingredient list comes from the ${source}, checked on ${escapeHtml(checked)}. The ingredient summaries come from our evidence reviews, which use published human studies and government sources; each review lists its sources. See <a href="/references">how we review evidence</a>.</p>
+<p>Supplement Intelligence is run by a Vital Health Global affiliate and earns referral credit on purchases made through links on this page.</p>
+<p class="si-small">For informational purposes only; not individualized medical advice. Talk to a clinician before starting a supplement, especially if you are pregnant, breastfeeding, take medicines or have a health condition. These statements have not been evaluated by the FDA.</p>`;
+
+  const body = `<p class="si-crumbs"><a href="/">Home</a> / <a href="/products">Products</a> / ${escapeHtml(name)}</p>
+<h1>${escapeHtml(name)}</h1>
+<p class="si-meta">Ingredients and evidence summary · label checked ${escapeHtml(checked)}</p>
+<div class="si-p-top">${image}<div class="si-p-lead"><div class="si-verdict">${summary}</div></div>${facts}</div>
+${labelHtml}
+${evidenceHtml}
+${relatedHtml}
+${aboutHtml}`;
+
+  const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeHtml(title)}</title><meta name="description" content="${escapeHtml(description)}"><link rel="canonical" href="${SITE_ORIGIN}/products/${product.slug}"></head><body>${body}</body></html>`;
+  return decorate(html, {
+    path: '/products/' + product.slug,
+    ogType: 'product',
+    wide: true,
+    breadcrumbs: [['Products', '/products'], [name, '/products/' + product.slug]],
+    jsonLd: [{
+      '@context': 'https://schema.org', '@type': 'Product', name,
+      description,
+      brand: { '@type': 'Brand', name: 'Vital Health Global' },
+      category: product.category || 'Dietary supplement',
+      url: `${SITE_ORIGIN}/products/${product.slug}`
+    }]
+  });
 }
 
 function renderProductsIndex(productsData) {
-  const products = Object.values(productsData.products || {});
-  const grouped = {};
-  for (const product of products) {
-    const cat = product.category || 'other';
-    grouped[cat] = grouped[cat] || [];
-    grouped[cat].push(product);
-  }
-  let groupsHtml = '';
-  for (const [category, items] of Object.entries(grouped).sort()) {
-    groupsHtml += `<section><h2>${escapeHtml(formatCategory(category))}</h2>`;
-    for (const p of items.sort((a,b)=>a.name.localeCompare(b.name))) {
-      const citations = p.citations || [];
-      const evidence = citations.length
-        ? `<strong>Evidence grade:</strong> ${escapeHtml(p.evidenceGrade || 'Under Review')} · <strong>Citations:</strong> ${citations.length}`
-        : '<strong>Evidence:</strong> full review in progress';
-      groupsHtml += `<article style="border:1px solid #e5e7eb;border-radius:14px;padding:16px;margin:14px 0;">
-        <h3><a href="${escapeHtml(p.url)}">${escapeHtml(p.name)}</a></h3>
-        <p>${escapeHtml(String(p.formulationStatus || '').toLowerCase().startsWith('verified against current manufacturer') ? 'Current manufacturer formulation checked Oct 2026. Efficacy evidence remains under review.' : 'Formulation and efficacy evidence are under review.')}</p>
-        <p>${evidence}</p>
-      </article>`;
-    }
-    groupsHtml += '</section>';
-  }
-  const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Vital Health Global Products: Ingredients & Evidence Status | Supplement Intelligence</title><meta name="description" content="Current ingredient lists for ${products.length} Vital Health Global products, checked against manufacturer labels, with links to reviewed evidence for each ingredient."><link rel="canonical" href="https://supplement-intelligence.com/products"><style>a{text-decoration:none}a:hover{text-decoration:underline}</style></head><body><p><a href="/">Home</a> / Products</p><h1>All Products</h1><p>Independent product information for the Vital Health Global catalog. Product formulation records are undergoing label re-verification; a full evidence review is in progress.</p>${groupsHtml}</body></html>`;
-  return decorate(html, { path: '/products', breadcrumbs: [['Products', '/products']] });
-}
-
-function formatParagraphs(text) {
-  return normalizeText(text).split(/\n\n+/).filter(Boolean).map(p => `<p>${escapeHtml(p.trim())}</p>`).join('\n');
-}
-
-function formatIngredients(text) {
-  const items = normalizeText(text).split(';').map(x => x.trim()).filter(Boolean);
-  return items.map(item => `<li>${escapeHtml(item)}</li>`).join('');
-}
-
-function formatIngredientEvidenceLinks(items) {
-  if (!items.length) {
-    return '<p>No verified ingredient evidence page is linked to this product yet.</p>';
-  }
-  return '<ul>' + items.map(item =>
-    '<li><a href="' + escapeHtml(item.url) + '"><strong>' + escapeHtml(item.name) + '</strong></a> — ' +
-    escapeHtml(item.posture || 'Evidence summary available.') + '</li>'
-  ).join('') + '</ul>';
-}
-
-function formatCitations(citations) {
-  if (!citations.length) {
-    return '<li>Citations have been removed pending verification. A full evidence review is in progress; verified references will be republished once confirmed.</li>';
-  }
-  return citations.map(c => `<li>${escapeHtml(c.title)} · PMID <a href="https://pubmed.ncbi.nlm.nih.gov/${escapeHtml(c.pmid)}">${escapeHtml(c.pmid)}</a></li>`).join('');
-}
-
-function formatFaqs(faqs) {
-  return faqs.map(f => `<details><summary>${escapeHtml(f.question)}</summary><p>${escapeHtml(f.answer)}</p></details>`).join('');
-}
-
-function formatRelatedProducts(relatedProducts) {
-  return relatedProducts.map(r => `<a class="related-card" href="${escapeHtml(r.url)}"><h4>${escapeHtml(r.name || r.slug)}</h4></a>`).join('');
+  const products = Object.values(productsData.products || {}).sort((a, b) => a.name.localeCompare(b.name));
+  const cards = products.map(p => {
+    const verified = String(p.formulationStatus || '').toLowerCase().startsWith('verified against current manufacturer');
+    const items = verified ? normalizeText(p.ingredients || '').split(';').map(x => x.trim()).filter(Boolean) : [];
+    const reviewed = (p.ingredientEvidenceLinks || []).length;
+    const preview = items.slice(0, 4).join(', ') + (items.length > 4 ? ', …' : '');
+    const stats = verified
+      ? `${items.length} ingredient${items.length === 1 ? '' : 's'} · ${reviewed} with evidence review${reviewed === 1 ? '' : 's'}`
+      : 'Full ingredient list not published by the manufacturer';
+    const searchText = [p.name, verified ? p.ingredients : ''].join(' ').toLowerCase();
+    return `<article class="si-card" data-search="${escapeHtml(searchText)}"><h3><a href="${escapeHtml(p.url)}">${escapeHtml(p.name)}</a></h3>`
+      + (preview ? `<p>${escapeHtml(preview)}</p>` : '')
+      + `<p class="si-small">${escapeHtml(stats)}</p></article>`;
+  }).join('');
+  const filter = `<p><label for="si-filter" class="si-small">Filter by product or ingredient</label><br><input id="si-filter" class="si-input" type="search" placeholder="e.g. turmeric, collagen, V-DAILY" autocomplete="off"></p><p id="si-none" class="si-small" hidden>No products match.</p>`;
+  const script = `<script>(function(){var i=document.getElementById('si-filter');if(!i)return;var c=[].slice.call(document.querySelectorAll('.si-cards .si-card'));var n=document.getElementById('si-none');i.addEventListener('input',function(){var q=i.value.trim().toLowerCase(),s=0;c.forEach(function(e){var m=!q||e.getAttribute('data-search').indexOf(q)>-1;e.hidden=!m;if(m)s++;});n.hidden=s>0;});})();</script>`;
+  const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Vital Health Global Products: Ingredients & Evidence Status | Supplement Intelligence</title><meta name="description" content="Current ingredient lists for ${products.length} Vital Health Global products, checked against manufacturer labels, with links to reviewed evidence for each ingredient."><link rel="canonical" href="https://supplement-intelligence.com/products"></head><body><p class="si-crumbs"><a href="/">Home</a> / Products</p><h1>Vital Health Global products</h1><p>Ingredient lists for ${products.length} products, checked against the manufacturer's labels, with links to what the research says about each reviewed ingredient. Research on single ingredients is not proof that a finished product works.</p>${filter}<div class="si-cards">${cards}</div><p class="si-small">Supplement Intelligence is run by a Vital Health Global affiliate and earns referral credit on purchases made through product links.</p>${script}</body></html>`;
+  return decorate(html, { path: '/products', wide: true, breadcrumbs: [['Products', '/products']] });
 }
 
 // Up to four other products that share the most reviewed ingredients with this one.
@@ -829,11 +853,6 @@ function findRelatedProducts(product, productsData) {
     .sort((a, b) => b.shared - a.shared || a.p.name.localeCompare(b.p.name))
     .slice(0, 4)
     .map(x => ({ url: '/products/' + x.p.slug, name: x.p.name, slug: x.p.slug }));
-}
-
-// Removes every <!--IF_NAME-->...<!--/IF_NAME--> block from the template.
-function stripSection(html, name) {
-  return html.replace(new RegExp(`<!--IF_${name}-->[\\s\\S]*?<!--/IF_${name}-->`, 'g'), '');
 }
 
 // Mojibake repair, behavior-identical to the v8 chain but written with explicit
@@ -874,16 +893,6 @@ function escapeHtml(text) {
 function truncateText(text, maxLength) {
   const clean = normalizeText(text || '');
   return clean.length <= maxLength ? clean : clean.slice(0, maxLength).trimEnd() + '…';
-}
-
-function formatCategory(cat) {
-  return String(cat || 'General').split(/[\/\s]+/).map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' / ');
-}
-
-function formatDate(dateStr) {
-  if (!dateStr) return '2026';
-  const date = new Date(dateStr);
-  return isNaN(date.getTime()) ? String(dateStr) : date.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
 }
 
 function baseHeaders(contentType) {
