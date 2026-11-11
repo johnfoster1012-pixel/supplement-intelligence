@@ -181,7 +181,8 @@
         "v-fortyflora",
         "v-nrgy",
         "v-organex",
-        "v-daily-sachet"
+        "v-daily-sachet",
+        "nourish-plus"
       ],
       "sources": [
         {
@@ -1291,7 +1292,8 @@
       "safety": "LiverTox reports that controlled trials generally have not shown liver enzyme elevations or clinically apparent liver injury, but rare possible liver-injury reports exist. Commercial spirulina can also be contaminated with toxin-producing cyanobacteria, making product quality relevant.",
       "product_directness": "V-CONTROL lists spirulina algae extract but does not disclose the amount, extract characterization, or contaminant testing on the tracked manufacturer page. Trial results therefore cannot be directly assigned to the product.",
       "products": [
-        "v-control"
+        "v-control",
+        "nourish-plus"
       ],
       "sources": [
         {
@@ -1410,7 +1412,9 @@
       "safety": "The small and heterogeneous randomized-trial evidence base does not provide strong long-term safety certainty for concentrated or high-dose preparations. Safety conclusions should remain preparation-specific.",
       "product_directness": "V-ITAREN lists moringa leaf without a disclosed amount or preparation details. The current low-certainty human evidence cannot establish finished-product cardiometabolic efficacy.",
       "products": [
-        "v-itaren"
+        "v-itaren",
+        "nourish-plus",
+        "v-nitro"
       ],
       "sources": [
         {
@@ -1493,7 +1497,8 @@
       "safety": "The small trials reported few minor adverse events and no major laboratory toxicity over the studied periods. LiverTox notes rare reports in which horsetail was implicated in herb-associated liver injury, but causal detail is limited.",
       "product_directness": "V-ITAREN lists horsetail without dose or extract standardization. The 900 mg/day standardized-extract trial results cannot be assigned directly to this finished product.",
       "products": [
-        "v-itaren"
+        "v-itaren",
+        "v-asculax"
       ],
       "sources": [
         {
