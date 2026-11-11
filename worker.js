@@ -7,7 +7,7 @@
  */
 const CONTENT_BRANCH_NAME = (typeof CONTENT_BRANCH !== 'undefined' && CONTENT_BRANCH) ? CONTENT_BRANCH : 'main';
 const IS_PREVIEW = CONTENT_BRANCH_NAME !== 'main';
-const VERSION = 'Supplement Intelligence v11.9';
+const VERSION = 'Supplement Intelligence v11.10';
 const SITE_ORIGIN = 'https://supplement-intelligence.com';
 // CONTENT_REV is the commit SHA the deploy workflow passes in (--var). Content is
 // read from that exact commit, so a deploy can never pick up an older copy of a
@@ -108,6 +108,7 @@ const INGREDIENT_REDIRECTS = new Map([
 const GLP1_GUIDES = new Map([
   ['', { file: 'glp-1/index.html', name: 'Supplements on GLP-1 drugs', reviewed: '2026-11-10' }],
   ['berberine-vs-ozempic', { file: 'glp-1/berberine-vs-ozempic.html', name: 'Berberine vs Ozempic', reviewed: '2026-11-10' }],
+  ['semaglutide-with-b12', { file: 'glp-1/semaglutide-with-b12.html', name: 'Semaglutide with B12', reviewed: '2026-11-10' }],
 ]);
 
 // Guides to point to from an ingredient page: slug -> [[label, path], ...].
@@ -358,7 +359,7 @@ a{text-decoration:none}a:hover{text-decoration:underline}
 <p><a href="/ingredients"><strong>Browse ingredient evidence →</strong></a> &nbsp; <a href="/products">Browse product formulations →</a></p>
 </section>
 <section class="grid">
-<div class="card"><h2>Supplements and GLP-1 drugs</h2><p>What trials show, and do not show, about creatine, protein, fiber, magnesium and biotin for people taking semaglutide or tirzepatide.</p><p><a href="/glp-1">Read the GLP-1 guide</a> · <a href="/glp-1/berberine-vs-ozempic">Berberine vs Ozempic</a></p></div>
+<div class="card"><h2>Supplements and GLP-1 drugs</h2><p>What trials show, and do not show, about creatine, protein, fiber, magnesium and biotin for people taking semaglutide or tirzepatide.</p><p><a href="/glp-1">Read the GLP-1 guide</a> · <a href="/glp-1/semaglutide-with-b12">Semaglutide with B12</a> · <a href="/glp-1/berberine-vs-ozempic">Berberine vs Ozempic</a></p></div>
 <div class="card"><h2>Reviewed ingredient evidence</h2><p>Evidence summaries cover studied context, safety, source quality, and whether current products actually match the studied form or dose.</p><p><a href="/ingredients">View all 34 ingredient pages</a></p></div>
 <div class="card"><h2>Current product formulations</h2><p>Manufacturer pages are used for formulation facts only. Finished-product efficacy remains Under Review unless explicitly adjudicated.</p><p><a href="/products">View 31 product records</a></p></div>
 <div class="card"><h2>Research methodology</h2><p>Historical citation sets that did not meet the current standard were withdrawn. The current method prioritizes primary research and authoritative government sources.</p><p><a href="/references">Read research status</a></p></div>

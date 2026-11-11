@@ -2,7 +2,7 @@
 
 ## Current architecture
 
-- Cloudflare Worker: `worker.js` (v11.9)
+- Cloudflare Worker: `worker.js` (v11.10)
 - Current product data: `products-data.json`
 - Label-verification ledger: `data/product-label-verification.json`
 - Ingredient evidence: `ingredient-evidence.json`
