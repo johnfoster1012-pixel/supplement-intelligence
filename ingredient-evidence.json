@@ -1524,14 +1524,19 @@
     "uva-ursi": {
       "name": "Uva ursi / bearberry (Arctostaphylos uva-ursi)",
       "posture": "Human trials do not establish uva ursi as an equivalent treatment for uncomplicated UTI; symptom benefit was absent or inferior to antibiotic therapy in reviewed trials.",
-      "summary": "In a 382-woman factorial randomized trial, uva ursi did not improve urinary-frequency symptoms or significantly reduce antibiotic use versus placebo. In a later 398-woman trial, initial uva-ursi treatment reduced antibiotic courses but failed symptom non-inferiority and had more pyelonephritis events than fosfomycin.",
-      "studied_context": "The clinical trials involved adult women with suspected uncomplicated urinary tract infection and used defined uva-ursi/arbutin preparations for short treatment periods. These results concern symptomatic UTI treatment strategies, not general urinary wellness.",
-      "safety": "The 398-participant trial reported greater symptom burden and eight pyelonephritis cases in the uva-ursi group versus two with fosfomycin. Uva ursi should not be presented as a proven substitute for standard UTI evaluation or treatment.",
+      "summary": "Two large randomized trials have tested uva ursi extract in women with suspected uncomplicated UTI. In a 382-woman UK trial it did not improve urinary symptoms or significantly reduce antibiotic use compared with placebo. In a 398-woman German trial, starting with uva ursi instead of fosfomycin cut antibiotic courses by 63.6% but failed symptom non-inferiority, with eight pyelonephritis cases against two (p = 0.067). The EMA accepts bearberry leaf only as a traditional remedy for symptoms of mild recurrent lower UTI in adult women, for no more than one week, and describes the human evidence as very poor. No human trials were found for diuretic, weight-loss or kidney-stone claims.",
+      "studied_context": "The clinical trials involved adult women with suspected uncomplicated urinary tract infection and used defined uva ursi extracts with a known arbutin content for 3 to 5 days. The results concern strategies for treating a symptomatic UTI. They do not cover men, children, pregnancy, long-term use, tea, or general urinary wellness and diuretic claims.",
+      "safety": "The EMA monograph lists nausea, vomiting and stomach ache, notes possible greenish-brown urine, limits use to one week, contraindicates use in kidney disorders, and does not recommend use in pregnancy, breastfeeding, men, or anyone under 18. In the German trial, eight women starting on uva ursi developed pyelonephritis against two on fosfomycin. LactMed advises avoiding uva ursi during breastfeeding; LiverTox reports no specific link to liver injury. Isolated case reports describe bull's-eye maculopathy after three years of use and severe hyponatremia during a high-fluid herbal detox regimen. Uva ursi should not be presented as a substitute for standard UTI evaluation or treatment.",
       "product_directness": "V-ITAREN lists uva ursi leaf but does not disclose the arbutin content or dose used in the reviewed trials. The product therefore cannot be assumed to reproduce the trial exposure or outcome.",
       "products": [
         "v-itaren"
       ],
       "sources": [
+        {
+          "type": "European Medicines Agency",
+          "title": "Uvae ursi folium - herbal medicinal product",
+          "url": "https://www.ema.europa.eu/en/medicines/herbal/uvae-ursi-folium"
+        },
         {
           "type": "PubMed randomized controlled trial",
           "title": "Uva-ursi extract and ibuprofen as alternative treatments for uncomplicated urinary tract infection in women (ATAFUTI): a factorial randomized trial",
@@ -1545,12 +1550,39 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/34111592/"
         },
         {
-          "type": "European Medicines Agency",
-          "title": "Uvae ursi folium - herbal medicinal product",
-          "url": "https://www.ema.europa.eu/en/medicines/herbal/uvae-ursi-folium"
+          "type": "IQWiG health technology assessment",
+          "title": "Bladder infection: Do herbal remedies help with recurrent bladder infection?",
+          "pmid": "37023241",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37023241/"
+        },
+        {
+          "type": "PubMed pharmacokinetic study",
+          "title": "Urinary excretion and metabolism of arbutin after oral administration of Arctostaphylos uvae ursi extract as film-coated tablets and aqueous solution in healthy humans",
+          "pmid": "12162475",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/12162475/"
+        },
+        {
+          "type": "Drugs and Lactation Database (LactMed)",
+          "title": "Uva Ursi",
+          "pmid": "30000963",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30000963/"
+        },
+        {
+          "type": "LiverTox (US National Institutes of Health)",
+          "title": "Uva Ursi",
+          "pmid": "32364691",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32364691/"
+        },
+        {
+          "type": "PubMed case report",
+          "title": "Bull's-eye maculopathy secondary to herbal toxicity from uva ursi",
+          "pmid": "15183807",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/15183807/"
         }
       ],
-      "last_reviewed_at": "2026-10-02"
+      "last_reviewed_at": "2026-11-11",
+      "page_title": "Uva Ursi (Bearberry) Benefits, Side Effects and UTI Evidence | Supplement Intelligence",
+      "page_description": "What uva ursi (bearberry leaf) is used for, what two large UTI trials found, its side effects, and who should avoid it. Checked against EMA and NIH sources."
     }
   }
 }
