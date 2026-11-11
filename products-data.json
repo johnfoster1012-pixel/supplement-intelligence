@@ -252,6 +252,24 @@
           "name": "Zinc",
           "url": "/ingredients/zinc",
           "posture": "Essential nutrient with established deficiency-related roles; cold benefits are formulation- and timing-specific rather than a generic property of zinc-containing supplements."
+        },
+        {
+          "slug": "magnesium",
+          "name": "Magnesium",
+          "url": "/ingredients/magnesium",
+          "posture": "Essential nutrient with established physiological roles; supplement benefits depend on baseline status, outcome, form, and dose."
+        },
+        {
+          "slug": "spirulina",
+          "name": "Spirulina (Arthrospira/Spirulina)",
+          "url": "/ingredients/spirulina",
+          "posture": "Some human evidence supports modest blood-pressure lowering in selected adults, but the trial base is limited and generic cardiometabolic claims remain uncertain."
+        },
+        {
+          "slug": "moringa",
+          "name": "Moringa (Moringa oleifera)",
+          "url": "/ingredients/moringa",
+          "posture": "Human cardiometabolic evidence is inconsistent and very low certainty overall; broad glucose, lipid, weight, or blood-pressure claims are not established."
         }
       ]
     },
@@ -386,6 +404,12 @@
           "name": "Methylsulfonylmethane (MSM)",
           "url": "/ingredients/msm",
           "posture": "Evidence is too limited to draw reliable conclusions for osteoarthritis or chronic pain."
+        },
+        {
+          "slug": "horsetail",
+          "name": "Horsetail (Equisetum arvense)",
+          "url": "/ingredients/horsetail",
+          "posture": "Small human trials suggest diuretic and blood-pressure effects for standardized extracts, but the evidence base is limited and does not support broad or finished-product claims."
         }
       ]
     },
@@ -872,6 +896,12 @@
           "name": "L-citrulline / citrulline malate",
           "url": "/ingredients/l-citrulline",
           "posture": "Exercise-performance evidence is limited and conflicting; some acute resistance-exercise studies are positive, but overall support remains weak."
+        },
+        {
+          "slug": "moringa",
+          "name": "Moringa (Moringa oleifera)",
+          "url": "/ingredients/moringa",
+          "posture": "Human cardiometabolic evidence is inconsistent and very low certainty overall; broad glucose, lipid, weight, or blood-pressure claims are not established."
         }
       ]
     },
