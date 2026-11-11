@@ -1203,14 +1203,19 @@
     "lemon-balm": {
       "name": "Lemon balm (Melissa officinalis)",
       "posture": "Promising but heterogeneous human evidence for anxiety and depressive symptoms; preparation differences and a small trial base limit broad mood or sleep claims.",
-      "summary": "A systematic review and meta-analysis of clinical trials reported improvements in anxiety and depressive symptom scores, but the authors emphasized high heterogeneity, few trials, and methodological differences. EMA has a herbal monograph for Melissa officinalis leaf in traditional-use areas including mild mental stress and sleep complaints; this is not equivalent to proof for every lemon-balm preparation.",
-      "studied_context": "Clinical studies use varied Melissa officinalis preparations, doses, durations, and populations. The review-level evidence does not establish interchangeability between leaf preparations, extracts made from other plant parts, or combination products.",
-      "safety": "The clinical-trial meta-analysis did not identify serious adverse effects, but the evidence base is small and heterogeneous. The reviewed sources do not establish long-term safety for all extracts or doses.",
+      "summary": "A 2021 systematic review and meta-analysis of randomized trials found lemon balm improved anxiety and depressive symptom scores compared with placebo, but the authors stressed high heterogeneity, a small number of trials and differing methods. Evidence for sleep rests on a few small trials with mixed results. A lemon balm cream has some trial support for cold sores, and the largest trial of an extract for cognition in older adults (323 people, 96 weeks) found no benefit. The EMA accepts Melissa leaf as a traditional herbal medicine for mild mental stress, sleep and mild digestive complaints, based on long-standing use rather than clinical trials.",
+      "studied_context": "Clinical studies use varied Melissa officinalis preparations, doses, durations and populations. Many trials tested leaf extracts for 2 to 12 weeks in specific patient groups; single-dose studies were done in healthy volunteers. The evidence does not establish interchangeability between leaf tea, standardized extracts, extracts made from other plant parts, creams, essential oil or combination products.",
+      "safety": "The EMA monograph lists no known side effects for traditional leaf preparations and warns that lemon balm may impair the ability to drive and use machines. LactMed describes it as generally well tolerated in adults, with nausea, vomiting, abdominal pain, dizziness and wheezing reported occasionally; LiverTox reports no link to liver injury. The EMA does not recommend use in pregnancy or breastfeeding, or in children under 12, for lack of data, and lists no interaction data. Laboratory and animal studies indicate a water extract may inhibit thyroid-stimulating hormone; the clinical relevance is unknown. Long-term safety is not established for all extracts or doses.",
       "product_directness": "V-CONTROL lists 'lemon balm fruit extract' without dose or standardization. The reviewed EMA monograph centers on Melissa leaf and the clinical literature uses varied preparations, so direct applicability to the finished product is not established.",
       "products": [
         "v-control"
       ],
       "sources": [
+        {
+          "type": "European Medicines Agency",
+          "title": "Melissae folium - herbal medicinal product",
+          "url": "https://www.ema.europa.eu/en/medicines/herbal/melissae-folium"
+        },
         {
           "type": "PubMed systematic review/meta-analysis",
           "title": "The effects of lemon balm (Melissa officinalis L.) on depression and anxiety in clinical trials: A systematic review and meta-analysis",
@@ -1218,9 +1223,46 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/34449930/"
         },
         {
-          "type": "European Medicines Agency",
-          "title": "Melissae folium - herbal medicinal product",
-          "url": "https://www.ema.europa.eu/en/medicines/herbal/melissae-folium"
+          "type": "PubMed randomized crossover trial",
+          "title": "Effects of Melissa officinalis Phytosome on Sleep Quality: Results of a Prospective, Double-Blind, Placebo-Controlled, and Cross-Over Study",
+          "pmid": "39683592",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39683592/"
+        },
+        {
+          "type": "PubMed randomized controlled trial",
+          "title": "Balm mint extract (Lo-701) for topical treatment of recurring herpes labialis",
+          "pmid": "10589440",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/10589440/"
+        },
+        {
+          "type": "PubMed randomized controlled trial",
+          "title": "Effects of Melissa officinalis Extract Containing Rosmarinic Acid on Cognition in Older Adults Without Dementia: A Randomized Controlled Trial",
+          "pmid": "36502333",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36502333/"
+        },
+        {
+          "type": "Cochrane systematic review",
+          "title": "Aromatherapy for dementia",
+          "pmid": "32813272",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32813272/"
+        },
+        {
+          "type": "PubMed systematic review/meta-analysis",
+          "title": "Effects of Melissa officinalis (Lemon Balm) on cardio-metabolic outcomes: A systematic review and meta-analysis",
+          "pmid": "32614129",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32614129/"
+        },
+        {
+          "type": "Drugs and Lactation Database (LactMed)",
+          "title": "Lemon Balm",
+          "pmid": "30000901",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30000901/"
+        },
+        {
+          "type": "LiverTox (US National Institutes of Health)",
+          "title": "Lemon Balm",
+          "pmid": "38381912",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38381912/"
         }
       ],
       "review_evidence": [
@@ -1233,11 +1275,13 @@
           "finding": "Pooled analyses favored lemon balm for anxiety and depressive symptoms.",
           "limitations": "High between-study heterogeneity, a small number of trials, and differences in preparations and methods limit confidence and generalizability.",
           "directness": "Relevant human evidence",
-          "verified_at": "2026-10-02",
+          "verified_at": "2026-11-11",
           "url": "https://pubmed.ncbi.nlm.nih.gov/34449930/"
         }
       ],
-      "last_reviewed_at": "2026-10-02"
+      "last_reviewed_at": "2026-11-11",
+      "page_title": "Lemon Balm Benefits, Side Effects and Evidence | Supplement Intelligence",
+      "page_description": "What lemon balm tea and extracts are used for, what trials found for anxiety, sleep and cold sores, and who should avoid it. Checked against EMA and NIH sources."
     },
     "spirulina": {
       "name": "Spirulina (Arthrospira/Spirulina)",
