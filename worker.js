@@ -7,7 +7,7 @@
  */
 const CONTENT_BRANCH_NAME = (typeof CONTENT_BRANCH !== 'undefined' && CONTENT_BRANCH) ? CONTENT_BRANCH : 'main';
 const IS_PREVIEW = CONTENT_BRANCH_NAME !== 'main';
-const VERSION = 'Supplement Intelligence v11.8';
+const VERSION = 'Supplement Intelligence v11.9';
 const SITE_ORIGIN = 'https://supplement-intelligence.com';
 // CONTENT_REV is the commit SHA the deploy workflow passes in (--var). Content is
 // read from that exact commit, so a deploy can never pick up an older copy of a
@@ -434,8 +434,9 @@ async function handleIngredientPage(slug) {
   const options = { path, ogType: 'article', breadcrumbs: [['Ingredients', '/ingredients']] };
   if (x) {
     options.breadcrumbs.push([x.name, path]);
-    options.title = `${x.name} Evidence Review: Uses, Safety & Sources | Supplement Intelligence`;
-    options.description = truncateText(`${x.name} evidence review: ${x.posture}`, 158);
+    // Expanded pages can set their own search title and description in the data record.
+    options.title = x.page_title || `${x.name} Evidence Review: Uses, Safety & Sources | Supplement Intelligence`;
+    options.description = x.page_description || truncateText(`${x.name} evidence review: ${x.posture}`, 158);
     const reviewed = x.last_reviewed_at || data.generated_at || null;
     if (reviewed) {
       options.afterH1 = `<p class="si-meta">Last reviewed ${escapeHtml(formatLongDate(reviewed))} · <a href="/references">How evidence is reviewed</a></p>`;

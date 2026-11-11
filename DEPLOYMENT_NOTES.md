@@ -2,7 +2,7 @@
 
 ## Current architecture
 
-- Cloudflare Worker: `worker.js` (v11.8)
+- Cloudflare Worker: `worker.js` (v11.9)
 - Current product data: `products-data.json`
 - Label-verification ledger: `data/product-label-verification.json`
 - Ingredient evidence: `ingredient-evidence.json`
@@ -60,3 +60,7 @@ The deploy workflow passes the commit SHA to the Worker as `CONTENT_REV`. The Wo
 Guide pages are static HTML in `glp-1/`, registered in `GLP1_GUIDES` in `worker.js` (slug, file, name, review date). The Worker adds the shared chrome, the "Last reviewed" line and structured data. To add a guide: add the HTML file, register it in `GLP1_GUIDES`, and add its URL to `sitemap.xml`. `INGREDIENT_GUIDE_LINKS` adds a "Related guide" link to ingredient pages.
 
 Every figure on a guide page must come from a source listed on that page. Statements that no trial was found must name the date the search was run.
+
+## Expanded ingredient pages (v11.9)
+
+An ingredient record in `ingredient-evidence.json` may set `page_title` and `page_description`. When present, the Worker uses them for the page's search title and description instead of the generated ones. Use them on pages rewritten as full reviews (first: dandelion). Keep `posture` unchanged unless `products-data.json` is updated to match, because the validator compares them.

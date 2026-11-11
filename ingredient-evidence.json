@@ -1401,27 +1401,45 @@
     "dandelion": {
       "name": "Dandelion (Taraxacum officinale)",
       "posture": "Traditional-use support exists for urinary and gastrointestinal indications, but direct human efficacy evidence is sparse and plant-part specific.",
-      "summary": "EMA maintains herbal monographs for dandelion root and other preparations. A small 17-person human pilot reported short-term diuretic signals after a fresh dandelion leaf extract, but this does not establish efficacy for dandelion root or for chronic use.",
-      "studied_context": "The cited human diuretic pilot used fresh leaf hydroethanolic extract over one day. V-ITAREN lists dandelion root, which is a different plant part and should not inherit the leaf-extract result.",
-      "safety": "EMA's dandelion-root monograph includes use restrictions and contraindications, including hypersensitivity to Asteraceae, and notes that adequate fluid intake is required for urinary-use preparations. Clinical evidence is too sparse to define safety for all concentrated extracts.",
+      "summary": "EU regulators accept dandelion root and leaf as traditional herbal medicines for minor digestive and urinary complaints, based on long-standing use rather than clinical trials. The only human trial of dandelion taken by mouth on its own is a 17-person, one-day pilot of a fresh leaf extract that reported short-term increases in urination. NCCIH states there is no compelling scientific evidence supporting dandelion for any health condition.",
+      "studied_context": "The human diuretic pilot used a fresh leaf hydroethanolic extract (8 mL three times in one day) with no placebo group. No human trial of dandelion root, dandelion tea or roasted-root 'coffee' was found in a PubMed search on 2026-11-10. V-ITAREN lists dandelion root, which is a different plant part and should not inherit the leaf-extract result.",
+      "safety": "Dandelion in food amounts is considered likely safe (NCCIH) and is generally recognized as safe as a food (LactMed). It can rarely cause allergic reactions, diarrhea and gastrointestinal upset. EMA monographs contraindicate use in people allergic to Asteraceae plants, advise against the root in bile duct obstruction, cholangitis, liver disease or gallstones, and advise against the leaf in renal failure, diabetes or heart failure because of possible hyperkalemia. Use is not recommended in pregnancy, breastfeeding or children under 12 for lack of data. NCCIH notes theoretical interactions with antidiabetes, anticoagulant, antiplatelet and diuretic drugs.",
       "product_directness": "V-ITAREN lists dandelion root. The direct human diuretic pilot reviewed here studied leaf extract, not root, and V-ITAREN does not disclose dose or extraction details. Product-level efficacy is therefore unverified.",
       "products": [
         "v-itaren"
       ],
       "sources": [
         {
+          "type": "National Center for Complementary and Integrative Health",
+          "title": "Dandelion",
+          "url": "https://www.nccih.nih.gov/health/dandelion"
+        },
+        {
           "type": "European Medicines Agency",
           "title": "Taraxaci officinalis radix - herbal medicinal product",
           "url": "https://www.ema.europa.eu/en/medicines/herbal/taraxaci-officinalis-radix"
+        },
+        {
+          "type": "European Medicines Agency",
+          "title": "Taraxaci folium - herbal medicinal product",
+          "url": "https://www.ema.europa.eu/en/medicines/herbal/taraxaci-folium"
         },
         {
           "type": "PubMed clinical pilot study",
           "title": "The diuretic effect in human subjects of an extract of Taraxacum officinale folium over a single day",
           "pmid": "19678785",
           "url": "https://pubmed.ncbi.nlm.nih.gov/19678785/"
+        },
+        {
+          "type": "Drugs and Lactation Database (LactMed)",
+          "title": "Dandelion",
+          "pmid": "30000932",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30000932/"
         }
       ],
-      "last_reviewed_at": "2026-10-02"
+      "last_reviewed_at": "2026-11-10",
+      "page_title": "Dandelion Root and Tea: Benefits, Side Effects and Evidence | Supplement Intelligence",
+      "page_description": "What dandelion root, leaf and tea are used for, what the one human trial found, and who should avoid them. Reviewed against NIH and European Medicines Agency sources."
     },
     "horsetail": {
       "name": "Horsetail (Equisetum arvense)",
