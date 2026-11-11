@@ -7,7 +7,7 @@
  */
 const CONTENT_BRANCH_NAME = (typeof CONTENT_BRANCH !== 'undefined' && CONTENT_BRANCH) ? CONTENT_BRANCH : 'main';
 const IS_PREVIEW = CONTENT_BRANCH_NAME !== 'main';
-const VERSION = 'Supplement Intelligence v11.12';
+const VERSION = 'Supplement Intelligence v11.13';
 const SITE_ORIGIN = 'https://supplement-intelligence.com';
 // CONTENT_REV is the commit SHA the deploy workflow passes in (--var). Content is
 // read from that exact commit, so a deploy can never pick up an older copy of a
@@ -109,6 +109,7 @@ const GLP1_GUIDES = new Map([
   ['', { file: 'glp-1/index.html', name: 'Supplements on GLP-1 drugs', reviewed: '2026-11-10' }],
   ['berberine-vs-ozempic', { file: 'glp-1/berberine-vs-ozempic.html', name: 'Berberine vs Ozempic', reviewed: '2026-11-10' }],
   ['semaglutide-with-b12', { file: 'glp-1/semaglutide-with-b12.html', name: 'Semaglutide with B12', reviewed: '2026-11-10' }],
+  ['glp-1-supplements', { file: 'glp-1/glp-1-supplements.html', name: 'Do GLP-1 supplements work?', reviewed: '2026-11-11' }],
 ]);
 
 // Guides to point to from an ingredient page: slug -> [[label, path], ...].
@@ -384,11 +385,11 @@ async function handleProduct(url, slug) {
 // for search; the deploy check looks for "verification, not marketing claims".
 const HOME_GUIDES = [
   ['/glp-1', 'GLP-1 guide', 'Supplements on GLP-1 drugs', 'What the evidence shows for protein, creatine, fiber, magnesium and biotin if you take semaglutide or tirzepatide.'],
+  ['/glp-1/glp-1-supplements', 'GLP-1 guide', 'Do GLP-1 supplements work?', 'Patches, drops and "natural GLP-1" boosters checked against the trials, ingredient by ingredient.'],
   ['/glp-1/semaglutide-with-b12', 'GLP-1 guide', 'Semaglutide with B12', 'It is a compounded product, not an approved drug. Does the added B12 do anything?'],
   ['/glp-1/berberine-vs-ozempic', 'GLP-1 guide', 'Berberine vs Ozempic', 'Is berberine "nature\'s Ozempic"? What separate trials show for weight and blood sugar.'],
   ['/ingredients/lemon-balm', 'Ingredient review', 'Lemon balm', 'Benefits, side effects and what trials found for anxiety, sleep and cold sores.'],
   ['/ingredients/uva-ursi', 'Ingredient review', 'Uva ursi (bearberry)', 'What two large urinary tract infection trials found, and who should avoid it.'],
-  ['/ingredients/dandelion', 'Ingredient review', 'Dandelion', 'What dandelion root, leaf and tea are used for, what the one human trial found, and who should avoid them.'],
 ];
 
 const HOME_TOPICS = [
@@ -396,6 +397,7 @@ const HOME_TOPICS = [
   ['/ingredients/vitamin-d', 'Vitamin D'], ['/ingredients/berberine', 'Berberine'], ['/ingredients/ashwagandha', 'Ashwagandha'],
   ['/ingredients/curcumin', 'Curcumin'], ['/ingredients/caffeine', 'Caffeine'], ['/ingredients/probiotics', 'Probiotics'],
   ['/ingredients/collagen-peptides', 'Collagen'], ['/ingredients/l-theanine', 'L-theanine'], ['/ingredients/valerian', 'Valerian'],
+  ['/ingredients/dandelion', 'Dandelion'],
 ];
 
 async function handleHome() {
