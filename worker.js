@@ -7,7 +7,7 @@
  */
 const CONTENT_BRANCH_NAME = (typeof CONTENT_BRANCH !== 'undefined' && CONTENT_BRANCH) ? CONTENT_BRANCH : 'main';
 const IS_PREVIEW = CONTENT_BRANCH_NAME !== 'main';
-const VERSION = 'Supplement Intelligence v11.11';
+const VERSION = 'Supplement Intelligence v11.12';
 const SITE_ORIGIN = 'https://supplement-intelligence.com';
 // CONTENT_REV is the commit SHA the deploy workflow passes in (--var). Content is
 // read from that exact commit, so a deploy can never pick up an older copy of a
@@ -185,6 +185,27 @@ a{color:#a8532f}
 .si-card p{margin:6px 0}
 .si-card-link{font-size:.92rem}
 .si-input{width:100%;max-width:420px;font:inherit;padding:10px 12px;border:1px solid #cfc8bf;border-radius:10px;background:#fff;margin-top:4px;box-sizing:border-box}
+.si-home-hero{padding:8px 0 10px}
+.si-home-hero h1{font-size:2.3rem;line-height:1.15;margin:6px 0 12px}
+.si-home-lead{font-size:1.12rem;max-width:720px}
+.si-home-search{margin:18px 0 8px;max-width:620px}
+.si-home-search div{display:flex;gap:8px;align-items:stretch}
+.si-home-search .si-input{max-width:none;flex:1;margin:4px 0 0}
+.si-btn.si-home-go{display:inline-block;margin:4px 0 0;border:0;font:inherit;font-weight:700;cursor:pointer}
+.si-results{list-style:none;padding:0;margin:10px 0;max-width:620px;background:#fff;border:1px solid #e5e7eb;border-radius:12px}
+.si-results li{padding:10px 14px;border-bottom:1px solid #f0ece6;display:flex;flex-direction:column}
+.si-results li:last-child{border-bottom:0}
+.si-results a{font-weight:700;text-decoration:none}
+.si-home-kind{font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:#6b7c72}
+.si-home-guides{display:grid;grid-template-columns:1fr;gap:14px;margin:14px 0 22px}
+@media(min-width:720px){.si-home-guides{grid-template-columns:1fr 1fr 1fr}}
+.si-home-guide{display:flex;flex-direction:column;gap:4px;background:#fff;border:1px solid #e5e7eb;border-top:4px solid #c4704a;border-radius:12px;padding:16px 18px;text-decoration:none;color:#2a2a2a}
+.si-home-guide strong{color:#1a3d2e;font-size:1.12rem}
+.si-home-guide:hover strong{text-decoration:underline}
+.si-home-how{background:#e8f0ec;border-radius:14px;padding:6px 22px 14px;margin:26px 0 8px}
+.si-home-how h2{font-size:1.3rem}
+.si-home-how li{margin:8px 0}
+@media(max-width:520px){.si-home-hero h1{font-size:1.85rem}}
 .si-footer{background:#1a3d2e;color:rgba(255,255,255,.78);text-align:center;padding:32px 24px;font-size:.9rem}
 .si-footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:0 22px;margin-bottom:12px}
 .si-footer a{color:#e8a082;text-decoration:none;padding:8px 0;display:inline-block}
@@ -359,7 +380,58 @@ async function handleProduct(url, slug) {
   });
 }
 
+// Homepage. Title, description, canonical and structured data are kept stable
+// for search; the deploy check looks for "verification, not marketing claims".
+const HOME_GUIDES = [
+  ['/glp-1', 'GLP-1 guide', 'Supplements on GLP-1 drugs', 'What the evidence shows for protein, creatine, fiber, magnesium and biotin if you take semaglutide or tirzepatide.'],
+  ['/glp-1/semaglutide-with-b12', 'GLP-1 guide', 'Semaglutide with B12', 'It is a compounded product, not an approved drug. Does the added B12 do anything?'],
+  ['/glp-1/berberine-vs-ozempic', 'GLP-1 guide', 'Berberine vs Ozempic', 'Is berberine "nature\'s Ozempic"? What separate trials show for weight and blood sugar.'],
+  ['/ingredients/lemon-balm', 'Ingredient review', 'Lemon balm', 'Benefits, side effects and what trials found for anxiety, sleep and cold sores.'],
+  ['/ingredients/uva-ursi', 'Ingredient review', 'Uva ursi (bearberry)', 'What two large urinary tract infection trials found, and who should avoid it.'],
+  ['/ingredients/dandelion', 'Ingredient review', 'Dandelion', 'What dandelion root, leaf and tea are used for, what the one human trial found, and who should avoid them.'],
+];
+
+const HOME_TOPICS = [
+  ['/ingredients/creatine-monohydrate', 'Creatine'], ['/ingredients/omega-3', 'Omega-3'], ['/ingredients/magnesium', 'Magnesium'],
+  ['/ingredients/vitamin-d', 'Vitamin D'], ['/ingredients/berberine', 'Berberine'], ['/ingredients/ashwagandha', 'Ashwagandha'],
+  ['/ingredients/curcumin', 'Curcumin'], ['/ingredients/caffeine', 'Caffeine'], ['/ingredients/probiotics', 'Probiotics'],
+  ['/ingredients/collagen-peptides', 'Collagen'], ['/ingredients/l-theanine', 'L-theanine'], ['/ingredients/valerian', 'Valerian'],
+];
+
 async function handleHome() {
+  const [productsData, ingredientData] = await Promise.all([getProductsData(), getIngredientData()]);
+  const productCount = productsData && productsData.products ? Object.keys(productsData.products).length : 0;
+  const ingredientCount = ingredientData && ingredientData.ingredients ? Object.keys(ingredientData.ingredients).length : 0;
+  const n = (count, word) => count ? `${count} ${word}` : word;
+
+  const guides = HOME_GUIDES.map(([href, kind, title, text]) =>
+    `<a class="si-home-guide" href="${href}"><span class="si-home-kind">${escapeHtml(kind)}</span><strong>${escapeHtml(title)}</strong><span>${escapeHtml(text)}</span></a>`).join('');
+  const topics = HOME_TOPICS.map(([href, label]) => `<li class="si-chip si-chip-on"><a href="${href}">${escapeHtml(label)}</a></li>`).join('');
+
+  // Search runs in the browser against /api/v1/search; without JavaScript the
+  // form falls back to the full ingredient list.
+  const script = `<script>(function(){
+var f=document.getElementById('si-search'),i=document.getElementById('si-q'),o=document.getElementById('si-results');
+if(!f||!window.fetch)return;
+function add(t){o.textContent='';var p=document.createElement('p');p.className='si-small';p.textContent=t;o.appendChild(p);}
+f.addEventListener('submit',function(e){
+e.preventDefault();var q=i.value.trim();
+if(q.length<2){add('Type at least two letters.');return;}
+add('Searching...');
+fetch('/api/v1/search?q='+encodeURIComponent(q)).then(function(r){return r.json();}).then(function(d){
+var rs=(d&&d.results)||[];o.textContent='';
+if(!rs.length){add('No matches for "'+q+'". Try an ingredient name such as magnesium or ashwagandha.');return;}
+var ul=document.createElement('ul');ul.className='si-results';
+rs.slice(0,12).forEach(function(x){
+var li=document.createElement('li'),a=document.createElement('a'),s=document.createElement('span');
+var u=String(x.canonical_url||'');a.href=u.replace(/^https:\\/\\/supplement-intelligence\\.com/,'');a.textContent=x.name;
+s.className='si-home-kind';s.textContent=x.type==='product'?'Product':'Ingredient review';
+li.appendChild(s);li.appendChild(a);ul.appendChild(li);});
+o.appendChild(ul);
+if(rs.length>12)add('Showing 12 of '+rs.length+' matches. Try a more specific term.');
+}).catch(function(){add('Search is unavailable right now. Browse the ingredient list instead.');});
+});})();</script>`;
+
   const html = `<!doctype html>
 <html lang="en">
 <head>
@@ -369,28 +441,40 @@ async function handleHome() {
 <meta name="description" content="Verification-first supplement research with current product formulations, 34 reviewed ingredient evidence pages, safety context, and primary-source citations.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://supplement-intelligence.com/">
-<style>
-a{text-decoration:none}a:hover{text-decoration:underline}
-.hero{padding:12px 0 18px}.hero h1{font-size:2.35rem;line-height:1.15;margin:0 0 12px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
-.card{border:1px solid #e5e7eb;border-radius:14px;padding:20px}
-.pill{display:inline-block;background:#fff;border:1px solid #d7dde5;border-radius:999px;padding:8px 14px;margin:4px 6px 4px 0;font-size:.95rem}
-</style>
 </head>
 <body>
-<section class="hero">
-<h1>Supplement research built around verification, not marketing claims</h1>
-<p>Supplement Intelligence separates current product-formulation facts from ingredient-level human evidence and from finished-product efficacy. The database currently tracks 31 products and 34 reviewed ingredient evidence pages.</p>
-<p><a href="/ingredients"><strong>Browse ingredient evidence →</strong></a> &nbsp; <a href="/products">Browse product formulations →</a></p>
+<section class="si-home-hero">
+<h1>What the research really says about supplements</h1>
+<p class="si-home-lead">Plain-language reviews of supplement ingredients and GLP-1 questions, checked against published human studies and government sources, with the sources listed on every review.</p>
+<form id="si-search" class="si-home-search" action="/ingredients" method="get" role="search">
+<label for="si-q" class="si-small">Search an ingredient, product or health topic</label>
+<div><input id="si-q" name="q" class="si-input" type="search" placeholder="e.g. magnesium, sleep, V-DAILY" autocomplete="off"><button type="submit" class="si-btn si-home-go">Search</button></div>
+</form>
+<div id="si-results" aria-live="polite"></div>
 </section>
-<section class="grid">
-<div class="card"><h2>Supplements and GLP-1 drugs</h2><p>What trials show, and do not show, about creatine, protein, fiber, magnesium and biotin for people taking semaglutide or tirzepatide.</p><p><a href="/glp-1">Read the GLP-1 guide</a> · <a href="/glp-1/semaglutide-with-b12">Semaglutide with B12</a> · <a href="/glp-1/berberine-vs-ozempic">Berberine vs Ozempic</a></p></div>
-<div class="card"><h2>Reviewed ingredient evidence</h2><p>Evidence summaries cover studied context, safety, source quality, and whether current products actually match the studied form or dose.</p><p><a href="/ingredients">View all 34 ingredient pages</a></p></div>
-<div class="card"><h2>Current product formulations</h2><p>Manufacturer pages are used for formulation facts only. Finished-product efficacy remains Under Review unless explicitly adjudicated.</p><p><a href="/products">View 31 product records</a></p></div>
-<div class="card"><h2>Research methodology</h2><p>Historical citation sets that did not meet the current standard were withdrawn. The current method prioritizes primary research and authoritative government sources.</p><p><a href="/references">Read research status</a></p></div>
+
+<h2>Start here</h2>
+<div class="si-home-guides">${guides}</div>
+
+<h2>Popular ingredients</h2>
+<ul class="si-chips">${topics}</ul>
+<p><a href="/ingredients"><strong>See all ${n(ingredientCount, 'ingredient reviews')} →</strong></a></p>
+
+<div class="si-cards">
+<article class="si-card"><h3><a href="/ingredients">Ingredient evidence</a></h3><p>What human studies show for each ingredient, who should avoid it, and how strong the evidence is.</p><p class="si-card-link"><a href="/ingredients">Browse ${n(ingredientCount, 'reviews')} →</a></p></article>
+<article class="si-card"><h3><a href="/products">Vital Health Global products</a></h3><p>What is on each label, with links to the research on every reviewed ingredient.</p><p class="si-card-link"><a href="/products">Browse ${n(productCount, 'products')} →</a></p></article>
+</div>
+
+<section class="si-home-how">
+<h2>Supplement research built around verification, not marketing claims</h2>
+<ul>
+<li><strong>Sources you can check.</strong> Figures come from published trials, systematic reviews and government sources such as the NIH and the European Medicines Agency, listed on every review.</li>
+<li><strong>Ingredients are not products.</strong> Research on one ingredient does not prove a finished product works, and each page says so.</li>
+<li><strong>Dated reviews.</strong> Reviews show when they were last checked, and gaps in the evidence are stated rather than glossed over.</li>
+</ul>
+<p><a href="/references">Read how we review evidence</a> · <a href="/about">About Supplement Intelligence</a></p>
 </section>
-<h2>Core evidence topics</h2>
-<p><a class="pill" href="/ingredients/creatine-monohydrate">Creatine</a><a class="pill" href="/ingredients/omega-3">Omega-3</a><a class="pill" href="/ingredients/magnesium">Magnesium</a><a class="pill" href="/ingredients/vitamin-d">Vitamin D</a><a class="pill" href="/ingredients/berberine">Berberine</a><a class="pill" href="/ingredients/ashwagandha">Ashwagandha</a><a class="pill" href="/ingredients/curcumin">Curcumin</a><a class="pill" href="/ingredients/caffeine">Caffeine</a></p>
+${script}
 </body></html>`;
   const jsonLd = [{
     '@context': 'https://schema.org', '@type': 'WebSite', name: 'Supplement Intelligence', url: SITE_ORIGIN + '/',
