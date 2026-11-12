@@ -40,6 +40,15 @@ pattern = "www.supplement-intelligence.com/*"
 zone_name = "supplement-intelligence.com"
 
 # ==========================================================
+# Logs
+# ==========================================================
+# Workers Logs keeps console output (including the affiliate_click lines
+# from /go/ links) viewable under Workers > supplementintel-products > Logs.
+
+[observability]
+enabled = true
+
+# ==========================================================
 # Development Settings
 # ==========================================================
 

@@ -7,7 +7,7 @@
  */
 const CONTENT_BRANCH_NAME = (typeof CONTENT_BRANCH !== 'undefined' && CONTENT_BRANCH) ? CONTENT_BRANCH : 'main';
 const IS_PREVIEW = CONTENT_BRANCH_NAME !== 'main';
-const VERSION = 'Supplement Intelligence v11.17';
+const VERSION = 'Supplement Intelligence v11.18';
 const SITE_ORIGIN = 'https://supplement-intelligence.com';
 // CONTENT_REV is the commit SHA the deploy workflow passes in (--var). Content is
 // read from that exact commit, so a deploy can never pick up an older copy of a
@@ -302,6 +302,9 @@ async function route(request, url, path) {
   const productMatch = path.match(/^\/products\/([a-z0-9-]+)$/);
   if (productMatch) return handleProduct(url, productMatch[1]);
 
+  const goMatch = path.match(/^\/go\/([a-z0-9-]+)$/);
+  if (goMatch) return handleGo(request, goMatch[1]);
+
   const articleMatch = path.match(/^\/articles\/([a-z0-9-]+?)(\.html)?$/);
   if (articleMatch) {
     const target = ARTICLE_REDIRECTS.get(articleMatch[1]);
@@ -361,6 +364,31 @@ function redirect(url, targetPath) {
       'Cache-Control': 'public, max-age=3600',
       'X-Powered-By': VERSION,
     }
+  });
+}
+
+// Outbound affiliate links: /go/<product-slug> logs the click and forwards to the
+// product's referral URL. The log line holds the product, brand, the site page the
+// click came from and whether the client looks like a bot; no IP address or other
+// personal data. View it in Cloudflare: Workers > supplementintel-products > Logs,
+// searching for "affiliate_click".
+async function handleGo(request, slug) {
+  const productsData = await getProductsData();
+  const product = productsData && productsData.products ? productsData.products[slug] : null;
+  if (!product || !product.shopUrl) return notFound('Product Not Found');
+  let from = null;
+  try {
+    const ref = new URL((request.headers && request.headers.get('Referer')) || '');
+    if (ref.hostname === 'supplement-intelligence.com') from = ref.pathname;
+  } catch (_) {}
+  const ua = (request.headers && request.headers.get('User-Agent')) || '';
+  console.log(JSON.stringify({
+    event: 'affiliate_click', product: slug, brand: product.brand || 'Vital Health Global', from,
+    bot: /bot|crawl|spider|slurp|preview|fetch|monitor|curl|python|wget/i.test(ua)
+  }));
+  return new Response(null, {
+    status: 302,
+    headers: { Location: product.shopUrl, 'Cache-Control': 'no-store', 'X-Robots-Tag': 'noindex, nofollow' }
   });
 }
 
@@ -849,7 +877,7 @@ function renderProductPage(product, productsData) {
 <div><dt>With evidence reviews</dt><dd>${evidence.length}</dd></div>
 <div><dt>Label checked</dt><dd>${escapeHtml(checked)}</dd></div>
 </dl>
-<a class="si-btn" href="${escapeHtml(shopUrl)}" target="_blank" rel="sponsored noopener">View ${escapeHtml(name)} at ${escapeHtml(brand)}</a>
+<a class="si-btn" href="/go/${escapeHtml(product.slug)}" target="_blank" rel="sponsored nofollow noopener">View ${escapeHtml(name)} at ${escapeHtml(brand)}</a>
 <p class="si-small">We earn referral credit if you buy through this link. It does not change what we write.</p>
 </aside>`;
 
