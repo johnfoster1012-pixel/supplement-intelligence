@@ -97,7 +97,7 @@ jobs:
           API_INDEX=$(curl -L --max-time 20 -s "https://supplement-intelligence.com/api/v1")
           echo "$API_INDEX" | grep -q '"name": "Supplement Intelligence API"'
           echo "$API_INDEX" | grep -q '"products": 31'
-          echo "$API_INDEX" | grep -q '"ingredients": 34'
+          echo "$API_INDEX" | grep -q '"ingredients": 35'
 
           SEARCH_JSON=$(curl -L --max-time 20 -s "https://supplement-intelligence.com/api/v1/search?q=creatine")
           echo "$SEARCH_JSON" | grep -q '"query": "creatine"'

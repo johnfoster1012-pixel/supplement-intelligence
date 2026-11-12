@@ -1588,6 +1588,56 @@
       "last_reviewed_at": "2026-11-11",
       "page_title": "Uva Ursi (Bearberry) Benefits, Side Effects and UTI Evidence | Supplement Intelligence",
       "page_description": "What uva ursi (bearberry leaf) is used for, what two large UTI trials found, its side effects, and who should avoid it. Checked against EMA and NIH sources."
+    },
+    "fulvic-acid": {
+      "name": "Fulvic acid / fulvic minerals",
+      "posture": "No randomized trials support the main health claims for fulvic acid supplements; human data are limited to short studies of one laboratory-made form and to trials of shilajit, a mixture.",
+      "summary": "Fulvic acid is the water-soluble fraction of humic substances from soil, peat and similar deposits. A 2018 review described the research as minimal. Human studies of fulvic acid itself are limited to a one-week safety study in 30 men and a four-week eczema cream trial in 36 people, both using a laboratory-made carbohydrate-derived form. Shilajit, a resin containing fulvic acid, has small trials for testosterone, a collagen marker and bone density, which cannot be attributed to fulvic acid alone. No human trials were found for mineral absorption, detoxification, energy, gut health or weight loss.",
+      "studied_context": "Human studies of fulvic acid itself used a laboratory-made form for one week by mouth or four weeks on the skin. Shilajit trials used purified extracts at 250 to 1,000 mg a day for 8 to 48 weeks. No trial has tested soil-derived fulvic mineral drops or powders.",
+      "safety": "A one-week oral study reported no severe adverse events. Fulvic acid materials from natural deposits vary in composition and may contain heavy metals; a 2022 analysis found lead, arsenic and mercury above permitted limits in shilajit samples. Long-term use, pregnancy, breastfeeding and use in children have not been studied.",
+      "product_directness": "No product in this site's reviewed catalog lists fulvic acid. Evidence for one fulvic acid source cannot be assumed for another, and no trial has tested a soil-derived fulvic mineral product.",
+      "products": [],
+      "sources": [
+        {
+          "type": "PubMed review",
+          "title": "Therapeutic Potential of Fulvic Acid in Chronic Inflammatory Diseases and Diabetes",
+          "pmid": "30276216",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30276216/"
+        },
+        {
+          "type": "PubMed phase 1 clinical study",
+          "title": "Phase 1 clinical study of the acute and subacute safety and proof-of-concept efficacy of carbohydrate-derived fulvic acid",
+          "pmid": "22427734",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/22427734/"
+        },
+        {
+          "type": "PubMed randomized controlled trial",
+          "title": "Randomized, parallel-group, double-blind, controlled study to evaluate the efficacy and safety of carbohydrate-derived fulvic acid in topical treatment of eczema",
+          "pmid": "21931500",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/21931500/"
+        },
+        {
+          "type": "PubMed toxicology study",
+          "title": "Genotoxicity of Carbohydrate Derived Fulvic Acid",
+          "pmid": "42383226",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42383226/"
+        },
+        {
+          "type": "PubMed randomized controlled trial",
+          "title": "Shilajit extract reduces oxidative stress, inflammation, and bone loss to dose-dependently preserve bone mineral density in postmenopausal women with osteopenia",
+          "pmid": "35933897",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35933897/"
+        },
+        {
+          "type": "PubMed analytical study",
+          "title": "Rapid Determination and Quantification of Nutritional and Poisonous Metals in Vastly Consumed Ayurvedic Herbal Medicine (Rejuvenator Shilajit)",
+          "pmid": "34800280",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34800280/"
+        }
+      ],
+      "last_reviewed_at": "2026-11-11",
+      "page_title": "Fulvic Acid Benefits, Side Effects and Evidence | Supplement Intelligence",
+      "page_description": "What fulvic acid and fulvic minerals are, what the few human studies found, the heavy-metal question, and who should be careful with them."
     }
   }
 }
