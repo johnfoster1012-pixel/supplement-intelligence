@@ -944,7 +944,8 @@
       "product_directness": "V-ORGANEX and V-TEDETOX list milk thistle, but the current manufacturer pages do not publish silymarin standardization or dose. Liver-support efficacy remains unverified.",
       "products": [
         "v-organex",
-        "v-tedetox"
+        "v-tedetox",
+        "zilara-heavy-metal-toxin-binder"
       ],
       "sources": [
         {
@@ -1293,7 +1294,9 @@
       "product_directness": "V-CONTROL lists spirulina algae extract but does not disclose the amount, extract characterization, or contaminant testing on the tracked manufacturer page. Trial results therefore cannot be directly assigned to the product.",
       "products": [
         "v-control",
-        "nourish-plus"
+        "nourish-plus",
+        "zilara-heavy-metal-toxin-binder",
+        "zilara-cocoblue"
       ],
       "sources": [
         {
@@ -1414,7 +1417,8 @@
       "products": [
         "v-itaren",
         "nourish-plus",
-        "v-nitro"
+        "v-nitro",
+        "zilara-cocoblue"
       ],
       "sources": [
         {
@@ -1454,7 +1458,8 @@
       "safety": "Dandelion in food amounts is considered likely safe (NCCIH) and is generally recognized as safe as a food (LactMed). It can rarely cause allergic reactions, diarrhea and gastrointestinal upset. EMA monographs contraindicate use in people allergic to Asteraceae plants, advise against the root in bile duct obstruction, cholangitis, liver disease or gallstones, and advise against the leaf in renal failure, diabetes or heart failure because of possible hyperkalemia. Use is not recommended in pregnancy, breastfeeding or children under 12 for lack of data. NCCIH notes theoretical interactions with antidiabetes, anticoagulant, antiplatelet and diuretic drugs.",
       "product_directness": "V-ITAREN lists dandelion root. The direct human diuretic pilot reviewed here studied leaf extract, not root, and V-ITAREN does not disclose dose or extraction details. Product-level efficacy is therefore unverified.",
       "products": [
-        "v-itaren"
+        "v-itaren",
+        "zilara-heavy-metal-toxin-binder"
       ],
       "sources": [
         {
@@ -1595,8 +1600,12 @@
       "summary": "Fulvic acid is the water-soluble fraction of humic substances from soil, peat and similar deposits. A 2018 review described the research as minimal. Human studies of fulvic acid itself are limited to a one-week safety study in 30 men and a four-week eczema cream trial in 36 people, both using a laboratory-made carbohydrate-derived form. Shilajit, a resin containing fulvic acid, has small trials for testosterone, a collagen marker and bone density, which cannot be attributed to fulvic acid alone. No human trials were found for mineral absorption, detoxification, energy, gut health or weight loss.",
       "studied_context": "Human studies of fulvic acid itself used a laboratory-made form for one week by mouth or four weeks on the skin. Shilajit trials used purified extracts at 250 to 1,000 mg a day for 8 to 48 weeks. No trial has tested soil-derived fulvic mineral drops or powders.",
       "safety": "A one-week oral study reported no severe adverse events. Fulvic acid materials from natural deposits vary in composition and may contain heavy metals; a 2022 analysis found lead, arsenic and mercury above permitted limits in shilajit samples. Long-term use, pregnancy, breastfeeding and use in children have not been studied.",
-      "product_directness": "No product in this site's reviewed catalog lists fulvic acid. Evidence for one fulvic acid source cannot be assumed for another, and no trial has tested a soil-derived fulvic mineral product.",
-      "products": [],
+      "product_directness": "Three Zilara products list fulvic acid. Zilara Fulvic Minerals states 350 mg of plant-derived fulvic acid per scoop and links a certificate of analysis with heavy-metal results for one batch. No clinical trial has tested any of these products, so trial results cannot be assigned to them.",
+      "products": [
+        "zilara-fulvic-minerals",
+        "zilara-fulvic-mineral-drops",
+        "zilara-heavy-metal-toxin-binder"
+      ],
       "sources": [
         {
           "type": "PubMed review",
@@ -1645,8 +1654,10 @@
       "summary": "Black walnut hull is the green outer husk of the black walnut fruit, sold mainly in parasite-cleanse products. No human trial of the hull was found for parasites or any other use. Laboratory studies show that juglone, a compound in the hull, has antimicrobial activity in cell and microbe tests. The only human trial found tested eating the nut (36 people, 30 days) and gave mixed results for black walnuts.",
       "studied_context": "No clinical study has tested black walnut hull in people, so there is no studied dose, duration or preparation. Laboratory studies used purified juglone or husk extracts on cells and microbes.",
       "safety": "Side effects have not been measured in a trial. Juglone reduced the survival of human skin cells and impaired early mouse embryo development in laboratory studies. Black walnut juice stains skin and dermatitis has been reported. Walnuts are a leading cause of tree-nut allergy and black walnut allergens have been identified. Avoid with walnut or tree-nut allergy, in pregnancy and breastfeeding, and in children.",
-      "product_directness": "No product in this site's reviewed catalog lists black walnut hull. No clinical trial has tested a black walnut hull product, so there is no trial result to compare any product against.",
-      "products": [],
+      "product_directness": "Zilara ParaCleanse, a loose-leaf tea, lists black walnut hull with wormwood, clove bud, rooibos, green tea and chicory root, without amounts on its product page. No clinical trial has tested the product or the combination.",
+      "products": [
+        "zilara-paracleanse"
+      ],
       "sources": [
         {
           "type": "PubMed laboratory study",

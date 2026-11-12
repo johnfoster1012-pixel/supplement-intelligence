@@ -2,8 +2,8 @@
   "generated_at": "2026-10-02",
   "catalog_source": "https://vitalhealthglobal.com/collections/all",
   "catalog_checked_at": "2026-10-02",
-  "total_tracked_products": 31,
-  "source_policy": "Current manufacturer product pages establish catalog/formulation facts only. They do not establish efficacy. A product is marked formulation-verified only when the current manufacturer page publishes an ingredient list.",
+  "total_tracked_products": 38,
+  "source_policy": "Current manufacturer product pages establish catalog/formulation facts only. They do not establish efficacy. A product is marked formulation-verified only when the current manufacturer page publishes an ingredient list. Zilara and Orygn products were added on 2026-11-11 using each manufacturer's published product page or product information sheet.",
   "products": [
     {
       "product_slug": "collagen",
@@ -399,6 +399,96 @@
       "manufacturer_description_mentions": [],
       "evidence_status": "under_review",
       "notes": ""
+    },
+    {
+      "product_slug": "zilara-fulvic-minerals",
+      "product_name": "Fulvic Minerals",
+      "manufacturer_url": "https://zilara.com/pips/Fulvic.pdf",
+      "checked_at": "2026-11-11",
+      "source_type": "manufacturer_product_information",
+      "verification_status": "verified_current_manufacturer_page",
+      "ingredients": "Fulvic acid (plant-derived mineral complex), 350 mg per scoop",
+      "manufacturer_description_mentions": [],
+      "evidence_status": "under_review",
+      "notes": "Zilara product; added 2026-11-11."
+    },
+    {
+      "product_slug": "zilara-fulvic-mineral-drops",
+      "product_name": "Fulvic Mineral Drops",
+      "manufacturer_url": "https://zilara.com/pips/FulvicAcid.pdf",
+      "checked_at": "2026-11-11",
+      "source_type": "manufacturer_product_information",
+      "verification_status": "verified_current_manufacturer_page",
+      "ingredients": "Humic and fulvic acids including natural plant-based macro and trace ionic minerals; potassium carbonate; potassium bicarbonate; magnesium sulfate; reverse osmosis purified water",
+      "manufacturer_description_mentions": [],
+      "evidence_status": "under_review",
+      "notes": "Zilara product; added 2026-11-11."
+    },
+    {
+      "product_slug": "zilara-paracleanse",
+      "product_name": "ParaCleanse",
+      "manufacturer_url": "https://zilara.com/paracleanse.asp",
+      "checked_at": "2026-11-11",
+      "source_type": "manufacturer_product_information",
+      "verification_status": "verified_current_manufacturer_page",
+      "ingredients": "Black walnut hull; wormwood (Artemisia); clove bud; red rooibos; green tea; chicory root",
+      "manufacturer_description_mentions": [],
+      "evidence_status": "under_review",
+      "notes": "Zilara product; added 2026-11-11."
+    },
+    {
+      "product_slug": "zilara-heavy-metal-toxin-binder",
+      "product_name": "Heavy Metal & Toxin Binder",
+      "manufacturer_url": "https://zilara.com/heavymetalbinder.asp",
+      "checked_at": "2026-11-11",
+      "source_type": "manufacturer_product_information",
+      "verification_status": "verified_current_manufacturer_page",
+      "ingredients": "Activated charcoal (from coconut shells); bentonite clay (montmorillonite); fulvic acid; Chlorella vulgaris (broken cell wall); organic spirulina powder; organic kelp blend; organic psyllium husk; organic milk thistle; organic dandelion root; organic parsley powder",
+      "manufacturer_description_mentions": [],
+      "evidence_status": "under_review",
+      "notes": "Zilara product; added 2026-11-11."
+    },
+    {
+      "product_slug": "zilara-cocoblue",
+      "product_name": "cocoBLUE",
+      "manufacturer_url": "https://zilara.com/pips/cocoblue.pdf",
+      "checked_at": "2026-11-11",
+      "source_type": "manufacturer_product_information",
+      "verification_status": "verified_current_manufacturer_page",
+      "ingredients": "Blue spirulina (Arthrospira platensis, cold water extracted); butterfly pea flower; moringa leaf; Orgen-B's (guava, holy basil, lemon); coconut water powder; Orgen-Mg (organic pumpkin extract); chlorella (broken cell wall); laver; Orgen-C (organic amla extract); Orgen-Si (organic bamboo extract); Icelandic triple kelp blend; sea lettuce; dulse; black pepper (whole fruit)",
+      "manufacturer_description_mentions": [],
+      "evidence_status": "under_review",
+      "notes": "Zilara product; added 2026-11-11."
+    },
+    {
+      "product_slug": "orygn-triglp",
+      "product_name": "triGLP Drops",
+      "manufacturer_url": "https://orygn.co/triglp",
+      "checked_at": "2026-11-11",
+      "source_type": "manufacturer_product_page",
+      "verification_status": "manufacturer_page_missing_complete_ingredient_panel",
+      "ingredients": null,
+      "manufacturer_description_mentions": [
+        "bioactive peptide technology from Norwegian marine sources",
+        "described as supporting GLP-1, GLP-2 and GIP pathways"
+      ],
+      "evidence_status": "under_review",
+      "notes": "Orygn product; added 2026-11-11."
+    },
+    {
+      "product_slug": "orygn-ignyt",
+      "product_name": "IGNYT Metabolic Booster",
+      "manufacturer_url": "https://orygn.co/ignyt",
+      "checked_at": "2026-11-11",
+      "source_type": "manufacturer_product_page",
+      "verification_status": "manufacturer_page_missing_complete_ingredient_panel",
+      "ingredients": null,
+      "manufacturer_description_mentions": [
+        "patented Norwegian salmon peptides",
+        "described as activating GLP-1 and GIP receptors"
+      ],
+      "evidence_status": "under_review",
+      "notes": "Orygn product; added 2026-11-11."
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-10-02",
-  "totalProducts": 31,
+  "totalProducts": 38,
   "products": {
     "collagen": {
       "slug": "collagen",
@@ -1337,6 +1337,258 @@
       "totalCitations": 0,
       "articleUrl": null,
       "ingredientEvidenceLinks": []
+    },
+    "zilara-fulvic-minerals": {
+      "slug": "zilara-fulvic-minerals",
+      "name": "Fulvic Minerals",
+      "brand": "Zilara",
+      "url": "/products/zilara-fulvic-minerals",
+      "ingredients": "Fulvic acid (plant-derived mineral complex), 350 mg per scoop",
+      "category": "Product formulation",
+      "lastUpdated": "2026-11-11",
+      "tldr": "Current manufacturer formulation checked 2026-11-11. Finished-product efficacy evidence remains under review.",
+      "research": "Evidence review in progress.",
+      "mechanism": "Under review.",
+      "evidenceGrade": "Under Review",
+      "evidenceGradeText": "No finalized finished-product evidence grade is being asserted.",
+      "faqs": [],
+      "citations": [],
+      "relatedProducts": [],
+      "totalCitations": 0,
+      "articleUrl": null,
+      "shopUrl": "https://zilara.com/fulvicpowder.asp?site=447135",
+      "formulationStatus": "Verified against current manufacturer product information on 2026-11-11; efficacy evidence remains under review.",
+      "formulationSource": "https://zilara.com/pips/Fulvic.pdf",
+      "ingredientEvidenceLinks": [
+        {
+          "slug": "fulvic-acid",
+          "name": "Fulvic acid / fulvic minerals",
+          "url": "/ingredients/fulvic-acid",
+          "posture": "No randomized trials support the main health claims for fulvic acid supplements; human data are limited to short studies of one laboratory-made form and to trials of shilajit, a mixture."
+        }
+      ],
+      "coa": {
+        "url": "https://zilara.com/pdf/documentation/FulvicPowderCOA_Lot9FP518.pdf",
+        "note": "Zilara posts a certificate of analysis for one batch (lot 9FP518, tested May 2025). It lists arsenic 0.678 ppm, cadmium 0.213 ppm, lead 0.037 ppm and mercury 0.003 ppm, each within the certificate's own limits. The testing laboratory's name is redacted on the posted copy, and other batches may differ."
+      }
+    },
+    "zilara-fulvic-mineral-drops": {
+      "slug": "zilara-fulvic-mineral-drops",
+      "name": "Fulvic Mineral Drops",
+      "brand": "Zilara",
+      "url": "/products/zilara-fulvic-mineral-drops",
+      "ingredients": "Humic and fulvic acids including natural plant-based macro and trace ionic minerals; potassium carbonate; potassium bicarbonate; magnesium sulfate; reverse osmosis purified water",
+      "category": "Product formulation",
+      "lastUpdated": "2026-11-11",
+      "tldr": "Current manufacturer formulation checked 2026-11-11. Finished-product efficacy evidence remains under review.",
+      "research": "Evidence review in progress.",
+      "mechanism": "Under review.",
+      "evidenceGrade": "Under Review",
+      "evidenceGradeText": "No finalized finished-product evidence grade is being asserted.",
+      "faqs": [],
+      "citations": [],
+      "relatedProducts": [],
+      "totalCitations": 0,
+      "articleUrl": null,
+      "shopUrl": "https://zilara.com/fulvicacid.asp?site=447135",
+      "formulationStatus": "Verified against current manufacturer product information on 2026-11-11; efficacy evidence remains under review.",
+      "formulationSource": "https://zilara.com/pips/FulvicAcid.pdf",
+      "ingredientEvidenceLinks": [
+        {
+          "slug": "fulvic-acid",
+          "name": "Fulvic acid / fulvic minerals",
+          "url": "/ingredients/fulvic-acid",
+          "posture": "No randomized trials support the main health claims for fulvic acid supplements; human data are limited to short studies of one laboratory-made form and to trials of shilajit, a mixture."
+        }
+      ],
+      "coa": {
+        "url": "https://zilara.com/pdf/FulvicAcidLiquidCOA.pdf",
+        "note": "Zilara links a certificate of analysis for this product from its product page. We have not reviewed its contents."
+      }
+    },
+    "zilara-paracleanse": {
+      "slug": "zilara-paracleanse",
+      "name": "ParaCleanse",
+      "brand": "Zilara",
+      "url": "/products/zilara-paracleanse",
+      "ingredients": "Black walnut hull; wormwood (Artemisia); clove bud; red rooibos; green tea; chicory root",
+      "category": "Product formulation",
+      "lastUpdated": "2026-11-11",
+      "tldr": "Current manufacturer formulation checked 2026-11-11. Finished-product efficacy evidence remains under review.",
+      "research": "Evidence review in progress.",
+      "mechanism": "Under review.",
+      "evidenceGrade": "Under Review",
+      "evidenceGradeText": "No finalized finished-product evidence grade is being asserted.",
+      "faqs": [],
+      "citations": [],
+      "relatedProducts": [],
+      "totalCitations": 0,
+      "articleUrl": null,
+      "shopUrl": "https://zilara.com/paracleanse.asp?site=447135",
+      "formulationStatus": "Verified against current manufacturer product information on 2026-11-11; efficacy evidence remains under review.",
+      "formulationSource": "https://zilara.com/paracleanse.asp",
+      "ingredientEvidenceLinks": [
+        {
+          "slug": "black-walnut-hull",
+          "name": "Black walnut hull (Juglans nigra)",
+          "url": "/ingredients/black-walnut-hull",
+          "posture": "No human trials of black walnut hull were found for parasites or any other use; support is limited to laboratory studies of juglone and traditional use."
+        }
+      ]
+    },
+    "zilara-heavy-metal-toxin-binder": {
+      "slug": "zilara-heavy-metal-toxin-binder",
+      "name": "Heavy Metal & Toxin Binder",
+      "brand": "Zilara",
+      "url": "/products/zilara-heavy-metal-toxin-binder",
+      "ingredients": "Activated charcoal (from coconut shells); bentonite clay (montmorillonite); fulvic acid; Chlorella vulgaris (broken cell wall); organic spirulina powder; organic kelp blend; organic psyllium husk; organic milk thistle; organic dandelion root; organic parsley powder",
+      "category": "Product formulation",
+      "lastUpdated": "2026-11-11",
+      "tldr": "Current manufacturer formulation checked 2026-11-11. Finished-product efficacy evidence remains under review.",
+      "research": "Evidence review in progress.",
+      "mechanism": "Under review.",
+      "evidenceGrade": "Under Review",
+      "evidenceGradeText": "No finalized finished-product evidence grade is being asserted.",
+      "faqs": [],
+      "citations": [],
+      "relatedProducts": [],
+      "totalCitations": 0,
+      "articleUrl": null,
+      "shopUrl": "https://zilara.com/heavymetalbinder.asp?site=447135",
+      "formulationStatus": "Verified against current manufacturer product information on 2026-11-11; efficacy evidence remains under review.",
+      "formulationSource": "https://zilara.com/heavymetalbinder.asp",
+      "ingredientEvidenceLinks": [
+        {
+          "slug": "fulvic-acid",
+          "name": "Fulvic acid / fulvic minerals",
+          "url": "/ingredients/fulvic-acid",
+          "posture": "No randomized trials support the main health claims for fulvic acid supplements; human data are limited to short studies of one laboratory-made form and to trials of shilajit, a mixture."
+        },
+        {
+          "slug": "spirulina",
+          "name": "Spirulina (Arthrospira/Spirulina)",
+          "url": "/ingredients/spirulina",
+          "posture": "Some human evidence supports modest blood-pressure lowering in selected adults, but the trial base is limited and generic cardiometabolic claims remain uncertain."
+        },
+        {
+          "slug": "milk-thistle",
+          "name": "Milk thistle (Silybum marianum)",
+          "url": "/ingredients/milk-thistle",
+          "posture": "Insufficient high-quality evidence for liver-disease benefits; broad liver-detox claims are not supported."
+        },
+        {
+          "slug": "dandelion",
+          "name": "Dandelion (Taraxacum officinale)",
+          "url": "/ingredients/dandelion",
+          "posture": "Traditional-use support exists for urinary and gastrointestinal indications, but direct human efficacy evidence is sparse and plant-part specific."
+        }
+      ]
+    },
+    "zilara-cocoblue": {
+      "slug": "zilara-cocoblue",
+      "name": "cocoBLUE",
+      "brand": "Zilara",
+      "url": "/products/zilara-cocoblue",
+      "ingredients": "Blue spirulina (Arthrospira platensis, cold water extracted); butterfly pea flower; moringa leaf; Orgen-B's (guava, holy basil, lemon); coconut water powder; Orgen-Mg (organic pumpkin extract); chlorella (broken cell wall); laver; Orgen-C (organic amla extract); Orgen-Si (organic bamboo extract); Icelandic triple kelp blend; sea lettuce; dulse; black pepper (whole fruit)",
+      "category": "Product formulation",
+      "lastUpdated": "2026-11-11",
+      "tldr": "Current manufacturer formulation checked 2026-11-11. Finished-product efficacy evidence remains under review.",
+      "research": "Evidence review in progress.",
+      "mechanism": "Under review.",
+      "evidenceGrade": "Under Review",
+      "evidenceGradeText": "No finalized finished-product evidence grade is being asserted.",
+      "faqs": [],
+      "citations": [],
+      "relatedProducts": [],
+      "totalCitations": 0,
+      "articleUrl": null,
+      "shopUrl": "https://zilara.com/cocoblue.asp?site=447135",
+      "formulationStatus": "Verified against current manufacturer product information on 2026-11-11; efficacy evidence remains under review.",
+      "formulationSource": "https://zilara.com/pips/cocoblue.pdf",
+      "ingredientEvidenceLinks": [
+        {
+          "slug": "spirulina",
+          "name": "Spirulina (Arthrospira/Spirulina)",
+          "url": "/ingredients/spirulina",
+          "posture": "Some human evidence supports modest blood-pressure lowering in selected adults, but the trial base is limited and generic cardiometabolic claims remain uncertain."
+        },
+        {
+          "slug": "moringa",
+          "name": "Moringa (Moringa oleifera)",
+          "url": "/ingredients/moringa",
+          "posture": "Human cardiometabolic evidence is inconsistent and very low certainty overall; broad glucose, lipid, weight, or blood-pressure claims are not established."
+        }
+      ]
+    },
+    "orygn-triglp": {
+      "slug": "orygn-triglp",
+      "name": "triGLP Drops",
+      "brand": "Orygn",
+      "url": "/products/orygn-triglp",
+      "ingredients": "Complete ingredient panel not published on the current manufacturer product page.",
+      "category": "Product formulation",
+      "lastUpdated": "2026-11-11",
+      "tldr": "Complete ingredient panel not published by the manufacturer.",
+      "research": "Evidence review in progress.",
+      "mechanism": "Under review.",
+      "evidenceGrade": "Under Review",
+      "evidenceGradeText": "No finalized finished-product evidence grade is being asserted.",
+      "faqs": [],
+      "citations": [],
+      "relatedProducts": [],
+      "totalCitations": 0,
+      "articleUrl": null,
+      "shopUrl": "https://johnfoster.orygn.co/triglp",
+      "formulationStatus": "Manufacturer product page checked 2026-11-11; complete ingredient panel unavailable, so formulation is not verified.",
+      "formulationSource": "https://orygn.co/triglp",
+      "ingredientEvidenceLinks": [],
+      "guides": [
+        {
+          "name": "Do GLP-1 supplements work?",
+          "url": "/glp-1/glp-1-supplements"
+        },
+        {
+          "name": "Do GLP-1 patches work?",
+          "url": "/glp-1/glp-1-patches"
+        }
+      ],
+      "manufacturerDescriptionMentions": [
+        "bioactive peptide technology from Norwegian marine sources",
+        "described as supporting GLP-1, GLP-2 and GIP pathways"
+      ]
+    },
+    "orygn-ignyt": {
+      "slug": "orygn-ignyt",
+      "name": "IGNYT Metabolic Booster",
+      "brand": "Orygn",
+      "url": "/products/orygn-ignyt",
+      "ingredients": "Complete ingredient panel not published on the current manufacturer product page.",
+      "category": "Product formulation",
+      "lastUpdated": "2026-11-11",
+      "tldr": "Complete ingredient panel not published by the manufacturer.",
+      "research": "Evidence review in progress.",
+      "mechanism": "Under review.",
+      "evidenceGrade": "Under Review",
+      "evidenceGradeText": "No finalized finished-product evidence grade is being asserted.",
+      "faqs": [],
+      "citations": [],
+      "relatedProducts": [],
+      "totalCitations": 0,
+      "articleUrl": null,
+      "shopUrl": "https://johnfoster.orygn.co/ignyt",
+      "formulationStatus": "Manufacturer product page checked 2026-11-11; complete ingredient panel unavailable, so formulation is not verified.",
+      "formulationSource": "https://orygn.co/ignyt",
+      "ingredientEvidenceLinks": [],
+      "guides": [
+        {
+          "name": "Do GLP-1 supplements work?",
+          "url": "/glp-1/glp-1-supplements"
+        }
+      ],
+      "manufacturerDescriptionMentions": [
+        "patented Norwegian salmon peptides",
+        "described as activating GLP-1 and GIP receptors"
+      ]
     }
   },
   "catalogCheckedAt": "2026-10-02",
