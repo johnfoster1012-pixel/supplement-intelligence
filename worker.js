@@ -7,7 +7,7 @@
  */
 const CONTENT_BRANCH_NAME = (typeof CONTENT_BRANCH !== 'undefined' && CONTENT_BRANCH) ? CONTENT_BRANCH : 'main';
 const IS_PREVIEW = CONTENT_BRANCH_NAME !== 'main';
-const VERSION = 'Supplement Intelligence v11.16';
+const VERSION = 'Supplement Intelligence v11.17';
 const SITE_ORIGIN = 'https://supplement-intelligence.com';
 // CONTENT_REV is the commit SHA the deploy workflow passes in (--var). Content is
 // read from that exact commit, so a deploy can never pick up an older copy of a
@@ -70,7 +70,7 @@ const VALID_PRODUCT_SLUGS = new Set([
   'collagen','d-fenz-kids','genius-shake-kids','lattekaffe','nourish-plus','performance-plus',
   's-balance','smartbiotics-kids','v-asculax','v-control','v-curcumax','v-daily','v-fortyflora','v-glutation',
   'v-itadol','v-italay','v-italboost','v-itaren','v-lovkafe','v-neurokafe','v-nitro','v-nrgy','v-omega3',
-  'v-organex','v-tedetox','v-thermokafe','vitalpro','v-glutation-plus','v-daily-sachet','v-harmony','v-prime'
+  'v-organex','v-tedetox','v-thermokafe','vitalpro','v-glutation-plus','v-daily-sachet','v-harmony','v-prime','zilara-fulvic-minerals','zilara-fulvic-mineral-drops','zilara-paracleanse','zilara-heavy-metal-toxin-binder','zilara-cocoblue','orygn-triglp','orygn-ignyt'
 ]);
 
 // Root hub URLs (/:slug/) 301 to the canonical Worker product page. Known slugs only —
@@ -465,7 +465,7 @@ if(rs.length>12)add('Showing 12 of '+rs.length+' matches. Try a more specific te
 
 <div class="si-cards">
 <article class="si-card"><h3><a href="/ingredients">Ingredient evidence</a></h3><p>What human studies show for each ingredient, who should avoid it, and how strong the evidence is.</p><p class="si-card-link"><a href="/ingredients">Browse ${n(ingredientCount, 'reviews')} →</a></p></article>
-<article class="si-card"><h3><a href="/products">Vital Health Global products</a></h3><p>What is on each label, with links to the research on every reviewed ingredient.</p><p class="si-card-link"><a href="/products">Browse ${n(productCount, 'products')} →</a></p></article>
+<article class="si-card"><h3><a href="/products">Products</a></h3><p>Vital Health Global, Zilara and Orygn products: what is on each label, with links to the research on every reviewed ingredient.</p><p class="si-card-link"><a href="/products">Browse ${n(productCount, 'products')} →</a></p></article>
 </div>
 
 <section class="si-home-how">
@@ -709,6 +709,7 @@ async function handleApiProducts(request) {
   const products = Object.values(data.products || {}).map(p => ({
     slug: p.slug,
     name: p.name,
+    brand: p.brand || 'Vital Health Global',
     canonical_url: 'https://supplement-intelligence.com/products/' + p.slug,
     formulation_status: p.formulationStatus || null,
     formulation_source: p.formulationSource || null,
@@ -726,6 +727,7 @@ async function handleApiProduct(request, slug) {
   return jsonResponse({
     slug: p.slug,
     name: p.name,
+    brand: p.brand || 'Vital Health Global',
     canonical_url: 'https://supplement-intelligence.com/products/' + p.slug,
     ingredients: p.ingredients || null,
     formulation_status: p.formulationStatus || null,
@@ -810,6 +812,7 @@ function renderProductPage(product, productsData) {
   const evidence = product.ingredientEvidenceLinks || [];
   const checked = formatLongDate(product.lastUpdated);
   const shopUrl = product.shopUrl || 'https://vitalhealthglobal.com/products';
+  const brand = product.brand || 'Vital Health Global';
   const related = (product.relatedProducts && product.relatedProducts.length) ? product.relatedProducts : findRelatedProducts(product, productsData);
 
   // Which label items have an evidence review: the label item must contain the
@@ -829,7 +832,8 @@ function renderProductPage(product, productsData) {
 
   let summary;
   if (!formulationVerified) {
-    summary = `<p><strong>At a glance.</strong> When we checked the manufacturer's page on ${escapeHtml(checked)}, it did not publish a complete ingredient list for ${escapeHtml(name)}, so there is nothing to review yet. We will add the ingredients once the full label is available.</p>`;
+    summary = `<p><strong>At a glance.</strong> When we checked the manufacturer's page on ${escapeHtml(checked)}, it did not publish a complete ingredient list for ${escapeHtml(name)}, so there is nothing to review yet. We will add the ingredients once the full label is available.</p>`
+      + ((product.manufacturerDescriptionMentions || []).length ? `<p>The manufacturer's own description mentions: ${product.manufacturerDescriptionMentions.map(escapeHtml).join('; ')}. That is marketing text, not a label.</p>` : '');
   } else {
     const reviewedCount = evidence.length;
     summary = `<p><strong>At a glance.</strong> ${escapeHtml(name)} lists ${labelItems.length} ingredient${labelItems.length === 1 ? '' : 's'}. `
@@ -845,7 +849,7 @@ function renderProductPage(product, productsData) {
 <div><dt>With evidence reviews</dt><dd>${evidence.length}</dd></div>
 <div><dt>Label checked</dt><dd>${escapeHtml(checked)}</dd></div>
 </dl>
-<a class="si-btn" href="${escapeHtml(shopUrl)}" target="_blank" rel="sponsored noopener">View ${escapeHtml(name)} at Vital Health Global</a>
+<a class="si-btn" href="${escapeHtml(shopUrl)}" target="_blank" rel="sponsored noopener">View ${escapeHtml(name)} at ${escapeHtml(brand)}</a>
 <p class="si-small">We earn referral credit if you buy through this link. It does not change what we write.</p>
 </aside>`;
 
@@ -855,7 +859,7 @@ function renderProductPage(product, productsData) {
 
   let labelHtml = '';
   if (labelItems.length) {
-    labelHtml = '<h2 id="label">What is in ' + escapeHtml(name) + '</h2><p class="si-small">From the manufacturer\'s product page, in label order. Linked ingredients have an evidence review on this site.</p><ul class="si-chips">'
+    labelHtml = '<h2 id="label">What is in ' + escapeHtml(name) + '</h2><p class="si-small">From the manufacturer\'s published product information, in label order. Linked ingredients have an evidence review on this site.</p><ul class="si-chips">'
       + labelItems.map(item => {
         const e = reviewedFor(item);
         return e
@@ -876,11 +880,17 @@ function renderProductPage(product, productsData) {
     : '';
 
   const source = product.formulationSource
-    ? `<a href="${escapeHtml(product.formulationSource)}" rel="noopener">manufacturer's product page</a>`
+    ? `<a href="${escapeHtml(product.formulationSource)}" rel="noopener">manufacturer's published product information</a>`
     : "manufacturer's product page";
+  const coaHtml = product.coa && product.coa.url
+    ? `<h2 id="testing">Testing</h2><p>${escapeHtml(product.coa.note || '')} <a href="${escapeHtml(product.coa.url)}" rel="noopener">View the certificate of analysis</a>.</p>`
+    : '';
+  const guidesHtml = (product.guides || []).length
+    ? '<h2 id="guides">Related evidence guides</h2><ul class="si-chips">' + product.guides.map(g => `<li class="si-chip si-chip-on"><a href="${escapeHtml(g.url)}">${escapeHtml(g.name)}</a></li>`).join('') + '</ul>'
+    : '';
   const aboutHtml = `<h2 id="about">About this page</h2>
 <p>The ingredient list comes from the ${source}, checked on ${escapeHtml(checked)}. The ingredient summaries come from our evidence reviews, which use published human studies and government sources; each review lists its sources. See <a href="/references">how we review evidence</a>.</p>
-<p>Supplement Intelligence is run by a Vital Health Global affiliate and earns referral credit on purchases made through links on this page.</p>
+<p>Supplement Intelligence is run by a ${escapeHtml(brand)} affiliate and earns referral credit on purchases made through links on this page.</p>
 <p class="si-small">For informational purposes only; not individualized medical advice. Talk to a clinician before starting a supplement, especially if you are pregnant, breastfeeding, take medicines or have a health condition. These statements have not been evaluated by the FDA.</p>`;
 
   const body = `<p class="si-crumbs"><a href="/">Home</a> / <a href="/products">Products</a> / ${escapeHtml(name)}</p>
@@ -890,6 +900,8 @@ function renderProductPage(product, productsData) {
 ${labelHtml}
 ${evidenceHtml}
 ${relatedHtml}
+${coaHtml}
+${guidesHtml}
 ${aboutHtml}`;
 
   const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeHtml(title)}</title><meta name="description" content="${escapeHtml(description)}"><link rel="canonical" href="${SITE_ORIGIN}/products/${product.slug}"></head><body>${body}</body></html>`;
@@ -901,7 +913,7 @@ ${aboutHtml}`;
     jsonLd: [{
       '@context': 'https://schema.org', '@type': 'Product', name,
       description,
-      brand: { '@type': 'Brand', name: 'Vital Health Global' },
+      brand: { '@type': 'Brand', name: brand },
       category: product.category || 'Dietary supplement',
       url: `${SITE_ORIGIN}/products/${product.slug}`
     }]
@@ -910,7 +922,9 @@ ${aboutHtml}`;
 
 function renderProductsIndex(productsData) {
   const products = Object.values(productsData.products || {}).sort((a, b) => a.name.localeCompare(b.name));
-  const cards = products.map(p => {
+  const brandOf = p => p.brand || 'Vital Health Global';
+  const brands = [...new Set(products.map(brandOf))].sort((a, b) => (a === 'Vital Health Global' ? -1 : b === 'Vital Health Global' ? 1 : a.localeCompare(b)));
+  const card = p => {
     const verified = String(p.formulationStatus || '').toLowerCase().startsWith('verified against current manufacturer');
     const items = verified ? normalizeText(p.ingredients || '').split(';').map(x => x.trim()).filter(Boolean) : [];
     const reviewed = (p.ingredientEvidenceLinks || []).length;
@@ -922,10 +936,11 @@ function renderProductsIndex(productsData) {
     return `<article class="si-card" data-search="${escapeHtml(searchText)}"><h3><a href="${escapeHtml(p.url)}">${escapeHtml(p.name)}</a></h3>`
       + (preview ? `<p>${escapeHtml(preview)}</p>` : '')
       + `<p class="si-small">${escapeHtml(stats)}</p></article>`;
-  }).join('');
+  };
+  const cards = brands.map(b => `<section class="si-brand"><h2>${escapeHtml(b)}</h2><div class="si-cards">${products.filter(p => brandOf(p) === b).map(card).join('')}</div></section>`).join('');
   const filter = `<p><label for="si-filter" class="si-small">Filter by product or ingredient</label><br><input id="si-filter" class="si-input" type="search" placeholder="e.g. turmeric, collagen, V-DAILY" autocomplete="off"></p><p id="si-none" class="si-small" hidden>No products match.</p>`;
-  const script = `<script>(function(){var i=document.getElementById('si-filter');if(!i)return;var c=[].slice.call(document.querySelectorAll('.si-cards .si-card'));var n=document.getElementById('si-none');i.addEventListener('input',function(){var q=i.value.trim().toLowerCase(),s=0;c.forEach(function(e){var m=!q||e.getAttribute('data-search').indexOf(q)>-1;e.hidden=!m;if(m)s++;});n.hidden=s>0;});})();</script>`;
-  const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Vital Health Global Products: Ingredients & Evidence Status | Supplement Intelligence</title><meta name="description" content="Current ingredient lists for ${products.length} Vital Health Global products, checked against manufacturer labels, with links to reviewed evidence for each ingredient."><link rel="canonical" href="https://supplement-intelligence.com/products"></head><body><p class="si-crumbs"><a href="/">Home</a> / Products</p><h1>Vital Health Global products</h1><p>Ingredient lists for ${products.length} products, checked against the manufacturer's labels, with links to what the research says about each reviewed ingredient. Research on single ingredients is not proof that a finished product works.</p>${filter}<div class="si-cards">${cards}</div><p class="si-small">Supplement Intelligence is run by a Vital Health Global affiliate and earns referral credit on purchases made through product links.</p>${script}</body></html>`;
+  const script = `<script>(function(){var i=document.getElementById('si-filter');if(!i)return;var c=[].slice.call(document.querySelectorAll('.si-cards .si-card'));var n=document.getElementById('si-none');var g=[].slice.call(document.querySelectorAll('.si-brand'));i.addEventListener('input',function(){var q=i.value.trim().toLowerCase(),s=0;c.forEach(function(e){var m=!q||e.getAttribute('data-search').indexOf(q)>-1;e.hidden=!m;if(m)s++;});g.forEach(function(x){x.hidden=!x.querySelector('.si-card:not([hidden])');});n.hidden=s>0;});})();</script>`;
+  const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Supplement Products: Ingredients & Evidence Status | Supplement Intelligence</title><meta name="description" content="Ingredient lists for ${products.length} ${brands.join(', ').replace(/, ([^,]*)$/, ' and $1')} products, checked against manufacturer labels, with links to reviewed evidence for each ingredient."><link rel="canonical" href="https://supplement-intelligence.com/products"></head><body><p class="si-crumbs"><a href="/">Home</a> / Products</p><h1>Products we track</h1><p>Ingredient lists for ${products.length} ${brands.join(', ').replace(/, ([^,]*)$/, ' and $1')} products, checked against the manufacturers' labels, with links to what the research says about each reviewed ingredient. Research on single ingredients is not proof that a finished product works.</p>${filter}${cards}<p class="si-small">Supplement Intelligence is run by an affiliate of each of these companies and earns referral credit on purchases made through product links.</p>${script}</body></html>`;
   return decorate(html, { path: '/products', wide: true, breadcrumbs: [['Products', '/products']] });
 }
 
