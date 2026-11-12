@@ -1638,6 +1638,62 @@
       "last_reviewed_at": "2026-11-11",
       "page_title": "Fulvic Acid Benefits, Side Effects and Evidence | Supplement Intelligence",
       "page_description": "What fulvic acid and fulvic minerals are, what the few human studies found, the heavy-metal question, and who should be careful with them."
+    },
+    "black-walnut-hull": {
+      "name": "Black walnut hull (Juglans nigra)",
+      "posture": "No human trials of black walnut hull were found for parasites or any other use; support is limited to laboratory studies of juglone and traditional use.",
+      "summary": "Black walnut hull is the green outer husk of the black walnut fruit, sold mainly in parasite-cleanse products. No human trial of the hull was found for parasites or any other use. Laboratory studies show that juglone, a compound in the hull, has antimicrobial activity in cell and microbe tests. The only human trial found tested eating the nut (36 people, 30 days) and gave mixed results for black walnuts.",
+      "studied_context": "No clinical study has tested black walnut hull in people, so there is no studied dose, duration or preparation. Laboratory studies used purified juglone or husk extracts on cells and microbes.",
+      "safety": "Side effects have not been measured in a trial. Juglone reduced the survival of human skin cells and impaired early mouse embryo development in laboratory studies. Black walnut juice stains skin and dermatitis has been reported. Walnuts are a leading cause of tree-nut allergy and black walnut allergens have been identified. Avoid with walnut or tree-nut allergy, in pregnancy and breastfeeding, and in children.",
+      "product_directness": "No product in this site's reviewed catalog lists black walnut hull. No clinical trial has tested a black walnut hull product, so there is no trial result to compare any product against.",
+      "products": [],
+      "sources": [
+        {
+          "type": "PubMed laboratory study",
+          "title": "Antioxidant potential of Juglans nigra, black walnut, husks extracted using supercritical carbon dioxide with an ethanol modifier",
+          "pmid": "28265357",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/28265357/"
+        },
+        {
+          "type": "PubMed review",
+          "title": "Juglone: A Versatile Natural Platform for Obtaining New Bioactive Compounds",
+          "pmid": "34348624",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34348624/"
+        },
+        {
+          "type": "PubMed laboratory study",
+          "title": "Juglone induces cell death of Acanthamoeba through increased production of reactive oxygen species",
+          "pmid": "26358271",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/26358271/"
+        },
+        {
+          "type": "PubMed laboratory study",
+          "title": "Cytotoxic action of juglone and plumbagin: a mechanistic study using HaCaT keratinocytes",
+          "pmid": "14727919",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/14727919/"
+        },
+        {
+          "type": "PubMed laboratory study",
+          "title": "Vitamin C protects early mouse embryos against juglone toxicity",
+          "pmid": "33010468",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33010468/"
+        },
+        {
+          "type": "PubMed clinical trial",
+          "title": "Cardiovascular effects of consumption of black versus English walnuts",
+          "pmid": "21488754",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/21488754/"
+        },
+        {
+          "type": "PubMed laboratory study",
+          "title": "Purification and Characterization of a Black Walnut (Juglans nigra) Allergen, Jug n 4",
+          "pmid": "27936684",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/27936684/"
+        }
+      ],
+      "last_reviewed_at": "2026-11-11",
+      "page_title": "Black Walnut Hull Benefits, Side Effects and Evidence | Supplement Intelligence",
+      "page_description": "What black walnut hull is used for, whether it works for parasites, and its side effects. No human trial has tested the hull; what laboratory studies show."
     }
   }
 }
