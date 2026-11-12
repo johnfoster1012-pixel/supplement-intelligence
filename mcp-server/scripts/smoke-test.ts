@@ -1,6 +1,12 @@
 import { Client, StreamableHTTPClientTransport } from "@modelcontextprotocol/client";
+import ingredientSnapshot from "../data/ingredient-evidence.json";
 
 const endpoint = "https://mcp.supplement-intelligence.com/mcp";
+// The live library should report as many topics as the data deployed with it
+// (synced from ingredient-evidence.json by `npm run sync-data`).
+const expectedIngredientCount = Object.keys(
+  (ingredientSnapshot as { ingredients: Record<string, unknown> }).ingredients
+).length;
 const expectedTools = [
   "search_supplement_intelligence",
   "get_ingredient_evidence",
@@ -83,8 +89,11 @@ try {
 
   const library = await callTool("list_reviewed_ingredients", {});
   const libraryJson = JSON.stringify(library.structuredContent ?? library.content).toLowerCase();
-  if (!libraryJson.includes('"count":34') && !libraryJson.includes('"count": 34')) {
-    throw new Error("Reviewed ingredient library did not report 34 topics.");
+  if (
+    !libraryJson.includes(`"count":${expectedIngredientCount}`) &&
+    !libraryJson.includes(`"count": ${expectedIngredientCount}`)
+  ) {
+    throw new Error(`Reviewed ingredient library did not report ${expectedIngredientCount} topics.`);
   }
 
   console.log(
@@ -102,7 +111,7 @@ try {
           "product-freshness",
           "expanded-hibiscus-search",
           "uva-ursi-v-itaren-linkage",
-          "34-topic-library",
+          `${expectedIngredientCount}-topic-library`,
         ],
         protocolEra: client.getProtocolEra(),
         server: client.getServerVersion(),
