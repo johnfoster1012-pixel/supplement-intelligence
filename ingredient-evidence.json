@@ -1712,8 +1712,10 @@
       "summary": "Black seed (Nigella sativa) has been tested in many randomized trials. Pooled analyses found lower fasting blood sugar and HbA1c (30 trials), improved lipids (34 trials, 2,278 participants), blood pressure lower by about 3.3/2.8 mmHg (11 trials averaging 8.3 weeks) and about 1.76 kg more weight loss than placebo (10 trials). Results vary widely between trials, and no reviewed trial measured clinical outcomes such as heart attacks or diabetes complications.",
       "studied_context": "Trials mostly enrolled adults with type 2 diabetes, metabolic syndrome, high cholesterol, raised blood pressure or fatty liver, using oil, powder or extract at varying doses; the blood pressure trials averaged about 8 weeks. Results may not apply to healthy people, other preparations or long-term use.",
       "safety": "LiverTox describes black cumin as well tolerated and not associated with liver injury. LactMed notes that black seed oil can cause allergic contact dermatitis and found no data on breast milk or infants. Rare case reports describe rhabdomyolysis with kidney injury and a possible bleeding complication in a patient also taking antiplatelet drugs and chemotherapy. Black seed lowers blood sugar and blood pressure, so people on medicines for either should consult a clinician.",
-      "product_directness": "No product in this site's catalog lists black seed oil yet. Trials used different oils, powders and extracts at different doses, so a result for one preparation cannot be assumed for another product.",
-      "products": [],
+      "product_directness": "Zilara Black Seed Oil lists a single ingredient, cold-pressed black cumin seed oil (Nigella sativa), in 1-ounce bottles; the manufacturer states a minimum of 5% thymoquinone. Trials used different oils, powders and extracts at different doses, so their results cannot be assumed to match this product.",
+      "products": [
+        "zilara-black-seed-oil"
+      ],
       "sources": [
         {
           "type": "PubMed systematic review/meta-analysis",
