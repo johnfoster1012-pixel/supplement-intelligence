@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-10-02",
-  "totalProducts": 38,
+  "totalProducts": 39,
   "products": {
     "collagen": {
       "slug": "collagen",
@@ -1588,6 +1588,36 @@
       "manufacturerDescriptionMentions": [
         "patented Norwegian salmon peptides",
         "described as activating GLP-1 and GIP receptors"
+      ]
+    },
+    "zilara-black-seed-oil": {
+      "slug": "zilara-black-seed-oil",
+      "name": "Black Seed Oil",
+      "brand": "Zilara",
+      "url": "/products/zilara-black-seed-oil",
+      "ingredients": "Black cumin seed oil, cold-pressed (Nigella sativa)",
+      "category": "Product formulation",
+      "lastUpdated": "2026-11-12",
+      "tldr": "Current manufacturer formulation checked 2026-11-12. Finished-product efficacy evidence remains under review.",
+      "research": "Evidence review in progress.",
+      "mechanism": "Under review.",
+      "evidenceGrade": "Under Review",
+      "evidenceGradeText": "No finalized finished-product evidence grade is being asserted.",
+      "faqs": [],
+      "citations": [],
+      "relatedProducts": [],
+      "totalCitations": 0,
+      "articleUrl": null,
+      "shopUrl": "https://zilara.com/blackseed.asp?site=447135",
+      "formulationStatus": "Verified against current manufacturer product information on 2026-11-12; efficacy evidence remains under review.",
+      "formulationSource": "https://zilara.com/blackseed.asp",
+      "ingredientEvidenceLinks": [
+        {
+          "slug": "black-seed-oil",
+          "name": "Black seed oil (Nigella sativa)",
+          "url": "/ingredients/black-seed-oil",
+          "posture": "Multiple meta-analyses of randomized trials show modest improvements in blood sugar, lipids, blood pressure and body weight; effects are small, trials are short, and results vary widely between studies."
+        }
       ]
     }
   },

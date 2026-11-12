@@ -39,8 +39,8 @@ def main():
     if products_doc.get("totalProducts") != len(products):
         errors.append("products-data.json totalProducts does not match product count")
 
-    if len(products) != 38:
-        errors.append(f"expected 38 current catalog products, found {len(products)}")
+    if len(products) != 39:
+        errors.append(f"expected 39 current catalog products, found {len(products)}")
 
     for slug, product in products.items():
         row = ledger.get(slug)

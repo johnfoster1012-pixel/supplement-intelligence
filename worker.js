@@ -7,7 +7,7 @@
  */
 const CONTENT_BRANCH_NAME = (typeof CONTENT_BRANCH !== 'undefined' && CONTENT_BRANCH) ? CONTENT_BRANCH : 'main';
 const IS_PREVIEW = CONTENT_BRANCH_NAME !== 'main';
-const VERSION = 'Supplement Intelligence v11.19';
+const VERSION = 'Supplement Intelligence v11.20';
 const SITE_ORIGIN = 'https://supplement-intelligence.com';
 // CONTENT_REV is the commit SHA the deploy workflow passes in (--var). Content is
 // read from that exact commit, so a deploy can never pick up an older copy of a
@@ -70,7 +70,7 @@ const VALID_PRODUCT_SLUGS = new Set([
   'collagen','d-fenz-kids','genius-shake-kids','lattekaffe','nourish-plus','performance-plus',
   's-balance','smartbiotics-kids','v-asculax','v-control','v-curcumax','v-daily','v-fortyflora','v-glutation',
   'v-itadol','v-italay','v-italboost','v-itaren','v-lovkafe','v-neurokafe','v-nitro','v-nrgy','v-omega3',
-  'v-organex','v-tedetox','v-thermokafe','vitalpro','v-glutation-plus','v-daily-sachet','v-harmony','v-prime','zilara-fulvic-minerals','zilara-fulvic-mineral-drops','zilara-paracleanse','zilara-heavy-metal-toxin-binder','zilara-cocoblue','orygn-triglp','orygn-ignyt'
+  'v-organex','v-tedetox','v-thermokafe','vitalpro','v-glutation-plus','v-daily-sachet','v-harmony','v-prime','zilara-fulvic-minerals','zilara-fulvic-mineral-drops','zilara-paracleanse','zilara-heavy-metal-toxin-binder','zilara-cocoblue','orygn-triglp','orygn-ignyt','zilara-black-seed-oil'
 ]);
 
 // Root hub URLs (/:slug/) 301 to the canonical Worker product page. Known slugs only —

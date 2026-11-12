@@ -2,7 +2,7 @@
   "generated_at": "2026-10-02",
   "catalog_source": "https://vitalhealthglobal.com/collections/all",
   "catalog_checked_at": "2026-10-02",
-  "total_tracked_products": 38,
+  "total_tracked_products": 39,
   "source_policy": "Current manufacturer product pages establish catalog/formulation facts only. They do not establish efficacy. A product is marked formulation-verified only when the current manufacturer page publishes an ingredient list. Zilara and Orygn products were added on 2026-11-11 using each manufacturer's published product page or product information sheet.",
   "products": [
     {
@@ -489,6 +489,18 @@
       ],
       "evidence_status": "under_review",
       "notes": "Orygn product; added 2026-11-11."
+    },
+    {
+      "product_slug": "zilara-black-seed-oil",
+      "product_name": "Black Seed Oil",
+      "manufacturer_url": "https://zilara.com/blackseed.asp",
+      "checked_at": "2026-11-12",
+      "source_type": "manufacturer_product_page",
+      "verification_status": "verified_current_manufacturer_page",
+      "ingredients": "Black cumin seed oil, cold-pressed (Nigella sativa)",
+      "manufacturer_description_mentions": [],
+      "evidence_status": "under_review",
+      "notes": "Zilara product; added 2026-11-12. Manufacturer states a minimum of 5% thymoquinone; 1-ounce bottle."
     }
   ]
 }
