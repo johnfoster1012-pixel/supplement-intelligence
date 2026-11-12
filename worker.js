@@ -7,7 +7,7 @@
  */
 const CONTENT_BRANCH_NAME = (typeof CONTENT_BRANCH !== 'undefined' && CONTENT_BRANCH) ? CONTENT_BRANCH : 'main';
 const IS_PREVIEW = CONTENT_BRANCH_NAME !== 'main';
-const VERSION = 'Supplement Intelligence v11.14';
+const VERSION = 'Supplement Intelligence v11.15';
 const SITE_ORIGIN = 'https://supplement-intelligence.com';
 // CONTENT_REV is the commit SHA the deploy workflow passes in (--var). Content is
 // read from that exact commit, so a deploy can never pick up an older copy of a
@@ -63,7 +63,7 @@ const VALID_INGREDIENT_SLUGS = new Set([
   'moringa',
   'nopal',
   'spirulina',
-  'uva-ursi'
+  'uva-ursi','fulvic-acid'
 ]);
 
 const VALID_PRODUCT_SLUGS = new Set([
@@ -441,7 +441,7 @@ if(rs.length>12)add('Showing 12 of '+rs.length+' matches. Try a more specific te
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Supplement Intelligence | Evidence-Based Ingredient & Supplement Research</title>
-<meta name="description" content="Verification-first supplement research with current product formulations, 34 reviewed ingredient evidence pages, safety context, and primary-source citations.">
+<meta name="description" content="Verification-first supplement research with current product formulations, 35 reviewed ingredient evidence pages, safety context, and primary-source citations.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://supplement-intelligence.com/">
 </head>
