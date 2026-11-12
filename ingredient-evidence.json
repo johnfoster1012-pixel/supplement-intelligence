@@ -1705,6 +1705,56 @@
       "last_reviewed_at": "2026-11-11",
       "page_title": "Black Walnut Hull Benefits, Side Effects and Evidence | Supplement Intelligence",
       "page_description": "What black walnut hull is used for, whether it works for parasites, and its side effects. No human trial has tested the hull; what laboratory studies show."
+    },
+    "black-seed-oil": {
+      "name": "Black seed oil (Nigella sativa)",
+      "posture": "Multiple meta-analyses of randomized trials show modest improvements in blood sugar, lipids, blood pressure and body weight; effects are small, trials are short, and results vary widely between studies.",
+      "summary": "Black seed (Nigella sativa) has been tested in many randomized trials. Pooled analyses found lower fasting blood sugar and HbA1c (30 trials), improved lipids (34 trials, 2,278 participants), blood pressure lower by about 3.3/2.8 mmHg (11 trials averaging 8.3 weeks) and about 1.76 kg more weight loss than placebo (10 trials). Results vary widely between trials, and no reviewed trial measured clinical outcomes such as heart attacks or diabetes complications.",
+      "studied_context": "Trials mostly enrolled adults with type 2 diabetes, metabolic syndrome, high cholesterol, raised blood pressure or fatty liver, using oil, powder or extract at varying doses; the blood pressure trials averaged about 8 weeks. Results may not apply to healthy people, other preparations or long-term use.",
+      "safety": "LiverTox describes black cumin as well tolerated and not associated with liver injury. LactMed notes that black seed oil can cause allergic contact dermatitis and found no data on breast milk or infants. Rare case reports describe rhabdomyolysis with kidney injury and a possible bleeding complication in a patient also taking antiplatelet drugs and chemotherapy. Black seed lowers blood sugar and blood pressure, so people on medicines for either should consult a clinician.",
+      "product_directness": "No product in this site's catalog lists black seed oil yet. Trials used different oils, powders and extracts at different doses, so a result for one preparation cannot be assumed for another product.",
+      "products": [],
+      "sources": [
+        {
+          "type": "PubMed systematic review/meta-analysis",
+          "title": "The effect of Nigella sativa supplementation on glycemic status in adults: An updated systematic review and meta-analysis",
+          "pmid": "39181437",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39181437/"
+        },
+        {
+          "type": "PubMed systematic review/meta-analysis",
+          "title": "Effects of Nigella sativa supplementation on lipid profiles in adults: An updated systematic review and meta-analysis of randomized controlled trials",
+          "pmid": "38777430",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38777430/"
+        },
+        {
+          "type": "PubMed systematic review/meta-analysis",
+          "title": "A systematic review and meta-analysis of randomized controlled trials investigating the effects of supplementation with Nigella sativa (black seed) on blood pressure",
+          "pmid": "27512971",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/27512971/"
+        },
+        {
+          "type": "PubMed systematic review/meta-analysis",
+          "title": "Effect of Nigella sativa supplementation on obesity indices: A systematic review and meta-analysis of randomized controlled trials",
+          "pmid": "29857879",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29857879/"
+        },
+        {
+          "type": "LiverTox (US National Institutes of Health)",
+          "title": "Black Cumin Seed",
+          "pmid": "37184195",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37184195/"
+        },
+        {
+          "type": "Drugs and Lactation Database (LactMed)",
+          "title": "Black Seed",
+          "pmid": "30000936",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30000936/"
+        }
+      ],
+      "last_reviewed_at": "2026-11-12",
+      "page_title": "Black Seed Oil Benefits, Side Effects and Evidence | Supplement Intelligence",
+      "page_description": "What trials found for black seed oil (Nigella sativa) and blood sugar, cholesterol, blood pressure and weight, plus side effects and who should be careful."
     }
   }
 }
