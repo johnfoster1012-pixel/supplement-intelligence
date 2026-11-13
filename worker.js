@@ -7,7 +7,7 @@
  */
 const CONTENT_BRANCH_NAME = (typeof CONTENT_BRANCH !== 'undefined' && CONTENT_BRANCH) ? CONTENT_BRANCH : 'main';
 const IS_PREVIEW = CONTENT_BRANCH_NAME !== 'main';
-const VERSION = 'Supplement Intelligence v11.21';
+const VERSION = 'Supplement Intelligence v11.22';
 const SITE_ORIGIN = 'https://supplement-intelligence.com';
 // CONTENT_REV is the commit SHA the deploy workflow passes in (--var). Content is
 // read from that exact commit, so a deploy can never pick up an older copy of a
@@ -112,6 +112,8 @@ const GLP1_GUIDES = new Map([
   ['glp-1-supplements', { file: 'glp-1/glp-1-supplements.html', name: 'Do GLP-1 supplements work?', reviewed: '2026-11-11' }],
   ['glp-1-patches', { file: 'glp-1/glp-1-patches.html', name: 'Do GLP-1 patches work?', reviewed: '2026-11-11' }],
   ['retatrutide', { file: 'glp-1/retatrutide.html', name: 'Retatrutide', reviewed: '2026-11-10' }],
+  ['muscle-loss', { file: 'glp-1/muscle-loss.html', name: 'GLP-1 and muscle loss', reviewed: '2026-11-13' }],
+  ['oral-glp-1', { file: 'glp-1/oral-glp-1.html', name: 'Oral GLP-1 pills', reviewed: '2026-11-13' }],
 ]);
 
 // Guides to point to from an ingredient page: slug -> [[label, path], ...].
