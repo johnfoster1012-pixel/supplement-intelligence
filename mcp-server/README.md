@@ -85,7 +85,7 @@ Run `npm test` for offline MCP transport tests, `npm run typecheck`, then `npx w
 
 - **check_supplement_claim** takes the verbatim claim, outcome, and optional ingredient and product. Exact curated wording can receive an assessment; related outcome studies and review summaries remain available when wording differs. Product claims do not inherit ingredient verdicts. Unreviewed drafts are excluded from study results. A missing grade means ungraded.
 - **compare_supplement_label** accepts structured quantities per serving, label text, serving information and uncertainties. The tool compares daily mass only when units, basis, serving information and preparation description permit. For other ingredients it links to the catalog's narrative research context. Neither description nor mass proves chemical equivalence.
-- **find_educational_guides** searches titles and canonical paths from the five published GLP-1 pages. The guide status and recorded search date are independent of formal medical review.
+- **find_educational_guides** searches titles and canonical paths from the published GLP-1 pages. The guide status and recorded search date are independent of formal medical review.
 
 `evidence/outcomes.json` is a small curated index. Two records structure findings from existing reviewed ingredient records; their dates refer to the underlying review, not new editorial sign-off. Their letter grades are unknown. A third draft awaits review. Full-text verification versus abstract verification is documented in each record's source locator. No live literature search occurs at request time.
 

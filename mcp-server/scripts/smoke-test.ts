@@ -19,7 +19,7 @@ const expectedTools = [
 
 const client = new Client({
   name: "supplement-intelligence-smoke-test",
-  version: "1.2.0",
+  version: "1.3.0",
 });
 
 async function callTool(name: string, args: Record<string, unknown>) {

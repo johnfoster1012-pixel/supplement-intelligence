@@ -1,4 +1,4 @@
-# Supplement Intelligence portable plugin package v1.2.0
+# Supplement Intelligence portable plugin package v1.3.0
 
 This folder is the portable Agent Plugins package for Supplement Intelligence.
 
@@ -8,6 +8,10 @@ This folder is the portable Agent Plugins package for Supplement Intelligence.
 - `mcp.json` — remote Streamable HTTP MCP server configuration
 - `skills/supplement-evidence-research/SKILL.md` — workflow and evidence-interpretation instructions
 - `EVALS.md` — golden prompts and failure conditions
+
+## V1.3 tools
+
+The package adds claim checking, structured label comparisons and educational guide discovery. Ingredient-form search identifies the reviewed parent ingredient and explains its applicability.
 
 ## V1.2 evidence contract
 
