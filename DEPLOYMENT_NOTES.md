@@ -64,3 +64,7 @@ Every figure on a guide page must come from a source listed on that page. Statem
 ## Expanded ingredient pages (v11.9)
 
 An ingredient record in `ingredient-evidence.json` may set `page_title` and `page_description`. When present, the Worker uses them for the page's search title and description instead of the generated ones. Use them on pages rewritten as full reviews (first: dandelion). Keep `posture` unchanged unless `products-data.json` is updated to match, because the validator compares them.
+
+## Page images (v11.21)
+
+Images live in `images/` in the repo (for example `images/glp-1/retatrutide-evidence-hero.png`) and are served at the same path (`/images/glp-1/...`). The Worker streams them as bytes from the pinned commit with an image content type; `.png`, `.jpg`/`.jpeg` and `.webp` are supported. An image that is not in the repo falls through to the legacy origin, as before. Because content is pinned to the deploy commit, a new image goes live with the next deploy; add the image in the same commit as the page that uses it. Guide pages may carry their own Open Graph tags (for example `og:image` for a 1200×630 hero); when a page has `og:title`, `decorate()` leaves its tags alone.
