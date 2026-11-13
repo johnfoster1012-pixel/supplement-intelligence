@@ -1,16 +1,24 @@
+import { search, norm, type Catalog } from "./search";
 import { createMcpHandler, McpServer } from "@modelcontextprotocol/server";
 import * as z from "zod/v4";
 import productsSnapshot from "../data/products-data.json";
 import ingredientSnapshot from "../data/ingredient-evidence.json";
 
+import { checkClaim, claimInput, compareLabel, labelInput } from "./verify";
+import revision from "../data/revision.json";
+import guides from "../data/guides.json";
+
 const SERVER_NAME = "supplement-intelligence";
-const SERVER_VERSION = "1.2.0";
+const SERVER_VERSION = "1.3.0";
 const DATA_SOURCE = "bundled-repository-snapshot";
 const PRODUCTS_DOC = productsSnapshot as unknown as JsonObject;
 const INGREDIENT_DOC = ingredientSnapshot as unknown as JsonObject;
 const PRODUCT_DATA_VERSION = String(PRODUCTS_DOC.generatedAt ?? PRODUCTS_DOC.catalogCheckedAt ?? "unknown");
 const INGREDIENT_DATA_VERSION = String(INGREDIENT_DOC.generated_at ?? "unknown");
 const DATA_VERSION = `products:${PRODUCT_DATA_VERSION};ingredients:${INGREDIENT_DATA_VERSION}`;
+
+const ingredientMap = INGREDIENT_DOC.ingredients as Catalog;
+const productMap = PRODUCTS_DOC.products as Catalog;
 
 interface Env {
   OPENAI_APPS_CHALLENGE?: string;
@@ -24,52 +32,6 @@ const readOnlyAnnotations = {
 } as const;
 
 type JsonObject = Record<string, unknown>;
-
-const SEARCH_ALIASES: Record<string, string[]> = {
-  "fish oil": ["omega 3", "omega-3", "long chain omega 3", "epa dha"],
-  "omega 3": ["fish oil", "omega-3", "long chain omega 3", "epa dha"],
-  "omega-3": ["fish oil", "omega 3", "long chain omega 3", "epa dha"],
-  "d3": ["vitamin d", "vitamin d3"],
-  "vitamin d3": ["vitamin d", "d3"],
-  "coq10": ["coenzyme q10", "co q10"],
-  "coenzyme q10": ["coq10", "co q10"],
-  "ala": ["alpha lipoic acid", "alpha-lipoic acid"],
-  "alpha lipoic acid": ["ala", "alpha-lipoic acid"],
-  "turmeric": ["curcumin"],
-  "curcumin": ["turmeric"],
-  "msm": ["methylsulfonylmethane"],
-  "methylsulfonylmethane": ["msm"],
-  "citrulline malate": ["citrulline", "l citrulline"],
-  "l citrulline": ["citrulline", "citrulline malate"],
-  "l arginine": ["arginine"],
-  "arginine": ["l arginine"],
-};
-
-function normalizeSearchText(value: unknown): string {
-  return String(value ?? "")
-    .toLowerCase()
-    .replace(/[+/_-]+/g, " ")
-    .replace(/[^a-z0-9\s]/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
-function searchTerms(query: string): string[] {
-  const normalized = normalizeSearchText(query);
-  const terms = new Set<string>([normalized]);
-  for (const [key, aliases] of Object.entries(SEARCH_ALIASES)) {
-    if (normalized === key || normalized.includes(key)) {
-      terms.add(key);
-      aliases.forEach((alias) => terms.add(normalizeSearchText(alias)));
-    }
-  }
-  return [...terms].filter(Boolean);
-}
-
-function matchesSearch(values: unknown[], terms: string[]): boolean {
-  const haystack = normalizeSearchText(values.map((v) => String(v ?? "")).join(" "));
-  return terms.some((term) => haystack.includes(term));
-}
 
 function getProductsDocument(): JsonObject {
   return PRODUCTS_DOC;
@@ -107,6 +69,9 @@ const searchResultSchema = z.object({
   slug: z.string(),
   name: z.string(),
   canonical_url: z.string().url(),
+  match_kind: z.string(),
+  requested_form: z.string().optional(),
+  applicability: z.string().optional(),
   evidence_posture: z.string().optional(),
   formulation_status: z.string().nullable().optional(),
   evidence_status: z.string().optional(),
@@ -137,6 +102,10 @@ const reviewEvidenceSchema = z.object({
   url: z.string().url(),
 });
 
+function toolOutput(fields: Record<string, unknown>) {
+  const value={...fields,data_version:DATA_VERSION,snapshot_revision:revision.id};
+  return {content:[{type:"text" as const,text:JSON.stringify(value)}],structuredContent:value};
+}
 function createServer(): McpServer {
   const server = new McpServer(
     { name: SERVER_NAME, version: SERVER_VERSION },
@@ -164,6 +133,7 @@ function createServer(): McpServer {
         query: z.string(),
         query_normalized: z.string(),
         data_version: z.string(),
+        snapshot_revision: z.string(),
         count: z.number().int().nonnegative(),
         results: z.array(searchResultSchema),
       }),
@@ -172,52 +142,13 @@ function createServer(): McpServer {
     async ({ query }) => {
       const startedAt = Date.now();
       try {
-        const productsDoc = getProductsDocument();
-        const ingredientDoc = getIngredientDocument();
-
-        const q = normalizeSearchText(query);
-        const terms = searchTerms(query);
-        const productMap =
-          productsDoc.products && typeof productsDoc.products === "object"
-            ? (productsDoc.products as Record<string, JsonObject>)
-            : {};
-        const ingredientMap =
-          ingredientDoc.ingredients && typeof ingredientDoc.ingredients === "object"
-            ? (ingredientDoc.ingredients as Record<string, JsonObject>)
-            : {};
-
-        const productResults = Object.values(productMap)
-          .filter((p) =>
-            matchesSearch([p.name, p.slug, p.ingredients], terms)
-          )
-          .slice(0, 20)
-          .map((p) => ({
-            type: "product" as const,
-            slug: String(p.slug ?? ""),
-            name: String(p.name ?? ""),
-            canonical_url: `https://supplement-intelligence.com/products/${String(p.slug ?? "")}`,
-            formulation_status: p.formulationStatus == null ? null : String(p.formulationStatus),
-            evidence_status: String(p.evidenceGrade ?? "Under Review"),
-          }));
-
-        const ingredientResults = Object.entries(ingredientMap)
-          .filter(([slug, x]) =>
-            matchesSearch([slug, x.name, x.posture, x.summary], terms)
-          )
-          .slice(0, 20)
-          .map(([slug, x]) => ({
-            type: "ingredient" as const,
-            slug,
-            name: String(x.name ?? slug),
-            canonical_url: `https://supplement-intelligence.com/ingredients/${slug}`,
-            evidence_posture: String(x.posture ?? ""),
-          }));
-
-        const results = [...ingredientResults, ...productResults];
+        const q = norm(query);
+        const results = search(query, ingredientMap, productMap);
         const output = {
           query: query.trim(),
           query_normalized: q,
           data_version: DATA_VERSION,
+          snapshot_revision: revision.id,
           count: results.length,
           results,
         };
@@ -259,7 +190,9 @@ function createServer(): McpServer {
         slug: z.string(),
         canonical_url: z.string().url(),
         data_version: z.string(),
+        snapshot_revision: z.string(),
         last_reviewed_at: z.string(),
+        last_automated_source_check: z.string().nullable(),
         source_count: z.number().int().nonnegative(),
         review_evidence_count: z.number().int().nonnegative(),
         name: z.string(),
@@ -292,7 +225,9 @@ function createServer(): McpServer {
           slug,
           canonical_url: `https://supplement-intelligence.com/ingredients/${slug}`,
           data_version: INGREDIENT_DATA_VERSION,
-          last_reviewed_at: String(data.last_reviewed_at ?? INGREDIENT_DATA_VERSION),
+          snapshot_revision: revision.id,
+          last_reviewed_at: String(data.last_reviewed_at ?? "unknown"),
+          last_automated_source_check: null, // Offline triage reports are not a completed evidence review.
           source_count: sources.length,
           review_evidence_count: reviewEvidence.length,
           name: String(data.name ?? slug),
@@ -343,6 +278,7 @@ function createServer(): McpServer {
         name: z.string(),
         canonical_url: z.string().url(),
         data_version: z.string(),
+        snapshot_revision: z.string(),
         catalog_checked_at: z.string(),
         formulation_checked_at: z.string().nullable(),
         ingredients: z.string().nullable(),
@@ -380,7 +316,8 @@ function createServer(): McpServer {
           name: String(data.name ?? slug),
           canonical_url: `https://supplement-intelligence.com/products/${slug}`,
           data_version: PRODUCT_DATA_VERSION,
-          catalog_checked_at: String(doc.catalogCheckedAt ?? PRODUCT_DATA_VERSION),
+          snapshot_revision: revision.id,
+          catalog_checked_at: String(doc.catalogCheckedAt ?? "unknown"),
           formulation_checked_at: extractIsoDate(formulationStatus),
           ingredients: data.ingredients == null ? null : String(data.ingredients),
           formulation_status: formulationStatus,
@@ -421,6 +358,7 @@ function createServer(): McpServer {
       inputSchema: z.object({}),
       outputSchema: z.object({
         data_version: z.string(),
+        snapshot_revision: z.string(),
         last_reviewed_at: z.string(),
         count: z.number().int().nonnegative(),
         ingredients: z.array(
@@ -452,7 +390,8 @@ function createServer(): McpServer {
         }));
         const output = {
           data_version: INGREDIENT_DATA_VERSION,
-          last_reviewed_at: INGREDIENT_DATA_VERSION,
+          snapshot_revision: revision.id,
+          last_reviewed_at: "unknown", // No catalog-wide evidence-review date is recorded.
           count: ingredients.length,
           ingredients,
         };
@@ -473,6 +412,23 @@ function createServer(): McpServer {
     }
   );
 
+  const guideInput = z.object({ query: z.string().trim().min(2).max(120) });
+  server.registerTool("find_educational_guides", {
+    description:"Find published Supplement Intelligence educational guides about GLP-1 topics. Guides are not trial evidence.",
+    inputSchema:guideInput, annotations:readOnlyAnnotations
+  }, async ({query})=>{
+    const words=norm(query).split(" ").filter(Boolean);
+    const results=guides.filter(g=>words.length>0 && words.every(w=>(" "+norm(g.title+" "+g.url.split("/").slice(3).join(" "))+" ").includes(" "+w+" ")));
+    return toolOutput({count:results.length,results});
+  });
+  server.registerTool("check_supplement_claim", {
+    description:"Check exact claim wording against curated outcome assessments. Extract only the label claim, ingredient, product if applicable and measured outcome. Missing coverage is not evidence of no effect.",
+    inputSchema:claimInput,annotations:readOnlyAnnotations
+  }, async input=>toolOutput(checkClaim(input,ingredientMap,undefined,productMap)));
+  server.registerTool("compare_supplement_label", {
+    description:"Compare ingredients and quantities transcribed from a label with reviewed research. Mark unreadable values; omit unstated amounts. Only send label facts.",
+    inputSchema:labelInput,annotations:readOnlyAnnotations
+  }, async input=>toolOutput(compareLabel(input,ingredientMap,undefined,productMap)));
   return server;
 }
 
@@ -514,7 +470,7 @@ export default {
           "search_supplement_intelligence",
           "get_ingredient_evidence",
           "get_product_formulation",
-          "list_reviewed_ingredients",
+          "list_reviewed_ingredients", "check_supplement_claim", "compare_supplement_label", "find_educational_guides",
         ],
       });
     }

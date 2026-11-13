@@ -1,7 +1,7 @@
 import { Client, StreamableHTTPClientTransport } from "@modelcontextprotocol/client";
 import ingredientSnapshot from "../data/ingredient-evidence.json";
 
-const endpoint = "https://mcp.supplement-intelligence.com/mcp";
+const endpoint = process.argv[2] ?? "https://mcp.supplement-intelligence.com/mcp";
 // The live library should report as many topics as the data deployed with it
 // (synced from ingredient-evidence.json by `npm run sync-data`).
 const expectedIngredientCount = Object.keys(
@@ -12,11 +12,14 @@ const expectedTools = [
   "get_ingredient_evidence",
   "get_product_formulation",
   "list_reviewed_ingredients",
+  "check_supplement_claim",
+  "compare_supplement_label",
+  "find_educational_guides",
 ];
 
 const client = new Client({
   name: "supplement-intelligence-smoke-test",
-  version: "1.2.0",
+  version: "1.3.0",
 });
 
 async function callTool(name: string, args: Record<string, unknown>) {

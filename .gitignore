@@ -3,3 +3,6 @@ briefing/
 
 # Generated MCP deployment snapshots
 mcp-server/data/*.json
+
+node_modules/
+.wrangler/

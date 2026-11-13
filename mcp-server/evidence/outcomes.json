@@ -1,0 +1,151 @@
+[
+  {
+    "study_id": "PMID:23439798",
+    "ingredient": "ashwagandha",
+    "outcome": "serum cortisol",
+    "terms": [
+      "cortisol",
+      "serum cortisol"
+    ],
+    "preparation": "KSM-66",
+    "preparation_detail": "Root extract, standardized to at least 5% withanolides",
+    "amount_mg_per_day": 600,
+    "amount_basis": "extract",
+    "schedule": "300 mg twice daily",
+    "duration_days": 60,
+    "design": "Single-center randomized, double-blind, placebo-controlled trial",
+    "n_randomized": 64,
+    "n_completed": 61,
+    "population": "Adults with chronic stress",
+    "comparator": "Placebo",
+    "effect": {
+      "measure": "relative change from baseline within each arm",
+      "active_percent": -27.9,
+      "control_percent": -7.9,
+      "time_days": 60,
+      "confidence_interval": null
+    },
+    "limitations": "Small, short study of one preparation and a biomarker. The manufacturer supplied the extract. The within-group percentage does not estimate the treatment effect versus placebo.",
+    "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3573577/",
+    "locator": "Materials and Methods: Investigational product; Results: Serum cortisol levels, Table 5",
+    "source_verified_at": "2026-11-12",
+    "editorial_status": "pending_review",
+    "assessments": [
+      {
+        "claim": "In adults with chronic stress, KSM-66 lowered serum cortisol from baseline over 60 days in one randomized trial.",
+        "verdict": "supported_with_limits",
+        "grade": "B",
+        "rationale": "One small trial of this extract and a surrogate outcome."
+      }
+    ],
+    "last_evidence_review": null,
+    "citation": {
+      "title": "A Prospective, Randomized Double-Blind, Placebo-Controlled Study of Safety and Efficacy of a High-Concentration Full-Spectrum Extract of Ashwagandha Root in Reducing Stress and Anxiety in Adults",
+      "authors": "Chandrasekhar K., Kapoor Jyoti, Anishetty Sridhar",
+      "journal": "Indian Journal of Psychological Medicine",
+      "year": 2012,
+      "doi": "10.4103/0253-7176.106022"
+    },
+    "safety_findings": "Mild adverse events were reported in both groups. The trial reported no serious adverse events during 60 days.",
+    "source_access": "full_text"
+  },
+  {
+    "study_id": "PMID:34111592",
+    "ingredient": "uva-ursi",
+    "outcome": "Urinary symptom burden",
+    "terms": [
+      "urinary symptoms",
+      "urinary symptom burden",
+      "uti symptoms",
+      "symptom burden"
+    ],
+    "preparation": "Defined uva ursi extract tablets",
+    "preparation_detail": "The abstract identifies 105 mg tablets; quantity basis is not verified for mass comparison.",
+    "amount_mg_per_day": null,
+    "amount_basis": "unverified",
+    "schedule": "Two tablets three times daily in the trial",
+    "duration_days": 5,
+    "design": "Double-blind randomized comparison in primary care",
+    "n_randomized": 398,
+    "n_completed": null,
+    "population": "Adult women with suspected uncomplicated urinary tract infection in Germany",
+    "comparator": "Fosfomycin",
+    "effect": {
+      "measure": "Ratio of cumulative symptom burden relative to the comparator, days 0–7",
+      "estimate": 136.5,
+      "unit": "% of comparator",
+      "active_percent": null,
+      "control_percent": null,
+      "time_days": 7,
+      "confidence_interval": "95% CI: 122.7% to 151.9%"
+    },
+    "limitations": "The trial failed its prespecified symptom noninferiority test. Antibiotic use was a separate outcome. The tablet mass basis is unclear in the abstract.",
+    "source": "https://pubmed.ncbi.nlm.nih.gov/34111592/",
+    "locator": "Abstract: Methods and Results; repository uva-ursi record, posture and summary.",
+    "source_verified_at": "2026-11-12",
+    "last_evidence_review": "2026-11-11",
+    "editorial_status": "reviewed",
+    "assessments": [
+      {
+        "claim": "Uva ursi was shown to be equivalent to fosfomycin for urinary symptoms in women with suspected uncomplicated UTI.",
+        "verdict": "exaggerated",
+        "grade": null,
+        "rationale": "The trial failed its symptom noninferiority test. Equivalence is not established. The published ingredient review has no claim-specific letter grade."
+      }
+    ],
+    "citation": {
+      "title": "Herbal treatment with uva ursi extract versus fosfomycin in women with uncomplicated urinary tract infection in primary care: a randomized controlled trial.",
+      "authors": "Gágyor I, Hummers E, Schmiemann G, Friede T, Pfeiffer S, Afshar K, Bleidorn J.",
+      "journal": "Clinical microbiology and infection : the official publication of the European Society of Clinical Microbiology and Infectious Diseases",
+      "year": 2021,
+      "doi": "10.1016/j.cmi.2021.05.032"
+    },
+    "safety_findings": "The investigators reported eight cases of pyelonephritis in the uva ursi group and two in the fosfomycin group. The comparison was imprecise.",
+    "source_access": "primary_study_abstract"
+  },
+  {
+    "study_id": "PMID:24723963",
+    "ingredient": "horsetail",
+    "outcome": "Short-term diuresis",
+    "terms": [
+      "diuresis",
+      "urination",
+      "water balance"
+    ],
+    "preparation": "Standardized dried Equisetum arvense extract",
+    "preparation_detail": "Dry extract of aerial parts standardized to 0.026% total flavonoids.",
+    "amount_mg_per_day": 900,
+    "amount_basis": "extract",
+    "schedule": "One 300 mg capsule three times daily in the study",
+    "duration_days": 4,
+    "design": "Randomized double-blind crossover trial",
+    "n_randomized": 36,
+    "n_completed": null,
+    "population": "Healthy adult men",
+    "comparator": "Placebo and hydrochlorothiazide in separate periods",
+    "effect": null,
+    "limitations": "Short exposure in healthy men; not evidence for long-term treatment, another extract or an exact finished product.",
+    "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3960516/",
+    "locator": "Materials and Methods, study drugs and Treatment A. Results, fluid balance and adverse events.",
+    "source_verified_at": "2026-11-12",
+    "last_evidence_review": "2026-10-02",
+    "editorial_status": "reviewed",
+    "assessments": [
+      {
+        "claim": "A standardized horsetail extract increased short-term diuresis versus placebo in a small study of healthy men.",
+        "verdict": "supported_with_limits",
+        "grade": null,
+        "rationale": "The crossover study supports this narrow finding. It does not establish a treatment effect for a finished product. No prior claim-specific letter grade is recorded."
+      }
+    ],
+    "citation": {
+      "title": "Randomized, Double-Blind Clinical Trial to Assess the Acute Diuretic Effect of Equisetum arvense (Field Horsetail) in Healthy Volunteers.",
+      "authors": "Carneiro DM, Freire RC, Honório TC, Zoghaib I, Cardoso FF, Tresvenzol LM, de Paula JR, Sousa AL, Jardim PC, da Cunha LC.",
+      "journal": "Evidence-based complementary and alternative medicine : eCAM",
+      "year": 2014,
+      "doi": "10.1155/2014/760683"
+    },
+    "safety_findings": "The authors reported rare minor adverse events during the four-day treatment periods. Longer-term safety was outside the scope of this trial.",
+    "source_access": "full_text"
+  }
+]
