@@ -80,6 +80,8 @@ test("worker MCP transport: discovery, retrieval, claim, label and guide respons
     assert.equal(trial.status, "exaggerated");
     assert.equal(trial.reviewed_studies[0].study_id, "PMID:34111592");
     assert.equal(trial.grade, null);
+    assert.match(trial.reviewed_studies[0].safety_findings, /pyelonephritis/);
+    assert.equal(trial.reviewed_studies[0].citation.doi, "10.1016/j.cmi.2021.05.032");
     const horsetail = await call("compare_supplement_label", {
       serving_size: "2 capsules",
       servings_per_day: 1,

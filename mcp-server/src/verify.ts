@@ -17,6 +17,9 @@ const assessment = z.object({
 });
 export const studySchema = z.object({
   study_id: field,
+  citation: z.object({title: z.string().min(1), authors: z.string().min(1), journal: field, year: z.number().int(), doi: field}),
+  source_access: z.enum(["full_text", "primary_study_abstract"]),
+  safety_findings: z.string().min(1),
   ingredient: field,
   outcome: field,
   terms: z.array(field).min(1),
@@ -237,6 +240,8 @@ export function compareLabel(
             r.amount_mg_per_day !== null;
           return {
             study_id: r.study_id,
+            safety_findings: r.safety_findings,
+            limitations: r.limitations,
             form_description_matches: sameForm,
             amount_comparison: comparable
               ? daily === r.amount_mg_per_day
@@ -245,6 +250,7 @@ export function compareLabel(
               : "not_comparable",
             outcome: r.outcome,
             preparation: r.preparation,
+            preparation_detail: r.preparation_detail,
             population: r.population,
             duration_days: r.duration_days,
             studied_mg_per_day: r.amount_mg_per_day,
@@ -258,6 +264,7 @@ export function compareLabel(
         source: link(slug),
         studied_context: x.studied_context,
         research_sources: x.sources,
+        safety: x.safety ?? null,
         label_mg_per_day: daily,
         quantity_status: item.blend_total_only
           ? "individual_amount_undisclosed"

@@ -1,7 +1,7 @@
 import { Client, StreamableHTTPClientTransport } from "@modelcontextprotocol/client";
 import ingredientSnapshot from "../data/ingredient-evidence.json";
 
-const endpoint = "https://mcp.supplement-intelligence.com/mcp";
+const endpoint = process.argv[2] ?? "https://mcp.supplement-intelligence.com/mcp";
 // The live library should report as many topics as the data deployed with it
 // (synced from ingredient-evidence.json by `npm run sync-data`).
 const expectedIngredientCount = Object.keys(

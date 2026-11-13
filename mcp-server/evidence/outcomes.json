@@ -38,7 +38,16 @@
         "rationale": "One small trial of this extract and a surrogate outcome."
       }
     ],
-    "last_evidence_review": null
+    "last_evidence_review": null,
+    "citation": {
+      "title": "A Prospective, Randomized Double-Blind, Placebo-Controlled Study of Safety and Efficacy of a High-Concentration Full-Spectrum Extract of Ashwagandha Root in Reducing Stress and Anxiety in Adults",
+      "authors": "Chandrasekhar K., Kapoor Jyoti, Anishetty Sridhar",
+      "journal": "Indian Journal of Psychological Medicine",
+      "year": 2012,
+      "doi": "10.4103/0253-7176.106022"
+    },
+    "safety_findings": "Mild adverse events were reported in both groups. The trial reported no serious adverse events during 60 days.",
+    "source_access": "full_text"
   },
   {
     "study_id": "PMID:34111592",
@@ -54,7 +63,7 @@
     "preparation_detail": "The abstract identifies 105 mg tablets; quantity basis is not verified for mass comparison.",
     "amount_mg_per_day": null,
     "amount_basis": "unverified",
-    "schedule": null,
+    "schedule": "Two tablets three times daily in the trial",
     "duration_days": 5,
     "design": "Double-blind randomized comparison in primary care",
     "n_randomized": 398,
@@ -70,7 +79,7 @@
       "time_days": 7,
       "confidence_interval": "95% CI: 122.7% to 151.9%"
     },
-    "limitations": "Prespecified noninferiority was not demonstrated. Antibiotic use was a separate outcome. This does not justify substituting a supplement for UTI care.",
+    "limitations": "The trial failed its prespecified symptom noninferiority test. Antibiotic use was a separate outcome. The tablet mass basis is unclear in the abstract.",
     "source": "https://pubmed.ncbi.nlm.nih.gov/34111592/",
     "locator": "Abstract: Methods and Results; repository uva-ursi record, posture and summary.",
     "source_verified_at": "2026-11-12",
@@ -83,7 +92,16 @@
         "grade": null,
         "rationale": "The trial failed its symptom noninferiority test. Equivalence is not established. The published ingredient review has no claim-specific letter grade."
       }
-    ]
+    ],
+    "citation": {
+      "title": "Herbal treatment with uva ursi extract versus fosfomycin in women with uncomplicated urinary tract infection in primary care: a randomized controlled trial.",
+      "authors": "Gágyor I, Hummers E, Schmiemann G, Friede T, Pfeiffer S, Afshar K, Bleidorn J.",
+      "journal": "Clinical microbiology and infection : the official publication of the European Society of Clinical Microbiology and Infectious Diseases",
+      "year": 2021,
+      "doi": "10.1016/j.cmi.2021.05.032"
+    },
+    "safety_findings": "The investigators reported eight cases of pyelonephritis in the uva ursi group and two in the fosfomycin group. The comparison was imprecise.",
+    "source_access": "primary_study_abstract"
   },
   {
     "study_id": "PMID:24723963",
@@ -95,10 +113,10 @@
       "water balance"
     ],
     "preparation": "Standardized dried Equisetum arvense extract",
-    "preparation_detail": "The abstract identifies a standardized dried extract; exact chemical equivalence cannot be checked from this description alone.",
+    "preparation_detail": "Dry extract of aerial parts standardized to 0.026% total flavonoids.",
     "amount_mg_per_day": 900,
     "amount_basis": "extract",
-    "schedule": null,
+    "schedule": "One 300 mg capsule three times daily in the study",
     "duration_days": 4,
     "design": "Randomized double-blind crossover trial",
     "n_randomized": 36,
@@ -107,8 +125,8 @@
     "comparator": "Placebo and hydrochlorothiazide in separate periods",
     "effect": null,
     "limitations": "Short exposure in healthy men; not evidence for long-term treatment, another extract or an exact finished product.",
-    "source": "https://pubmed.ncbi.nlm.nih.gov/24723963/",
-    "locator": "Abstract; existing horsetail review: studied_context and summary.",
+    "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3960516/",
+    "locator": "Materials and Methods, study drugs and Treatment A. Results, fluid balance and adverse events.",
     "source_verified_at": "2026-11-12",
     "last_evidence_review": "2026-10-02",
     "editorial_status": "reviewed",
@@ -119,6 +137,15 @@
         "grade": null,
         "rationale": "The crossover study supports this narrow finding. It does not establish a treatment effect for a finished product. No prior claim-specific letter grade is recorded."
       }
-    ]
+    ],
+    "citation": {
+      "title": "Randomized, Double-Blind Clinical Trial to Assess the Acute Diuretic Effect of Equisetum arvense (Field Horsetail) in Healthy Volunteers.",
+      "authors": "Carneiro DM, Freire RC, Honório TC, Zoghaib I, Cardoso FF, Tresvenzol LM, de Paula JR, Sousa AL, Jardim PC, da Cunha LC.",
+      "journal": "Evidence-based complementary and alternative medicine : eCAM",
+      "year": 2014,
+      "doi": "10.1155/2014/760683"
+    },
+    "safety_findings": "The authors reported rare minor adverse events during the four-day treatment periods. Longer-term safety was outside the scope of this trial.",
+    "source_access": "full_text"
   }
 ]
