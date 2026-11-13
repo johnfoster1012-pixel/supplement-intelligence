@@ -6,6 +6,7 @@ on:
       - 'mcp-server/**'
       - 'products-data.json'
       - 'ingredient-evidence.json'
+      - 'glp-1/**'
       - '.github/workflows/validate-mcp-worker.yml'
       - '.github/workflows/deploy-mcp-worker.yml'
   workflow_dispatch:
@@ -36,6 +37,9 @@ jobs:
 
       - name: Sync bundled data snapshots
         run: npm run sync-data
+
+      - name: Run local MCP regression tests
+        run: npm test
 
       - name: Type-check MCP Worker
         run: npm run typecheck

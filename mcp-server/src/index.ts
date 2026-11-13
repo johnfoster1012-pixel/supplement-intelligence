@@ -4,8 +4,12 @@ import * as z from "zod/v4";
 import productsSnapshot from "../data/products-data.json";
 import ingredientSnapshot from "../data/ingredient-evidence.json";
 
+import { checkClaim, claimInput, compareLabel, labelInput } from "./verify";
+import revision from "../data/revision.json";
+import guides from "../data/guides.json";
+
 const SERVER_NAME = "supplement-intelligence";
-const SERVER_VERSION = "1.2.0";
+const SERVER_VERSION = "1.3.0";
 const DATA_SOURCE = "bundled-repository-snapshot";
 const PRODUCTS_DOC = productsSnapshot as unknown as JsonObject;
 const INGREDIENT_DOC = ingredientSnapshot as unknown as JsonObject;
@@ -98,6 +102,10 @@ const reviewEvidenceSchema = z.object({
   url: z.string().url(),
 });
 
+function toolOutput(fields: Record<string, unknown>) {
+  const value={...fields,data_version:DATA_VERSION,snapshot_revision:revision.id};
+  return {content:[{type:"text" as const,text:JSON.stringify(value)}],structuredContent:value};
+}
 function createServer(): McpServer {
   const server = new McpServer(
     { name: SERVER_NAME, version: SERVER_VERSION },
@@ -125,6 +133,7 @@ function createServer(): McpServer {
         query: z.string(),
         query_normalized: z.string(),
         data_version: z.string(),
+        snapshot_revision: z.string(),
         count: z.number().int().nonnegative(),
         results: z.array(searchResultSchema),
       }),
@@ -139,6 +148,7 @@ function createServer(): McpServer {
           query: query.trim(),
           query_normalized: q,
           data_version: DATA_VERSION,
+          snapshot_revision: revision.id,
           count: results.length,
           results,
         };
@@ -180,7 +190,9 @@ function createServer(): McpServer {
         slug: z.string(),
         canonical_url: z.string().url(),
         data_version: z.string(),
+        snapshot_revision: z.string(),
         last_reviewed_at: z.string(),
+        last_automated_source_check: z.string().nullable(),
         source_count: z.number().int().nonnegative(),
         review_evidence_count: z.number().int().nonnegative(),
         name: z.string(),
@@ -213,7 +225,9 @@ function createServer(): McpServer {
           slug,
           canonical_url: `https://supplement-intelligence.com/ingredients/${slug}`,
           data_version: INGREDIENT_DATA_VERSION,
-          last_reviewed_at: String(data.last_reviewed_at ?? INGREDIENT_DATA_VERSION),
+          snapshot_revision: revision.id,
+          last_reviewed_at: String(data.last_reviewed_at ?? "unknown"),
+          last_automated_source_check: null, // Offline triage reports are not a completed evidence review.
           source_count: sources.length,
           review_evidence_count: reviewEvidence.length,
           name: String(data.name ?? slug),
@@ -264,6 +278,7 @@ function createServer(): McpServer {
         name: z.string(),
         canonical_url: z.string().url(),
         data_version: z.string(),
+        snapshot_revision: z.string(),
         catalog_checked_at: z.string(),
         formulation_checked_at: z.string().nullable(),
         ingredients: z.string().nullable(),
@@ -301,7 +316,8 @@ function createServer(): McpServer {
           name: String(data.name ?? slug),
           canonical_url: `https://supplement-intelligence.com/products/${slug}`,
           data_version: PRODUCT_DATA_VERSION,
-          catalog_checked_at: String(doc.catalogCheckedAt ?? PRODUCT_DATA_VERSION),
+          snapshot_revision: revision.id,
+          catalog_checked_at: String(doc.catalogCheckedAt ?? "unknown"),
           formulation_checked_at: extractIsoDate(formulationStatus),
           ingredients: data.ingredients == null ? null : String(data.ingredients),
           formulation_status: formulationStatus,
@@ -342,6 +358,7 @@ function createServer(): McpServer {
       inputSchema: z.object({}),
       outputSchema: z.object({
         data_version: z.string(),
+        snapshot_revision: z.string(),
         last_reviewed_at: z.string(),
         count: z.number().int().nonnegative(),
         ingredients: z.array(
@@ -373,7 +390,8 @@ function createServer(): McpServer {
         }));
         const output = {
           data_version: INGREDIENT_DATA_VERSION,
-          last_reviewed_at: INGREDIENT_DATA_VERSION,
+          snapshot_revision: revision.id,
+          last_reviewed_at: "unknown", // No catalog-wide evidence-review date is recorded.
           count: ingredients.length,
           ingredients,
         };
@@ -394,6 +412,23 @@ function createServer(): McpServer {
     }
   );
 
+  const guideInput = z.object({ query: z.string().trim().min(2).max(120) });
+  server.registerTool("find_educational_guides", {
+    description:"Find published Supplement Intelligence educational guides about GLP-1 topics. Guides are not trial evidence.",
+    inputSchema:guideInput, annotations:readOnlyAnnotations
+  }, async ({query})=>{
+    const words=norm(query).split(" ").filter(Boolean);
+    const results=guides.filter(g=>words.length>0 && words.every(w=>(" "+norm(g.title+" "+g.url.split("/").slice(3).join(" "))+" ").includes(" "+w+" ")));
+    return toolOutput({count:results.length,results});
+  });
+  server.registerTool("check_supplement_claim", {
+    description:"Check exact claim wording against curated outcome assessments. Extract only the label claim, ingredient, product if applicable and measured outcome. Missing coverage is not evidence of no effect.",
+    inputSchema:claimInput,annotations:readOnlyAnnotations
+  }, async input=>toolOutput(checkClaim(input,ingredientMap,undefined,productMap)));
+  server.registerTool("compare_supplement_label", {
+    description:"Compare ingredients and quantities transcribed from a label with reviewed research. Mark unreadable values; omit unstated amounts. Only send label facts.",
+    inputSchema:labelInput,annotations:readOnlyAnnotations
+  }, async input=>toolOutput(compareLabel(input,ingredientMap,undefined,productMap)));
   return server;
 }
 
@@ -435,7 +470,7 @@ export default {
           "search_supplement_intelligence",
           "get_ingredient_evidence",
           "get_product_formulation",
-          "list_reviewed_ingredients",
+          "list_reviewed_ingredients", "check_supplement_claim", "compare_supplement_label", "find_educational_guides",
         ],
       });
     }

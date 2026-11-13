@@ -48,3 +48,7 @@ Treat any of the following as an evaluation failure:
 - giving personalized medical dosing from the database
 - omitting a material formulation/dose/directness limitation returned by the tool
 - invoking the plugin for clearly unrelated requests
+
+## 1.3 local release candidate
+
+Ask for magnesium glycinate: magnesium should come first with the form caveat. Ask whether an unidentified product lowers cortisol by 30%: request the missing identity and preserve the exact claim. Ask about an undisclosed proprietary blend: its total cannot establish the amount of any constituent. Ask for the GLP-1 patch guide: return the educational link and its review status. Run the transport regression suite before the hosted tool-routing review.

@@ -58,3 +58,9 @@ Do not invent citations or claim that a source studied a finished product unless
 ## Out-of-scope requests
 
 Do not invoke this skill for unrelated health topics, prescription-drug questions with no relevant supplement evidence, general shopping requests, weather, finance, politics, or other topics outside the Supplement Intelligence database.
+
+## Checking claims and labels
+- When available, use check_supplement_claim with the user's exact label claim and the measured outcome. Keep a product name on product claims. Preserve the difference between a related study and a verdict on that wording. A missing grade means ungraded.
+- Use compare_supplement_label for transcribed facts. Keep per-serving quantities separate from capsule counts. Omit unknown quantities and mark unreadable lines; request a clearer label when the missing detail matters. Never pass personal health information.
+- Use find_educational_guides for the site's GLP-1 guides. Cite the canonical page, and preserve its review status. These tools search the bundled catalog, not live literature.
+- If a newer tool is unavailable, use the existing ingredient or formulation lookup and clearly state the narrower scope.

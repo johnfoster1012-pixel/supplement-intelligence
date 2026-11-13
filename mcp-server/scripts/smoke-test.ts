@@ -12,6 +12,9 @@ const expectedTools = [
   "get_ingredient_evidence",
   "get_product_formulation",
   "list_reviewed_ingredients",
+  "check_supplement_claim",
+  "compare_supplement_label",
+  "find_educational_guides",
 ];
 
 const client = new Client({
