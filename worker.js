@@ -7,7 +7,7 @@
  */
 const CONTENT_BRANCH_NAME = (typeof CONTENT_BRANCH !== 'undefined' && CONTENT_BRANCH) ? CONTENT_BRANCH : 'main';
 const IS_PREVIEW = CONTENT_BRANCH_NAME !== 'main';
-const VERSION = 'Supplement Intelligence v11.22';
+const VERSION = 'Supplement Intelligence v11.23';
 const SITE_ORIGIN = 'https://supplement-intelligence.com';
 // CONTENT_REV is the commit SHA the deploy workflow passes in (--var). Content is
 // read from that exact commit, so a deploy can never pick up an older copy of a
@@ -114,12 +114,21 @@ const GLP1_GUIDES = new Map([
   ['retatrutide', { file: 'glp-1/retatrutide.html', name: 'Retatrutide', reviewed: '2026-11-10' }],
   ['muscle-loss', { file: 'glp-1/muscle-loss.html', name: 'GLP-1 and muscle loss', reviewed: '2026-11-13' }],
   ['oral-glp-1', { file: 'glp-1/oral-glp-1.html', name: 'Oral GLP-1 pills', reviewed: '2026-11-13' }],
+  ['tirzepatide-side-effects', { file: 'glp-1/tirzepatide-side-effects.html', name: 'Tirzepatide side effects', reviewed: '2026-11-13' }],
+  ['tirzepatide-vs-semaglutide', { file: 'glp-1/tirzepatide-vs-semaglutide.html', name: 'Tirzepatide vs semaglutide', reviewed: '2026-11-13' }],
+]);
+
+// Comparison and question guides that live under /ingredients/ but are not
+// ingredient records: static HTML served like the GLP-1 guides.
+const INGREDIENT_TOPIC_GUIDES = new Map([
+  ['creatine-hcl-vs-monohydrate', { file: 'ingredients/creatine-hcl-vs-monohydrate.html', name: 'Creatine HCl vs monohydrate', reviewed: '2026-11-13' }],
+  ['creatine-weight-gain', { file: 'ingredients/creatine-weight-gain.html', name: 'Does creatine cause weight gain?', reviewed: '2026-11-13' }],
 ]);
 
 // Guides to point to from an ingredient page: slug -> [[label, path], ...].
 const INGREDIENT_GUIDE_LINKS = new Map([
   ['berberine', [['Berberine vs Ozempic', '/glp-1/berberine-vs-ozempic']]],
-  ['creatine-monohydrate', [['Supplements on GLP-1 drugs', '/glp-1']]],
+  ['creatine-monohydrate', [['Supplements on GLP-1 drugs', '/glp-1'], ['Does creatine cause weight gain?', '/ingredients/creatine-weight-gain'], ['Creatine HCl vs monohydrate', '/ingredients/creatine-hcl-vs-monohydrate']]],
   ['magnesium', [['Supplements on GLP-1 drugs', '/glp-1']]],
 ]);
 
@@ -325,6 +334,8 @@ async function route(request, url, path) {
   if (ingredientMatch) {
     const slug = ingredientMatch[1];
     if (VALID_INGREDIENT_SLUGS.has(slug)) return handleIngredientPage(slug);
+    const topicGuide = INGREDIENT_TOPIC_GUIDES.get(slug);
+    if (topicGuide) return handleGuide(path, topicGuide, ['Ingredients', '/ingredients']);
     const target = INGREDIENT_REDIRECTS.get(slug);
     return target ? redirect(url, target) : notFound('Ingredient Not Found');
   }
@@ -584,11 +595,11 @@ async function handleImage(request, repoPath, ext) {
 }
 
 // A guide page: static HTML plus the shared chrome, review date and schema.
-async function handleGuide(path, guide) {
+async function handleGuide(path, guide, section = ['GLP-1', '/glp-1']) {
   const raw = await fetchRaw(guide.file);
   if (raw.error) return raw.error;
   const isHub = path === '/glp-1';
-  const breadcrumbs = [['GLP-1', '/glp-1']];
+  const breadcrumbs = [section];
   if (!isHub) breadcrumbs.push([guide.name, path]);
   const description = decodeEntities((raw.body.match(/<meta name="description" content="([^"]*)">/i) || [])[1] || '');
   const options = {
