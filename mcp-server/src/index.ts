@@ -1,3 +1,4 @@
+import { search, norm, type Catalog } from "./search";
 import { createMcpHandler, McpServer } from "@modelcontextprotocol/server";
 import * as z from "zod/v4";
 import productsSnapshot from "../data/products-data.json";
@@ -12,6 +13,9 @@ const PRODUCT_DATA_VERSION = String(PRODUCTS_DOC.generatedAt ?? PRODUCTS_DOC.cat
 const INGREDIENT_DATA_VERSION = String(INGREDIENT_DOC.generated_at ?? "unknown");
 const DATA_VERSION = `products:${PRODUCT_DATA_VERSION};ingredients:${INGREDIENT_DATA_VERSION}`;
 
+const ingredientMap = INGREDIENT_DOC.ingredients as Catalog;
+const productMap = PRODUCTS_DOC.products as Catalog;
+
 interface Env {
   OPENAI_APPS_CHALLENGE?: string;
 }
@@ -24,52 +28,6 @@ const readOnlyAnnotations = {
 } as const;
 
 type JsonObject = Record<string, unknown>;
-
-const SEARCH_ALIASES: Record<string, string[]> = {
-  "fish oil": ["omega 3", "omega-3", "long chain omega 3", "epa dha"],
-  "omega 3": ["fish oil", "omega-3", "long chain omega 3", "epa dha"],
-  "omega-3": ["fish oil", "omega 3", "long chain omega 3", "epa dha"],
-  "d3": ["vitamin d", "vitamin d3"],
-  "vitamin d3": ["vitamin d", "d3"],
-  "coq10": ["coenzyme q10", "co q10"],
-  "coenzyme q10": ["coq10", "co q10"],
-  "ala": ["alpha lipoic acid", "alpha-lipoic acid"],
-  "alpha lipoic acid": ["ala", "alpha-lipoic acid"],
-  "turmeric": ["curcumin"],
-  "curcumin": ["turmeric"],
-  "msm": ["methylsulfonylmethane"],
-  "methylsulfonylmethane": ["msm"],
-  "citrulline malate": ["citrulline", "l citrulline"],
-  "l citrulline": ["citrulline", "citrulline malate"],
-  "l arginine": ["arginine"],
-  "arginine": ["l arginine"],
-};
-
-function normalizeSearchText(value: unknown): string {
-  return String(value ?? "")
-    .toLowerCase()
-    .replace(/[+/_-]+/g, " ")
-    .replace(/[^a-z0-9\s]/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
-function searchTerms(query: string): string[] {
-  const normalized = normalizeSearchText(query);
-  const terms = new Set<string>([normalized]);
-  for (const [key, aliases] of Object.entries(SEARCH_ALIASES)) {
-    if (normalized === key || normalized.includes(key)) {
-      terms.add(key);
-      aliases.forEach((alias) => terms.add(normalizeSearchText(alias)));
-    }
-  }
-  return [...terms].filter(Boolean);
-}
-
-function matchesSearch(values: unknown[], terms: string[]): boolean {
-  const haystack = normalizeSearchText(values.map((v) => String(v ?? "")).join(" "));
-  return terms.some((term) => haystack.includes(term));
-}
 
 function getProductsDocument(): JsonObject {
   return PRODUCTS_DOC;
@@ -107,6 +65,9 @@ const searchResultSchema = z.object({
   slug: z.string(),
   name: z.string(),
   canonical_url: z.string().url(),
+  match_kind: z.string(),
+  requested_form: z.string().optional(),
+  applicability: z.string().optional(),
   evidence_posture: z.string().optional(),
   formulation_status: z.string().nullable().optional(),
   evidence_status: z.string().optional(),
@@ -172,48 +133,8 @@ function createServer(): McpServer {
     async ({ query }) => {
       const startedAt = Date.now();
       try {
-        const productsDoc = getProductsDocument();
-        const ingredientDoc = getIngredientDocument();
-
-        const q = normalizeSearchText(query);
-        const terms = searchTerms(query);
-        const productMap =
-          productsDoc.products && typeof productsDoc.products === "object"
-            ? (productsDoc.products as Record<string, JsonObject>)
-            : {};
-        const ingredientMap =
-          ingredientDoc.ingredients && typeof ingredientDoc.ingredients === "object"
-            ? (ingredientDoc.ingredients as Record<string, JsonObject>)
-            : {};
-
-        const productResults = Object.values(productMap)
-          .filter((p) =>
-            matchesSearch([p.name, p.slug, p.ingredients], terms)
-          )
-          .slice(0, 20)
-          .map((p) => ({
-            type: "product" as const,
-            slug: String(p.slug ?? ""),
-            name: String(p.name ?? ""),
-            canonical_url: `https://supplement-intelligence.com/products/${String(p.slug ?? "")}`,
-            formulation_status: p.formulationStatus == null ? null : String(p.formulationStatus),
-            evidence_status: String(p.evidenceGrade ?? "Under Review"),
-          }));
-
-        const ingredientResults = Object.entries(ingredientMap)
-          .filter(([slug, x]) =>
-            matchesSearch([slug, x.name, x.posture, x.summary], terms)
-          )
-          .slice(0, 20)
-          .map(([slug, x]) => ({
-            type: "ingredient" as const,
-            slug,
-            name: String(x.name ?? slug),
-            canonical_url: `https://supplement-intelligence.com/ingredients/${slug}`,
-            evidence_posture: String(x.posture ?? ""),
-          }));
-
-        const results = [...ingredientResults, ...productResults];
+        const q = norm(query);
+        const results = search(query, ingredientMap, productMap);
         const output = {
           query: query.trim(),
           query_normalized: q,
