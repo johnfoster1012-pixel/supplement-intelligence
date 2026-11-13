@@ -7,7 +7,7 @@
  */
 const CONTENT_BRANCH_NAME = (typeof CONTENT_BRANCH !== 'undefined' && CONTENT_BRANCH) ? CONTENT_BRANCH : 'main';
 const IS_PREVIEW = CONTENT_BRANCH_NAME !== 'main';
-const VERSION = 'Supplement Intelligence v11.20';
+const VERSION = 'Supplement Intelligence v11.21';
 const SITE_ORIGIN = 'https://supplement-intelligence.com';
 // CONTENT_REV is the commit SHA the deploy workflow passes in (--var). Content is
 // read from that exact commit, so a deploy can never pick up an older copy of a
@@ -111,6 +111,7 @@ const GLP1_GUIDES = new Map([
   ['semaglutide-with-b12', { file: 'glp-1/semaglutide-with-b12.html', name: 'Semaglutide with B12', reviewed: '2026-11-10' }],
   ['glp-1-supplements', { file: 'glp-1/glp-1-supplements.html', name: 'Do GLP-1 supplements work?', reviewed: '2026-11-11' }],
   ['glp-1-patches', { file: 'glp-1/glp-1-patches.html', name: 'Do GLP-1 patches work?', reviewed: '2026-11-11' }],
+  ['retatrutide', { file: 'glp-1/retatrutide.html', name: 'Retatrutide', reviewed: '2026-11-10' }],
 ]);
 
 // Guides to point to from an ingredient page: slug -> [[label, path], ...].
@@ -159,6 +160,9 @@ a{color:#a8532f}
 .si-main th,.si-main td{border:1px solid #e5e7eb;padding:10px 12px;text-align:left;vertical-align:top}
 .si-main th{background:#e8f0ec;color:#1a3d2e}
 .si-sources li{margin-bottom:8px}
+.si-figure{margin:20px 0}
+.si-figure img{display:block;max-width:100%;height:auto;border-radius:12px;background:#fff}
+.si-figure figcaption{font-size:.9rem;color:#555;margin-top:6px;font-style:italic}
 .si-main details{background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:12px 16px;margin:10px 0}
 .si-main summary{font-weight:700;color:#1a3d2e;cursor:pointer}
 .si-crumbs{font-size:.92rem;color:#555}
@@ -292,6 +296,10 @@ async function route(request, url, path) {
   if (path === '/terms') return proxyHtml('site/terms.html', { path: '/terms' });
   if (path === '/support.html') return redirect(url, '/support');
   if (path === '/support') return proxyHtml('site/support.html', { path: '/support' });
+
+  // Page images: binary files in images/ in the repo, read from the same pinned commit.
+  const imageMatch = path.match(/^\/images\/(?:[a-z0-9-]+\/)*[a-z0-9-]+\.(png|jpe?g|webp)$/);
+  if (imageMatch) return handleImage(request, path.slice(1), imageMatch[1]);
 
   const guideMatch = path.match(/^\/glp-1(?:\/([a-z0-9-]+))?$/);
   if (guideMatch) {
@@ -544,6 +552,33 @@ async function proxyHtml(path, options) {
   const raw = await fetchRaw(path);
   if (raw.error) return raw.error;
   return new Response(decorate(raw.body, options), { status: 200, headers: htmlHeaders({ 'X-Powered-By': VERSION }) });
+}
+
+// A repo image (hero, Open Graph or infographic), streamed as bytes, not text.
+const IMAGE_TYPES = { png: 'image/png', jpg: 'image/jpeg', jpeg: 'image/jpeg', webp: 'image/webp' };
+// Images not in the repo fall through to the legacy origin, as before.
+async function handleImage(request, repoPath, ext) {
+  let res;
+  try {
+    res = await fetch(contentUrl(repoPath), { headers: { 'User-Agent': 'Supplement-Intelligence-Worker/11.0' }, cf: { cacheTtl: 86400 } });
+  } catch (_) {
+    return notFound('Image Not Found');
+  }
+  if (res.status === 404) {
+    if (IS_PREVIEW) return notFound('Image Not Found');
+    try {
+      const origin = await fetch(request);
+      const type = origin.headers.get('Content-Type') || '';
+      return (origin.status === 200 && !type.includes('text/html')) ? origin : notFound('Image Not Found');
+    } catch (_) {
+      return notFound('Image Not Found');
+    }
+  }
+  if (!res.ok) return new Response('Temporarily unavailable', { status: 503, headers: textHeaders({ 'Cache-Control': 'no-store' }) });
+  return new Response(res.body, {
+    status: 200,
+    headers: { ...baseHeaders(IMAGE_TYPES[ext] || 'application/octet-stream'), 'Cache-Control': 'public, max-age=86400, s-maxage=604800', 'X-Powered-By': VERSION }
+  });
 }
 
 // A guide page: static HTML plus the shared chrome, review date and schema.
