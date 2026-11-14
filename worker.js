@@ -7,7 +7,7 @@
  */
 const CONTENT_BRANCH_NAME = (typeof CONTENT_BRANCH !== 'undefined' && CONTENT_BRANCH) ? CONTENT_BRANCH : 'main';
 const IS_PREVIEW = CONTENT_BRANCH_NAME !== 'main';
-const VERSION = 'Supplement Intelligence v11.23';
+const VERSION = 'Supplement Intelligence v11.24';
 const SITE_ORIGIN = 'https://supplement-intelligence.com';
 // CONTENT_REV is the commit SHA the deploy workflow passes in (--var). Content is
 // read from that exact commit, so a deploy can never pick up an older copy of a
@@ -123,13 +123,21 @@ const GLP1_GUIDES = new Map([
 const INGREDIENT_TOPIC_GUIDES = new Map([
   ['creatine-hcl-vs-monohydrate', { file: 'ingredients/creatine-hcl-vs-monohydrate.html', name: 'Creatine HCl vs monohydrate', reviewed: '2026-11-13' }],
   ['creatine-weight-gain', { file: 'ingredients/creatine-weight-gain.html', name: 'Does creatine cause weight gain?', reviewed: '2026-11-13' }],
+  ['magnesium-glycinate-vs-citrate', { file: 'ingredients/magnesium-glycinate-vs-citrate.html', name: 'Magnesium glycinate vs citrate', reviewed: '2026-11-13' }],
+  ['magnesium-l-threonate-vs-glycinate', { file: 'ingredients/magnesium-l-threonate-vs-glycinate.html', name: 'Magnesium L-threonate vs glycinate', reviewed: '2026-11-13' }],
+]);
+
+// Peptide evidence guides: static HTML in peptides/, served at /peptides/<slug>.
+// There is no /peptides hub page yet, so these have no section breadcrumb.
+const PEPTIDE_GUIDES = new Map([
+  ['bpc-157', { file: 'peptides/bpc-157.html', name: 'BPC-157 evidence', reviewed: '2026-11-13' }],
 ]);
 
 // Guides to point to from an ingredient page: slug -> [[label, path], ...].
 const INGREDIENT_GUIDE_LINKS = new Map([
   ['berberine', [['Berberine vs Ozempic', '/glp-1/berberine-vs-ozempic']]],
   ['creatine-monohydrate', [['Supplements on GLP-1 drugs', '/glp-1'], ['Does creatine cause weight gain?', '/ingredients/creatine-weight-gain'], ['Creatine HCl vs monohydrate', '/ingredients/creatine-hcl-vs-monohydrate']]],
-  ['magnesium', [['Supplements on GLP-1 drugs', '/glp-1']]],
+  ['magnesium', [['Supplements on GLP-1 drugs', '/glp-1'], ['Magnesium glycinate vs citrate', '/ingredients/magnesium-glycinate-vs-citrate'], ['Magnesium L-threonate vs glycinate', '/ingredients/magnesium-l-threonate-vs-glycinate']]],
 ]);
 
 // Retired /pages/* articles that still earn search impressions: 301 to the
@@ -330,6 +338,12 @@ async function route(request, url, path) {
     return target ? redirect(url, target) : notFound('Article Not Found');
   }
 
+  const peptideMatch = path.match(/^\/peptides\/([a-z0-9-]+)$/);
+  if (peptideMatch) {
+    const guide = PEPTIDE_GUIDES.get(peptideMatch[1]);
+    return guide ? handleGuide(path, guide, null) : notFound('Guide Not Found');
+  }
+
   const ingredientMatch = path.match(/^\/ingredients\/([a-z0-9-]+)$/);
   if (ingredientMatch) {
     const slug = ingredientMatch[1];
@@ -447,7 +461,7 @@ const HOME_TOPICS = [
   ['/ingredients/vitamin-d', 'Vitamin D'], ['/ingredients/berberine', 'Berberine'], ['/ingredients/ashwagandha', 'Ashwagandha'],
   ['/ingredients/curcumin', 'Curcumin'], ['/ingredients/caffeine', 'Caffeine'], ['/ingredients/probiotics', 'Probiotics'],
   ['/ingredients/collagen-peptides', 'Collagen'], ['/ingredients/l-theanine', 'L-theanine'], ['/ingredients/valerian', 'Valerian'],
-  ['/ingredients/dandelion', 'Dandelion'],
+  ['/ingredients/dandelion', 'Dandelion'], ['/peptides/bpc-157', 'BPC-157'],
 ];
 
 async function handleHome() {
@@ -599,7 +613,7 @@ async function handleGuide(path, guide, section = ['GLP-1', '/glp-1']) {
   const raw = await fetchRaw(guide.file);
   if (raw.error) return raw.error;
   const isHub = path === '/glp-1';
-  const breadcrumbs = [section];
+  const breadcrumbs = section ? [section] : [];
   if (!isHub) breadcrumbs.push([guide.name, path]);
   const description = decodeEntities((raw.body.match(/<meta name="description" content="([^"]*)">/i) || [])[1] || '');
   const options = {
