@@ -7,7 +7,7 @@
  */
 const CONTENT_BRANCH_NAME = (typeof CONTENT_BRANCH !== 'undefined' && CONTENT_BRANCH) ? CONTENT_BRANCH : 'main';
 const IS_PREVIEW = CONTENT_BRANCH_NAME !== 'main';
-const VERSION = 'Supplement Intelligence v11.24';
+const VERSION = 'Supplement Intelligence v11.25';
 const SITE_ORIGIN = 'https://supplement-intelligence.com';
 // CONTENT_REV is the commit SHA the deploy workflow passes in (--var). Content is
 // read from that exact commit, so a deploy can never pick up an older copy of a
@@ -127,9 +127,10 @@ const INGREDIENT_TOPIC_GUIDES = new Map([
   ['magnesium-l-threonate-vs-glycinate', { file: 'ingredients/magnesium-l-threonate-vs-glycinate.html', name: 'Magnesium L-threonate vs glycinate', reviewed: '2026-11-13' }],
 ]);
 
-// Peptide evidence guides: static HTML in peptides/, served at /peptides/<slug>.
-// There is no /peptides hub page yet, so these have no section breadcrumb.
+// Peptide evidence guides: static HTML in peptides/, keyed by URL slug ('' is the hub at /peptides).
+const PEPTIDE_SECTION = ['Peptides', '/peptides'];
 const PEPTIDE_GUIDES = new Map([
+  ['', { file: 'peptides/index.html', name: 'Peptides', reviewed: '2026-11-15' }],
   ['bpc-157', { file: 'peptides/bpc-157.html', name: 'BPC-157 evidence', reviewed: '2026-11-13' }],
 ]);
 
@@ -240,7 +241,7 @@ a{color:#a8532f}
 
 const SITE_HEADER = '<header class="si-header"><div class="si-inner"><a class="si-logo" href="/">Supplement<span>Intelligence</span></a><nav aria-label="Main"><a href="/glp-1">GLP-1</a><a href="/ingredients">Ingredient evidence</a><a href="/products">Products</a><a href="/references">Research status</a><a href="/about">About</a></nav></div></header>';
 
-const SITE_FOOTER = '<footer class="si-footer"><nav aria-label="Footer"><a href="/glp-1">GLP-1 guides</a><a href="/ingredients">Ingredient evidence</a><a href="/products">Products</a><a href="/references">Research status</a><a href="/about">About</a><a href="/support">Support</a><a href="/disclaimer">Disclaimer</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/api/v1">API</a></nav><p>Supplement Intelligence may earn referral credit from some product links. Compensation does not determine evidence status.</p><p>For informational purposes only; not individualized medical advice.</p></footer>';
+const SITE_FOOTER = '<footer class="si-footer"><nav aria-label="Footer"><a href="/glp-1">GLP-1 guides</a><a href="/peptides">Peptides</a><a href="/ingredients">Ingredient evidence</a><a href="/products">Products</a><a href="/references">Research status</a><a href="/about">About</a><a href="/support">Support</a><a href="/disclaimer">Disclaimer</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/api/v1">API</a></nav><p>Supplement Intelligence may earn referral credit from some product links. Compensation does not determine evidence status.</p><p>For informational purposes only; not individualized medical advice.</p></footer>';
 
 let cache = { productsData: null, ingredientData: null, ts: 0 };
 const CACHE_TTL = 3600000;
@@ -338,10 +339,10 @@ async function route(request, url, path) {
     return target ? redirect(url, target) : notFound('Article Not Found');
   }
 
-  const peptideMatch = path.match(/^\/peptides\/([a-z0-9-]+)$/);
+  const peptideMatch = path.match(/^\/peptides(?:\/([a-z0-9-]+))?$/);
   if (peptideMatch) {
-    const guide = PEPTIDE_GUIDES.get(peptideMatch[1]);
-    return guide ? handleGuide(path, guide, null) : notFound('Guide Not Found');
+    const guide = PEPTIDE_GUIDES.get(peptideMatch[1] || '');
+    return guide ? handleGuide(path, guide, PEPTIDE_SECTION) : notFound('Guide Not Found');
   }
 
   const ingredientMatch = path.match(/^\/ingredients\/([a-z0-9-]+)$/);
@@ -612,7 +613,8 @@ async function handleImage(request, repoPath, ext) {
 async function handleGuide(path, guide, section = ['GLP-1', '/glp-1']) {
   const raw = await fetchRaw(guide.file);
   if (raw.error) return raw.error;
-  const isHub = path === '/glp-1';
+  // A section's hub page (/glp-1, /peptides) is its own breadcrumb.
+  const isHub = Boolean(section) && path === section[1];
   const breadcrumbs = section ? [section] : [];
   if (!isHub) breadcrumbs.push([guide.name, path]);
   const description = decodeEntities((raw.body.match(/<meta name="description" content="([^"]*)">/i) || [])[1] || '');
