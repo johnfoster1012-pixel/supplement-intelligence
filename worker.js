@@ -919,10 +919,12 @@ function renderProductPage(product, productsData) {
     });
   };
 
-  const title = `${name} Ingredients & Evidence Status | Supplement Intelligence`;
-  const description = formulationVerified
+  // pageTitle/pageDescription in products-data.json override the generated
+  // search snippet for products where the default title gets cut off or reads poorly.
+  const title = product.pageTitle || `${name} Ingredients & Evidence Status | Supplement Intelligence`;
+  const description = product.pageDescription || (formulationVerified
     ? truncateText(`${name} ingredients and evidence status. Label lists: ${product.ingredients}`, 160)
-    : truncateText(`${name}: the manufacturer has not published a complete ingredient list, so the ingredients cannot be reviewed yet.`, 160);
+    : truncateText(`${name}: the manufacturer has not published a complete ingredient list, so the ingredients cannot be reviewed yet.`, 160));
 
   let summary;
   if (!formulationVerified) {
