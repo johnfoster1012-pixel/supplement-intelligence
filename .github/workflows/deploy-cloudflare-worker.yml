@@ -18,6 +18,7 @@ on:
       - 'products/**'
       - 'ingredients/**'
       - 'glp-1/**'
+      - 'peptides/**'
       - 'images/**'
       - 'articles/**'
       - 'site/**'
