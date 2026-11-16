@@ -19,9 +19,12 @@ Verification-first supplement formulation and ingredient research.
 - https://supplement-intelligence.com/peptides
 - https://supplement-intelligence.com/peptides/bpc-157
 - https://supplement-intelligence.com/glp-1/retatrutide
+- https://supplement-intelligence.com/glp-1/retatrutide-dosing-schedule
+- https://supplement-intelligence.com/glp-1/tirzepatide-vs-retatrutide
 - https://supplement-intelligence.com/products
 - https://supplement-intelligence.com/references
 - https://supplement-intelligence.com/about
+- https://supplement-intelligence.com/newsletter
 
 ## Machine-readable interfaces
 - https://supplement-intelligence.com/api/v1

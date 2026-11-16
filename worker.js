@@ -7,7 +7,7 @@
  */
 const CONTENT_BRANCH_NAME = (typeof CONTENT_BRANCH !== 'undefined' && CONTENT_BRANCH) ? CONTENT_BRANCH : 'main';
 const IS_PREVIEW = CONTENT_BRANCH_NAME !== 'main';
-const VERSION = 'Supplement Intelligence v11.25';
+const VERSION = 'Supplement Intelligence v11.26';
 const SITE_ORIGIN = 'https://supplement-intelligence.com';
 // CONTENT_REV is the commit SHA the deploy workflow passes in (--var). Content is
 // read from that exact commit, so a deploy can never pick up an older copy of a
@@ -111,7 +111,9 @@ const GLP1_GUIDES = new Map([
   ['semaglutide-with-b12', { file: 'glp-1/semaglutide-with-b12.html', name: 'Semaglutide with B12', reviewed: '2026-11-10' }],
   ['glp-1-supplements', { file: 'glp-1/glp-1-supplements.html', name: 'Do GLP-1 supplements work?', reviewed: '2026-11-11' }],
   ['glp-1-patches', { file: 'glp-1/glp-1-patches.html', name: 'Do GLP-1 patches work?', reviewed: '2026-11-11' }],
-  ['retatrutide', { file: 'glp-1/retatrutide.html', name: 'Retatrutide', reviewed: '2026-11-10' }],
+  ['retatrutide', { file: 'glp-1/retatrutide.html', name: 'Retatrutide', reviewed: '2026-11-15' }],
+  ['retatrutide-dosing-schedule', { file: 'glp-1/retatrutide-dosing-schedule.html', name: 'Retatrutide dosing schedule', reviewed: '2026-11-15' }],
+  ['tirzepatide-vs-retatrutide', { file: 'glp-1/tirzepatide-vs-retatrutide.html', name: 'Tirzepatide vs retatrutide', reviewed: '2026-11-15' }],
   ['muscle-loss', { file: 'glp-1/muscle-loss.html', name: 'GLP-1 and muscle loss', reviewed: '2026-11-13' }],
   ['oral-glp-1', { file: 'glp-1/oral-glp-1.html', name: 'Oral GLP-1 pills', reviewed: '2026-11-13' }],
   ['tirzepatide-side-effects', { file: 'glp-1/tirzepatide-side-effects.html', name: 'Tirzepatide side effects', reviewed: '2026-11-13' }],
@@ -130,8 +132,8 @@ const INGREDIENT_TOPIC_GUIDES = new Map([
 // Peptide evidence guides: static HTML in peptides/, keyed by URL slug ('' is the hub at /peptides).
 const PEPTIDE_SECTION = ['Peptides', '/peptides'];
 const PEPTIDE_GUIDES = new Map([
-  ['', { file: 'peptides/index.html', name: 'Peptides', reviewed: '2026-11-15' }],
-  ['bpc-157', { file: 'peptides/bpc-157.html', name: 'BPC-157 evidence', reviewed: '2026-11-13' }],
+  ['', { file: 'peptides/index.html', name: 'Peptides', reviewed: '2026-11-16' }],
+  ['bpc-157', { file: 'peptides/bpc-157.html', name: 'BPC-157 side effects', reviewed: '2026-11-15' }],
 ]);
 
 // Guides to point to from an ingredient page: slug -> [[label, path], ...].
@@ -239,9 +241,9 @@ a{color:#a8532f}
 .si-footer p{margin:6px auto;max-width:720px}
 `;
 
-const SITE_HEADER = '<header class="si-header"><div class="si-inner"><a class="si-logo" href="/">Supplement<span>Intelligence</span></a><nav aria-label="Main"><a href="/glp-1">GLP-1</a><a href="/ingredients">Ingredient evidence</a><a href="/products">Products</a><a href="/references">Research status</a><a href="/about">About</a></nav></div></header>';
+const SITE_HEADER = '<header class="si-header"><div class="si-inner"><a class="si-logo" href="/">Supplement<span>Intelligence</span></a><nav aria-label="Main"><a href="/glp-1">GLP-1</a><a href="/ingredients">Ingredient evidence</a><a href="/products">Products</a><a href="/references">Research status</a><a href="/newsletter">Newsletter</a><a href="/about">About</a></nav></div></header>';
 
-const SITE_FOOTER = '<footer class="si-footer"><nav aria-label="Footer"><a href="/glp-1">GLP-1 guides</a><a href="/peptides">Peptides</a><a href="/ingredients">Ingredient evidence</a><a href="/products">Products</a><a href="/references">Research status</a><a href="/about">About</a><a href="/support">Support</a><a href="/disclaimer">Disclaimer</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/api/v1">API</a></nav><p>Supplement Intelligence may earn referral credit from some product links. Compensation does not determine evidence status.</p><p>For informational purposes only; not individualized medical advice.</p></footer>';
+const SITE_FOOTER = '<footer class="si-footer"><nav aria-label="Footer"><a href="/glp-1">GLP-1 guides</a><a href="/peptides">Peptides</a><a href="/ingredients">Ingredient evidence</a><a href="/products">Products</a><a href="/references">Research status</a><a href="/newsletter">Newsletter</a><a href="/about">About</a><a href="/support">Support</a><a href="/disclaimer">Disclaimer</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/api/v1">API</a></nav><p><strong>Graded Claims:</strong> a free weekly email. <a href="https://supplementintel.beehiiv.com/subscribe" rel="noopener">Subscribe</a></p><p>Supplement Intelligence may earn referral credit from some product links. Compensation does not determine evidence status.</p><p>For informational purposes only; not individualized medical advice.</p></footer>';
 
 let cache = { productsData: null, ingredientData: null, ts: 0 };
 const CACHE_TTL = 3600000;
@@ -306,6 +308,8 @@ async function route(request, url, path) {
   if (path === '/database') return redirect(url, '/references');
   if (path === '/about.html') return redirect(url, '/about');
   if (path === '/about') return proxyHtml('site/about.html', { path: '/about' });
+  if (path === '/newsletter.html' || path === '/newsletter/') return redirect(url, '/newsletter');
+  if (path === '/newsletter') return proxyHtml('site/newsletter.html', { path: '/newsletter' });
   if (path === '/references.html') return redirect(url, '/references');
   if (path === '/references') return proxyHtml('site/references.html', { path: '/references' });
   if (path === '/disclaimer.html') return redirect(url, '/disclaimer');
@@ -917,10 +921,12 @@ function renderProductPage(product, productsData) {
     });
   };
 
-  const title = `${name} Ingredients & Evidence Status | Supplement Intelligence`;
-  const description = formulationVerified
+  // pageTitle/pageDescription in products-data.json override the generated
+  // search snippet for products where the default title gets cut off or reads poorly.
+  const title = product.pageTitle || `${name} Ingredients & Evidence Status | Supplement Intelligence`;
+  const description = product.pageDescription || (formulationVerified
     ? truncateText(`${name} ingredients and evidence status. Label lists: ${product.ingredients}`, 160)
-    : truncateText(`${name}: the manufacturer has not published a complete ingredient list, so the ingredients cannot be reviewed yet.`, 160);
+    : truncateText(`${name}: the manufacturer has not published a complete ingredient list, so the ingredients cannot be reviewed yet.`, 160));
 
   let summary;
   if (!formulationVerified) {
