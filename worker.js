@@ -132,6 +132,7 @@ const INGREDIENT_TOPIC_GUIDES = new Map([
 // Peptide evidence guides: static HTML in peptides/, served at /peptides/<slug>.
 // There is no /peptides hub page yet, so these have no section breadcrumb.
 const PEPTIDE_GUIDES = new Map([
+  ['', { file: 'peptides/index.html', name: 'Peptides', reviewed: '2026-11-15' }],
   ['bpc-157', { file: 'peptides/bpc-157.html', name: 'BPC-157 side effects', reviewed: '2026-11-15' }],
 ]);
 
@@ -240,9 +241,9 @@ a{color:#a8532f}
 .si-footer p{margin:6px auto;max-width:720px}
 `;
 
-const SITE_HEADER = '<header class="si-header"><div class="si-inner"><a class="si-logo" href="/">Supplement<span>Intelligence</span></a><nav aria-label="Main"><a href="/glp-1">GLP-1</a><a href="/ingredients">Ingredient evidence</a><a href="/products">Products</a><a href="/references">Research status</a><a href="/newsletter">Newsletter</a><a href="/about">About</a></nav></div></header>';
+const SITE_HEADER = '<header class="si-header"><div class="si-inner"><a class="si-logo" href="/">Supplement<span>Intelligence</span></a><nav aria-label="Main"><a href="/glp-1">GLP-1</a><a href="/peptides">Peptides</a><a href="/ingredients">Ingredient evidence</a><a href="/products">Products</a><a href="/references">Research status</a><a href="/newsletter">Newsletter</a><a href="/about">About</a></nav></div></header>';
 
-const SITE_FOOTER = '<footer class="si-footer"><nav aria-label="Footer"><a href="/glp-1">GLP-1 guides</a><a href="/ingredients">Ingredient evidence</a><a href="/products">Products</a><a href="/references">Research status</a><a href="/newsletter">Newsletter</a><a href="/about">About</a><a href="/support">Support</a><a href="/disclaimer">Disclaimer</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/api/v1">API</a></nav><p><strong>Graded Claims:</strong> a free weekly email. <a href="https://supplementintel.beehiiv.com/subscribe" rel="noopener">Subscribe</a></p><p>Supplement Intelligence may earn referral credit from some product links. Compensation does not determine evidence status.</p><p>For informational purposes only; not individualized medical advice.</p></footer>';
+const SITE_FOOTER = '<footer class="si-footer"><nav aria-label="Footer"><a href="/glp-1">GLP-1 guides</a><a href="/peptides">Peptides</a><a href="/ingredients">Ingredient evidence</a><a href="/products">Products</a><a href="/references">Research status</a><a href="/newsletter">Newsletter</a><a href="/about">About</a><a href="/support">Support</a><a href="/disclaimer">Disclaimer</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/api/v1">API</a></nav><p><strong>Graded Claims:</strong> a free weekly email. <a href="https://supplementintel.beehiiv.com/subscribe" rel="noopener">Subscribe</a></p><p>Supplement Intelligence may earn referral credit from some product links. Compensation does not determine evidence status.</p><p>For informational purposes only; not individualized medical advice.</p></footer>';
 
 let cache = { productsData: null, ingredientData: null, ts: 0 };
 const CACHE_TTL = 3600000;
@@ -342,10 +343,11 @@ async function route(request, url, path) {
     return target ? redirect(url, target) : notFound('Article Not Found');
   }
 
-  const peptideMatch = path.match(/^\/peptides\/([a-z0-9-]+)$/);
+  const peptideMatch = path.match(/^\/peptides(?:\/([a-z0-9-]+))?$/);
   if (peptideMatch) {
-    const guide = PEPTIDE_GUIDES.get(peptideMatch[1]);
-    return guide ? handleGuide(path, guide, null) : notFound('Guide Not Found');
+    const guide = PEPTIDE_GUIDES.get(peptideMatch[1] || '');
+    // The hub is its own top-level crumb; spokes sit under it.
+    return guide ? handleGuide(path, guide, peptideMatch[1] ? ['Peptides', '/peptides'] : null) : notFound('Guide Not Found');
   }
 
   const ingredientMatch = path.match(/^\/ingredients\/([a-z0-9-]+)$/);
