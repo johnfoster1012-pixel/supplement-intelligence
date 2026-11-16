@@ -61,6 +61,10 @@ Guide pages are static HTML in `glp-1/`, registered in `GLP1_GUIDES` in `worker.
 
 Every figure on a guide page must come from a source listed on that page. Statements that no trial was found must name the date the search was run.
 
+## Peptide guides (v11.26)
+
+Peptide pages are static HTML in `peptides/`, registered in `PEPTIDE_GUIDES` in `worker.js` the same way as the GLP-1 guides. The hub is `peptides/index.html`, served at `/peptides` (slug `''`); guides are served at `/peptides/<slug>` with a `Home / Peptides / <guide>` breadcrumb. To add a guide: add the HTML file, register it in `PEPTIDE_GUIDES`, list it on the hub, and add its URL to `sitemap.xml`. Figures on the hub must come from sources cited on the pages it links to. `peptides/**` is in the validate and deploy workflow paths, so a change to a peptide page alone deploys.
+
 ## Expanded ingredient pages (v11.9)
 
 An ingredient record in `ingredient-evidence.json` may set `page_title` and `page_description`. When present, the Worker uses them for the page's search title and description instead of the generated ones. Use them on pages rewritten as full reviews (first: dandelion). Keep `posture` unchanged unless `products-data.json` is updated to match, because the validator compares them.
