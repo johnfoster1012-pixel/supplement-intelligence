@@ -105,18 +105,21 @@ const INGREDIENT_REDIRECTS = new Map([
 
 // GLP-1 guides: static HTML in glp-1/, keyed by URL slug ('' is the hub at /glp-1).
 // `reviewed` drives the visible "Last reviewed" line and the structured data.
+// `products` (product slugs) adds a disclosed product module at the end of the guide.
+// `safety: true` marks a pure safety page: it never shows a product module, even if
+// `products` is set. Peptide guides never show one either (see handleGuide).
 const GLP1_GUIDES = new Map([
   ['', { file: 'glp-1/index.html', name: 'Supplements on GLP-1 drugs', reviewed: '2026-11-10' }],
-  ['berberine-vs-ozempic', { file: 'glp-1/berberine-vs-ozempic.html', name: 'Berberine vs Ozempic', reviewed: '2026-11-10' }],
+  ['berberine-vs-ozempic', { file: 'glp-1/berberine-vs-ozempic.html', name: 'Berberine vs Ozempic', reviewed: '2026-11-10', products: ['s-balance', 'nourish-plus'], productsHeading: 'Products that list berberine' }],
   ['semaglutide-with-b12', { file: 'glp-1/semaglutide-with-b12.html', name: 'Semaglutide with B12', reviewed: '2026-11-10' }],
-  ['glp-1-supplements', { file: 'glp-1/glp-1-supplements.html', name: 'Do GLP-1 supplements work?', reviewed: '2026-11-11' }],
+  ['glp-1-supplements', { file: 'glp-1/glp-1-supplements.html', name: 'Do GLP-1 supplements work?', reviewed: '2026-11-11', products: ['orygn-triglp', 'orygn-ignyt'], productsHeading: 'Related product reviews' }],
   ['glp-1-patches', { file: 'glp-1/glp-1-patches.html', name: 'Do GLP-1 patches work?', reviewed: '2026-11-11' }],
   ['retatrutide', { file: 'glp-1/retatrutide.html', name: 'Retatrutide', reviewed: '2026-11-15' }],
   ['retatrutide-dosing-schedule', { file: 'glp-1/retatrutide-dosing-schedule.html', name: 'Retatrutide dosing schedule', reviewed: '2026-11-15' }],
   ['tirzepatide-vs-retatrutide', { file: 'glp-1/tirzepatide-vs-retatrutide.html', name: 'Tirzepatide vs retatrutide', reviewed: '2026-11-15' }],
-  ['muscle-loss', { file: 'glp-1/muscle-loss.html', name: 'GLP-1 and muscle loss', reviewed: '2026-11-13' }],
+  ['muscle-loss', { file: 'glp-1/muscle-loss.html', name: 'GLP-1 and muscle loss', reviewed: '2026-11-13', safety: true }],
   ['oral-glp-1', { file: 'glp-1/oral-glp-1.html', name: 'Oral GLP-1 pills', reviewed: '2026-11-13' }],
-  ['tirzepatide-side-effects', { file: 'glp-1/tirzepatide-side-effects.html', name: 'Tirzepatide side effects', reviewed: '2026-11-13' }],
+  ['tirzepatide-side-effects', { file: 'glp-1/tirzepatide-side-effects.html', name: 'Tirzepatide side effects', reviewed: '2026-11-13', safety: true }],
   ['tirzepatide-vs-semaglutide', { file: 'glp-1/tirzepatide-vs-semaglutide.html', name: 'Tirzepatide vs semaglutide', reviewed: '2026-11-13' }],
 ]);
 
@@ -632,11 +635,33 @@ async function handleGuide(path, guide, section = ['GLP-1', '/glp-1']) {
       publisher: { '@type': 'Organization', name: 'Supplement Intelligence', url: SITE_ORIGIN + '/' }
     }]
   };
+  // Product modules only on GLP-1 guides that list products and are not safety pages.
+  if (section && section[1] === '/glp-1' && !guide.safety && Array.isArray(guide.products) && guide.products.length) {
+    options.beforeMainEnd = productModule(guide.products, await getProductsData(), guide.productsHeading || 'Related product reviews');
+  }
   return new Response(decorate(raw.body, options), { status: 200, headers: htmlHeaders({ 'X-Powered-By': VERSION }) });
 }
 
+// Disclosed product module for guides and ingredient pages. Each card links to the
+// on-site label review and, through /go/<slug>, to the brand. Returns '' unless every
+// slug resolves to a product with a referral URL, so a bad slug never drops a link.
+function productModule(slugs, productsData, heading) {
+  const all = productsData && productsData.products ? productsData.products : {};
+  const items = (slugs || []).map(slug => [slug, all[slug]]);
+  if (!items.length || items.some(([, p]) => !p || !p.shopUrl)) return '';
+  const cards = items.map(([slug, p]) => {
+    const s = escapeHtml(slug);
+    const brand = escapeHtml(p.brand || 'Vital Health Global');
+    return `<div class="si-card"><h3><a href="/products/${s}">${escapeHtml(p.name || slug)}</a></h3><p class="si-small">${brand}</p>`
+      + `<p class="si-card-link"><a href="/products/${s}">Read the label review</a> · <a href="/go/${s}" target="_blank" rel="sponsored nofollow noopener">View at ${brand}</a></p></div>`;
+  }).join('');
+  return `<section class="si-products-module" aria-label="Product reviews">${heading ? `<h2>${escapeHtml(heading)}</h2>` : ''}`
+    + `<div class="si-cards">${cards}</div>`
+    + '<p class="si-small">We earn referral credit if you buy through a "View at" link. It does not change what we write. An ingredient on a label is not proof that the finished product works.</p></section>';
+}
+
 async function handleIngredientPage(slug) {
-  const [raw, data] = await Promise.all([fetchRaw(`ingredients/${slug}.html`), getIngredientData()]);
+  const [raw, data, productsData] = await Promise.all([fetchRaw(`ingredients/${slug}.html`), getIngredientData(), getProductsData()]);
   if (raw.error) return raw.error;
   const x = data && data.ingredients ? data.ingredients[slug] : null;
   const path = '/ingredients/' + slug;
@@ -664,12 +689,21 @@ async function handleIngredientPage(slug) {
     if (reviewed) { page.lastReviewed = reviewed; page.dateModified = reviewed; }
     options.jsonLd = [page];
   }
-  return new Response(decorate(raw.body, options), { status: 200, headers: htmlHeaders({ 'X-Powered-By': VERSION }) });
+  // Upgrade the plain product list to the disclosed product module. If the list
+  // markup is not found, or a slug does not resolve, the page is left as written.
+  let body = raw.body;
+  if (x && Array.isArray(x.products) && x.products.length) {
+    const module = productModule(x.products, productsData, '');
+    const listRe = /(<h2>Products that list this ingredient\/category<\/h2>)\s*<ul>[\s\S]*?<\/ul>/i;
+    if (module && listRe.test(body)) body = body.replace(listRe, (_, h2) => h2 + module);
+  }
+  return new Response(decorate(body, options), { status: 200, headers: htmlHeaders({ 'X-Powered-By': VERSION }) });
 }
 
 // Adds the shared chrome and head metadata to a complete HTML document.
 // options: path (canonical path), title, description, ogType, wide,
-// breadcrumbs ([[name, path], ...] below Home), jsonLd (array), afterH1, noindex.
+// breadcrumbs ([[name, path], ...] below Home), jsonLd (array), afterH1, noindex,
+// beforeMainEnd (HTML placed at the end of the main content).
 function decorate(html, options = {}) {
   let out = html;
   if (options.title) out = out.replace(/<title>[^<]*<\/title>/i, () => `<title>${escapeHtml(options.title)}</title>`);
@@ -696,7 +730,7 @@ function decorate(html, options = {}) {
 
   out = out.replace(/<\/head>/i, () => head + '</head>');
   out = out.replace(/<body[^>]*>/i, m => `${m}${SITE_HEADER}<main class="si-main${options.wide ? ' si-wide' : ''}">`);
-  out = out.replace(/<\/body>/i, () => `</main>${SITE_FOOTER}</body>`);
+  out = out.replace(/<\/body>/i, () => `${options.beforeMainEnd || ''}</main>${SITE_FOOTER}</body>`);
   if (options.afterH1) out = out.replace(/<\/h1>/i, m => m + options.afterH1);
   return out;
 }
