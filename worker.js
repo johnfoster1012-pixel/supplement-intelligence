@@ -7,7 +7,7 @@
  */
 const CONTENT_BRANCH_NAME = (typeof CONTENT_BRANCH !== 'undefined' && CONTENT_BRANCH) ? CONTENT_BRANCH : 'main';
 const IS_PREVIEW = CONTENT_BRANCH_NAME !== 'main';
-const VERSION = 'Supplement Intelligence v11.28';
+const VERSION = 'Supplement Intelligence v11.29';
 const SITE_ORIGIN = 'https://supplement-intelligence.com';
 // CONTENT_REV is the commit SHA the deploy workflow passes in (--var). Content is
 // read from that exact commit, so a deploy can never pick up an older copy of a
@@ -112,7 +112,7 @@ const GLP1_GUIDES = new Map([
   ['', { file: 'glp-1/index.html', name: 'Supplements on GLP-1 drugs', reviewed: '2026-11-10' }],
   ['berberine-vs-ozempic', { file: 'glp-1/berberine-vs-ozempic.html', name: 'Berberine vs Ozempic', reviewed: '2026-11-10', products: ['s-balance', 'nourish-plus'], productsHeading: 'Products that list berberine' }],
   ['semaglutide-with-b12', { file: 'glp-1/semaglutide-with-b12.html', name: 'Semaglutide with B12', reviewed: '2026-11-10' }],
-  ['glp-1-supplements', { file: 'glp-1/glp-1-supplements.html', name: 'Do GLP-1 supplements work?', reviewed: '2026-11-11', products: ['orygn-triglp', 'orygn-ignyt'], productsHeading: 'Related product reviews' }],
+  ['glp-1-supplements', { file: 'glp-1/glp-1-supplements.html', name: 'Do GLP-1 supplements work?', reviewed: '2026-11-20', products: ['orygn-triglp', 'orygn-ignyt'], productsHeading: 'Related product reviews' }],
   ['glp-1-patches', { file: 'glp-1/glp-1-patches.html', name: 'Do GLP-1 patches work?', reviewed: '2026-11-11' }],
   ['retatrutide', { file: 'glp-1/retatrutide.html', name: 'Retatrutide', reviewed: '2026-11-15' }],
   ['retatrutide-dosing-schedule', { file: 'glp-1/retatrutide-dosing-schedule.html', name: 'Retatrutide dosing schedule', reviewed: '2026-11-15' }],
