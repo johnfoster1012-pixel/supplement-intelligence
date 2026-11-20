@@ -136,7 +136,7 @@ const INGREDIENT_TOPIC_GUIDES = new Map([
 const PEPTIDE_SECTION = ['Peptides', '/peptides'];
 const PEPTIDE_GUIDES = new Map([
   ['', { file: 'peptides/index.html', name: 'Peptides', reviewed: '2026-11-19' }],
-  ['bpc-157', { file: 'peptides/bpc-157.html', name: 'BPC-157 side effects', reviewed: '2026-11-19' }],
+  ['bpc-157', { file: 'peptides/bpc-157.html', name: 'BPC-157 side effects', reviewed: '2026-11-20' }],
   ['tb-500', { file: 'peptides/tb-500.html', name: 'TB-500', reviewed: '2026-11-19' }],
 ]);
 
