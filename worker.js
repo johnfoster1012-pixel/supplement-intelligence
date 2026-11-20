@@ -7,7 +7,7 @@
  */
 const CONTENT_BRANCH_NAME = (typeof CONTENT_BRANCH !== 'undefined' && CONTENT_BRANCH) ? CONTENT_BRANCH : 'main';
 const IS_PREVIEW = CONTENT_BRANCH_NAME !== 'main';
-const VERSION = 'Supplement Intelligence v11.30';
+const VERSION = 'Supplement Intelligence v11.31';
 const SITE_ORIGIN = 'https://supplement-intelligence.com';
 // CONTENT_REV is the commit SHA the deploy workflow passes in (--var). Content is
 // read from that exact commit, so a deploy can never pick up an older copy of a
@@ -135,9 +135,10 @@ const INGREDIENT_TOPIC_GUIDES = new Map([
 // Peptide evidence guides: static HTML in peptides/, keyed by URL slug ('' is the hub at /peptides).
 const PEPTIDE_SECTION = ['Peptides', '/peptides'];
 const PEPTIDE_GUIDES = new Map([
-  ['', { file: 'peptides/index.html', name: 'Peptides', reviewed: '2026-11-19' }],
+  ['', { file: 'peptides/index.html', name: 'Peptides', reviewed: '2026-11-20' }],
   ['bpc-157', { file: 'peptides/bpc-157.html', name: 'BPC-157 side effects', reviewed: '2026-11-20' }],
   ['tb-500', { file: 'peptides/tb-500.html', name: 'TB-500', reviewed: '2026-11-19' }],
+  ['supplements-vs-drugs', { file: 'peptides/supplements-vs-drugs.html', name: 'Peptide supplements vs drugs', reviewed: '2026-11-20' }],
 ]);
 
 // Guides to point to from an ingredient page: slug -> [[label, path], ...].
