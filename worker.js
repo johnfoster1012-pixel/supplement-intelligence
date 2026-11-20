@@ -7,7 +7,7 @@
  */
 const CONTENT_BRANCH_NAME = (typeof CONTENT_BRANCH !== 'undefined' && CONTENT_BRANCH) ? CONTENT_BRANCH : 'main';
 const IS_PREVIEW = CONTENT_BRANCH_NAME !== 'main';
-const VERSION = 'Supplement Intelligence v11.31';
+const VERSION = 'Supplement Intelligence v11.32';
 const SITE_ORIGIN = 'https://supplement-intelligence.com';
 // CONTENT_REV is the commit SHA the deploy workflow passes in (--var). Content is
 // read from that exact commit, so a deploy can never pick up an older copy of a
@@ -121,6 +121,7 @@ const GLP1_GUIDES = new Map([
   ['oral-glp-1', { file: 'glp-1/oral-glp-1.html', name: 'Oral GLP-1 pills', reviewed: '2026-11-13' }],
   ['tirzepatide-side-effects', { file: 'glp-1/tirzepatide-side-effects.html', name: 'Tirzepatide side effects', reviewed: '2026-11-13', safety: true }],
   ['tirzepatide-vs-semaglutide', { file: 'glp-1/tirzepatide-vs-semaglutide.html', name: 'Tirzepatide vs semaglutide', reviewed: '2026-11-13' }],
+  ['stopping', { file: 'glp-1/stopping.html', name: 'Stopping a GLP-1', reviewed: '2026-11-20', safety: true }],
 ]);
 
 // Comparison and question guides that live under /ingredients/ but are not
