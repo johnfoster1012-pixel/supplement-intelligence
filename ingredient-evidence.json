@@ -1455,7 +1455,7 @@
       "posture": "Traditional-use support exists for urinary and gastrointestinal indications, but direct human efficacy evidence is sparse and plant-part specific.",
       "summary": "EU regulators accept dandelion root and leaf as traditional herbal medicines for minor digestive and urinary complaints, based on long-standing use rather than clinical trials. The only human trial of dandelion taken by mouth on its own is a 17-person, one-day pilot of a fresh leaf extract that reported short-term increases in urination. NCCIH states there is no compelling scientific evidence supporting dandelion for any health condition.",
       "studied_context": "The human diuretic pilot used a fresh leaf hydroethanolic extract (8 mL three times in one day) with no placebo group. No human trial of dandelion root, dandelion tea or roasted-root 'coffee' was found in a PubMed search on 2026-11-10. V-ITAREN lists dandelion root, which is a different plant part and should not inherit the leaf-extract result.",
-      "safety": "Dandelion in food amounts is considered likely safe (NCCIH) and is generally recognized as safe as a food (LactMed). It can rarely cause allergic reactions, diarrhea and gastrointestinal upset. EMA monographs contraindicate use in people allergic to Asteraceae plants, advise against the root in bile duct obstruction, cholangitis, liver disease or gallstones, and advise against the leaf in renal failure, diabetes or heart failure because of possible hyperkalemia. Use is not recommended in pregnancy, breastfeeding or children under 12 for lack of data. NCCIH notes theoretical interactions with antidiabetes, anticoagulant, antiplatelet and diuretic drugs.",
+      "safety": "Dandelion in food amounts is considered likely safe (NCCIH) and is generally recognized as safe as a food (LactMed). It can rarely cause allergic reactions, diarrhea and gastrointestinal upset. EMA monographs contraindicate use in people allergic to Asteraceae plants, advise against the root in bile duct obstruction, cholangitis, liver disease or gallstones, and advise against the leaf in renal failure, diabetes or heart failure because of possible hyperkalemia. Use is not recommended in pregnancy, breastfeeding or children under 12 for lack of data. NCCIH notes theoretical interactions with antidiabetes, anticoagulant, antiplatelet and diuretic drugs. Memorial Sloan Kettering adds possible effects on drugs processed by CYP1A2, CYP3A4 or UGT (animal and lab data) and a case report of toxic immunosuppressant levels after a herbal tea containing dandelion. The Cerner Multum herb monograph advises medical advice before combining dandelion with lithium, quinolone antibiotics, blood thinners or diuretics. No interaction has been confirmed in a human study.",
       "product_directness": "V-ITAREN lists dandelion root. The direct human diuretic pilot reviewed here studied leaf extract, not root, and V-ITAREN does not disclose dose or extraction details. Product-level efficacy is therefore unverified.",
       "products": [
         "v-itaren",
@@ -1488,9 +1488,19 @@
           "title": "Dandelion",
           "pmid": "30000932",
           "url": "https://pubmed.ncbi.nlm.nih.gov/30000932/"
+        },
+        {
+          "type": "Memorial Sloan Kettering Cancer Center",
+          "title": "Dandelion (About Herbs)",
+          "url": "https://www.mskcc.org/cancer-care/integrative-medicine/herbs/dandelion"
+        },
+        {
+          "type": "Cerner Multum consumer herb information (Michigan Medicine Health Library)",
+          "title": "Dandelion",
+          "url": "https://uofmhealth.org/health-library/d04483a1"
         }
       ],
-      "last_reviewed_at": "2026-11-10",
+      "last_reviewed_at": "2026-11-20",
       "page_title": "Dandelion Side Effects, Benefits and Who Should Avoid It",
       "page_description": "Dandelion root, leaf and tea: rare side effects, who should avoid them, and what the only human trial found. Checked against NIH and EMA sources."
     },
