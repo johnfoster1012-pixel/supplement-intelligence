@@ -7,6 +7,37 @@ import {
 import worker from "../src/index";
 import { checkClaim, compareLabel, labelInput, studies } from "../src/verify";
 
+// These fixtures supply no berberine quantity. Check nested text as well as mass fields.
+const studyDose = /\d[\d.,]*\s*(?:mg|mcg|µg|g|milligrams?|grams?)\b/i;
+
+test("pending study records retain endpoint units, populations and unknown mass bases", () => {
+  for (const [id, basis, endpoint, estimate, unit, days, randomized, completed, population] of [
+    ["PMID:18442638", "salt", "HbA1c", -1.99, "percentage points", 91, 36, 31, /15 berberine completers/],
+    ["PMID:8828669", "unverified", "Muscle total creatine", 20.28, "mmol/kg dry muscle", 28, null, 9, /nine healthy men/i],
+  ] as const) {
+    const matches = studies.filter(study => study.study_id === id);
+    assert.equal(matches.length, 1, id);
+    const [study] = matches;
+    assert.equal(study.editorial_status, "pending_review");
+    assert.deepEqual(study.assessments, []);
+    assert.equal(study.last_evidence_review, null);
+    assert.equal(study.amount_mg_per_day, null);
+    assert.equal(study.amount_basis, basis);
+    assert.equal(study.outcome, endpoint);
+    assert.equal(study.effect?.estimate, estimate);
+    assert.equal(study.effect?.unit, unit);
+    assert.equal(study.effect?.time_days, days);
+    assert.equal(study.duration_days, days);
+    assert.equal(study.n_randomized, randomized);
+    assert.equal(study.n_completed, completed);
+    assert.match(study.population, population);
+    if (study.ingredient === "berberine") {
+      assert.equal(study.schedule, null);
+      assert.doesNotMatch(JSON.stringify(study), studyDose);
+    }
+  }
+});
+
 test("worker MCP transport: discovery, retrieval, claim, label and guide responses", async () => {
   const client = new Client({ name: "local-catalog-test", version: "1" });
   await client.connect(
@@ -98,6 +129,30 @@ test("worker MCP transport: discovery, retrieval, claim, label and guide respons
     assert.equal(equivalence.grade, null);
     assert.deepEqual(equivalence.reviewed_assessments, []);
     assert.equal(equivalence.finished_product_evidence, "not_assessed");
+
+    for (const [ingredient, outcome, claim] of [
+      ["berberine", "HbA1c", "Berberine is equivalent to metformin for HbA1c."],
+      ["creatine-monohydrate", "muscle total creatine", "Increases muscle total creatine."],
+    ]) {
+      const result = await call("check_supplement_claim", { ingredient, outcome, claim });
+      assert.equal(result.pending_source_reviews, 1, ingredient);
+      assert.deepEqual(result.reviewed_studies, []);
+      assert.deepEqual(result.reviewed_assessments, []);
+      assert.equal(result.status, "not_assessed");
+      assert.equal(result.grade, null);
+      assert.equal(result.finished_product_evidence, "not_assessed");
+      if (ingredient === "berberine") {
+        assert.equal(result.coverage, "related_review_only");
+        assert.doesNotMatch(JSON.stringify(result), studyDose);
+      }
+    }
+    const berberineLabel = await call("compare_supplement_label", {
+      ingredients: [{ name: "berberine" }],
+    });
+    assert.equal(berberineLabel.rows[0].label_mg_per_day, null);
+    assert.equal(berberineLabel.rows[0].quantity_status, "incomplete_serving_or_amount");
+    assert.deepEqual(berberineLabel.rows[0].reviewed_comparisons, []);
+    assert.doesNotMatch(JSON.stringify(berberineLabel), studyDose);
 
     const creatine = await call("compare_supplement_label", {
       servings_per_day: 1,

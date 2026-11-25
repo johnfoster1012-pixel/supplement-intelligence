@@ -147,5 +147,95 @@
     },
     "safety_findings": "The authors reported rare minor adverse events during the four-day treatment periods. Longer-term safety was outside the scope of this trial.",
     "source_access": "full_text"
+  },
+  {
+    "study_id": "PMID:18442638",
+    "ingredient": "berberine",
+    "outcome": "HbA1c",
+    "terms": [
+      "HbA1c",
+      "hemoglobin A1c"
+    ],
+    "preparation": "Berberine hydrochloride",
+    "preparation_detail": "Oral hydrochloride, hydrate number and dosage form unspecified.",
+    "amount_basis": "salt",
+    "schedule": null,
+    "duration_days": 91,
+    "design": "Single-center randomized active-comparator pilot, Study A.",
+    "n_randomized": 36,
+    "n_completed": 31,
+    "population": "Adults with newly diagnosed type 2 diabetes. The HbA1c estimate uses the 15 berberine completers.",
+    "comparator": "Metformin",
+    "effect": {
+      "measure": "Berberine-arm mean HbA1c change from baseline, 9.47% to 7.48%.",
+      "estimate": -1.99,
+      "unit": "percentage points",
+      "active_percent": null,
+      "control_percent": null,
+      "time_days": 91,
+      "confidence_interval": null
+    },
+    "limitations": "Small completer analysis with treatment-failure withdrawals. No between-group HbA1c estimate or equivalence test was reported. Study B excluded.",
+    "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2410097/",
+    "locator": "Study A, Methods §2, Results §3.1, Table 2 (PMC author manuscript).",
+    "citation": {
+      "title": "Efficacy of berberine in patients with type 2 diabetes mellitus",
+      "authors": "Yin J, Xing H, Ye J",
+      "journal": "Metabolism",
+      "year": 2008,
+      "doi": "10.1016/j.metabol.2008.01.013"
+    },
+    "safety_findings": "Study A-specific adverse-event counts were unavailable.",
+    "source_access": "full_text",
+    "amount_mg_per_day": null,
+    "last_evidence_review": null,
+    "source_verified_at": "2026-11-25",
+    "editorial_status": "pending_review",
+    "assessments": []
+  },
+  {
+    "study_id": "PMID:8828669",
+    "ingredient": "creatine-monohydrate",
+    "outcome": "Muscle total creatine",
+    "terms": [
+      "muscle total creatine",
+      "total muscle creatine"
+    ],
+    "preparation": "Creatine monohydrate",
+    "preparation_detail": "Monohydrate powder dissolved in water.",
+    "amount_basis": "unverified",
+    "schedule": "Single daily administration",
+    "duration_days": 28,
+    "design": "Group 3 before-and-after study.",
+    "n_randomized": null,
+    "n_completed": 9,
+    "population": "Nine healthy men in group 3.",
+    "comparator": "Participants' own baseline",
+    "effect": {
+      "measure": "Mean muscle total creatine change from baseline, 121.76 to 142.04.",
+      "estimate": 20.28,
+      "unit": "mmol/kg dry muscle",
+      "active_percent": null,
+      "control_percent": null,
+      "time_days": 28,
+      "confidence_interval": null
+    },
+    "limitations": "Small uncontrolled cohort, tissue endpoint only. Dose weight basis unresolved. Exact final biopsy-day label requires publisher verification.",
+    "source": "https://pubmed.ncbi.nlm.nih.gov/8828669/",
+    "locator": "Full-text Methods, group 3 and supplementation procedure, Results and Table 2. Source check used the third-party full-text copy.",
+    "citation": {
+      "title": "Muscle creatine loading in men",
+      "authors": "Hultman E, Söderlund K, Timmons JA, Cederblad G, Greenhaff PL",
+      "journal": "Journal of Applied Physiology",
+      "year": 1996,
+      "doi": "10.1152/jappl.1996.81.1.232"
+    },
+    "safety_findings": "Group 3-specific adverse-event findings were unreported.",
+    "source_access": "full_text",
+    "amount_mg_per_day": null,
+    "last_evidence_review": null,
+    "source_verified_at": "2026-11-25",
+    "editorial_status": "pending_review",
+    "assessments": []
   }
 ]
