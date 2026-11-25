@@ -463,6 +463,9 @@ const HOME_GUIDES = [
   ['/glp-1/glp-1-supplements', 'GLP-1 guide', 'Do GLP-1 supplements work?', 'Patches, drops and "natural GLP-1" boosters checked against the trials, ingredient by ingredient.'],
   ['/glp-1/semaglutide-with-b12', 'GLP-1 guide', 'Semaglutide with B12', 'It is a compounded product, not an approved drug. Does the added B12 do anything?'],
   ['/glp-1/berberine-vs-ozempic', 'GLP-1 guide', 'Berberine vs Ozempic', 'Is berberine "nature\'s Ozempic"? What separate trials show for weight and blood sugar.'],
+  ['/glp-1/stopping', 'GLP-1 guide', 'Stopping a GLP-1 drug', 'What trials show about weight regain after stopping semaglutide or tirzepatide, and how fast it comes back.'],
+  ['/peptides', 'Peptide guide', 'Peptides: what the evidence shows', 'BPC-157, TB-500 and retatrutide: which have human trials and which have only lab and animal studies.'],
+  ['/peptides/supplements-vs-drugs', 'Peptide guide', 'Peptide supplements vs peptide drugs', 'Collagen, approved drugs like semaglutide, and "research peptides": how they differ in testing and oversight.'],
   ['/ingredients/lemon-balm', 'Ingredient review', 'Lemon balm', 'Benefits, side effects and what trials found for anxiety, sleep and cold sores.'],
   ['/ingredients/uva-ursi', 'Ingredient review', 'Uva ursi (bearberry)', 'What two large urinary tract infection trials found, and who should avoid it.'],
 ];
