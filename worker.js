@@ -139,6 +139,7 @@ const PEPTIDE_GUIDES = new Map([
   ['', { file: 'peptides/index.html', name: 'Peptides', reviewed: '2026-11-20' }],
   ['bpc-157', { file: 'peptides/bpc-157.html', name: 'BPC-157 side effects', reviewed: '2026-11-20' }],
   ['tb-500', { file: 'peptides/tb-500.html', name: 'TB-500', reviewed: '2026-11-19' }],
+  ['ghk-cu', { file: 'peptides/ghk-cu.html', name: 'GHK-Cu (copper peptide)', reviewed: '2026-11-25' }],
   ['supplements-vs-drugs', { file: 'peptides/supplements-vs-drugs.html', name: 'Peptide supplements vs drugs', reviewed: '2026-11-20' }],
 ]);
 
