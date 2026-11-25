@@ -177,7 +177,7 @@
     },
     "limitations": "Small completer analysis with treatment-failure withdrawals. No between-group HbA1c estimate or equivalence test was reported. Study B excluded.",
     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2410097/",
-    "locator": "Study A, Methods §2, Results §3.1, Table 2 (PMC author manuscript).",
+    "locator": "Study A, Results §3.1, Table 2, p. 714 (berberine arm).",
     "citation": {
       "title": "Efficacy of berberine in patients with type 2 diabetes mellitus",
       "authors": "Yin J, Xing H, Ye J",
@@ -188,9 +188,9 @@
     "safety_findings": "Study A-specific adverse-event counts were unavailable.",
     "source_access": "full_text",
     "amount_mg_per_day": null,
-    "last_evidence_review": null,
+    "last_evidence_review": "2026-11-25",
     "source_verified_at": "2026-11-25",
-    "editorial_status": "pending_review",
+    "editorial_status": "reviewed",
     "assessments": []
   },
   {
@@ -217,12 +217,12 @@
       "unit": "mmol/kg dry muscle",
       "active_percent": null,
       "control_percent": null,
-      "time_days": 28,
+      "time_days": 29,
       "confidence_interval": null
     },
-    "limitations": "Small uncontrolled cohort, tissue endpoint only. Dose weight basis unresolved. Exact final biopsy-day label requires publisher verification.",
+    "limitations": "Small uncontrolled cohort, tissue endpoint only. Dose weight basis unresolved.",
     "source": "https://pubmed.ncbi.nlm.nih.gov/8828669/",
-    "locator": "Full-text Methods, group 3 and supplementation procedure, Results and Table 2. Source check used the third-party full-text copy.",
+    "locator": "Group 3, Table 2, p. 234 (muscle total creatine). Figure 1C shows the final biopsy on day 29 after 28 days of supplementation.",
     "citation": {
       "title": "Muscle creatine loading in men",
       "authors": "Hultman E, Söderlund K, Timmons JA, Cederblad G, Greenhaff PL",
@@ -233,9 +233,9 @@
     "safety_findings": "Group 3-specific adverse-event findings were unreported.",
     "source_access": "full_text",
     "amount_mg_per_day": null,
-    "last_evidence_review": null,
+    "last_evidence_review": "2026-11-25",
     "source_verified_at": "2026-11-25",
-    "editorial_status": "pending_review",
+    "editorial_status": "reviewed",
     "assessments": []
   }
 ]

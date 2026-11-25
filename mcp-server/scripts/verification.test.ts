@@ -10,23 +10,23 @@ import { checkClaim, compareLabel, labelInput, studies } from "../src/verify";
 // These fixtures supply no berberine quantity. Check nested text as well as mass fields.
 const studyDose = /\d[\d.,]*\s*(?:mg|mcg|µg|g|milligrams?|grams?)\b/i;
 
-test("pending study records retain endpoint units, populations and unknown mass bases", () => {
-  for (const [id, basis, endpoint, estimate, unit, days, randomized, completed, population] of [
-    ["PMID:18442638", "salt", "HbA1c", -1.99, "percentage points", 91, 36, 31, /15 berberine completers/],
-    ["PMID:8828669", "unverified", "Muscle total creatine", 20.28, "mmol/kg dry muscle", 28, null, 9, /nine healthy men/i],
+test("reviewed study records retain endpoint units, populations and unknown mass bases", () => {
+  for (const [id, basis, endpoint, estimate, unit, days, endpointDay, randomized, completed, population] of [
+    ["PMID:18442638", "salt", "HbA1c", -1.99, "percentage points", 91, 91, 36, 31, /15 berberine completers/],
+    ["PMID:8828669", "unverified", "Muscle total creatine", 20.28, "mmol/kg dry muscle", 28, 29, null, 9, /nine healthy men/i],
   ] as const) {
     const matches = studies.filter(study => study.study_id === id);
     assert.equal(matches.length, 1, id);
     const [study] = matches;
-    assert.equal(study.editorial_status, "pending_review");
+    assert.equal(study.editorial_status, "reviewed");
     assert.deepEqual(study.assessments, []);
-    assert.equal(study.last_evidence_review, null);
+    assert.equal(study.last_evidence_review, "2026-11-25");
     assert.equal(study.amount_mg_per_day, null);
     assert.equal(study.amount_basis, basis);
     assert.equal(study.outcome, endpoint);
     assert.equal(study.effect?.estimate, estimate);
     assert.equal(study.effect?.unit, unit);
-    assert.equal(study.effect?.time_days, days);
+    assert.equal(study.effect?.time_days, endpointDay);
     assert.equal(study.duration_days, days);
     assert.equal(study.n_randomized, randomized);
     assert.equal(study.n_completed, completed);
@@ -135,14 +135,15 @@ test("worker MCP transport: discovery, retrieval, claim, label and guide respons
       ["creatine-monohydrate", "muscle total creatine", "Increases muscle total creatine."],
     ]) {
       const result = await call("check_supplement_claim", { ingredient, outcome, claim });
-      assert.equal(result.pending_source_reviews, 1, ingredient);
-      assert.deepEqual(result.reviewed_studies, []);
+      assert.equal(result.pending_source_reviews, 0, ingredient);
+      assert.equal(result.reviewed_studies.length, 1);
+      assert.equal(result.reviewed_studies[0].effect.estimate, ingredient === "berberine" ? -1.99 : 20.28);
+      assert.equal(result.coverage, "outcome_studies_available");
       assert.deepEqual(result.reviewed_assessments, []);
       assert.equal(result.status, "not_assessed");
       assert.equal(result.grade, null);
       assert.equal(result.finished_product_evidence, "not_assessed");
       if (ingredient === "berberine") {
-        assert.equal(result.coverage, "related_review_only");
         assert.doesNotMatch(JSON.stringify(result), studyDose);
       }
     }
@@ -151,7 +152,10 @@ test("worker MCP transport: discovery, retrieval, claim, label and guide respons
     });
     assert.equal(berberineLabel.rows[0].label_mg_per_day, null);
     assert.equal(berberineLabel.rows[0].quantity_status, "incomplete_serving_or_amount");
-    assert.deepEqual(berberineLabel.rows[0].reviewed_comparisons, []);
+    assert.equal(berberineLabel.rows[0].reviewed_comparisons.length, 1);
+    assert.equal(berberineLabel.rows[0].reviewed_comparisons[0].study_id, "PMID:18442638");
+    assert.equal(berberineLabel.rows[0].reviewed_comparisons[0].amount_comparison, "not_comparable");
+    assert.equal(berberineLabel.rows[0].reviewed_comparisons[0].studied_mg_per_day, null);
     assert.doesNotMatch(JSON.stringify(berberineLabel), studyDose);
 
     const creatine = await call("compare_supplement_label", {
@@ -163,7 +167,10 @@ test("worker MCP transport: discovery, retrieval, claim, label and guide respons
     assert.equal(creatine.rows[0].label_mg_per_day, 3000);
     assert.equal(creatine.rows[0].quantity_status, "label_mass_only");
     assert.match(creatine.rows[0].label_mg_per_day_note, /not a recommended dose/);
-    assert.deepEqual(creatine.rows[0].reviewed_comparisons, []);
+    assert.equal(creatine.rows[0].reviewed_comparisons.length, 1);
+    assert.equal(creatine.rows[0].reviewed_comparisons[0].study_id, "PMID:8828669");
+    assert.equal(creatine.rows[0].reviewed_comparisons[0].amount_comparison, "not_comparable");
+    assert.equal(creatine.rows[0].reviewed_comparisons[0].studied_mg_per_day, null);
     assert.equal(creatine.finished_product_evidence, "not_assessed");
     const trial = await call("check_supplement_claim", {
       ingredient: "uva-ursi",
