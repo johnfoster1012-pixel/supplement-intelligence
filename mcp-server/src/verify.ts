@@ -91,6 +91,21 @@ function candidates(term: string, cat: Catalog) {
   );
   return exact.length ? exact : hits;
 }
+// Review discovery only. Specific endpoints can inform a broad query, but a
+// fasting measurement, a post-meal measurement and HbA1c are distinct.
+const broadGlycemicTerms = ["blood sugar", "blood glucose", "glycemic control", "glycaemic control"];
+const glycemicEndpoints = [
+  ["fasting glucose", "fasting blood glucose", "fasting plasma glucose", "fasting blood sugar"],
+  ["postprandial glucose", "postprandial blood glucose", "postprandial plasma glucose", "postprandial blood sugar"],
+  ["hba1c", "a1c", "hemoglobin a1c", "haemoglobin a1c", "glycated hemoglobin", "glycated haemoglobin"],
+];
+function reviewScopeTerms(outcome: string): string[] {
+  if (!outcome) return [];
+  if (broadGlycemicTerms.includes(outcome))
+    return [...broadGlycemicTerms, ...glycemicEndpoints.flat()];
+  return glycemicEndpoints.find(terms => terms.includes(outcome)) ?? [outcome];
+}
+
 export function checkClaim(
   input: z.infer<typeof claimInput>,
   cat: Catalog,
@@ -130,13 +145,14 @@ export function checkClaim(
             .map((a) => ({ ...a, study_id: x.study_id })),
         )
       : [];
+  const reviewTerms = reviewScopeTerms(outcome);
   const reviews = (
     Array.isArray(row.review_evidence) ? row.review_evidence : []
-  ).filter(
-    (r) =>
-      outcome &&
-      (" " + norm(r.evidence_scope) + " ").includes(" " + outcome + " "),
-  );
+  ).filter((review) => {
+    if (review.editorial_status === "pending_review") return false;
+    const scope = " " + norm(review.evidence_scope) + " ";
+    return reviewTerms.some(term => scope.includes(" " + term + " "));
+  });
   return {
     ...base,
     ingredient: slug,
@@ -184,6 +200,17 @@ function productContext(name: string | undefined, products: Catalog) {
       }
     : null;
 }
+function dailyLabelMassMg(
+  item: z.infer<typeof labelInput>["ingredients"][number],
+  servingsPerDay: number | undefined,
+) {
+  if (item.blend_total_only || !item.amount_per_serving || !item.unit || !servingsPerDay)
+    return null;
+  const mgPerServing = item.amount_per_serving * { g: 1000, mg: 1, mcg: 0.001 }[item.unit];
+  const daily = mgPerServing * servingsPerDay;
+  return Number.isFinite(daily) && daily > 0 ? daily : null;
+}
+
 export function compareLabel(
   input: z.infer<typeof labelInput>,
   cat: Catalog,
@@ -210,16 +237,7 @@ export function compareLabel(
           candidates: hits.map(([s]) => s),
         };
       const [slug, x] = hits[0];
-      const daily =
-        item.blend_total_only ||
-        !input.serving_size ||
-        !item.amount_per_serving ||
-        !item.unit ||
-        !input.servings_per_day
-          ? null
-          : item.amount_per_serving *
-            { g: 1000, mg: 1, mcg: 0.001 }[item.unit] *
-            input.servings_per_day;
+      const daily = dailyLabelMassMg(item, input.servings_per_day);
       const matches = db
         .filter(
           (r) => r.ingredient === slug && r.editorial_status === "reviewed",

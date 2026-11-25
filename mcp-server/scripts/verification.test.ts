@@ -71,6 +71,44 @@ test("worker MCP transport: discovery, retrieval, claim, label and guide respons
       ).status,
       "needs_clarification",
     );
+    const glucose = await call("check_supplement_claim", {
+      ingredient: "berberine",
+      claim: "Supports healthy blood sugar",
+      outcome: "blood glucose",
+    });
+    assert.equal(glucose.coverage, "related_review_only");
+    assert.equal(glucose.status, "not_assessed");
+    assert.equal(glucose.grade, null);
+    assert.deepEqual(glucose.reviewed_studies, []);
+    const review = glucose.related_review_summaries.find(
+      (r: { pmid: string }) => r.pmid === "36467075",
+    );
+    assert.equal(review?.url, "https://pubmed.ncbi.nlm.nih.gov/36467075/");
+    assert.match(review.population, /type 2 diabetes/i);
+    assert.match(review.limitations, /formulation/);
+
+    const equivalence = await call("check_supplement_claim", {
+      ingredient: "berberine",
+      claim: "S-BALANCE is as effective as semaglutide.",
+      outcome: "glycemic control",
+      product: "S-BALANCE",
+    });
+    assert.equal(equivalence.coverage, "related_review_only");
+    assert.equal(equivalence.status, "not_assessed");
+    assert.equal(equivalence.grade, null);
+    assert.deepEqual(equivalence.reviewed_assessments, []);
+    assert.equal(equivalence.finished_product_evidence, "not_assessed");
+
+    const creatine = await call("compare_supplement_label", {
+      servings_per_day: 1,
+      ingredients: [
+        { name: "creatine monohydrate", amount_per_serving: 3000, unit: "mg" },
+      ],
+    });
+    assert.equal(creatine.rows[0].label_mg_per_day, 3000);
+    assert.equal(creatine.rows[0].quantity_status, "label_mass_only");
+    assert.deepEqual(creatine.rows[0].reviewed_comparisons, []);
+    assert.equal(creatine.finished_product_evidence, "not_assessed");
     const trial = await call("check_supplement_claim", {
       ingredient: "uva-ursi",
       outcome: "urinary symptoms",
@@ -215,7 +253,6 @@ test("synthetic reviewed study: daily mass comparison requires form, units, basi
     const result = compareLabel(
       labelInput.parse({
         servings_per_day: servings,
-        serving_size: "2 capsules",
         ingredients: [{ ...row, ...fields }],
       }),
       { example: { name: "Example" } },
@@ -233,9 +270,105 @@ test("synthetic reviewed study: daily mass comparison requires form, units, basi
   for (const fields of [
     { form: "Other" },
     { basis: "compound" },
+    { basis: "elemental" },
     { basis: undefined },
     { blend_total_only: true },
     { amount_per_serving: undefined },
   ])
     assert.equal(run(fields), "not_comparable");
+});
+
+test("broad glycemic queries retrieve specific endpoints without equating them", () => {
+  const scopes = ["Fasting plasma glucose", "2-hour postprandial blood glucose", "HbA1c"];
+  const cat = { example: {
+    name: "Example",
+    review_evidence: [
+      ...scopes.map(evidence_scope => ({ evidence_scope })),
+      { evidence_scope: "Blood sugar", editorial_status: "pending_review" },
+    ],
+  } };
+  const claim = "Equivalent to semaglutide for glucose control.";
+  const run = (outcome: string, product?: string) =>
+    checkClaim({ ingredient: "example", claim, outcome, product }, cat, []);
+  for (const [outcome, expected] of [
+    ["blood sugar", scopes], ["Blood glucose.", scopes], ["glycemic control", scopes],
+    ["fasting glucose", [scopes[0]]], ["postprandial glucose", [scopes[1]]],
+    ["hemoglobin A1c", [scopes[2]]], ["HbA1c", [scopes[2]]],
+    ["body weight", []], ["blood glucose variability", []],
+  ] as const) {
+    const result = run(outcome);
+    assert.ok("related_review_summaries" in result);
+    assert.deepEqual(result.related_review_summaries.map(r => r.evidence_scope), expected, outcome);
+    assert.equal(result.status, "not_assessed");
+    assert.equal(result.grade, null);
+  }
+  const product = run("blood sugar", "Example formula");
+  assert.equal(product.finished_product_evidence, "not_assessed");
+  assert.equal(product.status, "not_assessed");
+});
+
+test("related reviews never authorize a verdict for another endpoint or a pending study", () => {
+  const claim = "The synthetic endpoint decreased by 2.5%.";
+  const record = {
+    ...studies[0], ingredient: "example", terms: ["fasting glucose"],
+    editorial_status: "reviewed" as const,
+    assessments: [{
+      claim,
+      verdict: "supported_with_limits" as const,
+      grade: "B" as const,
+      rationale: "Test fixture.",
+    }],
+  };
+  const cat = { example: { name: "Example", review_evidence: [{ evidence_scope: "Fasting glucose" }] } };
+  const input = { ingredient: "example", claim, outcome: "blood sugar" };
+  assert.equal(checkClaim(input, cat, [record]).status, "not_assessed");
+  for (const changedClaim of [
+    "The synthetic endpoint decreased by 25%.",
+    "The synthetic endpoint did not decrease by 2.5%.",
+  ]) {
+    const result = checkClaim({ ...input, outcome: "fasting glucose", claim: changedClaim }, cat, [record]);
+    assert.equal(result.status, "not_assessed");
+    assert.equal(result.grade, null);
+  }
+  const pending = checkClaim(
+    { ...input, outcome: "fasting glucose" },
+    cat,
+    [{ ...record, editorial_status: "pending_review" }],
+  );
+  assert.ok("pending_source_reviews" in pending);
+  assert.equal(pending.pending_source_reviews, 1);
+  assert.deepEqual(pending.reviewed_studies, []);
+  assert.equal(pending.grade, null);
+  const missing = checkClaim(input, { example: { name: "Example" } }, []);
+  assert.ok("coverage" in missing);
+  assert.equal(missing.coverage, "no_reviewed_outcome_match");
+  const ambiguous = checkClaim(input, { a: { name: "Example A" }, b: { name: "Example B" } }, []);
+  assert.equal(ambiguous.status, "needs_clarification");
+  assert.ok("candidates" in ambiguous);
+  assert.deepEqual(ambiguous.candidates, ["a", "b"]);
+});
+
+test("daily label mass uses explicit units and frequency; blends and unknowns stay unquantified", () => {
+  const run = (item: Record<string, unknown>, servings?: number) => {
+    const [row] = compareLabel(labelInput.parse({
+      servings_per_day: servings, ingredients: [{ name: "example", ...item }],
+    }), { example: { name: "Example" } }, []).rows;
+    assert.ok("label_mg_per_day" in row);
+    assert.deepEqual(row.reviewed_comparisons, []);
+    return row;
+  };
+  assert.equal(run({ amount_per_serving: 3, unit: "g" }, 1).label_mg_per_day, 3000);
+  assert.equal(run({ amount_per_serving: 3000, unit: "mg" }, 1).label_mg_per_day, 3000);
+  assert.equal(run({ amount_per_serving: 250, unit: "mcg" }, 2).label_mg_per_day, 0.5);
+  const mg = { amount_per_serving: 30, unit: "mg" };
+  const blend = run({ ...mg, blend_total_only: true }, 1);
+  assert.equal(blend.label_mg_per_day, null);
+  assert.equal(blend.quantity_status, "individual_amount_undisclosed");
+  for (const row of [
+    run(mg), run({ unit: "mg" }, 1), run({ amount_per_serving: 30 }, 1),
+    run({ amount_per_serving: Number.MAX_VALUE, unit: "g" }, 1),
+  ]) {
+    assert.equal(row.label_mg_per_day, null);
+    assert.equal(row.quantity_status, "incomplete_serving_or_amount");
+  }
 });
