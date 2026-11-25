@@ -109,7 +109,7 @@ const INGREDIENT_REDIRECTS = new Map([
 // `safety: true` marks a pure safety page: it never shows a product module, even if
 // `products` is set. Peptide guides never show one either (see handleGuide).
 const GLP1_GUIDES = new Map([
-  ['', { file: 'glp-1/index.html', name: 'Supplements on GLP-1 drugs', reviewed: '2026-11-10' }],
+  ['', { file: 'glp-1/index.html', name: 'GLP-1 vitamins and supplements', reviewed: '2026-11-10' }],
   ['berberine-vs-ozempic', { file: 'glp-1/berberine-vs-ozempic.html', name: 'Berberine vs Ozempic', reviewed: '2026-11-10', products: ['s-balance', 'nourish-plus'], productsHeading: 'Products that list berberine' }],
   ['semaglutide-with-b12', { file: 'glp-1/semaglutide-with-b12.html', name: 'Semaglutide with B12', reviewed: '2026-11-10' }],
   ['glp-1-supplements', { file: 'glp-1/glp-1-supplements.html', name: 'Do GLP-1 supplements work?', reviewed: '2026-11-20', products: ['orygn-triglp', 'orygn-ignyt'], productsHeading: 'Related product reviews' }],
@@ -145,8 +145,8 @@ const PEPTIDE_GUIDES = new Map([
 // Guides to point to from an ingredient page: slug -> [[label, path], ...].
 const INGREDIENT_GUIDE_LINKS = new Map([
   ['berberine', [['Berberine vs Ozempic', '/glp-1/berberine-vs-ozempic']]],
-  ['creatine-monohydrate', [['Supplements on GLP-1 drugs', '/glp-1'], ['Does creatine cause weight gain?', '/ingredients/creatine-weight-gain'], ['Creatine HCl vs monohydrate', '/ingredients/creatine-hcl-vs-monohydrate']]],
-  ['magnesium', [['Supplements on GLP-1 drugs', '/glp-1'], ['Magnesium glycinate vs citrate', '/ingredients/magnesium-glycinate-vs-citrate'], ['Magnesium L-threonate vs glycinate', '/ingredients/magnesium-l-threonate-vs-glycinate']]],
+  ['creatine-monohydrate', [['GLP-1 vitamins and supplements', '/glp-1'], ['Does creatine cause weight gain?', '/ingredients/creatine-weight-gain'], ['Creatine HCl vs monohydrate', '/ingredients/creatine-hcl-vs-monohydrate']]],
+  ['magnesium', [['GLP-1 vitamins and supplements', '/glp-1'], ['Magnesium glycinate vs citrate', '/ingredients/magnesium-glycinate-vs-citrate'], ['Magnesium L-threonate vs glycinate', '/ingredients/magnesium-l-threonate-vs-glycinate']]],
 ]);
 
 // Retired /pages/* articles that still earn search impressions: 301 to the
@@ -459,7 +459,7 @@ async function handleProduct(url, slug) {
 // Homepage. Title, description, canonical and structured data are kept stable
 // for search; the deploy check looks for "verification, not marketing claims".
 const HOME_GUIDES = [
-  ['/glp-1', 'GLP-1 guide', 'Supplements on GLP-1 drugs', 'What the evidence shows for protein, creatine, fiber, magnesium and biotin if you take semaglutide or tirzepatide.'],
+  ['/glp-1', 'GLP-1 guide', 'GLP-1 vitamins and supplements', 'What the evidence shows for protein, creatine, fiber, magnesium and biotin if you take semaglutide or tirzepatide.'],
   ['/glp-1/glp-1-supplements', 'GLP-1 guide', 'Do GLP-1 supplements work?', 'Patches, drops and "natural GLP-1" boosters checked against the trials, ingredient by ingredient.'],
   ['/glp-1/semaglutide-with-b12', 'GLP-1 guide', 'Semaglutide with B12', 'It is a compounded product, not an approved drug. Does the added B12 do anything?'],
   ['/glp-1/berberine-vs-ozempic', 'GLP-1 guide', 'Berberine vs Ozempic', 'Is berberine "nature\'s Ozempic"? What separate trials show for weight and blood sugar.'],
