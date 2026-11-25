@@ -156,6 +156,7 @@
       "HbA1c",
       "hemoglobin A1c"
     ],
+    "related_outcome_terms": ["blood sugar", "blood glucose"],
     "preparation": "Berberine hydrochloride",
     "preparation_detail": "Oral hydrochloride, hydrate number and dosage form unspecified.",
     "amount_basis": "salt",
@@ -175,9 +176,9 @@
       "time_days": 91,
       "confidence_interval": null
     },
-    "limitations": "Small completer analysis with treatment-failure withdrawals. No between-group HbA1c estimate or equivalence test was reported. Study B excluded.",
+    "limitations": "Small, single-center, 13-week pilot. Blinding was not described. The HbA1c analysis included completers only (15 berberine, 16 metformin). Three berberine participants and two metformin participants withdrew for treatment failure. No between-group HbA1c estimate or equivalence test was reported.",
     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2410097/",
-    "locator": "Study A, Results §3.1, Table 2, p. 714 (berberine arm).",
+    "locator": "Study A, Results §3 and Table 2, p. 714 (completers and HbA1c). Section 3.3 reports safety across berberine regimens.",
     "citation": {
       "title": "Efficacy of berberine in patients with type 2 diabetes mellitus",
       "authors": "Yin J, Xing H, Ye J",
@@ -185,7 +186,7 @@
       "year": 2008,
       "doi": "10.1016/j.metabol.2008.01.013"
     },
-    "safety_findings": "Study A-specific adverse-event counts were unavailable.",
+    "safety_findings": "Across berberine monotherapy and combination therapy, 20 participants (34.5%) reported transient gastrointestinal effects. No severe gastrointestinal events were reported with berberine alone. The paper gives no separate count of all adverse events for either the Study A berberine arm or the metformin-only arm.",
     "source_access": "full_text",
     "amount_mg_per_day": null,
     "last_evidence_review": "2026-11-25",
@@ -212,7 +213,7 @@
     "population": "Nine healthy men in group 3.",
     "comparator": "Participants' own baseline",
     "effect": {
-      "measure": "Mean muscle total creatine change from baseline, 121.76 to 142.04.",
+      "measure": "Mean muscle total creatine rose from 121.76 at baseline to 142.04 at the day-29 biopsy after the 28-day course.",
       "estimate": 20.28,
       "unit": "mmol/kg dry muscle",
       "active_percent": null,
