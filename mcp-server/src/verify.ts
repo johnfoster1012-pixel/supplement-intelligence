@@ -23,6 +23,7 @@ export const studySchema = z.object({
   ingredient: field,
   outcome: field,
   terms: z.array(field).min(1),
+  related_outcome_terms: z.array(field).optional(),
   preparation: field,
   preparation_detail: field,
   amount_mg_per_day: positive.nullable(),
@@ -145,6 +146,12 @@ export function checkClaim(
             .map((a) => ({ ...a, study_id: x.study_id })),
         )
       : [];
+  // Discovery aliases never enter the exact claim or grading path.
+  const relatedStudies = db.filter(study =>
+    study.ingredient === slug && study.editorial_status === "reviewed" &&
+    !approved.includes(study) &&
+    study.related_outcome_terms?.some(term => norm(term) === outcome)
+  ).map(({ assessments, ...study }) => study);
   const reviewTerms = reviewScopeTerms(outcome);
   const reviews = (
     Array.isArray(row.review_evidence) ? row.review_evidence : []
@@ -162,7 +169,9 @@ export function checkClaim(
     last_ingredient_review: row.last_reviewed_at ?? null,
     coverage: approved.length
       ? "outcome_studies_available"
-      : reviews.length
+      : relatedStudies.length
+        ? "related_outcome_studies_available"
+        : reviews.length
         ? "related_review_only"
         : "no_reviewed_outcome_match",
     status: exact.length === 1 ? exact[0].verdict : "not_assessed",
@@ -173,6 +182,7 @@ export function checkClaim(
         : "The reviewed catalog does not establish this exact wording, amount of effect, and product scope.",
     reviewed_assessments: exact,
     reviewed_studies: approved,
+    related_outcome_studies: relatedStudies,
     related_review_summaries: reviews,
     pending_source_reviews: matching.length - approved.length,
     grade_note:

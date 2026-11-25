@@ -107,7 +107,18 @@ test("worker MCP transport: discovery, retrieval, claim, label and guide respons
       claim: "Supports healthy blood sugar",
       outcome: "blood glucose",
     });
-    assert.equal(glucose.coverage, "related_review_only");
+    assert.equal(glucose.coverage, "related_outcome_studies_available");
+    for (const outcome of ["blood glucose", "blood sugar", "fasting glucose"]) {
+      const result = outcome === "blood glucose" ? glucose : await call("check_supplement_claim", {
+        ingredient: "berberine", outcome, claim: "Supports healthy blood sugar", product: "S-BALANCE",
+      });
+      assert.deepEqual(result.related_outcome_studies.map((s: any) => [s.study_id, s.outcome]),
+        outcome === "fasting glucose" ? [] : [["PMID:18442638", "HbA1c"]]);
+      assert.deepEqual(result.reviewed_studies, []);
+      assert.equal(result.status, "not_assessed");
+      assert.equal(result.grade, null);
+      assert.equal(result.finished_product_evidence, "not_assessed");
+    }
     assert.equal(glucose.status, "not_assessed");
     assert.equal(glucose.grade, null);
     assert.deepEqual(glucose.reviewed_studies, []);
