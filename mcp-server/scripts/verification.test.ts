@@ -107,6 +107,7 @@ test("worker MCP transport: discovery, retrieval, claim, label and guide respons
     });
     assert.equal(creatine.rows[0].label_mg_per_day, 3000);
     assert.equal(creatine.rows[0].quantity_status, "label_mass_only");
+    assert.match(creatine.rows[0].label_mg_per_day_note, /not a recommended dose/);
     assert.deepEqual(creatine.rows[0].reviewed_comparisons, []);
     assert.equal(creatine.finished_product_evidence, "not_assessed");
     const trial = await call("check_supplement_claim", {

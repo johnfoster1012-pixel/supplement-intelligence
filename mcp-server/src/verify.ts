@@ -284,6 +284,10 @@ export function compareLabel(
         research_sources: x.sources,
         safety: x.safety ?? null,
         label_mg_per_day: daily,
+        label_mg_per_day_note:
+          daily === null
+            ? null
+            : "Label amount per serving multiplied by servings per day, as supplied. This is arithmetic from the label, not a recommended dose.",
         quantity_status: item.blend_total_only
           ? "individual_amount_undisclosed"
           : daily === null
