@@ -1027,6 +1027,21 @@ function renderProductPage(product, productsData) {
   const guidesHtml = (product.guides || []).length
     ? '<h2 id="guides">Related evidence guides</h2><ul class="si-chips">' + product.guides.map(g => `<li class="si-chip si-chip-on"><a href="${escapeHtml(g.url)}">${escapeHtml(g.name)}</a></li>`).join('') + '</ul>'
     : '';
+  // Common questions, built from the same label and review data shown above,
+  // so the visible answers and the FAQPage schema always match the page.
+  const listNames = arr => arr.length <= 2 ? arr.join(' and ') : arr.slice(0, -1).join(', ') + ' and ' + arr[arr.length - 1];
+  const faqs = [];
+  faqs.push([`What is in ${name}?`, labelItems.length
+    ? `The manufacturer's label lists ${labelItems.length} ingredient${labelItems.length === 1 ? '' : 's'}: ${listNames(labelItems)}. The list was checked on ${checked}.`
+    : `When we checked on ${checked}, the manufacturer had not published a complete ingredient list for ${name}, so we can't say everything it contains.`]);
+  faqs.push([`Does ${name} work?`,
+    `We have not reviewed any trials of ${name} itself, so we don't grade the product. Studies of single ingredients can't show what a finished product does, because the amounts, forms and combination may differ from what was studied.`]);
+  if (evidence.length) {
+    const names = evidence.map(e => String(e.name || e.slug));
+    faqs.push([`What does the research say about the ingredients in ${name}?`,
+      `${evidence.length === 1 ? 'One ingredient has' : ((['Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'][evidence.length - 2]) || evidence.length) + ' ingredients have'} an evidence review on this site: ${listNames(names)}. Each review summarizes the published human research and grades it, and the findings vary by ingredient and outcome.`]);
+  }
+  const faqHtml = '<h2 id="faq">Common questions</h2>' + faqs.map(([q, a]) => `<details><summary>${escapeHtml(q)}</summary><p>${escapeHtml(a)}</p></details>`).join('');
   const aboutHtml = `<h2 id="about">About this page</h2>
 <p>The ingredient list comes from the ${source}, checked on ${escapeHtml(checked)}. The ingredient summaries come from our evidence reviews, which use published human studies and government sources; each review lists its sources. See <a href="/references">how we review evidence</a>.</p>
 <p>Supplement Intelligence is run by a ${escapeHtml(brand)} affiliate and earns referral credit on purchases made through links on this page.</p>
@@ -1041,6 +1056,7 @@ ${evidenceHtml}
 ${relatedHtml}
 ${coaHtml}
 ${guidesHtml}
+${faqHtml}
 ${aboutHtml}`;
 
   const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeHtml(title)}</title><meta name="description" content="${escapeHtml(description)}"><link rel="canonical" href="${SITE_ORIGIN}/products/${product.slug}"></head><body>${body}</body></html>`;
@@ -1055,6 +1071,11 @@ ${aboutHtml}`;
       brand: { '@type': 'Brand', name: brand },
       category: product.category || 'Dietary supplement',
       url: `${SITE_ORIGIN}/products/${product.slug}`
+    }, {
+      '@context': 'https://schema.org', '@type': 'FAQPage',
+      '@id': `${SITE_ORIGIN}/products/${product.slug}#faq`,
+      url: `${SITE_ORIGIN}/products/${product.slug}`,
+      mainEntity: faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } }))
     }]
   });
 }
