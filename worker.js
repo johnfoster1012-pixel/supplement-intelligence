@@ -7,7 +7,7 @@
  */
 const CONTENT_BRANCH_NAME = (typeof CONTENT_BRANCH !== 'undefined' && CONTENT_BRANCH) ? CONTENT_BRANCH : 'main';
 const IS_PREVIEW = CONTENT_BRANCH_NAME !== 'main';
-const VERSION = 'Supplement Intelligence v11.32';
+const VERSION = 'Supplement Intelligence v11.33';
 const SITE_ORIGIN = 'https://supplement-intelligence.com';
 // CONTENT_REV is the commit SHA the deploy workflow passes in (--var). Content is
 // read from that exact commit, so a deploy can never pick up an older copy of a
@@ -103,23 +103,36 @@ const INGREDIENT_REDIRECTS = new Map([
   ['bacopa-monnieri', '/ingredients']
 ]);
 
+// Named authors. A guide with `author` gets a visible byline and a Person author in
+// its structured data, pointing at the author page (/authors/<slug>).
+const AUTHORS = new Map([
+  ['john-foster', { name: 'John Foster', path: '/authors/john-foster', file: 'site/authors/john-foster.html' }],
+]);
+
+function authorSchema(slug) {
+  const a = AUTHORS.get(slug);
+  return a ? { '@type': 'Person', '@id': SITE_ORIGIN + a.path + '#person', name: a.name, url: SITE_ORIGIN + a.path } : null;
+}
+
 // GLP-1 guides: static HTML in glp-1/, keyed by URL slug ('' is the hub at /glp-1).
 // `reviewed` drives the visible "Last reviewed" line and the structured data.
+// `published` (optional) is the first publication date; `author` names an AUTHORS slug.
 // `products` (product slugs) adds a disclosed product module at the end of the guide.
 // `safety: true` marks a pure safety page: it never shows a product module, even if
 // `products` is set. Peptide guides never show one either (see handleGuide).
 const GLP1_GUIDES = new Map([
-  ['', { file: 'glp-1/index.html', name: 'GLP-1 vitamins and supplements', reviewed: '2026-11-10' }],
+  ['', { file: 'glp-1/index.html', name: 'Vitamins on GLP-1 drugs', reviewed: '2026-11-10' }],
   ['berberine-vs-ozempic', { file: 'glp-1/berberine-vs-ozempic.html', name: 'Berberine vs Ozempic', reviewed: '2026-11-10', products: ['s-balance', 'nourish-plus'], productsHeading: 'Products that list berberine' }],
   ['semaglutide-with-b12', { file: 'glp-1/semaglutide-with-b12.html', name: 'Semaglutide with B12', reviewed: '2026-11-10' }],
-  ['glp-1-supplements', { file: 'glp-1/glp-1-supplements.html', name: 'Do GLP-1 supplements work?', reviewed: '2026-11-20', products: ['orygn-triglp', 'orygn-ignyt'], productsHeading: 'Related product reviews' }],
+  ['glp-1-supplements', { file: 'glp-1/glp-1-supplements.html', name: 'Do GLP-1 supplements work?', reviewed: '2026-11-26', published: '2026-11-11', author: 'john-foster', products: ['orygn-triglp', 'orygn-ignyt'], productsHeading: 'Related product reviews' }],
   ['glp-1-patches', { file: 'glp-1/glp-1-patches.html', name: 'Do GLP-1 patches work?', reviewed: '2026-11-11' }],
   ['retatrutide', { file: 'glp-1/retatrutide.html', name: 'Retatrutide', reviewed: '2026-11-15' }],
+  ['retatrutide-side-effects', { file: 'glp-1/retatrutide-side-effects.html', name: 'Retatrutide side effects', reviewed: '2026-11-26', published: '2026-11-26', author: 'john-foster', safety: true }],
   ['retatrutide-dosing-schedule', { file: 'glp-1/retatrutide-dosing-schedule.html', name: 'Retatrutide dosing schedule', reviewed: '2026-11-15' }],
   ['tirzepatide-vs-retatrutide', { file: 'glp-1/tirzepatide-vs-retatrutide.html', name: 'Tirzepatide vs retatrutide', reviewed: '2026-11-15' }],
   ['muscle-loss', { file: 'glp-1/muscle-loss.html', name: 'GLP-1 and muscle loss', reviewed: '2026-11-13', safety: true }],
   ['oral-glp-1', { file: 'glp-1/oral-glp-1.html', name: 'Oral GLP-1 pills', reviewed: '2026-11-13' }],
-  ['tirzepatide-side-effects', { file: 'glp-1/tirzepatide-side-effects.html', name: 'Tirzepatide side effects', reviewed: '2026-11-13', safety: true }],
+  ['tirzepatide-side-effects', { file: 'glp-1/tirzepatide-side-effects.html', name: 'Tirzepatide side effects', reviewed: '2026-11-26', published: '2026-11-11', author: 'john-foster', safety: true }],
   ['tirzepatide-vs-semaglutide', { file: 'glp-1/tirzepatide-vs-semaglutide.html', name: 'Tirzepatide vs semaglutide', reviewed: '2026-11-13' }],
   ['stopping', { file: 'glp-1/stopping.html', name: 'Stopping a GLP-1', reviewed: '2026-11-20', safety: true }],
 ]);
@@ -128,8 +141,8 @@ const GLP1_GUIDES = new Map([
 // ingredient records: static HTML served like the GLP-1 guides.
 const INGREDIENT_TOPIC_GUIDES = new Map([
   ['creatine-hcl-vs-monohydrate', { file: 'ingredients/creatine-hcl-vs-monohydrate.html', name: 'Creatine HCl vs monohydrate', reviewed: '2026-11-13' }],
-  ['creatine-weight-gain', { file: 'ingredients/creatine-weight-gain.html', name: 'Does creatine cause weight gain?', reviewed: '2026-11-13' }],
-  ['magnesium-glycinate-vs-citrate', { file: 'ingredients/magnesium-glycinate-vs-citrate.html', name: 'Magnesium glycinate vs citrate', reviewed: '2026-11-13' }],
+  ['creatine-weight-gain', { file: 'ingredients/creatine-weight-gain.html', name: 'Does creatine cause weight gain?', reviewed: '2026-11-26', published: '2026-11-11', author: 'john-foster' }],
+  ['magnesium-glycinate-vs-citrate', { file: 'ingredients/magnesium-glycinate-vs-citrate.html', name: 'Magnesium glycinate vs citrate', reviewed: '2026-11-26', published: '2026-11-11', author: 'john-foster' }],
   ['magnesium-l-threonate-vs-glycinate', { file: 'ingredients/magnesium-l-threonate-vs-glycinate.html', name: 'Magnesium L-threonate vs glycinate', reviewed: '2026-11-13' }],
 ]);
 
@@ -146,8 +159,8 @@ const PEPTIDE_GUIDES = new Map([
 // Guides to point to from an ingredient page: slug -> [[label, path], ...].
 const INGREDIENT_GUIDE_LINKS = new Map([
   ['berberine', [['Berberine vs Ozempic', '/glp-1/berberine-vs-ozempic']]],
-  ['creatine-monohydrate', [['GLP-1 vitamins and supplements', '/glp-1'], ['Does creatine cause weight gain?', '/ingredients/creatine-weight-gain'], ['Creatine HCl vs monohydrate', '/ingredients/creatine-hcl-vs-monohydrate']]],
-  ['magnesium', [['GLP-1 vitamins and supplements', '/glp-1'], ['Magnesium glycinate vs citrate', '/ingredients/magnesium-glycinate-vs-citrate'], ['Magnesium L-threonate vs glycinate', '/ingredients/magnesium-l-threonate-vs-glycinate']]],
+  ['creatine-monohydrate', [['Vitamins on GLP-1 drugs', '/glp-1'], ['Does creatine cause weight gain?', '/ingredients/creatine-weight-gain'], ['Creatine HCl vs monohydrate', '/ingredients/creatine-hcl-vs-monohydrate']]],
+  ['magnesium', [['Vitamins on GLP-1 drugs', '/glp-1'], ['Magnesium glycinate vs citrate', '/ingredients/magnesium-glycinate-vs-citrate'], ['Magnesium L-threonate vs glycinate', '/ingredients/magnesium-l-threonate-vs-glycinate']]],
 ]);
 
 // Retired /pages/* articles that still earn search impressions: 301 to the
@@ -182,6 +195,7 @@ a{color:#a8532f}
 .si-header nav a{color:rgba(255,255,255,.88);text-decoration:none;font-size:.95rem;padding:8px 0}
 .si-header nav a:hover{color:#fff;text-decoration:underline}
 .si-meta{color:#555;font-size:.92rem;margin-top:-6px}
+.si-answer{font-size:1.05rem}
 .si-verdict{background:#fff;border:1px solid #e5e7eb;border-left:5px solid #c4704a;border-radius:0 12px 12px 0;padding:16px 20px;margin:18px 0}
 .si-verdict p{margin:6px 0}
 .si-table-wrap{overflow-x:auto;margin:18px 0}
@@ -315,6 +329,11 @@ async function route(request, url, path) {
   if (path === '/database') return redirect(url, '/references');
   if (path === '/about.html') return redirect(url, '/about');
   if (path === '/about') return proxyHtml('site/about.html', { path: '/about' });
+  const authorMatch = path.match(/^\/authors\/([a-z0-9-]+)$/);
+  if (authorMatch) {
+    const a = AUTHORS.get(authorMatch[1]);
+    return a ? proxyHtml(a.file, { path: a.path, breadcrumbs: [[a.name, a.path]] }) : notFound('Author Not Found');
+  }
   if (path === '/newsletter.html' || path === '/newsletter/') return redirect(url, '/newsletter');
   if (path === '/newsletter') return proxyHtml('site/newsletter.html', { path: '/newsletter' });
   if (path === '/references.html') return redirect(url, '/references');
@@ -460,8 +479,12 @@ async function handleProduct(url, slug) {
 // Homepage. Title, description, canonical and structured data are kept stable
 // for search; the deploy check looks for "verification, not marketing claims".
 const HOME_GUIDES = [
-  ['/glp-1', 'GLP-1 guide', 'GLP-1 vitamins and supplements', 'What the evidence shows for protein, creatine, fiber, magnesium and biotin if you take semaglutide or tirzepatide.'],
+  ['/ingredients/magnesium-glycinate-vs-citrate', 'Ingredient guide', 'Magnesium glycinate vs citrate', 'Which is better for sleep, constipation and absorption? What each study compared, and what no trial has tested.'],
+  ['/ingredients/creatine-weight-gain', 'Ingredient guide', 'Does creatine make you gain weight?', 'About 1 kg in the first week in one trial, mostly water. What the studies show about water, muscle and fat.'],
+  ['/glp-1/tirzepatide-side-effects', 'GLP-1 guide', 'Zepbound (tirzepatide) side effects', 'Nausea, hair loss, fatigue and label warnings, with the rates from the trials and how long they last.'],
+  ['/glp-1/retatrutide-side-effects', 'GLP-1 guide', 'Retatrutide side effects', 'Nausea, dysesthesia and low blood pressure in the TRIUMPH trials, with rates versus placebo. Not approved.'],
   ['/glp-1/glp-1-supplements', 'GLP-1 guide', 'Do GLP-1 supplements work?', 'Patches, drops and "natural GLP-1" boosters checked against the trials, ingredient by ingredient.'],
+  ['/glp-1', 'GLP-1 guide', 'Vitamins on GLP-1 drugs', 'What the evidence shows for protein, creatine, fiber, magnesium and biotin if you take semaglutide or tirzepatide.'],
   ['/glp-1/semaglutide-with-b12', 'GLP-1 guide', 'Semaglutide with B12', 'It is a compounded product, not an approved drug. Does the added B12 do anything?'],
   ['/glp-1/berberine-vs-ozempic', 'GLP-1 guide', 'Berberine vs Ozempic', 'Is berberine "nature\'s Ozempic"? What separate trials show for weight and blood sugar.'],
   ['/glp-1/stopping', 'GLP-1 guide', 'Stopping a GLP-1 drug', 'What trials show about weight regain after stopping semaglutide or tirzepatide, and how fast it comes back.'],
@@ -632,15 +655,20 @@ async function handleGuide(path, guide, section = ['GLP-1', '/glp-1']) {
   const breadcrumbs = section ? [section] : [];
   if (!isHub) breadcrumbs.push([guide.name, path]);
   const description = decodeEntities((raw.body.match(/<meta name="description" content="([^"]*)">/i) || [])[1] || '');
+  const author = AUTHORS.get(guide.author);
+  const byline = author ? `By <a href="${author.path}" rel="author">${escapeHtml(author.name)}</a> · ` : '';
+  const page = {
+    '@context': 'https://schema.org', '@type': 'MedicalWebPage',
+    name: guide.name, description, url: SITE_ORIGIN + path,
+    lastReviewed: guide.reviewed, dateModified: guide.reviewed,
+    publisher: { '@type': 'Organization', '@id': SITE_ORIGIN + '/#organization', name: 'Supplement Intelligence', url: SITE_ORIGIN + '/' }
+  };
+  if (guide.published) page.datePublished = guide.published;
+  if (author) page.author = authorSchema(guide.author);
   const options = {
     path, ogType: 'article', breadcrumbs,
-    afterH1: `<p class="si-meta">Last reviewed ${escapeHtml(formatLongDate(guide.reviewed))} · <a href="/references">How evidence is reviewed</a></p>`,
-    jsonLd: [{
-      '@context': 'https://schema.org', '@type': 'MedicalWebPage',
-      name: guide.name, description, url: SITE_ORIGIN + path,
-      lastReviewed: guide.reviewed, dateModified: guide.reviewed,
-      publisher: { '@type': 'Organization', name: 'Supplement Intelligence', url: SITE_ORIGIN + '/' }
-    }]
+    afterH1: `<p class="si-meta">${byline}Last reviewed ${escapeHtml(formatLongDate(guide.reviewed))} · <a href="/references">How evidence is reviewed</a></p>`,
+    jsonLd: [page]
   };
   // Product modules only on GLP-1 guides that list products and are not safety pages.
   if (section && section[1] === '/glp-1' && !guide.safety && Array.isArray(guide.products) && guide.products.length) {
