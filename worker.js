@@ -7,7 +7,7 @@
  */
 const CONTENT_BRANCH_NAME = (typeof CONTENT_BRANCH !== 'undefined' && CONTENT_BRANCH) ? CONTENT_BRANCH : 'main';
 const IS_PREVIEW = CONTENT_BRANCH_NAME !== 'main';
-const VERSION = 'Supplement Intelligence v11.33';
+const VERSION = 'Supplement Intelligence v11.34';
 const SITE_ORIGIN = 'https://supplement-intelligence.com';
 // CONTENT_REV is the commit SHA the deploy workflow passes in (--var). Content is
 // read from that exact commit, so a deploy can never pick up an older copy of a
@@ -102,6 +102,10 @@ const INGREDIENT_REDIRECTS = new Map([
   ['marine-collagen-peptides', '/ingredients/collagen-peptides'],
   ['bacopa-monnieri', '/ingredients']
 ]);
+
+// The site's own accounts elsewhere. They go in the Organization's sameAs and the footer.
+const SITE_SAME_AS = ['https://x.com/supplementintel'];
+const SITE_ORGANIZATION = { '@type': 'Organization', '@id': SITE_ORIGIN + '/#organization', name: 'Supplement Intelligence', url: SITE_ORIGIN + '/', sameAs: SITE_SAME_AS };
 
 // Named authors. A guide with `author` gets a visible byline and a Person author in
 // its structured data, pointing at the author page (/authors/<slug>).
@@ -264,7 +268,7 @@ a{color:#a8532f}
 
 const SITE_HEADER = '<header class="si-header"><div class="si-inner"><a class="si-logo" href="/">Supplement<span>Intelligence</span></a><nav aria-label="Main"><a href="/glp-1">GLP-1</a><a href="/ingredients">Ingredient evidence</a><a href="/products">Products</a><a href="/references">Research status</a><a href="/newsletter">Newsletter</a><a href="/about">About</a></nav></div></header>';
 
-const SITE_FOOTER = '<footer class="si-footer"><nav aria-label="Footer"><a href="/glp-1">GLP-1 guides</a><a href="/peptides">Peptides</a><a href="/ingredients">Ingredient evidence</a><a href="/products">Products</a><a href="/references">Research status</a><a href="/newsletter">Newsletter</a><a href="/about">About</a><a href="/support">Support</a><a href="/disclaimer">Disclaimer</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/api/v1">API</a></nav><p><strong>Graded Claims:</strong> a free weekly email. <a href="https://supplementintel.beehiiv.com/subscribe" rel="noopener">Subscribe</a></p><p>Supplement Intelligence may earn referral credit from some product links. Compensation does not determine evidence status.</p><p>For informational purposes only; not individualized medical advice.</p></footer>';
+const SITE_FOOTER = '<footer class="si-footer"><nav aria-label="Footer"><a href="/glp-1">GLP-1 guides</a><a href="/peptides">Peptides</a><a href="/ingredients">Ingredient evidence</a><a href="/products">Products</a><a href="/references">Research status</a><a href="/newsletter">Newsletter</a><a href="/about">About</a><a href="/support">Support</a><a href="/disclaimer">Disclaimer</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/api/v1">API</a></nav><p><strong>Graded Claims:</strong> a free weekly email. <a href="https://supplementintel.beehiiv.com/subscribe" rel="noopener">Subscribe</a></p><p><a href="https://x.com/supplementintel" rel="me noopener">Supplement Intelligence on X</a></p><p>Supplement Intelligence may earn referral credit from some product links. Compensation does not determine evidence status.</p><p>For informational purposes only; not individualized medical advice.</p></footer>';
 
 let cache = { productsData: null, ingredientData: null, ts: 0 };
 const CACHE_TTL = 3600000;
@@ -583,7 +587,7 @@ ${script}
   const jsonLd = [{
     '@context': 'https://schema.org', '@type': 'WebSite', name: 'Supplement Intelligence', url: SITE_ORIGIN + '/',
     description: 'Verification-first supplement formulation and ingredient evidence research.',
-    publisher: { '@type': 'Organization', name: 'Supplement Intelligence', url: SITE_ORIGIN + '/', logo: SITE_ORIGIN + '/favicon.svg' }
+    publisher: { ...SITE_ORGANIZATION, logo: SITE_ORIGIN + '/favicon.svg' }
   }];
   return new Response(decorate(html, { path: '/', wide: true, jsonLd }), { status: 200, headers: htmlHeaders({ 'X-Powered-By': VERSION }) });
 }
@@ -661,7 +665,7 @@ async function handleGuide(path, guide, section = ['GLP-1', '/glp-1']) {
     '@context': 'https://schema.org', '@type': 'MedicalWebPage',
     name: guide.name, description, url: SITE_ORIGIN + path,
     lastReviewed: guide.reviewed, dateModified: guide.reviewed,
-    publisher: { '@type': 'Organization', '@id': SITE_ORIGIN + '/#organization', name: 'Supplement Intelligence', url: SITE_ORIGIN + '/' }
+    publisher: SITE_ORGANIZATION
   };
   if (guide.published) page.datePublished = guide.published;
   if (author) page.author = authorSchema(guide.author);
@@ -719,7 +723,7 @@ async function handleIngredientPage(slug) {
       '@context': 'https://schema.org', '@type': 'MedicalWebPage',
       name: `${x.name} evidence review`, description: x.posture, url: SITE_ORIGIN + path,
       about: { '@type': 'Thing', name: x.name },
-      publisher: { '@type': 'Organization', name: 'Supplement Intelligence', url: SITE_ORIGIN + '/' }
+      publisher: SITE_ORGANIZATION
     };
     if (reviewed) { page.lastReviewed = reviewed; page.dateModified = reviewed; }
     options.jsonLd = [page];
