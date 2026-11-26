@@ -140,8 +140,8 @@ const GLP1_GUIDES = new Map([
 // ingredient records: static HTML served like the GLP-1 guides.
 const INGREDIENT_TOPIC_GUIDES = new Map([
   ['creatine-hcl-vs-monohydrate', { file: 'ingredients/creatine-hcl-vs-monohydrate.html', name: 'Creatine HCl vs monohydrate', reviewed: '2026-11-13' }],
-  ['creatine-weight-gain', { file: 'ingredients/creatine-weight-gain.html', name: 'Does creatine cause weight gain?', reviewed: '2026-11-13' }],
-  ['magnesium-glycinate-vs-citrate', { file: 'ingredients/magnesium-glycinate-vs-citrate.html', name: 'Magnesium glycinate vs citrate', reviewed: '2026-11-13' }],
+  ['creatine-weight-gain', { file: 'ingredients/creatine-weight-gain.html', name: 'Does creatine cause weight gain?', reviewed: '2026-11-26', published: '2026-11-11', author: 'john-foster' }],
+  ['magnesium-glycinate-vs-citrate', { file: 'ingredients/magnesium-glycinate-vs-citrate.html', name: 'Magnesium glycinate vs citrate', reviewed: '2026-11-26', published: '2026-11-11', author: 'john-foster' }],
   ['magnesium-l-threonate-vs-glycinate', { file: 'ingredients/magnesium-l-threonate-vs-glycinate.html', name: 'Magnesium L-threonate vs glycinate', reviewed: '2026-11-13' }],
 ]);
 
@@ -478,6 +478,8 @@ async function handleProduct(url, slug) {
 // Homepage. Title, description, canonical and structured data are kept stable
 // for search; the deploy check looks for "verification, not marketing claims".
 const HOME_GUIDES = [
+  ['/ingredients/magnesium-glycinate-vs-citrate', 'Ingredient guide', 'Magnesium glycinate vs citrate', 'Which is better for sleep, constipation and absorption? What each study compared, and what no trial has tested.'],
+  ['/ingredients/creatine-weight-gain', 'Ingredient guide', 'Does creatine make you gain weight?', 'About 1 kg in the first week in one trial, mostly water. What the studies show about water, muscle and fat.'],
   ['/glp-1/tirzepatide-side-effects', 'GLP-1 guide', 'Zepbound (tirzepatide) side effects', 'Nausea, hair loss, fatigue and label warnings, with the rates from the trials and how long they last.'],
   ['/glp-1', 'GLP-1 guide', 'GLP-1 vitamins and supplements', 'What the evidence shows for protein, creatine, fiber, magnesium and biotin if you take semaglutide or tirzepatide.'],
   ['/glp-1/glp-1-supplements', 'GLP-1 guide', 'Do GLP-1 supplements work?', 'Patches, drops and "natural GLP-1" boosters checked against the trials, ingredient by ingredient.'],
