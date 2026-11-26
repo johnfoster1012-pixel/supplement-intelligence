@@ -166,7 +166,8 @@ jobs:
           key = os.environ["INDEXNOW_KEY"]
           host = "supplement-intelligence.com"
           # The key file must be live before IndexNow will accept a submission.
-          live = urllib.request.urlopen(f"https://{host}/{key}.txt", timeout=20).read().decode().strip()
+          ua = {"User-Agent": "SiteIndexNow/1.0"}
+          live = urllib.request.urlopen(urllib.request.Request(f"https://{host}/{key}.txt", headers=ua), timeout=20).read().decode().strip()
           assert live == key, "IndexNow key file not served"
           paths = set(p for p in os.environ.get("EXTRA", "").split() if p.startswith("/"))
           before = os.environ.get("BEFORE", "")
@@ -184,7 +185,7 @@ jobs:
               raise SystemExit(0)
           urls = sorted(f"https://{host}{p}" for p in paths)
           body = json.dumps({"host": host, "key": key, "keyLocation": f"https://{host}/{key}.txt", "urlList": urls}).encode()
-          req = urllib.request.Request("https://api.indexnow.org/indexnow", data=body, headers={"Content-Type": "application/json; charset=utf-8"})
+          req = urllib.request.Request("https://api.indexnow.org/indexnow", data=body, headers={"Content-Type": "application/json; charset=utf-8", **ua})
           with urllib.request.urlopen(req, timeout=30) as r:
               print("IndexNow HTTP", r.status, "for", len(urls), "URLs:", *urls, sep="\n  ")
           PY
