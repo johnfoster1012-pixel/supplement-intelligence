@@ -22,11 +22,13 @@ Verification-first supplement formulation and ingredient research.
 - https://supplement-intelligence.com/peptides/tb-500
 - https://supplement-intelligence.com/peptides/supplements-vs-drugs
 - https://supplement-intelligence.com/glp-1/retatrutide
+- https://supplement-intelligence.com/glp-1/retatrutide-side-effects
 - https://supplement-intelligence.com/glp-1/retatrutide-dosing-schedule
 - https://supplement-intelligence.com/glp-1/tirzepatide-vs-retatrutide
 - https://supplement-intelligence.com/products
 - https://supplement-intelligence.com/references
 - https://supplement-intelligence.com/about
+- https://supplement-intelligence.com/authors/john-foster
 - https://supplement-intelligence.com/newsletter
 
 ## Machine-readable interfaces
