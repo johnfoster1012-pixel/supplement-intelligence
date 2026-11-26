@@ -29,6 +29,11 @@ on:
       - 'BingSiteAuth.xml'
       - '.github/workflows/deploy-cloudflare-worker.yml'
   workflow_dispatch:
+    inputs:
+      indexnow_urls:
+        description: 'Extra paths to send to IndexNow, space-separated (e.g. /peptides /ingredients/zinc)'
+        required: false
+        default: ''
 
 permissions:
   contents: read
@@ -41,6 +46,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 50
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -71,6 +78,7 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
 
       - name: Verify deployment
+        id: verify
         run: |
           set -e
 
@@ -144,3 +152,39 @@ jobs:
 
           BING_XML=$(curl --max-time 20 -s "https://supplement-intelligence.com/BingSiteAuth.xml")
           echo "$BING_XML" | grep -q "<users>"
+
+      - name: Notify IndexNow of changed pages
+        if: always() && steps.verify.outcome == 'success'
+        continue-on-error: true
+        env:
+          INDEXNOW_KEY: '86d9c9becdf5f0b88ac95b1af8d08dbd'
+          BEFORE: ${{ github.event.before }}
+          EXTRA: ${{ github.event.inputs.indexnow_urls }}
+        run: |
+          python3 - <<'PY'
+          import json, os, subprocess, urllib.request
+          key = os.environ["INDEXNOW_KEY"]
+          host = "supplement-intelligence.com"
+          # The key file must be live before IndexNow will accept a submission.
+          live = urllib.request.urlopen(f"https://{host}/{key}.txt", timeout=20).read().decode().strip()
+          assert live == key, "IndexNow key file not served"
+          paths = set(p for p in os.environ.get("EXTRA", "").split() if p.startswith("/"))
+          before = os.environ.get("BEFORE", "")
+          if before and set(before) != {"0"}:
+              changed = subprocess.run(["git", "diff", "--name-only", before, "HEAD"], capture_output=True, text=True).stdout.split()
+              for f in changed:
+                  top = f.split("/")[0]
+                  if top in ("ingredients", "glp-1", "peptides", "articles", "products") and f.endswith(".html") and os.path.exists(f):
+                      p = "/" + f[:-5]
+                      if p.endswith("/index"):
+                          p = p[:-6]
+                      paths.add(p)
+          if not paths:
+              print("IndexNow: no changed pages")
+              raise SystemExit(0)
+          urls = sorted(f"https://{host}{p}" for p in paths)
+          body = json.dumps({"host": host, "key": key, "keyLocation": f"https://{host}/{key}.txt", "urlList": urls}).encode()
+          req = urllib.request.Request("https://api.indexnow.org/indexnow", data=body, headers={"Content-Type": "application/json; charset=utf-8"})
+          with urllib.request.urlopen(req, timeout=30) as r:
+              print("IndexNow HTTP", r.status, "for", len(urls), "URLs:", *urls, sep="\n  ")
+          PY

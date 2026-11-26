@@ -296,7 +296,11 @@ async function handleRequest(request) {
   return response;
 }
 
+// IndexNow (Bing, Yandex and others): the key file proves we own the site. See the deploy workflow's IndexNow step.
+const INDEXNOW_KEY = '86d9c9becdf5f0b88ac95b1af8d08dbd';
+
 async function route(request, url, path) {
+  if (path === '/' + INDEXNOW_KEY + '.txt') return new Response(INDEXNOW_KEY, { status: 200, headers: baseHeaders('text/plain; charset=utf-8') });
   if (path === '/llm.txt') return proxyRawText('llm.txt', 'text/plain; charset=utf-8');
   if (path === '/llms.txt') return proxyRawText('llms.txt', 'text/plain; charset=utf-8');
   if (path === '/robots.txt') return proxyRawText('robots.txt', 'text/plain; charset=utf-8');
