@@ -134,6 +134,7 @@ const GLP1_GUIDES = new Map([
   ['retatrutide-side-effects', { file: 'glp-1/retatrutide-side-effects.html', name: 'Retatrutide side effects', reviewed: '2026-11-26', published: '2026-11-26', author: 'john-foster', safety: true }],
   ['retatrutide-dosing-schedule', { file: 'glp-1/retatrutide-dosing-schedule.html', name: 'Retatrutide dosing schedule', reviewed: '2026-11-15' }],
   ['tirzepatide-vs-retatrutide', { file: 'glp-1/tirzepatide-vs-retatrutide.html', name: 'Tirzepatide vs retatrutide', reviewed: '2026-11-15' }],
+  ['eloralintide', { file: 'glp-1/eloralintide.html', name: 'Eloralintide', reviewed: '2026-11-26', published: '2026-11-26', author: 'john-foster', safety: true }],
   ['muscle-loss', { file: 'glp-1/muscle-loss.html', name: 'GLP-1 and muscle loss', reviewed: '2026-11-13', safety: true }],
   ['oral-glp-1', { file: 'glp-1/oral-glp-1.html', name: 'Oral GLP-1 pills', reviewed: '2026-11-13' }],
   ['tirzepatide-side-effects', { file: 'glp-1/tirzepatide-side-effects.html', name: 'Tirzepatide side effects', reviewed: '2026-11-26', published: '2026-11-11', author: 'john-foster', safety: true }],
