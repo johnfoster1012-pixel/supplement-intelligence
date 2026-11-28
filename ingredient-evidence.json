@@ -4,6 +4,8 @@
   "note": "Ingredient-level evidence is not automatically finished-product evidence. Product dose, formulation, population, and outcome matching are assessed separately.",
   "ingredients": {
     "creatine-monohydrate": {
+      "page_title": "Does Creatine Monohydrate Increase Strength? | Supplement Intelligence",
+      "page_description": "Numerous human trials support creatine monohydrate for strength, power, and repeated high-intensity activity. Evidence is much weaker for endurance performance.",
       "name": "Creatine monohydrate",
       "posture": "Strong evidence for specific sports-performance outcomes; product-level directness depends on dose.",
       "summary": "Numerous human trials support creatine monohydrate for strength, power, training capacity, and repeated high-intensity activity. Evidence is much weaker for endurance performance.",
@@ -308,6 +310,8 @@
       "last_reviewed_at": "2026-10-02"
     },
     "ashwagandha": {
+      "page_title": "Does Ashwagandha Help With Stress and Sleep? | Supplement Intelligence",
+      "page_description": "NCCIH says some ashwagandha preparations may help stress and insomnia. Rare liver injury has been reported, and NCCIH advises avoiding it in pregnancy.",
       "name": "Ashwagandha (Withania somnifera)",
       "posture": "Some evidence for stress and sleep, but preparation heterogeneity and study quality limit broad conclusions.",
       "summary": "NCCIH states that some ashwagandha preparations may help stress and insomnia, while evidence for many other promoted uses remains insufficient. Meta-analyses report benefit for stress/anxiety and sleep but also substantial heterogeneity and limitations.",
@@ -852,6 +856,8 @@
       ]
     },
     "echinacea": {
+      "page_title": "Does Echinacea Prevent Colds? What Trials Found | Supplement Intelligence",
+      "page_description": "The 2014 Cochrane review found no clear treatment benefit for colds. A weak preventive effect from some preparations remains possible.",
       "name": "Echinacea",
       "posture": "Possible small effect on cold incidence for some preparations; evidence for shortening or treating colds remains uncertain and product-specific.",
       "summary": "The 2014 Cochrane review found that echinacea products had not been shown to provide clear treatment benefit for colds, though a weak preventive effect from some preparations remained possible. Species, plant parts, and extraction methods vary widely, limiting generalization across products.",
