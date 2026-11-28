@@ -170,6 +170,8 @@
     },
     "nourish-plus": {
       "slug": "nourish-plus",
+      "pageTitle": "Does Nourish Plus Work? 75 Ingredients",
+      "pageDescription": "Nourish Plus lists 75 ingredients. We have reviewed the human research on 14 of them. We have not reviewed trials of the product itself.",
       "name": "NOURISH PLUS",
       "url": "/products/nourish-plus",
       "ingredients": "Pea protein; rice protein; hemp protein; pumpkin-seed protein; coconut milk; MCT powder; cordyceps; mangosteen; shiitake; maca; ashwagandha; turkey tail; chaga; holy basil; ginger; beetroot; strawberry; mango; green apple; blueberry; noni; dragon fruit; banana; tomato; grape; camu camu; kale; goji berry; cherry; chlorella; moringa; spirulina; alpha-lipoic acid; resveratrol; maqui berry; broccoli; reishi; coenzyme Q10; quercetin; Lactobacillus plantarum; L. rhamnosus; L. casei; Bifidobacterium lactis; B. adolescentis; B. longum; berberine HCl; turmeric; spinach; green tea extract; bitter melon; protease; amylase; AFA algae; omega-3; vitamins A, C, D, E and K; thiamine; riboflavin; niacin; vitamin B6; folate; vitamin B12; biotin; pantothenic acid; calcium; iodine; magnesium; zinc; selenium; copper; manganese; chromium; cacao powder; chia powder; sunflower lecithin; stevia",
@@ -400,8 +402,8 @@
       "shopUrl": "https://vitalhealthglobal.com/products/v-asculax?refID=149983",
       "formulationStatus": "Verified against current manufacturer product page on 2026-10-02; efficacy evidence remains under review.",
       "formulationSource": "https://vitalhealthglobal.com/products/v-asculax",
-      "pageTitle": "V-Asculax: All 6 Ingredients and What the Research Says",
-      "pageDescription": "V-Asculax lists artichoke, rosemary, MSM, horsetail, rue and witch hazel. See the full label and what human studies show for MSM and horsetail.",
+      "pageTitle": "V-Asculax: Does It Work? 6 Ingredients",
+      "pageDescription": "V-Asculax lists 6 ingredients. We have reviewed the human research on 2 of them. We have not reviewed trials of the product itself.",
       "ingredientEvidenceLinks": [
         {
           "slug": "msm",
