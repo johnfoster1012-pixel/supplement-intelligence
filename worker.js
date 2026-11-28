@@ -126,10 +126,10 @@ function authorSchema(slug) {
 // `products` is set. Peptide guides never show one either (see handleGuide).
 const GLP1_GUIDES = new Map([
   ['', { file: 'glp-1/index.html', name: 'Vitamins on GLP-1 drugs', reviewed: '2026-11-10' }],
-  ['berberine-vs-ozempic', { file: 'glp-1/berberine-vs-ozempic.html', name: 'Berberine vs Ozempic', reviewed: '2026-11-10', products: ['s-balance', 'nourish-plus'], productsHeading: 'Products that list berberine' }],
+  ['berberine-vs-ozempic', { file: 'glp-1/berberine-vs-ozempic.html', name: 'Berberine vs Ozempic', reviewed: '2026-11-28', products: ['s-balance', 'nourish-plus'], productsHeading: 'Products that list berberine' }],
   ['semaglutide-with-b12', { file: 'glp-1/semaglutide-with-b12.html', name: 'Semaglutide with B12', reviewed: '2026-11-10' }],
-  ['glp-1-supplements', { file: 'glp-1/glp-1-supplements.html', name: 'Do GLP-1 supplements work?', reviewed: '2026-11-26', published: '2026-11-11', author: 'john-foster', products: ['orygn-triglp', 'orygn-ignyt'], productsHeading: 'Related product reviews' }],
-  ['glp-1-patches', { file: 'glp-1/glp-1-patches.html', name: 'Do GLP-1 patches work?', reviewed: '2026-11-11' }],
+  ['glp-1-supplements', { file: 'glp-1/glp-1-supplements.html', name: 'Do GLP-1 supplements work?', reviewed: '2026-11-28', published: '2026-11-11', author: 'john-foster', products: ['orygn-triglp', 'orygn-ignyt'], productsHeading: 'Related product reviews' }],
+  ['glp-1-patches', { file: 'glp-1/glp-1-patches.html', name: 'Do GLP-1 patches work?', reviewed: '2026-11-28' }],
   ['retatrutide', { file: 'glp-1/retatrutide.html', name: 'Retatrutide', reviewed: '2026-11-15' }],
   ['retatrutide-side-effects', { file: 'glp-1/retatrutide-side-effects.html', name: 'Retatrutide side effects', reviewed: '2026-11-26', published: '2026-11-26', author: 'john-foster', safety: true }],
   ['retatrutide-dosing-schedule', { file: 'glp-1/retatrutide-dosing-schedule.html', name: 'Retatrutide dosing schedule', reviewed: '2026-11-15' }],
